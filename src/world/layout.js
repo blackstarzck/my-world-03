@@ -92,9 +92,15 @@ export function canStand(x, z, radius = 0.26) {
   }
   for (const o of [...design.panels, ...design.benches, ...design.cases]) {
     const p = toRoom(o.room, x, z);
+    // Undo the same Y rotation used by the rendered object before collision checks.
+    const angle = radians(o.rotation_y ?? 0);
+    const dx = p.t - o.t,
+      dv = p.v - o.v;
+    const localT = Math.cos(angle) * dx + Math.sin(angle) * dv;
+    const localV = -Math.sin(angle) * dx + Math.cos(angle) * dv;
     if (
-      Math.abs(p.t - o.t) < o.w / 2 + radius &&
-      Math.abs(p.v - o.v) < o.l / 2 + radius
+      Math.abs(localT) < o.w / 2 + radius &&
+      Math.abs(localV) < o.l / 2 + radius
     )
       return false;
   }

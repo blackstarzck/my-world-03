@@ -1,7 +1,7 @@
 import * as THREE from "three";
 import { GLTFLoader } from "three/addons/loaders/GLTFLoader.js";
 import { mergeGeometries } from "three/addons/utils/BufferGeometryUtils.js";
-import { design } from "./layout.js";
+import { design, radians } from "./layout.js";
 import { box, mesh } from "./architecture.js";
 import { labelTexture } from "./materials.js";
 import artworks from "./artworks.json";
@@ -122,7 +122,7 @@ export async function buildExhibits(groups, m, contactMat, manager) {
       ...work,
       id: `${id}-${work.id}`,
       kind: "회화",
-      room: parent.name,
+      room: parent.userData.room ?? parent.name,
       description:
         "화면 속 작품을 가까이에서 감상해 보세요. 실제 미술관의 공개 소장품 이미지를 사용했습니다.",
     };
@@ -160,19 +160,24 @@ export async function buildExhibits(groups, m, contactMat, manager) {
     );
   }
   for (const p of design.panels) {
-    const parent = groups[p.room];
+    const parent = new THREE.Group();
+    parent.name = p.id;
+    parent.userData.room = groups[p.room].name;
+    parent.position.set(p.t, 0, -p.v);
+    parent.rotation.y = radians(p.rotation_y ?? 0);
+    groups[p.room].add(parent);
     box(
       parent,
       p.room === "01" ? m.teal : m.concrete,
       [p.w, p.h, p.l],
-      [p.t, p.h / 2, -p.v],
+      [0, p.h / 2, 0],
     );
     for (const side of [-1, 1]) {
       if (p.room === "01")
         painting(
           parent,
           p.id,
-          [p.t + side * (p.w / 2 + 0.015), 1.5, -p.v],
+          [side * (p.w / 2 + 0.015), 1.5, 0],
           (side * Math.PI) / 2,
           1.5,
           2,
@@ -182,7 +187,7 @@ export async function buildExhibits(groups, m, contactMat, manager) {
         painting(
           parent,
           p.id,
-          [p.t, 1.5, -p.v + side * (p.l / 2 + 0.015)],
+          [0, 1.5, side * (p.l / 2 + 0.015)],
           side === 1 ? 0 : Math.PI,
           1.5,
           2,
@@ -193,7 +198,7 @@ export async function buildExhibits(groups, m, contactMat, manager) {
       parent,
       new THREE.PlaneGeometry(p.w + 1, p.l + 1),
       contactMat,
-      [p.t, 0.008, -p.v],
+      [0, 0.008, 0],
       false,
     );
     shadow.rotation.x = -Math.PI / 2;

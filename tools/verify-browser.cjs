@@ -77,11 +77,44 @@ async function main() {
   const before = await state();
   await move("w", 1000);
   const after = await state();
-  check(
-    "Keyboard walking advances through the gallery",
-    Math.hypot(...[0, 2].map((i) => after.position[i] - before.position[i])) >
-      1,
+  const normalDistance = Math.hypot(
+    ...[0, 2].map((i) => after.position[i] - before.position[i]),
   );
+  check(
+    "Faster normal walking advances at least 3.5m in one second",
+    normalDistance > 3.5 && normalDistance < 5.8,
+    { metres: normalDistance },
+  );
+  await page.getByRole("button", { name: "02 빛의 여백", exact: true }).click();
+  await page.waitForTimeout(350);
+  const sprintBefore = await state();
+  await page.keyboard.down("Shift");
+  await move("w", 1000);
+  await page.keyboard.up("Shift");
+  const sprintAfter = await state();
+  const sprintDistance = Math.hypot(
+    ...[0, 2].map((i) => sprintAfter.position[i] - sprintBefore.position[i]),
+  );
+  check(
+    "Shift remains noticeably faster than normal walking",
+    sprintDistance > normalDistance * 1.3 && sprintDistance > 6,
+    { metres: sprintDistance },
+  );
+  await page.keyboard.down("Shift");
+  await move("w", 3000);
+  await page.keyboard.up("Shift");
+  const rearPosition = await page.evaluate(async () => {
+    const { toRoom } = await import("/src/world/layout.js");
+    const s = window.__TRIAD__.state();
+    return toRoom("02", s.position[0], s.position[2]);
+  });
+  check(
+    "Sprinting stops at the rear wall instead of crossing it",
+    rearPosition.v > 23.4 && rearPosition.v < 23.8,
+    rearPosition,
+  );
+  await page.getByRole("button", { name: "02 빛의 여백", exact: true }).click();
+  await page.waitForTimeout(350);
   await page.getByRole("button", { name: "화면 설정", exact: true }).click();
   const paused = await state();
   await move("w", 400);

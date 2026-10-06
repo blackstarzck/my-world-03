@@ -54,6 +54,51 @@ test("all exhibition objects block walking while adjacent aisle remains accessib
     assert.equal(canStand(5 * Math.cos(a), -5 * Math.sin(a)), false, b.id);
   }
 });
+test("diagonal panel ends block walking at their new positions in both galleries", () => {
+  for (const panel of design.panels) {
+    const side = Math.sign(panel.t);
+    for (const offset of [-0.8, 0.8]) {
+      const point = roomPoint(
+        panel.room,
+        panel.t - side * offset,
+        panel.v + offset,
+      );
+      assert.equal(
+        canStand(point[0], point[2]),
+        false,
+        `${panel.id} diagonal end ${offset}`,
+      );
+    }
+  }
+});
+test("the former straight panel ends no longer leave invisible obstacles", () => {
+  for (const panel of design.panels) {
+    for (const sign of [-1, 1]) {
+      const point = roomPoint(
+        panel.room,
+        panel.t + (panel.room === "02" ? sign * 1.35 : 0),
+        panel.v + (panel.room === "01" ? sign * 1.35 : 0),
+      );
+      assert.equal(
+        canStand(point[0], point[2]),
+        true,
+        `${panel.id} old end ${sign}`,
+      );
+    }
+  }
+});
+test("the diagonal arrangement keeps a three metre central walking lane clear", () => {
+  for (const id of ["01", "02"])
+    for (const side of [-1.5, 0, 1.5])
+      for (let distance = 0.5; distance < 23.5; distance += 0.1) {
+        const point = roomPoint(id, side, distance);
+        assert.equal(
+          canStand(point[0], point[2]),
+          true,
+          `${id} lane ${side}, ${distance}`,
+        );
+      }
+});
 test("world and gallery coordinates agree across all three 120 degree branches", () => {
   for (const id of ["01", "02", "03"])
     for (const t of [-5, 0, 5])

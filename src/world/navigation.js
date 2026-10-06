@@ -219,7 +219,7 @@ export function navigation(
         const length = Math.hypot(forward, right);
         if (length) {
           const speed =
-            ((keys.has("ShiftLeft") || keys.has("ShiftRight") ? 4.7 : 2.7) *
+            ((keys.has("ShiftLeft") || keys.has("ShiftRight") ? 7.5 : 4.5) *
               dt) /
             length;
           move(

@@ -1,0 +1,87 @@
+[
+  {
+    "filename": "wood-color.jpg",
+    "bytes": 839089,
+    "source": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/wooden_floor_01/wooden_floor_01_diff_1k.jpg"
+  },
+  {
+    "filename": "wood-normal.jpg",
+    "bytes": 352877,
+    "source": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/wooden_floor_01/wooden_floor_01_nor_gl_1k.jpg"
+  },
+  {
+    "filename": "wood-roughness.jpg",
+    "bytes": 469586,
+    "source": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/wooden_floor_01/wooden_floor_01_rough_1k.jpg"
+  },
+  {
+    "filename": "concrete-color.jpg",
+    "bytes": 755740,
+    "source": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/concrete_floor_01/concrete_floor_01_diff_1k.jpg"
+  },
+  {
+    "filename": "concrete-normal.jpg",
+    "bytes": 909898,
+    "source": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/concrete_floor_01/concrete_floor_01_nor_gl_1k.jpg"
+  },
+  {
+    "filename": "concrete-roughness.jpg",
+    "bytes": 354529,
+    "source": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/concrete_floor_01/concrete_floor_01_rough_1k.jpg"
+  },
+  {
+    "filename": "stone-color.jpg",
+    "bytes": 817710,
+    "source": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/stone_tiles_02/stone_tiles_02_diff_1k.jpg"
+  },
+  {
+    "filename": "stone-normal.jpg",
+    "bytes": 873564,
+    "source": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/stone_tiles_02/stone_tiles_02_nor_gl_1k.jpg"
+  },
+  {
+    "filename": "stone-roughness.jpg",
+    "bytes": 476160,
+    "source": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/stone_tiles_02/stone_tiles_02_rough_1k.jpg"
+  },
+  {
+    "filename": "portrait.glb",
+    "bytes": 404976,
+    "source": "https://raw.githubusercontent.com/mrdoob/three.js/dev/examples/models/gltf/LeePerrySmith/LeePerrySmith.glb"
+  },
+  {
+    "filename": "portrait-license.txt",
+    "bytes": 364,
+    "source": "https://raw.githubusercontent.com/mrdoob/three.js/dev/examples/models/gltf/LeePerrySmith/LeePerrySmith_License.txt"
+  },
+  {
+    "filename": "smooth-normal.jpg",
+    "bytes": 529251,
+    "source": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/smooth_concrete_floor/smooth_concrete_floor_nor_gl_1k.jpg"
+  },
+  {
+    "filename": "cast-normal.jpg",
+    "bytes": 518536,
+    "source": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/concrete_wall_009/concrete_wall_009_nor_gl_1k.jpg"
+  },
+  {
+    "filename": "smooth-color.jpg",
+    "bytes": 861674,
+    "source": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/smooth_concrete_floor/smooth_concrete_floor_diff_1k.jpg"
+  },
+  {
+    "filename": "cast-roughness.jpg",
+    "bytes": 766943,
+    "source": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/concrete_wall_009/concrete_wall_009_rough_1k.jpg"
+  },
+  {
+    "filename": "cast-color.jpg",
+    "bytes": 626688,
+    "source": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/concrete_wall_009/concrete_wall_009_diff_1k.jpg"
+  },
+  {
+    "filename": "smooth-roughness.jpg",
+    "bytes": 488628,
+    "source": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/smooth_concrete_floor/smooth_concrete_floor_rough_1k.jpg"
+  }
+]

@@ -1,0 +1,998 @@
+{
+  "scope": "가상 전시 공간 평면·단면·천장·요소 상세의 기하 및 치수 연계 검수",
+  "total": 198,
+  "passed": 198,
+  "failed": 0,
+  "checks": [
+    {
+      "check": "도면 5장·동일 개정",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "A01 전시실01 12000×24000",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "A01 전시실02 12000×24000",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "A01 전시실03 12000×24000",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "A01 inner-envelope 3곡선 실제 반경",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "A01 outer-envelope 3곡선 실제 반경",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "A01 기둥 3개",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "A01 C01 위치·지름",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "A01 C02 위치·지름",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "A01 C03 위치·지름",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "A04 전시실01 12000×24000",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "A04 전시실02 12000×24000",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "A04 전시실03 12000×24000",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "A04 inner-envelope 3곡선 실제 반경",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "A04 outer-envelope 3곡선 실제 반경",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "A04 기둥 3개",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "A04 C01 위치·지름",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "A04 C02 위치·지름",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "A04 C03 위치·지름",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "A01 panel 개수·번호",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "A01 P01-01 실제 위치·크기",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "A01 P01-02 실제 위치·크기",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "A01 P01-03 실제 위치·크기",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "A01 P01-04 실제 위치·크기",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "A01 P02-01 실제 위치·크기",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "A01 P02-02 실제 위치·크기",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "A01 P02-03 실제 위치·크기",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "A01 P02-04 실제 위치·크기",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "A01 bench 개수·번호",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "A01 B01-01 실제 위치·크기",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "A01 B01-02 실제 위치·크기",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "A01 B02-01 실제 위치·크기",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "A01 B02-02 실제 위치·크기",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "A01 case 개수·번호",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "A01 V01 실제 위치·크기",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "A01 V02 실제 위치·크기",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "A01 V03 실제 위치·크기",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "A01 V04 실제 위치·크기",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "A01 V05 실제 위치·크기",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "A01 V06 실제 위치·크기",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "A01 V07 실제 위치·크기",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "A01 V08 실제 위치·크기",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "A01 V09 실제 위치·크기",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "A01 V10 실제 위치·크기",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "A01 overhead-skylight 개수·번호",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "A01 K01-1 실제 위치·크기",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "A01 K01-2 실제 위치·크기",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "A01 K01-3 실제 위치·크기",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "A01 K02-1 실제 위치·크기",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "A01 K02-2 실제 위치·크기",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "A04 roof-skylight 개수·번호",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "A04 K01-1 실제 위치·크기",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "A04 K01-2 실제 위치·크기",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "A04 K01-3 실제 위치·크기",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "A04 K02-1 실제 위치·크기",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "A04 K02-2 실제 위치·크기",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "A04 roof-track 개수·번호",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "A04 L01-1 실제 위치·크기",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "A04 L01-2 실제 위치·크기",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "A04 L02-1 실제 위치·크기",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "A04 L02-2 실제 위치·크기",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "A04 L03-1 실제 위치·크기",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "A04 L03-2 실제 위치·크기",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "A04 L03-3 실제 위치·크기",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "평면↔천장 G01 좌표 일치",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "평면↔천장 G02 좌표 일치",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "평면↔천장 G03 좌표 일치",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "평면↔천장 W03 좌표 일치",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "A01 창 W03 같은 외곽 벽·길이20000",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "A04 창 W03 같은 외곽 벽·길이20000",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Concept03 창 벽에 작품 없음",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "벽걸이 작품 위치·개수",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "A01 로비 천창 중앙 Ø8000",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "A04 로비 천창 중앙 Ø8000",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "BL1 곡선 벤치 실제 내·외반경",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "BL2 곡선 벤치 실제 내·외반경",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "BL3 곡선 벤치 실제 내·외반경",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "로비 곡선 벤치 3개",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "곡선 벽 접선·두께300",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "중심 기준 Ø18000이 로비 벽 안에 위치",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "곡선 출입구 문턱 바닥 연결",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "전시실01 가구가 벽 안에 위치",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "전시실01 가구 서로 겹치지 않음",
+      "passed": true,
+      "detail": "[]"
+    },
+    {
+      "check": "전시실02 가구가 벽 안에 위치",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "전시실02 가구 서로 겹치지 않음",
+      "passed": true,
+      "detail": "[]"
+    },
+    {
+      "check": "전시실03 가구가 벽 안에 위치",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "전시실03 가구 서로 겹치지 않음",
+      "passed": true,
+      "detail": "[]"
+    },
+    {
+      "check": "S1 절단선 실제 위치",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "S2 절단선 실제 위치",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "S3 절단선 실제 위치",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "S4 길이 절단선 중앙",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "S5 길이 절단선 중앙",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "S6 길이 절단선 중앙",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "P01-01 가로 단면 위치·폭·높이",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "P01-02 가로 단면 위치·폭·높이",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "P02-01 가로 단면 위치·폭·높이",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "P02-02 가로 단면 위치·폭·높이",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "V03 가로 단면 위치·폭·높이",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "V08 가로 단면 위치·폭·높이",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "01 가로 단면 천장 높이",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "02 가로 단면 천장 높이",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "03 가로 단면 천장 높이",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "W03 가로 단면 오른쪽·하단900·상단5400",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "P01-02 길이 단면 투영 위치·길이·높이",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "P01-04 길이 단면 투영 위치·길이·높이",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "P02-02 길이 단면 투영 위치·길이·높이",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "P02-04 길이 단면 투영 위치·길이·높이",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "V06 길이 단면 투영 위치·길이·높이",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "V07 길이 단면 투영 위치·길이·높이",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "V08 길이 단면 투영 위치·길이·높이",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "V09 길이 단면 투영 위치·길이·높이",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "V10 길이 단면 투영 위치·길이·높이",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "B01-02 길이 단면 투영 위치·길이·높이",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "B02-02 길이 단면 투영 위치·길이·높이",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "S6 보는 방향과 좌우 순서 일치",
+      "passed": true,
+      "detail": "오른쪽 벽 방향을 보면 전시실 끝이 화면 왼쪽"
+    },
+    {
+      "check": "W03 길이 단면 위치·20000×4500",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "길이 단면 로비 천창 반쪽 4000",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "A03 Concept02 보 5개·위치",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "보 깊이600·상단5000 실제 단면",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "A04 Concept02 보 5개·위치",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Concept02 조명이 보 아래에 위치",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "로비 받침대 Ø3600·H450",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "로비 단면 BL1 깊이600·H450",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "로비 단면 천창 Ø8000",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "진열장 상세 실제 축척1:25",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "일반 벤치 상세 실제 축척1:20",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "전시 벽 상세 실제 축척1:50",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "곡선 벤치 상세 정확한 원호·축척1:100",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "A01 A3 물리 크기",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "A01 PNG 크기·해상도",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "A01 PNG 도면 내용 존재",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "A01 치수 12000 실제 축척 검산",
+      "passed": true,
+      "detail": "12000.00 mm"
+    },
+    {
+      "check": "A01 치수 24000 실제 축척 검산",
+      "passed": true,
+      "detail": "24000.00 mm"
+    },
+    {
+      "check": "A01 치수 4000 실제 축척 검산",
+      "passed": true,
+      "detail": "4000.00 mm"
+    },
+    {
+      "check": "A01 치수 12000 실제 축척 검산",
+      "passed": true,
+      "detail": "12000.00 mm"
+    },
+    {
+      "check": "A01 치수 24000 실제 축척 검산",
+      "passed": true,
+      "detail": "24000.00 mm"
+    },
+    {
+      "check": "A01 치수 4000 실제 축척 검산",
+      "passed": true,
+      "detail": "4000.00 mm"
+    },
+    {
+      "check": "A01 치수 12000 실제 축척 검산",
+      "passed": true,
+      "detail": "12000.00 mm"
+    },
+    {
+      "check": "A01 치수 24000 실제 축척 검산",
+      "passed": true,
+      "detail": "24000.00 mm"
+    },
+    {
+      "check": "A01 치수 4000 실제 축척 검산",
+      "passed": true,
+      "detail": "4000.00 mm"
+    },
+    {
+      "check": "A01 치수 Ø18000 중심 기준 실제 축척 검산",
+      "passed": true,
+      "detail": "18000.00 mm"
+    },
+    {
+      "check": "A01 치수 3000 실제 축척 검산",
+      "passed": true,
+      "detail": "3000.00 mm"
+    },
+    {
+      "check": "A02 A3 물리 크기",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "A02 PNG 크기·해상도",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "A02 PNG 도면 내용 존재",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "A02 치수 12000 실제 축척 검산",
+      "passed": true,
+      "detail": "12000.00 mm"
+    },
+    {
+      "check": "A02 치수 6000 실제 축척 검산",
+      "passed": true,
+      "detail": "6000.00 mm"
+    },
+    {
+      "check": "A02 치수 12000 실제 축척 검산",
+      "passed": true,
+      "detail": "12000.00 mm"
+    },
+    {
+      "check": "A02 치수 5000 실제 축척 검산",
+      "passed": true,
+      "detail": "5000.00 mm"
+    },
+    {
+      "check": "A02 치수 12000 실제 축척 검산",
+      "passed": true,
+      "detail": "12000.00 mm"
+    },
+    {
+      "check": "A02 치수 6000 실제 축척 검산",
+      "passed": true,
+      "detail": "6000.00 mm"
+    },
+    {
+      "check": "A02 치수 2400 실제 축척 검산",
+      "passed": true,
+      "detail": "2400.00 mm"
+    },
+    {
+      "check": "A02 치수 1200 실제 축척 검산",
+      "passed": true,
+      "detail": "1200.00 mm"
+    },
+    {
+      "check": "A02 치수 4800 실제 축척 검산",
+      "passed": true,
+      "detail": "4800.00 mm"
+    },
+    {
+      "check": "A02 치수 1200 실제 축척 검산",
+      "passed": true,
+      "detail": "1200.00 mm"
+    },
+    {
+      "check": "A02 치수 2400 실제 축척 검산",
+      "passed": true,
+      "detail": "2400.00 mm"
+    },
+    {
+      "check": "A02 치수 4500 실제 축척 검산",
+      "passed": true,
+      "detail": "4500.00 mm"
+    },
+    {
+      "check": "A02 치수 Ø18000 중심 기준 실제 축척 검산",
+      "passed": true,
+      "detail": "18000.00 mm"
+    },
+    {
+      "check": "A02 치수 3000 실제 축척 검산",
+      "passed": true,
+      "detail": "3000.00 mm"
+    },
+    {
+      "check": "A02 치수 6000 실제 축척 검산",
+      "passed": true,
+      "detail": "6000.00 mm"
+    },
+    {
+      "check": "A03 A3 물리 크기",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "A03 PNG 크기·해상도",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "A03 PNG 도면 내용 존재",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "A03 치수 9000 실제 축척 검산",
+      "passed": true,
+      "detail": "9000.00 mm"
+    },
+    {
+      "check": "A03 치수 3000 실제 축척 검산",
+      "passed": true,
+      "detail": "3000.00 mm"
+    },
+    {
+      "check": "A03 치수 24000 실제 축척 검산",
+      "passed": true,
+      "detail": "24000.00 mm"
+    },
+    {
+      "check": "A03 치수 6000 실제 축척 검산",
+      "passed": true,
+      "detail": "6000.00 mm"
+    },
+    {
+      "check": "A03 치수 9000 실제 축척 검산",
+      "passed": true,
+      "detail": "9000.00 mm"
+    },
+    {
+      "check": "A03 치수 3000 실제 축척 검산",
+      "passed": true,
+      "detail": "3000.00 mm"
+    },
+    {
+      "check": "A03 치수 24000 실제 축척 검산",
+      "passed": true,
+      "detail": "24000.00 mm"
+    },
+    {
+      "check": "A03 치수 5000 실제 축척 검산",
+      "passed": true,
+      "detail": "5000.00 mm"
+    },
+    {
+      "check": "A03 치수 9000 실제 축척 검산",
+      "passed": true,
+      "detail": "9000.00 mm"
+    },
+    {
+      "check": "A03 치수 3000 실제 축척 검산",
+      "passed": true,
+      "detail": "3000.00 mm"
+    },
+    {
+      "check": "A03 치수 24000 실제 축척 검산",
+      "passed": true,
+      "detail": "24000.00 mm"
+    },
+    {
+      "check": "A03 치수 6000 실제 축척 검산",
+      "passed": true,
+      "detail": "6000.00 mm"
+    },
+    {
+      "check": "A04 A3 물리 크기",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "A04 PNG 크기·해상도",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "A04 PNG 도면 내용 존재",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "A04 치수 12000 실제 축척 검산",
+      "passed": true,
+      "detail": "12000.00 mm"
+    },
+    {
+      "check": "A04 치수 24000 실제 축척 검산",
+      "passed": true,
+      "detail": "24000.00 mm"
+    },
+    {
+      "check": "A04 치수 12000 실제 축척 검산",
+      "passed": true,
+      "detail": "12000.00 mm"
+    },
+    {
+      "check": "A04 치수 24000 실제 축척 검산",
+      "passed": true,
+      "detail": "24000.00 mm"
+    },
+    {
+      "check": "A04 치수 12000 실제 축척 검산",
+      "passed": true,
+      "detail": "12000.00 mm"
+    },
+    {
+      "check": "A04 치수 24000 실제 축척 검산",
+      "passed": true,
+      "detail": "24000.00 mm"
+    },
+    {
+      "check": "A05 A3 물리 크기",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "A05 PNG 크기·해상도",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "A05 PNG 도면 내용 존재",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "A05 치수 3000 실제 축척 검산",
+      "passed": true,
+      "detail": "3000.00 mm"
+    },
+    {
+      "check": "A05 치수 3600 실제 축척 검산",
+      "passed": true,
+      "detail": "3600.00 mm"
+    },
+    {
+      "check": "A05 치수 300 실제 축척 검산",
+      "passed": true,
+      "detail": "300.00 mm"
+    },
+    {
+      "check": "A05 치수 2000 실제 축척 검산",
+      "passed": true,
+      "detail": "2000.00 mm"
+    },
+    {
+      "check": "A05 치수 450 실제 축척 검산",
+      "passed": true,
+      "detail": "450.00 mm"
+    },
+    {
+      "check": "A05 치수 600 실제 축척 검산",
+      "passed": true,
+      "detail": "600.00 mm"
+    },
+    {
+      "check": "A05 치수 1200 실제 축척 검산",
+      "passed": true,
+      "detail": "1200.00 mm"
+    },
+    {
+      "check": "A05 치수 2400 실제 축척 검산",
+      "passed": true,
+      "detail": "2400.00 mm"
+    },
+    {
+      "check": "A05 치수 1200 실제 축척 검산",
+      "passed": true,
+      "detail": "1200.00 mm"
+    },
+    {
+      "check": "A05 치수 600 실제 축척 검산",
+      "passed": true,
+      "detail": "600.00 mm"
+    },
+    {
+      "check": "A05 치수 600 실제 축척 검산",
+      "passed": true,
+      "detail": "600.00 mm"
+    }
+  ]
+}

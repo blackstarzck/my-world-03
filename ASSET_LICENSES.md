@@ -38,7 +38,8 @@ Poly Haven의 CC0 자료를 사용했습니다. 원본 URL과 파일 크기는 `
 
 ## 글꼴과 아이콘
 
-- Google Fonts: Noto Sans KR, Noto Serif KR — SIL Open Font License 1.1.
+- Pretendard Variable v1.3.9: https://github.com/orioncactus/pretendard — SIL Open Font License 1.1. Local font and license: `public/fonts/PretendardVariable.woff2`, `public/fonts/OFL.txt`.
+- Google Fonts: Noto Serif KR — SIL Open Font License 1.1.
 - Lucide: https://lucide.dev/license — ISC License.
 
 React, Three.js, Vite 등 프로그램 의존성의 라이선스는 각 패키지에 포함된 원문을 따릅니다.

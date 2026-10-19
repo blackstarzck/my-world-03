@@ -68,6 +68,13 @@ export async function buildExhibits(groups, m, contactMat, manager) {
     new GLTFLoader(manager).loadAsync("/assets/portrait.glb"),
   ]);
   const selectable = [];
+  const lightingTargets = [
+    {
+      object: groups.lobby,
+      target: [0, 1.65, 0],
+      source: [3, 5.6, 2],
+    },
+  ];
   let index = 0;
   function painting(
     parent,
@@ -83,6 +90,12 @@ export async function buildExhibits(groups, m, contactMat, manager) {
     group.position.set(...position);
     group.rotation.y = rotation;
     parent.add(group);
+    lightingTargets.push({
+      object: group,
+      target: [0, 0, 0.12],
+      source: [0, 3, 1.8],
+      facing: true,
+    });
     const border = modern ? 0.035 : 0.085,
       mat = modern ? m.dark : m.brass;
     const ratio = work.map.image.width / work.map.image.height,
@@ -227,6 +240,11 @@ export async function buildExhibits(groups, m, contactMat, manager) {
     group.name = c.id;
     group.position.set(c.t, 0, -c.v);
     groups["03"].add(group);
+    lightingTargets.push({
+      object: group,
+      target: [0, 1.35, 0],
+      source: [0, 4.8, 0.6],
+    });
     mesh(group, frames, m.dark);
     box(group, m.dark, [1.2, 0.028, 1.2], [0, 0.014, 0]);
     box(group, m.glass, [1.178, 2.37, 1.178], [0, 1.2, 0], false);
@@ -329,5 +347,5 @@ export async function buildExhibits(groups, m, contactMat, manager) {
     );
     shadow.rotation.x = -Math.PI / 2;
   }
-  return { selectable, pictures };
+  return { selectable, pictures, lightingTargets };
 }

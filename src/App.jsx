@@ -8,92 +8,27 @@ import {
   X,
   Sun,
   Moon,
-  SlidersHorizontal,
-  Maximize2,
-  Minimize2,
-  MoveUpRight,
   Box,
-  CircleHelp,
-  Move,
-  Download,
   ExternalLink,
   ChevronRight,
   LoaderCircle,
 } from "lucide-react";
-import { lobbyOutline, roomPoint } from "./world/layout.js";
 
 const rooms = [
-  {
-    id: "lobby",
-    no: "00",
-    name: "중앙 로비",
-    en: "THE ATRIUM",
-    title: (
-      <>
-        세 개의 시선,
-        <br />
-        하나의 공간.
-      </>
-    ),
-    description: "빛을 따라, 당신만의 속도로 걸어보세요.",
-  },
-  {
-    id: "01",
-    no: "01",
-    name: "고전의 깊이",
-    en: "THE CLASSIC",
-    title: (
-      <>
-        시간이 남긴
-        <br />
-        깊은 색.
-      </>
-    ),
-    description: "짙은 청록과 따뜻한 나무 사이, 회화의 시간을 거닙니다.",
-  },
-  {
-    id: "02",
-    no: "02",
-    name: "빛의 여백",
-    en: "THE CONTEMPORARY",
-    title: (
-      <>
-        빛이 그리는
-        <br />
-        고요한 여백.
-      </>
-    ),
-    description: "콘크리트의 담백한 표면 위로 하루의 빛이 흐릅니다.",
-  },
-  {
-    id: "03",
-    no: "03",
-    name: "형태의 기억",
-    en: "THE OBJECT",
-    title: (
-      <>
-        형태 안에
-        <br />
-        머무는 기억.
-      </>
-    ),
-    description: "돌과 금속, 유리 사이에서 서로 다른 물성을 만납니다.",
-  },
+  { id: "lobby", no: "00", name: "중앙 로비" },
+  { id: "01", no: "01", name: "고전의 깊이" },
+  { id: "02", no: "02", name: "빛의 여백" },
+  { id: "03", no: "03", name: "형태의 기억" },
 ];
-const overview = {
-  id: "overview",
-  no: "—",
-  en: "THE ARCHITECTURE",
-  name: "전체 공간",
-  title: (
-    <>
-      세 갈래로 이어지는
-      <br />
-      하나의 이야기.
-    </>
-  ),
-  description: "드래그하여 회전하고, 휠로 가까이 살펴보세요.",
-};
+
+function WalkIcon() {
+  return (
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+      <circle cx="13.5" cy="3.5" r="2" />
+      <path d="M9.8 8.9 7 23h2.1l1.8-8 2.1 2v6h2v-7.5l-2.1-2 .6-3C14.8 12 16.8 13 19 13v-2c-1.9 0-3.5-1-4.3-2.4l-1-1.6c-.4-.6-1-1-1.7-1-.3 0-.5.1-.8.1L6 9.3V14h2v-3.4l1.8-1.7Z" />
+    </svg>
+  );
+}
 
 function Logo() {
   return (
@@ -116,79 +51,90 @@ function Logo() {
     </a>
   );
 }
-function Map({ active, onNavigate, markerRef, expanded = false }) {
-  const poly = (points) => points.map(([x, z]) => `${x},${-z}`).join(" ");
-  const outline = poly(lobbyOutline());
+function Map({ active, onNavigate, markerRef }) {
+  const host = useRef(null),
+    api = useRef(null),
+    navigateRef = useRef(onNavigate),
+    activeRef = useRef(active);
+  const [failed, setFailed] = useState(false);
+  navigateRef.current = onNavigate;
+  activeRef.current = active;
+  useEffect(() => {
+    let cancelled = false;
+    import("./world/minimap.js")
+      .then(({ createMinimap }) => {
+        if (cancelled) return;
+        const instance = createMinimap(
+          host.current,
+          host.current.querySelectorAll("[data-room]"),
+          (id) => navigateRef.current(id),
+        );
+        api.current = instance;
+        markerRef.current = instance.updatePosition;
+        instance.setActive(activeRef.current);
+      })
+      .catch((error) => {
+        console.error("미니맵을 불러오지 못했습니다.", error);
+        if (!cancelled) setFailed(true);
+      });
+    return () => {
+      cancelled = true;
+      markerRef.current = null;
+      api.current?.dispose();
+      api.current = null;
+    };
+  }, [markerRef]);
+  useEffect(() => {
+    api.current?.setActive(active);
+  }, [active]);
   return (
-    <div className={`minimap ${expanded ? "expanded" : ""}`}>
+    <div className={`minimap ${failed ? "map-fallback" : ""}`}>
       <div className="map-heading">
-        <span>SPACE GUIDE</span>
+        <span>
+          SPACE GUIDE <b>3D</b>
+        </span>
         <span className="map-location">
-          <i />{" "}
+          <i />
           {active === "overview"
             ? "전체 공간"
             : rooms.find((r) => r.id === active)?.name}
         </span>
       </div>
-      <svg viewBox="-40 -40 80 68" aria-label="전시 공간 안내 지도">
-        <polygon
-          points={outline}
-          className={`map-room ${active === "lobby" ? "selected" : ""}`}
-          role="button"
-          tabIndex="0"
-          aria-label="중앙 로비로 이동"
-          onClick={() => onNavigate("lobby")}
-          onKeyDown={(e) => {
-            if (e.key === "Enter" || e.key === " ") {
-              e.preventDefault();
-              onNavigate("lobby");
-            }
-          }}
-        />
-        {rooms.slice(1).map((r) => {
-          const points = [
-            [-6, 0],
-            [6, 0],
-            [6, 24],
-            [-6, 24],
-          ].map(([t, v]) => {
-            const p = roomPoint(r.id, t, v);
-            return [p[0], -p[2]];
-          });
-          const p = roomPoint(r.id, 0, 13);
-          return (
-            <g
-              key={r.id}
-              role="button"
-              tabIndex="0"
-              aria-label={`${r.name} 전시실로 이동`}
-              onClick={() => onNavigate(r.id)}
-              onKeyDown={(e) => {
-                if (e.key === "Enter" || e.key === " ") {
-                  e.preventDefault();
-                  onNavigate(r.id);
-                }
-              }}
-            >
-              <polygon
-                points={poly(points)}
-                className={`map-room ${active === r.id ? "selected" : ""}`}
-              />
-              <text x={p[0]} y={p[2] + 1.2} textAnchor="middle">
-                {r.no}
-              </text>
-            </g>
-          );
-        })}
-        <circle cx="0" cy="0" r="1.8" className="map-sculpture" />
-        <g ref={markerRef} className="map-marker">
-          <circle r="2.5" className="map-pulse" />
-          <circle r="1.05" />
-          <path d="M-1.1 3.3 0 1.2l1.1 2.1" />
-        </g>
-      </svg>
+      <div
+        className="map-model"
+        ref={host}
+        role="group"
+        aria-label="입체 전시 공간 안내 지도"
+      >
+        {rooms.map((r) => (
+          <button
+            key={r.id}
+            type="button"
+            data-room={r.id}
+            className={`map-room-label ${active === r.id ? "selected" : ""}`}
+            aria-label={`${r.name}${r.id === "lobby" ? "" : " 전시실"}로 이동`}
+            aria-pressed={active === r.id}
+            title={r.name}
+            onClick={() => onNavigate(r.id)}
+          >
+            {r.no}
+          </button>
+        ))}
+      </div>
       <div className="map-caption">
-        공간을 누르면 바로 이동합니다 <ArrowUpRight size={12} />
+        <span>
+          {failed ? (
+            "번호를 눌러 이동"
+          ) : active === "overview" ? (
+            "전체 공간 둘러보는 중"
+          ) : (
+            <>
+              <i />
+              현재 위치
+            </>
+          )}
+        </span>
+        {!failed && <span>공간을 눌러 이동</span>}
       </div>
     </div>
   );
@@ -254,24 +200,15 @@ function Dialog({ title, children, onClose, className = "" }) {
 export default function App() {
   const host = useRef(null),
     engine = useRef(null),
-    marker = useRef(null),
-    timer = useRef(null);
+    marker = useRef(null);
   const [ready, setReady] = useState(false),
     [progress, setProgress] = useState(0),
     [error, setError] = useState(""),
     [active, setActive] = useState("lobby"),
     [locked, setLocked] = useState(false),
     [lighting, setLighting] = useState("day"),
-    [exposure, setExposure] = useState(1.13),
-    [quality, setQuality] = useState(innerWidth < 700 ? "balanced" : "high"),
     [panel, setPanel] = useState(null),
-    [selected, setSelected] = useState(null),
-    [transition, setTransition] = useState(false),
-    [fullscreen, setFullscreen] = useState(false);
-  const room =
-    active === "overview"
-      ? overview
-      : rooms.find((r) => r.id === active) || rooms[0];
+    [selected, setSelected] = useState(null);
   useEffect(() => {
     let cancelled = false;
     let instance;
@@ -292,14 +229,8 @@ export default function App() {
               onSelect: (a) => {
                 if (!cancelled) setSelected(a);
               },
-              onPosition: ({ position, yaw, overview }) => {
-                if (!cancelled && marker.current) {
-                  marker.current.setAttribute(
-                    "transform",
-                    `translate(${position[0]} ${position[2]}) rotate(${(-yaw * 180) / Math.PI})`,
-                  );
-                  marker.current.style.opacity = overview ? "0" : "1";
-                }
+              onPosition: (state) => {
+                if (!cancelled) marker.current?.(state);
               },
             }),
       )
@@ -323,49 +254,26 @@ export default function App() {
     return () => {
       cancelled = true;
       instance?.dispose();
-      clearTimeout(timer.current);
     };
   }, []);
   useEffect(() => {
     engine.current?.setSuspended(Boolean(panel || selected));
   }, [panel, selected, ready]);
-  useEffect(() => {
-    const change = () => setFullscreen(Boolean(document.fullscreenElement));
-    document.addEventListener("fullscreenchange", change);
-    return () => document.removeEventListener("fullscreenchange", change);
-  }, []);
   function navigate(id) {
     if (!engine.current) return;
     setPanel(null);
     setSelected(null);
-    setTransition(true);
-    clearTimeout(timer.current);
-    timer.current = setTimeout(() => {
-      engine.current.goTo(id);
-      setTransition(false);
-    }, 170);
-  }
-  function setTimeOfDay(value) {
-    setLighting(value);
-    setExposure(value === "day" ? 1.13 : 1.16);
-    engine.current?.setLighting(value);
+    engine.current.goTo(id);
   }
   function changeLighting() {
-    setTimeOfDay(lighting === "day" ? "evening" : "day");
-  }
-  async function toggleFullscreen() {
-    try {
-      if (document.fullscreenElement) await document.exitFullscreen();
-      else await document.documentElement.requestFullscreen();
-    } catch {
-      setPanel("help");
-    }
+    const next = lighting === "day" ? "evening" : "day";
+    setLighting(next);
+    engine.current?.setLighting(next);
   }
   return (
-    <main className={`app ${locked ? "walking" : ""}`}>
+    <main className={`app ${lighting} ${locked ? "walking" : ""}`}>
       <div className="world" ref={host} />
       <div className="edge-shade" />
-      <div className={`scene-transition ${transition ? "visible" : ""}`} />
       <header className="topbar">
         <div
           onClick={(e) => {
@@ -375,21 +283,15 @@ export default function App() {
         >
           <Logo />
         </div>
-        <nav className="room-nav" aria-label="전시실 선택">
-          {rooms.map((r) => (
-            <button
-              key={r.id}
-              className={active === r.id ? "active" : ""}
-              aria-pressed={active === r.id}
-              onClick={() => navigate(r.id)}
-              disabled={!ready}
-            >
-              <span>{r.no}</span>
-              {r.id === "lobby" ? "로비" : r.name}
-            </button>
-          ))}
-        </nav>
         <div className="top-actions">
+          <button
+            className="icon-button"
+            onClick={() => setPanel("about")}
+            aria-label="전시 소개"
+            title="전시 소개"
+          >
+            <ArrowUpRight size={18} />
+          </button>
           <button
             className={`icon-button ${lighting === "evening" ? "on" : ""}`}
             onClick={changeLighting}
@@ -401,17 +303,12 @@ export default function App() {
           >
             {lighting === "day" ? <Sun size={19} /> : <Moon size={18} />}
           </button>
-          <button
-            className={`icon-button ${panel === "settings" ? "on" : ""}`}
-            onClick={() => setPanel(panel === "settings" ? null : "settings")}
-            aria-label="화면 설정"
-          >
-            <SlidersHorizontal size={18} />
-          </button>
           <span className="toolbar-divider" />
           <button
             className="overview-button"
-            aria-label={active === "overview" ? "공간으로 돌아가기" : "전체 공간"}
+            aria-label={
+              active === "overview" ? "공간으로 돌아가기" : "전체 공간"
+            }
             onClick={() =>
               navigate(active === "overview" ? "lobby" : "overview")
             }
@@ -424,85 +321,34 @@ export default function App() {
           </button>
         </div>
       </header>
-      <div className="location-badge">
-        <span className="live-dot" />
-        <span>VIRTUAL EXHIBITION</span>
-        <span className="location-divider">/</span>
-        <span>{room.en}</span>
-      </div>
-      {!locked && (
-        <section
-          className={`space-caption ${active !== "lobby" && active !== "overview" ? "compact" : ""}`}
-          key={active}
-        >
-          <div className="eyebrow">
-            <span>{room.no}</span>
-            <i />
-            {room.en}
-          </div>
-          <h1>
-            {active !== "lobby" && active !== "overview"
-              ? room.name
-              : room.title}
-          </h1>
-          <p>{room.description}</p>
-          <button className="explore-link" onClick={() => setPanel("about")}>
-            전시 소개 <ArrowUpRight size={14} />
-          </button>
-        </section>
-      )}
       <div className="crosshair" aria-hidden="true" />
       <footer className="bottom-bar">
-        <div className="control-hint">
-          <Move size={15} />
-          <span>
-            {active === "overview"
-              ? "드래그 회전 · 휠 확대"
-              : locked
-                ? "W A S D 이동 · 마우스 시선 · ESC 종료"
-                : "드래그 시선 · 방향키 이동"}
-          </span>
-          <button aria-label="관람 방법" onClick={() => setPanel("help")}>
-            <CircleHelp size={15} />
-          </button>
-        </div>
-        <button
-          className={`walk-button ${locked ? "is-walking" : ""}`}
-          onClick={() =>
-            locked ? document.exitPointerLock() : engine.current?.startWalk()
-          }
-          disabled={!ready}
-        >
-          {locked ? (
-            <>
-              <X size={16} />
-              자유 관람 종료
-            </>
-          ) : (
-            <>
-              <MoveUpRight size={17} />
-              자유 관람 시작<span>WASD</span>
-            </>
-          )}
-        </button>
-        <div className="bottom-actions">
-          <span className="sound-note">천천히, 자유롭게.</span>
+        <div className="tour-toolbar" role="group" aria-label="전시 관람 툴바">
+          <nav className="room-nav" aria-label="전시실 선택">
+            {rooms.map((r) => (
+              <button
+                key={r.id}
+                className={active === r.id ? "active" : ""}
+                aria-pressed={active === r.id}
+                onClick={() => navigate(r.id)}
+                disabled={!ready}
+              >
+                <span>{r.no}</span>
+                {r.id === "lobby" ? "로비" : r.name}
+              </button>
+            ))}
+          </nav>
           <button
-            className="icon-button"
-            onClick={() => engine.current?.screenshot()}
-            title="현재 화면 저장"
-            aria-label="현재 화면 저장"
+            className={`walk-button ${locked ? "is-walking" : ""}`}
+            aria-label={locked ? "자유 관람 종료" : "자유 관람 시작"}
+            aria-pressed={locked}
+            title={locked ? "자유 관람 종료 (Esc)" : "자유 관람 시작 (WASD 이동)"}
+            onClick={() =>
+              locked ? document.exitPointerLock() : engine.current?.startWalk()
+            }
             disabled={!ready}
           >
-            <Download size={17} />
-          </button>
-          <button
-            className="icon-button"
-            onClick={toggleFullscreen}
-            title="전체 화면"
-            aria-label={fullscreen ? "전체 화면 종료" : "전체 화면"}
-          >
-            {fullscreen ? <Minimize2 size={17} /> : <Maximize2 size={17} />}
+            <WalkIcon />
           </button>
         </div>
       </footer>
@@ -554,114 +400,6 @@ export default function App() {
           </div>
           <span className="loading-footer">THREE PERSPECTIVES. ONE SPACE.</span>
         </div>
-      )}
-      {panel === "settings" && (
-        <Dialog title="화면 설정" onClose={() => setPanel(null)}>
-          <span className="eyebrow">YOUR EXPERIENCE</span>
-          <h2>편안한 관람을 위해.</h2>
-          <p>화면에 맞는 빛과 선명도를 선택하세요.</p>
-          <label className="setting-label">시간대</label>
-          <div className="segmented">
-            <button
-              className={lighting === "day" ? "selected" : ""}
-              onClick={() => setTimeOfDay("day")}
-            >
-              <Sun size={17} /> 낮의 빛
-            </button>
-            <button
-              className={lighting === "evening" ? "selected" : ""}
-              onClick={() => setTimeOfDay("evening")}
-            >
-              <Moon size={17} /> 저녁의 빛
-            </button>
-          </div>
-          <label className="setting-label">화면 품질</label>
-          <div className="segmented">
-            <button
-              className={quality === "high" ? "selected" : ""}
-              onClick={() => {
-                setQuality("high");
-                engine.current?.setQuality("high");
-              }}
-            >
-              섬세하게
-            </button>
-            <button
-              className={quality === "balanced" ? "selected" : ""}
-              onClick={() => {
-                setQuality("balanced");
-                engine.current?.setQuality("balanced");
-              }}
-            >
-              가볍게
-            </button>
-          </div>
-          <p className="fine-print">
-            화면이 느리게 움직인다면 ‘가볍게’를 선택해 주세요.
-          </p>
-          <label className="setting-label" htmlFor="exposure">
-            밝기
-          </label>
-          <input
-            id="exposure"
-            aria-label="밝기"
-            type="range"
-            min=".65"
-            max="1.7"
-            step=".01"
-            value={exposure}
-            onChange={(e) => {
-              const value = Number(e.target.value);
-              setExposure(value);
-              engine.current?.setExposure(value);
-            }}
-          />
-        </Dialog>
-      )}
-      {panel === "help" && (
-        <Dialog title="관람 방법" onClose={() => setPanel(null)}>
-          <span className="eyebrow">TAKE YOUR TIME</span>
-          <h2>당신의 속도로 걸어보세요.</h2>
-          <p>상단 메뉴나 작은 지도를 눌러 전시실로 이동할 수 있어요.</p>
-          <div className="help-row">
-            <span>
-              <kbd>W</kbd>
-              <kbd>A</kbd>
-              <kbd>S</kbd>
-              <kbd>D</kbd> 또는 방향키
-            </span>
-            <b>앞뒤 · 좌우 이동</b>
-          </div>
-          <div className="help-row">
-            <span>마우스 드래그 / 터치</span>
-            <b>시선 돌리기</b>
-          </div>
-          <div className="help-row">
-            <span>작품 클릭</span>
-            <b>작품 자세히 보기</b>
-          </div>
-          <div className="help-row">
-            <span>
-              <kbd>Shift</kbd>
-            </span>
-            <b>빠르게 이동</b>
-          </div>
-          <div className="help-row">
-            <span>
-              <kbd>Esc</kbd>
-            </span>
-            <b>자유 관람 종료</b>
-          </div>
-          <button
-            className="primary-action"
-            onClick={() => {
-              setPanel(null);
-              engine.current?.startWalk();
-            }}
-          >
-            자유 관람 시작 <ArrowUpRight size={18} />
-          </button>
-        </Dialog>
       )}
       {panel === "about" && (
         <Dialog

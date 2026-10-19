@@ -9,6 +9,8 @@ import { createMaterials } from "./materials.js";
 import { buildArchitecture } from "./architecture.js";
 import { buildExhibits } from "./exhibits.js";
 import { navigation } from "./navigation.js";
+import { lightingPresets, renderQuality } from "./render-settings.js";
+import { createExhibitLighting } from "./exhibit-lighting.js";
 
 export async function createExhibition(container, callbacks) {
   const manager = new THREE.LoadingManager();
@@ -77,13 +79,20 @@ export async function createExhibition(container, callbacks) {
     frame = 0,
     previous = performance.now(),
     lastPosition = 0,
-    quality = "high";
+    quality = "high",
+    overviewMode = false,
+    reducedQuality = false,
+    lighting = "day",
+    updateQuality,
+    measuredFrames = 0,
+    measuredTime = 0;
   const resize = () => {
     const w = container.clientWidth,
       h = container.clientHeight;
     if (!w || !h) return;
     camera.aspect = w / h;
     camera.updateProjectionMatrix();
+    updateQuality?.();
     renderer.setSize(w, h);
     composer?.setSize(w, h);
   };
@@ -161,24 +170,73 @@ export async function createExhibition(container, callbacks) {
       ...callbacks,
       selectable: exhibits.selectable,
     });
-    renderer.shadowMap.needsUpdate = true;
-    const applyQuality = (value) => {
-      quality = value;
-      ao.enabled = value === "high";
-      renderer.setPixelRatio(
-        Math.min(devicePixelRatio, value === "high" ? 1.5 : 1),
+    const exhibitLighting = createExhibitLighting(
+      scene,
+      exhibits.lightingTargets,
+    );
+    exhibitLighting.update(camera);
+    updateQuality = () => {
+      quality = renderQuality(
+        container.clientWidth,
+        overviewMode,
+        reducedQuality,
       );
-      composer.setPixelRatio(renderer.getPixelRatio());
-      resize();
+      ao.enabled = quality === "high";
+      const pixelRatio = Math.min(
+        devicePixelRatio,
+        quality === "high" ? 1.5 : 1,
+      );
+      if (renderer.getPixelRatio() !== pixelRatio) {
+        renderer.setPixelRatio(pixelRatio);
+        composer.setPixelRatio(pixelRatio);
+      }
     };
-    applyQuality(window.innerWidth < 700 ? "balanced" : "high");
+    updateQuality();
+    const applyLighting = (mode) => {
+      lighting = mode;
+      const preset = lightingPresets[mode];
+      sun.intensity = preset.sun;
+      sun.color.set(preset.sunColor);
+      hemisphere.intensity = preset.hemisphere;
+      scene.environmentIntensity = preset.environment;
+      renderer.toneMappingExposure = preset.exposure;
+      scene.background.set(preset.background);
+      interiorFog.color.copy(scene.background);
+      materials.skylight.emissiveIntensity = preset.skylightGlow;
+      exhibitLighting.setIntensity(preset.spot);
+      architecture.lights.forEach((light) => {
+        light.intensity = light.userData.dayIntensity * preset.daylight;
+      });
+      // Only light intensity/color changes: the static shadow depth is reusable.
+    };
+    applyLighting("day");
+    // Compile every room with the SAME fog/light configuration before entry.
+    // Removing fog on the first overview used to compile a second set mid-frame.
+    callbacks.onProgress(96);
+    renderer.setRenderTarget(composer.readBuffer);
+    await renderer.compileAsync(scene, camera);
+    renderer.setRenderTarget(null);
+    renderer.shadowMap.needsUpdate = true;
+    composer.render();
+    previous = performance.now();
     function animate(now) {
       if (disposed) return;
       frame = requestAnimationFrame(animate);
-      const dt = Math.min((now - previous) / 1000, 0.05);
+      const elapsed = now - previous;
+      const dt = Math.min(elapsed / 1000, 0.05);
       previous = now;
       if (document.hidden) return;
+      // Adapt once to sustained slow rendering, rather than requiring a settings modal.
+      if (!reducedQuality && !overviewMode && elapsed < 250) {
+        measuredTime += elapsed;
+        if (++measuredFrames === 90) {
+          reducedQuality = measuredTime / measuredFrames > 30;
+          measuredFrames = measuredTime = 0;
+          if (reducedQuality) updateQuality();
+        }
+      }
       nav.update(dt);
+      if (now - lastPosition > 120) exhibitLighting.update(camera);
       renderer.info.reset();
       composer.render();
       if (now - lastPosition > 120) {
@@ -191,14 +249,19 @@ export async function createExhibition(container, callbacks) {
     const api = {
       goTo(id) {
         const overview = id === "overview";
+        const roofChanged = overview !== overviewMode;
+        overviewMode = overview;
         architecture.roofParts.forEach((p) => (p.visible = !overview));
-        scene.fog = overview ? null : interiorFog;
+        interiorFog.near = overview ? 1000 : 65;
+        interiorFog.far = overview ? 2000 : 180;
         camera.fov = overview ? 48 : 59;
         camera.near = overview ? 0.5 : 0.075;
         camera.far = overview ? 800 : 250;
         camera.updateProjectionMatrix();
         nav.goTo(id);
-        renderer.shadowMap.needsUpdate = true;
+        exhibitLighting.update(camera);
+        updateQuality();
+        if (roofChanged) renderer.shadowMap.needsUpdate = true;
       },
       startWalk() {
         if (nav.state().overview) api.goTo("lobby");
@@ -206,38 +269,15 @@ export async function createExhibition(container, callbacks) {
       },
       setMove: (...args) => nav.setMove(...args),
       setSuspended: (v) => nav.setSuspended(v),
-      setLighting(mode) {
-        const night = mode === "evening";
-        sun.intensity = night ? 0.5 : 3.8;
-        sun.color.set(night ? "#efbd87" : "#fff1d7");
-        hemisphere.intensity = night ? 0.22 : 0.48;
-        scene.environmentIntensity = night ? 0.22 : 0.38;
-        renderer.toneMappingExposure = night ? 1.16 : 1.13;
-        scene.background.set(night ? "#6e7984" : "#dddeda");
-        interiorFog.color.copy(scene.background);
-        architecture.lights.forEach((l) => {
-          l.intensity =
-            l.userData.dayIntensity *
-            (l.isSpotLight ? (night ? 1.5 : 1) : night ? 0.32 : 1);
-        });
-        renderer.shadowMap.needsUpdate = true;
-      },
-      setQuality: applyQuality,
-      setExposure(value) {
-        renderer.toneMappingExposure = value;
-      },
-      screenshot() {
-        composer.render();
-        const a = document.createElement("a");
-        a.download = "triad-exhibition.png";
-        a.href = renderer.domElement.toDataURL("image/png");
-        a.click();
-      },
+      setLighting: applyLighting,
       state: () => ({
         ...nav.state(),
         quality,
+        lighting,
+        aoEnabled: ao.enabled,
         roofVisible: architecture.roofParts.every((p) => p.visible),
         drawCalls: renderer.info.render.calls,
+        shaderPrograms: renderer.info.programs.length,
         triangles: renderer.info.render.triangles,
         objects: scene.children.length,
         artworks: exhibits.pictures.length,

@@ -38,9 +38,10 @@ async function main() {
   await page.locator(".loading-screen").waitFor({ state: "detached" });
   await page.waitForTimeout(1400);
   check(
-    "Initial lobby and a single canvas",
+    "Initial lobby with one world canvas and one miniature canvas",
     (await state()).room === "lobby" &&
-      (await page.locator("canvas").count()) === 1,
+      (await page.locator(".world canvas").count()) === 1 &&
+      (await page.locator(".map-model canvas").count()) === 1,
   );
   await page.screenshot({ path: path.join(out, "01-lobby.png") });
   for (const [id, title, shot] of [
@@ -115,7 +116,7 @@ async function main() {
   );
   await page.getByRole("button", { name: "02 빛의 여백", exact: true }).click();
   await page.waitForTimeout(350);
-  await page.getByRole("button", { name: "화면 설정", exact: true }).click();
+  await page.getByRole("button", { name: "전시 소개", exact: true }).click();
   const paused = await state();
   await move("w", 400);
   check(
@@ -123,19 +124,8 @@ async function main() {
     JSON.stringify(paused.position) ===
       JSON.stringify((await state()).position),
   );
-  await page.getByRole("button", { name: "가볍게", exact: true }).click();
-  check("Balanced quality control", (await state()).quality === "balanced");
-  await page.getByRole("button", { name: "섬세하게", exact: true }).click();
-  check("High quality control", (await state()).quality === "high");
-  await page.getByRole("slider", { name: "밝기" }).fill("1.4");
   await page.keyboard.press("Escape");
   check("Escape closes dialog", (await page.getByRole("dialog").count()) === 0);
-  await page.getByRole("button", { name: "화면 설정", exact: true }).click();
-  check(
-    "Brightness setting persists when reopened",
-    (await page.getByRole("slider", { name: "밝기" }).inputValue()) === "1.4",
-  );
-  await page.keyboard.press("Escape");
   await page
     .getByRole("button", { name: "저녁 조명으로 변경", exact: true })
     .click();
@@ -158,7 +148,7 @@ async function main() {
   );
   await page.screenshot({ path: path.join(out, "06-overview.png") });
   await page
-    .getByRole("button", { name: "자유 관람 시작 WASD", exact: true })
+    .getByRole("button", { name: "자유 관람 시작", exact: true })
     .click();
   await page.waitForTimeout(500);
   const walking = await state();
@@ -173,16 +163,6 @@ async function main() {
   await page.evaluate(() => {
     if (document.pointerLockElement) document.exitPointerLock();
   });
-  const downloadPromise = page.waitForEvent("download");
-  await page
-    .getByRole("button", { name: "현재 화면 저장", exact: true })
-    .click();
-  const download = await downloadPromise;
-  await download.saveAs(path.join(out, "exported-view.png"));
-  check(
-    "Image export downloads a PNG",
-    fs.statSync(path.join(out, "exported-view.png")).size > 10000,
-  );
   await page
     .getByRole("button", { name: "중앙 로비로 이동", exact: true })
     .click();

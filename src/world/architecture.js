@@ -10,6 +10,11 @@ import {
   lobbyOutline,
 } from "./layout.js";
 import { labelTexture, contactTexture } from "./materials.js";
+import {
+  buildAtriumPortal,
+  buildAtriumRelief,
+  buildAtriumDome,
+} from "./atrium.js";
 
 export function box(parent, material, size, position, shadows = true) {
   const mesh = new THREE.Mesh(new THREE.BoxGeometry(...size), material);
@@ -137,25 +142,7 @@ export function buildArchitecture(scene, m) {
   lobby.add(lobbyRoof);
   roofParts.push(lobbyRoof);
   slab(lobbyRoof, roofShape, m.ceiling, 6);
-  const ring = mesh(
-    lobbyRoof,
-    new THREE.TorusGeometry(4, 0.075, 12, 160),
-    m.plaster,
-    [0, 5.97, 0],
-  );
-  ring.rotation.x = Math.PI / 2;
-  const glass = mesh(
-    lobbyRoof,
-    new THREE.CircleGeometry(3.99, 128),
-    m.skylight,
-    [0, 6.15, 0],
-    false,
-  );
-  glass.rotation.x = -Math.PI / 2;
-  for (let x = -3; x <= 3; x += 1.5) {
-    const half = Math.sqrt(16 - x * x);
-    box(lobbyRoof, m.plaster, [0.028, 0.035, half * 2], [x, 6.14, 0], false);
-  }
+  buildAtriumDome(lobbyRoof, m);
   lights.push(area(lobby, [0, 5.8, 0], [0, 0, 0], 6, 6, 6));
   for (let i = 0; i < 3; i++) {
     const a = lobbyArcs[i];
@@ -190,15 +177,21 @@ export function buildArchitecture(scene, m) {
         0,
         6,
       );
-    for (const level of [0.1, 5.84])
+    for (const [level, width, height] of [
+      [0.1, 0.12, 0.14],
+      [5.44, 0.12, 0.1],
+      [5.6, 0.24, 0.18],
+      [5.82, 0.36, 0.12],
+    ])
       slab(
         lobby,
-        archShape(a.center, lobbyRadius + 0.008, a.start, a.end, 0.04),
-        m.marble,
+        archShape(a.center, lobbyRadius + width, a.start, a.end, width + 0.04),
+        m.plaster,
         level,
-        0.075,
+        height,
       );
   }
+  buildAtriumRelief(lobby, m);
   const doorZ = -design.lobby.entry.y;
   for (const x of [-0.75, 0.75]) {
     box(lobby, m.glass, [1.46, 2.93, 0.012], [x, 1.5, doorZ], false);
@@ -212,18 +205,6 @@ export function buildArchitecture(scene, m) {
     );
   }
   box(lobby, m.dark, [3, 0.04, 0.05], [0, 3, doorZ]);
-  for (const col of design.lobby.columns) {
-    mesh(lobby, new THREE.CylinderGeometry(0.15, 0.15, 6, 24), m.plaster, [
-      col.x,
-      3,
-      -col.y,
-    ]);
-    mesh(lobby, new THREE.CylinderGeometry(0.17, 0.17, 0.08, 24), m.brass, [
-      col.x,
-      0.04,
-      -col.y,
-    ]);
-  }
   mesh(
     lobby,
     new THREE.CylinderGeometry(1.8, 1.8, 0.45, 96),
@@ -318,8 +299,7 @@ export function buildArchitecture(scene, m) {
       );
     }
     box(group, wall, [12.6, h, 0.3], [0, h / 2, -24.15]);
-    for (const x of [-4, 4]) box(group, m.plaster, [4, 6, 0.3], [x, 3, 0.15]);
-    box(group, m.plaster, [4, 1.8, 0.3], [0, 5.1, 0.15]);
+    buildAtriumPortal(group, m);
     const portalRoof = box(group, m.ceiling, [12, 0.3, 0.3], [0, 6.15, 0.15]);
     roofParts.push(portalRoof);
     sign(
@@ -330,8 +310,8 @@ export function buildArchitecture(scene, m) {
         : id === "02"
           ? "THE CONTEMPORARY"
           : "THE OBJECT",
-      [0, 4.85, 0.315],
-      2.05,
+      [0, 5.15, 0.92],
+      1.6,
     );
     const roof = new THREE.Group();
     group.add(roof);
@@ -411,22 +391,6 @@ export function buildArchitecture(scene, m) {
         lens.rotation.x = -Math.PI / 2;
       }
     }
-    for (const side of [-1, 1])
-      for (const v of [6, 17]) {
-        const light = new THREE.SpotLight(
-          "#ffdfad",
-          id === "01" ? 48 : 32,
-          16,
-          0.64,
-          0.8,
-          1.6,
-        );
-        light.position.set(side * 3.8, design.rooms[id].track - 0.15, -v);
-        light.target.position.set(side * 5.92, 1.5, -v - 1);
-        group.add(light, light.target);
-        light.userData.dayIntensity = light.intensity;
-        lights.push(light);
-      }
   }
   const ground = mesh(
     scene,

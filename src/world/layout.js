@@ -24,6 +24,19 @@ export const lobbyArcs = [
   { center: [-12 * Math.sqrt(3), 12], start: 300, end: 360 },
 ];
 export const lobbyRadius = 12 * Math.sqrt(3) - 6;
+export const atriumDetails = {
+  portalRadius: 2,
+  portalSpring: 2.65,
+  portalDepth: 0.6,
+  portalReliefDepth: 0.9,
+  columnBaseRadius: 0.36,
+  wallReliefDepth: 0.52,
+};
+export const lobbyBays = lobbyArcs.flatMap((arc, index) =>
+  [12, 30, 48]
+    .filter((offset) => index !== 1 || offset !== 30)
+    .map((offset) => ({ center: arc.center, angle: arc.start + offset })),
+);
 export function lobbyOutline() {
   const points = [
     [-6, 12],
@@ -83,10 +96,24 @@ export function canStand(x, z, radius = 0.26) {
   for (const id of roomIds) {
     const p = toRoom(id, x, z);
     if (
-      p.v > -0.3 - radius &&
+      p.v > -atriumDetails.portalReliefDepth - radius &&
       p.v < radius &&
       Math.abs(p.t) > 2 - radius &&
       Math.abs(p.t) < 6.3 + radius
+    )
+      return false;
+  }
+  // Relief stays close to the curved perimeter; account for its stone bases.
+  for (const bay of lobbyBays) {
+    const a = radians(bay.angle);
+    const dx = x - bay.center[0],
+      dy = -z - bay.center[1];
+    const normal = dx * Math.cos(a) + dy * Math.sin(a) - lobbyRadius;
+    const tangent = -dx * Math.sin(a) + dy * Math.cos(a);
+    if (
+      Math.abs(tangent) < 1.95 + radius &&
+      normal > -0.1 - radius &&
+      normal < atriumDetails.wallReliefDepth + radius
     )
       return false;
   }
@@ -106,7 +133,8 @@ export function canStand(x, z, radius = 0.26) {
   }
   if (Math.hypot(x, z) < 1.8 + radius) return false;
   for (const c of design.lobby.columns)
-    if (Math.hypot(x - c.x, z + c.y) < c.d / 2 + radius) return false;
+    if (Math.hypot(x - c.x, z + c.y) < atriumDetails.columnBaseRadius + radius)
+      return false;
   const radial = Math.hypot(x, z),
     angle = ((Math.atan2(-z, x) * 180) / Math.PI + 360) % 360;
   if (

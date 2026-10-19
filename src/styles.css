@@ -1,7 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;500&display=swap");
 
 :root {
-  font-family: 'Pretendard Variable','Apple SD Gothic Neo','Malgun Gothic',sans-serif;
+  font-family:
+    "Pretendard Variable", "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
   color: #30392f;
   background: #eae7de;
   font-synthesis: none;
@@ -117,45 +118,12 @@ button svg {
 }
 .brand small {
   display: block;
-  font-family: 'Pretendard Variable','Apple SD Gothic Neo','Malgun Gothic',sans-serif;
+  font-family:
+    "Pretendard Variable", "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
   font-size: 6.3px;
   letter-spacing: 1.5px;
   margin-top: 8px;
   white-space: nowrap;
-}
-.room-nav {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-.room-nav button {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  padding: 11px 15px;
-  min-height: 46px;
-  border-radius: 10px;
-  font-size: 12px;
-  white-space: nowrap;
-  transition: background 0.2s;
-}
-.room-nav button > span {
-  font-size: 9px;
-  letter-spacing: 1px;
-  opacity: 0.45;
-}
-.room-nav button.active,
-.walk-button.is-walking {
-  background: #c8d4ba66;
-  color: #263c2b;
-  border-color: #52654766;
-}
-.room-nav button.active > span {
-  opacity: 1;
-}
-.room-nav button:hover,
-.walk-button:hover {
-  background: #f6f5ee70;
 }
 .top-actions {
   display: flex;
@@ -214,44 +182,6 @@ button svg {
   height: 1px;
   background: #78866b;
 }
-.bottom-bar {
-  position: absolute;
-  inset: auto 0 26px;
-  z-index: 3;
-  pointer-events: none;
-}
-.tour-toolbar {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  width: max-content;
-  max-width: calc(100% - 32px);
-  margin: 0 auto;
-  pointer-events: auto;
-}
-.room-nav button,
-.walk-button {
-  background: #f6f5ee3d;
-  border: 1px solid #ffffff66;
-  -webkit-backdrop-filter: blur(12px) saturate(125%);
-  backdrop-filter: blur(12px) saturate(125%);
-  box-shadow: 0 2px 12px #17281c0d;
-}
-.room-nav button:focus-visible,
-.walk-button:focus-visible {
-  outline: 2px solid currentColor;
-  outline-offset: 3px;
-}
-.walk-button {
-  width: 46px;
-  height: 46px;
-  flex-shrink: 0;
-  padding: 0;
-  border-radius: 11px;
-  display: grid;
-  place-items: center;
-  transition: background 0.2s;
-}
 .map-wrap {
   position: absolute;
   bottom: 0;
@@ -261,10 +191,6 @@ button svg {
 .minimap {
   width: 300px;
   padding: 16px 16px 12px;
-  background: #faf8f0ed;
-  backdrop-filter: blur(14px);
-  border: 1px solid #ffffff99;
-  border-radius: 3px;
 }
 .map-heading {
   display: flex;
@@ -321,10 +247,15 @@ button svg {
   background: #faf8eedc;
   color: #4f5848;
   box-shadow: 0 2px 5px #312e261c;
-  font: 9px Arial, sans-serif;
-  transition: background 0.2s, color 0.2s;
+  font:
+    9px Arial,
+    sans-serif;
+  transition:
+    background 0.2s,
+    color 0.2s;
 }
-.map-room-label:hover, .map-room-label.selected {
+.map-room-label:hover,
+.map-room-label.selected {
   background: #495e47;
   color: #fffbed;
 }
@@ -384,14 +315,8 @@ button svg {
   transition: opacity 0.3s;
   pointer-events: none;
 }
-.walking .map-wrap {
-  opacity: 0.6;
-}
 .walking .edge-shade {
   background: linear-gradient(0deg, #e8e4da55, transparent 15%);
-}
-.touch-controls {
-  display: none;
 }
 .loading-screen {
   position: absolute;
@@ -546,46 +471,6 @@ button svg {
   text-decoration: underline;
   text-underline-offset: 3px;
 }
-.artwork-dialog {
-  display: flex;
-  padding: 0;
-  width: 860px;
-}
-.artwork-image {
-  background: #e4e0d5;
-  width: 52%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 26px;
-}
-.artwork-image img {
-  display: block;
-  max-width: 100%;
-  max-height: 65vh;
-  object-fit: contain;
-  box-shadow: 0 5px 22px #32312228;
-}
-.artwork-info {
-  padding: 50px 32px 35px;
-  flex: 1;
-  min-width: 0;
-}
-.artwork-info h2 {
-  font-family: Georgia, "Noto Serif KR", serif;
-  font-size: 25px;
-  letter-spacing: -0.3px;
-  line-height: 1.4;
-}
-.artwork-info .artist {
-  font-size: 11px;
-  color: #515d47;
-}
-.artwork-rule {
-  height: 1px;
-  background: #d9ddce;
-  margin: 24px 0;
-}
 .source-link {
   display: inline-flex;
   gap: 9px;
@@ -593,13 +478,6 @@ button svg {
   font-size: 10px;
   border-bottom: 1px solid #a0ab91;
   padding: 5px 0;
-}
-.artwork-dialog:not(:has(.artwork-image)) {
-  width: 460px;
-}
-.artwork-dialog .dialog-close {
-  z-index: 2;
-  background: #f8f6efaa;
 }
 .app button {
   touch-action: manipulation;
@@ -630,13 +508,6 @@ button svg {
   .map-model {
     height: 225px;
   }
-  .bottom-bar {
-    bottom: 32px;
-  }
-  .room-nav button {
-    font-size: 13px;
-    padding: 12px 20px;
-  }
 }
 @media (max-width: 1100px) {
   .topbar {
@@ -655,14 +526,6 @@ button svg {
   .brand small {
     font-size: 5px;
     letter-spacing: 1.2px;
-  }
-  .room-nav {
-    gap: 6px;
-  }
-  .room-nav button {
-    padding: 10px 9px;
-    font-size: 10px;
-    gap: 5px;
   }
   .top-actions {
     gap: 2px;
@@ -702,18 +565,6 @@ button svg {
     width: 24px;
     height: 28px;
   }
-  .room-nav {
-    flex: 1;
-    min-width: 0;
-    justify-content: space-between;
-  }
-  .room-nav button {
-    justify-content: center;
-    flex: 1;
-    flex-direction: column;
-    padding: 7px 3px;
-    font-size: 10px;
-  }
   .top-actions {
     gap: 5px;
   }
@@ -726,20 +577,9 @@ button svg {
   .toolbar-divider {
     margin: 0 3px;
   }
-  .bottom-bar {
-    bottom: 14px;
-  }
-  .tour-toolbar {
-    width: calc(100% - 28px);
-    gap: 7px;
-  }
-  .room-nav button {
-    min-height: 40px;
-  }
   .minimap {
     width: 190px;
     padding: 11px 10px 8px;
-    background: #f6f5eceb;
   }
   .map-model {
     width: calc(100% + 20px);
@@ -758,43 +598,6 @@ button svg {
   .map-location {
     display: none;
   }
-  .touch-controls {
-    display: grid;
-    position: absolute;
-    left: 28px;
-    bottom: 140px;
-    grid-template-columns: repeat(3, 34px);
-    grid-template-rows: repeat(2, 30px);
-    gap: 3px;
-    z-index: 2;
-  }
-  .touch-controls button {
-    background: #f9f7eacd;
-    border: 1px solid #fff5;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 2px;
-    touch-action: none;
-  }
-  .touch-controls button:active {
-    background: #c9d4be;
-  }
-  .touch-forward {
-    grid-column: 2;
-  }
-  .touch-left {
-    grid-column: 1;
-    grid-row: 2;
-  }
-  .touch-back {
-    grid-column: 2;
-    grid-row: 2;
-  }
-  .touch-right {
-    grid-column: 3;
-    grid-row: 2;
-  }
   .dialog {
     padding: 35px 27px;
   }
@@ -803,28 +606,6 @@ button svg {
   }
   .dialog-backdrop {
     padding: 17px;
-  }
-  .artwork-dialog {
-    display: block;
-    padding: 0;
-    max-width: 430px;
-  }
-  .artwork-image {
-    width: 100%;
-    height: 34vh;
-    padding: 20px;
-  }
-  .artwork-image img {
-    max-height: 100%;
-  }
-  .artwork-info {
-    padding: 24px;
-  }
-  .artwork-info h2 {
-    font-size: 23px;
-  }
-  .artwork-info .primary-action {
-    margin-top: 20px;
   }
   .loading-screen > .brand {
     left: 28px;
@@ -848,32 +629,7 @@ button svg {
     gap: 1px;
   }
 }
-@media (min-width: 761px) and (max-width: 1250px) {
-  .bottom-bar {
-    bottom: 18px;
-  }
-  .tour-toolbar {
-    gap: 6px;
-  }
-  .room-nav button {
-    flex-direction: column;
-    gap: 4px;
-    padding: 8px 12px;
-  }
-}
-@media (min-width: 761px) and (max-width: 930px) {
-  .bottom-bar {
-    bottom: 278px;
-  }
-}
-@media (max-width: 760px) {
-  .bottom-bar {
-    bottom: 232px;
-  }
-  .touch-controls {
-    bottom: 30px;
-  }
-}
+
 .evening .edge-shade,
 .evening.walking .edge-shade {
   background: linear-gradient(0deg, #080c1466, transparent 28%);
@@ -889,52 +645,9 @@ button svg {
 .evening .topbar .icon-button.on {
   background: #f3eee220;
 }
-.evening .room-nav button,
-.evening .walk-button {
-  background: #111c2647;
-  color: #f3eee2;
-  border-color: #f3eee23d;
-}
-.evening .room-nav button:hover,
-.evening .walk-button:hover {
-  background: #c4d0b833;
-}
-.evening .room-nav button.active,
-.evening .walk-button.is-walking {
-  background: #a7c29040;
-  border-color: #cbdcb780;
-}
 @media (min-width: 600px) and (max-height: 550px) {
   .app {
     min-height: 100dvh;
-  }
-  .bottom-bar {
-    bottom: 12px;
-  }
-  .tour-toolbar {
-    width: max-content;
-    flex-wrap: nowrap;
-    gap: 5px;
-  }
-  .tour-toolbar .room-nav {
-    width: auto;
-  }
-  .tour-toolbar .room-nav button {
-    min-width: 40px;
-    min-height: 40px;
-    padding: 8px;
-    gap: 0;
-    font-size: 0;
-  }
-  .tour-toolbar .room-nav button > span {
-    font-size: 11px;
-  }
-  .tour-toolbar .walk-button {
-    width: 42px;
-    height: 42px;
-    padding: 0;
-    font-size: 0;
-    gap: 0;
   }
 }
 @media (prefers-reduced-motion: reduce) {

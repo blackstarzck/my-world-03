@@ -45,9 +45,9 @@ async function main() {
   );
   await page.screenshot({ path: path.join(out, "01-lobby.png") });
   for (const [id, title, shot] of [
-    ["01", "01 고전의 깊이", "02-classic.png"],
-    ["02", "02 빛의 여백", "03-concrete.png"],
-    ["03", "03 형태의 기억", "04-objects.png"],
+    ["01", "고전의 깊이 전시실로 이동", "02-classic.png"],
+    ["02", "빛의 여백 전시실로 이동", "03-concrete.png"],
+    ["03", "형태의 기억 전시실로 이동", "04-objects.png"],
   ]) {
     await page.getByRole("button", { name: title, exact: true }).click();
     await page.waitForFunction(
@@ -58,12 +58,27 @@ async function main() {
     check(`Gallery ${id} navigation`, (await state()).room === id);
     await page.screenshot({ path: path.join(out, shot) });
   }
-  await page.getByRole("button", { name: "02 빛의 여백", exact: true }).click();
+  await page
+    .getByRole("button", { name: "빛의 여백 전시실로 이동", exact: true })
+    .click();
   await page.waitForTimeout(350);
-  await page.mouse.click(350, 525);
-  await page.getByRole("dialog", { name: "Roses", exact: true }).waitFor();
+  await page.getByRole("button", { name: "전체 작품", exact: true }).click();
   check(
-    "Painting click opens matching artwork and source",
+    "Full collection contains every installed artwork",
+    (await page.locator(".artwork-index-row").count()) === 54,
+  );
+  await page
+    .getByRole("button", { name: "Roses · 빛의 여백 작품 감상", exact: true })
+    .first()
+    .click();
+  await page
+    .getByRole("complementary", { name: "Roses", exact: true })
+    .waitFor();
+  await page
+    .getByText("IN THE GALLERY", { exact: true })
+    .waitFor({ timeout: 30000 });
+  check(
+    "Full collection opens the matching 3D artwork and source",
     (await page
       .getByRole("heading", { name: "Roses", exact: true })
       .count()) === 1 &&
@@ -73,8 +88,27 @@ async function main() {
           .getAttribute("href")
       ).includes("metmuseum.org"),
   );
+  const split = await page.evaluate(() => ({
+    artwork:
+      document.querySelector(".world").getBoundingClientRect().width /
+      innerWidth,
+    panel:
+      document.querySelector(".artwork-panel").getBoundingClientRect().width /
+      innerWidth,
+  }));
+  check(
+    "Artwork view uses a 70:30 split",
+    Math.abs(split.artwork - 0.7) < 0.001 &&
+      Math.abs(split.panel - 0.3) < 0.001,
+    split,
+  );
   await page.screenshot({ path: path.join(out, "09-artwork.png") });
   await page.keyboard.press("Escape");
+  await page.waitForFunction(() => !window.__TRIAD__.state().moving);
+  check(
+    "Closing artwork returns to its gallery entrance",
+    (await state()).room === "02",
+  );
   const before = await state();
   await move("w", 1000);
   const after = await state();
@@ -86,7 +120,9 @@ async function main() {
     normalDistance > 3.5 && normalDistance < 5.8,
     { metres: normalDistance },
   );
-  await page.getByRole("button", { name: "02 빛의 여백", exact: true }).click();
+  await page
+    .getByRole("button", { name: "빛의 여백 전시실로 이동", exact: true })
+    .click();
   await page.waitForTimeout(350);
   const sprintBefore = await state();
   await page.keyboard.down("Shift");
@@ -114,7 +150,9 @@ async function main() {
     rearPosition.v > 23.4 && rearPosition.v < 23.8,
     rearPosition,
   );
-  await page.getByRole("button", { name: "02 빛의 여백", exact: true }).click();
+  await page
+    .getByRole("button", { name: "빛의 여백 전시실로 이동", exact: true })
+    .click();
   await page.waitForTimeout(350);
   await page.getByRole("button", { name: "전시 소개", exact: true }).click();
   const paused = await state();
@@ -211,23 +249,17 @@ async function main() {
   );
   await page.screenshot({ path: path.join(out, "07-mobile-lobby.png") });
   await page
-    .getByRole("button", { name: "03 형태의 기억", exact: true })
+    .getByRole("button", { name: "형태의 기억 전시실로 이동", exact: true })
     .click();
   await page.waitForTimeout(400);
   const mobileBefore = await state();
-  const button = await page
-    .getByRole("button", { name: "앞으로 이동", exact: true })
-    .boundingBox();
-  await page.mouse.move(
-    button.x + button.width / 2,
-    button.y + button.height / 2,
-  );
-  await page.mouse.down();
-  await page.waitForTimeout(550);
-  await page.mouse.up();
+  await page
+    .getByRole("button", { name: "다음 작품으로 이동", exact: true })
+    .click();
+  await page.waitForFunction(() => !window.__TRIAD__.state().moving);
   const mobileAfter = await state();
   check(
-    "Mobile direction control moves the visitor",
+    "Mobile pagination moves the visitor to an artwork",
     Math.hypot(
       ...[0, 2].map((i) => mobileAfter.position[i] - mobileBefore.position[i]),
     ) > 0.5,

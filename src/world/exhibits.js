@@ -68,6 +68,21 @@ export async function buildExhibits(groups, m, contactMat, manager) {
     new GLTFLoader(manager).loadAsync("/assets/portrait.glb"),
   ]);
   const selectable = [];
+  const collection = [];
+  function register(data, object, target, normal, width, height) {
+    object.updateWorldMatrix(true, false);
+    const entry = {
+      ...data,
+      target: object.localToWorld(new THREE.Vector3(...target)).toArray(),
+      normal: new THREE.Vector3(...normal)
+        .transformDirection(object.matrixWorld)
+        .toArray(),
+      width,
+      height,
+    };
+    collection.push(entry);
+    return entry;
+  }
   const lightingTargets = [
     {
       object: groups.lobby,
@@ -131,14 +146,22 @@ export async function buildExhibits(groups, m, contactMat, manager) {
       [0, 0, 0.11],
       false,
     );
-    const data = {
-      ...work,
-      id: `${id}-${work.id}`,
-      kind: "회화",
-      room: parent.userData.room ?? parent.name,
-      description:
-        "화면 속 작품을 가까이에서 감상해 보세요. 실제 미술관의 공개 소장품 이미지를 사용했습니다.",
-    };
+    const { map: _map, ...metadata } = work;
+    const data = register(
+      {
+        ...metadata,
+        id: `${id}-${work.id}`,
+        kind: "회화",
+        room: parent.userData.room ?? parent.name,
+        description:
+          "화면 속 작품을 가까이에서 감상해 보세요. 실제 미술관의 공개 소장품 이미지를 사용했습니다.",
+      },
+      group,
+      [0, 0, 0.11],
+      [0, 0, 1],
+      width,
+      height,
+    );
     image.userData.artwork = data;
     selectable.push(image);
     const label = mesh(
@@ -175,7 +198,7 @@ export async function buildExhibits(groups, m, contactMat, manager) {
   for (const p of design.panels) {
     const parent = new THREE.Group();
     parent.name = p.id;
-    parent.userData.room = groups[p.room].name;
+    parent.userData.room = p.room;
     parent.position.set(p.t, 0, -p.v);
     parent.rotation.y = radians(p.rotation_y ?? 0);
     groups[p.room].add(parent);
@@ -306,18 +329,26 @@ export async function buildExhibits(groups, m, contactMat, manager) {
       geo.computeVertexNormals();
       mesh(sculpture, geo, material, [0, 0.35, 0]);
     }
-    const info = {
-      id: c.id,
-      title: names[i],
-      artist_display: [0, 3, 6].includes(i)
-        ? "Lee Perry-Smith · 3D scan / material study"
-        : "TRIAD · Form studies",
-      date_display: "형태와 재료의 연구",
-      kind: "조각",
-      description:
-        "돌의 표면, 금속의 반사, 유리 너머의 깊이를 살펴보는 전시입니다.",
-      url: [0, 3, 6].includes(i) ? "https://www.triplegangers.com/" : null,
-    };
+    const info = register(
+      {
+        id: c.id,
+        room: "03",
+        title: names[i],
+        artist_display: [0, 3, 6].includes(i)
+          ? "Lee Perry-Smith · 3D scan / material study"
+          : "TRIAD · Form studies",
+        date_display: "형태와 재료의 연구",
+        kind: "조각",
+        description:
+          "돌의 표면, 금속의 반사, 유리 너머의 깊이를 살펴보는 전시입니다.",
+        url: [0, 3, 6].includes(i) ? "https://www.triplegangers.com/" : null,
+      },
+      group,
+      [0, 1.35, 0],
+      [0, 0, 1],
+      0.9,
+      1.1,
+    );
     sculpture.traverse((o) => {
       if (o.isMesh) {
         o.userData.artwork = info;
@@ -347,5 +378,6 @@ export async function buildExhibits(groups, m, contactMat, manager) {
     );
     shadow.rotation.x = -Math.PI / 2;
   }
-  return { selectable, pictures, lightingTargets };
+  collection.sort((a, b) => a.room.localeCompare(b.room));
+  return { selectable, pictures, lightingTargets, collection };
 }

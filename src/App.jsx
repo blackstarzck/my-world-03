@@ -1,29 +1,32 @@
 import { useEffect, useRef, useState } from "react";
 import {
   ArrowUpRight,
-  ArrowUp,
-  ArrowDown,
-  ArrowLeft,
-  ArrowRight,
   X,
   Sun,
   Moon,
   Box,
-  ExternalLink,
-  ChevronRight,
+  Images,
   LoaderCircle,
 } from "lucide-react";
+import { ArtworkPanel } from "./ArtworkTour.jsx";
+import { ArtworkIndex, GalleryNavigation } from "./GalleryNavigation.jsx";
 
 const rooms = [
-  { id: "lobby", no: "00", name: "중앙 로비" },
-  { id: "01", no: "01", name: "고전의 깊이" },
-  { id: "02", no: "02", name: "빛의 여백" },
-  { id: "03", no: "03", name: "형태의 기억" },
+  { id: "lobby", name: "중앙 로비", shortName: "로비" },
+  { id: "01", name: "고전의 깊이", shortName: "고전" },
+  { id: "02", name: "빛의 여백", shortName: "빛" },
+  { id: "03", name: "형태의 기억", shortName: "형태" },
 ];
 
 function WalkIcon() {
   return (
-    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+    <svg
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="currentColor"
+      aria-hidden="true"
+    >
       <circle cx="13.5" cy="3.5" r="2" />
       <path d="M9.8 8.9 7 23h2.1l1.8-8 2.1 2v6h2v-7.5l-2.1-2 .6-3C14.8 12 16.8 13 19 13v-2c-1.9 0-3.5-1-4.3-2.4l-1-1.6c-.4-.6-1-1-1.7-1-.3 0-.5.1-.8.1L6 9.3V14h2v-3.4l1.8-1.7Z" />
     </svg>
@@ -88,7 +91,7 @@ function Map({ active, onNavigate, markerRef }) {
     api.current?.setActive(active);
   }, [active]);
   return (
-    <div className={`minimap ${failed ? "map-fallback" : ""}`}>
+    <div className={`minimap glass-surface ${failed ? "map-fallback" : ""}`}>
       <div className="map-heading">
         <span>
           SPACE GUIDE <b>3D</b>
@@ -117,14 +120,14 @@ function Map({ active, onNavigate, markerRef }) {
             title={r.name}
             onClick={() => onNavigate(r.id)}
           >
-            {r.no}
+            {r.shortName}
           </button>
         ))}
       </div>
       <div className="map-caption">
         <span>
           {failed ? (
-            "번호를 눌러 이동"
+            "공간 이름을 눌러 이동"
           ) : active === "overview" ? (
             "전체 공간 둘러보는 중"
           ) : (
@@ -139,18 +142,23 @@ function Map({ active, onNavigate, markerRef }) {
     </div>
   );
 }
-function Dialog({ title, children, onClose, className = "" }) {
+function Dialog({ title, children, onClose, returnFocus, className = "" }) {
   const ref = useRef(null),
     closeRef = useRef(onClose);
   closeRef.current = onClose;
   useEffect(() => {
-    const previous = document.activeElement;
-    ref.current?.focus();
+    const previous = returnFocus ?? document.activeElement;
+    (ref.current?.querySelector("button") ?? ref.current)?.focus();
     const handler = (e) => {
-      if (e.key === "Escape") closeRef.current();
+      if (e.key === "Escape") {
+        e.preventDefault();
+        e.stopPropagation();
+        closeRef.current();
+        return;
+      }
       if (e.key === "Tab") {
         const nodes = ref.current.querySelectorAll(
-          'button,a[href],input,select,[tabindex="0"]',
+          'button:not(:disabled),a[href],input:not(:disabled),select:not(:disabled),[tabindex="0"]',
         );
         const first = nodes[0],
           last = nodes[nodes.length - 1];
@@ -166,12 +174,12 @@ function Dialog({ title, children, onClose, className = "" }) {
     document.addEventListener("keydown", handler);
     return () => {
       document.removeEventListener("keydown", handler);
-      previous?.focus();
+      if (previous?.isConnected) previous.focus({ preventScroll: true });
     };
   }, []);
   return (
     <div
-      className="dialog-backdrop"
+      className={`dialog-backdrop ${className === "artwork-index" ? "index-backdrop" : ""}`}
       onPointerDown={(e) => {
         if (e.target === e.currentTarget) onClose();
       }}
@@ -179,7 +187,7 @@ function Dialog({ title, children, onClose, className = "" }) {
       <section
         ref={ref}
         tabIndex="-1"
-        className={`dialog ${className}`}
+        className={`dialog ${className} ${className === "artwork-index" ? "glass-surface" : ""}`}
         role="dialog"
         aria-modal="true"
         aria-label={title}
@@ -200,15 +208,25 @@ function Dialog({ title, children, onClose, className = "" }) {
 export default function App() {
   const host = useRef(null),
     engine = useRef(null),
-    marker = useRef(null);
+    marker = useRef(null),
+    pagination = useRef(null),
+    returnRoom = useRef(null),
+    lastArtwork = useRef(null),
+    modalTrigger = useRef(null),
+    pendingInspection = useRef(null);
   const [ready, setReady] = useState(false),
     [progress, setProgress] = useState(0),
     [error, setError] = useState(""),
     [active, setActive] = useState("lobby"),
+    [featured, setFeatured] = useState(null),
+    [cursorId, setCursorId] = useState(null),
+    [inspectionRequest, setInspectionRequest] = useState(null),
     [locked, setLocked] = useState(false),
     [lighting, setLighting] = useState("day"),
     [panel, setPanel] = useState(null),
-    [selected, setSelected] = useState(null);
+    [selected, setSelected] = useState(null),
+    [collection, setCollection] = useState([]),
+    [traveling, setTraveling] = useState(false);
   useEffect(() => {
     let cancelled = false;
     let instance;
@@ -221,13 +239,48 @@ export default function App() {
                 if (!cancelled) setProgress(p);
               },
               onRoom: (r) => {
-                if (!cancelled) setActive(r);
+                if (!cancelled) {
+                  setActive(r);
+                }
               },
               onLock: (v) => {
                 if (!cancelled) setLocked(v);
               },
               onSelect: (a) => {
-                if (!cancelled) setSelected(a);
+                if (!cancelled) {
+                  setSelected(a);
+                }
+              },
+              onTravel: (value) => {
+                if (!cancelled) {
+                  setTraveling(value);
+                  const pending = pendingInspection.current;
+                  if (pending && value) pending.started = true;
+                  if (
+                    pending &&
+                    !value &&
+                    (pending.started ||
+                      window.matchMedia("(prefers-reduced-motion: reduce)")
+                        .matches)
+                  ) {
+                    pendingInspection.current = null;
+                    setFeatured(null);
+                    setSelected(pending.artwork);
+                  }
+                }
+              },
+              onTravelProgress: (value) => {
+                const element = pagination.current;
+                if (cancelled || !element) return;
+                // 카메라의 실제 타임라인을 사용하고 프레임마다 React를 다시 그리지 않습니다.
+                element.style.setProperty(
+                  "--travel-remaining",
+                  String((1 - value) * 100),
+                );
+                const ring = element.querySelector('[role="progressbar"]');
+                const percent = String(Math.round(value * 100));
+                if (ring?.getAttribute("aria-valuenow") !== percent)
+                  ring?.setAttribute("aria-valuenow", percent);
               },
               onPosition: (state) => {
                 if (!cancelled) marker.current?.(state);
@@ -242,6 +295,7 @@ export default function App() {
           return;
         }
         engine.current = api;
+        setCollection(api.getArtworks());
         setReady(true);
       })
       .catch((e) => {
@@ -259,11 +313,79 @@ export default function App() {
   useEffect(() => {
     engine.current?.setSuspended(Boolean(panel || selected));
   }, [panel, selected, ready]);
+  useEffect(() => {
+    if (
+      ready &&
+      inspectionRequest &&
+      pendingInspection.current?.artwork === inspectionRequest.artwork
+    ) {
+      // 목록을 닫은 전체 너비 화면에서 이동한 뒤 설명 패널을 엽니다.
+      engine.current.focusArtwork(inspectionRequest.artwork.id);
+    }
+  }, [inspectionRequest, ready]);
+  useEffect(() => {
+    if (!ready) return;
+    if (selected) {
+      setCursorId(selected.id);
+      lastArtwork.current = selected.id;
+      engine.current.focusArtwork(selected.id);
+    } else if (returnRoom.current) {
+      const room = returnRoom.current;
+      returnRoom.current = null;
+      engine.current.returnToEntrance(room);
+      document
+        .getElementById(`artwork-dot-${lastArtwork.current}`)
+        ?.focus({ preventScroll: true });
+    }
+  }, [selected, ready]);
   function navigate(id) {
     if (!engine.current) return;
+    pendingInspection.current = null;
     setPanel(null);
     setSelected(null);
+    setFeatured(null);
+    setCursorId(null);
+    returnRoom.current = null;
     engine.current.goTo(id);
+  }
+  function openArtwork(artwork) {
+    setPanel(null);
+    returnRoom.current = null;
+    pendingInspection.current = { artwork, started: false };
+    setFeatured(artwork);
+    setCursorId(artwork.id);
+    setSelected(null);
+    setInspectionRequest({ artwork });
+  }
+  function previewArtwork(artwork) {
+    if (!artwork || !engine.current) return;
+    pendingInspection.current = null;
+    returnRoom.current = null;
+    setFeatured(artwork);
+    setCursorId(artwork.id);
+    engine.current.focusArtwork(artwork.id);
+  }
+  function openIndex() {
+    pendingInspection.current = null;
+    modalTrigger.current = document.activeElement;
+    setPanel("collection");
+  }
+  function closeArtwork() {
+    if (!selected) return;
+    pendingInspection.current = null;
+    setFeatured(null);
+    returnRoom.current = selected.room;
+    setSelected(null);
+  }
+  function stepArtwork(delta) {
+    setSelected((current) => {
+      const index = collection.findIndex(
+        (artwork) => artwork.id === current?.id,
+      );
+      return collection[
+        (index + delta + collection.length) % collection.length
+      ];
+    });
   }
   function changeLighting() {
     const next = lighting === "day" ? "evening" : "day";
@@ -271,111 +393,129 @@ export default function App() {
     engine.current?.setLighting(next);
   }
   return (
-    <main className={`app ${lighting} ${locked ? "walking" : ""}`}>
-      <div className="world" ref={host} />
-      <div className="edge-shade" />
-      <header className="topbar">
+    <main
+      className={`app ${lighting} ${locked ? "walking" : ""} ${selected ? "viewing-artwork" : "has-collection"}`}
+    >
+      <div className="exhibition-stage" inert={panel ? true : undefined}>
         <div
-          onClick={(e) => {
-            e.preventDefault();
-            navigate("lobby");
-          }}
-        >
-          <Logo />
-        </div>
-        <div className="top-actions">
-          <button
-            className="icon-button"
-            onClick={() => setPanel("about")}
-            aria-label="전시 소개"
-            title="전시 소개"
+          className="world"
+          ref={host}
+          aria-label={
+            selected ? `${selected.title} 작품 감상 영역` : "3D 전시 공간"
+          }
+        />
+        <div className="edge-shade" />
+        <header className="topbar">
+          <div
+            onClick={(e) => {
+              e.preventDefault();
+              navigate("lobby");
+            }}
           >
-            <ArrowUpRight size={18} />
-          </button>
-          <button
-            className={`icon-button ${lighting === "evening" ? "on" : ""}`}
-            onClick={changeLighting}
-            aria-label={
-              lighting === "day" ? "저녁 조명으로 변경" : "낮 조명으로 변경"
-            }
-            title="낮 / 저녁 조명"
-            disabled={!ready}
-          >
-            {lighting === "day" ? <Sun size={19} /> : <Moon size={18} />}
-          </button>
-          <span className="toolbar-divider" />
-          <button
-            className="overview-button"
-            aria-label={
-              active === "overview" ? "공간으로 돌아가기" : "전체 공간"
-            }
-            onClick={() =>
-              navigate(active === "overview" ? "lobby" : "overview")
-            }
-            disabled={!ready}
-          >
-            <Box size={17} />
-            <span>
-              {active === "overview" ? "공간으로 돌아가기" : "전체 공간"}
-            </span>
-          </button>
-        </div>
-      </header>
-      <div className="crosshair" aria-hidden="true" />
-      <footer className="bottom-bar">
-        <div className="tour-toolbar" role="group" aria-label="전시 관람 툴바">
-          <nav className="room-nav" aria-label="전시실 선택">
-            {rooms.map((r) => (
+            <Logo />
+          </div>
+          <div className="top-actions">
+            <div className="utility-actions">
               <button
-                key={r.id}
-                className={active === r.id ? "active" : ""}
-                aria-pressed={active === r.id}
-                onClick={() => navigate(r.id)}
+                className={`icon-button desktop-walk ${locked ? "on" : ""}`}
+                aria-label={locked ? "자유 관람 종료" : "자유 관람 시작"}
+                aria-pressed={locked}
+                title={
+                  locked ? "자유 관람 종료 (Esc)" : "자유 관람 시작 (WASD 이동)"
+                }
+                onClick={() =>
+                  locked
+                    ? document.exitPointerLock()
+                    : engine.current?.startWalk()
+                }
                 disabled={!ready}
               >
-                <span>{r.no}</span>
-                {r.id === "lobby" ? "로비" : r.name}
+                <WalkIcon />
               </button>
-            ))}
-          </nav>
-          <button
-            className={`walk-button ${locked ? "is-walking" : ""}`}
-            aria-label={locked ? "자유 관람 종료" : "자유 관람 시작"}
-            aria-pressed={locked}
-            title={locked ? "자유 관람 종료 (Esc)" : "자유 관람 시작 (WASD 이동)"}
-            onClick={() =>
-              locked ? document.exitPointerLock() : engine.current?.startWalk()
-            }
-            disabled={!ready}
-          >
-            <WalkIcon />
-          </button>
-        </div>
-      </footer>
-      <aside className="map-wrap">
-        <Map active={active} onNavigate={navigate} markerRef={marker} />
-      </aside>
-      <div className="touch-controls" aria-label="터치 이동">
-        {[
-          ["forward", ArrowUp],
-          ["left", ArrowLeft],
-          ["back", ArrowDown],
-          ["right", ArrowRight],
-        ].map(([d, Icon]) => (
-          <button
-            key={d}
-            className={`touch-${d}`}
-            aria-label={`${d === "forward" ? "앞으로" : d === "back" ? "뒤로" : d === "left" ? "왼쪽으로" : "오른쪽으로"} 이동`}
-            onPointerDown={(e) => {
-              e.currentTarget.setPointerCapture(e.pointerId);
-              engine.current?.setMove(d, true);
-            }}
-            onPointerUp={() => engine.current?.setMove(d, false)}
-            onPointerCancel={() => engine.current?.setMove(d, false)}
-          >
-            <Icon size={20} />
-          </button>
-        ))}
+              <button
+                className="icon-button"
+                onClick={() => {
+                  modalTrigger.current = document.activeElement;
+                  setPanel("about");
+                }}
+                aria-label="전시 소개"
+                title="전시 소개"
+              >
+                <ArrowUpRight size={18} />
+              </button>
+              <button
+                className={`icon-button ${lighting === "evening" ? "on" : ""}`}
+                onClick={changeLighting}
+                aria-label={
+                  lighting === "day" ? "저녁 조명으로 변경" : "낮 조명으로 변경"
+                }
+                title="낮 / 저녁 조명"
+                disabled={!ready}
+              >
+                {lighting === "day" ? <Sun size={19} /> : <Moon size={18} />}
+              </button>
+            </div>
+            <span className="toolbar-divider" />
+            <div
+              className="view-actions glass-surface"
+              role="group"
+              aria-label="공간과 작품 보기"
+            >
+              <button
+                className="overview-button"
+                aria-label={
+                  active === "overview" ? "공간으로 돌아가기" : "전체 공간"
+                }
+                onClick={() =>
+                  navigate(active === "overview" ? "lobby" : "overview")
+                }
+                disabled={!ready}
+              >
+                <Box size={17} />
+                <span>
+                  {active === "overview" ? "공간으로 돌아가기" : "전체 공간"}
+                </span>
+              </button>
+              <span className="view-actions-divider" aria-hidden="true" />
+              <button
+                className="overview-button"
+                onClick={openIndex}
+                aria-haspopup="dialog"
+                disabled={!ready}
+              >
+                <Images size={17} />
+                <span>전체 작품</span>
+              </button>
+            </div>
+          </div>
+        </header>
+        <div className="crosshair" aria-hidden="true" />
+        <aside className="map-wrap">
+          <Map active={active} onNavigate={navigate} markerRef={marker} />
+        </aside>
+        {ready && !selected && (
+          <GalleryNavigation
+            artworks={collection}
+            rooms={rooms}
+            currentId={cursorId}
+            activeRoom={active}
+            featured={featured}
+            traveling={traveling}
+            progressRef={pagination}
+            onPreview={previewArtwork}
+            onInspect={openArtwork}
+          />
+        )}
+        {selected && (
+          <ArtworkPanel
+            artwork={selected}
+            room={rooms.find((room) => room.id === selected.room)}
+            traveling={traveling}
+            onClose={closeArtwork}
+            onStep={stepArtwork}
+            onOpenIndex={openIndex}
+          />
+        )}
       </div>
       {!ready && (
         <div className="loading-screen">
@@ -404,6 +544,7 @@ export default function App() {
       {panel === "about" && (
         <Dialog
           title="전시 소개"
+          returnFocus={modalTrigger.current}
           onClose={() => setPanel(null)}
           className="about-dialog"
         >
@@ -420,7 +561,6 @@ export default function App() {
           <div className="about-rooms">
             {rooms.slice(1).map((r) => (
               <button key={r.id} onClick={() => navigate(r.id)}>
-                <span>{r.no}</span>
                 <b>{r.name}</b>
                 <ArrowUpRight size={16} />
               </button>
@@ -461,41 +601,19 @@ export default function App() {
           </p>
         </Dialog>
       )}
-      {selected && (
+      {panel === "collection" && (
         <Dialog
-          title={selected.title}
-          onClose={() => setSelected(null)}
-          className="artwork-dialog"
+          title="전체 작품"
+          returnFocus={modalTrigger.current}
+          className="artwork-index"
+          onClose={() => setPanel(null)}
         >
-          {selected.src && (
-            <div className="artwork-image">
-              <img src={selected.src} alt={selected.title} />
-            </div>
-          )}
-          <div className="artwork-info">
-            <span className="eyebrow">{selected.kind} · COLLECTION</span>
-            <h2>{selected.title}</h2>
-            <p className="artist">{selected.artist_display}</p>
-            <p>{selected.date_display}</p>
-            <div className="artwork-rule" />
-            <p>{selected.description}</p>
-            {selected.url && (
-              <a
-                className="source-link"
-                href={selected.url}
-                target="_blank"
-                rel="noreferrer"
-              >
-                소장처 · 원본 정보 <ExternalLink size={14} />
-              </a>
-            )}
-            <button
-              className="primary-action"
-              onClick={() => setSelected(null)}
-            >
-              전시로 돌아가기 <ChevronRight size={17} />
-            </button>
-          </div>
+          <ArtworkIndex
+            artworks={collection}
+            rooms={rooms}
+            currentId={selected?.id ?? cursorId}
+            onSelect={openArtwork}
+          />
         </Dialog>
       )}
     </main>

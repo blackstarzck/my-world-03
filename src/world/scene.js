@@ -86,15 +86,17 @@ export async function createExhibition(container, callbacks) {
     updateQuality,
     measuredFrames = 0,
     measuredTime = 0;
-  const resize = () => {
+  const resize = (reframe = true) => {
     const w = container.clientWidth,
       h = container.clientHeight;
     if (!w || !h) return;
+    const aspectChanged = Math.abs(camera.aspect - w / h) > 0.001;
     camera.aspect = w / h;
     camera.updateProjectionMatrix();
     updateQuality?.();
     renderer.setSize(w, h);
     composer?.setSize(w, h);
+    if (aspectChanged && reframe) nav?.reframeArtwork();
   };
   const observer = new ResizeObserver(resize);
   observer.observe(container);
@@ -246,22 +248,41 @@ export async function createExhibition(container, callbacks) {
     }
     frame = requestAnimationFrame(animate);
     callbacks.onProgress(100);
+    function setOverview(overview) {
+      const roofChanged = overview !== overviewMode;
+      overviewMode = overview;
+      architecture.roofParts.forEach((p) => (p.visible = !overview));
+      interiorFog.near = overview ? 1000 : 65;
+      interiorFog.far = overview ? 2000 : 180;
+      if (roofChanged) camera.fov = overview ? 48 : 59;
+      camera.near = overview ? 0.5 : 0.075;
+      camera.far = overview ? 800 : 250;
+      camera.updateProjectionMatrix();
+      updateQuality();
+      if (roofChanged) renderer.shadowMap.needsUpdate = true;
+    }
     const api = {
       goTo(id) {
-        const overview = id === "overview";
-        const roofChanged = overview !== overviewMode;
-        overviewMode = overview;
-        architecture.roofParts.forEach((p) => (p.visible = !overview));
-        interiorFog.near = overview ? 1000 : 65;
-        interiorFog.far = overview ? 2000 : 180;
-        camera.fov = overview ? 48 : 59;
-        camera.near = overview ? 0.5 : 0.075;
-        camera.far = overview ? 800 : 250;
+        setOverview(id === "overview");
+        camera.fov = id === "overview" ? 48 : 59;
         camera.updateProjectionMatrix();
         nav.goTo(id);
         exhibitLighting.update(camera);
-        updateQuality();
-        if (roofChanged) renderer.shadowMap.needsUpdate = true;
+      },
+      getArtworks: () => exhibits.collection,
+      focusArtwork(id) {
+        const artwork = exhibits.collection.find((a) => a.id === id);
+        if (!artwork) return;
+        if (nav.state().overview) api.goTo(artwork.room);
+        setOverview(false);
+        // React has applied the 70:30 layout; use that viewport before planning.
+        resize(false);
+        nav.focusArtwork(artwork);
+      },
+      returnToEntrance(room) {
+        setOverview(false);
+        resize(false);
+        nav.goTo(room, { animated: true });
       },
       startWalk() {
         if (nav.state().overview) api.goTo("lobby");
@@ -281,6 +302,7 @@ export async function createExhibition(container, callbacks) {
         triangles: renderer.info.render.triangles,
         objects: scene.children.length,
         artworks: exhibits.pictures.length,
+        artworkCount: exhibits.collection.length,
       }),
       dispose,
     };

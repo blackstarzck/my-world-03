@@ -41,6 +41,7 @@ export function mesh(
 export function makeRoom(id) {
   const group = new THREE.Group();
   group.name = `Gallery ${id}`;
+  group.userData.room = id;
   group.position.fromArray(roomPoint(id, 0, 0));
   group.rotation.y = radians(design.rooms[id].angle - 90);
   return group;

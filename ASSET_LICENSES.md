@@ -34,7 +34,18 @@ Poly Haven의 CC0 자료를 사용했습니다. 원본 URL과 파일 크기는 `
 - 원문 라이선스: `public/assets/portrait-license.txt`
 - 변경 사항: 전시대에 맞춘 크기·위치·방향 조정 및 석재 재질 적용.
 
-건축 공간, 가구, 링, 항아리와 추상 조형은 이 프로젝트에서 치수와 형태로 생성합니다.
+## 중앙 로비 — Black Hole
+
+**Black Hole**, NestaEric (https://sketchfab.com/Nestaeric).
+
+- 원본: https://sketchfab.com/3d-models/black-hole-e410da98b1e5445eae2acafaaa53587d
+- 라이선스: Creative Commons Attribution 4.0 International — https://creativecommons.org/licenses/by/4.0/
+- 사용자 제공 파일: `black_hole.glb`; 로컬 모델: `public/assets/black_hole.glb`.
+- 변경 사항: 구형 specular-glossiness 메타데이터를 유지한 glTF 2.0 대체 재질 변환, 별도 예시 행성 제외, 중앙 받침에 맞춘 크기·위치·시점 조정, 거리 반응·회전·텍스처 흐름·맥동 추가. 공개 뷰어 설정을 기록하여 GLB에서 누락된 알파 기반 굴절·요철·광택 및 발광·색 보정·빛 번짐을 런타임에서 복원했습니다. 밝기 추출과 다섯 단계 번짐, MSAA·알파 커버리지, 모델 초점 기반 흐림과 색수차를 추가하여 가장자리와 후광을 다듬었습니다. 배포 GLB의 메시·내장 텍스처 버퍼는 보존하고 런타임에서 UV·윤곽 오차를 제한한 삼각형 감소를 적용했습니다.
+- 환경 반사 출처: 공개 모델이 참조하는 Sketchfab 환경 UID `0bc5ce71f9404ef984d65e335367bbb8` (`space`), 공개 LogLuv specular cubemap. 원본 URL: https://media.sketchfab.com/environments/0bc5ce71f9404ef984d65e335367bbb8/aba76fa27de64645ba5b91e1c0b75612.bin.gz. 표준 gzip 해제 및 채널 배열 복원 후 원래 인코딩으로 샘플링합니다.
+- 재변환: `node tools/prepare-black-hole.mjs <원본 black_hole.glb 경로>`.
+
+건축 공간, 가구, 항아리와 추상 조형은 이 프로젝트에서 치수와 형태로 생성합니다. 미니맵에는 블랙홀의 간략한 대체 모형을 사용합니다.
 
 ## 글꼴과 아이콘
 

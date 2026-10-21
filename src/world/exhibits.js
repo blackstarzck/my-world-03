@@ -1,5 +1,6 @@
 import * as THREE from "three";
 import { GLTFLoader } from "three/addons/loaders/GLTFLoader.js";
+import { loadCentralExhibit } from "./central-exhibit.js";
 import { mergeGeometries } from "three/addons/utils/BufferGeometryUtils.js";
 import { design, radians } from "./layout.js";
 import { box, mesh } from "./architecture.js";
@@ -56,7 +57,7 @@ function vessel(type) {
 }
 export async function buildExhibits(groups, m, contactMat, manager) {
   const loader = new THREE.TextureLoader(manager);
-  const [pictures, portrait] = await Promise.all([
+  const [pictures, portrait, blackHole] = await Promise.all([
     Promise.all(
       artworks.map(async (a) => {
         const map = await loader.loadAsync(a.src);
@@ -66,7 +67,9 @@ export async function buildExhibits(groups, m, contactMat, manager) {
       }),
     ),
     new GLTFLoader(manager).loadAsync("/assets/portrait.glb"),
+    loadCentralExhibit(manager),
   ]);
+  groups.lobby.add(blackHole);
   const selectable = [];
   const collection = [];
   function register(data, object, target, normal, width, height) {
@@ -379,5 +382,5 @@ export async function buildExhibits(groups, m, contactMat, manager) {
     shadow.rotation.x = -Math.PI / 2;
   }
   collection.sort((a, b) => a.room.localeCompare(b.room));
-  return { selectable, pictures, lightingTargets, collection };
+  return { selectable, pictures, lightingTargets, collection, blackHole };
 }

@@ -19,16 +19,21 @@ async function main() {
     await page.waitForFunction(() => window.__TRIAD__, null, { timeout: 90000 });
     await page.locator('.loading-screen').waitFor({ state: 'detached', timeout: 90000 });
     assert.equal(await page.locator('.featured-caption:not(.room-introduction)').count(), 0);
-    pass('Lobby starts with its room introduction, without a stale project title');
+    assert.equal(await page.locator('.room-introduction').count(), 0);
+    pass('Lobby stays clear until a nearby project is detected');
     const artworks = await page.evaluate(() => window.__TRIAD__.getArtworks().map(a => ({ id: a.id, name: a.projectName, target: a.target })));
     const misses = [];
     for (const art of artworks) {
       await focus(art.id);
       try { await caption(art.name); }
-      catch { misses.push({ ...art, actual: await page.locator('.featured-caption h1').textContent() }); }
+      catch { misses.push({ ...art, actual: await page.locator('.featured-caption h1').textContent({ timeout: 500 }).catch(() => null) }); }
     }
     assert.deepEqual(misses, [], 'every canvas must be detected from its frontal viewing position');
     pass('All 49 wall, panel and glass-case canvases automatically expose the correct project');
+    await page.setViewportSize({ width: 1920, height: 1080 });
+    await focus('P01-01-F');
+    await caption(artworks.find(a => a.id === 'P01-01-F').name);
+    await page.screenshot({ path: path.join(out, 'restored-envelope-desktop.png') });
 
     const end = artworks.find(a => a.id === 'A03-END');
     await focus(end.id); await caption(end.name);
@@ -37,8 +42,9 @@ async function main() {
     try {
       await page.waitForFunction(target => Math.hypot(...window.__TRIAD__.state().position.map((v, i) => v - target[i])) > 4, end.target, { timeout: 15000 });
     } finally { await page.keyboard.up('s'); }
-    await page.locator('.room-introduction').waitFor();
-    pass('Walking away clears the title and restores the room introduction');
+    await page.locator('.featured-caption').waitFor({ state: 'detached' });
+    assert.equal(await page.locator('.room-introduction').count(), 0);
+    pass('Walking away hides the project caption without restoring removed introduction text');
     await page.keyboard.down('w');
     try { await caption(end.name); }
     finally { await page.keyboard.up('w'); }

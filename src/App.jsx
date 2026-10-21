@@ -553,12 +553,14 @@ export default function App() {
         {ready && !selected && (
           <GalleryNavigation
             artworks={collection}
+            rooms={rooms}
             currentId={cursorId}
             activeRoom={active}
             featured={featured}
             traveling={traveling}
             progressRef={pagination}
             onPreview={previewArtwork}
+            onInspect={openArtwork}
           />
         )}
       </div>

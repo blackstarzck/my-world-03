@@ -201,6 +201,7 @@ export default function App() {
     focusTarget = useRef(null),
     detailVisibleRef = useRef(false);
   const [ready, setReady] = useState(false),
+    [loadingVisible, setLoadingVisible] = useState(true),
     [loadingStage, setLoadingStage] = useState("전시 공간을 준비하고 있어요"),
     [error, setError] = useState(""),
     [active, setActive] = useState("lobby"),
@@ -296,6 +297,16 @@ export default function App() {
       instance?.dispose();
     };
   }, []);
+  useEffect(() => {
+    if (!ready) return;
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      setLoadingVisible(false);
+      return;
+    }
+    // Normally removed by transitionend; also clean up if it is cancelled.
+    const timer = window.setTimeout(() => setLoadingVisible(false), 650);
+    return () => window.clearTimeout(timer);
+  }, [ready]);
   useEffect(() => {
     engine.current?.setSuspended(Boolean(panel || selected), { pauseMotion: Boolean(panel) });
   }, [panel, selected, ready]);
@@ -578,8 +589,17 @@ export default function App() {
           </div>
         </div>
       )}
-      {!ready && (
-        <div className="loading-screen" aria-busy={!error}>
+      {loadingVisible && (
+        <div
+          className={`loading-screen${ready ? " is-leaving" : ""}`}
+          aria-busy={!ready && !error}
+          aria-hidden={ready || undefined}
+          inert={ready ? true : undefined}
+          onTransitionEnd={(event) => {
+            if (ready && event.target === event.currentTarget && event.propertyName === "opacity")
+              setLoadingVisible(false);
+          }}
+        >
           {!error && <BoxLoader />}
           <div className="loading-copy" role="status" aria-live="polite">
             {error ? (

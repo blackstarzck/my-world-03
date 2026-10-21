@@ -4,12 +4,23 @@ const distance = (a, b) => Math.hypot(...a.map((value, i) => value - b[i]));
 const blend = (a, b, t) => a.map((value, i) => value + (b[i] - value) * t);
 
 export function clearSegment(a, b) {
-  const steps = Math.max(1, Math.ceil(distance(a, b) / 0.12));
-  for (let i = 0; i <= steps; i++) {
-    const point = blend(a, b, i / steps);
-    if (!canStand(point[0], point[2])) return false;
+  if (!canStand(a[0], a[2]) || !canStand(b[0], b[2])) return false;
+  const length = Math.hypot(b[0] - a[0], b[2] - a[2]);
+  function clear(start, end) {
+    const halfSpan = length * (end - start) / 2;
+    const midpoint = blend(a, b, (start + end) / 2);
+    if (!canStand(midpoint[0], midpoint[2])) return false;
+    // Certify the whole interval, rather than missing a thin corner between samples.
+    if (canStand(midpoint[0], midpoint[2], 0.26 + halfSpan)) return true;
+    // Reject interior grazes instead of spending thousands of subdivisions on
+    // paths with almost zero clearance. Refine endpoint intervals so a visitor
+    // already standing close to a wall can still move away safely.
+    if (halfSpan < 0.005 && start > 0 && end < 1) return false;
+    if (halfSpan < 0.00001) return false;
+    const middle = (start + end) / 2;
+    return clear(start, middle) && clear(middle, end);
   }
-  return true;
+  return clear(0, 1);
 }
 
 // Cache the static floor grid. A* follows the same walls, portals and furniture

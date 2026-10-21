@@ -1,0 +1,132 @@
+.artwork-project-name {
+  font-size: 13px;
+  line-height: 1.7;
+  color: #53634e;
+  margin: 0 0 18px;
+  word-break: keep-all;
+}
+.artwork-project-picker {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  font-size: 10px;
+  color: #6b7b60;
+}
+.artwork-project-picker select {
+  font: inherit;
+  font-size: 12px;
+  max-width: 100%;
+  width: 100%;
+  padding: 10px 8px;
+  color: #324732;
+  background: #f7f4eb;
+  border: 1px solid #cbd0bc;
+  border-radius: 5px;
+}
+.artwork-source-links {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  margin-top: 14px;
+}
+.artwork-source-links a {
+  overflow-wrap: anywhere;
+  max-width: 100%;
+}
+.artwork-location {
+  margin-bottom: 20px;
+}
+.about-room-theme {
+  display: block;
+  font:
+    400 10px/1.6 "Pretendard Variable",
+    sans-serif;
+  color: #7b8971;
+  margin-top: 5px;
+}
+.room-introduction h1 {
+  word-break: keep-all;
+  font-size: clamp(26px, 3.2vw, 48px);
+  line-height: 1.18;
+}
+.index-controls {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  align-items: end;
+  margin: 24px 0 10px;
+}
+.index-controls label {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  flex: 1;
+  min-width: 150px;
+  font-size: 11px;
+  color: var(--glass-muted);
+}
+.index-controls label:first-child {
+  flex: 2;
+}
+.index-controls input,
+.index-controls select {
+  font: inherit;
+  font-size: 12px;
+  width: 100%;
+  padding: 11px 13px;
+  border: 1px solid var(--glass-line);
+  border-radius: 6px;
+  background: var(--glass-count);
+  color: var(--glass-ink);
+  outline-offset: 2px;
+}
+.index-view-options {
+  display: flex;
+  gap: 4px;
+}
+.index-view-options button {
+  min-height: 38px;
+  padding: 7px 12px;
+  border-radius: 6px;
+  background: transparent;
+  color: var(--glass-muted);
+  font-size: 11px;
+}
+.index-view-options button[aria-pressed="true"] {
+  background: var(--glass-selected);
+  color: var(--glass-ink);
+}
+.index-result-count {
+  color: var(--glass-muted);
+  font-size: 10px;
+}
+.index-artwork-title small {
+  display: block;
+  font-size: 10px;
+  line-height: 1.8;
+  color: var(--glass-muted);
+  font-weight: 400;
+  margin-top: 6px;
+}
+.artwork-index-heading > p:last-child {
+  letter-spacing: 0;
+  font-size: 11px;
+}
+@media (max-width: 760px) {
+  .index-controls {
+    gap: 9px;
+  }
+  .index-controls label {
+    min-width: 110px;
+  }
+  .index-controls label:first-child {
+    flex: 1 1 100%;
+  }
+  .index-artwork-title small {
+    font-size: 9px;
+  }
+  .artwork-project-name {
+    font-size: 12px;
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "id": "P01-02-F",
+  "room": "01",
+  "slotKind": "panel",
+  "project": "문서화 · 비개발 직군 협업",
+  "sourceEntryIds": [
+    "original:docs-comm"
+  ],
+  "connection": "기능·정책·권한 경계를 다른 직군이 함께 이해할 수 있는 문서와 자료로 만드는 역할을, 함께 사용할 그늘의 구조와 장력을 맞추는 사람들로 표현한다. 건축이나 행사 설치를 했다는 주장이 아닌 협업의 비유다.",
+  "medium": "gouache",
+  "symbol": "함께 펴는 한 장",
+  "subject": "ONE folded-paper shelter made of a single sheet with two differently colored faces, ivory and muted sage, a small coral fold accent. An abstract yet physical shared shelter, only three folds. Gouache and pencil, no people, ropes, scene or architectural diagram.",
+  "reference": null,
+  "origin": "new-production",
+  "initialPath": "D:/workspace/my-world-03/output/portfolio-paintings-2026-10-20/P01-02-F-r0.png",
+  "finalPath": "D:/workspace/my-world-03/output/portfolio-paintings-2026-10-20/P01-02-F.png",
+  "reviewPath": "D:/workspace/my-world-03/output/portfolio-paintings-2026-10-20/reviews/P01-02-F.json",
+  "prompt": "Create ONE original fine-art image, horizontal 7:5, high resolution ideally 2800x2000 or greater. Flat front view, artwork fills entire image, no depicted frame, no mat, no artificial edge border. Matte gouache and visible colored pencil on warm ivory paper, broad simple chalky color shapes, dry edges, a few penciled hatch marks. Restricted indigo/sage/coral/ivory palette, warm mature handmade mood. No glossy digital modeling. SUBJECT: ONE folded-paper shelter made of a single sheet with two differently colored faces, ivory and muted sage, a small coral fold accent. An abstract yet physical shared shelter, only three folds. Gouache and pencil, no people, ropes, scene or architectural diagram. The supplied image, if any, is ONLY a medium/mood reference; do not preserve its subject, letters or layout. ONE unified symbolic subject or typographic statement; at least half the image should be calm negative space. Main silhouette readable at thumbnail scale, no extra illustrative narrative. No room-based style constraints. Project meaning outside image: 기능·정책·권한 경계를 다른 직군이 함께 이해할 수 있는 문서와 자료로 만드는 역할을, 함께 사용할 그늘의 구조와 장력을 맞추는 사람들로 표현한다. 건축이나 행사 설치를 했다는 주장이 아닌 협업의 비유다. Do not depict application screens, logos, code, graphs, arrows, fake achievements, decorative labels, signatures, watermarks, wall/easel or gallery mockup. Unless explicitly requested in the poster subject, no text at all. Original hand-made physical medium, not a flat generic UI icon or a glossy 3D render."
+}

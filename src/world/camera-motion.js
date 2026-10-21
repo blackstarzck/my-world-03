@@ -54,6 +54,76 @@ function interpolate(a, b, va, vb, t, seconds) {
   );
 }
 
+function framingPose(motion, progress) {
+  const { from, to, start, end, target, initialAim } = motion;
+  const position = sampleRoute(motion.points, motion.metrics, progress);
+  let yaw = start.yaw + (angleNear(end.yaw, start.yaw) - start.yaw) * progress;
+  let pitch = start.pitch + (end.pitch - start.pitch) * progress;
+  if (target) {
+    // Translation and gaze are independent: backing away must never turn the
+    // visitor towards the direction of travel, away from the painting.
+    const aim = direction(position, target);
+    yaw = angleNear(aim.yaw, initialAim.yaw) +
+      (angleNear(start.yaw, initialAim.yaw) - initialAim.yaw) * (1 - progress);
+    pitch = aim.pitch + (start.pitch - initialAim.pitch) * (1 - progress);
+  }
+  return { position, yaw, pitch, fov: from.fov + (to.fov - from.fov) * progress };
+}
+
+function framingDuration(sample, curved = false) {
+  const from = sample(0), to = sample(1);
+  const distance = Math.hypot(...to.position.map((value, i) => value - from.position[i]));
+  const rotation = Math.hypot(angleNear(to.yaw, from.yaw) - from.yaw, to.pitch - from.pitch);
+  if (distance < 1e-6 && rotation < 1e-6 && Math.abs(to.fov - from.fov) < 1e-6) return 0;
+  let duration = Math.max(0.18, Math.min(0.65, 0.3 + distance * 0.16), 1.875 * distance / 10);
+  // Bound the actual gaze curve, including the steep initial pitch when a
+  // visitor is almost touching the canvas. The clock is independent of FPS.
+  let previous = from, previousVelocity;
+  for (let i = 1; i <= 100; i++) {
+    const pose = sample(blend(i / 100));
+    duration = Math.max(duration,
+      101 * Math.hypot(angleNear(pose.yaw, previous.yaw) - previous.yaw, pose.pitch - previous.pitch) / TURN_RATE,
+      100 * Math.abs(pose.fov - previous.fov) / 90);
+    if (curved) {
+      const velocity = pose.position.map((value, axis) => 100 * (value - previous.position[axis]));
+      duration = Math.max(duration, Math.hypot(...velocity) / 10);
+      if (previousVelocity) duration = Math.max(duration,
+        Math.sqrt(100 * Math.hypot(...velocity.map((value, axis) => value - previousVelocity[axis])) / LATERAL_ACCELERATION));
+      previousVelocity = velocity;
+    }
+    previous = pose;
+  }
+  return duration;
+}
+
+// Callers certify the whole path. Nearby returns may have a small rounded bend
+// around a panel, but must not turn towards a walking heading while doing so.
+export function createFramingMotion(from, to, target = null, points = [from.position, to.position]) {
+  const motion = {
+    kind: "framing", from, to, target, points, metrics: routeMetrics(points),
+    start: direction(from.position, from.target),
+    end: direction(to.position, to.target),
+    initialAim: target ? direction(from.position, target) : null,
+  };
+  motion.duration = framingDuration(progress => framingPose(motion, progress), points.length > 2);
+  return motion;
+}
+
+export function reverseFramingMotion(source, seconds, fov = source.from.fov) {
+  const progress = source.duration ? blend(clamp(seconds / source.duration, 0, 1)) : 1;
+  const motion = { kind: "framing-return", source, progress, fov };
+  // Reverse only the part actually travelled. Retiming its spatial progress
+  // starts and ends at rest, avoiding an instantaneous velocity reversal.
+  motion.duration = framingDuration(t => returnFramingPose(motion, t), source.points.length > 2);
+  return motion;
+}
+
+function returnFramingPose(motion, progress) {
+  const pose = framingPose(motion.source, motion.progress * (1 - progress));
+  pose.fov += (motion.fov - motion.source.from.fov) * progress;
+  return pose;
+}
+
 // Rotate directions rather than interpolating world-space look-at points: a
 // target passing through the camera caused the previous sudden 180° flips.
 export function createCameraMotion(
@@ -254,6 +324,12 @@ function firstKeyAtOrAfter(keys, seconds) {
   return low < keys.length ? low : -1;
 }
 export function sampleCameraMotion(motion, seconds) {
+  if (motion.kind === "framing" || motion.kind === "framing-return") {
+    const progress = motion.duration ? blend(clamp(seconds / motion.duration, 0, 1)) : 1;
+    const pose = motion.kind === "framing"
+      ? framingPose(motion, progress) : returnFramingPose(motion, progress);
+    return { ...pose, done: seconds >= motion.duration };
+  }
   if (seconds >= motion.duration) return { ...motion.keys.at(-1), done: true };
   const keys = motion.keys,
     index = firstKeyAtOrAfter(keys, seconds);

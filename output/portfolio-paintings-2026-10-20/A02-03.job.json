@@ -1,0 +1,19 @@
+{
+  "id": "A02-03",
+  "room": "02",
+  "slotKind": "wall",
+  "project": "요구사항 게이트 하네스",
+  "sourceEntryIds": [
+    "original:gate-harness"
+  ],
+  "connection": "필수 문서 확인 전 변경 도구를 막는 tool gateway를 출발 전 점검과 멈춤으로 대응시킨다. 포개진 발자국은 session_id별 이벤트를 보존해 재생·재시도·인수인계하는 맥락을 뜻한다. 어떤 오류도 발생하지 않는다는 보장은 담지 않는다.",
+  "medium": "inkwash",
+  "symbol": "닫힌 카라비너",
+  "subject": "ONE closed climbing carabiner securely surrounding ONE tiny folded blank paper slip. An actual material still life of checking prerequisites before action. Deep indigo pen, sparse muted cobalt watercolor, warm paper; no climber, mountains, arrows, lock icon or text.",
+  "reference": "C:/Users/buche/AppData/Local/Temp/codex-clipboard-c532368a-c9f7-4934-bfbc-b618c9000c93.jpg",
+  "origin": "new-production",
+  "initialPath": "D:/workspace/my-world-03/output/portfolio-paintings-2026-10-20/A02-03-r0.png",
+  "finalPath": "D:/workspace/my-world-03/output/portfolio-paintings-2026-10-20/A02-03.png",
+  "reviewPath": "D:/workspace/my-world-03/output/portfolio-paintings-2026-10-20/reviews/A02-03.json",
+  "prompt": "Create ONE original fine-art image, horizontal 7:5, high resolution ideally 2800x2000 or greater. Flat front view, artwork fills entire image, no depicted frame, no mat, no artificial edge border. Economical architectural/botanical pen-and-watercolor study. Style reference is supplied cafe drawing: irregular black/indigo pen, transparent pale sage and muted coral washes, paper tooth, many untouched paper areas. Replace the architecture with requested object. SUBJECT: ONE closed climbing carabiner securely surrounding ONE tiny folded blank paper slip. An actual material still life of checking prerequisites before action. Deep indigo pen, sparse muted cobalt watercolor, warm paper; no climber, mountains, arrows, lock icon or text. The supplied image, if any, is ONLY a medium/mood reference; do not preserve its subject, letters or layout. ONE unified symbolic subject or typographic statement; at least half the image should be calm negative space. Main silhouette readable at thumbnail scale, no extra illustrative narrative. No room-based style constraints. Project meaning outside image: 필수 문서 확인 전 변경 도구를 막는 tool gateway를 출발 전 점검과 멈춤으로 대응시킨다. 포개진 발자국은 session_id별 이벤트를 보존해 재생·재시도·인수인계하는 맥락을 뜻한다. 어떤 오류도 발생하지 않는다는 보장은 담지 않는다. Do not depict application screens, logos, code, graphs, arrows, fake achievements, decorative labels, signatures, watermarks, wall/easel or gallery mockup. Unless explicitly requested in the poster subject, no text at all. Original hand-made physical medium, not a flat generic UI icon or a glossy 3D render."
+}

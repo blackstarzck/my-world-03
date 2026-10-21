@@ -1,0 +1,20 @@
+{
+  "id": "A03-02",
+  "room": "03",
+  "slotKind": "wall",
+  "project": "캔버스 · 파티클",
+  "sourceEntryIds": [
+    "original:canvas-lab",
+    "additional:particle"
+  ],
+  "connection": "canvas-lab의 다양한 입자 움직임은 왼쪽의 서로 다른 흐름으로, particle의 형태 변환은 흩어진 조각이 새 형태를 만드는 오른쪽으로 구별한다. 입자 자체를 장식 배경에 그치지 않고 집단 형태가 생기는 주인공으로 삼는다.",
+  "medium": "approved",
+  "symbol": "붓의 흐름과 점",
+  "subject": "",
+  "reference": null,
+  "origin": "user-approved-preview",
+  "initialPath": "D:/workspace/my-world-03/output/portfolio-paintings-2026-10-20/A03-02-r0.png",
+  "finalPath": "D:/workspace/my-world-03/output/portfolio-paintings-2026-10-20/A03-02.png",
+  "reviewPath": "D:/workspace/my-world-03/output/portfolio-paintings-2026-10-20/reviews/A03-02.json",
+  "prompt": null
+}

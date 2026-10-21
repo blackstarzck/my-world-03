@@ -1,0 +1,19 @@
+{
+  "id": "A02-09",
+  "room": "02",
+  "slotKind": "wall",
+  "project": "VIVE 독서 보조 도구",
+  "sourceEntryIds": [
+    "additional:vive"
+  ],
+  "connection": "하이라이트·메모·요약을 책과 연결해 저장하고 다시 찾는 경험을 읽은 내용이 사람 안에 남는 식물 표본 같은 기억에 비유한다. 식물이 AI 능력이나 독서 성과의 보증을 뜻하지 않으며, 사용자 자료 관리와 서버 측 AI 요청은 상세 설명에서 분리해 기술한다.",
+  "medium": "approved",
+  "symbol": "책에 남긴 꽃",
+  "subject": "",
+  "reference": null,
+  "origin": "user-approved-preview",
+  "initialPath": "D:/workspace/my-world-03/output/portfolio-paintings-2026-10-20/A02-09-r0.png",
+  "finalPath": "D:/workspace/my-world-03/output/portfolio-paintings-2026-10-20/A02-09.png",
+  "reviewPath": "D:/workspace/my-world-03/output/portfolio-paintings-2026-10-20/reviews/A02-09.json",
+  "prompt": null
+}

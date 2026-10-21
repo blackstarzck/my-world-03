@@ -1,0 +1,21 @@
+{
+  "id": "V05",
+  "room": "03",
+  "slotKind": "case",
+  "project": "3D 포트폴리오 구현",
+  "sourceEntryIds": [
+    "additional:my-world-03",
+    "additional:my-world-01",
+    "additional:my-world-02"
+  ],
+  "connection": "my-world-01은 모델·재질·첫 로딩의 준비, my-world-02는 정면 이동 뒤 콘텐츠 전환, my-world-03은 세 공간과 실제 앱·자료의 연결로 각기 다른 제작 문제를 보여 준다. 세 버전의 실제 건물을 그대로 캡처해 겹치지 않는다.",
+  "medium": "poster",
+  "symbol": "걸어 들어갈 공간",
+  "subject": "EXACT TEXT: large 'SPACE' above 'TO EXPLORE'; small '3D PORTFOLIO STUDIES'. ONE spare ivory open doorway whose single dark-blue shadow subtly resembles an unfolding path. Cream, indigo, soft coral spot ink, matte print texture. No actual gallery screenshot, miniature town, many rooms, figures, UI or extra motifs.",
+  "reference": null,
+  "origin": "new-production",
+  "initialPath": "D:/workspace/my-world-03/output/portfolio-paintings-2026-10-20/V05-r0.png",
+  "finalPath": "D:/workspace/my-world-03/output/portfolio-paintings-2026-10-20/V05.png",
+  "reviewPath": "D:/workspace/my-world-03/output/portfolio-paintings-2026-10-20/reviews/V05.json",
+  "prompt": "Create ONE original fine-art image, horizontal 7:5, high resolution ideally 2800x2000 or greater. Flat front view, artwork fills entire image, no depicted frame, no mat, no artificial edge border. Sparse original editorial art poster, oversized beautiful typography, one compact physical/printed motif, limited cream/indigo/coral palette, tactile paper and screenprint grain. Exact requested words only. No charts or app interfaces. SUBJECT: EXACT TEXT: large 'SPACE' above 'TO EXPLORE'; small '3D PORTFOLIO STUDIES'. ONE spare ivory open doorway whose single dark-blue shadow subtly resembles an unfolding path. Cream, indigo, soft coral spot ink, matte print texture. No actual gallery screenshot, miniature town, many rooms, figures, UI or extra motifs. The supplied image, if any, is ONLY a medium/mood reference; do not preserve its subject, letters or layout. ONE unified symbolic subject or typographic statement; at least half the image should be calm negative space. Main silhouette readable at thumbnail scale, no extra illustrative narrative. No room-based style constraints. Project meaning outside image: my-world-01은 모델·재질·첫 로딩의 준비, my-world-02는 정면 이동 뒤 콘텐츠 전환, my-world-03은 세 공간과 실제 앱·자료의 연결로 각기 다른 제작 문제를 보여 준다. 세 버전의 실제 건물을 그대로 캡처해 겹치지 않는다. Do not depict application screens, logos, code, graphs, arrows, fake achievements, decorative labels, signatures, watermarks, wall/easel or gallery mockup. Unless explicitly requested in the poster subject, no text at all. Original hand-made physical medium, not a flat generic UI icon or a glossy 3D render."
+}

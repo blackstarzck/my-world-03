@@ -1,0 +1,19 @@
+{
+  "id": "A01-03",
+  "room": "01",
+  "slotKind": "wall",
+  "project": "센서 3D 시각화 대시보드",
+  "sourceEntryIds": [
+    "original:farm-3d"
+  ],
+  "connection": "센서 값을 온실의 실제 위치에 대응시키고 공간 전체 상태를 읽도록 만든 Angular 화면·NestJS API 사례를 '위치마다 다른 공기의 감각'으로 해석한다. 색층의 따뜻함과 차가움은 실측 센서 데이터가 아닌 회화적 비유다.",
+  "medium": "approved",
+  "symbol": "잎과 이슬 한 방울",
+  "subject": "",
+  "reference": null,
+  "origin": "user-approved-preview",
+  "initialPath": "D:/workspace/my-world-03/output/portfolio-paintings-2026-10-20/A01-03-r0.png",
+  "finalPath": "D:/workspace/my-world-03/output/portfolio-paintings-2026-10-20/A01-03.png",
+  "reviewPath": "D:/workspace/my-world-03/output/portfolio-paintings-2026-10-20/reviews/A01-03.json",
+  "prompt": null
+}

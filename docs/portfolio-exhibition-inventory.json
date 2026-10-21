@@ -1,0 +1,4409 @@
+{
+  "schemaVersion": 1,
+  "checkedOn": "2026-10-19",
+  "timezone": "Asia/Seoul",
+  "status": "curation-proposal",
+  "scope": "이전 포트폴리오 32개 콘텐츠 주제와 모든 세부 카드 보존, 공개 배포 메타데이터가 있는 추가 레포 포함",
+  "sources": {
+    "website": "https://www.kchanchan.com/#/chanki",
+    "content": "https://github.com/blackstarzck/my-website-2026/blob/main/chanki-react/data/nodes.ts",
+    "aiArticles": "https://github.com/blackstarzck/my-website-2026/blob/main/chanki-react/data/aiArticles.ts",
+    "projectArticles": "https://github.com/blackstarzck/my-website-2026/blob/main/chanki-react/data/projectArticles.ts",
+    "repositories": "https://api.github.com/users/blackstarzck/repos?per_page=100&sort=updated",
+    "onTheBookDeployment": "https://github.com/blackstarzck/on-the-book/blob/main/docs/DEPLOYMENT.md"
+  },
+  "counts": {
+    "previousTopics": 32,
+    "previousNestedCards": 50,
+    "previousEntries": 77,
+    "additionalEntries": 18,
+    "entries": 95,
+    "groups": 41,
+    "referencedRepositories": 87,
+    "physicalPositions": 49,
+    "rooms": [
+      {
+        "id": "01",
+        "groups": 14,
+        "entries": 25,
+        "physicalPositions": 19
+      },
+      {
+        "id": "02",
+        "groups": 14,
+        "entries": 21,
+        "physicalPositions": 14
+      },
+      {
+        "id": "03",
+        "groups": 13,
+        "entries": 49,
+        "physicalPositions": 16
+      }
+    ],
+    "interactionModes": {
+      "case-study": 42,
+      "demo-preparation": 6,
+      "iframe": 34,
+      "media-until-restored": 12,
+      "local-capture": 1
+    }
+  },
+  "countingNote": "전시 항목은 작품이나 사례의 표현 단위다. 같은 레포가 실무 화면·AI 작업 방식·버전 연구에 중복 참조되므로 서로 다른 프로젝트 수와 같지 않다.",
+  "rooms": [
+    {
+      "id": "01",
+      "name": "고전의 깊이",
+      "theme": "사용자와 만나는 제품",
+      "existingWallPositions": 19,
+      "existingCasePositions": 0
+    },
+    {
+      "id": "02",
+      "name": "빛의 여백",
+      "theme": "시스템과 일하는 방식",
+      "existingWallPositions": 19,
+      "existingCasePositions": 0
+    },
+    {
+      "id": "03",
+      "name": "형태의 기억",
+      "theme": "직접 경험하는 실험",
+      "existingWallPositions": 6,
+      "existingCasePositions": 10
+    }
+  ],
+  "groups": [
+    {
+      "id": "topik-user",
+      "name": "도토리 토픽 · 사용자단",
+      "room": "01",
+      "original": true,
+      "proposedTitle": "다시 쓰는 문장",
+      "visualConcept": "쓰기가 피드백을 거쳐 정돈되는 문자 회화와 사용자 학습 흐름",
+      "physicalPositions": 1,
+      "originalSummary": "AI 피드백이 붙은 TOPIK 쓰기 학습 서비스의 사용자 화면을 설계하고 만들었습니다.",
+      "role": "사용자단 프론트엔드 설계·개발",
+      "scope": "Next.js·React·TypeScript 기반 반응형 웹. 학습 흐름 설계, 다국어 UI, 사용자단·관리자단 공통 데이터 계약 설계에 참여했습니다.",
+      "surface": "wall",
+      "originalCategory": "frontend"
+    },
+    {
+      "id": "topik-admin",
+      "name": "도토리 토픽 · 관리자단",
+      "room": "01",
+      "original": true,
+      "proposedTitle": "배움을 지탱하는 질서",
+      "visualConcept": "문항·사용자·기관·권한을 연결하는 운영 지도와 실제 관리자 화면",
+      "physicalPositions": 1,
+      "originalSummary": "사용자·기관·문항은행·학습 분석·권한을 한곳에서 관리하는 운영 화면입니다.",
+      "role": "관리자단 운영 화면·데이터 관리 기능 설계·개발",
+      "scope": "Vite·React·TypeScript·Ant Design 기반. Supabase 인증과 RLS/RPC, DB 마이그레이션 설계에 참여했습니다.",
+      "surface": "wall",
+      "originalCategory": "frontend"
+    },
+    {
+      "id": "farm-3d",
+      "name": "센서 3D 시각화 대시보드",
+      "room": "01",
+      "original": true,
+      "proposedTitle": "보이지 않는 기후",
+      "visualConcept": "온실 형태 위에 센서 위치와 온습도 층을 겹친 입체 데이터 초상",
+      "physicalPositions": 1,
+      "originalSummary": "30개가 넘는 센서의 온·습도를 3D로 띄워, 농장주가 온실 상태를 한눈에 보게 했습니다.",
+      "role": "대시보드 화면·API 개발",
+      "scope": "Angular·NestJS·TypeScript 기반. amCharts, RxJS, MySQL로 데이터 흐름과 시각화를 구현했습니다.",
+      "surface": "wall",
+      "originalCategory": "frontend"
+    },
+    {
+      "id": "connect-bee",
+      "name": "CONNECT BEE",
+      "room": "01",
+      "original": true,
+      "proposedTitle": "벌통의 맥박",
+      "visualConcept": "벌통의 센서 값과 팬·열선·쿨러 제어 흐름을 연결하는 빛의 구성",
+      "physicalPositions": 1,
+      "originalSummary": "수정벌 벌통의 센서 값을 보고 팬·열선·쿨러까지 한 화면에서 제어하는 하이브리드 앱입니다.",
+      "role": "프론트엔드 개발 · 하이브리드 앱 패키징·출시 · 기획 · 디자인 · CES 2025 제출용 홍보 에셋 제작",
+      "scope": "Angular·TypeScript 로 화면을 만들고 하이브리드 앱으로 패키징해 출시했습니다.",
+      "surface": "wall",
+      "originalCategory": "frontend"
+    },
+    {
+      "id": "corp-sites",
+      "name": "법인별 홈페이지",
+      "room": "01",
+      "original": true,
+      "proposedTitle": "브랜드의 여섯 얼굴",
+      "visualConcept": "법인별 독립 액자 여섯 개에 브랜드 색·문자·실제 화면을 구성하고 부클리 시안도 연결",
+      "physicalPositions": 6,
+      "originalSummary": "기획과 디자인부터 퍼블리싱, 배포까지 혼자 진행한 반응형 사이트입니다.",
+      "role": "기획·디자인·퍼블리싱·배포 1인 수행",
+      "scope": "Figma 기획·디자인, React 18·Tailwind CSS 4·styled-components·GSAP 퍼블리싱, FTP 배포 운영.",
+      "surface": "wall",
+      "originalCategory": "frontend"
+    },
+    {
+      "id": "millie-admin-dashboard",
+      "name": "밀리 관리자 대시보드",
+      "room": "01",
+      "original": true,
+      "proposedTitle": "서가 뒤의 관제실",
+      "visualConcept": "콘텐츠·회원·운영 메뉴가 한 구조로 정리되는 회화와 개인 프로젝트 화면",
+      "physicalPositions": 1,
+      "originalSummary": "복잡한 콘텐츠 플랫폼의 운영 업무를 하나의 관리자 정보 구조와 화면 체계로 풀어낸 개인 프로젝트입니다.",
+      "role": "관리자 정보 구조·UI 설계 및 프론트엔드 구현",
+      "scope": "React 18·React Router·Ant Design 기반 프론트엔드 프로토타입. 표·차트·편집기·드래그 앤 드롭·권한 설정 화면을 구현했습니다.",
+      "surface": "wall",
+      "originalCategory": "frontend"
+    },
+    {
+      "id": "dealer-web",
+      "name": "모두가딜러 · 웹서비스",
+      "room": "01",
+      "original": true,
+      "proposedTitle": "선택의 표면",
+      "visualConcept": "차량 탐색과 반응형 화면이 달라지는 사용자 흐름을 연속 화면으로 표현",
+      "physicalPositions": 1,
+      "originalSummary": "중고차 서비스의 반응형 웹과 신규 콘텐츠를 만들며 퍼블리싱에서 프론트엔드로 넘어왔습니다.",
+      "role": "반응형 웹 UI 구현 및 신규 콘텐츠 개발",
+      "scope": "HTML·CSS·JavaScript·jQuery·Ajax, MySQL·PHP 데이터 조회, Swiper.js·GSAP·SmartEditor 도입.",
+      "surface": "wall",
+      "originalCategory": "frontend"
+    },
+    {
+      "id": "dealer-admin",
+      "name": "모두가딜러 · 관리자",
+      "room": "01",
+      "original": true,
+      "proposedTitle": "반복을 덜어내는 손",
+      "visualConcept": "조건별 입력·일괄 적용·미리보기의 전후를 대비하는 작업 기록",
+      "physicalPositions": 1,
+      "originalSummary": "반복 입력이 많던 관리자 화면에 일괄 적용과 미리보기를 넣어 운영 시간을 줄였습니다.",
+      "role": "관리자 페이지 UI 개선 및 운영 효율화",
+      "scope": "",
+      "surface": "wall",
+      "originalCategory": "frontend"
+    },
+    {
+      "id": "doc-merge",
+      "name": "문서 통합 관리 서비스",
+      "room": "02",
+      "original": true,
+      "proposedTitle": "흩어짐의 끝",
+      "visualConcept": "여러 문서와 표가 하나의 데이터 격자로 합쳐지는 회화",
+      "physicalPositions": 1,
+      "originalSummary": "같은 내용을 여러 엑셀에 반복 입력하던 업무를, 기획부터 서버까지 혼자 만들어 한 시스템으로 합쳤습니다.",
+      "role": "기획부터 프론트엔드·백엔드까지 전 과정 1인 개발",
+      "scope": "React 18·Vite 6·TypeScript 프론트엔드, Redux Toolkit·SWR 상태 관리, NestJS·TypeORM·PostgreSQL API·DB 설계.",
+      "surface": "wall",
+      "originalCategory": "backend"
+    },
+    {
+      "id": "nest-sns",
+      "name": "NestJS 학습",
+      "room": "02",
+      "original": true,
+      "proposedTitle": "관계의 골격",
+      "visualConcept": "인증·게시글·채팅 모듈과 관계를 층위가 있는 설계도로 표현",
+      "physicalPositions": 1,
+      "originalSummary": "인증부터 실시간 채팅까지, 서버 한 벌을 빈 폴더에서 얹어 본 기록입니다.",
+      "role": "학습",
+      "scope": "",
+      "surface": "wall",
+      "originalCategory": "backend"
+    },
+    {
+      "id": "gate-harness",
+      "name": "요구사항 게이트 하네스",
+      "room": "02",
+      "original": true,
+      "proposedTitle": "기억하는 문",
+      "visualConcept": "기록의 선이 관문을 지나고 중단 지점에서 다시 이어지는 구조",
+      "physicalPositions": 1,
+      "originalSummary": "문서를 확인하지 않으면 변경할 수 없고, 실패해도 같은 작업 기록에서 다시 이어갈 수 있는 AI 실행 환경입니다.",
+      "role": "게이트 하네스 설계·적용",
+      "scope": "",
+      "surface": "wall",
+      "originalCategory": "ai"
+    },
+    {
+      "id": "multi-agent",
+      "name": "AI 개발 파이프라인",
+      "room": "02",
+      "original": true,
+      "proposedTitle": "이어받는 생각",
+      "visualConcept": "서로 다른 작업자가 같은 맥락과 검증 근거를 이어받는 전달 구조",
+      "physicalPositions": 1,
+      "originalSummary": "Codex와 Claude가 바뀌어도 같은 작업 공간·맥락·검증 근거를 이어받는 개발 흐름입니다.",
+      "role": "AI 작업 수명주기·인수인계·검증 흐름 설계",
+      "scope": "",
+      "surface": "wall",
+      "originalCategory": "ai"
+    },
+    {
+      "id": "verify-loop",
+      "name": "TOPIK AI 검증 하네스",
+      "room": "02",
+      "original": true,
+      "proposedTitle": "되묻는 기계",
+      "visualConcept": "문서·화면·데이터·테스트 사이를 반복하는 검증의 궤도",
+      "physicalPositions": 1,
+      "originalSummary": "문서·화면 경로·데이터 경계·테스트가 함께 움직이는지를 변경마다 반복 검사합니다.",
+      "role": "문서·구조·코드·화면 검증 하네스 설계",
+      "scope": "",
+      "surface": "wall",
+      "originalCategory": "ai"
+    },
+    {
+      "id": "figma-gen",
+      "name": "Figma → React 생성기",
+      "room": "02",
+      "original": true,
+      "proposedTitle": "하나의 규칙 여러 얼굴",
+      "visualConcept": "토큰과 테마 변화가 여러 컴포넌트에 함께 반영되는 연속 화면",
+      "physicalPositions": 1,
+      "originalSummary": "디자인 토큰을 동기화하고 컴포넌트를 만들어내는 UI 라이브러리 스타터입니다.",
+      "role": "개인 프로젝트 · 설계 및 구현",
+      "scope": "",
+      "surface": "wall",
+      "originalCategory": "ai"
+    },
+    {
+      "id": "my-skills",
+      "name": "반복 작업을 SKILL로 만드는 법",
+      "room": "02",
+      "original": true,
+      "proposedTitle": "반복의 문법",
+      "visualConcept": "반복되는 판단을 절차와 검사 기준으로 정리한 지침 표본",
+      "physicalPositions": 1,
+      "originalSummary": "자주 반복되는 판단을 발동 조건·작업 범위·읽을 자료·검증 방법이 있는 절차로 바꿉니다.",
+      "role": "반복 작업 절차 설계·적용",
+      "scope": "",
+      "surface": "wall",
+      "originalCategory": "ai"
+    },
+    {
+      "id": "ai-squads",
+      "name": "비개발자용 에이전트 IDE",
+      "room": "02",
+      "original": true,
+      "proposedTitle": "생각의 합의",
+      "visualConcept": "PM·설계·개발·QA 및 위원회 역할의 의견과 이견을 연결하는 지도",
+      "physicalPositions": 1,
+      "originalSummary": "PM·설계·개발·QA의 작업 흐름을 보여주는 비주얼 IDE와, 이견을 보존하는 AI 위원회 실험입니다.",
+      "role": "개인 프로젝트 · 설계 및 구현",
+      "scope": "",
+      "surface": "wall",
+      "originalCategory": "ai"
+    },
+    {
+      "id": "video-agent",
+      "name": "검사 가능한 AI 영상 제작 루프",
+      "room": "02",
+      "original": true,
+      "proposedTitle": "검사되는 상상",
+      "visualConcept": "프롬프트·검사·생성 결과의 차이를 비교하는 제작 과정 전시",
+      "physicalPositions": 1,
+      "originalSummary": "36개 실행 프롬프트를 감사해 규칙 이탈을 찾고, 생성 전에 검사기가 막는 제작 루프로 바꿨습니다.",
+      "role": "AI 영상 제작 계약·검증 루프 설계",
+      "scope": "",
+      "surface": "wall",
+      "originalCategory": "ai"
+    },
+    {
+      "id": "design-rulebook",
+      "name": "디자인 룰북",
+      "room": "02",
+      "original": true,
+      "proposedTitle": "아름다움의 조건",
+      "visualConcept": "추상적인 디자인 요청이 확인 가능한 규칙으로 구체화되는 문장 회화",
+      "physicalPositions": 1,
+      "originalSummary": "추상적인 디자인 요청을 AI가 실행하고 사람이 확인할 수 있는 제약 문장으로 바꾸는 진행 중 실험입니다.",
+      "role": "개인 프로젝트",
+      "scope": "",
+      "surface": "wall",
+      "originalCategory": "ai"
+    },
+    {
+      "id": "dadoke",
+      "name": "DADOKe 전자책 · 오디오북",
+      "room": "01",
+      "original": true,
+      "proposedTitle": "한 권이 만들어지기까지",
+      "visualConcept": "시장조사·요구사항·외주 협업 자료와 별도 DADOKE 화면 시안을 구분해 전시",
+      "physicalPositions": 1,
+      "originalSummary": "개발은 외주에 맡기고 기획·요구사항 정의·커뮤니케이션을 총괄했습니다.",
+      "role": "시장조사·기획·요구사항 정의·외주 커뮤니케이션 총괄",
+      "scope": "밀리의서재·리디북스·아마존 킨들 벤치마킹, 베트남 외주업체와의 요구사항 조율.",
+      "surface": "wall",
+      "originalCategory": "product"
+    },
+    {
+      "id": "legacy-cleanup",
+      "name": "레거시 정리 · 성능 개선",
+      "room": "01",
+      "original": true,
+      "proposedTitle": "덜어낸 무게",
+      "visualConcept": "불필요한 호출과 자산을 덜어내기 전후의 구조를 대비",
+      "physicalPositions": 1,
+      "originalSummary": "불필요한 호출과 쓰지 않는 자산을 걷어내 유지보수 비용을 줄였습니다.",
+      "role": "성능 개선 및 레거시 코드 정리",
+      "scope": "",
+      "surface": "wall",
+      "originalCategory": "product"
+    },
+    {
+      "id": "docs-comm",
+      "name": "문서화 · 비개발 직군 협업",
+      "room": "01",
+      "original": true,
+      "proposedTitle": "같은 그림을 보는 법",
+      "visualConcept": "기획·디자인·개발이 같은 흐름을 이해하도록 만든 문서와 도식",
+      "physicalPositions": 1,
+      "originalSummary": "기능과 정책을 문서로 남기고, 비개발 직군이 읽을 수 있는 자료를 따로 만들었습니다.",
+      "role": "기능·정책 문서화 및 협업 자료 제작",
+      "scope": "",
+      "surface": "wall",
+      "originalCategory": "product"
+    },
+    {
+      "id": "canvas-lab",
+      "name": "캔버스 · 파티클",
+      "room": "03",
+      "original": true,
+      "proposedTitle": "빛의 문법",
+      "visualConcept": "원본 파티클 예제와 particle 저장소의 움직임을 함께 보여주는 빛의 연작",
+      "physicalPositions": 1,
+      "originalSummary": "한 저장소에 예제를 여섯 개 넣어두고 입자를 다루는 방법을 하나씩 바꿔가며 실험했습니다.",
+      "role": "개인 실험",
+      "scope": "",
+      "surface": "wall",
+      "originalCategory": "lab"
+    },
+    {
+      "id": "multicanvas-lab",
+      "name": "캔버스 여러 개",
+      "room": "03",
+      "original": true,
+      "proposedTitle": "여러 창 하나의 시선",
+      "visualConcept": "하나의 렌더러가 여러 창을 채우는 구성의 축소 모형",
+      "physicalPositions": 1,
+      "originalSummary": "WebGL 렌더러 하나로 페이지 곳곳의 캔버스 자리를 채웁니다.",
+      "role": "개인 실험",
+      "scope": "",
+      "surface": "case",
+      "originalCategory": "lab"
+    },
+    {
+      "id": "scroll-3d",
+      "name": "스크롤 연동 3D",
+      "room": "03",
+      "original": true,
+      "proposedTitle": "스크롤의 지형",
+      "visualConcept": "스크롤 진행과 카메라·3D 장면의 관계를 길과 높이로 표현",
+      "physicalPositions": 1,
+      "originalSummary": "스크롤 위치에 3D 장면을 묶어, 페이지를 내리면 장면 안으로 들어갑니다.",
+      "role": "개인 실험",
+      "scope": "",
+      "surface": "case",
+      "originalCategory": "lab"
+    },
+    {
+      "id": "three-lab",
+      "name": "3D · 아이소메트릭",
+      "room": "03",
+      "original": true,
+      "proposedTitle": "방을 짓는 연습",
+      "visualConcept": "다섯 3D 모델·카메라 실험을 나란히 비교하는 모형 연작",
+      "physicalPositions": 1,
+      "originalSummary": "아이소메트릭 뷰와 3D 모델, 카메라 컨트롤을 다뤄본 저장소들입니다.",
+      "role": "개인 실험",
+      "scope": "",
+      "surface": "case",
+      "originalCategory": "lab"
+    },
+    {
+      "id": "game-lab",
+      "name": "게임 · 인터랙션",
+      "room": "03",
+      "original": true,
+      "proposedTitle": "규칙에 몸을 싣다",
+      "visualConcept": "격투·아케이드·다리·1인칭·FPS의 입력과 판정 규칙을 연결하는 두 진열장",
+      "physicalPositions": 2,
+      "originalSummary": "브라우저에서 도는 격투 게임과 3D 아케이드 캐비닛, 1인칭 조작 실험입니다.",
+      "role": "개인 실험",
+      "scope": "",
+      "surface": "case",
+      "originalCategory": "lab"
+    },
+    {
+      "id": "game-cards",
+      "name": "능력치 카드 게임",
+      "room": "03",
+      "original": true,
+      "proposedTitle": "얼굴이 카드가 되는 순간",
+      "visualConcept": "사진 입력·능력치 카드·대결 흐름을 겹친 카드 연작",
+      "physicalPositions": 1,
+      "originalSummary": "얼굴 사진으로 능력치 카드를 만들고 보관해 친구와 대결하는 웹게임입니다.",
+      "role": "개인 프로젝트 · 기획 · 디자인 · 구현",
+      "scope": "React 기반 웹게임. Firebase 인증·데이터 저장과 face-api.js 얼굴 감지를 연결했습니다.",
+      "surface": "wall",
+      "originalCategory": "lab"
+    },
+    {
+      "id": "trading-lab",
+      "name": "자동매매 시스템",
+      "room": "02",
+      "original": true,
+      "proposedTitle": "불확실성을 다루는 여덟 설계",
+      "visualConcept": "여덟 저장소의 구조·데이터·연결 방식 변화를 시간축으로 표현",
+      "physicalPositions": 1,
+      "originalSummary": "업비트 자동매매를 여덟 개 저장소에 걸쳐 만들고 다시 만든 기록입니다.",
+      "role": "개인 프로젝트 · 설계 및 구현",
+      "scope": "",
+      "surface": "wall",
+      "originalCategory": "lab"
+    },
+    {
+      "id": "space-3d",
+      "name": "3D 공간 만들기",
+      "room": "03",
+      "original": true,
+      "proposedTitle": "걸을 수 있는 기억",
+      "visualConcept": "my-space 마을 장면을 축소한 모형과 실제 탐색 화면",
+      "physicalPositions": 1,
+      "originalSummary": "마을 하나를 통째로 세워 걸어 다닐 수 있게 만든 3D 씬입니다.",
+      "role": "개인 실험",
+      "scope": "",
+      "surface": "case",
+      "originalCategory": "lab"
+    },
+    {
+      "id": "detect-lab",
+      "name": "물체 감지",
+      "room": "03",
+      "original": true,
+      "proposedTitle": "사진 속 이름을 찾다",
+      "visualConcept": "사진·감지 좌표·결과 카드가 연결되는 시각적 구성",
+      "physicalPositions": 1,
+      "originalSummary": "사진 속 물건을 브라우저에서 잡아 카드로 띄운, 이 사이트 이전의 포트폴리오입니다.",
+      "role": "개인 프로젝트 · 기획 · 디자인 · 구현",
+      "scope": "",
+      "surface": "wall",
+      "originalCategory": "lab"
+    },
+    {
+      "id": "react-basics",
+      "name": "React 학습기",
+      "room": "03",
+      "original": true,
+      "proposedTitle": "스물여섯 개의 첫 문장",
+      "visualConcept": "26개 학습 프로젝트를 각각 선택할 수 있는 작은 화면의 연작",
+      "physicalPositions": 1,
+      "originalSummary": "2022년에 스무 개 남짓 남긴 연습 저장소들, 하나씩 떼어 익히던 시기의 기록입니다.",
+      "role": "학습",
+      "scope": "",
+      "surface": "wall",
+      "originalCategory": "lab"
+    },
+    {
+      "id": "pokemon",
+      "name": "포켓몬 도감",
+      "room": "03",
+      "original": true,
+      "proposedTitle": "분류의 정원",
+      "visualConcept": "검색·타입·정렬 규칙을 도감의 색과 반복으로 표현",
+      "physicalPositions": 1,
+      "originalSummary": "이름·번호·특성·타입으로 포켓몬을 찾고 번호순으로 정렬하는 도감입니다.",
+      "role": "개인 프로젝트 · 기획 · 디자인 · 구현",
+      "scope": "React·TypeScript 기반. PokeAPI 데이터, Redux Toolkit 전역 상태와 GSAP 화면 전환을 사용했습니다.",
+      "surface": "wall",
+      "originalCategory": "lab"
+    },
+    {
+      "id": "education-ui",
+      "name": "교육 서비스 화면 연구",
+      "room": "01",
+      "original": false,
+      "proposedTitle": "배움의 다섯 시선",
+      "visualConcept": "강사·학생·목록·상세·메타데이터 관리 화면을 다섯 부분으로 구성",
+      "physicalPositions": 1,
+      "surface": "wall",
+      "originalCategory": null
+    },
+    {
+      "id": "short-form-work",
+      "name": "ShortForm Knowledge",
+      "room": "01",
+      "original": false,
+      "proposedTitle": "짧게 남는 지식",
+      "visualConcept": "실제 콘텐츠 화면의 카드·타이포그래피·탐색 리듬을 구성",
+      "physicalPositions": 1,
+      "surface": "wall",
+      "originalCategory": null
+    },
+    {
+      "id": "inquiry-admin",
+      "name": "도토리 문의 관리자",
+      "room": "01",
+      "original": false,
+      "proposedTitle": "문의의 흐름",
+      "visualConcept": "접수·처리·분석의 상태와 실제 관리자 화면을 연결",
+      "physicalPositions": 1,
+      "surface": "wall",
+      "originalCategory": null
+    },
+    {
+      "id": "planit",
+      "name": "Planit AI 기획 워크스페이스",
+      "room": "02",
+      "original": false,
+      "proposedTitle": "생각의 설계도",
+      "visualConcept": "PRD·기능명세·유저플로우·와이어프레임을 네 겹의 문서로 구성",
+      "physicalPositions": 1,
+      "surface": "wall",
+      "originalCategory": null
+    },
+    {
+      "id": "storyquest-editor",
+      "name": "StoryQuest Admin",
+      "room": "02",
+      "original": false,
+      "proposedTitle": "장면을 짓는 도구",
+      "visualConcept": "원고와 3D 에셋을 장면에 연결하는 CMS의 구조를 전시",
+      "physicalPositions": 1,
+      "surface": "wall",
+      "originalCategory": null
+    },
+    {
+      "id": "vive-reader",
+      "name": "VIVE 독서 보조 도구",
+      "room": "02",
+      "original": false,
+      "proposedTitle": "읽은 뒤에 남는 것",
+      "visualConcept": "책의 하이라이트·메모·요약을 지식 자산으로 잇는 독서 보조 도구",
+      "physicalPositions": 1,
+      "surface": "wall",
+      "originalCategory": null
+    },
+    {
+      "id": "on-the-book",
+      "name": "On the Book",
+      "room": "03",
+      "original": false,
+      "proposedTitle": "펼쳐진 세계",
+      "visualConcept": "책·책 속 3D 장면·관리 도구를 세 진열장으로 연결",
+      "physicalPositions": 3,
+      "surface": "case",
+      "originalCategory": null
+    },
+    {
+      "id": "gallery-studies",
+      "name": "3D 전시관 제작 연구",
+      "room": "03",
+      "original": false,
+      "proposedTitle": "공간의 세 문법",
+      "visualConcept": "my-world-01·02·03 전시관을 비교하는 축소 모형과 제작 기록",
+      "physicalPositions": 1,
+      "surface": "case",
+      "originalCategory": null
+    },
+    {
+      "id": "career-map",
+      "name": "이전 포트폴리오 경력 지도",
+      "room": "03",
+      "original": false,
+      "proposedTitle": "경력의 별자리",
+      "visualConcept": "이전 포트폴리오의 경력 지도를 회화로 재구성하고 실제 사이트 연결",
+      "physicalPositions": 1,
+      "surface": "wall",
+      "originalCategory": null
+    }
+  ],
+  "entries": [
+    {
+      "id": "original:topik-user",
+      "sourceNodeId": "topik-user",
+      "groupId": "topik-user",
+      "room": "01",
+      "name": "도토리 토픽 · 사용자단",
+      "summary": "AI 피드백이 붙은 TOPIK 쓰기 학습 서비스의 사용자 화면을 설계하고 만들었습니다.",
+      "origin": "previous-portfolio-topic",
+      "repos": [
+        "topik-project-v13"
+      ],
+      "repoUrls": [
+        "https://github.com/blackstarzck/topik-project-v13"
+      ],
+      "deployments": [],
+      "included": true,
+      "originalCategory": "frontend",
+      "primaryDeploymentUrl": null,
+      "exhibitInteraction": {
+        "proposedMode": "case-study",
+        "launchUrl": null,
+        "onFocus": "show-artwork-and-story",
+        "verificationReport": "portfolio-iframe-audit.md",
+        "note": "화면·문서·코드를 작품으로 소개한다.",
+        "optionalDemos": [
+          {
+            "label": "v12 이전 버전 체험",
+            "url": "https://v12-weld.vercel.app",
+            "relationship": "historical-version",
+            "note": "현재 v13 운영 앱으로 표시하지 않고 이전 버전임을 명시한다."
+          }
+        ]
+      }
+    },
+    {
+      "id": "original:topik-admin",
+      "sourceNodeId": "topik-admin",
+      "groupId": "topik-admin",
+      "room": "01",
+      "name": "도토리 토픽 · 관리자단",
+      "summary": "사용자·기관·문항은행·학습 분석·권한을 한곳에서 관리하는 운영 화면입니다.",
+      "origin": "previous-portfolio-topic",
+      "repos": [
+        "topik-ai"
+      ],
+      "repoUrls": [
+        "https://github.com/blackstarzck/topik-ai"
+      ],
+      "deployments": [
+        {
+          "url": "https://topik-ai.vercel.app",
+          "httpStatus": 200,
+          "availability": "entry-page-responded",
+          "pageTitle": "TOPIK AI 통합 관리자",
+          "iframeAudit": {
+            "id": "iframe-url-53",
+            "browserResult": "document-visible",
+            "contentReadiness": "authentication-required",
+            "framePolicyBlockObserved": false
+          }
+        }
+      ],
+      "included": true,
+      "originalCategory": "frontend",
+      "primaryDeploymentUrl": "https://topik-ai.vercel.app",
+      "exhibitInteraction": {
+        "proposedMode": "demo-preparation",
+        "launchUrl": null,
+        "onFocus": "show-artwork-and-story",
+        "verificationReport": "portfolio-iframe-audit.md",
+        "note": "인증 또는 서버 연동을 준비한 체험용 데모가 확보될 때까지 작품 이미지·영상을 표시한다."
+      }
+    },
+    {
+      "id": "original:farm-3d",
+      "sourceNodeId": "farm-3d",
+      "groupId": "farm-3d",
+      "room": "01",
+      "name": "센서 3D 시각화 대시보드",
+      "summary": "30개가 넘는 센서의 온·습도를 3D로 띄워, 농장주가 온실 상태를 한눈에 보게 했습니다.",
+      "origin": "previous-portfolio-topic",
+      "repos": [],
+      "repoUrls": [],
+      "deployments": [],
+      "included": true,
+      "originalCategory": "frontend",
+      "primaryDeploymentUrl": null,
+      "exhibitInteraction": {
+        "proposedMode": "case-study",
+        "launchUrl": null,
+        "onFocus": "show-artwork-and-story",
+        "verificationReport": "portfolio-iframe-audit.md",
+        "note": "화면·문서·코드를 작품으로 소개한다."
+      }
+    },
+    {
+      "id": "original:connect-bee",
+      "sourceNodeId": "connect-bee",
+      "groupId": "connect-bee",
+      "room": "01",
+      "name": "CONNECT BEE",
+      "summary": "수정벌 벌통의 센서 값을 보고 팬·열선·쿨러까지 한 화면에서 제어하는 하이브리드 앱입니다.",
+      "origin": "previous-portfolio-topic",
+      "repos": [],
+      "repoUrls": [],
+      "deployments": [],
+      "included": true,
+      "originalCategory": "frontend",
+      "primaryDeploymentUrl": null,
+      "exhibitInteraction": {
+        "proposedMode": "case-study",
+        "launchUrl": null,
+        "onFocus": "show-artwork-and-story",
+        "verificationReport": "portfolio-iframe-audit.md",
+        "note": "화면·문서·코드를 작품으로 소개한다."
+      }
+    },
+    {
+      "id": "original:corp-sites:keduall",
+      "sourceNodeId": "corp-sites",
+      "groupId": "corp-sites",
+      "room": "01",
+      "name": "케듀올",
+      "summary": "베트남과 한국을 잇는 유학·한국어교육·출판·에듀테크 기업 홈페이지.",
+      "origin": "previous-portfolio-card",
+      "repos": [
+        "keduall"
+      ],
+      "repoUrls": [
+        "https://github.com/blackstarzck/keduall"
+      ],
+      "deployments": [
+        {
+          "url": "https://keduall.com",
+          "httpStatus": 200,
+          "availability": "entry-page-responded",
+          "pageTitle": "KEDUALL - 베트남과 한국을 잇는 교육의 가교 | Your Site Name",
+          "iframeAudit": {
+            "id": "iframe-url-36",
+            "browserResult": "document-visible",
+            "contentReadiness": "public-first-screen",
+            "framePolicyBlockObserved": false
+          }
+        }
+      ],
+      "included": true,
+      "originalCategory": "frontend",
+      "primaryDeploymentUrl": "https://keduall.com",
+      "exhibitInteraction": {
+        "proposedMode": "iframe",
+        "launchUrl": "https://keduall.com",
+        "onFocus": "activate-after-camera-arrival",
+        "verificationReport": "portfolio-iframe-audit.md",
+        "note": "포커스 이동 완료 후 이 작품 하나만 실행한다."
+      }
+    },
+    {
+      "id": "original:corp-sites:bookly",
+      "sourceNodeId": "corp-sites",
+      "groupId": "corp-sites",
+      "room": "01",
+      "name": "부클리",
+      "summary": "한국 출판 콘텐츠의 해외 수출과 판권 정보를 소개하는 글로벌 콘텐츠 홈페이지.",
+      "origin": "previous-portfolio-card",
+      "repos": [
+        "bookly"
+      ],
+      "repoUrls": [
+        "https://github.com/blackstarzck/bookly"
+      ],
+      "deployments": [
+        {
+          "url": "https://hibookly.com",
+          "httpStatus": 200,
+          "availability": "entry-page-responded",
+          "pageTitle": "부클리",
+          "iframeAudit": {
+            "id": "iframe-url-35",
+            "browserResult": "document-visible",
+            "contentReadiness": "public-first-screen",
+            "framePolicyBlockObserved": false
+          }
+        }
+      ],
+      "included": true,
+      "originalCategory": "frontend",
+      "primaryDeploymentUrl": "https://hibookly.com",
+      "exhibitInteraction": {
+        "proposedMode": "iframe",
+        "launchUrl": "https://hibookly.com",
+        "onFocus": "activate-after-camera-arrival",
+        "verificationReport": "portfolio-iframe-audit.md",
+        "note": "포커스 이동 완료 후 이 작품 하나만 실행한다."
+      }
+    },
+    {
+      "id": "original:corp-sites:wisdomceller",
+      "sourceNodeId": "corp-sites",
+      "groupId": "corp-sites",
+      "room": "01",
+      "name": "위즈덤셀러",
+      "summary": "언어와 커리어를 연결해 글로벌 교육·유학 서비스를 소개하는 홈페이지.",
+      "origin": "previous-portfolio-card",
+      "repos": [
+        "wisdomceller"
+      ],
+      "repoUrls": [
+        "https://github.com/blackstarzck/wisdomceller"
+      ],
+      "deployments": [
+        {
+          "url": "https://wisdomcellar.com",
+          "httpStatus": 200,
+          "availability": "entry-page-responded",
+          "pageTitle": "위즈덤셀러",
+          "iframeAudit": {
+            "id": "iframe-url-57",
+            "browserResult": "document-visible",
+            "contentReadiness": "public-first-screen",
+            "framePolicyBlockObserved": false
+          }
+        }
+      ],
+      "included": true,
+      "originalCategory": "frontend",
+      "primaryDeploymentUrl": "https://wisdomcellar.com",
+      "exhibitInteraction": {
+        "proposedMode": "iframe",
+        "launchUrl": "https://wisdomcellar.com",
+        "onFocus": "activate-after-camera-arrival",
+        "verificationReport": "portfolio-iframe-audit.md",
+        "note": "포커스 이동 완료 후 이 작품 하나만 실행한다."
+      }
+    },
+    {
+      "id": "original:corp-sites:bookchaka",
+      "sourceNodeId": "corp-sites",
+      "groupId": "corp-sites",
+      "room": "01",
+      "name": "북차카",
+      "summary": "한국어 교육과 글로벌 유학·도서 유통·출판 콘텐츠를 소개하는 홈페이지.",
+      "origin": "previous-portfolio-card",
+      "repos": [
+        "bookchaka"
+      ],
+      "repoUrls": [
+        "https://github.com/blackstarzck/bookchaka"
+      ],
+      "deployments": [
+        {
+          "url": "https://bookchaka.com",
+          "httpStatus": 200,
+          "availability": "entry-page-responded",
+          "pageTitle": "북차카",
+          "iframeAudit": {
+            "id": "iframe-url-24",
+            "browserResult": "document-visible",
+            "contentReadiness": "public-first-screen",
+            "framePolicyBlockObserved": false
+          }
+        }
+      ],
+      "included": true,
+      "originalCategory": "frontend",
+      "primaryDeploymentUrl": "https://bookchaka.com",
+      "exhibitInteraction": {
+        "proposedMode": "iframe",
+        "launchUrl": "https://bookchaka.com",
+        "onFocus": "activate-after-camera-arrival",
+        "verificationReport": "portfolio-iframe-audit.md",
+        "note": "포커스 이동 완료 후 이 작품 하나만 실행한다."
+      }
+    },
+    {
+      "id": "original:corp-sites:glowin-vina",
+      "sourceNodeId": "corp-sites",
+      "groupId": "corp-sites",
+      "room": "01",
+      "name": "글로윈 비나 (북카페)",
+      "summary": "글로윈 비나 북카페의 브랜드와 공간을 소개하는 홈페이지.",
+      "origin": "previous-portfolio-card",
+      "repos": [
+        "glowin-vina"
+      ],
+      "repoUrls": [
+        "https://github.com/blackstarzck/glowin-vina"
+      ],
+      "deployments": [
+        {
+          "url": "https://glowinvina.com",
+          "httpStatus": 503,
+          "availability": "request-returned-error",
+          "pageTitle": null,
+          "iframeAudit": {
+            "id": "iframe-url-32",
+            "browserResult": "unavailable",
+            "contentReadiness": "site-unavailable",
+            "framePolicyBlockObserved": false
+          }
+        }
+      ],
+      "included": true,
+      "originalCategory": "frontend",
+      "primaryDeploymentUrl": null,
+      "exhibitInteraction": {
+        "proposedMode": "media-until-restored",
+        "launchUrl": null,
+        "onFocus": "show-artwork-and-story",
+        "verificationReport": "portfolio-iframe-audit.md",
+        "note": "문서 페이지·빈 화면·중단된 배포본이므로 작품 이미지와 코드를 표시하고 배포 복구 후 재검사한다."
+      }
+    },
+    {
+      "id": "original:corp-sites:biblia",
+      "sourceNodeId": "corp-sites",
+      "groupId": "corp-sites",
+      "room": "01",
+      "name": "비블리아",
+      "summary": "비블리아의 브랜드와 서비스를 소개하는 홈페이지.",
+      "origin": "previous-portfolio-card",
+      "repos": [
+        "biblia"
+      ],
+      "repoUrls": [
+        "https://github.com/blackstarzck/biblia"
+      ],
+      "deployments": [
+        {
+          "url": "https://hibiblia.com",
+          "httpStatus": 503,
+          "availability": "request-returned-error",
+          "pageTitle": null,
+          "iframeAudit": {
+            "id": "iframe-url-33",
+            "browserResult": "unavailable",
+            "contentReadiness": "site-unavailable",
+            "framePolicyBlockObserved": false
+          }
+        }
+      ],
+      "included": true,
+      "originalCategory": "frontend",
+      "primaryDeploymentUrl": null,
+      "exhibitInteraction": {
+        "proposedMode": "media-until-restored",
+        "launchUrl": null,
+        "onFocus": "show-artwork-and-story",
+        "verificationReport": "portfolio-iframe-audit.md",
+        "note": "문서 페이지·빈 화면·중단된 배포본이므로 작품 이미지와 코드를 표시하고 배포 복구 후 재검사한다."
+      }
+    },
+    {
+      "id": "original:millie-admin-dashboard",
+      "sourceNodeId": "millie-admin-dashboard",
+      "groupId": "millie-admin-dashboard",
+      "room": "01",
+      "name": "밀리 관리자 대시보드",
+      "summary": "복잡한 콘텐츠 플랫폼의 운영 업무를 하나의 관리자 정보 구조와 화면 체계로 풀어낸 개인 프로젝트입니다.",
+      "origin": "previous-portfolio-topic",
+      "repos": [
+        "millie-admin-dashboard"
+      ],
+      "repoUrls": [
+        "https://github.com/blackstarzck/millie-admin-dashboard"
+      ],
+      "deployments": [
+        {
+          "url": "https://millie-admin-dashboard.vercel.app/#/dashboard",
+          "httpStatus": 200,
+          "availability": "entry-page-responded",
+          "pageTitle": "Millie Admin Dashboard",
+          "iframeAudit": {
+            "id": "iframe-url-40",
+            "browserResult": "document-visible",
+            "contentReadiness": "public-first-screen",
+            "framePolicyBlockObserved": false
+          }
+        },
+        {
+          "url": "https://millie-admin-dashboard.vercel.app",
+          "httpStatus": 200,
+          "availability": "entry-page-responded",
+          "pageTitle": "Millie Admin Dashboard",
+          "iframeAudit": {
+            "id": "iframe-url-39",
+            "browserResult": "document-visible",
+            "contentReadiness": "public-first-screen",
+            "framePolicyBlockObserved": false
+          }
+        },
+        {
+          "url": "https://blackstarzck.github.io/millie-admin-dashboard/",
+          "httpStatus": 200,
+          "availability": "entry-page-responded",
+          "pageTitle": "React App",
+          "iframeAudit": {
+            "id": "iframe-url-13",
+            "browserResult": "document-visible",
+            "contentReadiness": "public-first-screen",
+            "framePolicyBlockObserved": false
+          }
+        }
+      ],
+      "included": true,
+      "originalCategory": "frontend",
+      "primaryDeploymentUrl": "https://millie-admin-dashboard.vercel.app/#/dashboard",
+      "exhibitInteraction": {
+        "proposedMode": "iframe",
+        "launchUrl": "https://millie-admin-dashboard.vercel.app/#/dashboard",
+        "onFocus": "activate-after-camera-arrival",
+        "verificationReport": "portfolio-iframe-audit.md",
+        "note": "포커스 이동 완료 후 이 작품 하나만 실행한다."
+      }
+    },
+    {
+      "id": "original:dealer-web",
+      "sourceNodeId": "dealer-web",
+      "groupId": "dealer-web",
+      "room": "01",
+      "name": "모두가딜러 · 웹서비스",
+      "summary": "중고차 서비스의 반응형 웹과 신규 콘텐츠를 만들며 퍼블리싱에서 프론트엔드로 넘어왔습니다.",
+      "origin": "previous-portfolio-topic",
+      "repos": [],
+      "repoUrls": [],
+      "deployments": [],
+      "included": true,
+      "originalCategory": "frontend",
+      "primaryDeploymentUrl": null,
+      "exhibitInteraction": {
+        "proposedMode": "case-study",
+        "launchUrl": null,
+        "onFocus": "show-artwork-and-story",
+        "verificationReport": "portfolio-iframe-audit.md",
+        "note": "화면·문서·코드를 작품으로 소개한다."
+      }
+    },
+    {
+      "id": "original:dealer-admin",
+      "sourceNodeId": "dealer-admin",
+      "groupId": "dealer-admin",
+      "room": "01",
+      "name": "모두가딜러 · 관리자",
+      "summary": "반복 입력이 많던 관리자 화면에 일괄 적용과 미리보기를 넣어 운영 시간을 줄였습니다.",
+      "origin": "previous-portfolio-topic",
+      "repos": [],
+      "repoUrls": [],
+      "deployments": [],
+      "included": true,
+      "originalCategory": "frontend",
+      "primaryDeploymentUrl": null,
+      "exhibitInteraction": {
+        "proposedMode": "case-study",
+        "launchUrl": null,
+        "onFocus": "show-artwork-and-story",
+        "verificationReport": "portfolio-iframe-audit.md",
+        "note": "화면·문서·코드를 작품으로 소개한다."
+      }
+    },
+    {
+      "id": "original:doc-merge",
+      "sourceNodeId": "doc-merge",
+      "groupId": "doc-merge",
+      "room": "02",
+      "name": "문서 통합 관리 서비스",
+      "summary": "같은 내용을 여러 엑셀에 반복 입력하던 업무를, 기획부터 서버까지 혼자 만들어 한 시스템으로 합쳤습니다.",
+      "origin": "previous-portfolio-topic",
+      "repos": [
+        "doc-merge",
+        "doc-merge-server"
+      ],
+      "repoUrls": [
+        "https://github.com/blackstarzck/doc-merge",
+        "https://github.com/blackstarzck/doc-merge-server"
+      ],
+      "deployments": [
+        {
+          "url": "https://blackstarzck.github.io/doc-merge/",
+          "httpStatus": 200,
+          "availability": "entry-page-responded",
+          "pageTitle": "문서 통합프로그램",
+          "iframeAudit": {
+            "id": "iframe-url-08",
+            "browserResult": "document-visible",
+            "contentReadiness": "public-first-screen",
+            "framePolicyBlockObserved": false
+          }
+        }
+      ],
+      "included": true,
+      "originalCategory": "backend",
+      "primaryDeploymentUrl": "https://blackstarzck.github.io/doc-merge/",
+      "exhibitInteraction": {
+        "proposedMode": "iframe",
+        "launchUrl": "https://blackstarzck.github.io/doc-merge/",
+        "onFocus": "activate-after-camera-arrival",
+        "verificationReport": "portfolio-iframe-audit.md",
+        "note": "포커스 이동 완료 후 이 작품 하나만 실행한다."
+      }
+    },
+    {
+      "id": "original:nest-sns",
+      "sourceNodeId": "nest-sns",
+      "groupId": "nest-sns",
+      "room": "02",
+      "name": "NestJS 학습",
+      "summary": "인증부터 실시간 채팅까지, 서버 한 벌을 빈 폴더에서 얹어 본 기록입니다.",
+      "origin": "previous-portfolio-topic",
+      "repos": [
+        "cf_sns"
+      ],
+      "repoUrls": [
+        "https://github.com/blackstarzck/cf_sns"
+      ],
+      "deployments": [],
+      "included": true,
+      "originalCategory": "backend",
+      "primaryDeploymentUrl": null,
+      "exhibitInteraction": {
+        "proposedMode": "case-study",
+        "launchUrl": null,
+        "onFocus": "show-artwork-and-story",
+        "verificationReport": "portfolio-iframe-audit.md",
+        "note": "화면·문서·코드를 작품으로 소개한다."
+      }
+    },
+    {
+      "id": "original:gate-harness",
+      "sourceNodeId": "gate-harness",
+      "groupId": "gate-harness",
+      "room": "02",
+      "name": "요구사항 게이트 하네스",
+      "summary": "문서를 확인하지 않으면 변경할 수 없고, 실패해도 같은 작업 기록에서 다시 이어갈 수 있는 AI 실행 환경입니다.",
+      "origin": "previous-portfolio-topic",
+      "repos": [
+        "requirement-gated-python-harness"
+      ],
+      "repoUrls": [
+        "https://github.com/blackstarzck/requirement-gated-python-harness"
+      ],
+      "deployments": [],
+      "included": true,
+      "originalCategory": "ai",
+      "primaryDeploymentUrl": null,
+      "exhibitInteraction": {
+        "proposedMode": "case-study",
+        "launchUrl": null,
+        "onFocus": "show-artwork-and-story",
+        "verificationReport": "portfolio-iframe-audit.md",
+        "note": "개발 방식·검증·제작 과정이 작품이므로 설명 자료와 실행 근거를 중심으로 소개하고 관련 앱은 별도 링크로 둔다."
+      }
+    },
+    {
+      "id": "original:multi-agent",
+      "sourceNodeId": "multi-agent",
+      "groupId": "multi-agent",
+      "room": "02",
+      "name": "AI 개발 파이프라인",
+      "summary": "Codex와 Claude가 바뀌어도 같은 작업 공간·맥락·검증 근거를 이어받는 개발 흐름입니다.",
+      "origin": "previous-portfolio-topic",
+      "repos": [
+        "topik-project-v13"
+      ],
+      "repoUrls": [
+        "https://github.com/blackstarzck/topik-project-v13"
+      ],
+      "deployments": [],
+      "included": true,
+      "originalCategory": "ai",
+      "primaryDeploymentUrl": null,
+      "exhibitInteraction": {
+        "proposedMode": "case-study",
+        "launchUrl": null,
+        "onFocus": "show-artwork-and-story",
+        "verificationReport": "portfolio-iframe-audit.md",
+        "note": "개발 방식·검증·제작 과정이 작품이므로 설명 자료와 실행 근거를 중심으로 소개하고 관련 앱은 별도 링크로 둔다."
+      }
+    },
+    {
+      "id": "original:verify-loop",
+      "sourceNodeId": "verify-loop",
+      "groupId": "verify-loop",
+      "room": "02",
+      "name": "TOPIK AI 검증 하네스",
+      "summary": "문서·화면 경로·데이터 경계·테스트가 함께 움직이는지를 변경마다 반복 검사합니다.",
+      "origin": "previous-portfolio-topic",
+      "repos": [
+        "topik-ai"
+      ],
+      "repoUrls": [
+        "https://github.com/blackstarzck/topik-ai"
+      ],
+      "deployments": [
+        {
+          "url": "https://topik-ai.vercel.app",
+          "httpStatus": 200,
+          "availability": "entry-page-responded",
+          "pageTitle": "TOPIK AI 통합 관리자",
+          "iframeAudit": {
+            "id": "iframe-url-53",
+            "browserResult": "document-visible",
+            "contentReadiness": "authentication-required",
+            "framePolicyBlockObserved": false
+          }
+        }
+      ],
+      "included": true,
+      "originalCategory": "ai",
+      "primaryDeploymentUrl": "https://topik-ai.vercel.app",
+      "exhibitInteraction": {
+        "proposedMode": "case-study",
+        "launchUrl": null,
+        "onFocus": "show-artwork-and-story",
+        "verificationReport": "portfolio-iframe-audit.md",
+        "note": "개발 방식·검증·제작 과정이 작품이므로 설명 자료와 실행 근거를 중심으로 소개하고 관련 앱은 별도 링크로 둔다."
+      }
+    },
+    {
+      "id": "original:figma-gen",
+      "sourceNodeId": "figma-gen",
+      "groupId": "figma-gen",
+      "room": "02",
+      "name": "Figma → React 생성기",
+      "summary": "디자인 토큰을 동기화하고 컴포넌트를 만들어내는 UI 라이브러리 스타터입니다.",
+      "origin": "previous-portfolio-topic",
+      "repos": [
+        "chanchan2"
+      ],
+      "repoUrls": [
+        "https://github.com/blackstarzck/chanchan2"
+      ],
+      "deployments": [
+        {
+          "url": "https://chanchan2.vercel.app",
+          "httpStatus": 200,
+          "availability": "entry-page-responded",
+          "pageTitle": "Chanchan2 UI",
+          "iframeAudit": {
+            "id": "iframe-url-25",
+            "browserResult": "document-visible",
+            "contentReadiness": "public-first-screen",
+            "framePolicyBlockObserved": false
+          }
+        }
+      ],
+      "included": true,
+      "originalCategory": "ai",
+      "primaryDeploymentUrl": "https://chanchan2.vercel.app",
+      "exhibitInteraction": {
+        "proposedMode": "iframe",
+        "launchUrl": "https://chanchan2.vercel.app",
+        "onFocus": "activate-after-camera-arrival",
+        "verificationReport": "portfolio-iframe-audit.md",
+        "note": "포커스 이동 완료 후 이 작품 하나만 실행한다."
+      }
+    },
+    {
+      "id": "original:my-skills",
+      "sourceNodeId": "my-skills",
+      "groupId": "my-skills",
+      "room": "02",
+      "name": "반복 작업을 SKILL로 만드는 법",
+      "summary": "자주 반복되는 판단을 발동 조건·작업 범위·읽을 자료·검증 방법이 있는 절차로 바꿉니다.",
+      "origin": "previous-portfolio-topic",
+      "repos": [
+        "v12",
+        "sample-03"
+      ],
+      "repoUrls": [
+        "https://github.com/blackstarzck/v12",
+        "https://github.com/blackstarzck/sample-03"
+      ],
+      "deployments": [
+        {
+          "url": "https://v12-weld.vercel.app",
+          "httpStatus": 200,
+          "availability": "entry-page-responded",
+          "pageTitle": "TALKPIK AI",
+          "iframeAudit": {
+            "id": "iframe-url-55",
+            "browserResult": "document-visible",
+            "contentReadiness": "public-first-screen",
+            "framePolicyBlockObserved": false
+          }
+        }
+      ],
+      "included": true,
+      "originalCategory": "ai",
+      "primaryDeploymentUrl": "https://v12-weld.vercel.app",
+      "exhibitInteraction": {
+        "proposedMode": "case-study",
+        "launchUrl": null,
+        "onFocus": "show-artwork-and-story",
+        "verificationReport": "portfolio-iframe-audit.md",
+        "note": "개발 방식·검증·제작 과정이 작품이므로 설명 자료와 실행 근거를 중심으로 소개하고 관련 앱은 별도 링크로 둔다."
+      }
+    },
+    {
+      "id": "original:ai-squads",
+      "sourceNodeId": "ai-squads",
+      "groupId": "ai-squads",
+      "room": "02",
+      "name": "비개발자용 에이전트 IDE",
+      "summary": "PM·설계·개발·QA의 작업 흐름을 보여주는 비주얼 IDE와, 이견을 보존하는 AI 위원회 실험입니다.",
+      "origin": "previous-portfolio-topic",
+      "repos": [
+        "ai-squads",
+        "profitpal"
+      ],
+      "repoUrls": [
+        "https://github.com/blackstarzck/ai-squads",
+        "https://github.com/blackstarzck/profitpal"
+      ],
+      "deployments": [],
+      "included": true,
+      "originalCategory": "ai",
+      "primaryDeploymentUrl": null,
+      "exhibitInteraction": {
+        "proposedMode": "case-study",
+        "launchUrl": null,
+        "onFocus": "show-artwork-and-story",
+        "verificationReport": "portfolio-iframe-audit.md",
+        "note": "개발 방식·검증·제작 과정이 작품이므로 설명 자료와 실행 근거를 중심으로 소개하고 관련 앱은 별도 링크로 둔다."
+      }
+    },
+    {
+      "id": "original:video-agent",
+      "sourceNodeId": "video-agent",
+      "groupId": "video-agent",
+      "room": "02",
+      "name": "검사 가능한 AI 영상 제작 루프",
+      "summary": "36개 실행 프롬프트를 감사해 규칙 이탈을 찾고, 생성 전에 검사기가 막는 제작 루프로 바꿨습니다.",
+      "origin": "previous-portfolio-topic",
+      "repos": [
+        "sample-03"
+      ],
+      "repoUrls": [
+        "https://github.com/blackstarzck/sample-03"
+      ],
+      "deployments": [],
+      "included": true,
+      "originalCategory": "ai",
+      "primaryDeploymentUrl": null,
+      "exhibitInteraction": {
+        "proposedMode": "case-study",
+        "launchUrl": null,
+        "onFocus": "show-artwork-and-story",
+        "verificationReport": "portfolio-iframe-audit.md",
+        "note": "개발 방식·검증·제작 과정이 작품이므로 설명 자료와 실행 근거를 중심으로 소개하고 관련 앱은 별도 링크로 둔다."
+      }
+    },
+    {
+      "id": "original:design-rulebook",
+      "sourceNodeId": "design-rulebook",
+      "groupId": "design-rulebook",
+      "room": "02",
+      "name": "디자인 룰북",
+      "summary": "추상적인 디자인 요청을 AI가 실행하고 사람이 확인할 수 있는 제약 문장으로 바꾸는 진행 중 실험입니다.",
+      "origin": "previous-portfolio-topic",
+      "repos": [
+        "madia-design-rule"
+      ],
+      "repoUrls": [
+        "https://github.com/blackstarzck/madia-design-rule"
+      ],
+      "deployments": [],
+      "included": true,
+      "originalCategory": "ai",
+      "primaryDeploymentUrl": null,
+      "exhibitInteraction": {
+        "proposedMode": "case-study",
+        "launchUrl": null,
+        "onFocus": "show-artwork-and-story",
+        "verificationReport": "portfolio-iframe-audit.md",
+        "note": "개발 방식·검증·제작 과정이 작품이므로 설명 자료와 실행 근거를 중심으로 소개하고 관련 앱은 별도 링크로 둔다."
+      }
+    },
+    {
+      "id": "original:dadoke",
+      "sourceNodeId": "dadoke",
+      "groupId": "dadoke",
+      "room": "01",
+      "name": "DADOKe 전자책 · 오디오북",
+      "summary": "개발은 외주에 맡기고 기획·요구사항 정의·커뮤니케이션을 총괄했습니다.",
+      "origin": "previous-portfolio-topic",
+      "repos": [],
+      "repoUrls": [],
+      "deployments": [],
+      "included": true,
+      "originalCategory": "product",
+      "primaryDeploymentUrl": null,
+      "exhibitInteraction": {
+        "proposedMode": "case-study",
+        "launchUrl": null,
+        "onFocus": "show-artwork-and-story",
+        "verificationReport": "portfolio-iframe-audit.md",
+        "note": "화면·문서·코드를 작품으로 소개한다."
+      }
+    },
+    {
+      "id": "original:legacy-cleanup",
+      "sourceNodeId": "legacy-cleanup",
+      "groupId": "legacy-cleanup",
+      "room": "01",
+      "name": "레거시 정리 · 성능 개선",
+      "summary": "불필요한 호출과 쓰지 않는 자산을 걷어내 유지보수 비용을 줄였습니다.",
+      "origin": "previous-portfolio-topic",
+      "repos": [],
+      "repoUrls": [],
+      "deployments": [],
+      "included": true,
+      "originalCategory": "product",
+      "primaryDeploymentUrl": null,
+      "exhibitInteraction": {
+        "proposedMode": "case-study",
+        "launchUrl": null,
+        "onFocus": "show-artwork-and-story",
+        "verificationReport": "portfolio-iframe-audit.md",
+        "note": "화면·문서·코드를 작품으로 소개한다."
+      }
+    },
+    {
+      "id": "original:docs-comm",
+      "sourceNodeId": "docs-comm",
+      "groupId": "docs-comm",
+      "room": "01",
+      "name": "문서화 · 비개발 직군 협업",
+      "summary": "기능과 정책을 문서로 남기고, 비개발 직군이 읽을 수 있는 자료를 따로 만들었습니다.",
+      "origin": "previous-portfolio-topic",
+      "repos": [],
+      "repoUrls": [],
+      "deployments": [],
+      "included": true,
+      "originalCategory": "product",
+      "primaryDeploymentUrl": null,
+      "exhibitInteraction": {
+        "proposedMode": "case-study",
+        "launchUrl": null,
+        "onFocus": "show-artwork-and-story",
+        "verificationReport": "portfolio-iframe-audit.md",
+        "note": "화면·문서·코드를 작품으로 소개한다."
+      }
+    },
+    {
+      "id": "original:canvas-lab",
+      "sourceNodeId": "canvas-lab",
+      "groupId": "canvas-lab",
+      "room": "03",
+      "name": "캔버스 · 파티클",
+      "summary": "한 저장소에 예제를 여섯 개 넣어두고 입자를 다루는 방법을 하나씩 바꿔가며 실험했습니다.",
+      "origin": "previous-portfolio-topic",
+      "repos": [
+        "particle-colorful-stars"
+      ],
+      "repoUrls": [
+        "https://github.com/blackstarzck/particle-colorful-stars"
+      ],
+      "deployments": [
+        {
+          "url": "https://blackstarzck.github.io/particle-colorful-stars/",
+          "httpStatus": 200,
+          "availability": "entry-page-responded",
+          "pageTitle": "Particles: transform shapes",
+          "iframeAudit": {
+            "id": "iframe-url-16",
+            "browserResult": "document-visible",
+            "contentReadiness": "public-first-screen",
+            "framePolicyBlockObserved": false
+          }
+        }
+      ],
+      "included": true,
+      "originalCategory": "lab",
+      "primaryDeploymentUrl": "https://blackstarzck.github.io/particle-colorful-stars/",
+      "exhibitInteraction": {
+        "proposedMode": "iframe",
+        "launchUrl": "https://blackstarzck.github.io/particle-colorful-stars/",
+        "onFocus": "activate-after-camera-arrival",
+        "verificationReport": "portfolio-iframe-audit.md",
+        "note": "포커스 이동 완료 후 이 작품 하나만 실행한다."
+      }
+    },
+    {
+      "id": "original:multicanvas-lab",
+      "sourceNodeId": "multicanvas-lab",
+      "groupId": "multicanvas-lab",
+      "room": "03",
+      "name": "캔버스 여러 개",
+      "summary": "WebGL 렌더러 하나로 페이지 곳곳의 캔버스 자리를 채웁니다.",
+      "origin": "previous-portfolio-topic",
+      "repos": [
+        "multicanvas"
+      ],
+      "repoUrls": [
+        "https://github.com/blackstarzck/multicanvas"
+      ],
+      "deployments": [
+        {
+          "url": "https://blackstarzck.github.io/multicanvas/",
+          "httpStatus": 200,
+          "availability": "entry-page-responded",
+          "pageTitle": "multi canvas",
+          "iframeAudit": {
+            "id": "iframe-url-14",
+            "browserResult": "document-visible",
+            "contentReadiness": "public-first-screen",
+            "framePolicyBlockObserved": false
+          }
+        }
+      ],
+      "included": true,
+      "originalCategory": "lab",
+      "primaryDeploymentUrl": "https://blackstarzck.github.io/multicanvas/",
+      "exhibitInteraction": {
+        "proposedMode": "iframe",
+        "launchUrl": "https://blackstarzck.github.io/multicanvas/",
+        "onFocus": "activate-after-camera-arrival",
+        "verificationReport": "portfolio-iframe-audit.md",
+        "note": "포커스 이동 완료 후 이 작품 하나만 실행한다."
+      }
+    },
+    {
+      "id": "original:scroll-3d",
+      "sourceNodeId": "scroll-3d",
+      "groupId": "scroll-3d",
+      "room": "03",
+      "name": "스크롤 연동 3D",
+      "summary": "스크롤 위치에 3D 장면을 묶어, 페이지를 내리면 장면 안으로 들어갑니다.",
+      "origin": "previous-portfolio-topic",
+      "repos": [
+        "scroll-page"
+      ],
+      "repoUrls": [
+        "https://github.com/blackstarzck/scroll-page"
+      ],
+      "deployments": [
+        {
+          "url": "https://blackstarzck.github.io/scroll-page/",
+          "httpStatus": 200,
+          "availability": "entry-page-responded",
+          "pageTitle": "scroll page",
+          "iframeAudit": {
+            "id": "iframe-url-23",
+            "browserResult": "document-visible",
+            "contentReadiness": "public-first-screen",
+            "framePolicyBlockObserved": false
+          }
+        }
+      ],
+      "included": true,
+      "originalCategory": "lab",
+      "primaryDeploymentUrl": "https://blackstarzck.github.io/scroll-page/",
+      "exhibitInteraction": {
+        "proposedMode": "iframe",
+        "launchUrl": "https://blackstarzck.github.io/scroll-page/",
+        "onFocus": "activate-after-camera-arrival",
+        "verificationReport": "portfolio-iframe-audit.md",
+        "note": "포커스 이동 완료 후 이 작품 하나만 실행한다."
+      }
+    },
+    {
+      "id": "original:three-lab:isosmetric-02",
+      "sourceNodeId": "three-lab",
+      "groupId": "three-lab",
+      "room": "03",
+      "name": "isosmetric-02",
+      "summary": "GLTF로 만든 아이소메트릭 방. 침대·책상·조명까지 배치하고 모델에 붙은 애니메이션을 재생한다.",
+      "origin": "previous-portfolio-card",
+      "repos": [
+        "isosmetric-02"
+      ],
+      "repoUrls": [
+        "https://github.com/blackstarzck/isosmetric-02"
+      ],
+      "deployments": [
+        {
+          "url": "https://blackstarzck.github.io/isosmetric-02/",
+          "httpStatus": 200,
+          "availability": "entry-page-responded",
+          "pageTitle": "isometric room 02",
+          "iframeAudit": {
+            "id": "iframe-url-12",
+            "browserResult": "document-visible",
+            "contentReadiness": "public-first-screen",
+            "framePolicyBlockObserved": false
+          }
+        }
+      ],
+      "included": true,
+      "originalCategory": "lab",
+      "primaryDeploymentUrl": "https://blackstarzck.github.io/isosmetric-02/",
+      "exhibitInteraction": {
+        "proposedMode": "iframe",
+        "launchUrl": "https://blackstarzck.github.io/isosmetric-02/",
+        "onFocus": "activate-after-camera-arrival",
+        "verificationReport": "portfolio-iframe-audit.md",
+        "note": "포커스 이동 완료 후 이 작품 하나만 실행한다."
+      }
+    },
+    {
+      "id": "original:three-lab:isosmetric-01",
+      "sourceNodeId": "three-lab",
+      "groupId": "three-lab",
+      "room": "03",
+      "name": "isosmetric-01",
+      "summary": "같은 구조로 지은 첫 번째 방. lil-gui를 붙여 값을 실시간으로 만져 가며 감을 잡았다.",
+      "origin": "previous-portfolio-card",
+      "repos": [
+        "isosmetric-01"
+      ],
+      "repoUrls": [
+        "https://github.com/blackstarzck/isosmetric-01"
+      ],
+      "deployments": [
+        {
+          "url": "https://blackstarzck.github.io/isosmetric-01/",
+          "httpStatus": 200,
+          "availability": "entry-page-responded",
+          "pageTitle": "isometric room 01",
+          "iframeAudit": {
+            "id": "iframe-url-11",
+            "browserResult": "document-visible",
+            "contentReadiness": "public-first-screen",
+            "framePolicyBlockObserved": false
+          }
+        }
+      ],
+      "included": true,
+      "originalCategory": "lab",
+      "primaryDeploymentUrl": "https://blackstarzck.github.io/isosmetric-01/",
+      "exhibitInteraction": {
+        "proposedMode": "iframe",
+        "launchUrl": "https://blackstarzck.github.io/isosmetric-01/",
+        "onFocus": "activate-after-camera-arrival",
+        "verificationReport": "portfolio-iframe-audit.md",
+        "note": "포커스 이동 완료 후 이 작품 하나만 실행한다."
+      }
+    },
+    {
+      "id": "original:three-lab:custom_model",
+      "sourceNodeId": "three-lab",
+      "groupId": "three-lab",
+      "room": "03",
+      "name": "custom_model",
+      "summary": "Blender로 만든 모델을 웹에 올리고 조명 둘을 붙여 밝기와 위치를 조절해 봤다.",
+      "origin": "previous-portfolio-card",
+      "repos": [
+        "custom_model"
+      ],
+      "repoUrls": [
+        "https://github.com/blackstarzck/custom_model"
+      ],
+      "deployments": [
+        {
+          "url": "https://blackstarzck.github.io/custom_model/",
+          "httpStatus": 200,
+          "availability": "entry-page-responded",
+          "pageTitle": "1분코딩 three.js",
+          "iframeAudit": {
+            "id": "iframe-url-07",
+            "browserResult": "document-visible",
+            "contentReadiness": "public-first-screen",
+            "framePolicyBlockObserved": false
+          }
+        }
+      ],
+      "included": true,
+      "originalCategory": "lab",
+      "primaryDeploymentUrl": "https://blackstarzck.github.io/custom_model/",
+      "exhibitInteraction": {
+        "proposedMode": "iframe",
+        "launchUrl": "https://blackstarzck.github.io/custom_model/",
+        "onFocus": "activate-after-camera-arrival",
+        "verificationReport": "portfolio-iframe-audit.md",
+        "note": "포커스 이동 완료 후 이 작품 하나만 실행한다."
+      }
+    },
+    {
+      "id": "original:three-lab:controls-01",
+      "sourceNodeId": "three-lab",
+      "groupId": "three-lab",
+      "room": "03",
+      "name": "controls-01",
+      "summary": "카메라의 위치와 각도를 컨트롤 패널로 직접 움직여 보며 3D 좌표계에 익숙해진 것.",
+      "origin": "previous-portfolio-card",
+      "repos": [
+        "controls-01"
+      ],
+      "repoUrls": [
+        "https://github.com/blackstarzck/controls-01"
+      ],
+      "deployments": [
+        {
+          "url": "https://blackstarzck.github.io/controls-01/",
+          "httpStatus": 200,
+          "availability": "entry-page-responded",
+          "pageTitle": "Document",
+          "iframeAudit": {
+            "id": "iframe-url-06",
+            "browserResult": "document-visible",
+            "contentReadiness": "public-first-screen",
+            "framePolicyBlockObserved": false
+          }
+        }
+      ],
+      "included": true,
+      "originalCategory": "lab",
+      "primaryDeploymentUrl": "https://blackstarzck.github.io/controls-01/",
+      "exhibitInteraction": {
+        "proposedMode": "iframe",
+        "launchUrl": "https://blackstarzck.github.io/controls-01/",
+        "onFocus": "activate-after-camera-arrival",
+        "verificationReport": "portfolio-iframe-audit.md",
+        "note": "포커스 이동 완료 후 이 작품 하나만 실행한다."
+      }
+    },
+    {
+      "id": "original:three-lab:ilbunidiary",
+      "sourceNodeId": "three-lab",
+      "groupId": "three-lab",
+      "room": "03",
+      "name": "ilbunidiary",
+      "summary": "위에서 내려다보는 시점의 방. Raycaster로 바닥을 찍으면 캐릭터가 그 지점까지 걸어간다.",
+      "origin": "previous-portfolio-card",
+      "repos": [
+        "ilbunidiary"
+      ],
+      "repoUrls": [
+        "https://github.com/blackstarzck/ilbunidiary"
+      ],
+      "deployments": [
+        {
+          "url": "https://blackstarzck.github.io/ilbunidiary/",
+          "httpStatus": 200,
+          "availability": "entry-page-responded",
+          "pageTitle": "banch marketing choonsi diary",
+          "iframeAudit": {
+            "id": "iframe-url-10",
+            "browserResult": "document-visible",
+            "contentReadiness": "public-first-screen",
+            "framePolicyBlockObserved": false
+          }
+        }
+      ],
+      "included": true,
+      "originalCategory": "lab",
+      "primaryDeploymentUrl": "https://blackstarzck.github.io/ilbunidiary/",
+      "exhibitInteraction": {
+        "proposedMode": "iframe",
+        "launchUrl": "https://blackstarzck.github.io/ilbunidiary/",
+        "onFocus": "activate-after-camera-arrival",
+        "verificationReport": "portfolio-iframe-audit.md",
+        "note": "포커스 이동 완료 후 이 작품 하나만 실행한다."
+      }
+    },
+    {
+      "id": "original:game-lab:neon-fist",
+      "sourceNodeId": "game-lab",
+      "groupId": "game-lab",
+      "room": "03",
+      "name": "neon-fist",
+      "summary": "백엔드도 외부 에셋도 없이 만든 1:1 격투 게임. UI·파티클·게이지를 코드로 그리고 타격음부터 배경 음악까지 실시간 합성한다.",
+      "origin": "previous-portfolio-card",
+      "repos": [
+        "neon-fist"
+      ],
+      "repoUrls": [
+        "https://github.com/blackstarzck/neon-fist"
+      ],
+      "deployments": [
+        {
+          "url": "https://neon-fist.vercel.app",
+          "httpStatus": 200,
+          "availability": "entry-page-responded",
+          "pageTitle": "NEON FIST: NIGHT CIRCUIT",
+          "iframeAudit": {
+            "id": "iframe-url-45",
+            "browserResult": "document-visible",
+            "contentReadiness": "public-first-screen",
+            "framePolicyBlockObserved": false
+          }
+        }
+      ],
+      "included": true,
+      "originalCategory": "lab",
+      "primaryDeploymentUrl": "https://neon-fist.vercel.app",
+      "exhibitInteraction": {
+        "proposedMode": "iframe",
+        "launchUrl": "https://neon-fist.vercel.app",
+        "onFocus": "activate-after-camera-arrival",
+        "verificationReport": "portfolio-iframe-audit.md",
+        "note": "포커스 이동 완료 후 이 작품 하나만 실행한다."
+      }
+    },
+    {
+      "id": "original:game-lab:game-cabinet",
+      "sourceNodeId": "game-lab",
+      "groupId": "game-lab",
+      "room": "03",
+      "name": "game-cabinet",
+      "summary": "3D 아케이드 캐비닛을 세우고 그 안에서 웹게임을 실행한다. 큐레이션한 게임을 캐비닛 화면에 띄운다.",
+      "origin": "previous-portfolio-card",
+      "repos": [
+        "game-cabinet"
+      ],
+      "repoUrls": [
+        "https://github.com/blackstarzck/game-cabinet"
+      ],
+      "deployments": [
+        {
+          "url": "https://game-cabinet.vercel.app",
+          "httpStatus": 200,
+          "availability": "entry-page-responded",
+          "pageTitle": "GAME CABINET",
+          "iframeAudit": {
+            "id": "iframe-url-31",
+            "browserResult": "document-visible",
+            "contentReadiness": "public-first-screen",
+            "framePolicyBlockObserved": false
+          }
+        }
+      ],
+      "included": true,
+      "originalCategory": "lab",
+      "primaryDeploymentUrl": "https://game-cabinet.vercel.app",
+      "exhibitInteraction": {
+        "proposedMode": "iframe",
+        "launchUrl": "https://game-cabinet.vercel.app",
+        "onFocus": "activate-after-camera-arrival",
+        "verificationReport": "portfolio-iframe-audit.md",
+        "note": "포커스 이동 완료 후 이 작품 하나만 실행한다."
+      }
+    },
+    {
+      "id": "original:game-lab:bridge",
+      "sourceNodeId": "game-lab",
+      "groupId": "game-lab",
+      "room": "03",
+      "name": "bridge",
+      "summary": "유리다리를 건너는 게임. 밟은 판이 깨져 떨어지는 것을 눈속임이 아니라 물리 엔진으로 처리했다.",
+      "origin": "previous-portfolio-card",
+      "repos": [
+        "bridge"
+      ],
+      "repoUrls": [
+        "https://github.com/blackstarzck/bridge"
+      ],
+      "deployments": [
+        {
+          "url": "https://blackstarzck.github.io/bridge/",
+          "httpStatus": 200,
+          "availability": "entry-page-responded",
+          "pageTitle": "Document",
+          "iframeAudit": {
+            "id": "iframe-url-03",
+            "browserResult": "document-visible",
+            "contentReadiness": "public-first-screen",
+            "framePolicyBlockObserved": false
+          }
+        }
+      ],
+      "included": true,
+      "originalCategory": "lab",
+      "primaryDeploymentUrl": "https://blackstarzck.github.io/bridge/",
+      "exhibitInteraction": {
+        "proposedMode": "iframe",
+        "launchUrl": "https://blackstarzck.github.io/bridge/",
+        "onFocus": "activate-after-camera-arrival",
+        "verificationReport": "portfolio-iframe-audit.md",
+        "note": "포커스 이동 완료 후 이 작품 하나만 실행한다."
+      }
+    },
+    {
+      "id": "original:game-lab:first-person-perspective",
+      "sourceNodeId": "game-lab",
+      "groupId": "game-lab",
+      "room": "03",
+      "name": "first-person-perspective",
+      "summary": "1인칭으로 공간을 걸어 다닌다. 충돌은 cannon-es로 처리하고 키보드와 터치 조작을 따로 나눠 뒀다.",
+      "origin": "previous-portfolio-card",
+      "repos": [
+        "first-person-perspective"
+      ],
+      "repoUrls": [
+        "https://github.com/blackstarzck/first-person-perspective"
+      ],
+      "deployments": [
+        {
+          "url": "https://blackstarzck.github.io/first-person-perspective/",
+          "httpStatus": 200,
+          "availability": "entry-page-responded",
+          "pageTitle": "my space",
+          "iframeAudit": {
+            "id": "iframe-url-09",
+            "browserResult": "document-visible",
+            "contentReadiness": "public-first-screen",
+            "framePolicyBlockObserved": false
+          }
+        }
+      ],
+      "included": true,
+      "originalCategory": "lab",
+      "primaryDeploymentUrl": "https://blackstarzck.github.io/first-person-perspective/",
+      "exhibitInteraction": {
+        "proposedMode": "iframe",
+        "launchUrl": "https://blackstarzck.github.io/first-person-perspective/",
+        "onFocus": "activate-after-camera-arrival",
+        "verificationReport": "portfolio-iframe-audit.md",
+        "note": "포커스 이동 완료 후 이 작품 하나만 실행한다."
+      }
+    },
+    {
+      "id": "original:game-lab:lets-fps",
+      "sourceNodeId": "game-lab",
+      "groupId": "game-lab",
+      "room": "03",
+      "name": "lets-fps",
+      "summary": "여럿이 같이 하는 FPS. 충돌용 월드를 GLTF로 불러오고 로그인과 방 상태는 Supabase에 뒀다.",
+      "origin": "previous-portfolio-card",
+      "repos": [
+        "lets-fps"
+      ],
+      "repoUrls": [
+        "https://github.com/blackstarzck/lets-fps"
+      ],
+      "deployments": [
+        {
+          "url": "https://lets-fps.vercel.app",
+          "httpStatus": 200,
+          "availability": "entry-page-responded",
+          "pageTitle": "vite-project",
+          "iframeAudit": {
+            "id": "iframe-url-37",
+            "browserResult": "document-visible",
+            "contentReadiness": "authentication-required",
+            "framePolicyBlockObserved": false
+          }
+        }
+      ],
+      "included": true,
+      "originalCategory": "lab",
+      "primaryDeploymentUrl": "https://lets-fps.vercel.app",
+      "exhibitInteraction": {
+        "proposedMode": "demo-preparation",
+        "launchUrl": null,
+        "onFocus": "show-artwork-and-story",
+        "verificationReport": "portfolio-iframe-audit.md",
+        "note": "인증 또는 서버 연동을 준비한 체험용 데모가 확보될 때까지 작품 이미지·영상을 표시한다."
+      }
+    },
+    {
+      "id": "original:game-cards",
+      "sourceNodeId": "game-cards",
+      "groupId": "game-cards",
+      "room": "03",
+      "name": "능력치 카드 게임",
+      "summary": "얼굴 사진으로 능력치 카드를 만들고 보관해 친구와 대결하는 웹게임입니다.",
+      "origin": "previous-portfolio-topic",
+      "repos": [
+        "game-cards"
+      ],
+      "repoUrls": [
+        "https://github.com/blackstarzck/game-cards"
+      ],
+      "deployments": [
+        {
+          "url": "https://simple-gatcha.netlify.app/",
+          "httpStatus": 200,
+          "availability": "entry-page-responded",
+          "pageTitle": "React App",
+          "iframeAudit": {
+            "id": "iframe-url-51",
+            "browserResult": "document-visible",
+            "contentReadiness": "public-first-screen",
+            "framePolicyBlockObserved": false
+          }
+        }
+      ],
+      "included": true,
+      "originalCategory": "lab",
+      "primaryDeploymentUrl": "https://simple-gatcha.netlify.app/",
+      "exhibitInteraction": {
+        "proposedMode": "iframe",
+        "launchUrl": "https://simple-gatcha.netlify.app/",
+        "onFocus": "activate-after-camera-arrival",
+        "verificationReport": "portfolio-iframe-audit.md",
+        "note": "포커스 이동 완료 후 이 작품 하나만 실행한다."
+      }
+    },
+    {
+      "id": "original:trading-lab:zenith",
+      "sourceNodeId": "trading-lab",
+      "groupId": "trading-lab",
+      "room": "02",
+      "name": "zenith",
+      "summary": "업비트 자동매매 본체. Python 봇과 React UI가 REST 없이 Supabase를 공유 채널로 쓴다. 손실 리포트와 원인 분석 문서가 함께 있다.",
+      "origin": "previous-portfolio-card",
+      "repos": [
+        "zenith"
+      ],
+      "repoUrls": [
+        "https://github.com/blackstarzck/zenith"
+      ],
+      "deployments": [
+        {
+          "url": "https://zenith-ten-lac.vercel.app",
+          "httpStatus": 200,
+          "availability": "entry-page-responded",
+          "pageTitle": "frontend",
+          "iframeAudit": {
+            "id": "iframe-url-59",
+            "browserResult": "document-visible",
+            "contentReadiness": "authentication-required",
+            "framePolicyBlockObserved": false
+          }
+        }
+      ],
+      "included": true,
+      "originalCategory": "lab",
+      "primaryDeploymentUrl": "https://zenith-ten-lac.vercel.app",
+      "exhibitInteraction": {
+        "proposedMode": "demo-preparation",
+        "launchUrl": null,
+        "onFocus": "show-artwork-and-story",
+        "verificationReport": "portfolio-iframe-audit.md",
+        "note": "인증 또는 서버 연동을 준비한 체험용 데모가 확보될 때까지 작품 이미지·영상을 표시한다."
+      }
+    },
+    {
+      "id": "original:trading-lab:zenith-v2",
+      "sourceNodeId": "trading-lab",
+      "groupId": "trading-lab",
+      "room": "02",
+      "name": "zenith-v2",
+      "summary": "봇을 zenith_bot 패키지로 다시 묶고 pytest를 붙였다.",
+      "origin": "previous-portfolio-card",
+      "repos": [
+        "zenith-v2"
+      ],
+      "repoUrls": [
+        "https://github.com/blackstarzck/zenith-v2"
+      ],
+      "deployments": [],
+      "included": true,
+      "originalCategory": "lab",
+      "primaryDeploymentUrl": null,
+      "exhibitInteraction": {
+        "proposedMode": "case-study",
+        "launchUrl": null,
+        "onFocus": "show-artwork-and-story",
+        "verificationReport": "portfolio-iframe-audit.md",
+        "note": "화면·문서·코드를 작품으로 소개한다."
+      }
+    },
+    {
+      "id": "original:trading-lab:zenith-v3",
+      "sourceNodeId": "trading-lab",
+      "groupId": "trading-lab",
+      "room": "02",
+      "name": "zenith-v3",
+      "summary": "docs/prd.md에 적은 매매 명세를 그대로 구현하는 전략 엔진으로 다시 짰다. trader와 web을 나눴다.",
+      "origin": "previous-portfolio-card",
+      "repos": [
+        "zenith-v3"
+      ],
+      "repoUrls": [
+        "https://github.com/blackstarzck/zenith-v3"
+      ],
+      "deployments": [],
+      "included": true,
+      "originalCategory": "lab",
+      "primaryDeploymentUrl": null,
+      "exhibitInteraction": {
+        "proposedMode": "case-study",
+        "launchUrl": null,
+        "onFocus": "show-artwork-and-story",
+        "verificationReport": "portfolio-iframe-audit.md",
+        "note": "화면·문서·코드를 작품으로 소개한다."
+      }
+    },
+    {
+      "id": "original:trading-lab:zenith-v4",
+      "sourceNodeId": "trading-lab",
+      "groupId": "trading-lab",
+      "room": "02",
+      "name": "zenith-v4",
+      "summary": "모노레포로 재작성. 연결 상태를 상태머신으로 정리하고 타임아웃·지터 백오프 재시도, runId와 seq로 중복·순서역전을 막았다.",
+      "origin": "previous-portfolio-card",
+      "repos": [
+        "zenith-v4"
+      ],
+      "repoUrls": [
+        "https://github.com/blackstarzck/zenith-v4"
+      ],
+      "deployments": [],
+      "included": true,
+      "originalCategory": "lab",
+      "primaryDeploymentUrl": null,
+      "exhibitInteraction": {
+        "proposedMode": "case-study",
+        "launchUrl": null,
+        "onFocus": "show-artwork-and-story",
+        "verificationReport": "portfolio-iframe-audit.md",
+        "note": "화면·문서·코드를 작품으로 소개한다."
+      }
+    },
+    {
+      "id": "original:trading-lab:coin-lab",
+      "sourceNodeId": "trading-lab",
+      "groupId": "trading-lab",
+      "room": "02",
+      "name": "coin-lab",
+      "summary": "backend·frontend·workers·infra로 나눠 다시 세운 판. PostgreSQL 함수까지 직접 썼다.",
+      "origin": "previous-portfolio-card",
+      "repos": [
+        "coin-lab"
+      ],
+      "repoUrls": [
+        "https://github.com/blackstarzck/coin-lab"
+      ],
+      "deployments": [],
+      "included": true,
+      "originalCategory": "lab",
+      "primaryDeploymentUrl": null,
+      "exhibitInteraction": {
+        "proposedMode": "case-study",
+        "launchUrl": null,
+        "onFocus": "show-artwork-and-story",
+        "verificationReport": "portfolio-iframe-audit.md",
+        "note": "화면·문서·코드를 작품으로 소개한다."
+      }
+    },
+    {
+      "id": "original:trading-lab:coin-lab-v2",
+      "sourceNodeId": "trading-lab",
+      "groupId": "trading-lab",
+      "room": "02",
+      "name": "coin-lab-v2",
+      "summary": "전략 실험 대시보드. 디자인 시스템을 문서로 먼저 정하고 화면을 맞췄다.",
+      "origin": "previous-portfolio-card",
+      "repos": [
+        "coin-lab-v2"
+      ],
+      "repoUrls": [
+        "https://github.com/blackstarzck/coin-lab-v2"
+      ],
+      "deployments": [
+        {
+          "url": "https://frontend-eta-six-54.vercel.app",
+          "httpStatus": 200,
+          "availability": "entry-page-responded",
+          "pageTitle": "코인 랩",
+          "iframeAudit": {
+            "id": "iframe-url-30",
+            "browserResult": "document-visible",
+            "contentReadiness": "public-first-screen",
+            "framePolicyBlockObserved": false
+          }
+        }
+      ],
+      "included": true,
+      "originalCategory": "lab",
+      "primaryDeploymentUrl": "https://frontend-eta-six-54.vercel.app",
+      "exhibitInteraction": {
+        "proposedMode": "iframe",
+        "launchUrl": "https://frontend-eta-six-54.vercel.app",
+        "onFocus": "activate-after-camera-arrival",
+        "verificationReport": "portfolio-iframe-audit.md",
+        "note": "포커스 이동 완료 후 이 작품 하나만 실행한다."
+      }
+    },
+    {
+      "id": "original:trading-lab:profitpal",
+      "sourceNodeId": "trading-lab",
+      "groupId": "trading-lab",
+      "room": "02",
+      "name": "profitpal",
+      "summary": "차트·뉴스·고래 지갑을 각각 보는 에이전트의 판단을 의장이 취합하는 위원회 구조.",
+      "origin": "previous-portfolio-card",
+      "repos": [
+        "profitpal"
+      ],
+      "repoUrls": [
+        "https://github.com/blackstarzck/profitpal"
+      ],
+      "deployments": [],
+      "included": true,
+      "originalCategory": "lab",
+      "primaryDeploymentUrl": null,
+      "exhibitInteraction": {
+        "proposedMode": "case-study",
+        "launchUrl": null,
+        "onFocus": "show-artwork-and-story",
+        "verificationReport": "portfolio-iframe-audit.md",
+        "note": "화면·문서·코드를 작품으로 소개한다."
+      }
+    },
+    {
+      "id": "original:trading-lab:Haley",
+      "sourceNodeId": "trading-lab",
+      "groupId": "trading-lab",
+      "room": "02",
+      "name": "Haley",
+      "summary": "매매 전략을 코드보다 먼저 문서로 정리한 것. 단계별 다이어그램으로 흐름을 굳혔다.",
+      "origin": "previous-portfolio-card",
+      "repos": [
+        "Haley"
+      ],
+      "repoUrls": [
+        "https://github.com/blackstarzck/Haley"
+      ],
+      "deployments": [],
+      "included": true,
+      "originalCategory": "lab",
+      "primaryDeploymentUrl": null,
+      "exhibitInteraction": {
+        "proposedMode": "case-study",
+        "launchUrl": null,
+        "onFocus": "show-artwork-and-story",
+        "verificationReport": "portfolio-iframe-audit.md",
+        "note": "화면·문서·코드를 작품으로 소개한다."
+      }
+    },
+    {
+      "id": "original:space-3d",
+      "sourceNodeId": "space-3d",
+      "groupId": "space-3d",
+      "room": "03",
+      "name": "3D 공간 만들기",
+      "summary": "마을 하나를 통째로 세워 걸어 다닐 수 있게 만든 3D 씬입니다.",
+      "origin": "previous-portfolio-topic",
+      "repos": [
+        "my-space"
+      ],
+      "repoUrls": [
+        "https://github.com/blackstarzck/my-space"
+      ],
+      "deployments": [
+        {
+          "url": "https://blackstarzck.github.io/my-space/",
+          "httpStatus": 200,
+          "availability": "entry-page-responded",
+          "pageTitle": "Vite App",
+          "iframeAudit": {
+            "id": "iframe-url-15",
+            "browserResult": "document-visible",
+            "contentReadiness": "public-first-screen",
+            "framePolicyBlockObserved": false
+          }
+        },
+        {
+          "url": "https://my-space-orcin-eight.vercel.app",
+          "httpStatus": 404,
+          "availability": "request-returned-error",
+          "pageTitle": null,
+          "iframeAudit": {
+            "id": "iframe-url-41",
+            "browserResult": "unavailable",
+            "contentReadiness": "site-unavailable",
+            "framePolicyBlockObserved": false
+          }
+        }
+      ],
+      "included": true,
+      "originalCategory": "lab",
+      "primaryDeploymentUrl": "https://blackstarzck.github.io/my-space/",
+      "exhibitInteraction": {
+        "proposedMode": "iframe",
+        "launchUrl": "https://blackstarzck.github.io/my-space/",
+        "onFocus": "activate-after-camera-arrival",
+        "verificationReport": "portfolio-iframe-audit.md",
+        "note": "포커스 이동 완료 후 이 작품 하나만 실행한다."
+      }
+    },
+    {
+      "id": "original:detect-lab",
+      "sourceNodeId": "detect-lab",
+      "groupId": "detect-lab",
+      "room": "03",
+      "name": "물체 감지",
+      "summary": "사진 속 물건을 브라우저에서 잡아 카드로 띄운, 이 사이트 이전의 포트폴리오입니다.",
+      "origin": "previous-portfolio-topic",
+      "repos": [
+        "chanki-portfolio"
+      ],
+      "repoUrls": [
+        "https://github.com/blackstarzck/chanki-portfolio"
+      ],
+      "deployments": [
+        {
+          "url": "https://blackstarzck.github.io/chanki-portfolio/",
+          "httpStatus": 200,
+          "availability": "entry-page-responded",
+          "pageTitle": "찬기의 포트폴리오",
+          "iframeAudit": {
+            "id": "iframe-url-05",
+            "browserResult": "document-visible",
+            "contentReadiness": "public-first-screen",
+            "framePolicyBlockObserved": false
+          }
+        }
+      ],
+      "included": true,
+      "originalCategory": "lab",
+      "primaryDeploymentUrl": "https://blackstarzck.github.io/chanki-portfolio/",
+      "exhibitInteraction": {
+        "proposedMode": "iframe",
+        "launchUrl": "https://blackstarzck.github.io/chanki-portfolio/",
+        "onFocus": "activate-after-camera-arrival",
+        "verificationReport": "portfolio-iframe-audit.md",
+        "note": "포커스 이동 완료 후 이 작품 하나만 실행한다."
+      }
+    },
+    {
+      "id": "original:react-basics:react-todos",
+      "sourceNodeId": "react-basics",
+      "groupId": "react-basics",
+      "room": "03",
+      "name": "react-todos",
+      "summary": "투두 앱. 영상을 보며 클론 코딩한 것으로, 목록 추가·완료·삭제를 처음 끝까지 만들어 봤다.",
+      "origin": "previous-portfolio-card",
+      "repos": [
+        "react-todos"
+      ],
+      "repoUrls": [
+        "https://github.com/blackstarzck/react-todos"
+      ],
+      "deployments": [
+        {
+          "url": "https://blackstarzck.github.io/react-todos/",
+          "httpStatus": 200,
+          "availability": "entry-page-responded",
+          "pageTitle": "리액트 TODO 앱 | react-todos",
+          "iframeAudit": {
+            "id": "iframe-url-22",
+            "browserResult": "document-visible",
+            "contentReadiness": "documentation-only",
+            "framePolicyBlockObserved": false
+          }
+        }
+      ],
+      "included": true,
+      "originalCategory": "lab",
+      "primaryDeploymentUrl": "https://blackstarzck.github.io/react-todos/",
+      "exhibitInteraction": {
+        "proposedMode": "media-until-restored",
+        "launchUrl": null,
+        "onFocus": "show-artwork-and-story",
+        "verificationReport": "portfolio-iframe-audit.md",
+        "note": "문서 페이지·빈 화면·중단된 배포본이므로 작품 이미지와 코드를 표시하고 배포 복구 후 재검사한다."
+      }
+    },
+    {
+      "id": "original:react-basics:react-practice6",
+      "sourceNodeId": "react-basics",
+      "groupId": "react-basics",
+      "room": "03",
+      "name": "react-practice6",
+      "summary": "드롭다운이 있는 반응형 네비게이션 바.",
+      "origin": "previous-portfolio-card",
+      "repos": [
+        "react-practice6"
+      ],
+      "repoUrls": [
+        "https://github.com/blackstarzck/react-practice6"
+      ],
+      "deployments": [
+        {
+          "url": "https://blackstarzck.github.io/react-practice6/",
+          "httpStatus": 200,
+          "availability": "entry-page-responded",
+          "pageTitle": "react-practice6",
+          "iframeAudit": {
+            "id": "iframe-url-20",
+            "browserResult": "document-visible",
+            "contentReadiness": "documentation-only",
+            "framePolicyBlockObserved": false
+          }
+        }
+      ],
+      "included": true,
+      "originalCategory": "lab",
+      "primaryDeploymentUrl": "https://blackstarzck.github.io/react-practice6/",
+      "exhibitInteraction": {
+        "proposedMode": "media-until-restored",
+        "launchUrl": null,
+        "onFocus": "show-artwork-and-story",
+        "verificationReport": "portfolio-iframe-audit.md",
+        "note": "문서 페이지·빈 화면·중단된 배포본이므로 작품 이미지와 코드를 표시하고 배포 복구 후 재검사한다."
+      }
+    },
+    {
+      "id": "original:react-basics:business-card",
+      "sourceNodeId": "react-basics",
+      "groupId": "react-basics",
+      "room": "03",
+      "name": "business-card",
+      "summary": "명함을 만들어 저장하는 앱. Firebase로 로그인과 저장을, Cloudinary로 이미지 업로드를 붙였다.",
+      "origin": "previous-portfolio-card",
+      "repos": [
+        "business-card"
+      ],
+      "repoUrls": [
+        "https://github.com/blackstarzck/business-card"
+      ],
+      "deployments": [
+        {
+          "url": "https://blackstarzck.github.io/business-card/",
+          "httpStatus": 200,
+          "availability": "entry-page-responded",
+          "pageTitle": "App",
+          "iframeAudit": {
+            "id": "iframe-url-04",
+            "browserResult": "document-visible",
+            "contentReadiness": "authentication-required",
+            "framePolicyBlockObserved": false
+          }
+        }
+      ],
+      "included": true,
+      "originalCategory": "lab",
+      "primaryDeploymentUrl": "https://blackstarzck.github.io/business-card/",
+      "exhibitInteraction": {
+        "proposedMode": "demo-preparation",
+        "launchUrl": null,
+        "onFocus": "show-artwork-and-story",
+        "verificationReport": "portfolio-iframe-audit.md",
+        "note": "인증 또는 서버 연동을 준비한 체험용 데모가 확보될 때까지 작품 이미지·영상을 표시한다."
+      }
+    },
+    {
+      "id": "original:react-basics:react-modeal.net2",
+      "sourceNodeId": "react-basics",
+      "groupId": "react-basics",
+      "room": "03",
+      "name": "react-modeal.net2",
+      "summary": "화면 하나를 통째로 따라 만들어 본 클론 코딩. swiper로 캐러셀을 붙였다.",
+      "origin": "previous-portfolio-card",
+      "repos": [
+        "react-modeal.net2"
+      ],
+      "repoUrls": [
+        "https://github.com/blackstarzck/react-modeal.net2"
+      ],
+      "deployments": [
+        {
+          "url": "https://blackstarzck.github.io/react-modeal.net2/",
+          "httpStatus": 200,
+          "availability": "entry-page-responded",
+          "pageTitle": "react-modeal.net2",
+          "iframeAudit": {
+            "id": "iframe-url-18",
+            "browserResult": "document-visible",
+            "contentReadiness": "documentation-only",
+            "framePolicyBlockObserved": false
+          }
+        },
+        {
+          "url": "https://modeal-chan.github.io/react-clone-coding/",
+          "httpStatus": 200,
+          "availability": "entry-page-responded",
+          "pageTitle": "모딜 Ver.2",
+          "associationEvidence": [
+            "https://github.com/blackstarzck/react-modeal.net2/blob/master/README.md",
+            "https://github.com/blackstarzck/react-modeal.net2/blob/master/package.json"
+          ],
+          "hostingNote": "레포 README와 package homepage가 연결하는 modeal-chan 계정의 배포본",
+          "iframeAudit": {
+            "id": "iframe-url-60",
+            "browserResult": "document-visible",
+            "contentReadiness": "public-first-screen",
+            "framePolicyBlockObserved": false
+          }
+        }
+      ],
+      "included": true,
+      "originalCategory": "lab",
+      "primaryDeploymentUrl": "https://modeal-chan.github.io/react-clone-coding/",
+      "exhibitInteraction": {
+        "proposedMode": "iframe",
+        "launchUrl": "https://modeal-chan.github.io/react-clone-coding/",
+        "onFocus": "activate-after-camera-arrival",
+        "verificationReport": "portfolio-iframe-audit.md",
+        "note": "포커스 이동 완료 후 이 작품 하나만 실행한다."
+      }
+    },
+    {
+      "id": "original:react-basics:react-modeal",
+      "sourceNodeId": "react-basics",
+      "groupId": "react-basics",
+      "room": "03",
+      "name": "react-modeal",
+      "summary": "같은 클론의 앞 버전. styled-components와 라우터를 처음 같이 써 봤다.",
+      "origin": "previous-portfolio-card",
+      "repos": [
+        "react-modeal"
+      ],
+      "repoUrls": [
+        "https://github.com/blackstarzck/react-modeal"
+      ],
+      "deployments": [
+        {
+          "url": "https://blackstarzck.github.io/react-modeal/",
+          "httpStatus": 404,
+          "availability": "request-returned-error",
+          "pageTitle": null,
+          "iframeAudit": {
+            "id": "iframe-url-19",
+            "browserResult": "unavailable",
+            "contentReadiness": "site-unavailable",
+            "framePolicyBlockObserved": false
+          }
+        }
+      ],
+      "included": true,
+      "originalCategory": "lab",
+      "primaryDeploymentUrl": null,
+      "exhibitInteraction": {
+        "proposedMode": "media-until-restored",
+        "launchUrl": null,
+        "onFocus": "show-artwork-and-story",
+        "verificationReport": "portfolio-iframe-audit.md",
+        "note": "문서 페이지·빈 화면·중단된 배포본이므로 작품 이미지와 코드를 표시하고 배포 복구 후 재검사한다."
+      }
+    },
+    {
+      "id": "original:react-basics:react-face-detect",
+      "sourceNodeId": "react-basics",
+      "groupId": "react-basics",
+      "room": "03",
+      "name": "react-face-detect",
+      "summary": "face-api.js를 붙여 사진 속 얼굴을 잡아 봤다. 모델 파일을 직접 넣어 브라우저에서 돌린다.",
+      "origin": "previous-portfolio-card",
+      "repos": [
+        "react-face-detect"
+      ],
+      "repoUrls": [
+        "https://github.com/blackstarzck/react-face-detect"
+      ],
+      "deployments": [],
+      "included": true,
+      "originalCategory": "lab",
+      "primaryDeploymentUrl": null,
+      "exhibitInteraction": {
+        "proposedMode": "case-study",
+        "launchUrl": null,
+        "onFocus": "show-artwork-and-story",
+        "verificationReport": "portfolio-iframe-audit.md",
+        "note": "화면·문서·코드를 작품으로 소개한다."
+      }
+    },
+    {
+      "id": "original:react-basics:react-youtube",
+      "sourceNodeId": "react-basics",
+      "groupId": "react-basics",
+      "room": "03",
+      "name": "react-youtube",
+      "summary": "유튜브 API를 붙여 영상 목록과 상세를 보여주는 앱. API 호출부를 service로 떼어 냈다.",
+      "origin": "previous-portfolio-card",
+      "repos": [
+        "react-youtube"
+      ],
+      "repoUrls": [
+        "https://github.com/blackstarzck/react-youtube"
+      ],
+      "deployments": [],
+      "included": true,
+      "originalCategory": "lab",
+      "primaryDeploymentUrl": null,
+      "exhibitInteraction": {
+        "proposedMode": "case-study",
+        "launchUrl": null,
+        "onFocus": "show-artwork-and-story",
+        "verificationReport": "portfolio-iframe-audit.md",
+        "note": "화면·문서·코드를 작품으로 소개한다."
+      }
+    },
+    {
+      "id": "original:react-basics:react-swiper",
+      "sourceNodeId": "react-basics",
+      "groupId": "react-basics",
+      "room": "03",
+      "name": "react-swiper",
+      "summary": "영화 목록과 상세를 라우팅으로 나눈 앱. 강의를 따라가며 만들었다.",
+      "origin": "previous-portfolio-card",
+      "repos": [
+        "react-swiper"
+      ],
+      "repoUrls": [
+        "https://github.com/blackstarzck/react-swiper"
+      ],
+      "deployments": [
+        {
+          "url": "https://blackstarzck.github.io/react-swiper/",
+          "httpStatus": 200,
+          "availability": "entry-page-responded",
+          "pageTitle": "MOVIE",
+          "iframeAudit": {
+            "id": "iframe-url-21",
+            "browserResult": "blank-document",
+            "contentReadiness": "blank-application",
+            "framePolicyBlockObserved": false
+          }
+        }
+      ],
+      "included": true,
+      "originalCategory": "lab",
+      "primaryDeploymentUrl": "https://blackstarzck.github.io/react-swiper/",
+      "exhibitInteraction": {
+        "proposedMode": "media-until-restored",
+        "launchUrl": null,
+        "onFocus": "show-artwork-and-story",
+        "verificationReport": "portfolio-iframe-audit.md",
+        "note": "문서 페이지·빈 화면·중단된 배포본이므로 작품 이미지와 코드를 표시하고 배포 복구 후 재검사한다."
+      }
+    },
+    {
+      "id": "original:react-basics:react-practice4",
+      "sourceNodeId": "react-basics",
+      "groupId": "react-basics",
+      "room": "03",
+      "name": "react-practice4",
+      "summary": "코인 시세 목록. axios로 외부 API를 처음 붙여 본 연습이다.",
+      "origin": "previous-portfolio-card",
+      "repos": [
+        "react-practice4"
+      ],
+      "repoUrls": [
+        "https://github.com/blackstarzck/react-practice4"
+      ],
+      "deployments": [],
+      "included": true,
+      "originalCategory": "lab",
+      "primaryDeploymentUrl": null,
+      "exhibitInteraction": {
+        "proposedMode": "case-study",
+        "launchUrl": null,
+        "onFocus": "show-artwork-and-story",
+        "verificationReport": "portfolio-iframe-audit.md",
+        "note": "화면·문서·코드를 작품으로 소개한다."
+      }
+    },
+    {
+      "id": "original:react-basics:react-axios-practice",
+      "sourceNodeId": "react-basics",
+      "groupId": "react-basics",
+      "room": "03",
+      "name": "react-axios-practice",
+      "summary": "axios 호출 패턴만 떼어 여러 방식으로 써 본 것.",
+      "origin": "previous-portfolio-card",
+      "repos": [
+        "react-axios-practice"
+      ],
+      "repoUrls": [
+        "https://github.com/blackstarzck/react-axios-practice"
+      ],
+      "deployments": [],
+      "included": true,
+      "originalCategory": "lab",
+      "primaryDeploymentUrl": null,
+      "exhibitInteraction": {
+        "proposedMode": "case-study",
+        "launchUrl": null,
+        "onFocus": "show-artwork-and-story",
+        "verificationReport": "portfolio-iframe-audit.md",
+        "note": "화면·문서·코드를 작품으로 소개한다."
+      }
+    },
+    {
+      "id": "original:react-basics:react-practice5",
+      "sourceNodeId": "react-basics",
+      "groupId": "react-basics",
+      "room": "03",
+      "name": "react-practice5",
+      "summary": "투두 목록·입력·항목을 컴포넌트로 쪼개 본 연습.",
+      "origin": "previous-portfolio-card",
+      "repos": [
+        "react-practice5"
+      ],
+      "repoUrls": [
+        "https://github.com/blackstarzck/react-practice5"
+      ],
+      "deployments": [],
+      "included": true,
+      "originalCategory": "lab",
+      "primaryDeploymentUrl": null,
+      "exhibitInteraction": {
+        "proposedMode": "case-study",
+        "launchUrl": null,
+        "onFocus": "show-artwork-and-story",
+        "verificationReport": "portfolio-iframe-audit.md",
+        "note": "화면·문서·코드를 작품으로 소개한다."
+      }
+    },
+    {
+      "id": "original:react-basics:react-practice3",
+      "sourceNodeId": "react-basics",
+      "groupId": "react-basics",
+      "room": "03",
+      "name": "react-practice3",
+      "summary": "페이지를 나누고 라우터로 이동시키는 연습. 아이콘을 붙여 봤다.",
+      "origin": "previous-portfolio-card",
+      "repos": [
+        "react-practice3"
+      ],
+      "repoUrls": [
+        "https://github.com/blackstarzck/react-practice3"
+      ],
+      "deployments": [],
+      "included": true,
+      "originalCategory": "lab",
+      "primaryDeploymentUrl": null,
+      "exhibitInteraction": {
+        "proposedMode": "case-study",
+        "launchUrl": null,
+        "onFocus": "show-artwork-and-story",
+        "verificationReport": "portfolio-iframe-audit.md",
+        "note": "화면·문서·코드를 작품으로 소개한다."
+      }
+    },
+    {
+      "id": "original:react-basics:react-practice2",
+      "sourceNodeId": "react-basics",
+      "groupId": "react-basics",
+      "room": "03",
+      "name": "react-practice2",
+      "summary": "드롭다운 메뉴가 있는 네비게이션 바를 컴포넌트로 만들어 본 것.",
+      "origin": "previous-portfolio-card",
+      "repos": [
+        "react-practice2"
+      ],
+      "repoUrls": [
+        "https://github.com/blackstarzck/react-practice2"
+      ],
+      "deployments": [],
+      "included": true,
+      "originalCategory": "lab",
+      "primaryDeploymentUrl": null,
+      "exhibitInteraction": {
+        "proposedMode": "case-study",
+        "launchUrl": null,
+        "onFocus": "show-artwork-and-story",
+        "verificationReport": "portfolio-iframe-audit.md",
+        "note": "화면·문서·코드를 작품으로 소개한다."
+      }
+    },
+    {
+      "id": "original:react-basics:react-practice1",
+      "sourceNodeId": "react-basics",
+      "groupId": "react-basics",
+      "room": "03",
+      "name": "react-practice1",
+      "summary": "라우터를 처음 붙여 본 연습.",
+      "origin": "previous-portfolio-card",
+      "repos": [
+        "react-practice1"
+      ],
+      "repoUrls": [
+        "https://github.com/blackstarzck/react-practice1"
+      ],
+      "deployments": [],
+      "included": true,
+      "originalCategory": "lab",
+      "primaryDeploymentUrl": null,
+      "exhibitInteraction": {
+        "proposedMode": "case-study",
+        "launchUrl": null,
+        "onFocus": "show-artwork-and-story",
+        "verificationReport": "portfolio-iframe-audit.md",
+        "note": "화면·문서·코드를 작품으로 소개한다."
+      }
+    },
+    {
+      "id": "original:react-basics:react-practice7",
+      "sourceNodeId": "react-basics",
+      "groupId": "react-basics",
+      "room": "03",
+      "name": "react-practice7",
+      "summary": "가장 작은 형태로 남긴 연습 프로젝트.",
+      "origin": "previous-portfolio-card",
+      "repos": [
+        "react-practice7"
+      ],
+      "repoUrls": [
+        "https://github.com/blackstarzck/react-practice7"
+      ],
+      "deployments": [],
+      "included": true,
+      "originalCategory": "lab",
+      "primaryDeploymentUrl": null,
+      "exhibitInteraction": {
+        "proposedMode": "case-study",
+        "launchUrl": null,
+        "onFocus": "show-artwork-and-story",
+        "verificationReport": "portfolio-iframe-audit.md",
+        "note": "화면·문서·코드를 작품으로 소개한다."
+      }
+    },
+    {
+      "id": "original:react-basics:react-router-practice1",
+      "sourceNodeId": "react-basics",
+      "groupId": "react-basics",
+      "room": "03",
+      "name": "react-router-practice1",
+      "summary": "history를 직접 다뤄 가며 라우팅 동작을 확인해 본 것.",
+      "origin": "previous-portfolio-card",
+      "repos": [
+        "react-router-practice1"
+      ],
+      "repoUrls": [
+        "https://github.com/blackstarzck/react-router-practice1"
+      ],
+      "deployments": [],
+      "included": true,
+      "originalCategory": "lab",
+      "primaryDeploymentUrl": null,
+      "exhibitInteraction": {
+        "proposedMode": "case-study",
+        "launchUrl": null,
+        "onFocus": "show-artwork-and-story",
+        "verificationReport": "portfolio-iframe-audit.md",
+        "note": "화면·문서·코드를 작품으로 소개한다."
+      }
+    },
+    {
+      "id": "original:react-basics:react-router-practice2",
+      "sourceNodeId": "react-basics",
+      "groupId": "react-basics",
+      "room": "03",
+      "name": "react-router-practice2",
+      "summary": "라우팅 구조를 한 번 더 반복해 본 연습.",
+      "origin": "previous-portfolio-card",
+      "repos": [
+        "react-router-practice2"
+      ],
+      "repoUrls": [
+        "https://github.com/blackstarzck/react-router-practice2"
+      ],
+      "deployments": [],
+      "included": true,
+      "originalCategory": "lab",
+      "primaryDeploymentUrl": null,
+      "exhibitInteraction": {
+        "proposedMode": "case-study",
+        "launchUrl": null,
+        "onFocus": "show-artwork-and-story",
+        "verificationReport": "portfolio-iframe-audit.md",
+        "note": "화면·문서·코드를 작품으로 소개한다."
+      }
+    },
+    {
+      "id": "original:react-basics:react-styled-component",
+      "sourceNodeId": "react-basics",
+      "groupId": "react-basics",
+      "room": "03",
+      "name": "react-styled-component",
+      "summary": "styled-components로 스타일을 컴포넌트 안으로 넣어 본 연습.",
+      "origin": "previous-portfolio-card",
+      "repos": [
+        "react-styled-component"
+      ],
+      "repoUrls": [
+        "https://github.com/blackstarzck/react-styled-component"
+      ],
+      "deployments": [],
+      "included": true,
+      "originalCategory": "lab",
+      "primaryDeploymentUrl": null,
+      "exhibitInteraction": {
+        "proposedMode": "case-study",
+        "launchUrl": null,
+        "onFocus": "show-artwork-and-story",
+        "verificationReport": "portfolio-iframe-audit.md",
+        "note": "화면·문서·코드를 작품으로 소개한다."
+      }
+    },
+    {
+      "id": "original:react-basics:react-CRUD",
+      "sourceNodeId": "react-basics",
+      "groupId": "react-basics",
+      "room": "03",
+      "name": "react-CRUD",
+      "summary": "가장 기본적인 추가·조회·수정·삭제만 남긴 연습.",
+      "origin": "previous-portfolio-card",
+      "repos": [
+        "react-CRUD"
+      ],
+      "repoUrls": [
+        "https://github.com/blackstarzck/react-CRUD"
+      ],
+      "deployments": [],
+      "included": true,
+      "originalCategory": "lab",
+      "primaryDeploymentUrl": null,
+      "exhibitInteraction": {
+        "proposedMode": "case-study",
+        "launchUrl": null,
+        "onFocus": "show-artwork-and-story",
+        "verificationReport": "portfolio-iframe-audit.md",
+        "note": "화면·문서·코드를 작품으로 소개한다."
+      }
+    },
+    {
+      "id": "original:react-basics:memo",
+      "sourceNodeId": "react-basics",
+      "groupId": "react-basics",
+      "room": "03",
+      "name": "memo",
+      "summary": "메모 앱. lodash.debounce로 입력이 멈춘 뒤에만 저장되게 했다.",
+      "origin": "previous-portfolio-card",
+      "repos": [
+        "memo"
+      ],
+      "repoUrls": [
+        "https://github.com/blackstarzck/memo"
+      ],
+      "deployments": [],
+      "included": true,
+      "originalCategory": "lab",
+      "primaryDeploymentUrl": null,
+      "exhibitInteraction": {
+        "proposedMode": "case-study",
+        "launchUrl": null,
+        "onFocus": "show-artwork-and-story",
+        "verificationReport": "portfolio-iframe-audit.md",
+        "note": "화면·문서·코드를 작품으로 소개한다."
+      }
+    },
+    {
+      "id": "original:react-basics:habit-tracker",
+      "sourceNodeId": "react-basics",
+      "groupId": "react-basics",
+      "room": "03",
+      "name": "habit-tracker",
+      "summary": "습관 기록 앱. 클래스형 컴포넌트로 만들었다.",
+      "origin": "previous-portfolio-card",
+      "repos": [
+        "habit-tracker"
+      ],
+      "repoUrls": [
+        "https://github.com/blackstarzck/habit-tracker"
+      ],
+      "deployments": [],
+      "included": true,
+      "originalCategory": "lab",
+      "primaryDeploymentUrl": null,
+      "exhibitInteraction": {
+        "proposedMode": "case-study",
+        "launchUrl": null,
+        "onFocus": "show-artwork-and-story",
+        "verificationReport": "portfolio-iframe-audit.md",
+        "note": "화면·문서·코드를 작품으로 소개한다."
+      }
+    },
+    {
+      "id": "original:react-basics:new-habit-tracker",
+      "sourceNodeId": "react-basics",
+      "groupId": "react-basics",
+      "room": "03",
+      "name": "new-habit-tracker",
+      "summary": "위 앱을 함수형 컴포넌트로 다시 쓴 것. 같은 화면을 두 방식으로 만들어 비교했다.",
+      "origin": "previous-portfolio-card",
+      "repos": [
+        "new-habit-tracker"
+      ],
+      "repoUrls": [
+        "https://github.com/blackstarzck/new-habit-tracker"
+      ],
+      "deployments": [],
+      "included": true,
+      "originalCategory": "lab",
+      "primaryDeploymentUrl": null,
+      "exhibitInteraction": {
+        "proposedMode": "case-study",
+        "launchUrl": null,
+        "onFocus": "show-artwork-and-story",
+        "verificationReport": "portfolio-iframe-audit.md",
+        "note": "화면·문서·코드를 작품으로 소개한다."
+      }
+    },
+    {
+      "id": "original:react-basics:assignment",
+      "sourceNodeId": "react-basics",
+      "groupId": "react-basics",
+      "room": "03",
+      "name": "assignment",
+      "summary": "PokeAPI로 포켓몬을 검색하는 과제. TypeScript로 썼고 React 없이 만들었다.",
+      "origin": "previous-portfolio-card",
+      "repos": [
+        "assignment"
+      ],
+      "repoUrls": [
+        "https://github.com/blackstarzck/assignment"
+      ],
+      "deployments": [],
+      "included": true,
+      "originalCategory": "lab",
+      "primaryDeploymentUrl": null,
+      "exhibitInteraction": {
+        "proposedMode": "case-study",
+        "launchUrl": null,
+        "onFocus": "show-artwork-and-story",
+        "verificationReport": "portfolio-iframe-audit.md",
+        "note": "화면·문서·코드를 작품으로 소개한다."
+      }
+    },
+    {
+      "id": "original:react-basics:data_structure",
+      "sourceNodeId": "react-basics",
+      "groupId": "react-basics",
+      "room": "03",
+      "name": "data_structure",
+      "summary": "연결 리스트를 자바스크립트로 직접 구현하고 화면에 그려 확인했다.",
+      "origin": "previous-portfolio-card",
+      "repos": [
+        "data_structure"
+      ],
+      "repoUrls": [
+        "https://github.com/blackstarzck/data_structure"
+      ],
+      "deployments": [],
+      "included": true,
+      "originalCategory": "lab",
+      "primaryDeploymentUrl": null,
+      "exhibitInteraction": {
+        "proposedMode": "case-study",
+        "launchUrl": null,
+        "onFocus": "show-artwork-and-story",
+        "verificationReport": "portfolio-iframe-audit.md",
+        "note": "화면·문서·코드를 작품으로 소개한다."
+      }
+    },
+    {
+      "id": "original:react-basics:drag-n-drop",
+      "sourceNodeId": "react-basics",
+      "groupId": "react-basics",
+      "room": "03",
+      "name": "drag-n-drop",
+      "summary": "라이브러리 없이 드래그 앤 드롭을 브라우저 API만으로 구현했다.",
+      "origin": "previous-portfolio-card",
+      "repos": [
+        "drag-n-drop"
+      ],
+      "repoUrls": [
+        "https://github.com/blackstarzck/drag-n-drop"
+      ],
+      "deployments": [],
+      "included": true,
+      "originalCategory": "lab",
+      "primaryDeploymentUrl": null,
+      "exhibitInteraction": {
+        "proposedMode": "case-study",
+        "launchUrl": null,
+        "onFocus": "show-artwork-and-story",
+        "verificationReport": "portfolio-iframe-audit.md",
+        "note": "화면·문서·코드를 작품으로 소개한다."
+      }
+    },
+    {
+      "id": "original:react-basics:canvas-test",
+      "sourceNodeId": "react-basics",
+      "groupId": "react-basics",
+      "room": "03",
+      "name": "canvas-test",
+      "summary": "캔버스에 삼각형과 다각형을 그려 본 첫 습작.",
+      "origin": "previous-portfolio-card",
+      "repos": [
+        "canvas-test"
+      ],
+      "repoUrls": [
+        "https://github.com/blackstarzck/canvas-test"
+      ],
+      "deployments": [],
+      "included": true,
+      "originalCategory": "lab",
+      "primaryDeploymentUrl": null,
+      "exhibitInteraction": {
+        "proposedMode": "case-study",
+        "launchUrl": null,
+        "onFocus": "show-artwork-and-story",
+        "verificationReport": "portfolio-iframe-audit.md",
+        "note": "화면·문서·코드를 작품으로 소개한다."
+      }
+    },
+    {
+      "id": "original:pokemon",
+      "sourceNodeId": "pokemon",
+      "groupId": "pokemon",
+      "room": "03",
+      "name": "포켓몬 도감",
+      "summary": "이름·번호·특성·타입으로 포켓몬을 찾고 번호순으로 정렬하는 도감입니다.",
+      "origin": "previous-portfolio-topic",
+      "repos": [
+        "pokemon"
+      ],
+      "repoUrls": [
+        "https://github.com/blackstarzck/pokemon"
+      ],
+      "deployments": [
+        {
+          "url": "https://chanki-pokedx.netlify.app/",
+          "httpStatus": 200,
+          "availability": "entry-page-responded",
+          "pageTitle": "Pokedex",
+          "iframeAudit": {
+            "id": "iframe-url-26",
+            "browserResult": "document-visible",
+            "contentReadiness": "public-first-screen",
+            "framePolicyBlockObserved": false
+          }
+        }
+      ],
+      "included": true,
+      "originalCategory": "lab",
+      "primaryDeploymentUrl": "https://chanki-pokedx.netlify.app/",
+      "exhibitInteraction": {
+        "proposedMode": "iframe",
+        "launchUrl": "https://chanki-pokedx.netlify.app/",
+        "onFocus": "activate-after-camera-arrival",
+        "verificationReport": "portfolio-iframe-audit.md",
+        "note": "포커스 이동 완료 후 이 작품 하나만 실행한다."
+      }
+    },
+    {
+      "id": "additional:my-world-03",
+      "sourceNodeId": null,
+      "groupId": "gallery-studies",
+      "room": "03",
+      "name": "my-world-03 TRIAD 전시관",
+      "summary": "my-world-01·02·03 전시관을 비교하는 축소 모형과 제작 기록",
+      "origin": "additional-deployment-repository",
+      "repos": [
+        "my-world-03"
+      ],
+      "repoUrls": [
+        "https://github.com/blackstarzck/my-world-03"
+      ],
+      "deployments": [
+        {
+          "url": "https://my-world-03.vercel.app",
+          "httpStatus": 200,
+          "availability": "entry-page-responded",
+          "pageTitle": "TRIAD — 세 개의 시선, 하나의 공간",
+          "iframeAudit": {
+            "id": "iframe-url-44",
+            "browserResult": "document-visible",
+            "contentReadiness": "public-first-screen",
+            "framePolicyBlockObserved": false
+          }
+        }
+      ],
+      "included": true,
+      "originalCategory": null,
+      "primaryDeploymentUrl": "https://my-world-03.vercel.app",
+      "exhibitInteraction": {
+        "proposedMode": "demo-preparation",
+        "launchUrl": null,
+        "onFocus": "show-artwork-and-story",
+        "verificationReport": "portfolio-iframe-audit.md",
+        "note": "전시관 자체를 다시 중첩 실행하지 않도록 제작 과정 또는 중첩이 제한된 체험 주소를 준비한 뒤 활성화한다."
+      }
+    },
+    {
+      "id": "additional:my-world-01",
+      "sourceNodeId": null,
+      "groupId": "gallery-studies",
+      "room": "03",
+      "name": "my-world-01 전시관",
+      "summary": "my-world-01·02·03 전시관을 비교하는 축소 모형과 제작 기록",
+      "origin": "additional-deployment-repository",
+      "repos": [
+        "my-world-01"
+      ],
+      "repoUrls": [
+        "https://github.com/blackstarzck/my-world-01"
+      ],
+      "deployments": [
+        {
+          "url": "https://my-world-01-six.vercel.app",
+          "httpStatus": 200,
+          "availability": "entry-page-responded",
+          "pageTitle": "STILL — A gallery of selected work",
+          "iframeAudit": {
+            "id": "iframe-url-42",
+            "browserResult": "document-visible",
+            "contentReadiness": "public-first-screen",
+            "framePolicyBlockObserved": false
+          }
+        }
+      ],
+      "included": true,
+      "originalCategory": null,
+      "primaryDeploymentUrl": "https://my-world-01-six.vercel.app",
+      "exhibitInteraction": {
+        "proposedMode": "iframe",
+        "launchUrl": "https://my-world-01-six.vercel.app",
+        "onFocus": "activate-after-camera-arrival",
+        "verificationReport": "portfolio-iframe-audit.md",
+        "note": "포커스 이동 완료 후 이 작품 하나만 실행한다."
+      }
+    },
+    {
+      "id": "additional:project-manager",
+      "sourceNodeId": null,
+      "groupId": "planit",
+      "room": "02",
+      "name": "Planit AI 기획 워크스페이스",
+      "summary": "PRD·기능명세·유저플로우·와이어프레임을 네 겹의 문서로 구성",
+      "origin": "additional-deployment-repository",
+      "repos": [
+        "project-manager"
+      ],
+      "repoUrls": [
+        "https://github.com/blackstarzck/project-manager"
+      ],
+      "deployments": [
+        {
+          "url": "https://project-manager-eight-tau.vercel.app",
+          "httpStatus": 200,
+          "availability": "entry-page-responded",
+          "pageTitle": "Planit — 기획 워크스페이스",
+          "iframeAudit": {
+            "id": "iframe-url-49",
+            "browserResult": "document-visible",
+            "contentReadiness": "application-api-error",
+            "framePolicyBlockObserved": false
+          },
+          "role": "historical-public-shell-not-local-runtime"
+        }
+      ],
+      "included": true,
+      "originalCategory": null,
+      "primaryDeploymentUrl": null,
+      "exhibitInteraction": {
+        "proposedMode": "local-capture",
+        "launchUrl": null,
+        "onFocus": "show-local-capture-viewer",
+        "verificationReport": "portfolio-iframe-audit.md",
+        "note": "로컬 전용 앱의 실제 실행 화면 5장을 단계별 선택·확대하는 작품으로 전시한다. 공개 Vercel API 404는 복구 과제가 아니다.",
+        "localSource": "D:/workspace/project-manager",
+        "captureManifest": "portfolio-assets/planit/capture-manifest.json",
+        "captures": [
+          {
+            "artifact": "dashboard",
+            "file": "portfolio-assets/planit/planit-dashboard.png",
+            "width": 1600,
+            "height": 1000
+          },
+          {
+            "artifact": "prd",
+            "file": "portfolio-assets/planit/planit-prd.png",
+            "width": 1600,
+            "height": 1000
+          },
+          {
+            "artifact": "features",
+            "file": "portfolio-assets/planit/planit-features.png",
+            "width": 1600,
+            "height": 1000
+          },
+          {
+            "artifact": "flow",
+            "file": "portfolio-assets/planit/planit-flow.png",
+            "width": 1600,
+            "height": 1000
+          },
+          {
+            "artifact": "wireframes",
+            "file": "portfolio-assets/planit/planit-wireframes.png",
+            "width": 1600,
+            "height": 1000
+          }
+        ],
+        "focusSequence": [
+          "prd",
+          "features",
+          "flow",
+          "wireframes"
+        ],
+        "displayLabel": "로컬 앱 실행 화면 · 검수용 샘플 데이터"
+      }
+    },
+    {
+      "id": "additional:my-world-02",
+      "sourceNodeId": null,
+      "groupId": "gallery-studies",
+      "room": "03",
+      "name": "my-world-02 전시관",
+      "summary": "my-world-01·02·03 전시관을 비교하는 축소 모형과 제작 기록",
+      "origin": "additional-deployment-repository",
+      "repos": [
+        "my-world-02"
+      ],
+      "repoUrls": [
+        "https://github.com/blackstarzck/my-world-02"
+      ],
+      "deployments": [
+        {
+          "url": "https://my-world-02.vercel.app",
+          "httpStatus": 200,
+          "availability": "entry-page-responded",
+          "pageTitle": "My World — A Digital Gallery",
+          "iframeAudit": {
+            "id": "iframe-url-43",
+            "browserResult": "document-visible",
+            "contentReadiness": "public-first-screen",
+            "framePolicyBlockObserved": false
+          }
+        }
+      ],
+      "included": true,
+      "originalCategory": null,
+      "primaryDeploymentUrl": "https://my-world-02.vercel.app",
+      "exhibitInteraction": {
+        "proposedMode": "iframe",
+        "launchUrl": "https://my-world-02.vercel.app",
+        "onFocus": "activate-after-camera-arrival",
+        "verificationReport": "portfolio-iframe-audit.md",
+        "note": "포커스 이동 완료 후 이 작품 하나만 실행한다."
+      }
+    },
+    {
+      "id": "additional:on-the-book",
+      "sourceNodeId": null,
+      "groupId": "on-the-book",
+      "room": "03",
+      "name": "On the Book 사용자 서비스와 관리자",
+      "summary": "책·책 속 3D 장면·관리 도구를 세 진열장으로 연결",
+      "origin": "additional-deployment-repository",
+      "repos": [
+        "on-the-book"
+      ],
+      "repoUrls": [
+        "https://github.com/blackstarzck/on-the-book"
+      ],
+      "deployments": [
+        {
+          "url": "https://on-the-book-client.vercel.app/",
+          "httpStatus": 200,
+          "availability": "entry-page-responded",
+          "pageTitle": "On the Book — 책 속을 걷는 시간",
+          "iframeAudit": {
+            "id": "iframe-url-48",
+            "browserResult": "document-visible",
+            "contentReadiness": "public-first-screen",
+            "framePolicyBlockObserved": false,
+            "recheckedAt": "2026-10-19T14:06:55.263Z"
+          }
+        },
+        {
+          "url": "https://on-the-book-admin.vercel.app/",
+          "httpStatus": 200,
+          "availability": "entry-page-responded",
+          "pageTitle": "On the Book — 스튜디오",
+          "iframeAudit": {
+            "id": "iframe-url-47",
+            "browserResult": "document-visible",
+            "contentReadiness": "authentication-required",
+            "framePolicyBlockObserved": false
+          }
+        }
+      ],
+      "included": true,
+      "originalCategory": null,
+      "primaryDeploymentUrl": "https://on-the-book-client.vercel.app/",
+      "exhibitInteraction": {
+        "proposedMode": "iframe",
+        "launchUrl": "https://on-the-book-client.vercel.app/",
+        "onFocus": "activate-after-camera-arrival",
+        "verificationReport": "portfolio-iframe-audit.md",
+        "note": "같은 날 재검사에서 도서 API 200, 도서 4권과 상세 이동·3D 장면 진입을 sandbox iframe에서 확인했다. 사용자 서비스는 실제 체험 작품으로 확정한다.",
+        "surfaces": [
+          {
+            "name": "도서 목록·상세",
+            "mode": "iframe",
+            "url": "https://on-the-book-client.vercel.app/"
+          },
+          {
+            "name": "책 속 3D 장면",
+            "mode": "iframe",
+            "url": "https://on-the-book-client.vercel.app/?book=alice&chapter=alice-1",
+            "note": "앨리스 1장 진입·WebGL 장면 표시 확인. 모든 책의 장면과 이동 기능 전체를 검증한 것은 아니다."
+          },
+          {
+            "name": "관리 도구",
+            "mode": "demo-preparation",
+            "url": "https://on-the-book-admin.vercel.app/",
+            "note": "로그인 화면 확인. 관람용 인증 데모 준비."
+          }
+        ]
+      }
+    },
+    {
+      "id": "additional:my-website-2026",
+      "sourceNodeId": null,
+      "groupId": "career-map",
+      "room": "03",
+      "name": "이전 포트폴리오 경력 지도",
+      "summary": "이전 포트폴리오의 경력 지도를 회화로 재구성하고 실제 사이트 연결",
+      "origin": "additional-deployment-repository",
+      "repos": [
+        "my-website-2026"
+      ],
+      "repoUrls": [
+        "https://github.com/blackstarzck/my-website-2026"
+      ],
+      "deployments": [
+        {
+          "url": "https://chanki-react.vercel.app",
+          "httpStatus": 200,
+          "availability": "entry-page-responded",
+          "pageTitle": "김찬기 · 프론트엔드 개발자",
+          "iframeAudit": {
+            "id": "iframe-url-27",
+            "browserResult": "document-visible",
+            "contentReadiness": "public-first-screen",
+            "framePolicyBlockObserved": false
+          }
+        },
+        {
+          "url": "https://www.kchanchan.com/",
+          "httpStatus": 200,
+          "availability": "entry-page-responded",
+          "pageTitle": "김찬기 · 프론트엔드 개발자",
+          "iframeAudit": {
+            "id": "iframe-url-58",
+            "browserResult": "document-visible",
+            "contentReadiness": "public-first-screen",
+            "framePolicyBlockObserved": false
+          }
+        }
+      ],
+      "included": true,
+      "originalCategory": null,
+      "primaryDeploymentUrl": "https://www.kchanchan.com/",
+      "exhibitInteraction": {
+        "proposedMode": "iframe",
+        "launchUrl": "https://www.kchanchan.com/",
+        "onFocus": "activate-after-camera-arrival",
+        "verificationReport": "portfolio-iframe-audit.md",
+        "note": "포커스 이동 완료 후 이 작품 하나만 실행한다."
+      }
+    },
+    {
+      "id": "additional:hibookly-claude-code-design-v1",
+      "sourceNodeId": null,
+      "groupId": "corp-sites",
+      "room": "01",
+      "name": "부클리 해외 저작권 에이전시 시안",
+      "summary": "법인별 독립 액자 여섯 개에 브랜드 색·문자·실제 화면을 구성하고 부클리 시안도 연결",
+      "origin": "additional-deployment-repository",
+      "repos": [
+        "hibookly-claude-code-design-v1"
+      ],
+      "repoUrls": [
+        "https://github.com/blackstarzck/hibookly-claude-code-design-v1"
+      ],
+      "deployments": [
+        {
+          "url": "https://hibookly-claude-code-design-v1.vercel.app",
+          "httpStatus": 404,
+          "availability": "request-returned-error",
+          "pageTitle": null,
+          "iframeAudit": {
+            "id": "iframe-url-34",
+            "browserResult": "unavailable",
+            "contentReadiness": "site-unavailable",
+            "framePolicyBlockObserved": false
+          }
+        }
+      ],
+      "included": true,
+      "originalCategory": null,
+      "primaryDeploymentUrl": null,
+      "exhibitInteraction": {
+        "proposedMode": "media-until-restored",
+        "launchUrl": null,
+        "onFocus": "show-artwork-and-story",
+        "verificationReport": "portfolio-iframe-audit.md",
+        "note": "문서 페이지·빈 화면·중단된 배포본이므로 작품 이미지와 코드를 표시하고 배포 복구 후 재검사한다."
+      }
+    },
+    {
+      "id": "additional:tutor-dashboard",
+      "sourceNodeId": null,
+      "groupId": "education-ui",
+      "room": "01",
+      "name": "강사 대시보드",
+      "summary": "강사·학생·목록·상세·메타데이터 관리 화면을 다섯 부분으로 구성",
+      "origin": "additional-deployment-repository",
+      "repos": [
+        "tutor-dashboard"
+      ],
+      "repoUrls": [
+        "https://github.com/blackstarzck/tutor-dashboard"
+      ],
+      "deployments": [
+        {
+          "url": "https://tutor-dashboard-topaz.vercel.app",
+          "httpStatus": 200,
+          "availability": "entry-page-responded",
+          "pageTitle": "강사 대시보드 - Monochrome",
+          "iframeAudit": {
+            "id": "iframe-url-54",
+            "browserResult": "document-visible",
+            "contentReadiness": "public-first-screen",
+            "framePolicyBlockObserved": false
+          }
+        }
+      ],
+      "included": true,
+      "originalCategory": null,
+      "primaryDeploymentUrl": "https://tutor-dashboard-topaz.vercel.app",
+      "exhibitInteraction": {
+        "proposedMode": "iframe",
+        "launchUrl": "https://tutor-dashboard-topaz.vercel.app",
+        "onFocus": "activate-after-camera-arrival",
+        "verificationReport": "portfolio-iframe-audit.md",
+        "note": "포커스 이동 완료 후 이 작품 하나만 실행한다."
+      }
+    },
+    {
+      "id": "additional:student-dashboard",
+      "sourceNodeId": null,
+      "groupId": "education-ui",
+      "room": "01",
+      "name": "학생 대시보드",
+      "summary": "강사·학생·목록·상세·메타데이터 관리 화면을 다섯 부분으로 구성",
+      "origin": "additional-deployment-repository",
+      "repos": [
+        "student-dashboard"
+      ],
+      "repoUrls": [
+        "https://github.com/blackstarzck/student-dashboard"
+      ],
+      "deployments": [
+        {
+          "url": "https://student-dashboard-omega-lime.vercel.app",
+          "httpStatus": 200,
+          "availability": "entry-page-responded",
+          "pageTitle": "학생 대시보드",
+          "iframeAudit": {
+            "id": "iframe-url-52",
+            "browserResult": "document-visible",
+            "contentReadiness": "public-first-screen",
+            "framePolicyBlockObserved": false
+          }
+        }
+      ],
+      "included": true,
+      "originalCategory": null,
+      "primaryDeploymentUrl": "https://student-dashboard-omega-lime.vercel.app",
+      "exhibitInteraction": {
+        "proposedMode": "iframe",
+        "launchUrl": "https://student-dashboard-omega-lime.vercel.app",
+        "onFocus": "activate-after-camera-arrival",
+        "verificationReport": "portfolio-iframe-audit.md",
+        "note": "포커스 이동 완료 후 이 작품 하나만 실행한다."
+      }
+    },
+    {
+      "id": "additional:list",
+      "sourceNodeId": null,
+      "groupId": "education-ui",
+      "room": "01",
+      "name": "한국어 공개 강의 목록",
+      "summary": "강사·학생·목록·상세·메타데이터 관리 화면을 다섯 부분으로 구성",
+      "origin": "additional-deployment-repository",
+      "repos": [
+        "list"
+      ],
+      "repoUrls": [
+        "https://github.com/blackstarzck/list"
+      ],
+      "deployments": [
+        {
+          "url": "https://list-red-alpha.vercel.app",
+          "httpStatus": 404,
+          "availability": "request-returned-error",
+          "pageTitle": null,
+          "iframeAudit": {
+            "id": "iframe-url-38",
+            "browserResult": "unavailable",
+            "contentReadiness": "site-unavailable",
+            "framePolicyBlockObserved": false
+          }
+        }
+      ],
+      "included": true,
+      "originalCategory": null,
+      "primaryDeploymentUrl": null,
+      "exhibitInteraction": {
+        "proposedMode": "media-until-restored",
+        "launchUrl": null,
+        "onFocus": "show-artwork-and-story",
+        "verificationReport": "portfolio-iframe-audit.md",
+        "note": "문서 페이지·빈 화면·중단된 배포본이므로 작품 이미지와 코드를 표시하고 배포 복구 후 재검사한다."
+      }
+    },
+    {
+      "id": "additional:detail",
+      "sourceNodeId": null,
+      "groupId": "education-ui",
+      "room": "01",
+      "name": "강의 상세 화면",
+      "summary": "강사·학생·목록·상세·메타데이터 관리 화면을 다섯 부분으로 구성",
+      "origin": "additional-deployment-repository",
+      "repos": [
+        "detail"
+      ],
+      "repoUrls": [
+        "https://github.com/blackstarzck/detail"
+      ],
+      "deployments": [
+        {
+          "url": "https://detail-ruby.vercel.app",
+          "httpStatus": 404,
+          "availability": "request-returned-error",
+          "pageTitle": null,
+          "iframeAudit": {
+            "id": "iframe-url-28",
+            "browserResult": "unavailable",
+            "contentReadiness": "site-unavailable",
+            "framePolicyBlockObserved": false
+          }
+        }
+      ],
+      "included": true,
+      "originalCategory": null,
+      "primaryDeploymentUrl": null,
+      "exhibitInteraction": {
+        "proposedMode": "media-until-restored",
+        "launchUrl": null,
+        "onFocus": "show-artwork-and-story",
+        "verificationReport": "portfolio-iframe-audit.md",
+        "note": "문서 페이지·빈 화면·중단된 배포본이므로 작품 이미지와 코드를 표시하고 배포 복구 후 재검사한다."
+      }
+    },
+    {
+      "id": "additional:admin",
+      "sourceNodeId": null,
+      "groupId": "education-ui",
+      "room": "01",
+      "name": "강의 메타데이터 관리자",
+      "summary": "강사·학생·목록·상세·메타데이터 관리 화면을 다섯 부분으로 구성",
+      "origin": "additional-deployment-repository",
+      "repos": [
+        "admin"
+      ],
+      "repoUrls": [
+        "https://github.com/blackstarzck/admin"
+      ],
+      "deployments": [
+        {
+          "url": "https://admin-coral-phi.vercel.app",
+          "httpStatus": 404,
+          "availability": "request-returned-error",
+          "pageTitle": null,
+          "iframeAudit": {
+            "id": "iframe-url-01",
+            "browserResult": "unavailable",
+            "contentReadiness": "site-unavailable",
+            "framePolicyBlockObserved": false
+          }
+        }
+      ],
+      "included": true,
+      "originalCategory": null,
+      "primaryDeploymentUrl": null,
+      "exhibitInteraction": {
+        "proposedMode": "media-until-restored",
+        "launchUrl": null,
+        "onFocus": "show-artwork-and-story",
+        "verificationReport": "portfolio-iframe-audit.md",
+        "note": "문서 페이지·빈 화면·중단된 배포본이므로 작품 이미지와 코드를 표시하고 배포 복구 후 재검사한다."
+      }
+    },
+    {
+      "id": "additional:short-form",
+      "sourceNodeId": null,
+      "groupId": "short-form-work",
+      "room": "01",
+      "name": "ShortForm Knowledge",
+      "summary": "실제 콘텐츠 화면의 카드·타이포그래피·탐색 리듬을 구성",
+      "origin": "additional-deployment-repository",
+      "repos": [
+        "short-form"
+      ],
+      "repoUrls": [
+        "https://github.com/blackstarzck/short-form"
+      ],
+      "deployments": [
+        {
+          "url": "https://short-form-phi.vercel.app",
+          "httpStatus": 200,
+          "availability": "entry-page-responded",
+          "pageTitle": "ShortForm Knowledge",
+          "iframeAudit": {
+            "id": "iframe-url-50",
+            "browserResult": "document-visible",
+            "contentReadiness": "public-first-screen",
+            "framePolicyBlockObserved": false
+          }
+        }
+      ],
+      "included": true,
+      "originalCategory": null,
+      "primaryDeploymentUrl": "https://short-form-phi.vercel.app",
+      "exhibitInteraction": {
+        "proposedMode": "iframe",
+        "launchUrl": "https://short-form-phi.vercel.app",
+        "onFocus": "activate-after-camera-arrival",
+        "verificationReport": "portfolio-iframe-audit.md",
+        "note": "포커스 이동 완료 후 이 작품 하나만 실행한다."
+      }
+    },
+    {
+      "id": "additional:nuri",
+      "sourceNodeId": null,
+      "groupId": "dadoke",
+      "room": "01",
+      "name": "DADOKE 디지털 독서 화면 시안",
+      "summary": "시장조사·요구사항·외주 협업 자료와 별도 DADOKE 화면 시안을 구분해 전시",
+      "origin": "additional-deployment-repository",
+      "repos": [
+        "nuri"
+      ],
+      "repoUrls": [
+        "https://github.com/blackstarzck/nuri"
+      ],
+      "deployments": [
+        {
+          "url": "https://nuri-delta.vercel.app",
+          "httpStatus": 404,
+          "availability": "request-returned-error",
+          "pageTitle": null,
+          "iframeAudit": {
+            "id": "iframe-url-46",
+            "browserResult": "unavailable",
+            "contentReadiness": "site-unavailable",
+            "framePolicyBlockObserved": false
+          }
+        }
+      ],
+      "included": true,
+      "originalCategory": null,
+      "primaryDeploymentUrl": null,
+      "exhibitInteraction": {
+        "proposedMode": "media-until-restored",
+        "launchUrl": null,
+        "onFocus": "show-artwork-and-story",
+        "verificationReport": "portfolio-iframe-audit.md",
+        "note": "문서 페이지·빈 화면·중단된 배포본이므로 작품 이미지와 코드를 표시하고 배포 복구 후 재검사한다."
+      }
+    },
+    {
+      "id": "additional:admin-story-quest",
+      "sourceNodeId": null,
+      "groupId": "storyquest-editor",
+      "room": "02",
+      "name": "StoryQuest 콘텐츠 CMS",
+      "summary": "원고와 3D 에셋을 장면에 연결하는 CMS의 구조를 전시",
+      "origin": "additional-deployment-repository",
+      "repos": [
+        "admin-story-quest"
+      ],
+      "repoUrls": [
+        "https://github.com/blackstarzck/admin-story-quest"
+      ],
+      "deployments": [
+        {
+          "url": "https://admin-story-quest.vercel.app",
+          "httpStatus": 200,
+          "availability": "entry-page-responded",
+          "pageTitle": "StoryQuest Admin - Interactive Content CMS",
+          "iframeAudit": {
+            "id": "iframe-url-02",
+            "browserResult": "document-visible",
+            "contentReadiness": "public-first-screen",
+            "framePolicyBlockObserved": false
+          }
+        }
+      ],
+      "included": true,
+      "originalCategory": null,
+      "primaryDeploymentUrl": "https://admin-story-quest.vercel.app",
+      "exhibitInteraction": {
+        "proposedMode": "iframe",
+        "launchUrl": "https://admin-story-quest.vercel.app",
+        "onFocus": "activate-after-camera-arrival",
+        "verificationReport": "portfolio-iframe-audit.md",
+        "note": "포커스 이동 완료 후 이 작품 하나만 실행한다."
+      }
+    },
+    {
+      "id": "additional:vive",
+      "sourceNodeId": null,
+      "groupId": "vive-reader",
+      "room": "02",
+      "name": "VIVE 독서 보조 도구",
+      "summary": "책의 하이라이트·메모·요약을 지식 자산으로 잇는 독서 보조 도구",
+      "origin": "additional-deployment-repository",
+      "repos": [
+        "vive"
+      ],
+      "repoUrls": [
+        "https://github.com/blackstarzck/vive"
+      ],
+      "deployments": [
+        {
+          "url": "https://vive-nine.vercel.app",
+          "httpStatus": 404,
+          "availability": "request-returned-error",
+          "pageTitle": null,
+          "iframeAudit": {
+            "id": "iframe-url-56",
+            "browserResult": "unavailable",
+            "contentReadiness": "site-unavailable",
+            "framePolicyBlockObserved": false
+          }
+        }
+      ],
+      "included": true,
+      "originalCategory": null,
+      "primaryDeploymentUrl": null,
+      "exhibitInteraction": {
+        "proposedMode": "media-until-restored",
+        "launchUrl": null,
+        "onFocus": "show-artwork-and-story",
+        "verificationReport": "portfolio-iframe-audit.md",
+        "note": "문서 페이지·빈 화면·중단된 배포본이므로 작품 이미지와 코드를 표시하고 배포 복구 후 재검사한다."
+      }
+    },
+    {
+      "id": "additional:dotore-admin",
+      "sourceNodeId": null,
+      "groupId": "inquiry-admin",
+      "room": "01",
+      "name": "도토리 문의 관리자",
+      "summary": "접수·처리·분석의 상태와 실제 관리자 화면을 연결",
+      "origin": "additional-deployment-repository",
+      "repos": [
+        "dotore-admin"
+      ],
+      "repoUrls": [
+        "https://github.com/blackstarzck/dotore-admin"
+      ],
+      "deployments": [
+        {
+          "url": "https://dotore-admin.vercel.app",
+          "httpStatus": 200,
+          "availability": "entry-page-responded",
+          "pageTitle": "dotore-admin-02",
+          "iframeAudit": {
+            "id": "iframe-url-29",
+            "browserResult": "document-visible",
+            "contentReadiness": "authentication-required",
+            "framePolicyBlockObserved": false
+          }
+        }
+      ],
+      "included": true,
+      "originalCategory": null,
+      "primaryDeploymentUrl": "https://dotore-admin.vercel.app",
+      "exhibitInteraction": {
+        "proposedMode": "demo-preparation",
+        "launchUrl": null,
+        "onFocus": "show-artwork-and-story",
+        "verificationReport": "portfolio-iframe-audit.md",
+        "note": "인증 또는 서버 연동을 준비한 체험용 데모가 확보될 때까지 작품 이미지·영상을 표시한다."
+      }
+    },
+    {
+      "id": "additional:particle",
+      "sourceNodeId": null,
+      "groupId": "canvas-lab",
+      "room": "03",
+      "name": "파티클 형태 변환 실험",
+      "summary": "원본 파티클 예제와 particle 저장소의 움직임을 함께 보여주는 빛의 연작",
+      "origin": "additional-deployment-repository",
+      "repos": [
+        "particle"
+      ],
+      "repoUrls": [
+        "https://github.com/blackstarzck/particle"
+      ],
+      "deployments": [
+        {
+          "url": "https://blackstarzck.github.io/particle/",
+          "httpStatus": 200,
+          "availability": "entry-page-responded",
+          "pageTitle": "Particles: transform shapes",
+          "iframeAudit": {
+            "id": "iframe-url-17",
+            "browserResult": "document-visible",
+            "contentReadiness": "public-first-screen",
+            "framePolicyBlockObserved": false
+          }
+        }
+      ],
+      "included": true,
+      "originalCategory": null,
+      "primaryDeploymentUrl": "https://blackstarzck.github.io/particle/",
+      "exhibitInteraction": {
+        "proposedMode": "iframe",
+        "launchUrl": "https://blackstarzck.github.io/particle/",
+        "onFocus": "activate-after-camera-arrival",
+        "verificationReport": "portfolio-iframe-audit.md",
+        "note": "포커스 이동 완료 후 이 작품 하나만 실행한다."
+      }
+    }
+  ],
+  "repositoryCandidates": [
+    {
+      "repo": "book-shorts-storyboard-skill",
+      "url": "https://github.com/blackstarzck/book-shorts-storyboard-skill",
+      "size": 0,
+      "reason": "빈 저장소이므로 실체가 생기기 전까지 전시 대상 제외"
+    },
+    {
+      "repo": "legacy-box",
+      "url": "https://github.com/blackstarzck/legacy-box",
+      "size": 109,
+      "reason": "기존 포트폴리오에 미수록되고 이번 범위에서 공개 배포 주소가 확인되지 않은 추가 후보"
+    },
+    {
+      "repo": "quick-report",
+      "url": "https://github.com/blackstarzck/quick-report",
+      "size": 9758,
+      "reason": "기존 포트폴리오에 미수록되고 이번 범위에서 공개 배포 주소가 확인되지 않은 추가 후보"
+    },
+    {
+      "repo": "report-hub",
+      "url": "https://github.com/blackstarzck/report-hub",
+      "size": 273188,
+      "reason": "기존 포트폴리오에 미수록되고 이번 범위에서 공개 배포 주소가 확인되지 않은 추가 후보"
+    },
+    {
+      "repo": "particles",
+      "url": "https://github.com/blackstarzck/particles",
+      "size": 9,
+      "reason": "기존 포트폴리오에 미수록되고 이번 범위에서 공개 배포 주소가 확인되지 않은 추가 후보"
+    },
+    {
+      "repo": "second-template",
+      "url": "https://github.com/blackstarzck/second-template",
+      "size": 59,
+      "reason": "기존 포트폴리오에 미수록되고 이번 범위에서 공개 배포 주소가 확인되지 않은 추가 후보"
+    },
+    {
+      "repo": "homepage",
+      "url": "https://github.com/blackstarzck/homepage",
+      "size": 38848,
+      "reason": "기존 포트폴리오에 미수록되고 이번 범위에서 공개 배포 주소가 확인되지 않은 추가 후보"
+    },
+    {
+      "repo": "survey-pie-admin",
+      "url": "https://github.com/blackstarzck/survey-pie-admin",
+      "size": 225,
+      "reason": "기존 포트폴리오에 미수록되고 이번 범위에서 공개 배포 주소가 확인되지 않은 추가 후보"
+    },
+    {
+      "repo": "survey-pie-server",
+      "url": "https://github.com/blackstarzck/survey-pie-server",
+      "size": 40,
+      "reason": "기존 포트폴리오에 미수록되고 이번 범위에서 공개 배포 주소가 확인되지 않은 추가 후보"
+    },
+    {
+      "repo": "survey-pie",
+      "url": "https://github.com/blackstarzck/survey-pie",
+      "size": 618,
+      "reason": "기존 포트폴리오에 미수록되고 이번 범위에서 공개 배포 주소가 확인되지 않은 추가 후보"
+    }
+  ],
+  "verification": {
+    "kind": "read-only-entry-page-http-and-source-inventory",
+    "note": "HTTP 200은 첫 문서 응답 확인이다. WebGL 렌더링·로그인·외부 API·DB 연동의 성공을 의미하지 않는다. 404·503 배포 이력도 전시 항목에서 제외하지 않는다.",
+    "checks": [
+      {
+        "repo": "scroll-page",
+        "url": "https://blackstarzck.github.io/scroll-page/",
+        "status": 200,
+        "title": "scroll page",
+        "destination": "https://blackstarzck.github.io/scroll-page/"
+      },
+      {
+        "repo": "particle",
+        "url": "https://blackstarzck.github.io/particle/",
+        "status": 200,
+        "title": "Particles: transform shapes",
+        "destination": "https://blackstarzck.github.io/particle/"
+      },
+      {
+        "repo": "particle-colorful-stars",
+        "url": "https://blackstarzck.github.io/particle-colorful-stars/",
+        "status": 200,
+        "title": "Particles: transform shapes",
+        "destination": "https://blackstarzck.github.io/particle-colorful-stars/"
+      },
+      {
+        "repo": "millie-admin-dashboard",
+        "url": "https://blackstarzck.github.io/millie-admin-dashboard/",
+        "status": 200,
+        "title": "React App",
+        "destination": "https://blackstarzck.github.io/millie-admin-dashboard/"
+      },
+      {
+        "repo": "first-person-perspective",
+        "url": "https://blackstarzck.github.io/first-person-perspective/",
+        "status": 200,
+        "title": "my space",
+        "destination": "https://blackstarzck.github.io/first-person-perspective/"
+      },
+      {
+        "repo": "ilbunidiary",
+        "url": "https://blackstarzck.github.io/ilbunidiary/",
+        "status": 200,
+        "title": "banch marketing choonsi diary",
+        "destination": "https://blackstarzck.github.io/ilbunidiary/"
+      },
+      {
+        "repo": "doc-merge",
+        "url": "https://blackstarzck.github.io/doc-merge/",
+        "status": 200,
+        "title": "문서 통합프로그램",
+        "destination": "https://blackstarzck.github.io/doc-merge/"
+      },
+      {
+        "repo": "my-space",
+        "url": "https://blackstarzck.github.io/my-space/",
+        "status": 200,
+        "title": "Vite App",
+        "destination": "https://blackstarzck.github.io/my-space/"
+      },
+      {
+        "repo": "multicanvas",
+        "url": "https://blackstarzck.github.io/multicanvas/",
+        "status": 200,
+        "title": "multi canvas",
+        "destination": "https://blackstarzck.github.io/multicanvas/"
+      },
+      {
+        "repo": "isosmetric-02",
+        "url": "https://blackstarzck.github.io/isosmetric-02/",
+        "status": 200,
+        "title": "isometric room 02",
+        "destination": "https://blackstarzck.github.io/isosmetric-02/"
+      },
+      {
+        "repo": "controls-01",
+        "url": "https://blackstarzck.github.io/controls-01/",
+        "status": 200,
+        "title": "Document",
+        "destination": "https://blackstarzck.github.io/controls-01/"
+      },
+      {
+        "repo": "react-modeal.net2",
+        "url": "https://blackstarzck.github.io/react-modeal.net2/",
+        "status": 200,
+        "title": "react-modeal.net2",
+        "destination": "https://blackstarzck.github.io/react-modeal.net2/"
+      },
+      {
+        "repo": "isosmetric-01",
+        "url": "https://blackstarzck.github.io/isosmetric-01/",
+        "status": 200,
+        "title": "isometric room 01",
+        "destination": "https://blackstarzck.github.io/isosmetric-01/"
+      },
+      {
+        "repo": "bridge",
+        "url": "https://blackstarzck.github.io/bridge/",
+        "status": 200,
+        "title": "Document",
+        "destination": "https://blackstarzck.github.io/bridge/"
+      },
+      {
+        "repo": "chanki-portfolio",
+        "url": "https://blackstarzck.github.io/chanki-portfolio/",
+        "status": 200,
+        "title": "찬기의 포트폴리오",
+        "destination": "https://blackstarzck.github.io/chanki-portfolio/"
+      },
+      {
+        "repo": "custom_model",
+        "url": "https://blackstarzck.github.io/custom_model/",
+        "status": 200,
+        "title": "1분코딩 three.js",
+        "destination": "https://blackstarzck.github.io/custom_model/"
+      },
+      {
+        "repo": "business-card",
+        "url": "https://blackstarzck.github.io/business-card/",
+        "status": 200,
+        "title": "App",
+        "destination": "https://blackstarzck.github.io/business-card/"
+      },
+      {
+        "repo": "react-modeal",
+        "url": "https://blackstarzck.github.io/react-modeal/",
+        "status": 404,
+        "error": "Response status code does not indicate success: 404 (Not Found)."
+      },
+      {
+        "repo": "react-practice6",
+        "url": "https://blackstarzck.github.io/react-practice6/",
+        "status": 200,
+        "title": "react-practice6",
+        "destination": "https://blackstarzck.github.io/react-practice6/"
+      },
+      {
+        "repo": "react-todos",
+        "url": "https://blackstarzck.github.io/react-todos/",
+        "status": 200,
+        "title": "리액트 TODO 앱 | react-todos",
+        "destination": "https://blackstarzck.github.io/react-todos/"
+      },
+      {
+        "repo": "react-swiper",
+        "url": "https://blackstarzck.github.io/react-swiper/",
+        "status": 200,
+        "title": "MOVIE",
+        "destination": "https://blackstarzck.github.io/react-swiper/"
+      },
+      {
+        "repo": "my-world-01",
+        "url": "https://my-world-01-six.vercel.app",
+        "status": 200,
+        "title": "STILL — A gallery of selected work"
+      },
+      {
+        "repo": "my-website-2026",
+        "url": "https://chanki-react.vercel.app",
+        "status": 200,
+        "title": "김찬기 · 프론트엔드 개발자"
+      },
+      {
+        "repo": "my-world-03",
+        "url": "https://my-world-03.vercel.app",
+        "status": 200,
+        "title": "TRIAD — 세 개의 시선, 하나의 공간"
+      },
+      {
+        "repo": "project-manager",
+        "url": "https://project-manager-eight-tau.vercel.app",
+        "status": 200,
+        "title": "Planit — 기획 워크스페이스"
+      },
+      {
+        "repo": "my-world-02",
+        "url": "https://my-world-02.vercel.app",
+        "status": 200,
+        "title": "My World — A Digital Gallery"
+      },
+      {
+        "repo": "chanchan2",
+        "url": "https://chanchan2.vercel.app",
+        "status": 200,
+        "title": "Chanchan2 UI"
+      },
+      {
+        "repo": "hibookly-claude-code-design-v1",
+        "url": "https://hibookly-claude-code-design-v1.vercel.app",
+        "status": 404,
+        "error": "Response status code does not indicate success: 404 (Not Found)."
+      },
+      {
+        "repo": "topik-ai",
+        "url": "https://topik-ai.vercel.app",
+        "status": 200,
+        "title": "TOPIK AI 통합 관리자"
+      },
+      {
+        "repo": "list",
+        "url": "https://list-red-alpha.vercel.app",
+        "status": 404,
+        "error": "Response status code does not indicate success: 404 (Not Found)."
+      },
+      {
+        "repo": "game-cabinet",
+        "url": "https://game-cabinet.vercel.app",
+        "status": 200,
+        "title": "GAME CABINET"
+      },
+      {
+        "repo": "neon-fist",
+        "url": "https://neon-fist.vercel.app",
+        "status": 200,
+        "title": "NEON FIST: NIGHT CIRCUIT"
+      },
+      {
+        "repo": "v12",
+        "url": "https://v12-weld.vercel.app",
+        "status": 200,
+        "title": "TALKPIK AI"
+      },
+      {
+        "repo": "zenith",
+        "url": "https://zenith-ten-lac.vercel.app",
+        "status": 200,
+        "title": "frontend"
+      },
+      {
+        "repo": "coin-lab-v2",
+        "url": "https://frontend-eta-six-54.vercel.app",
+        "status": 200,
+        "title": "코인 랩"
+      },
+      {
+        "repo": "detail",
+        "url": "https://detail-ruby.vercel.app",
+        "status": 404,
+        "error": "Response status code does not indicate success: 404 (Not Found)."
+      },
+      {
+        "repo": "student-dashboard",
+        "url": "https://student-dashboard-omega-lime.vercel.app",
+        "status": 200,
+        "title": "학생 대시보드"
+      },
+      {
+        "repo": "tutor-dashboard",
+        "url": "https://tutor-dashboard-topaz.vercel.app",
+        "status": 200,
+        "title": "강사 대시보드 - Monochrome"
+      },
+      {
+        "repo": "nuri",
+        "url": "https://nuri-delta.vercel.app",
+        "status": 404,
+        "error": "Response status code does not indicate success: 404 (Not Found)."
+      },
+      {
+        "repo": "vive",
+        "url": "https://vive-nine.vercel.app",
+        "status": 404,
+        "error": "Response status code does not indicate success: 404 (Not Found)."
+      },
+      {
+        "repo": "my-space",
+        "url": "https://my-space-orcin-eight.vercel.app",
+        "status": 404,
+        "error": "Response status code does not indicate success: 404 (Not Found)."
+      },
+      {
+        "repo": "admin",
+        "url": "https://admin-coral-phi.vercel.app",
+        "status": 404,
+        "error": "Response status code does not indicate success: 404 (Not Found)."
+      },
+      {
+        "repo": "lets-fps",
+        "url": "https://lets-fps.vercel.app",
+        "status": 200,
+        "title": "vite-project"
+      },
+      {
+        "repo": "millie-admin-dashboard",
+        "url": "https://millie-admin-dashboard.vercel.app",
+        "status": 200,
+        "title": "Millie Admin Dashboard"
+      },
+      {
+        "repo": "admin-story-quest",
+        "url": "https://admin-story-quest.vercel.app",
+        "status": 200,
+        "title": "StoryQuest Admin - Interactive Content CMS"
+      },
+      {
+        "repo": "dotore-admin",
+        "url": "https://dotore-admin.vercel.app",
+        "status": 200,
+        "title": "dotore-admin-02"
+      },
+      {
+        "repo": "short-form",
+        "url": "https://short-form-phi.vercel.app",
+        "status": 200,
+        "title": "ShortForm Knowledge"
+      },
+      {
+        "url": "https://www.kchanchan.com/",
+        "status": 200,
+        "title": "김찬기 · 프론트엔드 개발자"
+      },
+      {
+        "url": "https://keduall.com",
+        "status": 200,
+        "title": "KEDUALL - 베트남과 한국을 잇는 교육의 가교 | Your Site Name"
+      },
+      {
+        "url": "https://wisdomcellar.com",
+        "status": 200,
+        "title": "위즈덤셀러"
+      },
+      {
+        "url": "https://hibookly.com",
+        "status": 200,
+        "title": "부클리"
+      },
+      {
+        "url": "https://bookchaka.com",
+        "status": 200,
+        "title": "북차카"
+      },
+      {
+        "url": "https://glowinvina.com",
+        "status": 503,
+        "error": "Response status code does not indicate success: 503 (Service Temporarily Unavailable)."
+      },
+      {
+        "url": "https://on-the-book-admin.vercel.app/",
+        "status": 200,
+        "title": "On the Book — 스튜디오"
+      },
+      {
+        "url": "https://on-the-book-client.vercel.app/",
+        "status": 200,
+        "title": "On the Book — 책 속을 걷는 시간"
+      },
+      {
+        "url": "https://hibiblia.com",
+        "status": 503,
+        "error": "Response status code does not indicate success: 503 (Service Temporarily Unavailable)."
+      },
+      {
+        "url": "https://chanki-pokedx.netlify.app/",
+        "status": 200,
+        "title": "Pokedex"
+      },
+      {
+        "url": "https://simple-gatcha.netlify.app/",
+        "status": 200,
+        "title": "React App"
+      }
+    ],
+    "iframeAudit": {
+      "checkedOn": "2026-10-19",
+      "parentOrigin": "https://my-world-03.vercel.app",
+      "report": "portfolio-iframe-audit.md",
+      "data": "portfolio-iframe-audit.json",
+      "summary": {
+        "urls": 60,
+        "http200": 50,
+        "http404": 8,
+        "http503": 2,
+        "documentVisible": 49,
+        "blankDocument": 1,
+        "unavailable": 10,
+        "framePolicyBlocked": 0,
+        "contentReadiness": {
+          "site-unavailable": 10,
+          "public-first-screen": 39,
+          "authentication-required": 6,
+          "documentation-only": 3,
+          "blank-application": 1,
+          "application-api-error": 1
+        },
+        "sandboxSampleUrls": 10
+      }
+    },
+    "localCapture": {
+      "checkedOn": "2026-10-19",
+      "application": "Planit",
+      "manifest": "portfolio-assets/planit/capture-manifest.json",
+      "sourceDataUnchanged": true,
+      "sourceCodeChanged": false,
+      "temporaryServerStopped": true
+    }
+  },
+  "exhibitInteractionPlan": {
+    "status": "proposal-only-not-implemented",
+    "display": "DOM iframe aligned to the projected artwork surface; existing 3D frame and right description panel retained",
+    "activation": "One eligible child project activates after artwork camera arrival",
+    "lifecycle": "Unmount iframe on project switch or close; restore static artwork and gallery input",
+    "input": "Project receives its own click/scroll/text/game input; gallery shortcuts are inactive during project interaction; parent close remains accessible",
+    "fallback": "Use media/story for auth-gated, API-error, documentation-only, blank or unavailable deployments until a suitable demo exists",
+    "sandboxDefault": "allow-scripts allow-same-origin allow-forms allow-pointer-lock allow-popups",
+    "allowDefault": "fullscreen; gamepad",
+    "readiness": "iframe load alone is not application readiness; controlled demos may add an origin-checked postMessage handshake",
+    "selfExhibition": "Use a bounded demo or making-of view for my-world-03 to avoid recursive gallery embedding",
+    "localApplications": "Planit uses captured local application screens with step selection and zoom; label local execution and synthetic sample data",
+    "onTheBook": "Live client iframe confirmed after recovery, including book selection and first 3D scene entry; admin requires a visitor demo"
+  }
+}

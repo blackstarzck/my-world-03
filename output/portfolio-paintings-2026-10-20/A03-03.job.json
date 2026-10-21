@@ -1,0 +1,19 @@
+{
+  "id": "A03-03",
+  "room": "03",
+  "slotKind": "wall",
+  "project": "물체 감지",
+  "sourceEntryIds": [
+    "original:detect-lab"
+  ],
+  "connection": "사진의 물체를 감지하는 동작뿐 아니라 잘못된 추정 뒤 사용자가 다시 선택하는 흐름과 결과끼리 겹치지 않게 배치하는 문제를 세 사람의 관찰·확인·정리 행동으로 반영한다. 감지 모델이 항상 맞는다는 인상을 피한다.",
+  "medium": "popart",
+  "symbol": "형태를 알아보는 배",
+  "subject": "ONE simple green pear casts ONE nearly matching dark-blue pear-shaped printed shadow with a slight revealing offset. Strong legible silhouette, minimal cyan/coral accents, selective halftone only inside the shadow, warm cream space. No detection box, labels, words, cameras, eye icon or background scene.",
+  "reference": null,
+  "origin": "new-production",
+  "initialPath": "D:/workspace/my-world-03/output/portfolio-paintings-2026-10-20/A03-03-r0.png",
+  "finalPath": "D:/workspace/my-world-03/output/portfolio-paintings-2026-10-20/A03-03.png",
+  "reviewPath": "D:/workspace/my-world-03/output/portfolio-paintings-2026-10-20/reviews/A03-03.json",
+  "prompt": "Create ONE original fine-art image, horizontal 7:5, high resolution ideally 2800x2000 or greater. Flat front view, artwork fills entire image, no depicted frame, no mat, no artificial edge border. Original minimal pop-art hand-pulled screenprint. Bold economical black contours, flat teal/coral/pale-yellow spot colors, selective Ben-Day halftone in one shadow, subtle registration offset, wide quiet cream space. One motif, not a crowded comic collage. SUBJECT: ONE simple green pear casts ONE nearly matching dark-blue pear-shaped printed shadow with a slight revealing offset. Strong legible silhouette, minimal cyan/coral accents, selective halftone only inside the shadow, warm cream space. No detection box, labels, words, cameras, eye icon or background scene. The supplied image, if any, is ONLY a medium/mood reference; do not preserve its subject, letters or layout. ONE unified symbolic subject or typographic statement; at least half the image should be calm negative space. Main silhouette readable at thumbnail scale, no extra illustrative narrative. No room-based style constraints. Project meaning outside image: 사진의 물체를 감지하는 동작뿐 아니라 잘못된 추정 뒤 사용자가 다시 선택하는 흐름과 결과끼리 겹치지 않게 배치하는 문제를 세 사람의 관찰·확인·정리 행동으로 반영한다. 감지 모델이 항상 맞는다는 인상을 피한다. Do not depict application screens, logos, code, graphs, arrows, fake achievements, decorative labels, signatures, watermarks, wall/easel or gallery mockup. Unless explicitly requested in the poster subject, no text at all. Original hand-made physical medium, not a flat generic UI icon or a glossy 3D render."
+}

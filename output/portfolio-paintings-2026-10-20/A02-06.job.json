@@ -1,0 +1,19 @@
+{
+  "id": "A02-06",
+  "room": "02",
+  "slotKind": "wall",
+  "project": "디자인 룰북",
+  "sourceEntryIds": [
+    "original:design-rulebook"
+  ],
+  "connection": "예쁘다는 추상적 요구를 구조·정보 우선순위·타이포그래피·간격·색·반응형처럼 다시 확인하고 수정할 수 있는 기준으로 바꾼 일을 정물의 배치와 리뷰에 비유한다. 특정 미적 공식이 모든 UI를 좋게 만든다는 뜻은 아니다.",
+  "medium": "poster",
+  "symbol": "여백의 기준",
+  "subject": "EXACT TEXT: large 'SPACE' above 'MATTERS'; small 'DESIGN RULEBOOK'. ONE deep blue rectangular shape and ONE black circle in deliberate spacious asymmetrical balance. Visible matte screenprint grain, warm cream paper, meaningful empty space. No grids, measurements, guidelines, sample UI, extra shapes or tiny copy.",
+  "reference": null,
+  "origin": "new-production",
+  "initialPath": "D:/workspace/my-world-03/output/portfolio-paintings-2026-10-20/A02-06-r0.png",
+  "finalPath": "D:/workspace/my-world-03/output/portfolio-paintings-2026-10-20/A02-06.png",
+  "reviewPath": "D:/workspace/my-world-03/output/portfolio-paintings-2026-10-20/reviews/A02-06.json",
+  "prompt": "Create ONE original fine-art image, horizontal 7:5, high resolution ideally 2800x2000 or greater. Flat front view, artwork fills entire image, no depicted frame, no mat, no artificial edge border. Sparse original editorial art poster, oversized beautiful typography, one compact physical/printed motif, limited cream/indigo/coral palette, tactile paper and screenprint grain. Exact requested words only. No charts or app interfaces. SUBJECT: EXACT TEXT: large 'SPACE' above 'MATTERS'; small 'DESIGN RULEBOOK'. ONE deep blue rectangular shape and ONE black circle in deliberate spacious asymmetrical balance. Visible matte screenprint grain, warm cream paper, meaningful empty space. No grids, measurements, guidelines, sample UI, extra shapes or tiny copy. The supplied image, if any, is ONLY a medium/mood reference; do not preserve its subject, letters or layout. ONE unified symbolic subject or typographic statement; at least half the image should be calm negative space. Main silhouette readable at thumbnail scale, no extra illustrative narrative. No room-based style constraints. Project meaning outside image: 예쁘다는 추상적 요구를 구조·정보 우선순위·타이포그래피·간격·색·반응형처럼 다시 확인하고 수정할 수 있는 기준으로 바꾼 일을 정물의 배치와 리뷰에 비유한다. 특정 미적 공식이 모든 UI를 좋게 만든다는 뜻은 아니다. Do not depict application screens, logos, code, graphs, arrows, fake achievements, decorative labels, signatures, watermarks, wall/easel or gallery mockup. Unless explicitly requested in the poster subject, no text at all. Original hand-made physical medium, not a flat generic UI icon or a glossy 3D render."
+}

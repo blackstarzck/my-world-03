@@ -1,0 +1,1397 @@
+{
+  "original:doc-merge": {
+    "summary": "여러 엑셀 문서에 같은 정보를 반복 입력하던 업무를 하나의 관리 시스템으로 통합했습니다. 엑셀 업로드와 데이터베이스의 컬럼 대응까지 다루며 프론트엔드와 서버를 함께 개발했습니다.",
+    "context": "여러 업체·거래처·기관의 문서에 중복되는 데이터를 입력하고 관리하는 업무를 위한 서비스입니다.",
+    "contribution": [
+      "기획부터 화면, API, 데이터베이스까지 전 과정 1인 개발",
+      "React·TypeScript 프론트엔드와 NestJS 서버 구현"
+    ],
+    "implementation": [
+      {
+        "title": "화면 상태와 서버 데이터의 구분",
+        "body": "React 18·Vite·TypeScript 화면에 Redux Toolkit과 SWR을 사용했습니다. 프론트엔드 저장소와 서버 저장소를 분리하고 NestJS·TypeORM·PostgreSQL로 API와 데이터 구조를 구성했습니다."
+      },
+      {
+        "title": "엑셀과 DB 사이의 명시적인 컬럼 계약",
+        "body": "업로드하는 시트명은 등록된 업체·거래처·기관명에, 첫 행의 컬럼은 DB 컬럼에 대응합니다. 서버에서 컬럼명의 공백을 정규화하며, 컬럼을 바꿀 때는 프론트엔드의 table.js와 서버의 table.const.ts를 함께 갱신하는 구조입니다."
+      }
+    ],
+    "evidence": [
+      "엑셀 업로드 후 통합된 데이터를 조회·수정하는 흐름",
+      "doc-merge README의 업로드 규칙과 doc-merge-server의 테이블 계약"
+    ],
+    "limitations": [
+      "엑셀의 임의 양식을 자동 해석하는 도구가 아니라 정의된 시트명·컬럼 규칙을 따르는 업무 시스템입니다."
+    ]
+  },
+  "original:nest-sns": {
+    "summary": "인증·게시글·실시간 채팅을 한 서버에 연결하면서 NestJS의 모듈 구성과 요청 처리 흐름을 학습했습니다. 화면 중심 개발에서 서버의 데이터 관계와 기능별 책임으로 범위를 넓힌 프로젝트입니다.",
+    "context": "SNS에 필요한 여러 기능을 묶어 백엔드 애플리케이션의 구성을 익히기 위한 학습 프로젝트입니다.",
+    "contribution": ["NestJS 기반 SNS 서버 학습 및 구현"],
+    "implementation": [
+      {
+        "title": "기능별 서버 구성",
+        "body": "인증, 게시글, 채팅을 서버 기능으로 구성하고 NestJS 모듈 안에서 요청을 처리하는 구조를 학습했습니다. 서로 다른 기능이 하나의 애플리케이션에서 연결되는 지점을 다뤘습니다."
+      },
+      {
+        "title": "요청과 데이터 관계의 연결",
+        "body": "로그인한 사용자와 게시글, 채팅을 연결하는 서버 흐름을 구현했습니다. 프론트엔드의 화면 동작을 넘어 요청이 어떤 기능과 데이터로 이어지는지 확인한 예제입니다."
+      }
+    ],
+    "evidence": [
+      "cf_sns의 인증·게시글·채팅 관련 모듈",
+      "각 요청의 진입점과 처리 로직, 데이터 관계"
+    ],
+    "limitations": [
+      "학습 프로젝트이며 실제 서비스 운영 규모나 부하 처리 성과를 주장하지 않습니다."
+    ]
+  },
+  "original:my-skills": {
+    "summary": "AI 작업에서 반복되는 판단을 발동 조건·작업 범위·참고 자료·검증 방법이 있는 절차로 정리했습니다. 매번 긴 지시를 다시 작성하는 대신 저장소 안에서 재사용할 수 있는 작업 지침으로 관리합니다.",
+    "context": "여러 AI 개발·제작 작업에서 같은 판단과 확인 절차를 반복해야 하는 문제를 다룬 개발 방식 사례입니다.",
+    "contribution": ["반복 작업 절차 설계 및 관련 프로젝트 적용"],
+    "implementation": [
+      {
+        "title": "작업의 시작 조건과 범위 명시",
+        "body": "어떤 요청에서 절차를 적용할지, 어디까지 작업할지, 먼저 읽어야 할 자료가 무엇인지 구분했습니다. 단순 프롬프트 모음보다 실행 조건이 있는 지침으로 구성한 점이 핵심입니다."
+      },
+      {
+        "title": "결과를 확인하는 절차 포함",
+        "body": "작업 지침에 완료 여부를 판단하는 검증 방법을 함께 둡니다. v12와 sample-03의 관련 자료를 통해 개발·제작 과정에서 어떤 판단을 반복 가능한 절차로 바꿨는지 확인할 수 있습니다."
+      }
+    ],
+    "evidence": [
+      "관련 저장소의 SKILL 지침과 발동 조건",
+      "지침에서 참조하는 자료 및 결과 확인 절차"
+    ],
+    "limitations": []
+  },
+  "original:gate-harness": {
+    "summary": "장시간 AI 개발 작업에서 문서 확인 누락과 실행 맥락 유실을 다루는 Python 런타임입니다. 필수 문서를 확인하기 전에는 변경 도구 실행을 막고, 세션별 이벤트를 남겨 재생·재시도·인수인계에 사용합니다.",
+    "context": "한 번의 모델 대화로 끝나지 않는 코딩 작업에서 실행 조건과 작업 이력을 관리하기 위한 실험적 하네스입니다.",
+    "contribution": ["요구사항 게이트 하네스 설계 및 적용"],
+    "implementation": [
+      {
+        "title": "문서 확인과 변경 도구의 경계",
+        "body": "요구사항 분석 후 필요한 문서를 선택하고 확인 상태를 기록합니다. tool gateway에서 문서 확인 조건과 도구 정책을 검사한 뒤 실제 작업을 실행하도록 구성했습니다."
+      },
+      {
+        "title": "복구 가능한 세션 이벤트",
+        "body": "session_id 아래 에이전트 실행, 도구 호출, 샌드박스 수명주기, 검증 결과를 이벤트로 기록합니다. 원본 이벤트를 유지한 채 요약을 만들고, 실행 순서의 누락과 종료되지 않은 도구 호출을 검사합니다."
+      }
+    ],
+    "evidence": [
+      "README의 실행 흐름과 Boundary Map",
+      "session_store.py·tool_gateway.py·flow_contract.py",
+      "문서 게이트와 실행 순서 검증 테스트"
+    ],
+    "limitations": [
+      "실험적 런타임이며 로컬 프로세스 샌드박스는 보안 격리용 가상 머신이 아닙니다.",
+      "호스트가 래퍼를 사용하지 않으면 해당 도구 실행까지 자동으로 통제하지 않습니다."
+    ]
+  },
+  "original:multi-agent": {
+    "summary": "Codex와 Claude 사이에 작업을 넘겨도 요구사항과 검증 근거를 이어받도록 개발 절차를 정리했습니다. 코드뿐 아니라 작업 상태·판단 맥락·후속 확인 항목을 저장소에 남기는 방식입니다.",
+    "context": "TOPIK 사용자 서비스 개발에서 여러 AI 도구와 후속 작업자가 같은 맥락을 이어받기 위한 작업 관리 사례입니다.",
+    "contribution": ["AI 작업 수명주기·인수인계·검증 흐름 설계"],
+    "implementation": [
+      {
+        "title": "저장소에 남기는 작업 맥락",
+        "body": "topik-project-v13에 요구사항 문서, 변경 제안, 인수인계 문서와 실행별 작업 기록을 둡니다. 대화 안에만 있던 판단을 코드와 함께 다시 읽을 수 있는 자료로 관리합니다."
+      },
+      {
+        "title": "변경과 검증 근거의 연결",
+        "body": "화면과 기능 변경을 관련 문서 및 실행 기록에 연결합니다. 후속 작업은 이전 결론과 남은 범위를 읽고 시작하며, 구현 내용과 확인 범위를 구분해서 전달합니다."
+      }
+    ],
+    "evidence": [
+      "topik-project-v13의 docs/ai-workflow/runs",
+      "docs/todo 및 docs/sot-change-proposals의 인수인계 자료",
+      "변경 요청과 연결된 코드·테스트"
+    ],
+    "limitations": []
+  },
+  "original:ai-squads": {
+    "summary": "비개발자가 자연어로 기능을 요청하고 에이전트의 작업 상태를 흐름도로 확인하는 비주얼 IDE 실험입니다. PM·설계·개발·검증 역할을 나누고, 기능 의존성과 의사결정 맥락을 함께 다룹니다.",
+    "context": "코드를 직접 읽기 어려운 사용자가 AI 개발 작업의 구조와 진행 상황을 이해할 수 있게 하는 도구입니다.",
+    "contribution": ["개인 프로젝트 설계 및 구현"],
+    "implementation": [
+      {
+        "title": "시각적 작업 공간과 실행 서비스 분리",
+        "body": "ai-squads는 Next.js·React Flow 프론트엔드, FastAPI 백엔드, LangGraph 에이전트 실행부로 구성됩니다. 화면의 노드 연결과 에이전트 실행을 별도 계층으로 나눴습니다."
+      },
+      {
+        "title": "역할·의존성·판단 맥락 관리",
+        "body": "PM이 요청을 분해하고 설계·개발·검증 역할로 전달하는 구조를 둡니다. NetworkX 기반 영향도 분석과 변경 배경 기록을 다루며, 연관 실험 profitpal에서는 여러 분석 에이전트의 의견을 취합하는 구조를 적용했습니다."
+      }
+    ],
+    "evidence": [
+      "ai-squads README의 frontend·backend·agents 구성",
+      "React Flow 캔버스와 에이전트 역할 정의",
+      "profitpal의 분석 역할과 의장 취합 구조"
+    ],
+    "limitations": [
+      "프로토타입의 구조와 기능을 설명하며 비개발자 대상 도입 성과나 운영 안정성 수치는 포함하지 않습니다."
+    ]
+  },
+  "original:verify-loop": {
+    "summary": "라우트가 바뀌었는데 문서가 남거나, 공통 관리 화면의 동작이 달라지는 문제를 자동 검사로 다룹니다. TOPIK 관리자 서비스의 문서·라우트·코드·대표 운영 흐름을 하나의 검증 진입점으로 묶었습니다.",
+    "context": "관리자 기능과 정책 문서가 함께 늘어나는 프로젝트에서 구현과 기준 문서의 불일치를 발견하기 위한 개발 도구입니다.",
+    "contribution": ["문서·구조·코드·화면 검증 하네스 설계"],
+    "implementation": [
+      {
+        "title": "문서와 라우트의 교차 검사",
+        "body": "check-doc-crosslinks.mjs는 참조 문서와 인덱스의 정합성을, check-route-doc-coverage.mjs는 실제 라우트 메타데이터와 IA 문서의 대응을 검사합니다. 문서 갱신 여부를 사람의 기억에만 맡기지 않는 구조입니다."
+      },
+      {
+        "title": "공통 운영 패턴 재사용",
+        "body": "harness:check로 인코딩·문서·라우트·lint·typecheck를 실행합니다. E2E helper로 Modal·Drawer·확인 사유 입력 등을 공유하고, 목록→상세→조치→감사 로그와 편집→확인→발행 같은 대표 흐름을 검사합니다."
+      }
+    ],
+    "evidence": [
+      "topik-ai/docs/harness/index.md",
+      "scripts/check-doc-crosslinks.mjs와 check-route-doc-coverage.mjs",
+      "tests/e2e/harness/admin-flow-helpers.ts"
+    ],
+    "limitations": [
+      "대표 운영 패턴을 검증하는 하네스이며 모든 정책과 데이터 정합성을 완전히 증명하는 도구는 아닙니다."
+    ]
+  },
+  "additional:project-manager": {
+    "summary": "PRD·기능명세·유저플로우·클릭 가능한 와이어프레임을 연결해 작성하는 로컬 기획 도구입니다. AI 출력을 곧바로 덮어쓰지 않고 변경 제안으로 보관하며, 승인·충돌 확인·독립 버전 관리로 기존 편집 내용을 보존합니다.",
+    "context": "기획 문서와 화면 설계를 오가며 요구사항의 연결과 변경 영향을 확인하려는 사용자를 위한 한국어 로컬 웹앱입니다.",
+    "contribution": [],
+    "implementation": [
+      {
+        "title": "문서 간 추적과 독립 버전",
+        "body": "PRD 항목·기능·플로 노드·화면을 연결하고 관련 문서와 통합 검색으로 이동합니다. 플로와 와이어프레임은 버전별로 보존하며, 본문·수용 조건·연결이 달라진 경로를 재검토 대상으로 구분합니다."
+      },
+      {
+        "title": "승인 전에는 적용하지 않는 AI 변경",
+        "body": "Groq 호출은 서버에서 처리하며 응답을 변경 제안으로 저장합니다. 사용자가 요청 이후 원본을 수정하면 충돌을 표시하고, 취소·거절·실패 시 기존 문서를 유지합니다. 화면별 재시도와 성공한 결과의 부분 승인도 지원합니다."
+      },
+      {
+        "title": "로컬 저장과 미저장 초안 복구",
+        "body": "React·TypeScript 프론트엔드, Fastify 서버, SQLite 저장소로 구성됩니다. IndexedDB에 탭·문서·버전별 초안을 남기고 SQLite 백업·무결성 확인·새 버전 복원을 통해 데이터 보존 경로를 구분했습니다."
+      }
+    ],
+    "evidence": [
+      "project-manager/README.md의 문서 연결·AI 승인·복구 설명",
+      "server와 docs/contract.md의 데이터·API 계약",
+      "PRD에서 기능·플로·화면으로 연결되는 도서관 샘플"
+    ],
+    "limitations": [
+      "로컬 실행 도구로 소개하며 공개 배포 주소의 API를 기능 시연 대상으로 사용하지 않습니다.",
+      "Manyfast를 관찰해 별도로 구현한 프로젝트이며 원본 서버 동작이나 전체 픽셀 일치를 주장하지 않습니다."
+    ]
+  },
+  "additional:admin-story-quest": {
+    "summary": "원고와 3D 에셋을 연결해 장면을 구성하는 콘텐츠 관리 도구입니다. 편집 화면과 에셋 보관함을 분리해, 장면을 만드는 작업과 재사용할 자료를 관리하는 작업을 나눴습니다.",
+    "context": "이야기 콘텐츠의 장면과 3D 자료를 관리하는 제작자를 위한 관리자 프로토타입입니다.",
+    "contribution": [],
+    "implementation": [
+      {
+        "title": "편집과 에셋 관리의 화면 경계",
+        "body": "React·TypeScript·Vite로 구성하고 React Router에서 기본 편집 화면과 /assets 보관함을 나눴습니다. EditorPage와 AssetManagerPage가 서로 다른 작업을 담당합니다."
+      },
+      {
+        "title": "3D 편집을 위한 공통 상태와 데이터 계층",
+        "body": "React Three Fiber·drei·Three.js를 사용하며 Zustand store와 Supabase 연결 모듈을 둡니다. 화면, 공통 상태, 데이터 타입을 분리한 저장소 구조에서 장면과 에셋의 연결 방식을 확인할 수 있습니다."
+      }
+    ],
+    "evidence": [
+      "admin-story-quest/src/App.tsx의 두 라우트",
+      "src/pages/EditorPage.tsx와 AssetManagerPage.tsx",
+      "src/store/appStore.ts·src/types/database.ts·src/lib/supabase.ts"
+    ],
+    "limitations": [
+      "실제 콘텐츠 운영 규모나 개인별 담당 범위는 확인된 자료에 포함되어 있지 않습니다."
+    ]
+  },
+  "original:video-agent": {
+    "summary": "AI 영상 제작 지시가 단계마다 달라지는 문제를 제작 계약과 검사 절차로 다뤘습니다. 결과를 만든 뒤 확인하는 데서 나아가, 생성 전에 지켜야 할 규칙을 검사하는 제작 흐름을 정리했습니다.",
+    "context": "여러 프롬프트와 제작 단계를 거치는 AI 영상 작업에서 지시의 일관성을 유지하기 위한 개발 방식 사례입니다.",
+    "contribution": ["AI 영상 제작 계약 및 검증 루프 설계"],
+    "implementation": [
+      {
+        "title": "제작 규칙의 명시적인 계약",
+        "body": "실행 프롬프트를 검토해 지시가 어긋나는 부분을 찾고, 생성 과정에서 유지해야 하는 조건을 제작 계약으로 정리했습니다. 자연어 요청을 검사 대상이 되는 규칙으로 바꾸는 작업입니다."
+      },
+      {
+        "title": "생성 전 검사 단계",
+        "body": "sample-03의 제작 절차에서 생성 전에 규칙 이탈을 확인하는 검사를 둡니다. 제작 지시와 검사 조건을 함께 관리해 후속 단계가 앞선 조건을 이어받도록 구성했습니다."
+      }
+    ],
+    "evidence": [
+      "sample-03의 제작 계약과 실행 프롬프트",
+      "생성 전에 적용하는 검사 규칙 및 수정 사례"
+    ],
+    "limitations": [
+      "영상의 주관적 품질이나 제작 비용 절감률을 수치로 주장하지 않습니다."
+    ]
+  },
+  "additional:vive": {
+    "summary": "독서 중 남긴 하이라이트·메모·요약을 책과 연결해 관리하는 도구입니다. 인증된 사용자의 자료 저장과 서버 측 AI 요청을 Next.js·Supabase 구조 안에서 함께 다룹니다.",
+    "context": "읽은 내용을 다시 찾고 정리하려는 독자를 위한 독서 보조 웹앱입니다.",
+    "contribution": [],
+    "implementation": [
+      {
+        "title": "화면·인증·데이터 계층 구성",
+        "body": "Next.js App Router·TypeScript로 인증 화면과 메인 작업 화면을 나눴습니다. Supabase Auth·PostgreSQL·Storage와 @supabase/ssr 기반 세션 처리를 사용하며 SQL 마이그레이션을 별도로 관리합니다."
+      },
+      {
+        "title": "서버 측 AI와 입력 검증",
+        "body": "Route Handler에서 OpenAI SDK를 사용하고, React Hook Form과 Zod로 입력 폼을 구성했습니다. 하이라이트 관련 컴포넌트와 AI·도서·인증 API를 분리한 구조입니다."
+      }
+    ],
+    "evidence": [
+      "vive README의 기술 구성과 src/app 구조",
+      "하이라이트 관련 화면·컴포넌트",
+      "Route Handler와 supabase/migrations"
+    ],
+    "limitations": [
+      "인증과 외부 AI 연결이 필요한 기능은 공개 화면만으로 전체 동작을 평가할 수 없습니다."
+    ]
+  },
+  "original:trading-lab:zenith": {
+    "summary": "Python 매매 봇과 React 모니터링 화면이 별도 REST 서버 없이 Supabase를 공유 채널로 사용하는 자동매매 실험입니다. 거래 실행뿐 아니라 손실 리포트와 원인 분석 문서를 함께 남겼습니다.",
+    "context": "업비트 자동매매 로직과 실행 상태를 한 화면에서 관찰하기 위한 개인 프로젝트입니다.",
+    "contribution": ["개인 프로젝트 설계 및 구현"],
+    "implementation": [
+      {
+        "title": "봇과 화면의 공유 데이터 채널",
+        "body": "Python 봇과 React UI가 Supabase를 통해 데이터를 공유하는 구조입니다. 별도 REST API를 사이에 두는 방식과 달리 저장소를 실행 결과와 화면 표시의 연결 지점으로 사용했습니다."
+      },
+      {
+        "title": "손실을 남기는 운영 자료",
+        "body": "실행 결과와 함께 손실 리포트·원인 분석 문서를 관리했습니다. 자동매매 기능의 존재와 실제 전략 결과를 구분해, 결과를 되짚을 수 있는 자료를 남긴 프로젝트입니다."
+      }
+    ],
+    "evidence": [
+      "Python 봇과 React UI의 Supabase 접근 경로",
+      "손실 리포트와 원인 분석 문서"
+    ],
+    "limitations": [
+      "전략 수익성과 실거래 안전성을 보장하는 프로젝트로 소개하지 않습니다."
+    ]
+  },
+  "original:trading-lab:zenith-v2": {
+    "summary": "매매 봇을 Python 패키지와 실행 명령으로 정리하고 pytest를 추가한 후속 버전입니다. React 모니터링 대시보드와 API 실행부를 함께 두어 봇을 실행하고 상태를 확인하는 경로를 구분했습니다.",
+    "context": "초기 자동매매 코드의 실행·검증·모니터링 구조를 정리한 개인 프로젝트입니다.",
+    "contribution": ["개인 프로젝트 설계 및 구현"],
+    "implementation": [
+      {
+        "title": "패키지와 실행 진입점",
+        "body": "봇을 zenith_bot 패키지로 묶고 zenith-bot·zenith-api 실행 명령을 제공합니다. 단일 사이클 실행과 API 실행을 구분하고 pytest로 로직을 검사합니다."
+      },
+      {
+        "title": "상태 이벤트와 거래 결과 분리",
+        "body": "Supabase에 bot_events와 bot_trade_results를 저장하며, 프론트엔드는 React·Ant Design·lightweight-charts로 구성됩니다. 이벤트와 종료된 거래 결과를 나눠 모니터링하는 구조입니다."
+      }
+    ],
+    "evidence": [
+      "zenith-v2 README의 봇·API 실행 명령",
+      "Python 패키지와 pytest 구성",
+      "docs/supabase-schema.sql과 frontend"
+    ],
+    "limitations": [
+      "자동 검사와 시뮬레이션 결과를 실거래 수익성으로 해석하지 않습니다."
+    ]
+  },
+  "original:trading-lab:zenith-v3": {
+    "summary": "매매 명세를 상태머신 전략 엔진으로 옮기고 지표·입력 파이프라인·실행부를 분리했습니다. 합성 데이터와 업비트 시세 입력을 같은 전략 구조에 연결해 로직을 검토할 수 있게 했습니다.",
+    "context": "문서에 적은 전략 조건이 코드의 판단과 상태 전이로 이어지는 과정을 다룬 개인 프로젝트입니다.",
+    "contribution": ["개인 프로젝트 설계 및 구현"],
+    "implementation": [
+      {
+        "title": "명세에서 상태 전이로",
+        "body": "docs/prd.md를 기준으로 trader/engine.py에 상태머신 전략 엔진을 구성했습니다. 캔들·상태·포지션·대기 주문 모델과 EMA·ATR·BBWidth·VWAP 등 지표 계산을 별도 모듈로 나눴습니다."
+      },
+      {
+        "title": "입력과 판단 결과의 연결",
+        "body": "1분 입력 파이프라인에 합성 데이터 또는 업비트 실시간 입력을 연결합니다. 각 판단을 Supabase trading_events에 저장하며 trader/tests에서 지표와 엔진을 단위 검사합니다."
+      }
+    ],
+    "evidence": [
+      "docs/prd.md와 trader/engine.py의 대응",
+      "trader/indicators.py·pipeline.py·tests",
+      "docs/supabase.sql의 판단 이벤트 구조"
+    ],
+    "limitations": [
+      "명세 구현과 시뮬레이션 검증은 실거래 성과를 의미하지 않습니다."
+    ]
+  },
+  "original:trading-lab:zenith-v4": {
+    "summary": "실시간 연결이 끊기거나 이벤트가 중복·역순 도착하는 상황을 화면 상태와 메시지 계약으로 다룬 버전입니다. 웹·API·공유 계약을 모노레포로 분리하고 재시도와 순서 검사 규칙을 명시했습니다.",
+    "context": "거래 모니터링에서 연결 품질과 이벤트 순서가 화면의 신뢰성에 영향을 주는 문제를 다룹니다.",
+    "contribution": ["개인 프로젝트 설계 및 구현"],
+    "implementation": [
+      {
+        "title": "연결 상태의 명시적인 모델",
+        "body": "WebSocket UI 상태를 LIVE·DELAYED·RECONNECTING·ERROR·PAUSED로 구분했습니다. 타임아웃과 백오프·지터 재시도를 포함해 연결 상태를 화면과 실행 로직에서 다룰 수 있게 구성했습니다."
+      },
+      {
+        "title": "공유 계약과 순서 보증",
+        "body": "apps/web·apps/api·packages/contracts로 코드를 나누고 API·WebSocket 계약을 공유합니다. runId와 seq를 사용해 중복·역순 메시지를 거르고 구조화된 시스템 이벤트 로그 계약을 둡니다."
+      }
+    ],
+    "evidence": [
+      "packages/contracts의 API·WebSocket 타입",
+      "연결 상태 전이와 타임아웃·재시도 처리",
+      "runId·seq 검사 로직"
+    ],
+    "limitations": [
+      "모노레포의 실시간 통신 기반 구현이며 완성된 거래 서비스의 운영 성과를 뜻하지 않습니다."
+    ]
+  },
+  "original:trading-lab:coin-lab": {
+    "summary": "자동매매 실험을 백엔드·프론트엔드·워커·인프라로 나눠 구성한 버전입니다. 실행 작업과 사용자 화면의 경계를 나누고 PostgreSQL 함수까지 포함해 데이터 처리 구조를 다뤘습니다.",
+    "context": "거래 로직, 비동기 작업, 모니터링 화면을 구분해 개발하기 위한 개인 실험입니다.",
+    "contribution": ["개인 프로젝트 설계 및 구현", "PostgreSQL 함수 작성"],
+    "implementation": [
+      {
+        "title": "애플리케이션과 실행 작업 분리",
+        "body": "저장소를 backend·frontend·workers·infra로 구성했습니다. 사용자의 화면 요청과 별도로 수행할 작업을 워커 영역에 두는 구조를 다룹니다."
+      },
+      {
+        "title": "데이터베이스 측 처리",
+        "body": "Python 기반 처리와 PostgreSQL 함수를 함께 사용했습니다. 애플리케이션 코드와 DB 함수가 각각 어떤 데이터 처리를 맡는지 확인할 수 있는 구성입니다."
+      }
+    ],
+    "evidence": [
+      "backend·frontend·workers·infra 디렉터리 경계",
+      "PostgreSQL 함수 정의와 호출 코드"
+    ],
+    "limitations": [
+      "분리된 구조 자체를 처리량 향상이나 거래 수익의 증거로 사용하지 않습니다."
+    ]
+  },
+  "original:trading-lab:coin-lab-v2": {
+    "summary": "매매 전략을 실험하는 대시보드를 만들며 디자인 시스템을 먼저 문서화한 버전입니다. Python 처리와 React 화면을 연결하고 화면 구현을 미리 정한 UI 기준에 맞췄습니다.",
+    "context": "전략 실험 결과를 읽는 화면과 그 화면의 일관된 구성 기준을 함께 다룬 개인 프로젝트입니다.",
+    "contribution": [
+      "개인 프로젝트 설계 및 구현",
+      "디자인 시스템 문서화 및 화면 적용"
+    ],
+    "implementation": [
+      {
+        "title": "문서에서 화면으로 이어지는 UI 기준",
+        "body": "화면을 만든 뒤 스타일을 맞추는 대신 디자인 시스템을 문서로 정리하고 대시보드를 구현했습니다. 기준 문서와 실제 React 화면을 비교해 적용 범위를 확인할 수 있습니다."
+      },
+      {
+        "title": "전략 실험의 화면 구성",
+        "body": "Python 기반 전략 실험과 React 대시보드를 결합했습니다. 거래 로직의 구현뿐 아니라 실험 상태와 결과를 어떻게 읽는 화면으로 옮겼는지 다룬 버전입니다."
+      }
+    ],
+    "evidence": [
+      "디자인 시스템 문서와 적용된 UI 컴포넌트",
+      "Python 실험 코드와 React 대시보드의 연결"
+    ],
+    "limitations": [
+      "전략의 수익성이나 사용성 향상 수치는 확인된 자료에 포함되어 있지 않습니다."
+    ]
+  },
+  "original:trading-lab:profitpal": {
+    "summary": "차트·뉴스·고래 지갑을 보는 에이전트를 나누고 의장 역할이 판단을 취합하는 분석 실험입니다. 하나의 모델 응답으로 결론을 내리는 대신 분석 관점과 의견의 출처를 구분합니다.",
+    "context": "서로 다른 시장 정보를 검토하는 역할을 나누고 판단을 취합하는 멀티 에이전트 개인 프로젝트입니다.",
+    "contribution": ["개인 프로젝트 설계 및 구현"],
+    "implementation": [
+      {
+        "title": "분석 관점에 따른 역할 분리",
+        "body": "차트·뉴스·고래 지갑을 담당하는 분석 에이전트를 구분했습니다. 각 역할이 다루는 입력과 판단을 따로 만든 뒤 취합 단계로 넘기는 구조입니다."
+      },
+      {
+        "title": "위원회 형태의 판단 취합",
+        "body": "의장 역할이 여러 분석 결과를 모읍니다. Python 기반 멀티 에이전트 구조에서 개별 의견과 최종 취합을 나누는 방식을 확인할 수 있습니다."
+      }
+    ],
+    "evidence": [
+      "분석 에이전트별 역할·입력·출력 정의",
+      "의장 역할의 취합 흐름"
+    ],
+    "limitations": [
+      "분석 구조의 실험이며 투자 권고나 수익 예측 정확도를 입증한 서비스가 아닙니다."
+    ]
+  },
+  "original:trading-lab:Haley": {
+    "summary": "이미지로 설명되던 매매 개념을 업비트 API로 관측 가능한 규칙과 상태로 정리했습니다. 전략 명세·위험 통제·검증 계획을 연결하고 실제 시세에 가상 자금을 적용하는 PAPER 운영 콘솔을 구성했습니다.",
+    "context": "자동매매 로직을 구현하기 전에 판단 조건과 위험 경계를 명확히 하고, 실제 주문 없이 운영 흐름을 살펴보기 위한 개인 프로젝트입니다.",
+    "contribution": ["개인 프로젝트 전략 명세 및 구현"],
+    "implementation": [
+      {
+        "title": "전략 명세와 운영 계약",
+        "body": "UFS-R1 전략의 시장 필터·셋업·진입·손절·익절 조건을 문서로 나눴습니다. 주문·상태머신·데이터 구조, 백테스트·페이퍼 검증 계획과 위험 통제를 별도 문서로 연결합니다."
+      },
+      {
+        "title": "실제 시세와 가상 체결의 분리",
+        "body": "PAPER 모드에서 실제 업비트 시세를 받아 가상 KRW 잔고로 체결·포지션·손익을 기록하는 운영 콘솔을 제공합니다. PAPER·DRY_RUN·LIVE의 목적을 구분하고 실거래는 기본 비활성으로 둡니다."
+      }
+    ],
+    "evidence": [
+      "Haley/README.md와 docs/ufs-r1_strategy.md",
+      "docs/upbit_api_and_trading_system.md",
+      "PAPER 운영 콘솔의 가상 주문·포지션·손익 흐름"
+    ],
+    "limitations": ["PAPER 실행과 전략 명세는 실거래 수익을 입증하지 않습니다."]
+  },
+  "original:figma-gen": {
+    "summary": "디자인 토큰 동기화와 컴포넌트 생성을 묶은 UI 라이브러리 스타터입니다. 디자인 기준을 React 구현으로 옮기는 반복 작업을 다루기 위해 토큰과 컴포넌트의 연결을 구성했습니다.",
+    "context": "디자인 값과 구현 컴포넌트를 별도로 관리할 때 생기는 반복 작업을 줄이려는 개인 도구 프로젝트입니다.",
+    "contribution": ["개인 프로젝트 설계 및 구현"],
+    "implementation": [
+      {
+        "title": "디자인 토큰 동기화",
+        "body": "디자인 기준을 코드에서 사용할 토큰으로 동기화하는 흐름을 다룹니다. chanchan2의 토큰 정의와 생성 결과를 통해 어떤 값을 공통 기준으로 관리하는지 확인할 수 있습니다."
+      },
+      {
+        "title": "컴포넌트 생성의 출발점",
+        "body": "토큰과 함께 사용할 UI 컴포넌트 생성 구성을 둡니다. 개별 화면의 수작업 복제보다 반복해서 사용할 라이브러리 기반을 만드는 데 초점을 맞춘 스타터입니다."
+      }
+    ],
+    "evidence": ["chanchan2의 토큰 동기화 구성", "컴포넌트 생성 코드와 결과물"],
+    "limitations": [
+      "임의의 Figma 화면 전체를 자동으로 React 앱으로 변환하는 완성 제품으로 소개하지 않습니다."
+    ]
+  },
+  "original:design-rulebook": {
+    "summary": "‘예쁘게 만들어 달라’는 요청을 화면 구조·정보 우선순위·타이포그래피·간격처럼 확인 가능한 디자인 기준으로 바꾼 룰북입니다. 리뷰에서 반복된 판단과 AI 제작에 사용할 규칙을 구분해 관리합니다.",
+    "context": "AI에게 웹·UI 작업을 맡길 때 제작 기준과 수정 근거를 명확히 전달하기 위한 개인 문서 프로젝트입니다.",
+    "contribution": ["개인 프로젝트 디자인 기준 정리"],
+    "implementation": [
+      {
+        "title": "누적 규칙과 실행용 규칙 분리",
+        "body": "madia-design-rules.md에 누적 기준을, ai-prompt-rules.md에 제작 프롬프트용 규칙을 둡니다. 기본 UX/UI 원칙과 영상별 내용을 정제하는 canonicalization 정책도 분리했습니다."
+      },
+      {
+        "title": "제안·기준 정의·검토의 작업 순서",
+        "body": "화면 구조와 사용자 흐름을 먼저 제안하고 타입·간격·색상·반응형 기준을 정의한 뒤 결과를 룰북으로 검토하는 절차를 정리했습니다. 추상적인 평가를 수정 가능한 항목으로 바꾸는 방식입니다."
+      }
+    ],
+    "evidence": [
+      "madia-design-rule/rulebook의 네 기준 문서",
+      "AI 프롬프트 규칙과 누적 룰북의 구분"
+    ],
+    "limitations": [
+      "디자인 판단을 정리한 문서 프로젝트이며 모든 UI의 품질을 자동 판정하는 시스템은 아닙니다."
+    ]
+  },
+  "additional:my-website-2026": {
+    "summary": "경력과 프로젝트 사이의 관계를 Canvas 2D 지도로 탐색하는 포트폴리오입니다. 참고 사이트의 렌더링·인터랙션 구조를 Next.js·TypeScript·Zustand 구조로 옮기고 본인의 프로젝트 콘텐츠로 구성했습니다.",
+    "context": "목록만으로는 보이지 않는 프론트엔드·서버·AI·제품·실험 프로젝트의 연결을 보여주기 위한 개인 포트폴리오입니다.",
+    "contribution": [],
+    "implementation": [
+      {
+        "title": "Canvas 엔진의 애플리케이션 구조 이식",
+        "body": "단일 HTML의 vanilla Canvas 참고 구조를 Next.js·TypeScript strict·Zustand 기반으로 옮겼습니다. 캔버스 지도와 영역별 프로젝트 콘텐츠를 하나의 탐색 흐름으로 연결했습니다."
+      },
+      {
+        "title": "경력 정보의 노드 구성",
+        "body": "입구·프론트엔드·서버·AI·제품·실험실 영역에서 노드를 따라 프로젝트를 찾도록 구성했습니다. 하나의 노드 안에 세부 저장소와 소개 자료를 연결하는 콘텐츠 구조입니다."
+      }
+    ],
+    "evidence": [
+      "my-website-2026/README.md의 출처·이식 범위",
+      "chanki-react의 Canvas 렌더링·상태 관리",
+      "노드별 세부 프로젝트 데이터"
+    ],
+    "limitations": [
+      "참고 사이트 nicoborja.com의 렌더링·인터랙션 구조를 분석해 이식한 프로젝트로 출처를 명시합니다."
+    ]
+  },
+  "original:multicanvas-lab": {
+    "summary": "페이지의 여러 위치에 3D 화면을 배치하면서 WebGL 렌더러는 하나만 사용하는 실험입니다. 각 캔버스가 필요한 영역을 같은 렌더링 자원으로 채우는 구성을 다뤘습니다.",
+    "context": "스크롤되는 일반 웹페이지 안에 여러 3D 장면을 넣기 위한 개인 그래픽스 실험입니다.",
+    "contribution": ["개인 실험 구현"],
+    "implementation": [
+      {
+        "title": "하나의 렌더러와 여러 표시 영역",
+        "body": "WebGL 렌더러 하나를 기준으로 페이지 곳곳의 캔버스 위치를 채웁니다. 장면을 표시할 영역과 실제 렌더링 자원을 분리하는 구성을 확인할 수 있습니다."
+      },
+      {
+        "title": "페이지 레이아웃과 3D 화면의 연결",
+        "body": "개별 영역이 웹페이지 레이아웃 안에 놓이도록 구성했습니다. 전용 전체 화면 3D 앱과 달리 여러 DOM 영역에 장면을 맞추는 문제를 다룹니다."
+      }
+    ],
+    "evidence": [
+      "multicanvas의 렌더러 생성 위치",
+      "페이지 영역별 장면 표시와 렌더링 처리"
+    ],
+    "limitations": [
+      "렌더러 공유 구조를 설명하며 기기별 성능 향상 수치는 포함하지 않습니다."
+    ]
+  },
+  "original:canvas-lab": {
+    "summary": "하나의 저장소에서 여러 파티클 예제를 만들며 입자의 배치와 움직임을 바꿔 본 그래픽스 실험입니다. 완성 화면 하나보다 입자 표현을 구성하는 방법의 차이를 비교합니다.",
+    "context": "브라우저 그래픽에서 다수의 입자가 만드는 형태와 움직임을 학습하기 위한 개인 실험입니다.",
+    "contribution": ["개인 파티클 예제 구현"],
+    "implementation": [
+      {
+        "title": "예제별 파티클 표현 비교",
+        "body": "particle-colorful-stars에 서로 다른 예제들을 함께 두고 입자를 다루는 방식을 바꿨습니다. 예제의 초기 배치와 프레임 갱신 부분을 비교할 수 있는 구성입니다."
+      },
+      {
+        "title": "정적인 도형에서 움직임으로",
+        "body": "개별 입자의 위치와 표현이 시간에 따라 달라지는 화면을 구현했습니다. 입자를 많이 표시하는 것 자체보다 어떤 갱신 규칙이 다른 시각적 결과를 만드는지 살펴본 프로젝트입니다."
+      }
+    ],
+    "evidence": [
+      "particle-colorful-stars의 예제별 진입점",
+      "입자 배치와 애니메이션 갱신 코드"
+    ],
+    "limitations": []
+  },
+  "additional:particle": {
+    "summary": "입자들의 움직임과 형태 변화를 브라우저 화면으로 표현한 그래픽스 실험입니다. 고정된 이미지 대신 입자의 위치 변화가 전체 형태를 만드는 방식을 다룹니다.",
+    "context": "파티클 기반 시각 효과와 형태 전환을 탐색하기 위한 개인 실험입니다.",
+    "contribution": [],
+    "implementation": [
+      {
+        "title": "입자 기반 형태 구성",
+        "body": "particle 저장소에서 다수의 입자와 그 움직임으로 화면 형태를 구성합니다. 입자 단위의 변화와 전체 이미지의 관계를 확인할 수 있습니다."
+      }
+    ],
+    "evidence": [
+      "particle의 초기 입자 구성과 프레임 갱신 코드",
+      "형태가 바뀌는 실행 화면"
+    ],
+    "limitations": [
+      "확인된 자료만으로 특정 물리 알고리즘이나 개인별 담당 범위를 단정하지 않습니다."
+    ]
+  },
+  "original:scroll-3d": {
+    "summary": "페이지 스크롤 위치를 3D 장면의 진행과 연결했습니다. 웹페이지를 읽는 동작과 공간 안으로 이동하는 시각적 흐름을 같은 입력으로 다룬 실험입니다.",
+    "context": "스크롤 기반 웹 콘텐츠와 3D 장면을 연결하는 인터랙션을 학습하기 위한 개인 프로젝트입니다.",
+    "contribution": ["개인 스크롤·3D 연동 실험 구현"],
+    "implementation": [
+      {
+        "title": "스크롤 입력과 장면 진행의 대응",
+        "body": "scroll-page에서 페이지의 스크롤 위치에 3D 장면을 연결합니다. 별도 게임 조작 없이 일반 웹 입력이 공간의 변화로 이어지도록 구성했습니다."
+      },
+      {
+        "title": "웹 문서와 공간 연출의 결합",
+        "body": "독립된 3D 뷰어를 띄우는 대신 페이지를 내리는 흐름 안에 장면을 배치했습니다. 스크롤 이벤트 처리와 장면 갱신이 연결되는 지점을 확인할 수 있습니다."
+      }
+    ],
+    "evidence": [
+      "scroll-page의 스크롤 처리와 장면 갱신 코드",
+      "스크롤 위치별 실행 화면 변화"
+    ],
+    "limitations": []
+  },
+  "original:detect-lab": {
+    "summary": "사진 속 물체를 브라우저에서 감지하고 결과를 카드로 연결하는 인터랙션을 구현했습니다. 감지가 틀릴 수 있는 상황의 사용자 선택 흐름과 여러 결과 카드가 겹치지 않게 하는 배치 문제를 함께 다뤘습니다.",
+    "context": "사진 속 물체 위치를 사람이 일일이 지정하는 작업을 줄일 수 있는지 탐색한 이전 포트폴리오 프로젝트입니다.",
+    "contribution": ["개인 프로젝트 기획·디자인·구현"],
+    "implementation": [
+      {
+        "title": "감지 결과를 선택 가능한 UI로 연결",
+        "body": "vanilla JavaScript와 TensorFlow.js로 사진의 물체를 감지하고 사용자가 결과를 확인·선택하는 흐름을 만들었습니다. 감지 위치의 점과 결과 카드를 Canvas 선 애니메이션으로 연결하고 GSAP으로 단계 전환을 구현했습니다."
+      },
+      {
+        "title": "결과 카드 배치와 입력 제어",
+        "body": "복수 결과 카드가 겹치지 않도록 충돌 방지 로직을 구현했습니다. 배치 계산 중에는 로딩을 표시하고 전환 애니메이션 중 다음 입력을 제한했습니다. SVG 결과의 복사·다운로드와 모바일·PC별 레이아웃도 제공합니다."
+      }
+    ],
+    "evidence": [
+      "chanki-portfolio README의 감지 실패 흐름과 카드 충돌 방지 설명",
+      "감지 위치·카드 연결 애니메이션",
+      "사용자 선택과 SVG 복사·다운로드"
+    ],
+    "limitations": [
+      "상품 DB 연동이 아니라 감지 결과를 시각적으로 표현하는 프로토타입입니다.",
+      "감지 정확도나 배치 계산 성능을 수치로 입증한 자료는 포함하지 않습니다."
+    ]
+  },
+  "original:three-lab:isosmetric-02": {
+    "summary": "GLTF 모델로 구성한 아이소메트릭 방에 가구와 조명을 배치하고 모델 애니메이션을 재생했습니다. 모델을 화면에 띄우는 단계에서 장면 구성과 시간 기반 동작으로 범위를 넓혔습니다.",
+    "context": "웹에서 3D 모델·공간·애니메이션을 함께 다루기 위한 개인 학습 실험입니다.",
+    "contribution": ["개인 3D 장면 실험 구현"],
+    "implementation": [
+      {
+        "title": "GLTF 장면 구성",
+        "body": "Three.js에서 GLTF 모델을 불러와 침대·책상·조명 등이 있는 방을 구성했습니다. 아이소메트릭 시점에서 오브젝트의 배치와 공간 구성을 확인합니다."
+      },
+      {
+        "title": "모델 애니메이션 재생",
+        "body": "AnimationMixer로 모델에 포함된 애니메이션을 재생합니다. 정적인 모델 데이터와 매 프레임 갱신되는 재생 상태를 함께 다루는 예제입니다."
+      }
+    ],
+    "evidence": [
+      "GLTF 로딩과 방 오브젝트 구성",
+      "AnimationMixer 생성·갱신·재생 코드"
+    ],
+    "limitations": []
+  },
+  "original:three-lab:isosmetric-01": {
+    "summary": "아이소메트릭 방을 구성하고 lil-gui로 값을 실시간 조절하며 3D 장면의 변화를 확인했습니다. 코드를 수정해 다시 실행하는 대신 조절 패널에서 장면 설정을 탐색한 초기 실험입니다.",
+    "context": "Three.js의 장면 구성과 GLTF 사용을 익히기 위한 개인 학습 프로젝트입니다.",
+    "contribution": ["개인 3D 장면 실험 구현"],
+    "implementation": [
+      {
+        "title": "모델 기반 방 구성",
+        "body": "GLTF 모델을 사용해 아이소메트릭 방을 표시했습니다. 모델 로딩과 카메라를 포함한 기본 장면 구성을 다룹니다."
+      },
+      {
+        "title": "실시간 설정 탐색",
+        "body": "lil-gui를 연결해 값을 바꾸고 장면에 반영되는 결과를 확인합니다. 화면에 영향을 주는 설정을 직접 조절하면서 3D 표현의 관계를 학습했습니다."
+      }
+    ],
+    "evidence": ["GLTF 로딩과 장면 초기화 코드", "lil-gui에 연결된 설정 항목"],
+    "limitations": []
+  },
+  "original:three-lab:custom_model": {
+    "summary": "Blender에서 만든 모델을 Three.js로 가져오고 조명의 밝기와 위치를 조절했습니다. 모델 제작 도구와 웹 렌더링 환경 사이의 연결을 학습한 프로젝트입니다.",
+    "context": "직접 준비한 3D 모델이 브라우저에서 어떻게 보이는지 확인하기 위한 개인 실험입니다.",
+    "contribution": ["Blender 모델 제작 및 웹 장면 실험"],
+    "implementation": [
+      {
+        "title": "모델 제작과 웹 로딩 연결",
+        "body": "Blender로 만든 모델을 웹 장면에 올려 표시했습니다. 모델 원본과 브라우저에서 사용하는 장면 구성의 연결을 다룹니다."
+      },
+      {
+        "title": "조명에 따른 표현 확인",
+        "body": "장면에 조명을 배치하고 밝기·위치를 조절했습니다. 동일한 모델이 조명 설정에 따라 어떻게 달라지는지 확인한 예제입니다."
+      }
+    ],
+    "evidence": [
+      "모델 파일과 Three.js 로딩 코드",
+      "조명 위치·밝기 설정 및 변경 결과"
+    ],
+    "limitations": []
+  },
+  "original:three-lab:controls-01": {
+    "summary": "카메라 위치와 각도를 컨트롤 패널에서 바꾸며 3D 좌표와 시점을 학습했습니다. 같은 장면에서도 카메라 설정이 화면 구도를 어떻게 바꾸는지 확인하는 예제입니다.",
+    "context": "Three.js 카메라와 OrbitControls의 기본 동작을 이해하기 위한 개인 학습 프로젝트입니다.",
+    "contribution": ["개인 카메라 제어 실험 구현"],
+    "implementation": [
+      {
+        "title": "카메라 값과 화면 구도의 연결",
+        "body": "카메라의 위치·각도를 조절하는 패널을 두고 변경 결과를 화면에서 확인했습니다. 좌표 값과 최종 시점의 관계를 다룹니다."
+      },
+      {
+        "title": "OrbitControls 사용",
+        "body": "OrbitControls를 연결해 장면을 살펴보는 조작을 구성했습니다. 카메라 자체의 설정과 사용자의 시점 조작을 함께 확인할 수 있습니다."
+      }
+    ],
+    "evidence": ["카메라 생성·설정과 조절 패널", "OrbitControls 연결 코드"],
+    "limitations": []
+  },
+  "original:three-lab:ilbunidiary": {
+    "summary": "바닥을 클릭하면 캐릭터가 선택한 지점까지 이동하는 3D 방을 구현했습니다. 화면의 클릭 좌표를 장면 속 목표 지점으로 바꾸고 캐릭터 이동에 연결했습니다.",
+    "context": "탑뷰 장면에서 포인터 선택과 캐릭터 이동을 결합하기 위한 개인 실험입니다.",
+    "contribution": ["개인 3D 인터랙션 실험 구현"],
+    "implementation": [
+      {
+        "title": "화면 좌표에서 3D 지점으로",
+        "body": "Raycaster로 바닥과 포인터의 교차 지점을 구해 이동 목표로 사용합니다. 클릭 이벤트를 단순 UI 반응이 아닌 장면 좌표의 변화로 연결했습니다."
+      },
+      {
+        "title": "모델과 이동 애니메이션 연결",
+        "body": "GLTF 캐릭터를 장면에 두고 GSAP을 사용해 목표 지점으로 이동시킵니다. 탑뷰 카메라 아래에서 선택·목표 좌표·캐릭터 이동 흐름을 구성했습니다."
+      }
+    ],
+    "evidence": [
+      "Raycaster의 바닥 교차 지점 계산",
+      "GLTF 캐릭터와 GSAP 이동 코드"
+    ],
+    "limitations": []
+  },
+  "original:pokemon": {
+    "summary": "포켓몬을 이름·번호·특성·타입으로 찾고 번호순으로 정렬하는 도감입니다. 외부 API 데이터와 여러 검색 조건을 React 화면의 상태로 연결했습니다.",
+    "context": "포켓몬 정보를 조건별로 탐색하는 사용자용 개인 웹앱입니다.",
+    "contribution": ["개인 프로젝트 기획·디자인·구현"],
+    "implementation": [
+      {
+        "title": "외부 데이터와 탐색 조건",
+        "body": "React·TypeScript에서 PokeAPI 데이터를 사용하고 이름·번호·특성·타입 검색 및 번호 정렬을 제공합니다. API 데이터와 사용자가 선택한 탐색 조건을 함께 다루는 앱입니다."
+      },
+      {
+        "title": "전역 상태와 화면 전환",
+        "body": "Redux Toolkit으로 전역 상태를 관리하고 GSAP으로 화면 전환을 구성했습니다. 데이터 탐색과 UI 전환이 연결되는 방식을 확인할 수 있습니다."
+      }
+    ],
+    "evidence": [
+      "검색·필터·정렬 조건을 적용한 목록",
+      "PokeAPI 호출과 Redux Toolkit 상태",
+      "GSAP 화면 전환"
+    ],
+    "limitations": []
+  },
+  "original:space-3d": {
+    "summary": "건물과 길이 있는 마을을 하나의 3D 장면으로 구성하고 그 안을 이동하도록 만들었습니다. 개별 모델 표시에서 여러 오브젝트가 놓인 탐색 가능한 공간으로 확장한 실험입니다.",
+    "context": "브라우저에서 마을 규모의 장면을 구성하고 공간을 살펴보는 개인 3D 프로젝트입니다.",
+    "contribution": ["개인 3D 공간 실험 구현"],
+    "implementation": [
+      {
+        "title": "여러 오브젝트의 공간 배치",
+        "body": "my-space에 마을을 이루는 장면을 구성했습니다. 하나의 모델을 감상하는 화면과 달리 여러 오브젝트의 위치 관계를 포함한 공간을 다룹니다."
+      },
+      {
+        "title": "공간 탐색 흐름",
+        "body": "사용자가 장면 안을 이동하며 공간을 확인하도록 구성했습니다. 장면 배치와 이동 시점이 만나는 구성을 살펴볼 수 있습니다."
+      }
+    ],
+    "evidence": ["my-space의 마을 장면 구성", "공간 이동과 카메라 제어 코드"],
+    "limitations": []
+  },
+  "original:game-cards": {
+    "summary": "얼굴 사진으로 능력치 카드를 만들고 저장한 뒤 친구와 대결하는 웹게임입니다. 브라우저 얼굴 감지 결과와 계정·카드 저장 기능을 하나의 게임 흐름으로 연결했습니다.",
+    "context": "사진을 입력해 개인 카드를 만들고 다른 사용자와 비교·대결하는 개인 웹게임 프로젝트입니다.",
+    "contribution": ["개인 프로젝트 기획·디자인·구현"],
+    "implementation": [
+      {
+        "title": "사진 입력에서 카드 생성으로",
+        "body": "React 화면에 face-api.js 얼굴 감지를 연결하고 사진으로 능력치 카드를 만드는 흐름을 구현했습니다. 사진 입력과 감지, 카드 표현을 순서대로 연결합니다."
+      },
+      {
+        "title": "계정과 카드 데이터 저장",
+        "body": "Firebase 인증과 데이터 저장을 사용해 만든 카드를 보관하고 대결 흐름에 사용합니다. 로컬 화면의 결과를 계정과 연결된 데이터로 이어가는 구조입니다."
+      }
+    ],
+    "evidence": [
+      "사진 입력→얼굴 감지→카드 생성 흐름",
+      "Firebase 인증과 카드 저장 코드",
+      "보관된 카드를 사용한 대결 화면"
+    ],
+    "limitations": [
+      "카드 능력치는 게임 표현이며 실제 인물의 능력을 측정하는 값이 아닙니다."
+    ]
+  },
+  "additional:my-world-03": {
+    "summary": "세 개의 3D 공간에서 프로젝트를 찾고 실제 웹앱과 개발 자료로 이어지는 포트폴리오입니다. 공간 이동과 프로젝트 선택을 연결하고, 외부 앱·로컬 실행 자료·개발 사례를 서로 다른 표시 방식으로 다룹니다.",
+    "context": "분야와 형태가 다른 개발 프로젝트를 공간 탐색과 검색으로 확인할 수 있게 하는 개인 포트폴리오입니다.",
+    "contribution": [],
+    "implementation": [
+      {
+        "title": "3D 장면과 프로젝트 콘텐츠 연결",
+        "body": "Three.js 공간의 선택 대상에 프로젝트 데이터를 연결하고 React에서 선택 상태·검색·프로젝트 전환을 관리합니다. 카메라 이동과 상세 콘텐츠를 같은 선택 흐름에 연결했습니다."
+      },
+      {
+        "title": "외부 앱의 실행 경계",
+        "body": "실행 가능한 외부 앱은 iframe으로, 로컬 전용 프로젝트와 개발 사례는 이미지·자료로 표시합니다. 선택한 프로젝트만 실행하고 닫거나 다른 프로젝트로 바꾸면 iframe을 제거해 여러 앱이 동시에 남지 않도록 구성했습니다."
+      },
+      {
+        "title": "정지 구간의 렌더링 제어",
+        "body": "카메라나 장면 상태가 바뀌는 구간과 정지 구간을 구분합니다. 상세 콘텐츠를 보는 동안 배경 3D 장면이 불필요하게 계속 렌더링되지 않도록 처리합니다."
+      }
+    ],
+    "evidence": [
+      "src/world/scene.js의 이동·렌더링 처리",
+      "src/ProjectExperience.jsx의 실행 및 자료 표시",
+      "src/data/portfolio.json과 검색·선택 UI"
+    ],
+    "limitations": [
+      "외부 앱의 인증·서버 상태·iframe 허용 정책은 프로젝트별로 다릅니다."
+    ]
+  },
+  "additional:my-world-01": {
+    "summary": "중앙 돔과 여러 공간을 하나의 3D 건물로 구성하고 프로젝트 사이의 이동을 구현했습니다. Blender 모델을 웹에 올리는 과정에서 모델·재질의 보존과 첫 로딩의 전송·GPU 준비를 함께 다뤘습니다.",
+    "context": "건축적 공간의 표현과 웹에서의 이동·콘텐츠 탐색을 결합한 개인 3D 포트폴리오 프로젝트입니다.",
+    "contribution": [],
+    "implementation": [
+      {
+        "title": "건축 모델과 카메라 이동",
+        "body": "GLB 건축 모델에 중앙 홀과 방을 구성하고 프로젝트 사이를 이동하는 경로를 연결했습니다. 벽과 통로의 여유, 카메라 위치·방향·화면 맞춤을 함께 다룹니다."
+      },
+      {
+        "title": "형상을 보존하는 로딩 최적화",
+        "body": "모델의 건축 요소와 재질을 유지하면서 전송 압축·에셋 준비·GPU 준비 순서를 조정했습니다. 초기 화면 준비와 이후 이동·상세 열기 동작을 분리해 검토한 프로젝트입니다."
+      }
+    ],
+    "evidence": [
+      "my-world-01/README.md의 모델·로딩 구성",
+      "docs/revision-m-performance.md의 조건별 비교",
+      "이동 경로와 벽 여유 검사"
+    ],
+    "limitations": [
+      "성능 비교는 문서에 적힌 기기·네트워크 조건의 측정이며 모든 환경의 속도를 보장하지 않습니다."
+    ]
+  },
+  "additional:my-world-02": {
+    "summary": "프로젝트를 선택하면 카메라가 정면으로 이동한 뒤 실제 웹앱과 설명을 전체 화면으로 여는 3D 포트폴리오입니다. 공간을 탐색하는 구간과 내용을 읽고 조작하는 구간을 분리했습니다.",
+    "context": "3D 공간의 분위기와 웹앱의 읽기·조작성을 함께 유지하기 위한 개인 인터랙션 프로젝트입니다.",
+    "contribution": [],
+    "implementation": [
+      {
+        "title": "정면 이동과 상세 표시의 순서",
+        "body": "공간 탐색 위치에서 프로젝트 정면으로 카메라를 이동하고, 도착 후 상세 화면을 표시합니다. 이동 취소·복귀·빠른 프로젝트 전환·동작 줄이기 설정을 별도의 상태로 다룹니다."
+      },
+      {
+        "title": "실제 DOM과 3D 표현의 구분",
+        "body": "상세는 실제 iframe으로 입력·클릭·스크롤을 처리합니다. 공간 안의 HTML 표현에는 실험적 HTML-in-Canvas 경로와 CSS 3D 호환 경로를 두고, 미지원 환경에 대응합니다."
+      },
+      {
+        "title": "유휴 렌더링 제어",
+        "body": "건축물을 재질·그림자 조건에 따라 묶고 화면 밖의 처리와 정지 중 렌더링을 줄였습니다. 상세 화면과 숨겨진 탭에서는 배경 렌더링을 쉬도록 구성했습니다."
+      }
+    ],
+    "evidence": [
+      "my-world-02/src/inspection.js의 정면 시퀀스",
+      "src/motion.js·look.js의 이동과 시선 처리",
+      "README의 HTML 표시 호환 경로 및 렌더링 제어"
+    ],
+    "limitations": [
+      "저장소의 예시 콘텐츠는 실제 경력이나 작업 성과를 뜻하지 않습니다.",
+      "실험적 HTML-in-Canvas는 브라우저 지원 여부에 따라 경로가 달라집니다."
+    ]
+  },
+  "original:react-basics:react-todos": {
+    "summary": "할 일을 추가·완료·삭제하는 작은 앱으로 React의 목록 상태와 사용자 입력 연결을 학습했습니다. 영상을 참고한 클론 예제이며 기본 동작을 하나의 화면 흐름으로 구현했습니다.",
+    "context": "React의 입력 이벤트와 목록 렌더링을 익히기 위한 학습 프로젝트입니다.",
+    "contribution": ["학습 영상 기반 투두 앱 구현"],
+    "implementation": [
+      {
+        "title": "목록 상태를 바꾸는 사용자 동작",
+        "body": "입력한 항목 추가, 완료 상태 변경, 삭제 동작을 화면에 연결했습니다. 같은 목록이 사용자 동작에 따라 다시 표시되는 React의 기본 흐름을 학습했습니다."
+      }
+    ],
+    "evidence": ["추가·완료·삭제 이벤트와 목록 렌더링 코드"],
+    "limitations": [
+      "학습·클론 예제이며 독자적인 서비스 기획 성과로 소개하지 않습니다."
+    ]
+  },
+  "original:react-basics:react-practice6": {
+    "summary": "드롭다운이 포함된 반응형 내비게이션을 구현했습니다. 같은 메뉴가 화면 너비와 펼침 상태에 따라 다르게 표시되는 구성을 학습했습니다.",
+    "context": "React에서 반응형 메뉴와 드롭다운 인터랙션을 익히기 위한 학습 예제입니다.",
+    "contribution": ["반응형 내비게이션 학습 예제 구현"],
+    "implementation": [
+      {
+        "title": "메뉴에서 개별 페이지로",
+        "body": "공통 Navbar 아래 Home·Services·Products·ContactUs·SignUp·Marketing·Consulting 페이지를 React Router로 구분합니다. 드롭다운과 반응형 메뉴가 구체적인 페이지 이동으로 이어지는 구성을 학습했습니다."
+      }
+    ],
+    "evidence": [
+      "react-practice6/src/App.js의 개별 페이지 라우트",
+      "Navbar의 드롭다운·반응형 메뉴"
+    ],
+    "limitations": []
+  },
+  "original:react-basics:business-card": {
+    "summary": "명함 작성·저장에 로그인과 이미지 업로드를 연결한 앱입니다. 화면의 폼 데이터, 사용자 계정, 외부 이미지 저장소가 하나의 작업 흐름으로 이어지도록 학습했습니다.",
+    "context": "React 화면에 인증·영속 저장·파일 업로드를 결합하기 위한 학습 프로젝트입니다.",
+    "contribution": ["명함 앱 학습 구현 및 외부 서비스 연결"],
+    "implementation": [
+      {
+        "title": "서비스 주입과 계정별 저장 경로",
+        "body": "Maker에 인증·카드 저장·파일 입력 기능을 전달합니다. CardRepository가 사용자 ID 아래의 cards 경로를 구독·저장·삭제하고 effect 정리 함수에서 구독을 해제합니다. 이미지 업로드는 Cloudinary 서비스로 분리했습니다."
+      },
+      {
+        "title": "편집과 미리보기의 공통 데이터",
+        "body": "같은 cards 상태를 Editor와 Preview에 전달합니다. 편집에서 생성·수정·삭제한 카드가 미리보기와 외부 저장소에 연결되는 구조를 학습했습니다."
+      }
+    ],
+    "evidence": [
+      "business-card/src/components/maker/maker.jsx",
+      "src/service/card_respository.js의 syncCard·saveCard·removeCard",
+      "이미지 업로드 서비스와 Editor·Preview"
+    ],
+    "limitations": [
+      "학습 프로젝트이며 외부 서비스 설정에 따라 실행 범위가 달라집니다."
+    ]
+  },
+  "original:react-basics:react-modeal.net2": {
+    "summary": "기존 웹 화면을 React로 재구성하면서 페이지 이동과 캐러셀을 결합했습니다. 정적인 화면 복제에서 라우팅과 슬라이드 동작까지 확장한 클론 학습입니다.",
+    "context": "완성된 웹 화면의 구조를 분석하고 React 컴포넌트와 외부 UI 라이브러리로 옮기는 학습 프로젝트입니다.",
+    "contribution": ["웹 화면 클론 구현"],
+    "implementation": [
+      {
+        "title": "라우트와 캐러셀 구성",
+        "body": "React Router로 페이지 이동을 나누고 Swiper로 캐러셀을 구현했습니다. 페이지 단위의 구조와 한 화면 안의 슬라이드 동작을 구분해 연결했습니다."
+      }
+    ],
+    "evidence": ["라우트 구성과 페이지 컴포넌트", "Swiper 설정과 캐러셀 화면"],
+    "limitations": [
+      "클론 학습이며 원본 화면의 디자인을 독자적인 결과로 주장하지 않습니다."
+    ]
+  },
+  "original:react-basics:react-modeal": {
+    "summary": "웹 화면 클론을 만들며 styled-components와 React Router를 함께 사용했습니다. 페이지 이동 구조와 컴포넌트별 스타일을 한 프로젝트에서 나눠 본 초기 버전입니다.",
+    "context": "React의 페이지 구성과 CSS-in-JS를 함께 익히기 위한 클론 학습 프로젝트입니다.",
+    "contribution": ["웹 화면 클론 구현"],
+    "implementation": [
+      {
+        "title": "페이지 경계와 스타일 경계",
+        "body": "React Router로 화면을 나누고 styled-components로 컴포넌트의 스타일을 구성했습니다. 라우트별 화면과 재사용 UI가 어떻게 분리되는지 다룹니다."
+      }
+    ],
+    "evidence": ["React Router 설정", "styled-components로 작성한 UI와 스타일"],
+    "limitations": ["클론 학습이며 원본 디자인의 저작을 주장하지 않습니다."]
+  },
+  "original:react-basics:react-face-detect": {
+    "summary": "사진에서 얼굴을 감지하는 face-api.js를 React에 연결했습니다. 브라우저에서 모델 파일을 불러오고 사진 입력을 추론 결과로 이어가는 과정을 학습했습니다.",
+    "context": "브라우저 머신러닝 라이브러리를 UI와 결합하기 위한 학습 예제입니다.",
+    "contribution": ["React 얼굴 감지 예제 구현"],
+    "implementation": [
+      {
+        "title": "모델 준비와 사진 추론",
+        "body": "프로젝트에 모델 파일을 두고 face-api.js로 로드한 뒤 사진의 얼굴을 감지합니다. React 화면의 사용자 입력과 비동기 모델 준비·실행을 연결하는 예제입니다."
+      }
+    ],
+    "evidence": [
+      "모델 파일 로딩과 얼굴 감지 호출",
+      "사진 입력 후 표시되는 감지 결과"
+    ],
+    "limitations": [
+      "모델을 직접 학습한 프로젝트가 아니라 기존 face-api.js 모델을 연결한 학습입니다."
+    ]
+  },
+  "original:react-basics:react-youtube": {
+    "summary": "YouTube API의 영상 목록과 상세 데이터를 화면에 연결하고 API 호출부를 service로 분리했습니다. UI 컴포넌트가 외부 요청 코드와 직접 섞이지 않게 구성하는 방법을 학습했습니다.",
+    "context": "외부 API 기반 목록·상세 UI와 코드 책임 분리를 익히기 위한 학습 앱입니다.",
+    "contribution": ["영상 목록·상세 앱 학습 구현"],
+    "implementation": [
+      {
+        "title": "서비스 주입과 선택 상태",
+        "body": "App에 youtube 서비스를 props로 받고 mostPopular·search 메서드를 호출합니다. 영상 목록과 선택 영상을 별도 상태로 두고 새 검색에서는 선택을 해제하며 상세 유무에 따라 목록의 grid·list 표시를 바꿉니다."
+      }
+    ],
+    "evidence": [
+      "react-youtube/src/app.jsx의 서비스 주입·검색·선택 상태",
+      "src/service/youtube.js·youtube-fetch.js",
+      "VideoList·VideoDetail 컴포넌트"
+    ],
+    "limitations": [
+      "YouTube API 연결 설정과 사용 한도에 따라 실행 상태가 달라집니다."
+    ]
+  },
+  "original:react-basics:react-swiper": {
+    "summary": "영화 목록과 상세 화면을 라우팅으로 나눴습니다. 강의를 따라 외부 데이터를 가져오는 동작과 주소별 페이지 구성을 연결한 학습 앱입니다.",
+    "context": "React에서 목록·상세 패턴과 API 요청을 학습하기 위한 프로젝트입니다.",
+    "contribution": ["강의 기반 영화 앱 구현"],
+    "implementation": [
+      {
+        "title": "목록과 상세의 라우트 분리",
+        "body": "React Router로 영화 목록과 상세 페이지를 나누고 axios로 데이터를 가져옵니다. 같은 데이터 영역을 목록과 개별 페이지에서 다르게 표시하는 구성을 학습했습니다."
+      }
+    ],
+    "evidence": ["영화 목록·상세 라우트", "axios 요청과 결과 렌더링"],
+    "limitations": []
+  },
+  "original:react-basics:react-practice4": {
+    "summary": "CoinGecko 시세 응답을 목록으로 표시하고 입력한 검색어로 이름을 필터링했습니다. 외부 데이터 상태와 검색어 상태를 나눠 비동기 요청 결과를 탐색하는 방법을 학습했습니다.",
+    "context": "React에 axios 기반 외부 데이터 요청을 연결하기 위한 학습 프로젝트입니다.",
+    "contribution": ["코인 시세 목록 예제 구현"],
+    "implementation": [
+      {
+        "title": "서버 응답과 검색 상태 분리",
+        "body": "useEffect에서 axios로 시세를 가져와 coins에 저장하고 search는 별도 상태로 둡니다. 소문자로 정규화한 이름에 includes 필터를 적용한 뒤 Coin 컴포넌트 목록으로 표시합니다."
+      }
+    ],
+    "evidence": [
+      "react-practice4/src/App.js의 useEffect·axios·filter",
+      "Coin 컴포넌트에 전달하는 시세 필드"
+    ],
+    "limitations": [
+      "시세 표시 학습이며 거래 기능은 설명 범위에 포함하지 않습니다."
+    ]
+  },
+  "original:react-basics:react-axios-practice": {
+    "summary": "axios 호출 패턴을 여러 방식으로 작성하며 요청 코드를 비교했습니다. 특정 서비스 화면보다 외부 데이터를 불러오는 코드의 형태를 분리해 연습한 예제입니다.",
+    "context": "React 프로젝트에서 HTTP 호출 코드를 작성하는 방법을 익히기 위한 학습입니다.",
+    "contribution": ["axios 호출 패턴 학습 예제 구현"],
+    "implementation": [
+      {
+        "title": "인스턴스와 설정 객체 호출 비교",
+        "body": "AxiosT1에서 baseURL을 둔 axios.create 인스턴스 호출과 method·url 설정 객체를 넘기는 호출을 나란히 작성했습니다. 응답의 영화 목록을 클래스 상태에 넣어 제목 목록으로 표시합니다."
+      }
+    ],
+    "evidence": [
+      "react-axios-practice/src/AxiosT1.js의 두 호출 방식",
+      "AxiosT2.js·PersonaList.js의 연관 예제"
+    ],
+    "limitations": []
+  },
+  "original:react-basics:react-practice5": {
+    "summary": "투두 앱의 목록·입력·개별 항목을 컴포넌트로 나눴습니다. 기능을 추가하는 것보다 상태와 이벤트를 어느 컴포넌트에 둘지 학습한 예제입니다.",
+    "context": "하나의 화면을 역할별 React 컴포넌트로 분리하는 연습입니다.",
+    "contribution": ["투두 UI 컴포넌트 분리 학습"],
+    "implementation": [
+      {
+        "title": "입력·목록·편집 책임 분리",
+        "body": "TodoList가 추가·수정·삭제·완료 콜백을 소유하고 TodoForm과 Todo에 전달합니다. 공백 입력을 거르고, Todo는 편집할 id·value를 별도 상태로 둬 같은 폼을 추가와 수정에 사용합니다."
+      }
+    ],
+    "evidence": [
+      "react-practice5/src/components/TodoList.js",
+      "Todo.js의 edit 상태와 TodoForm 재사용"
+    ],
+    "limitations": []
+  },
+  "original:react-basics:react-practice3": {
+    "summary": "여러 페이지를 React Router로 연결하고 아이콘을 포함한 탐색 UI를 구성했습니다. 주소에 따라 화면을 나누는 방법과 페이지 이동 요소를 함께 학습했습니다.",
+    "context": "단일 화면에서 여러 페이지 구조로 확장하는 라우팅 학습 예제입니다.",
+    "contribution": ["라우팅·탐색 UI 학습 구현"],
+    "implementation": [
+      {
+        "title": "페이지 이동 요소와 라우트 연결",
+        "body": "공통 Navbar를 둔 채 Home·Reports·Products를 각각 경로에 연결했습니다. SidebarData의 메뉴 정보와 react-icons를 사용하는 탐색 UI가 페이지 라우트에 대응하는 구성을 학습했습니다."
+      }
+    ],
+    "evidence": [
+      "react-practice3/src/App.js의 세 페이지 라우트",
+      "src/components/Navbar.js·SidebarData.js"
+    ],
+    "limitations": []
+  },
+  "original:react-basics:react-practice2": {
+    "summary": "드롭다운 메뉴를 가진 내비게이션을 React 컴포넌트로 구성했습니다. 메뉴 항목과 하위 메뉴를 나누고 클릭에 따라 표시가 바뀌는 UI를 학습했습니다.",
+    "context": "내비게이션의 컴포넌트 분리와 펼침 동작을 익히기 위한 학습 예제입니다.",
+    "contribution": ["드롭다운 내비게이션 학습 구현"],
+    "implementation": [
+      {
+        "title": "메뉴 구조의 컴포넌트화",
+        "body": "내비게이션 바와 드롭다운 메뉴를 컴포넌트로 작성했습니다. 정적인 링크 묶음을 넘어 메뉴 표시와 사용자 조작을 연결했습니다."
+      }
+    ],
+    "evidence": ["내비게이션 컴포넌트와 하위 메뉴 표시 코드"],
+    "limitations": []
+  },
+  "original:react-basics:react-practice1": {
+    "summary": "모바일 메뉴의 펼침 상태와 화면 너비에 따른 버튼 표시를 React 상태로 연결했습니다. 라우터의 Link를 내비게이션 안에 사용하며 컴포넌트 기반 메뉴의 기초를 학습했습니다.",
+    "context": "React 상태로 반응형 내비게이션을 구성하고 라우터 링크를 연결하는 초기 학습 예제입니다.",
+    "contribution": ["기초 라우팅 예제 구현"],
+    "implementation": [
+      {
+        "title": "화면 너비와 메뉴 상태 분리",
+        "body": "Navbar에서 click 상태로 햄버거 메뉴와 닫기 아이콘을 전환하고, 960px 기준으로 버튼 표시를 바꿉니다. 메뉴 링크를 누르면 펼침 상태를 닫으며, App은 BrowserRouter와 기본 경로를 두는 초기 구성입니다."
+      }
+    ],
+    "evidence": [
+      "react-practice1/src/components/Navbar.js의 click·button 상태",
+      "src/App.js의 Router·Link 연결"
+    ],
+    "limitations": [
+      "연결된 모든 페이지의 내용까지 구현한 앱은 아니며 내비게이션 학습 범위입니다."
+    ]
+  },
+  "original:react-basics:react-practice7": {
+    "summary": "같은 선택 UI를 독립 토글·단일 선택·자식 콜백·함수형 상태로 각각 구현했습니다. 상태를 부모가 관리할 때와 항목이 직접 관리할 때의 차이를 작은 예제 안에서 비교했습니다.",
+    "context": "React의 클래스 상태·props·함수형 useState와 선택 상태의 소유권을 비교하는 학습 프로젝트입니다.",
+    "contribution": ["선택 상태 비교 예제 구현"],
+    "implementation": [
+      {
+        "title": "상태 소유권에 따른 선택 동작",
+        "body": "App 클래스의 active·selected·current를 각각 토글과 선택에 사용합니다. TabMenu에는 선택값과 setPage 콜백을 전달하고, List는 항목마다 useState로 독립 토글을 관리합니다. 같은 버튼 모양이라도 상태 위치에 따라 선택 동작이 달라집니다."
+      }
+    ],
+    "evidence": [
+      "react-practice7/src/App.js의 네 비교 유형",
+      "TabMenu의 props·콜백과 List의 useState"
+    ],
+    "limitations": [
+      "작은 학습 예제이며 범용 탭 컴포넌트 라이브러리는 아닙니다."
+    ]
+  },
+  "original:react-basics:react-router-practice1": {
+    "summary": "신발 목록·상세를 중첩 라우트와 URL 파라미터로 구성했습니다. 공통 페이지 안에 하위 화면을 끼워 넣는 Outlet과 주소의 slug로 데이터를 고르는 useParams를 학습했습니다.",
+    "context": "React Router의 중첩 화면과 동적 경로를 익히기 위한 상품 목록·상세 예제입니다.",
+    "contribution": ["중첩 라우트·동적 경로 학습 예제 구현"],
+    "implementation": [
+      {
+        "title": "공통 레이아웃과 동적 상세 경로",
+        "body": "Launch 컴포넌트에 Outlet을 두고 목록과 :slug 상세 경로를 연결했습니다. 상세는 useParams로 slug를 읽어 shoes 데이터에서 항목을 선택하며, 알 수 없는 상품과 경로에 대한 Not Found 분기를 둡니다."
+      }
+    ],
+    "evidence": [
+      "react-router-practice1/src/App.js의 Routes·Outlet·useParams",
+      "LaunchIndex·LaunchShoe·NotFound 컴포넌트"
+    ],
+    "limitations": [
+      "학습 당시의 라우터 API와 예제 데이터를 사용한 프로젝트입니다."
+    ]
+  },
+  "original:react-basics:react-router-practice2": {
+    "summary": "Create React App의 초기 앱 구조와 실행 환경을 남긴 학습 저장소입니다. 현재 공개 코드에서 확인되는 범위는 기본 로고·안내 화면의 React 렌더링입니다.",
+    "context": "라우팅 연습을 위해 만든 저장소이지만 현재 공개 소스는 초기 앱 구성 단계입니다.",
+    "contribution": ["React 초기 프로젝트 구성 학습"],
+    "implementation": [
+      {
+        "title": "기본 앱 진입점과 렌더링",
+        "body": "src/App.js는 React 기본 로고와 안내 링크를 표시하고 src/index.js에서 앱을 마운트합니다. 현재 코드에서 확인 가능한 컴포넌트 렌더링과 기본 프로젝트 구조를 설명합니다."
+      }
+    ],
+    "evidence": ["react-router-practice2/src/App.js와 src/index.js"],
+    "limitations": [
+      "현재 공개 소스에서 별도 라우트 구현은 확인되지 않아 라우팅 기능 성과로 소개하지 않습니다."
+    ]
+  },
+  "original:react-basics:react-styled-component": {
+    "summary": "버튼과 검색창의 변형을 props 기반 styled-components로 작성했습니다. 같은 UI 정의에서 outline·primary·square 같은 옵션에 따라 스타일이 달라지는 구성을 학습했습니다.",
+    "context": "컴포넌트 단위 스타일 정의와 사용 방식을 익히기 위한 학습 프로젝트입니다.",
+    "contribution": ["styled-components 학습 예제 구현"],
+    "implementation": [
+      {
+        "title": "props로 선택하는 스타일 변형",
+        "body": "styles/elements.js에서 공통 색상을 가져와 Buttons의 outline·primary 옵션과 SearchBar의 square 옵션을 조건부 CSS로 처리합니다. App은 같은 컴포넌트를 서로 다른 props로 배치해 결과를 비교합니다."
+      }
+    ],
+    "evidence": [
+      "react-styled-component/src/styles/elements.js",
+      "src/styles/global.js와 src/App.js의 변형 사용"
+    ],
+    "limitations": []
+  },
+  "original:react-basics:react-CRUD": {
+    "summary": "영화명과 리뷰를 입력하는 폼을 React로 작성한 초기 CRUD 학습 저장소입니다. 현재 공개 코드에서 확인되는 범위는 레이블·입력 필드·제출 버튼으로 구성한 폼 마크업입니다.",
+    "context": "CRUD 앱의 입력 화면을 구성하기 위해 시작한 학습 프로젝트입니다.",
+    "contribution": ["React 입력 폼 마크업 작성"],
+    "implementation": [
+      {
+        "title": "입력 폼의 기본 구조",
+        "body": "src/App.js에 영화명·리뷰 입력 필드와 제출 버튼을 배치했습니다. 데이터 관리 앱의 출발점인 폼 구조를 작성한 단계이며 상태 갱신과 저장 로직은 현재 공개 소스에서 확인되지 않습니다."
+      }
+    ],
+    "evidence": ["react-CRUD/src/App.js의 폼 구조"],
+    "limitations": [
+      "추가·조회·수정·삭제가 동작하는 완성된 CRUD 앱으로 소개하지 않습니다."
+    ]
+  },
+  "original:react-basics:memo": {
+    "summary": "메모 입력이 멈춘 뒤에 저장하도록 lodash.debounce를 연결했습니다. 매 입력 이벤트마다 저장하는 방식과 사용자 입력 주기를 구분한 학습 앱입니다.",
+    "context": "연속 입력 이벤트와 저장 시점을 조절하는 방법을 익히기 위한 메모 앱입니다.",
+    "contribution": ["메모 앱 및 debounce 저장 학습 구현"],
+    "implementation": [
+      {
+        "title": "브라우저 저장과 지연 호출",
+        "body": "localStorage 데이터를 초기 memos 상태로 읽고 lodash.debounce(setItem, 5000)로 저장 호출을 지연합니다. 제목·본문·생성·수정 시각과 선택 인덱스를 함께 다루며 SideBar와 MemoContainer로 화면을 나눴습니다."
+      }
+    ],
+    "evidence": [
+      "memo/src/App.jsx의 debounce·선택 인덱스",
+      "src/lib/storage.js의 localStorage JSON 저장",
+      "MemoContainer의 제목·본문 입력"
+    ],
+    "limitations": [
+      "메모 수정 시 배열 상태 대신 단일 메모 객체를 반환하는 코드가 남아 있어 완성된 저장 앱과 구분하는 학습 예제입니다."
+    ]
+  },
+  "original:react-basics:habit-tracker": {
+    "summary": "습관별 횟수 증가·감소·추가·삭제·초기화를 클래스형 컴포넌트로 구현했습니다. 항목별 상태와 전체 활성 습관 수를 같은 데이터에서 계산하는 방법을 학습했습니다.",
+    "context": "React 클래스 컴포넌트의 상태 관리와 UI 구성을 익히기 위한 학습 앱입니다.",
+    "contribution": ["클래스형 습관 기록 앱 구현"],
+    "implementation": [
+      {
+        "title": "클래스 상태와 파생 표시",
+        "body": "App의 habits 배열을 map·filter로 갱신하고 감소 값은 0 아래로 내려가지 않게 처리합니다. Navbar에는 count가 0보다 큰 항목 수를 전달하고 Habits에는 변경 콜백을 내려보냅니다."
+      }
+    ],
+    "evidence": [
+      "habit-tracker/src/app.jsx의 상태 갱신",
+      "Navbar의 활성 항목 수와 Habits의 콜백 연결"
+    ],
+    "limitations": []
+  },
+  "original:react-basics:new-habit-tracker": {
+    "summary": "습관 기록 앱에서 PureComponent와 변경된 항목만 새 객체로 만드는 상태 갱신을 함께 학습했습니다. 별도의 SimpleHabit 예제에서는 useState·useRef·useEffect를 사용해 함수형 컴포넌트도 비교했습니다.",
+    "context": "클래스형 앱의 렌더링과 상태 참조를 살펴보고 Hooks 예제를 추가한 학습 프로젝트입니다.",
+    "contribution": ["습관 앱의 상태 갱신·PureComponent·Hooks 비교 학습"],
+    "implementation": [
+      {
+        "title": "상태 참조와 얕은 비교",
+        "body": "App은 클래스형으로 유지하며 map에서 변경 대상 습관만 새 객체로 만들고 나머지 참조를 유지합니다. 개별 Habit은 PureComponent를 사용하고 마운트·언마운트 로그를 두어 동작을 살펴봅니다."
+      },
+      {
+        "title": "독립된 함수형 비교 예제",
+        "body": "SimpleHabit에는 useState 카운터, useRef, count를 의존성으로 둔 useEffect 예제를 작성했습니다. 전체 앱의 함수형 전환이 아니라 별도 컴포넌트에서 Hooks 사용을 비교한 범위입니다."
+      }
+    ],
+    "evidence": [
+      "new-habit-tracker/src/app.jsx의 클래스형 상태 갱신",
+      "src/components/habit.jsx의 PureComponent",
+      "src/components/simpleHabit.jsx의 Hooks"
+    ],
+    "limitations": [
+      "전체 앱을 함수형으로 재작성한 버전은 아니며 렌더링 속도 향상 수치는 포함하지 않습니다."
+    ]
+  },
+  "original:react-basics:assignment": {
+    "summary": "React 없이 TypeScript로 PokeAPI 검색 화면을 만들었습니다. 프레임워크의 렌더링 기능에 기대지 않고 API 데이터와 브라우저 화면을 연결한 과제입니다.",
+    "context": "TypeScript와 브라우저 API만으로 외부 데이터 기반 화면을 구성하는 학습 과제입니다.",
+    "contribution": ["TypeScript 기반 포켓몬 검색 과제 구현"],
+    "implementation": [
+      {
+        "title": "타입이 있는 API·화면 연결",
+        "body": "PokeAPI에서 검색 데이터를 가져와 화면에 표시했습니다. React를 사용하지 않고 TypeScript 코드로 요청과 화면 갱신을 다루는 방식입니다."
+      }
+    ],
+    "evidence": [
+      "TypeScript의 PokeAPI 요청·데이터 처리",
+      "검색 입력과 DOM 표시 코드"
+    ],
+    "limitations": []
+  },
+  "original:react-basics:data_structure": {
+    "summary": "JavaScript로 연결 리스트를 직접 구현하고 구조를 화면에 그렸습니다. 자료구조를 사용만 하는 데서 나아가 노드와 연결 관계를 코드와 화면으로 함께 확인했습니다.",
+    "context": "연결 리스트의 동작과 데이터 관계를 이해하기 위한 vanilla JavaScript 학습 프로젝트입니다.",
+    "contribution": ["연결 리스트 구현 및 시각화 학습"],
+    "implementation": [
+      {
+        "title": "자료구조와 표시의 대응",
+        "body": "연결 리스트를 JavaScript로 작성하고 그 구조를 화면에 표시했습니다. 내부 노드 관계와 화면에서 보이는 연결을 비교하면서 자료구조의 동작을 학습했습니다."
+      }
+    ],
+    "evidence": [
+      "연결 리스트의 노드·연결 코드",
+      "데이터 구조를 그리는 화면 처리"
+    ],
+    "limitations": ["학습 예제이며 범용 자료구조 라이브러리는 아닙니다."]
+  },
+  "original:react-basics:drag-n-drop": {
+    "summary": "외부 드래그 라이브러리 없이 브라우저 API로 드래그 앤 드롭을 구현했습니다. 라이브러리가 감추는 입력 이벤트 흐름을 직접 연결한 학습 예제입니다.",
+    "context": "브라우저의 기본 드래그 이벤트와 화면 상태 변경을 익히기 위한 vanilla JavaScript 프로젝트입니다.",
+    "contribution": ["브라우저 API 기반 드래그 앤 드롭 구현"],
+    "implementation": [
+      {
+        "title": "네이티브 드래그 이벤트 연결",
+        "body": "브라우저 드래그 앤 드롭 API를 직접 사용했습니다. 끌기 시작과 드롭 대상의 이벤트가 화면 동작으로 이어지는 코드를 확인할 수 있습니다."
+      }
+    ],
+    "evidence": ["드래그·드롭 이벤트 핸들러와 대상 처리"],
+    "limitations": [
+      "학습 예제이며 다양한 입력 장치와 접근성까지 검증한 범용 라이브러리는 아닙니다."
+    ]
+  },
+  "original:react-basics:canvas-test": {
+    "summary": "Canvas 2D에 삼각형과 다각형을 그리며 좌표와 경로 기반 렌더링을 학습했습니다. DOM 요소 대신 그리기 명령으로 화면을 만드는 초기 예제입니다.",
+    "context": "Canvas 2D의 기본 도형과 경로 작성 방식을 익히기 위한 학습 프로젝트입니다.",
+    "contribution": ["Canvas 2D 도형 예제 구현"],
+    "implementation": [
+      {
+        "title": "좌표와 경로로 도형 구성",
+        "body": "캔버스에 삼각형·다각형을 그렸습니다. 여러 꼭짓점의 좌표를 연결하는 경로와 최종 도형 표현을 학습했습니다."
+      }
+    ],
+    "evidence": ["Canvas 2D 경로·좌표 명령과 도형 표시"],
+    "limitations": []
+  },
+  "additional:on-the-book": {
+    "summary": "도서를 고르고 내용을 읽다가 책 속 3D 공간을 직접 탐색할 수 있는 웹 서비스입니다. 관리자에서 편집한 책·장면·모델 배치를 임시 저장과 공개본으로 구분해 사용자 화면에 연결합니다.",
+    "context": "도서 탐색과 읽기를 공간 경험으로 확장하고, 제작자가 콘텐츠와 3D 장면을 관리할 수 있도록 만든 서비스입니다.",
+    "contribution": [],
+    "implementation": [
+      {
+        "title": "탐색 상태와 읽기 위치 보존",
+        "body": "도서 목록·상세·3D 공간을 주소로 구분하고 검색·분류·정렬·보기 방식 및 마지막 방문 장면을 관리합니다. 상세에서 돌아왔을 때 검색 조건과 목록 위치를 유지하며 브라우저에 이어 읽기 상태를 저장합니다."
+      },
+      {
+        "title": "공통 장면과 콘텐츠 발행 모델",
+        "body": "shared의 3D 화면과 좌표 구성을 관리자 미리보기·사용자 화면이 함께 사용합니다. Supabase의 books·chapters·placements·models 등을 편집하고, 공개 시 publications에 공개본을 남겨 독자 화면은 최신 공개본을 읽게 구성했습니다."
+      },
+      {
+        "title": "3D 에셋과 원본의 보존",
+        "body": "GLB·PNG는 Supabase Storage에 올리고 assets에 크기·SHA-256·연결 대상을 기록합니다. 관리에서 제거한 파일도 공개된 장면의 원본을 보존하기 위해 즉시 지우지 않습니다. 모델 접근 범위에 따라 애니메이션과 글귀 표시가 달라집니다."
+      }
+    ],
+    "evidence": [
+      "on-the-book/README.md의 사용자 흐름·관리·데이터 구성",
+      "shared의 사용자·관리자 공통 3D 화면",
+      "supabase/migrations의 공개본·에셋 구조",
+      "도서 상세→장면 탐색→책장 복귀 흐름"
+    ],
+    "limitations": [
+      "사용자 읽기 위치는 해당 브라우저에 저장되며 기기 간 동기화하지 않습니다.",
+      "관리자 로그인은 공개 웹앱 시연과 구분하며 계정별 권한 체계는 포함하지 않습니다."
+    ]
+  },
+  "original:game-lab:bridge": {
+    "summary": "선택한 유리판이 깨지고 캐릭터가 떨어지는 과정을 물리 엔진으로 처리한 게임입니다. 포인터 선택·장면 전환·물리 결과가 하나의 게임 흐름으로 이어지도록 구성했습니다.",
+    "context": "3D 선택 인터랙션과 물리 시뮬레이션을 결합하기 위한 개인 게임 실험입니다.",
+    "contribution": ["개인 게임 실험 구현"],
+    "implementation": [
+      {
+        "title": "선택과 물리 결과의 연결",
+        "body": "Raycaster로 장면의 대상을 선택하고 cannon 기반 물리 처리로 판 파손과 낙하를 표현합니다. 화면 효과만으로 낙하를 흉내 내는 대신 물리 상태를 게임 결과에 연결했습니다."
+      },
+      {
+        "title": "이동·전환 연출",
+        "body": "GSAP을 사용해 게임의 이동과 화면 전환을 구성했습니다. 선택 입력에서 시각적 전환과 물리 결과로 이어지는 순서를 확인할 수 있습니다."
+      }
+    ],
+    "evidence": [
+      "Raycaster 선택과 cannon 물리 처리",
+      "판 파손·낙하 및 GSAP 전환"
+    ],
+    "limitations": []
+  },
+  "original:game-lab:first-person-perspective": {
+    "summary": "1인칭으로 공간을 걸어 다니며 충돌을 처리하는 3D 데모입니다. 키보드와 터치 입력을 구분해 같은 이동 경험에 연결했습니다.",
+    "context": "브라우저에서 1인칭 이동·충돌·다중 입력 방식을 학습한 개인 실험입니다.",
+    "contribution": ["개인 1인칭 이동 실험 구현"],
+    "implementation": [
+      {
+        "title": "렌더링과 충돌 처리",
+        "body": "Three.js로 공간을 그리고 cannon-es로 충돌을 처리합니다. 카메라 이동이 단순 좌표 변경에 그치지 않고 공간의 충돌 상태와 연결되도록 구성했습니다."
+      },
+      {
+        "title": "입력 장치별 조작 분리",
+        "body": "키보드와 터치 조작을 별도로 구성했습니다. 서로 다른 입력이 같은 1인칭 이동 동작으로 이어지는 구조를 다룹니다."
+      }
+    ],
+    "evidence": ["cannon-es 충돌 월드와 이동 처리", "키보드·터치 입력 경로"],
+    "limitations": []
+  },
+  "original:game-lab:lets-fps": {
+    "summary": "여러 사용자가 참여하는 FPS를 구성하며 3D 충돌 월드와 로그인·방 상태를 연결했습니다. 그래픽 장면과 사용자 세션 데이터를 함께 다룬 실험입니다.",
+    "context": "브라우저 3D 게임에서 플레이 공간과 여러 사용자의 참여 상태를 연결하기 위한 개인 프로젝트입니다.",
+    "contribution": ["개인 FPS 실험 구현"],
+    "implementation": [
+      {
+        "title": "GLTF 충돌 월드",
+        "body": "Three.js·Vite 기반 장면에서 충돌용 월드를 GLTF로 불러옵니다. 화면에 보이는 공간과 이동에 사용하는 월드 데이터를 연결한 구성을 확인할 수 있습니다."
+      },
+      {
+        "title": "계정과 방 상태",
+        "body": "Supabase에 로그인과 방 상태를 둡니다. 장면 안의 플레이 조작과 사용자가 어느 방에 참여하는지에 관한 데이터를 함께 다룹니다."
+      }
+    ],
+    "evidence": ["GLTF 월드 로딩과 충돌 처리", "Supabase 인증·방 상태 코드"],
+    "limitations": [
+      "여러 사용자의 전체 실시간 동기화 품질과 동시 접속 규모는 확인된 자료에 포함하지 않습니다.",
+      "인증이 필요한 실행은 공개 자료와 구분합니다."
+    ]
+  },
+  "original:game-lab:neon-fist": {
+    "summary": "백엔드와 외부 에셋 없이 Canvas 2D와 Web Audio API로 만든 1:1 격투 게임입니다. UI·파티클·게이지를 코드로 그리고 타격음과 배경 음악도 실행 중 합성합니다.",
+    "context": "브라우저 기본 그래픽·오디오 API로 게임의 화면과 소리를 구성하는 개인 실험입니다.",
+    "contribution": ["개인 격투 게임 실험 구현"],
+    "implementation": [
+      {
+        "title": "코드로 그리는 게임 화면",
+        "body": "Canvas 2D에서 UI·파티클·게이지를 구성합니다. 외부 이미지 에셋 대신 그리기 코드로 게임 상태를 표현하는 방식입니다."
+      },
+      {
+        "title": "실시간 오디오 합성",
+        "body": "Web Audio API로 타격음과 배경 음악을 합성합니다. 게임의 시각적 상태와 소리 생성이 같은 실행 흐름에서 연결됩니다."
+      }
+    ],
+    "evidence": [
+      "Canvas 2D의 UI·파티클·게이지 처리",
+      "Web Audio API의 타격음·배경 음악 생성",
+      "게임 시작과 키보드 조작"
+    ],
+    "limitations": []
+  },
+  "original:game-lab:game-cabinet": {
+    "summary": "3D 아케이드 캐비닛 안에서 웹게임을 실행하는 인터페이스입니다. 3D 오브젝트를 보는 화면과 실제로 조작할 웹 콘텐츠를 한 공간에 결합했습니다.",
+    "context": "웹게임을 일반 링크 목록과 다른 방식으로 탐색하고 실행하기 위한 개인 인터랙션 실험입니다.",
+    "contribution": ["개인 3D 웹게임 인터페이스 실험 구현"],
+    "implementation": [
+      {
+        "title": "3D 오브젝트와 웹 콘텐츠 결합",
+        "body": "Next.js와 React Three Fiber로 아케이드 캐비닛을 구성하고 선택한 웹게임을 캐비닛 화면에 표시합니다. 공간상의 오브젝트와 실제 웹 콘텐츠 실행 영역을 연결한 방식입니다."
+      },
+      {
+        "title": "게임 목록과 실행 대상 관리",
+        "body": "선별한 게임을 캐비닛에서 열 수 있도록 연결합니다. 외부 게임 콘텐츠 자체와 이를 담는 3D 실행 인터페이스의 책임을 구분해 볼 수 있습니다."
+      }
+    ],
+    "evidence": [
+      "React Three Fiber 캐비닛 장면",
+      "게임 목록과 캐비닛 화면의 연결"
+    ],
+    "limitations": [
+      "연결된 외부 게임 전체를 직접 개발했다는 의미는 아닙니다.",
+      "외부 게임의 실행 여부는 각 서비스의 정책과 상태에 영향을 받습니다."
+    ]
+  }
+}

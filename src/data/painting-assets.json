@@ -1,0 +1,443 @@
+{
+  "A01-01": {
+    "gallery": "/portfolio/artworks/A01-01.gallery.webp",
+    "detail": "/portfolio/artworks/A01-01.detail.webp",
+    "width": 1484,
+    "height": 1060,
+    "alt": "도토리 토픽 · 사용자단: 도토리와 새싹 (수채화)",
+    "style": "수채화",
+    "sourceSha256": "d30a02587e49e9eee834b777d47119dcb0d452335a34d1baf5fa68f834668d31"
+  },
+  "A01-02": {
+    "gallery": "/portfolio/artworks/A01-02.gallery.webp",
+    "detail": "/portfolio/artworks/A01-02.detail.webp",
+    "width": 1484,
+    "height": 1060,
+    "alt": "도토리 토픽 · 관리자단: 도토리 머리의 열쇠 (흑연 드로잉)",
+    "style": "흑연 드로잉",
+    "sourceSha256": "4ccc5ace7f33914f32317e1386457c86fde119fa98e8dcec1965de9c8a862896"
+  },
+  "P01-01-F": {
+    "gallery": "/portfolio/artworks/P01-01-F.gallery.webp",
+    "detail": "/portfolio/artworks/P01-01-F.detail.webp",
+    "width": 1484,
+    "height": 1060,
+    "alt": "도토리 문의 관리자: 열린 편지 (수채화)",
+    "style": "수채화",
+    "sourceSha256": "029ac823598f069db5dc728de83095bf2cac8cc22dfeefb93726f13bd1180a44"
+  },
+  "P01-01-B": {
+    "gallery": "/portfolio/artworks/P01-01-B.gallery.webp",
+    "detail": "/portfolio/artworks/P01-01-B.detail.webp",
+    "width": 1484,
+    "height": 1060,
+    "alt": "교육 서비스 화면 연구: 배움의 여러 자리 (타이포그래피 포스터)",
+    "style": "타이포그래피 포스터",
+    "sourceSha256": "60c59fafa26c0c91f67bdb82bbb79543c882b1c857192e515e7b4f4916a1bd70"
+  },
+  "A01-03": {
+    "gallery": "/portfolio/artworks/A01-03.gallery.webp",
+    "detail": "/portfolio/artworks/A01-03.detail.webp",
+    "width": 1484,
+    "height": 1060,
+    "alt": "센서 3D 시각화 대시보드: 잎과 이슬 한 방울 (수채화)",
+    "style": "수채화",
+    "sourceSha256": "2e9896419febb74074e685972e231cae8973168418af85dcaf995cbe4ad0ef2b"
+  },
+  "A01-04": {
+    "gallery": "/portfolio/artworks/A01-04.gallery.webp",
+    "detail": "/portfolio/artworks/A01-04.detail.webp",
+    "width": 1484,
+    "height": 1060,
+    "alt": "CONNECT BEE: 꽃에 내려앉은 벌 (아크릴 임파스토)",
+    "style": "아크릴 임파스토",
+    "sourceSha256": "aaaa1f68458924c74c658840eee96f42e772be8021d7054231afc6e46f15a2e6"
+  },
+  "P01-03-F": {
+    "gallery": "/portfolio/artworks/P01-03-F.gallery.webp",
+    "detail": "/portfolio/artworks/P01-03-F.detail.webp",
+    "width": 1484,
+    "height": 1060,
+    "alt": "DADOKe 전자책 · 오디오북: 책을 감싼 헤드폰 (아크릴 임파스토)",
+    "style": "아크릴 임파스토",
+    "sourceSha256": "8dd84ce7afea1a32558f72cc1941871082b78f630dc78ed670011c73d2e81af6"
+  },
+  "P01-03-B": {
+    "gallery": "/portfolio/artworks/P01-03-B.gallery.webp",
+    "detail": "/portfolio/artworks/P01-03-B.detail.webp",
+    "width": 1484,
+    "height": 1060,
+    "alt": "북차카 홈페이지: 바퀴 달린 책 (과슈·색연필)",
+    "style": "과슈·색연필",
+    "sourceSha256": "1cc18ee1e8920bcc0475c40b6081c5e50a896063d0ab79dcd88aa7c4c1bd6a3e"
+  },
+  "A01-05": {
+    "gallery": "/portfolio/artworks/A01-05.gallery.webp",
+    "detail": "/portfolio/artworks/A01-05.detail.webp",
+    "width": 1484,
+    "height": 1060,
+    "alt": "케듀올 홈페이지: 하나로 이어진 두 잎 (수채화)",
+    "style": "수채화",
+    "sourceSha256": "4f9fba18656be75dc9ad409b4cabf3eac74c4db0cc5d117366a6bf18b0b1e463"
+  },
+  "A01-END": {
+    "gallery": "/portfolio/artworks/A01-END.gallery.webp",
+    "detail": "/portfolio/artworks/A01-END.detail.webp",
+    "width": 1484,
+    "height": 1060,
+    "alt": "부클리 홈페이지: 다른 제본의 같은 이야기 (펜·수채화)",
+    "style": "펜·수채화",
+    "sourceSha256": "a8c634d57e3639364d81586509b2df5835c797cd1f733762cc904f7777f922d4"
+  },
+  "A01-10": {
+    "gallery": "/portfolio/artworks/A01-10.gallery.webp",
+    "detail": "/portfolio/artworks/A01-10.detail.webp",
+    "width": 1484,
+    "height": 1060,
+    "alt": "위즈덤셀러 홈페이지: 종이배의 첫 출발 (수채화)",
+    "style": "수채화",
+    "sourceSha256": "1049ca2bfa10cb242eaaa6b72001194fb9016f5b6f5cfe705591240b1ed9f936"
+  },
+  "P01-04-B": {
+    "gallery": "/portfolio/artworks/P01-04-B.gallery.webp",
+    "detail": "/portfolio/artworks/P01-04-B.detail.webp",
+    "width": 1484,
+    "height": 1060,
+    "alt": "글로윈 비나 홈페이지: 책 위의 찻잔 (펜·수채화)",
+    "style": "펜·수채화",
+    "sourceSha256": "bf27346f1e34acabc23347919ed8fa0af3b2b1e584a13f9be24c05f3694c8493"
+  },
+  "P01-04-F": {
+    "gallery": "/portfolio/artworks/P01-04-F.gallery.webp",
+    "detail": "/portfolio/artworks/P01-04-F.detail.webp",
+    "width": 1484,
+    "height": 1060,
+    "alt": "비블리아 홈페이지: 전달할 책 묶음 (흑연 드로잉)",
+    "style": "흑연 드로잉",
+    "sourceSha256": "85aca07f5faa61fa01b69de363fa6898919d5e6d6d036252d259b7bcb1d03ae3"
+  },
+  "A01-09": {
+    "gallery": "/portfolio/artworks/A01-09.gallery.webp",
+    "detail": "/portfolio/artworks/A01-09.detail.webp",
+    "width": 1484,
+    "height": 1060,
+    "alt": "ShortForm Knowledge: 짧은 필름 한 바퀴 (팝아트 실크스크린)",
+    "style": "팝아트 실크스크린",
+    "sourceSha256": "d7f92e543a4cfee56d7929905030d0dc3060487db6d86dc6e7581363680e36ce"
+  },
+  "A01-08": {
+    "gallery": "/portfolio/artworks/A01-08.gallery.webp",
+    "detail": "/portfolio/artworks/A01-08.detail.webp",
+    "width": 1484,
+    "height": 1060,
+    "alt": "밀리 관리자 대시보드: 책과 도장 (흑연 드로잉)",
+    "style": "흑연 드로잉",
+    "sourceSha256": "b3a8e1beea09be75746a5410b9fce1d66167cb452d4cede131cc32374f518fec"
+  },
+  "A01-07": {
+    "gallery": "/portfolio/artworks/A01-07.gallery.webp",
+    "detail": "/portfolio/artworks/A01-07.detail.webp",
+    "width": 1484,
+    "height": 1060,
+    "alt": "모두가딜러 · 웹서비스: 다음 주인의 열쇠 (과슈·색연필)",
+    "style": "과슈·색연필",
+    "sourceSha256": "52629208fa1b002fdb206b939d286bb201612802ecd2832b711d957543fc2e40"
+  },
+  "P01-02-B": {
+    "gallery": "/portfolio/artworks/P01-02-B.gallery.webp",
+    "detail": "/portfolio/artworks/P01-02-B.detail.webp",
+    "width": 1484,
+    "height": 1060,
+    "alt": "레거시 정리 · 성능 개선: 가벼워진 바퀴 (흑연 드로잉)",
+    "style": "흑연 드로잉",
+    "sourceSha256": "c960c002f0474a2e877fbfa9703e364c2ad447328d233075ccba2668712bb76b"
+  },
+  "A01-06": {
+    "gallery": "/portfolio/artworks/A01-06.gallery.webp",
+    "detail": "/portfolio/artworks/A01-06.detail.webp",
+    "width": 1484,
+    "height": 1060,
+    "alt": "모두가딜러 · 관리자: 공개 전의 차 (팝아트 실크스크린)",
+    "style": "팝아트 실크스크린",
+    "sourceSha256": "480fd9063b58a1d97ce927119dc23962ec41d2a0329714fc02bb08aaddf7ab1f"
+  },
+  "P01-02-F": {
+    "gallery": "/portfolio/artworks/P01-02-F.gallery.webp",
+    "detail": "/portfolio/artworks/P01-02-F.detail.webp",
+    "width": 1484,
+    "height": 1060,
+    "alt": "문서화 · 비개발 직군 협업: 함께 펴는 한 장 (과슈·색연필)",
+    "style": "과슈·색연필",
+    "sourceSha256": "5337791dcbf7e26bce99e348888cdbc2babf9a4531ac668573a2cca6370f510a"
+  },
+  "A02-01": {
+    "gallery": "/portfolio/artworks/A02-01.gallery.webp",
+    "detail": "/portfolio/artworks/A02-01.detail.webp",
+    "width": 1484,
+    "height": 1060,
+    "alt": "문서 통합 관리 서비스: 한 폭으로 모인 실 (수채화)",
+    "style": "수채화",
+    "sourceSha256": "cb7b1d319a848a21e3d829f799fb720ad403728e182e6dfa6761a8e12aacc670"
+  },
+  "A02-02": {
+    "gallery": "/portfolio/artworks/A02-02.gallery.webp",
+    "detail": "/portfolio/artworks/A02-02.detail.webp",
+    "width": 1484,
+    "height": 1060,
+    "alt": "NestJS 학습: 세 가닥의 매듭 (색연필)",
+    "style": "색연필",
+    "sourceSha256": "6502bff3722b5b5dc0e8b790c6604135efcd5a69629f2b789be590f395c90376"
+  },
+  "P02-01-F": {
+    "gallery": "/portfolio/artworks/P02-01-F.gallery.webp",
+    "detail": "/portfolio/artworks/P02-01-F.detail.webp",
+    "width": 1484,
+    "height": 1060,
+    "alt": "반복 작업을 SKILL로 만드는 법: 다시 쓰는 옷깃의 본 (흑연 드로잉)",
+    "style": "흑연 드로잉",
+    "sourceSha256": "c990679916ef6a3e44beb7dea86157e318011132e2228738e0de363f2eb76ddb"
+  },
+  "A02-03": {
+    "gallery": "/portfolio/artworks/A02-03.gallery.webp",
+    "detail": "/portfolio/artworks/A02-03.detail.webp",
+    "width": 1484,
+    "height": 1060,
+    "alt": "요구사항 게이트 하네스: 닫힌 카라비너 (펜·수채화)",
+    "style": "펜·수채화",
+    "sourceSha256": "59194e8778346ab1da4644f0d6486241db46665b0d6e94c4e8886a7ac591faff"
+  },
+  "A02-04": {
+    "gallery": "/portfolio/artworks/A02-04.gallery.webp",
+    "detail": "/portfolio/artworks/A02-04.detail.webp",
+    "width": 1484,
+    "height": 1060,
+    "alt": "AI 개발 파이프라인: 맥락을 잇는 종이 (에디토리얼 포스터)",
+    "style": "에디토리얼 포스터",
+    "sourceSha256": "589202eb73fe344ba926705a9560182081000db4ec3a3baf0b0d7beb24d5ca13"
+  },
+  "P02-03-F": {
+    "gallery": "/portfolio/artworks/P02-03-F.gallery.webp",
+    "detail": "/portfolio/artworks/P02-03-F.detail.webp",
+    "width": 1484,
+    "height": 1060,
+    "alt": "비개발자용 에이전트 IDE: 역할을 조율하는 지휘봉 (타이포그래피 포스터)",
+    "style": "타이포그래피 포스터",
+    "sourceSha256": "9cb3a901f99f9a6741b805defd4f16e28ece49e7233f3d276e0c08b4a71e0c8e"
+  },
+  "A02-05": {
+    "gallery": "/portfolio/artworks/A02-05.gallery.webp",
+    "detail": "/portfolio/artworks/A02-05.detail.webp",
+    "width": 1484,
+    "height": 1060,
+    "alt": "TOPIK AI 검증 하네스: 엇갈림을 살피는 렌즈 (흑연 드로잉)",
+    "style": "흑연 드로잉",
+    "sourceSha256": "bde8ae706f7034843fcc75001011790869d08b46d8cacbf76133f17c177cdf30"
+  },
+  "A02-END": {
+    "gallery": "/portfolio/artworks/A02-END.gallery.webp",
+    "detail": "/portfolio/artworks/A02-END.detail.webp",
+    "width": 1484,
+    "height": 1060,
+    "alt": "Planit AI 기획 워크스페이스: 맞대기 전의 두 가지 (흑연 드로잉)",
+    "style": "흑연 드로잉",
+    "sourceSha256": "161063746632dde8c8919a3b59ab659023a3585463f28a60827d2dffb2113e4d"
+  },
+  "A02-10": {
+    "gallery": "/portfolio/artworks/A02-10.gallery.webp",
+    "detail": "/portfolio/artworks/A02-10.detail.webp",
+    "width": 1484,
+    "height": 1060,
+    "alt": "StoryQuest 콘텐츠 CMS: 막 안의 작은 잎 (과슈·색연필)",
+    "style": "과슈·색연필",
+    "sourceSha256": "fcb191e50c4a3d9e4318a6c85cab1e73ad26ff2cde56efca7ef87294bc102913"
+  },
+  "P02-04-F": {
+    "gallery": "/portfolio/artworks/P02-04-F.gallery.webp",
+    "detail": "/portfolio/artworks/P02-04-F.detail.webp",
+    "width": 1484,
+    "height": 1060,
+    "alt": "검사 가능한 AI 영상 제작 루프: 끊기지 않는 필름 (타이포그래피 포스터)",
+    "style": "타이포그래피 포스터",
+    "sourceSha256": "9033c68c64e9e0e45004b526e853e2070f812bb8e92c41c40db0642494a3d545"
+  },
+  "A02-09": {
+    "gallery": "/portfolio/artworks/A02-09.gallery.webp",
+    "detail": "/portfolio/artworks/A02-09.detail.webp",
+    "width": 1484,
+    "height": 1060,
+    "alt": "VIVE 독서 보조 도구: 책에 남긴 꽃 (펜화)",
+    "style": "펜화",
+    "sourceSha256": "e9ea747c78d0fca956ac1c1ed40dc4e7601138eef93282b2d26cd98be62ecf68"
+  },
+  "A02-08": {
+    "gallery": "/portfolio/artworks/A02-08.gallery.webp",
+    "detail": "/portfolio/artworks/A02-08.detail.webp",
+    "width": 1484,
+    "height": 1060,
+    "alt": "자동매매 시스템: 관찰과 시험의 기록 (타이포그래피 포스터)",
+    "style": "타이포그래피 포스터",
+    "sourceSha256": "82a1b70e697572ed07f0ac8403880b970baf0575c25f83516e9f163e41afec80"
+  },
+  "A02-07": {
+    "gallery": "/portfolio/artworks/A02-07.gallery.webp",
+    "detail": "/portfolio/artworks/A02-07.detail.webp",
+    "width": 1484,
+    "height": 1060,
+    "alt": "Figma → React 생성기: 원판과 한 번의 인쇄 (목판화)",
+    "style": "목판화",
+    "sourceSha256": "29caa6b8fbb48da3424fa399d6b5a0a9924076c87924cf647890ca687f86e0cb"
+  },
+  "A02-06": {
+    "gallery": "/portfolio/artworks/A02-06.gallery.webp",
+    "detail": "/portfolio/artworks/A02-06.detail.webp",
+    "width": 1484,
+    "height": 1060,
+    "alt": "디자인 룰북: 여백의 기준 (타이포그래피 포스터)",
+    "style": "타이포그래피 포스터",
+    "sourceSha256": "827edd4aca8ee507d04d9ec0a86248c450b8255d4589a15f4532b1e28b5152f8"
+  },
+  "A03-01": {
+    "gallery": "/portfolio/artworks/A03-01.gallery.webp",
+    "detail": "/portfolio/artworks/A03-01.detail.webp",
+    "width": 1484,
+    "height": 1060,
+    "alt": "이전 포트폴리오 경력 지도: 이어지는 길 (펜·수채화)",
+    "style": "펜·수채화",
+    "sourceSha256": "c85b0dfca24ba0b4bc40b6419fa63c63168f412d18f9ff0a16e17cbdcf274428"
+  },
+  "V01": {
+    "gallery": "/portfolio/artworks/V01.gallery.webp",
+    "detail": "/portfolio/artworks/V01.detail.webp",
+    "width": 1484,
+    "height": 1060,
+    "alt": "캔버스 여러 개: 한 등불의 여러 빛 (과슈·색연필)",
+    "style": "과슈·색연필",
+    "sourceSha256": "f4803dcb9c127ef10f9c05fbc006c63adf9e5bd5605375a93ac7e05193c86fc5"
+  },
+  "A03-02": {
+    "gallery": "/portfolio/artworks/A03-02.gallery.webp",
+    "detail": "/portfolio/artworks/A03-02.detail.webp",
+    "width": 1484,
+    "height": 1060,
+    "alt": "캔버스 · 파티클: 붓의 흐름과 점 (추상 회화)",
+    "style": "추상 회화",
+    "sourceSha256": "52e79b832a74636d3bac1b020cbcf227082726d7992404d024be37910f79d6e9"
+  },
+  "V02": {
+    "gallery": "/portfolio/artworks/V02.gallery.webp",
+    "detail": "/portfolio/artworks/V02.detail.webp",
+    "width": 1484,
+    "height": 1060,
+    "alt": "스크롤 연동 3D: 말린 종이의 깊이 (과슈·색연필)",
+    "style": "과슈·색연필",
+    "sourceSha256": "9967645af33e6d1df61275730e4cb0e076646b7466885dc02419502e7d22b8ea"
+  },
+  "A03-03": {
+    "gallery": "/portfolio/artworks/A03-03.gallery.webp",
+    "detail": "/portfolio/artworks/A03-03.detail.webp",
+    "width": 1484,
+    "height": 1060,
+    "alt": "물체 감지: 형태를 알아보는 배 (팝아트 실크스크린)",
+    "style": "팝아트 실크스크린",
+    "sourceSha256": "3c203f50952f9f10383361c5c8368182f43f7f029c825acb7e1ec3df8c2ac215"
+  },
+  "V03": {
+    "gallery": "/portfolio/artworks/V03.gallery.webp",
+    "detail": "/portfolio/artworks/V03.detail.webp",
+    "width": 1484,
+    "height": 1060,
+    "alt": "3D · 아이소메트릭: 작은 방의 시점 (과슈·색연필)",
+    "style": "과슈·색연필",
+    "sourceSha256": "855b8cd0fc92a7e26cb09565958ec587ad28733a0194e031dc210b07dd51b6b2"
+  },
+  "A03-04": {
+    "gallery": "/portfolio/artworks/A03-04.gallery.webp",
+    "detail": "/portfolio/artworks/A03-04.detail.webp",
+    "width": 1484,
+    "height": 1060,
+    "alt": "포켓몬 도감: 수집을 여는 캡슐 (팝아트 실크스크린)",
+    "style": "팝아트 실크스크린",
+    "sourceSha256": "a6b1d92632a4ac8330cfc7572666f31fa7cca9dcd8b4c371e620b7bec613cf51"
+  },
+  "V04": {
+    "gallery": "/portfolio/artworks/V04.gallery.webp",
+    "detail": "/portfolio/artworks/V04.detail.webp",
+    "width": 1484,
+    "height": 1060,
+    "alt": "3D 공간 만들기: 처음 세운 집 (펜·수채화)",
+    "style": "펜·수채화",
+    "sourceSha256": "93ddc42322baf7ce3b95fb470820c2018df8da66a325cbc9d2cc0648c95f2989"
+  },
+  "A03-05": {
+    "gallery": "/portfolio/artworks/A03-05.gallery.webp",
+    "detail": "/portfolio/artworks/A03-05.detail.webp",
+    "width": 1484,
+    "height": 1060,
+    "alt": "능력치 카드 게임: 내 얼굴의 게임 카드 (실크스크린 팝아트)",
+    "style": "실크스크린 팝아트",
+    "sourceSha256": "8d261fa2b7619e2450425f25d2ef0976af44f5db222793f0ec23b1911f463907"
+  },
+  "V05": {
+    "gallery": "/portfolio/artworks/V05.gallery.webp",
+    "detail": "/portfolio/artworks/V05.detail.webp",
+    "width": 1484,
+    "height": 1060,
+    "alt": "3D 포트폴리오 구현: 걸어 들어갈 공간 (타이포그래피 포스터)",
+    "style": "타이포그래피 포스터",
+    "sourceSha256": "e27859fb69b3cbad9e676d1cc1ba7d059f19317d9a018a84d26a7dfafd68e46c"
+  },
+  "A03-END": {
+    "gallery": "/portfolio/artworks/A03-END.gallery.webp",
+    "detail": "/portfolio/artworks/A03-END.detail.webp",
+    "width": 1484,
+    "height": 1060,
+    "alt": "React 학습기: 시도하고 만들고 반복하기 (타이포그래피 포스터)",
+    "style": "타이포그래피 포스터",
+    "sourceSha256": "120046a7c307f455d50afdebd0dfde8ec568162f41eff61cd349cc623a60dd4b"
+  },
+  "V10": {
+    "gallery": "/portfolio/artworks/V10.gallery.webp",
+    "detail": "/portfolio/artworks/V10.detail.webp",
+    "width": 1484,
+    "height": 1060,
+    "alt": "On the Book · 도서 목록·상세: 책을 고른 자리 (과슈·색연필)",
+    "style": "과슈·색연필",
+    "sourceSha256": "62e0e779266fb99c174d7840ef95d442fa4de946a5c8235138b4adbcdcaf91b5"
+  },
+  "V09": {
+    "gallery": "/portfolio/artworks/V09.gallery.webp",
+    "detail": "/portfolio/artworks/V09.detail.webp",
+    "width": 1484,
+    "height": 1060,
+    "alt": "On the Book · 책 속 3D 장면: 계단이 되는 책장 (초현실 회화)",
+    "style": "초현실 회화",
+    "sourceSha256": "91acb6f0dbd86a43cdd190bd64578d88211d29c2aa2112f2cc247e6e0d5247b7"
+  },
+  "V08": {
+    "gallery": "/portfolio/artworks/V08.gallery.webp",
+    "detail": "/portfolio/artworks/V08.detail.webp",
+    "width": 1484,
+    "height": 1060,
+    "alt": "On the Book · 관리 도구: 초안에서 공개까지 (타이포그래피 포스터)",
+    "style": "타이포그래피 포스터",
+    "sourceSha256": "1231892e97bb1402c2e0f4c4a278adf2dce4b48f97e1b9b7c7331d3d68ac40b5"
+  },
+  "V07": {
+    "gallery": "/portfolio/artworks/V07.gallery.webp",
+    "detail": "/portfolio/artworks/V07.detail.webp",
+    "width": 1484,
+    "height": 1060,
+    "alt": "게임 · 인터랙션: 다음 발판의 선택 (흑연 드로잉)",
+    "style": "흑연 드로잉",
+    "sourceSha256": "e9ab588c76e1e987d82a1265d7bfc3ce49e5bdf9c65420e417aa162652413ea6"
+  },
+  "V06": {
+    "gallery": "/portfolio/artworks/V06.gallery.webp",
+    "detail": "/portfolio/artworks/V06.detail.webp",
+    "width": 1484,
+    "height": 1060,
+    "alt": "게임 · 인터랙션: 타격 순간의 주먹 (코믹 팝아트)",
+    "style": "코믹 팝아트",
+    "sourceSha256": "bdca79b5cf0b0c843b4f5343c47fa43cbdffa7fc2cca5f4d25a28d1337ea1ea0"
+  }
+}

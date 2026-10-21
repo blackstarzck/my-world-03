@@ -1,0 +1,19 @@
+{
+  "id": "P01-02-B",
+  "room": "01",
+  "slotKind": "panel",
+  "project": "레거시 정리 · 성능 개선",
+  "sourceEntryIds": [
+    "original:legacy-cleanup"
+  ],
+  "connection": "불필요한 Ajax·조회문·공통 자산·추적 스크립트를 정리한 유지보수를 '물건을 바꾸지 않고 누적된 불필요를 걷어 내는 정비'로 비유한다. 자전거는 실제 개발 도메인이 아니며 회전이나 빛으로 측정되지 않은 성능 향상률을 주장하지 않는다.",
+  "medium": "graphite",
+  "symbol": "가벼워진 바퀴",
+  "subject": "ONE bicycle wheel with only a few economically sketched spokes and one loosened redundant wire curling away beside the hub. An isolated pencil object study of removing unnecessary complexity while keeping the working core. No full bicycle, repair shop, hands or diagrams.",
+  "reference": "C:/Users/buche/AppData/Local/Temp/codex-clipboard-c663cabe-42b2-4670-87ba-3a4cca008aa0.jpg",
+  "origin": "new-production",
+  "initialPath": "D:/workspace/my-world-03/output/portfolio-paintings-2026-10-20/P01-02-B-r0.png",
+  "finalPath": "D:/workspace/my-world-03/output/portfolio-paintings-2026-10-20/P01-02-B.png",
+  "reviewPath": "D:/workspace/my-world-03/output/portfolio-paintings-2026-10-20/reviews/P01-02-B.json",
+  "prompt": "Create ONE original fine-art image, horizontal 7:5, high resolution ideally 2800x2000 or greater. Flat front view, artwork fills entire image, no depicted frame, no mat, no artificial edge border. Expressive real graphite drawing on warm paper, like supplied rose reference. Loose searching contours, varied pressure, selective crosshatching and tiny rubbed tonal areas, unfinished edges fading into broad clean paper. No color. SUBJECT: ONE bicycle wheel with only a few economically sketched spokes and one loosened redundant wire curling away beside the hub. An isolated pencil object study of removing unnecessary complexity while keeping the working core. No full bicycle, repair shop, hands or diagrams. The supplied image, if any, is ONLY a medium/mood reference; do not preserve its subject, letters or layout. ONE unified symbolic subject or typographic statement; at least half the image should be calm negative space. Main silhouette readable at thumbnail scale, no extra illustrative narrative. No room-based style constraints. Project meaning outside image: 불필요한 Ajax·조회문·공통 자산·추적 스크립트를 정리한 유지보수를 '물건을 바꾸지 않고 누적된 불필요를 걷어 내는 정비'로 비유한다. 자전거는 실제 개발 도메인이 아니며 회전이나 빛으로 측정되지 않은 성능 향상률을 주장하지 않는다. Do not depict application screens, logos, code, graphs, arrows, fake achievements, decorative labels, signatures, watermarks, wall/easel or gallery mockup. Unless explicitly requested in the poster subject, no text at all. Original hand-made physical medium, not a flat generic UI icon or a glossy 3D render."
+}

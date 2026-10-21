@@ -1,0 +1,2719 @@
+{
+  "schemaVersion": 1,
+  "checkedOn": "2026-10-19",
+  "timezone": "Asia/Seoul",
+  "parentOrigin": "https://my-world-03.vercel.app",
+  "status": "verification-completed-no-app-implementation",
+  "scope": "목록의 배포 주소 59개와 react-modeal.net2 README 연결 주소 1개",
+  "summary": {
+    "urls": 60,
+    "http200": 50,
+    "http404": 8,
+    "http503": 2,
+    "documentVisible": 49,
+    "blankDocument": 1,
+    "unavailable": 10,
+    "framePolicyBlocked": 0,
+    "contentReadiness": {
+      "site-unavailable": 10,
+      "public-first-screen": 39,
+      "authentication-required": 6,
+      "documentation-only": 3,
+      "blank-application": 1,
+      "application-api-error": 1
+    },
+    "sandboxSampleUrls": 10
+  },
+  "method": {
+    "headerProbe": "GET 요청으로 최종 응답과 X-Frame-Options·강제 CSP frame-ancestors를 확인",
+    "browserProbe": "전시관 운영 origin의 임시 검증 문서를 브라우저 메모리에서 제공하고 실제 원격 주소를 iframe으로 표시",
+    "baselineSandbox": null,
+    "sandboxSample": "allow-scripts allow-same-origin allow-forms allow-pointer-lock allow-popups",
+    "allowSample": "fullscreen; gamepad",
+    "browser": "Chromium 148.0.7778.96",
+    "viewport": {
+      "width": 1600,
+      "height": 1000,
+      "iframeWidth": 1100,
+      "iframeHeight": 900
+    },
+    "webgl": "headless software renderer",
+    "readOnly": "격리 프로필에서 인증하지 않았다. 상태 변경 요청을 차단했다. 대표 조작은 스크롤·텍스트 입력·로컬 게임 시작과 키보드 입력으로 한정했다. On the Book 재검사는 도서 상세·장면 진입까지 포함하며 운영 데이터 변경 요청은 없었다.",
+    "limitations": "Chromium 첫 화면 및 일부 대표 조작 결과다. 전체 기능·모바일 실기기·Safari·Firefox·인증 후 흐름은 검증 범위에 포함하지 않는다. 브라우저 검사 중 앱 코드·배포·헤더 설정은 변경하지 않았다."
+  },
+  "interactionChecks": [
+    {
+      "url": "https://bookchaka.com",
+      "action": "iframe 안에서 휠 스크롤",
+      "passed": true,
+      "evidence": "scrollY 0 → 550"
+    },
+    {
+      "url": "https://chanki-pokedx.netlify.app/",
+      "action": "iframe 검색 입력란에 텍스트 입력",
+      "passed": true,
+      "evidence": "입력값 Pikachu 일치; 데이터 조회 결과는 미검증"
+    },
+    {
+      "url": "https://neon-fist.vercel.app",
+      "action": "시작 버튼 클릭과 키보드 입력",
+      "passed": true,
+      "evidence": "타이틀 숨김·게임 캔버스 표시 및 전투 화면 캡처 확인"
+    },
+    {
+      "application": "On the Book",
+      "checkedAt": "2026-10-19T14:06:55.263Z",
+      "url": "https://on-the-book-client.vercel.app/",
+      "type": "book-detail-and-scene-navigation",
+      "passed": true,
+      "apiStatus": 200,
+      "bookCount": 4,
+      "sceneCanvas": 1,
+      "scope": "앨리스 상세 선택과 첫 3D 장면 진입·표시",
+      "evidence": {
+        "report": "output/browser-checks/planit-capture-20261019/on-book-browser-recheck.json",
+        "libraryScreenshot": "output/browser-checks/planit-capture-20261019/on-book-recovered-iframe.png",
+        "detailScreenshot": "output/browser-checks/planit-capture-20261019/on-book-recovered-detail.png",
+        "sceneScreenshot": "output/browser-checks/planit-capture-20261019/on-book-recovered-scene.png"
+      }
+    }
+  ],
+  "sources": {
+    "frameAncestors": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/frame-ancestors",
+    "xFrameOptions": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/X-Frame-Options",
+    "iframe": "https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/iframe",
+    "htmlInCanvas": "https://developer.chrome.com/blog/html-in-canvas-ot-changes",
+    "legacyReadme": "https://github.com/blackstarzck/react-modeal.net2/blob/master/README.md",
+    "legacyPackage": "https://github.com/blackstarzck/react-modeal.net2/blob/master/package.json"
+  },
+  "results": [
+    {
+      "id": "iframe-url-01",
+      "url": "https://admin-coral-phi.vercel.app",
+      "relatedEntryIds": [
+        "additional:admin"
+      ],
+      "relatedEntryNames": [
+        "강의 메타데이터 관리자"
+      ],
+      "relatedRepositories": [
+        "admin"
+      ],
+      "httpStatus": 404,
+      "finalUrl": "https://admin-coral-phi.vercel.app/",
+      "checkedAt": "2026-10-19T13:34:54.3978101+00:00",
+      "headers": {
+        "xFrameOptions": [],
+        "contentSecurityPolicy": [],
+        "frameAncestors": [],
+        "contentSecurityPolicyReportOnly": []
+      },
+      "framePolicyBlockObserved": false,
+      "browserResult": "unavailable",
+      "pageTitle": "404: NOT_FOUND",
+      "contentReadiness": "site-unavailable",
+      "contentReadinessLabel": "배포 주소 중단",
+      "proposedAutoExperience": false,
+      "notes": [
+        "서비스 응답 404이므로 현재 체험용 앱으로 사용하지 않는다."
+      ],
+      "sandboxSampleVerified": false,
+      "evidence": {
+        "initialScreenshot": "output/browser-checks/iframe-audit-20261019/01-admin-coral-phi.vercel.app.png",
+        "followupScreenshot": null,
+        "initialDom": {
+          "textLength": 168,
+          "canvases": 0,
+          "images": 0,
+          "controls": 3
+        },
+        "framePolicyErrors": []
+      }
+    },
+    {
+      "id": "iframe-url-02",
+      "url": "https://admin-story-quest.vercel.app",
+      "relatedEntryIds": [
+        "additional:admin-story-quest"
+      ],
+      "relatedEntryNames": [
+        "StoryQuest 콘텐츠 CMS"
+      ],
+      "relatedRepositories": [
+        "admin-story-quest"
+      ],
+      "httpStatus": 200,
+      "finalUrl": "https://admin-story-quest.vercel.app/",
+      "checkedAt": "2026-10-19T13:34:54.3744592+00:00",
+      "headers": {
+        "xFrameOptions": [],
+        "contentSecurityPolicy": [],
+        "frameAncestors": [],
+        "contentSecurityPolicyReportOnly": []
+      },
+      "framePolicyBlockObserved": false,
+      "browserResult": "document-visible",
+      "pageTitle": "StoryQuest Admin - Interactive Content CMS",
+      "contentReadiness": "public-first-screen",
+      "contentReadinessLabel": "공개 첫 화면 확인",
+      "proposedAutoExperience": true,
+      "notes": [
+        "iframe 내 첫 화면을 확인했다. 전체 업무·외부 API·결제·저장 기능의 동작을 보증하는 결과는 아니다."
+      ],
+      "sandboxSampleVerified": false,
+      "evidence": {
+        "initialScreenshot": "output/browser-checks/iframe-audit-20261019/02-admin-story-quest.vercel.app.png",
+        "followupScreenshot": null,
+        "initialDom": {
+          "textLength": 183,
+          "canvases": 1,
+          "images": 0,
+          "controls": 5
+        },
+        "framePolicyErrors": []
+      }
+    },
+    {
+      "id": "iframe-url-03",
+      "url": "https://blackstarzck.github.io/bridge/",
+      "relatedEntryIds": [
+        "original:game-lab:bridge"
+      ],
+      "relatedEntryNames": [
+        "bridge"
+      ],
+      "relatedRepositories": [
+        "bridge"
+      ],
+      "httpStatus": 200,
+      "finalUrl": "https://blackstarzck.github.io/bridge/",
+      "checkedAt": "2026-10-19T13:34:54.3299775+00:00",
+      "headers": {
+        "xFrameOptions": [],
+        "contentSecurityPolicy": [],
+        "frameAncestors": [],
+        "contentSecurityPolicyReportOnly": []
+      },
+      "framePolicyBlockObserved": false,
+      "browserResult": "document-visible",
+      "pageTitle": "Document",
+      "contentReadiness": "public-first-screen",
+      "contentReadinessLabel": "공개 첫 화면 확인",
+      "proposedAutoExperience": true,
+      "notes": [
+        "iframe 내 첫 화면을 확인했다. 전체 업무·외부 API·결제·저장 기능의 동작을 보증하는 결과는 아니다."
+      ],
+      "sandboxSampleVerified": false,
+      "evidence": {
+        "initialScreenshot": "output/browser-checks/iframe-audit-20261019/03-blackstarzck.github.io.png",
+        "followupScreenshot": null,
+        "initialDom": {
+          "textLength": 0,
+          "canvases": 1,
+          "images": 0,
+          "controls": 0
+        },
+        "framePolicyErrors": []
+      }
+    },
+    {
+      "id": "iframe-url-04",
+      "url": "https://blackstarzck.github.io/business-card/",
+      "relatedEntryIds": [
+        "original:react-basics:business-card"
+      ],
+      "relatedEntryNames": [
+        "business-card"
+      ],
+      "relatedRepositories": [
+        "business-card"
+      ],
+      "httpStatus": 200,
+      "finalUrl": "https://blackstarzck.github.io/business-card/",
+      "checkedAt": "2026-10-19T13:34:54.3299433+00:00",
+      "headers": {
+        "xFrameOptions": [],
+        "contentSecurityPolicy": [],
+        "frameAncestors": [],
+        "contentSecurityPolicyReportOnly": []
+      },
+      "framePolicyBlockObserved": false,
+      "browserResult": "document-visible",
+      "pageTitle": "App",
+      "contentReadiness": "authentication-required",
+      "contentReadinessLabel": "로그인 화면 확인",
+      "proposedAutoExperience": false,
+      "notes": [
+        "인증 화면까지 삽입됨을 확인했다. 로그인·저장·실서비스 데이터 변경은 검사하지 않았다."
+      ],
+      "sandboxSampleVerified": false,
+      "evidence": {
+        "initialScreenshot": "output/browser-checks/iframe-audit-20261019/04-blackstarzck.github.io.png",
+        "followupScreenshot": null,
+        "initialDom": {
+          "textLength": 39,
+          "canvases": 0,
+          "images": 1,
+          "controls": 2
+        },
+        "framePolicyErrors": []
+      }
+    },
+    {
+      "id": "iframe-url-05",
+      "url": "https://blackstarzck.github.io/chanki-portfolio/",
+      "relatedEntryIds": [
+        "original:detect-lab"
+      ],
+      "relatedEntryNames": [
+        "물체 감지"
+      ],
+      "relatedRepositories": [
+        "chanki-portfolio"
+      ],
+      "httpStatus": 200,
+      "finalUrl": "https://blackstarzck.github.io/chanki-portfolio/",
+      "checkedAt": "2026-10-19T13:34:54.3395552+00:00",
+      "headers": {
+        "xFrameOptions": [],
+        "contentSecurityPolicy": [],
+        "frameAncestors": [],
+        "contentSecurityPolicyReportOnly": []
+      },
+      "framePolicyBlockObserved": false,
+      "browserResult": "document-visible",
+      "pageTitle": "찬기의 포트폴리오",
+      "contentReadiness": "public-first-screen",
+      "contentReadinessLabel": "공개 첫 화면 확인",
+      "proposedAutoExperience": true,
+      "notes": [
+        "iframe 내 첫 화면을 확인했다. 전체 업무·외부 API·결제·저장 기능의 동작을 보증하는 결과는 아니다."
+      ],
+      "sandboxSampleVerified": true,
+      "evidence": {
+        "initialScreenshot": "output/browser-checks/iframe-audit-20261019/05-blackstarzck.github.io.png",
+        "followupScreenshot": "output/browser-checks/iframe-audit-20261019/followup-object-detection-extended.png",
+        "initialDom": {
+          "textLength": 55,
+          "canvases": 1,
+          "images": 8,
+          "controls": 18
+        },
+        "framePolicyErrors": []
+      }
+    },
+    {
+      "id": "iframe-url-06",
+      "url": "https://blackstarzck.github.io/controls-01/",
+      "relatedEntryIds": [
+        "original:three-lab:controls-01"
+      ],
+      "relatedEntryNames": [
+        "controls-01"
+      ],
+      "relatedRepositories": [
+        "controls-01"
+      ],
+      "httpStatus": 200,
+      "finalUrl": "https://blackstarzck.github.io/controls-01/",
+      "checkedAt": "2026-10-19T13:34:54.3300056+00:00",
+      "headers": {
+        "xFrameOptions": [],
+        "contentSecurityPolicy": [],
+        "frameAncestors": [],
+        "contentSecurityPolicyReportOnly": []
+      },
+      "framePolicyBlockObserved": false,
+      "browserResult": "document-visible",
+      "pageTitle": "Document",
+      "contentReadiness": "public-first-screen",
+      "contentReadinessLabel": "공개 첫 화면 확인",
+      "proposedAutoExperience": true,
+      "notes": [
+        "iframe 내 첫 화면을 확인했다. 전체 업무·외부 API·결제·저장 기능의 동작을 보증하는 결과는 아니다."
+      ],
+      "sandboxSampleVerified": false,
+      "evidence": {
+        "initialScreenshot": "output/browser-checks/iframe-audit-20261019/06-blackstarzck.github.io.png",
+        "followupScreenshot": null,
+        "initialDom": {
+          "textLength": 21,
+          "canvases": 1,
+          "images": 0,
+          "controls": 5
+        },
+        "framePolicyErrors": []
+      }
+    },
+    {
+      "id": "iframe-url-07",
+      "url": "https://blackstarzck.github.io/custom_model/",
+      "relatedEntryIds": [
+        "original:three-lab:custom_model"
+      ],
+      "relatedEntryNames": [
+        "custom_model"
+      ],
+      "relatedRepositories": [
+        "custom_model"
+      ],
+      "httpStatus": 200,
+      "finalUrl": "https://blackstarzck.github.io/custom_model/",
+      "checkedAt": "2026-10-19T13:34:54.3299486+00:00",
+      "headers": {
+        "xFrameOptions": [],
+        "contentSecurityPolicy": [],
+        "frameAncestors": [],
+        "contentSecurityPolicyReportOnly": []
+      },
+      "framePolicyBlockObserved": false,
+      "browserResult": "document-visible",
+      "pageTitle": "1분코딩 three.js",
+      "contentReadiness": "public-first-screen",
+      "contentReadinessLabel": "공개 첫 화면 확인",
+      "proposedAutoExperience": true,
+      "notes": [
+        "iframe 내 첫 화면을 확인했다. 전체 업무·외부 API·결제·저장 기능의 동작을 보증하는 결과는 아니다."
+      ],
+      "sandboxSampleVerified": false,
+      "evidence": {
+        "initialScreenshot": "output/browser-checks/iframe-audit-20261019/07-blackstarzck.github.io.png",
+        "followupScreenshot": null,
+        "initialDom": {
+          "textLength": 67,
+          "canvases": 1,
+          "images": 0,
+          "controls": 15
+        },
+        "framePolicyErrors": []
+      }
+    },
+    {
+      "id": "iframe-url-08",
+      "url": "https://blackstarzck.github.io/doc-merge/",
+      "relatedEntryIds": [
+        "original:doc-merge"
+      ],
+      "relatedEntryNames": [
+        "문서 통합 관리 서비스"
+      ],
+      "relatedRepositories": [
+        "doc-merge",
+        "doc-merge-server"
+      ],
+      "httpStatus": 200,
+      "finalUrl": "https://blackstarzck.github.io/doc-merge/",
+      "checkedAt": "2026-10-19T13:34:54.3299444+00:00",
+      "headers": {
+        "xFrameOptions": [],
+        "contentSecurityPolicy": [],
+        "frameAncestors": [],
+        "contentSecurityPolicyReportOnly": []
+      },
+      "framePolicyBlockObserved": false,
+      "browserResult": "document-visible",
+      "pageTitle": "문서 통합프로그램",
+      "contentReadiness": "public-first-screen",
+      "contentReadinessLabel": "공개 첫 화면 확인",
+      "proposedAutoExperience": true,
+      "notes": [
+        "iframe 내 첫 화면을 확인했다. 전체 업무·외부 API·결제·저장 기능의 동작을 보증하는 결과는 아니다."
+      ],
+      "sandboxSampleVerified": false,
+      "evidence": {
+        "initialScreenshot": "output/browser-checks/iframe-audit-20261019/08-blackstarzck.github.io.png",
+        "followupScreenshot": null,
+        "initialDom": {
+          "textLength": 220,
+          "canvases": 0,
+          "images": 0,
+          "controls": 17
+        },
+        "framePolicyErrors": []
+      }
+    },
+    {
+      "id": "iframe-url-09",
+      "url": "https://blackstarzck.github.io/first-person-perspective/",
+      "relatedEntryIds": [
+        "original:game-lab:first-person-perspective"
+      ],
+      "relatedEntryNames": [
+        "first-person-perspective"
+      ],
+      "relatedRepositories": [
+        "first-person-perspective"
+      ],
+      "httpStatus": 200,
+      "finalUrl": "https://blackstarzck.github.io/first-person-perspective/",
+      "checkedAt": "2026-10-19T13:34:54.5690178+00:00",
+      "headers": {
+        "xFrameOptions": [],
+        "contentSecurityPolicy": [],
+        "frameAncestors": [],
+        "contentSecurityPolicyReportOnly": []
+      },
+      "framePolicyBlockObserved": false,
+      "browserResult": "document-visible",
+      "pageTitle": "my space",
+      "contentReadiness": "public-first-screen",
+      "contentReadinessLabel": "공개 첫 화면 확인",
+      "proposedAutoExperience": true,
+      "notes": [
+        "iframe 내 첫 화면을 확인했다. 전체 업무·외부 API·결제·저장 기능의 동작을 보증하는 결과는 아니다."
+      ],
+      "sandboxSampleVerified": false,
+      "evidence": {
+        "initialScreenshot": "output/browser-checks/iframe-audit-20261019/09-blackstarzck.github.io.png",
+        "followupScreenshot": null,
+        "initialDom": {
+          "textLength": 0,
+          "canvases": 1,
+          "images": 0,
+          "controls": 0
+        },
+        "framePolicyErrors": []
+      }
+    },
+    {
+      "id": "iframe-url-10",
+      "url": "https://blackstarzck.github.io/ilbunidiary/",
+      "relatedEntryIds": [
+        "original:three-lab:ilbunidiary"
+      ],
+      "relatedEntryNames": [
+        "ilbunidiary"
+      ],
+      "relatedRepositories": [
+        "ilbunidiary"
+      ],
+      "httpStatus": 200,
+      "finalUrl": "https://blackstarzck.github.io/ilbunidiary/",
+      "checkedAt": "2026-10-19T13:34:54.5799842+00:00",
+      "headers": {
+        "xFrameOptions": [],
+        "contentSecurityPolicy": [],
+        "frameAncestors": [],
+        "contentSecurityPolicyReportOnly": []
+      },
+      "framePolicyBlockObserved": false,
+      "browserResult": "document-visible",
+      "pageTitle": "banch marketing choonsi diary",
+      "contentReadiness": "public-first-screen",
+      "contentReadinessLabel": "공개 첫 화면 확인",
+      "proposedAutoExperience": true,
+      "notes": [
+        "iframe 내 첫 화면을 확인했다. 전체 업무·외부 API·결제·저장 기능의 동작을 보증하는 결과는 아니다."
+      ],
+      "sandboxSampleVerified": false,
+      "evidence": {
+        "initialScreenshot": "output/browser-checks/iframe-audit-20261019/10-blackstarzck.github.io.png",
+        "followupScreenshot": null,
+        "initialDom": {
+          "textLength": 0,
+          "canvases": 1,
+          "images": 0,
+          "controls": 0
+        },
+        "framePolicyErrors": []
+      }
+    },
+    {
+      "id": "iframe-url-11",
+      "url": "https://blackstarzck.github.io/isosmetric-01/",
+      "relatedEntryIds": [
+        "original:three-lab:isosmetric-01"
+      ],
+      "relatedEntryNames": [
+        "isosmetric-01"
+      ],
+      "relatedRepositories": [
+        "isosmetric-01"
+      ],
+      "httpStatus": 200,
+      "finalUrl": "https://blackstarzck.github.io/isosmetric-01/",
+      "checkedAt": "2026-10-19T13:34:54.5610159+00:00",
+      "headers": {
+        "xFrameOptions": [],
+        "contentSecurityPolicy": [],
+        "frameAncestors": [],
+        "contentSecurityPolicyReportOnly": []
+      },
+      "framePolicyBlockObserved": false,
+      "browserResult": "document-visible",
+      "pageTitle": "isometric room 01",
+      "contentReadiness": "public-first-screen",
+      "contentReadinessLabel": "공개 첫 화면 확인",
+      "proposedAutoExperience": true,
+      "notes": [
+        "iframe 내 첫 화면을 확인했다. 전체 업무·외부 API·결제·저장 기능의 동작을 보증하는 결과는 아니다."
+      ],
+      "sandboxSampleVerified": false,
+      "evidence": {
+        "initialScreenshot": "output/browser-checks/iframe-audit-20261019/11-blackstarzck.github.io.png",
+        "followupScreenshot": null,
+        "initialDom": {
+          "textLength": 48,
+          "canvases": 1,
+          "images": 0,
+          "controls": 5
+        },
+        "framePolicyErrors": []
+      }
+    },
+    {
+      "id": "iframe-url-12",
+      "url": "https://blackstarzck.github.io/isosmetric-02/",
+      "relatedEntryIds": [
+        "original:three-lab:isosmetric-02"
+      ],
+      "relatedEntryNames": [
+        "isosmetric-02"
+      ],
+      "relatedRepositories": [
+        "isosmetric-02"
+      ],
+      "httpStatus": 200,
+      "finalUrl": "https://blackstarzck.github.io/isosmetric-02/",
+      "checkedAt": "2026-10-19T13:34:54.5621281+00:00",
+      "headers": {
+        "xFrameOptions": [],
+        "contentSecurityPolicy": [],
+        "frameAncestors": [],
+        "contentSecurityPolicyReportOnly": []
+      },
+      "framePolicyBlockObserved": false,
+      "browserResult": "document-visible",
+      "pageTitle": "isometric room 02",
+      "contentReadiness": "public-first-screen",
+      "contentReadinessLabel": "공개 첫 화면 확인",
+      "proposedAutoExperience": true,
+      "notes": [
+        "iframe 내 첫 화면을 확인했다. 전체 업무·외부 API·결제·저장 기능의 동작을 보증하는 결과는 아니다."
+      ],
+      "sandboxSampleVerified": false,
+      "evidence": {
+        "initialScreenshot": "output/browser-checks/iframe-audit-20261019/12-blackstarzck.github.io.png",
+        "followupScreenshot": null,
+        "initialDom": {
+          "textLength": 0,
+          "canvases": 1,
+          "images": 0,
+          "controls": 0
+        },
+        "framePolicyErrors": []
+      }
+    },
+    {
+      "id": "iframe-url-13",
+      "url": "https://blackstarzck.github.io/millie-admin-dashboard/",
+      "relatedEntryIds": [
+        "original:millie-admin-dashboard"
+      ],
+      "relatedEntryNames": [
+        "밀리 관리자 대시보드"
+      ],
+      "relatedRepositories": [
+        "millie-admin-dashboard"
+      ],
+      "httpStatus": 200,
+      "finalUrl": "https://blackstarzck.github.io/millie-admin-dashboard/",
+      "checkedAt": "2026-10-19T13:34:54.6025489+00:00",
+      "headers": {
+        "xFrameOptions": [],
+        "contentSecurityPolicy": [],
+        "frameAncestors": [],
+        "contentSecurityPolicyReportOnly": []
+      },
+      "framePolicyBlockObserved": false,
+      "browserResult": "document-visible",
+      "pageTitle": "React App",
+      "contentReadiness": "public-first-screen",
+      "contentReadinessLabel": "공개 첫 화면 확인",
+      "proposedAutoExperience": true,
+      "notes": [
+        "iframe 내 첫 화면을 확인했다. 전체 업무·외부 API·결제·저장 기능의 동작을 보증하는 결과는 아니다."
+      ],
+      "sandboxSampleVerified": false,
+      "evidence": {
+        "initialScreenshot": "output/browser-checks/iframe-audit-20261019/13-blackstarzck.github.io.png",
+        "followupScreenshot": null,
+        "initialDom": {
+          "textLength": 1569,
+          "canvases": 4,
+          "images": 0,
+          "controls": 28
+        },
+        "framePolicyErrors": []
+      }
+    },
+    {
+      "id": "iframe-url-14",
+      "url": "https://blackstarzck.github.io/multicanvas/",
+      "relatedEntryIds": [
+        "original:multicanvas-lab"
+      ],
+      "relatedEntryNames": [
+        "캔버스 여러 개"
+      ],
+      "relatedRepositories": [
+        "multicanvas"
+      ],
+      "httpStatus": 200,
+      "finalUrl": "https://blackstarzck.github.io/multicanvas/",
+      "checkedAt": "2026-10-19T13:34:54.5649117+00:00",
+      "headers": {
+        "xFrameOptions": [],
+        "contentSecurityPolicy": [],
+        "frameAncestors": [],
+        "contentSecurityPolicyReportOnly": []
+      },
+      "framePolicyBlockObserved": false,
+      "browserResult": "document-visible",
+      "pageTitle": "multi canvas",
+      "contentReadiness": "public-first-screen",
+      "contentReadinessLabel": "공개 첫 화면 확인",
+      "proposedAutoExperience": true,
+      "notes": [
+        "iframe 내 첫 화면을 확인했다. 전체 업무·외부 API·결제·저장 기능의 동작을 보증하는 결과는 아니다."
+      ],
+      "sandboxSampleVerified": false,
+      "evidence": {
+        "initialScreenshot": "output/browser-checks/iframe-audit-20261019/14-blackstarzck.github.io.png",
+        "followupScreenshot": null,
+        "initialDom": {
+          "textLength": 214,
+          "canvases": 1,
+          "images": 0,
+          "controls": 0
+        },
+        "framePolicyErrors": []
+      }
+    },
+    {
+      "id": "iframe-url-15",
+      "url": "https://blackstarzck.github.io/my-space/",
+      "relatedEntryIds": [
+        "original:space-3d"
+      ],
+      "relatedEntryNames": [
+        "3D 공간 만들기"
+      ],
+      "relatedRepositories": [
+        "my-space"
+      ],
+      "httpStatus": 200,
+      "finalUrl": "https://blackstarzck.github.io/my-space/",
+      "checkedAt": "2026-10-19T13:34:54.6065960+00:00",
+      "headers": {
+        "xFrameOptions": [],
+        "contentSecurityPolicy": [],
+        "frameAncestors": [],
+        "contentSecurityPolicyReportOnly": []
+      },
+      "framePolicyBlockObserved": false,
+      "browserResult": "document-visible",
+      "pageTitle": "Vite App",
+      "contentReadiness": "public-first-screen",
+      "contentReadinessLabel": "공개 첫 화면 확인",
+      "proposedAutoExperience": true,
+      "notes": [
+        "iframe 내 첫 화면을 확인했다. 전체 업무·외부 API·결제·저장 기능의 동작을 보증하는 결과는 아니다."
+      ],
+      "sandboxSampleVerified": false,
+      "evidence": {
+        "initialScreenshot": "output/browser-checks/iframe-audit-20261019/15-blackstarzck.github.io.png",
+        "followupScreenshot": null,
+        "initialDom": {
+          "textLength": 0,
+          "canvases": 1,
+          "images": 0,
+          "controls": 0
+        },
+        "framePolicyErrors": []
+      }
+    },
+    {
+      "id": "iframe-url-16",
+      "url": "https://blackstarzck.github.io/particle-colorful-stars/",
+      "relatedEntryIds": [
+        "original:canvas-lab"
+      ],
+      "relatedEntryNames": [
+        "캔버스 · 파티클"
+      ],
+      "relatedRepositories": [
+        "particle-colorful-stars"
+      ],
+      "httpStatus": 200,
+      "finalUrl": "https://blackstarzck.github.io/particle-colorful-stars/",
+      "checkedAt": "2026-10-19T13:34:54.6743942+00:00",
+      "headers": {
+        "xFrameOptions": [],
+        "contentSecurityPolicy": [],
+        "frameAncestors": [],
+        "contentSecurityPolicyReportOnly": []
+      },
+      "framePolicyBlockObserved": false,
+      "browserResult": "document-visible",
+      "pageTitle": "Particles: transform shapes",
+      "contentReadiness": "public-first-screen",
+      "contentReadinessLabel": "공개 첫 화면 확인",
+      "proposedAutoExperience": true,
+      "notes": [
+        "iframe 내 첫 화면을 확인했다. 전체 업무·외부 API·결제·저장 기능의 동작을 보증하는 결과는 아니다."
+      ],
+      "sandboxSampleVerified": false,
+      "evidence": {
+        "initialScreenshot": "output/browser-checks/iframe-audit-20261019/16-blackstarzck.github.io.png",
+        "followupScreenshot": null,
+        "initialDom": {
+          "textLength": 0,
+          "canvases": 1,
+          "images": 0,
+          "controls": 0
+        },
+        "framePolicyErrors": []
+      }
+    },
+    {
+      "id": "iframe-url-17",
+      "url": "https://blackstarzck.github.io/particle/",
+      "relatedEntryIds": [
+        "additional:particle"
+      ],
+      "relatedEntryNames": [
+        "파티클 형태 변환 실험"
+      ],
+      "relatedRepositories": [
+        "particle"
+      ],
+      "httpStatus": 200,
+      "finalUrl": "https://blackstarzck.github.io/particle/",
+      "checkedAt": "2026-10-19T13:34:54.8055589+00:00",
+      "headers": {
+        "xFrameOptions": [],
+        "contentSecurityPolicy": [],
+        "frameAncestors": [],
+        "contentSecurityPolicyReportOnly": []
+      },
+      "framePolicyBlockObserved": false,
+      "browserResult": "document-visible",
+      "pageTitle": "Particles: transform shapes",
+      "contentReadiness": "public-first-screen",
+      "contentReadinessLabel": "공개 첫 화면 확인",
+      "proposedAutoExperience": true,
+      "notes": [
+        "iframe 내 첫 화면을 확인했다. 전체 업무·외부 API·결제·저장 기능의 동작을 보증하는 결과는 아니다."
+      ],
+      "sandboxSampleVerified": false,
+      "evidence": {
+        "initialScreenshot": "output/browser-checks/iframe-audit-20261019/17-blackstarzck.github.io.png",
+        "followupScreenshot": null,
+        "initialDom": {
+          "textLength": 13,
+          "canvases": 1,
+          "images": 0,
+          "controls": 2
+        },
+        "framePolicyErrors": []
+      }
+    },
+    {
+      "id": "iframe-url-18",
+      "url": "https://blackstarzck.github.io/react-modeal.net2/",
+      "relatedEntryIds": [
+        "original:react-basics:react-modeal.net2"
+      ],
+      "relatedEntryNames": [
+        "react-modeal.net2"
+      ],
+      "relatedRepositories": [
+        "react-modeal.net2"
+      ],
+      "httpStatus": 200,
+      "finalUrl": "https://blackstarzck.github.io/react-modeal.net2/",
+      "checkedAt": "2026-10-19T13:34:54.7968974+00:00",
+      "headers": {
+        "xFrameOptions": [],
+        "contentSecurityPolicy": [],
+        "frameAncestors": [],
+        "contentSecurityPolicyReportOnly": []
+      },
+      "framePolicyBlockObserved": false,
+      "browserResult": "document-visible",
+      "pageTitle": "react-modeal.net2",
+      "contentReadiness": "documentation-only",
+      "contentReadinessLabel": "문서만 표시",
+      "proposedAutoExperience": false,
+      "notes": [
+        "현재 주소는 README 문서를 표시한다. 웹앱 체험에는 앱 배포 주소가 필요하다."
+      ],
+      "sandboxSampleVerified": false,
+      "evidence": {
+        "initialScreenshot": "output/browser-checks/iframe-audit-20261019/18-blackstarzck.github.io.png",
+        "followupScreenshot": null,
+        "initialDom": {
+          "textLength": 27,
+          "canvases": 0,
+          "images": 0,
+          "controls": 2
+        },
+        "framePolicyErrors": []
+      }
+    },
+    {
+      "id": "iframe-url-19",
+      "url": "https://blackstarzck.github.io/react-modeal/",
+      "relatedEntryIds": [
+        "original:react-basics:react-modeal"
+      ],
+      "relatedEntryNames": [
+        "react-modeal"
+      ],
+      "relatedRepositories": [
+        "react-modeal"
+      ],
+      "httpStatus": 404,
+      "finalUrl": "https://blackstarzck.github.io/react-modeal/",
+      "checkedAt": "2026-10-19T13:34:54.5824966+00:00",
+      "headers": {
+        "xFrameOptions": [],
+        "contentSecurityPolicy": [
+          "default-src 'none'; style-src 'unsafe-inline'; img-src data:; connect-src 'self'"
+        ],
+        "frameAncestors": [],
+        "contentSecurityPolicyReportOnly": []
+      },
+      "framePolicyBlockObserved": false,
+      "browserResult": "unavailable",
+      "pageTitle": "Page not found · GitHub Pages",
+      "contentReadiness": "site-unavailable",
+      "contentReadinessLabel": "배포 주소 중단",
+      "proposedAutoExperience": false,
+      "notes": [
+        "서비스 응답 404이므로 현재 체험용 앱으로 사용하지 않는다."
+      ],
+      "sandboxSampleVerified": false,
+      "evidence": {
+        "initialScreenshot": "output/browser-checks/iframe-audit-20261019/19-blackstarzck.github.io.png",
+        "followupScreenshot": null,
+        "initialDom": {
+          "textLength": 383,
+          "canvases": 0,
+          "images": 2,
+          "controls": 5
+        },
+        "framePolicyErrors": []
+      }
+    },
+    {
+      "id": "iframe-url-20",
+      "url": "https://blackstarzck.github.io/react-practice6/",
+      "relatedEntryIds": [
+        "original:react-basics:react-practice6"
+      ],
+      "relatedEntryNames": [
+        "react-practice6"
+      ],
+      "relatedRepositories": [
+        "react-practice6"
+      ],
+      "httpStatus": 200,
+      "finalUrl": "https://blackstarzck.github.io/react-practice6/",
+      "checkedAt": "2026-10-19T13:34:54.8104040+00:00",
+      "headers": {
+        "xFrameOptions": [],
+        "contentSecurityPolicy": [],
+        "frameAncestors": [],
+        "contentSecurityPolicyReportOnly": []
+      },
+      "framePolicyBlockObserved": false,
+      "browserResult": "document-visible",
+      "pageTitle": "react-practice6",
+      "contentReadiness": "documentation-only",
+      "contentReadinessLabel": "문서만 표시",
+      "proposedAutoExperience": false,
+      "notes": [
+        "현재 주소는 README 문서를 표시한다. 웹앱 체험에는 앱 배포 주소가 필요하다."
+      ],
+      "sandboxSampleVerified": false,
+      "evidence": {
+        "initialScreenshot": "output/browser-checks/iframe-audit-20261019/20-blackstarzck.github.io.png",
+        "followupScreenshot": null,
+        "initialDom": {
+          "textLength": 2499,
+          "canvases": 0,
+          "images": 0,
+          "controls": 19
+        },
+        "framePolicyErrors": []
+      }
+    },
+    {
+      "id": "iframe-url-21",
+      "url": "https://blackstarzck.github.io/react-swiper/",
+      "relatedEntryIds": [
+        "original:react-basics:react-swiper"
+      ],
+      "relatedEntryNames": [
+        "react-swiper"
+      ],
+      "relatedRepositories": [
+        "react-swiper"
+      ],
+      "httpStatus": 200,
+      "finalUrl": "https://blackstarzck.github.io/react-swiper/",
+      "checkedAt": "2026-10-19T13:34:54.8264701+00:00",
+      "headers": {
+        "xFrameOptions": [],
+        "contentSecurityPolicy": [],
+        "frameAncestors": [],
+        "contentSecurityPolicyReportOnly": []
+      },
+      "framePolicyBlockObserved": false,
+      "browserResult": "blank-document",
+      "pageTitle": "MOVIE",
+      "contentReadiness": "blank-application",
+      "contentReadinessLabel": "앱 빈 화면",
+      "proposedAutoExperience": false,
+      "notes": [
+        "단독 페이지와 iframe 모두 빈 화면이다. /movie_app_2020 아래 JS와 CSS가 404를 반환한다."
+      ],
+      "sandboxSampleVerified": false,
+      "evidence": {
+        "initialScreenshot": "output/browser-checks/iframe-audit-20261019/21-blackstarzck.github.io.png",
+        "followupScreenshot": null,
+        "initialDom": {
+          "textLength": 0,
+          "canvases": 0,
+          "images": 0,
+          "controls": 0
+        },
+        "framePolicyErrors": []
+      }
+    },
+    {
+      "id": "iframe-url-22",
+      "url": "https://blackstarzck.github.io/react-todos/",
+      "relatedEntryIds": [
+        "original:react-basics:react-todos"
+      ],
+      "relatedEntryNames": [
+        "react-todos"
+      ],
+      "relatedRepositories": [
+        "react-todos"
+      ],
+      "httpStatus": 200,
+      "finalUrl": "https://blackstarzck.github.io/react-todos/",
+      "checkedAt": "2026-10-19T13:34:54.8072087+00:00",
+      "headers": {
+        "xFrameOptions": [],
+        "contentSecurityPolicy": [],
+        "frameAncestors": [],
+        "contentSecurityPolicyReportOnly": []
+      },
+      "framePolicyBlockObserved": false,
+      "browserResult": "document-visible",
+      "pageTitle": "리액트 TODO 앱 | react-todos",
+      "contentReadiness": "documentation-only",
+      "contentReadinessLabel": "문서만 표시",
+      "proposedAutoExperience": false,
+      "notes": [
+        "현재 주소는 README 문서를 표시한다. 웹앱 체험에는 앱 배포 주소가 필요하다."
+      ],
+      "sandboxSampleVerified": false,
+      "evidence": {
+        "initialScreenshot": "output/browser-checks/iframe-audit-20261019/22-blackstarzck.github.io.png",
+        "followupScreenshot": null,
+        "initialDom": {
+          "textLength": 67,
+          "canvases": 0,
+          "images": 0,
+          "controls": 2
+        },
+        "framePolicyErrors": []
+      }
+    },
+    {
+      "id": "iframe-url-23",
+      "url": "https://blackstarzck.github.io/scroll-page/",
+      "relatedEntryIds": [
+        "original:scroll-3d"
+      ],
+      "relatedEntryNames": [
+        "스크롤 연동 3D"
+      ],
+      "relatedRepositories": [
+        "scroll-page"
+      ],
+      "httpStatus": 200,
+      "finalUrl": "https://blackstarzck.github.io/scroll-page/",
+      "checkedAt": "2026-10-19T13:34:54.8264701+00:00",
+      "headers": {
+        "xFrameOptions": [],
+        "contentSecurityPolicy": [],
+        "frameAncestors": [],
+        "contentSecurityPolicyReportOnly": []
+      },
+      "framePolicyBlockObserved": false,
+      "browserResult": "document-visible",
+      "pageTitle": "scroll page",
+      "contentReadiness": "public-first-screen",
+      "contentReadinessLabel": "공개 첫 화면 확인",
+      "proposedAutoExperience": true,
+      "notes": [
+        "iframe 내 첫 화면을 확인했다. 전체 업무·외부 API·결제·저장 기능의 동작을 보증하는 결과는 아니다."
+      ],
+      "sandboxSampleVerified": false,
+      "evidence": {
+        "initialScreenshot": "output/browser-checks/iframe-audit-20261019/23-blackstarzck.github.io.png",
+        "followupScreenshot": null,
+        "initialDom": {
+          "textLength": 14,
+          "canvases": 1,
+          "images": 0,
+          "controls": 0
+        },
+        "framePolicyErrors": []
+      }
+    },
+    {
+      "id": "iframe-url-24",
+      "url": "https://bookchaka.com",
+      "relatedEntryIds": [
+        "original:corp-sites:bookchaka"
+      ],
+      "relatedEntryNames": [
+        "북차카"
+      ],
+      "relatedRepositories": [
+        "bookchaka"
+      ],
+      "httpStatus": 200,
+      "finalUrl": "https://bookchaka.com/",
+      "checkedAt": "2026-10-19T13:34:54.7121442+00:00",
+      "headers": {
+        "xFrameOptions": [],
+        "contentSecurityPolicy": [],
+        "frameAncestors": [],
+        "contentSecurityPolicyReportOnly": []
+      },
+      "framePolicyBlockObserved": false,
+      "browserResult": "document-visible",
+      "pageTitle": "북차카",
+      "contentReadiness": "public-first-screen",
+      "contentReadinessLabel": "공개 첫 화면 확인",
+      "proposedAutoExperience": true,
+      "notes": [
+        "iframe 내 첫 화면을 확인했다. 전체 업무·외부 API·결제·저장 기능의 동작을 보증하는 결과는 아니다."
+      ],
+      "sandboxSampleVerified": true,
+      "evidence": {
+        "initialScreenshot": "output/browser-checks/iframe-audit-20261019/24-bookchaka.com.png",
+        "followupScreenshot": "output/browser-checks/iframe-audit-20261019/followup-company-scroll.png",
+        "initialDom": {
+          "textLength": 1052,
+          "canvases": 0,
+          "images": 11,
+          "controls": 24
+        },
+        "framePolicyErrors": []
+      }
+    },
+    {
+      "id": "iframe-url-25",
+      "url": "https://chanchan2.vercel.app",
+      "relatedEntryIds": [
+        "original:figma-gen"
+      ],
+      "relatedEntryNames": [
+        "Figma → React 생성기"
+      ],
+      "relatedRepositories": [
+        "chanchan2"
+      ],
+      "httpStatus": 200,
+      "finalUrl": "https://chanchan2.vercel.app/",
+      "checkedAt": "2026-10-19T13:34:55.0011465+00:00",
+      "headers": {
+        "xFrameOptions": [],
+        "contentSecurityPolicy": [],
+        "frameAncestors": [],
+        "contentSecurityPolicyReportOnly": []
+      },
+      "framePolicyBlockObserved": false,
+      "browserResult": "document-visible",
+      "pageTitle": "Chanchan2 UI",
+      "contentReadiness": "public-first-screen",
+      "contentReadinessLabel": "공개 첫 화면 확인",
+      "proposedAutoExperience": true,
+      "notes": [
+        "iframe 내 첫 화면을 확인했다. 전체 업무·외부 API·결제·저장 기능의 동작을 보증하는 결과는 아니다."
+      ],
+      "sandboxSampleVerified": true,
+      "evidence": {
+        "initialScreenshot": "output/browser-checks/iframe-audit-20261019/25-chanchan2.vercel.app.png",
+        "followupScreenshot": "output/browser-checks/iframe-audit-20261019/followup-library-sandbox.png",
+        "initialDom": {
+          "textLength": 1541,
+          "canvases": 0,
+          "images": 1,
+          "controls": 13
+        },
+        "framePolicyErrors": []
+      }
+    },
+    {
+      "id": "iframe-url-26",
+      "url": "https://chanki-pokedx.netlify.app/",
+      "relatedEntryIds": [
+        "original:pokemon"
+      ],
+      "relatedEntryNames": [
+        "포켓몬 도감"
+      ],
+      "relatedRepositories": [
+        "pokemon"
+      ],
+      "httpStatus": 200,
+      "finalUrl": "https://chanki-pokedx.netlify.app/",
+      "checkedAt": "2026-10-19T13:34:55.6626973+00:00",
+      "headers": {
+        "xFrameOptions": [],
+        "contentSecurityPolicy": [],
+        "frameAncestors": [],
+        "contentSecurityPolicyReportOnly": []
+      },
+      "framePolicyBlockObserved": false,
+      "browserResult": "document-visible",
+      "pageTitle": "Pokedex",
+      "contentReadiness": "public-first-screen",
+      "contentReadinessLabel": "공개 첫 화면 확인",
+      "proposedAutoExperience": true,
+      "notes": [
+        "iframe 내 첫 화면을 확인했다. 전체 업무·외부 API·결제·저장 기능의 동작을 보증하는 결과는 아니다.",
+        "검색 입력란의 입력은 확인했으며 포켓몬 데이터 조회 결과는 별도 확인 대상이다."
+      ],
+      "sandboxSampleVerified": true,
+      "evidence": {
+        "initialScreenshot": "output/browser-checks/iframe-audit-20261019/26-chanki-pokedx.netlify.app.png",
+        "followupScreenshot": "output/browser-checks/iframe-audit-20261019/followup-pokemon-input.png",
+        "initialDom": {
+          "textLength": 68,
+          "canvases": 0,
+          "images": 0,
+          "controls": 2
+        },
+        "framePolicyErrors": []
+      }
+    },
+    {
+      "id": "iframe-url-27",
+      "url": "https://chanki-react.vercel.app",
+      "relatedEntryIds": [
+        "additional:my-website-2026"
+      ],
+      "relatedEntryNames": [
+        "이전 포트폴리오 경력 지도"
+      ],
+      "relatedRepositories": [
+        "my-website-2026"
+      ],
+      "httpStatus": 200,
+      "finalUrl": "https://chanki-react.vercel.app/",
+      "checkedAt": "2026-10-19T13:34:54.8660733+00:00",
+      "headers": {
+        "xFrameOptions": [],
+        "contentSecurityPolicy": [],
+        "frameAncestors": [],
+        "contentSecurityPolicyReportOnly": []
+      },
+      "framePolicyBlockObserved": false,
+      "browserResult": "document-visible",
+      "pageTitle": "김찬기 · 프론트엔드 개발자",
+      "contentReadiness": "public-first-screen",
+      "contentReadinessLabel": "공개 첫 화면 확인",
+      "proposedAutoExperience": true,
+      "notes": [
+        "iframe 내 첫 화면을 확인했다. 전체 업무·외부 API·결제·저장 기능의 동작을 보증하는 결과는 아니다."
+      ],
+      "sandboxSampleVerified": false,
+      "evidence": {
+        "initialScreenshot": "output/browser-checks/iframe-audit-20261019/27-chanki-react.vercel.app.png",
+        "followupScreenshot": null,
+        "initialDom": {
+          "textLength": 223,
+          "canvases": 3,
+          "images": 1,
+          "controls": 4
+        },
+        "framePolicyErrors": []
+      }
+    },
+    {
+      "id": "iframe-url-28",
+      "url": "https://detail-ruby.vercel.app",
+      "relatedEntryIds": [
+        "additional:detail"
+      ],
+      "relatedEntryNames": [
+        "강의 상세 화면"
+      ],
+      "relatedRepositories": [
+        "detail"
+      ],
+      "httpStatus": 404,
+      "finalUrl": "https://detail-ruby.vercel.app/",
+      "checkedAt": "2026-10-19T13:34:54.8521435+00:00",
+      "headers": {
+        "xFrameOptions": [],
+        "contentSecurityPolicy": [],
+        "frameAncestors": [],
+        "contentSecurityPolicyReportOnly": []
+      },
+      "framePolicyBlockObserved": false,
+      "browserResult": "unavailable",
+      "pageTitle": "404: NOT_FOUND",
+      "contentReadiness": "site-unavailable",
+      "contentReadinessLabel": "배포 주소 중단",
+      "proposedAutoExperience": false,
+      "notes": [
+        "서비스 응답 404이므로 현재 체험용 앱으로 사용하지 않는다."
+      ],
+      "sandboxSampleVerified": false,
+      "evidence": {
+        "initialScreenshot": "output/browser-checks/iframe-audit-20261019/28-detail-ruby.vercel.app.png",
+        "followupScreenshot": null,
+        "initialDom": {
+          "textLength": 179,
+          "canvases": 0,
+          "images": 0,
+          "controls": 3
+        },
+        "framePolicyErrors": []
+      }
+    },
+    {
+      "id": "iframe-url-29",
+      "url": "https://dotore-admin.vercel.app",
+      "relatedEntryIds": [
+        "additional:dotore-admin"
+      ],
+      "relatedEntryNames": [
+        "도토리 문의 관리자"
+      ],
+      "relatedRepositories": [
+        "dotore-admin"
+      ],
+      "httpStatus": 200,
+      "finalUrl": "https://dotore-admin.vercel.app/",
+      "checkedAt": "2026-10-19T13:34:55.0974423+00:00",
+      "headers": {
+        "xFrameOptions": [],
+        "contentSecurityPolicy": [],
+        "frameAncestors": [],
+        "contentSecurityPolicyReportOnly": []
+      },
+      "framePolicyBlockObserved": false,
+      "browserResult": "document-visible",
+      "pageTitle": "dotore-admin-02",
+      "contentReadiness": "authentication-required",
+      "contentReadinessLabel": "로그인 화면 확인",
+      "proposedAutoExperience": false,
+      "notes": [
+        "인증 화면까지 삽입됨을 확인했다. 로그인·저장·실서비스 데이터 변경은 검사하지 않았다."
+      ],
+      "sandboxSampleVerified": false,
+      "evidence": {
+        "initialScreenshot": "output/browser-checks/iframe-audit-20261019/29-dotore-admin.vercel.app.png",
+        "followupScreenshot": null,
+        "initialDom": {
+          "textLength": 63,
+          "canvases": 0,
+          "images": 0,
+          "controls": 3
+        },
+        "framePolicyErrors": []
+      }
+    },
+    {
+      "id": "iframe-url-30",
+      "url": "https://frontend-eta-six-54.vercel.app",
+      "relatedEntryIds": [
+        "original:trading-lab:coin-lab-v2"
+      ],
+      "relatedEntryNames": [
+        "coin-lab-v2"
+      ],
+      "relatedRepositories": [
+        "coin-lab-v2"
+      ],
+      "httpStatus": 200,
+      "finalUrl": "https://frontend-eta-six-54.vercel.app/",
+      "checkedAt": "2026-10-19T13:34:55.0937749+00:00",
+      "headers": {
+        "xFrameOptions": [],
+        "contentSecurityPolicy": [],
+        "frameAncestors": [],
+        "contentSecurityPolicyReportOnly": []
+      },
+      "framePolicyBlockObserved": false,
+      "browserResult": "document-visible",
+      "pageTitle": "코인 랩",
+      "contentReadiness": "public-first-screen",
+      "contentReadinessLabel": "공개 첫 화면 확인",
+      "proposedAutoExperience": true,
+      "notes": [
+        "iframe 내 첫 화면을 확인했다. 전체 업무·외부 API·결제·저장 기능의 동작을 보증하는 결과는 아니다."
+      ],
+      "sandboxSampleVerified": false,
+      "evidence": {
+        "initialScreenshot": "output/browser-checks/iframe-audit-20261019/30-frontend-eta-six-54.vercel.app.png",
+        "followupScreenshot": null,
+        "initialDom": {
+          "textLength": 545,
+          "canvases": 0,
+          "images": 0,
+          "controls": 1
+        },
+        "framePolicyErrors": []
+      }
+    },
+    {
+      "id": "iframe-url-31",
+      "url": "https://game-cabinet.vercel.app",
+      "relatedEntryIds": [
+        "original:game-lab:game-cabinet"
+      ],
+      "relatedEntryNames": [
+        "game-cabinet"
+      ],
+      "relatedRepositories": [
+        "game-cabinet"
+      ],
+      "httpStatus": 200,
+      "finalUrl": "https://game-cabinet.vercel.app/",
+      "checkedAt": "2026-10-19T13:34:55.1470623+00:00",
+      "headers": {
+        "xFrameOptions": [],
+        "contentSecurityPolicy": [],
+        "frameAncestors": [],
+        "contentSecurityPolicyReportOnly": []
+      },
+      "framePolicyBlockObserved": false,
+      "browserResult": "document-visible",
+      "pageTitle": "GAME CABINET",
+      "contentReadiness": "public-first-screen",
+      "contentReadinessLabel": "공개 첫 화면 확인",
+      "proposedAutoExperience": true,
+      "notes": [
+        "iframe 내 첫 화면을 확인했다. 전체 업무·외부 API·결제·저장 기능의 동작을 보증하는 결과는 아니다.",
+        "캐비닛 본체 첫 화면만 확인했다. 내부에 다시 삽입되는 외부 게임은 별도 확인 대상이다."
+      ],
+      "sandboxSampleVerified": false,
+      "evidence": {
+        "initialScreenshot": "output/browser-checks/iframe-audit-20261019/31-game-cabinet.vercel.app.png",
+        "followupScreenshot": null,
+        "initialDom": {
+          "textLength": 126,
+          "canvases": 1,
+          "images": 0,
+          "controls": 2
+        },
+        "framePolicyErrors": []
+      }
+    },
+    {
+      "id": "iframe-url-32",
+      "url": "https://glowinvina.com",
+      "relatedEntryIds": [
+        "original:corp-sites:glowin-vina"
+      ],
+      "relatedEntryNames": [
+        "글로윈 비나 (북카페)"
+      ],
+      "relatedRepositories": [
+        "glowin-vina"
+      ],
+      "httpStatus": 503,
+      "finalUrl": "https://glowinvina.com/",
+      "checkedAt": "2026-10-19T13:34:54.8631922+00:00",
+      "headers": {
+        "xFrameOptions": [],
+        "contentSecurityPolicy": [],
+        "frameAncestors": [],
+        "contentSecurityPolicyReportOnly": []
+      },
+      "framePolicyBlockObserved": false,
+      "browserResult": "unavailable",
+      "pageTitle": "준비 중",
+      "contentReadiness": "site-unavailable",
+      "contentReadinessLabel": "배포 주소 중단",
+      "proposedAutoExperience": false,
+      "notes": [
+        "서비스 응답 503이므로 현재 체험용 앱으로 사용하지 않는다."
+      ],
+      "sandboxSampleVerified": false,
+      "evidence": {
+        "initialScreenshot": "output/browser-checks/iframe-audit-20261019/32-glowinvina.com.png",
+        "followupScreenshot": null,
+        "initialDom": {
+          "textLength": 106,
+          "canvases": 0,
+          "images": 0,
+          "controls": 0
+        },
+        "framePolicyErrors": []
+      }
+    },
+    {
+      "id": "iframe-url-33",
+      "url": "https://hibiblia.com",
+      "relatedEntryIds": [
+        "original:corp-sites:biblia"
+      ],
+      "relatedEntryNames": [
+        "비블리아"
+      ],
+      "relatedRepositories": [
+        "biblia"
+      ],
+      "httpStatus": 503,
+      "finalUrl": "https://hibiblia.com/",
+      "checkedAt": "2026-10-19T13:34:54.8871076+00:00",
+      "headers": {
+        "xFrameOptions": [],
+        "contentSecurityPolicy": [],
+        "frameAncestors": [],
+        "contentSecurityPolicyReportOnly": []
+      },
+      "framePolicyBlockObserved": false,
+      "browserResult": "unavailable",
+      "pageTitle": "준비 중",
+      "contentReadiness": "site-unavailable",
+      "contentReadinessLabel": "배포 주소 중단",
+      "proposedAutoExperience": false,
+      "notes": [
+        "서비스 응답 503이므로 현재 체험용 앱으로 사용하지 않는다."
+      ],
+      "sandboxSampleVerified": false,
+      "evidence": {
+        "initialScreenshot": "output/browser-checks/iframe-audit-20261019/33-hibiblia.com.png",
+        "followupScreenshot": null,
+        "initialDom": {
+          "textLength": 106,
+          "canvases": 0,
+          "images": 0,
+          "controls": 0
+        },
+        "framePolicyErrors": []
+      }
+    },
+    {
+      "id": "iframe-url-34",
+      "url": "https://hibookly-claude-code-design-v1.vercel.app",
+      "relatedEntryIds": [
+        "additional:hibookly-claude-code-design-v1"
+      ],
+      "relatedEntryNames": [
+        "부클리 해외 저작권 에이전시 시안"
+      ],
+      "relatedRepositories": [
+        "hibookly-claude-code-design-v1"
+      ],
+      "httpStatus": 404,
+      "finalUrl": "https://hibookly-claude-code-design-v1.vercel.app/",
+      "checkedAt": "2026-10-19T13:34:54.9301659+00:00",
+      "headers": {
+        "xFrameOptions": [],
+        "contentSecurityPolicy": [],
+        "frameAncestors": [],
+        "contentSecurityPolicyReportOnly": []
+      },
+      "framePolicyBlockObserved": false,
+      "browserResult": "unavailable",
+      "pageTitle": "404: NOT_FOUND",
+      "contentReadiness": "site-unavailable",
+      "contentReadinessLabel": "배포 주소 중단",
+      "proposedAutoExperience": false,
+      "notes": [
+        "서비스 응답 404이므로 현재 체험용 앱으로 사용하지 않는다."
+      ],
+      "sandboxSampleVerified": false,
+      "evidence": {
+        "initialScreenshot": "output/browser-checks/iframe-audit-20261019/34-hibookly-claude-code-design-v1.vercel.app.png",
+        "followupScreenshot": null,
+        "initialDom": {
+          "textLength": 179,
+          "canvases": 0,
+          "images": 0,
+          "controls": 3
+        },
+        "framePolicyErrors": []
+      }
+    },
+    {
+      "id": "iframe-url-35",
+      "url": "https://hibookly.com",
+      "relatedEntryIds": [
+        "original:corp-sites:bookly"
+      ],
+      "relatedEntryNames": [
+        "부클리"
+      ],
+      "relatedRepositories": [
+        "bookly"
+      ],
+      "httpStatus": 200,
+      "finalUrl": "https://hibookly.com/",
+      "checkedAt": "2026-10-19T13:34:54.9140004+00:00",
+      "headers": {
+        "xFrameOptions": [],
+        "contentSecurityPolicy": [],
+        "frameAncestors": [],
+        "contentSecurityPolicyReportOnly": []
+      },
+      "framePolicyBlockObserved": false,
+      "browserResult": "document-visible",
+      "pageTitle": "부클리",
+      "contentReadiness": "public-first-screen",
+      "contentReadinessLabel": "공개 첫 화면 확인",
+      "proposedAutoExperience": true,
+      "notes": [
+        "iframe 내 첫 화면을 확인했다. 전체 업무·외부 API·결제·저장 기능의 동작을 보증하는 결과는 아니다."
+      ],
+      "sandboxSampleVerified": false,
+      "evidence": {
+        "initialScreenshot": "output/browser-checks/iframe-audit-20261019/35-hibookly.com.png",
+        "followupScreenshot": null,
+        "initialDom": {
+          "textLength": 1855,
+          "canvases": 0,
+          "images": 63,
+          "controls": 33
+        },
+        "framePolicyErrors": []
+      }
+    },
+    {
+      "id": "iframe-url-36",
+      "url": "https://keduall.com",
+      "relatedEntryIds": [
+        "original:corp-sites:keduall"
+      ],
+      "relatedEntryNames": [
+        "케듀올"
+      ],
+      "relatedRepositories": [
+        "keduall"
+      ],
+      "httpStatus": 200,
+      "finalUrl": "https://keduall.com/ko",
+      "checkedAt": "2026-10-19T13:34:54.9760908+00:00",
+      "headers": {
+        "xFrameOptions": [],
+        "contentSecurityPolicy": [],
+        "frameAncestors": [],
+        "contentSecurityPolicyReportOnly": []
+      },
+      "framePolicyBlockObserved": false,
+      "browserResult": "document-visible",
+      "pageTitle": "KEDUALL - 베트남과 한국을 잇는 교육의 가교 | Your Site Name",
+      "contentReadiness": "public-first-screen",
+      "contentReadinessLabel": "공개 첫 화면 확인",
+      "proposedAutoExperience": true,
+      "notes": [
+        "iframe 내 첫 화면을 확인했다. 전체 업무·외부 API·결제·저장 기능의 동작을 보증하는 결과는 아니다."
+      ],
+      "sandboxSampleVerified": false,
+      "evidence": {
+        "initialScreenshot": "output/browser-checks/iframe-audit-20261019/36-keduall.com.png",
+        "followupScreenshot": null,
+        "initialDom": {
+          "textLength": 1252,
+          "canvases": 0,
+          "images": 148,
+          "controls": 42
+        },
+        "framePolicyErrors": []
+      }
+    },
+    {
+      "id": "iframe-url-37",
+      "url": "https://lets-fps.vercel.app",
+      "relatedEntryIds": [
+        "original:game-lab:lets-fps"
+      ],
+      "relatedEntryNames": [
+        "lets-fps"
+      ],
+      "relatedRepositories": [
+        "lets-fps"
+      ],
+      "httpStatus": 200,
+      "finalUrl": "https://lets-fps.vercel.app/",
+      "checkedAt": "2026-10-19T13:34:55.2080153+00:00",
+      "headers": {
+        "xFrameOptions": [],
+        "contentSecurityPolicy": [],
+        "frameAncestors": [],
+        "contentSecurityPolicyReportOnly": []
+      },
+      "framePolicyBlockObserved": false,
+      "browserResult": "document-visible",
+      "pageTitle": "vite-project",
+      "contentReadiness": "authentication-required",
+      "contentReadinessLabel": "로그인 화면 확인",
+      "proposedAutoExperience": false,
+      "notes": [
+        "인증 화면까지 삽입됨을 확인했다. 로그인·저장·실서비스 데이터 변경은 검사하지 않았다."
+      ],
+      "sandboxSampleVerified": false,
+      "evidence": {
+        "initialScreenshot": "output/browser-checks/iframe-audit-20261019/37-lets-fps.vercel.app.png",
+        "followupScreenshot": null,
+        "initialDom": {
+          "textLength": 130,
+          "canvases": 0,
+          "images": 0,
+          "controls": 5
+        },
+        "framePolicyErrors": []
+      }
+    },
+    {
+      "id": "iframe-url-38",
+      "url": "https://list-red-alpha.vercel.app",
+      "relatedEntryIds": [
+        "additional:list"
+      ],
+      "relatedEntryNames": [
+        "한국어 공개 강의 목록"
+      ],
+      "relatedRepositories": [
+        "list"
+      ],
+      "httpStatus": 404,
+      "finalUrl": "https://list-red-alpha.vercel.app/",
+      "checkedAt": "2026-10-19T13:34:54.9798754+00:00",
+      "headers": {
+        "xFrameOptions": [],
+        "contentSecurityPolicy": [],
+        "frameAncestors": [],
+        "contentSecurityPolicyReportOnly": []
+      },
+      "framePolicyBlockObserved": false,
+      "browserResult": "unavailable",
+      "pageTitle": "404: NOT_FOUND",
+      "contentReadiness": "site-unavailable",
+      "contentReadinessLabel": "배포 주소 중단",
+      "proposedAutoExperience": false,
+      "notes": [
+        "서비스 응답 404이므로 현재 체험용 앱으로 사용하지 않는다."
+      ],
+      "sandboxSampleVerified": false,
+      "evidence": {
+        "initialScreenshot": "output/browser-checks/iframe-audit-20261019/38-list-red-alpha.vercel.app.png",
+        "followupScreenshot": null,
+        "initialDom": {
+          "textLength": 179,
+          "canvases": 0,
+          "images": 0,
+          "controls": 3
+        },
+        "framePolicyErrors": []
+      }
+    },
+    {
+      "id": "iframe-url-39",
+      "url": "https://millie-admin-dashboard.vercel.app",
+      "relatedEntryIds": [
+        "original:millie-admin-dashboard"
+      ],
+      "relatedEntryNames": [
+        "밀리 관리자 대시보드"
+      ],
+      "relatedRepositories": [
+        "millie-admin-dashboard"
+      ],
+      "httpStatus": 200,
+      "finalUrl": "https://millie-admin-dashboard.vercel.app/",
+      "checkedAt": "2026-10-19T13:34:55.3109050+00:00",
+      "headers": {
+        "xFrameOptions": [],
+        "contentSecurityPolicy": [],
+        "frameAncestors": [],
+        "contentSecurityPolicyReportOnly": []
+      },
+      "framePolicyBlockObserved": false,
+      "browserResult": "document-visible",
+      "pageTitle": "Millie Admin Dashboard",
+      "contentReadiness": "public-first-screen",
+      "contentReadinessLabel": "공개 첫 화면 확인",
+      "proposedAutoExperience": true,
+      "notes": [
+        "iframe 내 첫 화면을 확인했다. 전체 업무·외부 API·결제·저장 기능의 동작을 보증하는 결과는 아니다."
+      ],
+      "sandboxSampleVerified": false,
+      "evidence": {
+        "initialScreenshot": "output/browser-checks/iframe-audit-20261019/39-millie-admin-dashboard.vercel.app.png",
+        "followupScreenshot": null,
+        "initialDom": {
+          "textLength": 1569,
+          "canvases": 4,
+          "images": 0,
+          "controls": 28
+        },
+        "framePolicyErrors": []
+      }
+    },
+    {
+      "id": "iframe-url-40",
+      "url": "https://millie-admin-dashboard.vercel.app/#/dashboard",
+      "relatedEntryIds": [
+        "original:millie-admin-dashboard"
+      ],
+      "relatedEntryNames": [
+        "밀리 관리자 대시보드"
+      ],
+      "relatedRepositories": [
+        "millie-admin-dashboard"
+      ],
+      "httpStatus": 200,
+      "finalUrl": "https://millie-admin-dashboard.vercel.app/#/dashboard",
+      "checkedAt": "2026-10-19T13:34:55.3109050+00:00",
+      "headers": {
+        "xFrameOptions": [],
+        "contentSecurityPolicy": [],
+        "frameAncestors": [],
+        "contentSecurityPolicyReportOnly": []
+      },
+      "framePolicyBlockObserved": false,
+      "browserResult": "document-visible",
+      "pageTitle": "Millie Admin Dashboard",
+      "contentReadiness": "public-first-screen",
+      "contentReadinessLabel": "공개 첫 화면 확인",
+      "proposedAutoExperience": true,
+      "notes": [
+        "iframe 내 첫 화면을 확인했다. 전체 업무·외부 API·결제·저장 기능의 동작을 보증하는 결과는 아니다."
+      ],
+      "sandboxSampleVerified": false,
+      "evidence": {
+        "initialScreenshot": "output/browser-checks/iframe-audit-20261019/40-millie-admin-dashboard.vercel.app.png",
+        "followupScreenshot": null,
+        "initialDom": {
+          "textLength": 1569,
+          "canvases": 4,
+          "images": 0,
+          "controls": 28
+        },
+        "framePolicyErrors": []
+      }
+    },
+    {
+      "id": "iframe-url-41",
+      "url": "https://my-space-orcin-eight.vercel.app",
+      "relatedEntryIds": [
+        "original:space-3d"
+      ],
+      "relatedEntryNames": [
+        "3D 공간 만들기"
+      ],
+      "relatedRepositories": [
+        "my-space"
+      ],
+      "httpStatus": 404,
+      "finalUrl": "https://my-space-orcin-eight.vercel.app/",
+      "checkedAt": "2026-10-19T13:34:55.0675814+00:00",
+      "headers": {
+        "xFrameOptions": [],
+        "contentSecurityPolicy": [],
+        "frameAncestors": [],
+        "contentSecurityPolicyReportOnly": []
+      },
+      "framePolicyBlockObserved": false,
+      "browserResult": "unavailable",
+      "pageTitle": "404: NOT_FOUND",
+      "contentReadiness": "site-unavailable",
+      "contentReadinessLabel": "배포 주소 중단",
+      "proposedAutoExperience": false,
+      "notes": [
+        "서비스 응답 404이므로 현재 체험용 앱으로 사용하지 않는다."
+      ],
+      "sandboxSampleVerified": false,
+      "evidence": {
+        "initialScreenshot": "output/browser-checks/iframe-audit-20261019/41-my-space-orcin-eight.vercel.app.png",
+        "followupScreenshot": null,
+        "initialDom": {
+          "textLength": 179,
+          "canvases": 0,
+          "images": 0,
+          "controls": 3
+        },
+        "framePolicyErrors": []
+      }
+    },
+    {
+      "id": "iframe-url-42",
+      "url": "https://my-world-01-six.vercel.app",
+      "relatedEntryIds": [
+        "additional:my-world-01"
+      ],
+      "relatedEntryNames": [
+        "my-world-01 전시관"
+      ],
+      "relatedRepositories": [
+        "my-world-01"
+      ],
+      "httpStatus": 200,
+      "finalUrl": "https://my-world-01-six.vercel.app/",
+      "checkedAt": "2026-10-19T13:34:55.1277113+00:00",
+      "headers": {
+        "xFrameOptions": [],
+        "contentSecurityPolicy": [],
+        "frameAncestors": [],
+        "contentSecurityPolicyReportOnly": []
+      },
+      "framePolicyBlockObserved": false,
+      "browserResult": "document-visible",
+      "pageTitle": "STILL — A space for ideas",
+      "contentReadiness": "public-first-screen",
+      "contentReadinessLabel": "공개 첫 화면 확인",
+      "proposedAutoExperience": true,
+      "notes": [
+        "iframe 내 첫 화면을 확인했다. 전체 업무·외부 API·결제·저장 기능의 동작을 보증하는 결과는 아니다.",
+        "확장 대기 후 sandbox iframe 안에서 3D 전시관 렌더링을 확인했다."
+      ],
+      "sandboxSampleVerified": true,
+      "evidence": {
+        "initialScreenshot": "output/browser-checks/iframe-audit-20261019/42-my-world-01-six.vercel.app.png",
+        "followupScreenshot": "output/browser-checks/iframe-audit-20261019/followup-world-01-extended.png",
+        "initialDom": {
+          "textLength": 187,
+          "canvases": 1,
+          "images": 8,
+          "controls": 16
+        },
+        "framePolicyErrors": []
+      }
+    },
+    {
+      "id": "iframe-url-43",
+      "url": "https://my-world-02.vercel.app",
+      "relatedEntryIds": [
+        "additional:my-world-02"
+      ],
+      "relatedEntryNames": [
+        "my-world-02 전시관"
+      ],
+      "relatedRepositories": [
+        "my-world-02"
+      ],
+      "httpStatus": 200,
+      "finalUrl": "https://my-world-02.vercel.app/",
+      "checkedAt": "2026-10-19T13:34:55.1818694+00:00",
+      "headers": {
+        "xFrameOptions": [],
+        "contentSecurityPolicy": [],
+        "frameAncestors": [],
+        "contentSecurityPolicyReportOnly": []
+      },
+      "framePolicyBlockObserved": false,
+      "browserResult": "document-visible",
+      "pageTitle": "My World — A Digital Gallery",
+      "contentReadiness": "public-first-screen",
+      "contentReadinessLabel": "공개 첫 화면 확인",
+      "proposedAutoExperience": true,
+      "notes": [
+        "iframe 내 첫 화면을 확인했다. 전체 업무·외부 API·결제·저장 기능의 동작을 보증하는 결과는 아니다."
+      ],
+      "sandboxSampleVerified": false,
+      "evidence": {
+        "initialScreenshot": "output/browser-checks/iframe-audit-20261019/43-my-world-02.vercel.app.png",
+        "followupScreenshot": null,
+        "initialDom": {
+          "textLength": 301,
+          "canvases": 1,
+          "images": 0,
+          "controls": 25
+        },
+        "framePolicyErrors": []
+      }
+    },
+    {
+      "id": "iframe-url-44",
+      "url": "https://my-world-03.vercel.app",
+      "relatedEntryIds": [
+        "additional:my-world-03"
+      ],
+      "relatedEntryNames": [
+        "my-world-03 TRIAD 전시관"
+      ],
+      "relatedRepositories": [
+        "my-world-03"
+      ],
+      "httpStatus": 200,
+      "finalUrl": "https://my-world-03.vercel.app/",
+      "checkedAt": "2026-10-19T13:34:55.1937635+00:00",
+      "headers": {
+        "xFrameOptions": [],
+        "contentSecurityPolicy": [],
+        "frameAncestors": [],
+        "contentSecurityPolicyReportOnly": []
+      },
+      "framePolicyBlockObserved": false,
+      "browserResult": "document-visible",
+      "pageTitle": "TRIAD — 세 개의 시선, 하나의 공간",
+      "contentReadiness": "public-first-screen",
+      "contentReadinessLabel": "공개 첫 화면 확인",
+      "proposedAutoExperience": true,
+      "notes": [
+        "iframe 내 첫 화면을 확인했다. 전체 업무·외부 API·결제·저장 기능의 동작을 보증하는 결과는 아니다.",
+        "확장 대기 후 sandbox iframe 안에서 3D 전시관 렌더링을 확인했다."
+      ],
+      "sandboxSampleVerified": true,
+      "evidence": {
+        "initialScreenshot": "output/browser-checks/iframe-audit-20261019/44-my-world-03.vercel.app.png",
+        "followupScreenshot": "output/browser-checks/iframe-audit-20261019/followup-world-03-extended.png",
+        "initialDom": {
+          "textLength": 209,
+          "canvases": 2,
+          "images": 0,
+          "controls": 11
+        },
+        "framePolicyErrors": []
+      }
+    },
+    {
+      "id": "iframe-url-45",
+      "url": "https://neon-fist.vercel.app",
+      "relatedEntryIds": [
+        "original:game-lab:neon-fist"
+      ],
+      "relatedEntryNames": [
+        "neon-fist"
+      ],
+      "relatedRepositories": [
+        "neon-fist"
+      ],
+      "httpStatus": 200,
+      "finalUrl": "https://neon-fist.vercel.app/",
+      "checkedAt": "2026-10-19T13:34:55.4243342+00:00",
+      "headers": {
+        "xFrameOptions": [],
+        "contentSecurityPolicy": [],
+        "frameAncestors": [],
+        "contentSecurityPolicyReportOnly": []
+      },
+      "framePolicyBlockObserved": false,
+      "browserResult": "document-visible",
+      "pageTitle": "NEON FIST: NIGHT CIRCUIT",
+      "contentReadiness": "public-first-screen",
+      "contentReadinessLabel": "공개 첫 화면 확인",
+      "proposedAutoExperience": true,
+      "notes": [
+        "iframe 내 첫 화면을 확인했다. 전체 업무·외부 API·결제·저장 기능의 동작을 보증하는 결과는 아니다.",
+        "sandbox iframe에서 시작 버튼 클릭, 게임 화면 전환, 키보드 입력을 확인했다."
+      ],
+      "sandboxSampleVerified": true,
+      "evidence": {
+        "initialScreenshot": "output/browser-checks/iframe-audit-20261019/45-neon-fist.vercel.app.png",
+        "followupScreenshot": "output/browser-checks/iframe-audit-20261019/followup-neon-start-fixed.png",
+        "initialDom": {
+          "textLength": 357,
+          "canvases": 1,
+          "images": 0,
+          "controls": 9
+        },
+        "framePolicyErrors": []
+      }
+    },
+    {
+      "id": "iframe-url-46",
+      "url": "https://nuri-delta.vercel.app",
+      "relatedEntryIds": [
+        "additional:nuri"
+      ],
+      "relatedEntryNames": [
+        "DADOKE 디지털 독서 화면 시안"
+      ],
+      "relatedRepositories": [
+        "nuri"
+      ],
+      "httpStatus": 404,
+      "finalUrl": "https://nuri-delta.vercel.app/",
+      "checkedAt": "2026-10-19T13:34:55.2404459+00:00",
+      "headers": {
+        "xFrameOptions": [],
+        "contentSecurityPolicy": [],
+        "frameAncestors": [],
+        "contentSecurityPolicyReportOnly": []
+      },
+      "framePolicyBlockObserved": false,
+      "browserResult": "unavailable",
+      "pageTitle": "404: NOT_FOUND",
+      "contentReadiness": "site-unavailable",
+      "contentReadinessLabel": "배포 주소 중단",
+      "proposedAutoExperience": false,
+      "notes": [
+        "서비스 응답 404이므로 현재 체험용 앱으로 사용하지 않는다."
+      ],
+      "sandboxSampleVerified": false,
+      "evidence": {
+        "initialScreenshot": "output/browser-checks/iframe-audit-20261019/46-nuri-delta.vercel.app.png",
+        "followupScreenshot": null,
+        "initialDom": {
+          "textLength": 179,
+          "canvases": 0,
+          "images": 0,
+          "controls": 3
+        },
+        "framePolicyErrors": []
+      }
+    },
+    {
+      "id": "iframe-url-47",
+      "url": "https://on-the-book-admin.vercel.app/",
+      "relatedEntryIds": [
+        "additional:on-the-book"
+      ],
+      "relatedEntryNames": [
+        "On the Book 사용자 서비스와 관리자"
+      ],
+      "relatedRepositories": [
+        "on-the-book"
+      ],
+      "httpStatus": 200,
+      "finalUrl": "https://on-the-book-admin.vercel.app/",
+      "checkedAt": "2026-10-19T13:34:55.4540198+00:00",
+      "headers": {
+        "xFrameOptions": [],
+        "contentSecurityPolicy": [],
+        "frameAncestors": [],
+        "contentSecurityPolicyReportOnly": []
+      },
+      "framePolicyBlockObserved": false,
+      "browserResult": "document-visible",
+      "pageTitle": "On the Book — 스튜디오",
+      "contentReadiness": "authentication-required",
+      "contentReadinessLabel": "로그인 화면 확인",
+      "proposedAutoExperience": false,
+      "notes": [
+        "인증 화면까지 삽입됨을 확인했다. 로그인·저장·실서비스 데이터 변경은 검사하지 않았다."
+      ],
+      "sandboxSampleVerified": false,
+      "evidence": {
+        "initialScreenshot": "output/browser-checks/iframe-audit-20261019/47-on-the-book-admin.vercel.app.png",
+        "followupScreenshot": null,
+        "initialDom": {
+          "textLength": 70,
+          "canvases": 0,
+          "images": 1,
+          "controls": 3
+        },
+        "framePolicyErrors": []
+      }
+    },
+    {
+      "id": "iframe-url-48",
+      "url": "https://on-the-book-client.vercel.app/",
+      "relatedEntryIds": [
+        "additional:on-the-book"
+      ],
+      "relatedEntryNames": [
+        "On the Book 사용자 서비스와 관리자"
+      ],
+      "relatedRepositories": [
+        "on-the-book"
+      ],
+      "httpStatus": 200,
+      "finalUrl": "https://on-the-book-client.vercel.app/",
+      "checkedAt": "2026-10-19T14:06:55.263Z",
+      "headers": {
+        "xFrameOptions": [],
+        "contentSecurityPolicy": [],
+        "frameAncestors": [],
+        "contentSecurityPolicyReportOnly": []
+      },
+      "framePolicyBlockObserved": false,
+      "browserResult": "document-visible",
+      "pageTitle": "On the Book — 책 속을 걷는 시간",
+      "contentReadiness": "public-first-screen",
+      "contentReadinessLabel": "공개 앱 첫 화면 · 도서 조회 정상",
+      "proposedAutoExperience": true,
+      "notes": [
+        "초기 도서 API 400 이후 같은 날 재검사에서 /api/library 200과 도서 4권 표시를 확인했다.",
+        "제안 sandbox iframe 안에서 앨리스 도서 상세 선택과 1장 3D 장면 진입·캔버스 표시를 확인했다. 전체 도서·모든 기능의 검증은 아니다."
+      ],
+      "sandboxSampleVerified": true,
+      "evidence": {
+        "initialScreenshot": "output/browser-checks/iframe-audit-20261019/48-on-the-book-client.vercel.app.png",
+        "followupScreenshot": "output/browser-checks/iframe-audit-20261019/followup-on-the-book-extended.png",
+        "initialDom": {
+          "textLength": 35,
+          "canvases": 0,
+          "images": 1,
+          "controls": 0
+        },
+        "framePolicyErrors": [],
+        "recovery": {
+          "report": "output/browser-checks/planit-capture-20261019/on-book-browser-recheck.json",
+          "libraryScreenshot": "output/browser-checks/planit-capture-20261019/on-book-recovered-iframe.png",
+          "detailScreenshot": "output/browser-checks/planit-capture-20261019/on-book-recovered-detail.png",
+          "sceneScreenshot": "output/browser-checks/planit-capture-20261019/on-book-recovered-scene.png"
+        }
+      },
+      "verificationHistory": [
+        {
+          "checkedAt": "2026-10-19T13:34:55.5231106+00:00",
+          "contentReadiness": "application-api-error",
+          "notes": [
+            "도서 조회 /api/library가 400을 반환하며 책장 로딩에 실패한다. 단독 API 요청도 400이다."
+          ]
+        }
+      ],
+      "apiRecheck": {
+        "url": "https://on-the-book-client.vercel.app/api/library",
+        "httpStatus": 200,
+        "checkedAt": "2026-10-19T14:05:16.172Z",
+        "xFrameOptions": null,
+        "contentSecurityPolicy": null
+      }
+    },
+    {
+      "id": "iframe-url-49",
+      "url": "https://project-manager-eight-tau.vercel.app",
+      "relatedEntryIds": [
+        "additional:project-manager"
+      ],
+      "relatedEntryNames": [
+        "Planit AI 기획 워크스페이스"
+      ],
+      "relatedRepositories": [
+        "project-manager"
+      ],
+      "httpStatus": 200,
+      "finalUrl": "https://project-manager-eight-tau.vercel.app/",
+      "checkedAt": "2026-10-19T13:34:55.5070442+00:00",
+      "headers": {
+        "xFrameOptions": [],
+        "contentSecurityPolicy": [],
+        "frameAncestors": [],
+        "contentSecurityPolicyReportOnly": []
+      },
+      "framePolicyBlockObserved": false,
+      "browserResult": "document-visible",
+      "pageTitle": "Planit — 기획 워크스페이스",
+      "contentReadiness": "application-api-error",
+      "contentReadinessLabel": "앱 API 연동 오류",
+      "proposedAutoExperience": false,
+      "notes": [
+        "/api/projects와 /api/ai/status가 404를 반환한다. 화면은 열리지만 실제 기획 작업 연동은 확인되지 않았다.",
+        "사용자 확인: Planit은 로컬 전용 앱이다. 공개 주소의 API 404는 실제 로컬 실행 상태를 대표하지 않는다.",
+        "기존 로컬 QA 데이터의 복사본으로 앱을 실행해 5장을 캡처했다. 로컬 서버의 X-Frame-Options는 DENY였다."
+      ],
+      "sandboxSampleVerified": true,
+      "evidence": {
+        "initialScreenshot": "output/browser-checks/iframe-audit-20261019/49-project-manager-eight-tau.vercel.app.png",
+        "followupScreenshot": "output/browser-checks/iframe-audit-20261019/followup-planit-api.png",
+        "initialDom": {
+          "textLength": 401,
+          "canvases": 0,
+          "images": 0,
+          "controls": 10
+        },
+        "framePolicyErrors": []
+      },
+      "exhibitMode": "local-capture",
+      "localCaptureManifest": "portfolio-assets/planit/capture-manifest.json"
+    },
+    {
+      "id": "iframe-url-50",
+      "url": "https://short-form-phi.vercel.app",
+      "relatedEntryIds": [
+        "additional:short-form"
+      ],
+      "relatedEntryNames": [
+        "ShortForm Knowledge"
+      ],
+      "relatedRepositories": [
+        "short-form"
+      ],
+      "httpStatus": 200,
+      "finalUrl": "https://short-form-phi.vercel.app/",
+      "checkedAt": "2026-10-19T13:34:56.1800675+00:00",
+      "headers": {
+        "xFrameOptions": [],
+        "contentSecurityPolicy": [],
+        "frameAncestors": [],
+        "contentSecurityPolicyReportOnly": []
+      },
+      "framePolicyBlockObserved": false,
+      "browserResult": "document-visible",
+      "pageTitle": "ShortForm Knowledge",
+      "contentReadiness": "public-first-screen",
+      "contentReadinessLabel": "공개 첫 화면 확인",
+      "proposedAutoExperience": true,
+      "notes": [
+        "iframe 내 첫 화면을 확인했다. 전체 업무·외부 API·결제·저장 기능의 동작을 보증하는 결과는 아니다."
+      ],
+      "sandboxSampleVerified": false,
+      "evidence": {
+        "initialScreenshot": "output/browser-checks/iframe-audit-20261019/50-short-form-phi.vercel.app.png",
+        "followupScreenshot": null,
+        "initialDom": {
+          "textLength": 2369,
+          "canvases": 0,
+          "images": 13,
+          "controls": 33
+        },
+        "framePolicyErrors": []
+      }
+    },
+    {
+      "id": "iframe-url-51",
+      "url": "https://simple-gatcha.netlify.app/",
+      "relatedEntryIds": [
+        "original:game-cards"
+      ],
+      "relatedEntryNames": [
+        "능력치 카드 게임"
+      ],
+      "relatedRepositories": [
+        "game-cards"
+      ],
+      "httpStatus": 200,
+      "finalUrl": "https://simple-gatcha.netlify.app/",
+      "checkedAt": "2026-10-19T13:34:56.4576219+00:00",
+      "headers": {
+        "xFrameOptions": [],
+        "contentSecurityPolicy": [],
+        "frameAncestors": [],
+        "contentSecurityPolicyReportOnly": []
+      },
+      "framePolicyBlockObserved": false,
+      "browserResult": "document-visible",
+      "pageTitle": "React App",
+      "contentReadiness": "public-first-screen",
+      "contentReadinessLabel": "공개 첫 화면 확인",
+      "proposedAutoExperience": true,
+      "notes": [
+        "iframe 내 첫 화면을 확인했다. 전체 업무·외부 API·결제·저장 기능의 동작을 보증하는 결과는 아니다."
+      ],
+      "sandboxSampleVerified": false,
+      "evidence": {
+        "initialScreenshot": "output/browser-checks/iframe-audit-20261019/51-simple-gatcha.netlify.app.png",
+        "followupScreenshot": null,
+        "initialDom": {
+          "textLength": 579,
+          "canvases": 0,
+          "images": 2,
+          "controls": 50
+        },
+        "framePolicyErrors": []
+      }
+    },
+    {
+      "id": "iframe-url-52",
+      "url": "https://student-dashboard-omega-lime.vercel.app",
+      "relatedEntryIds": [
+        "additional:student-dashboard"
+      ],
+      "relatedEntryNames": [
+        "학생 대시보드"
+      ],
+      "relatedRepositories": [
+        "student-dashboard"
+      ],
+      "httpStatus": 200,
+      "finalUrl": "https://student-dashboard-omega-lime.vercel.app/",
+      "checkedAt": "2026-10-19T13:34:55.6196408+00:00",
+      "headers": {
+        "xFrameOptions": [],
+        "contentSecurityPolicy": [],
+        "frameAncestors": [],
+        "contentSecurityPolicyReportOnly": []
+      },
+      "framePolicyBlockObserved": false,
+      "browserResult": "document-visible",
+      "pageTitle": "학생 대시보드",
+      "contentReadiness": "public-first-screen",
+      "contentReadinessLabel": "공개 첫 화면 확인",
+      "proposedAutoExperience": true,
+      "notes": [
+        "iframe 내 첫 화면을 확인했다. 전체 업무·외부 API·결제·저장 기능의 동작을 보증하는 결과는 아니다."
+      ],
+      "sandboxSampleVerified": false,
+      "evidence": {
+        "initialScreenshot": "output/browser-checks/iframe-audit-20261019/52-student-dashboard-omega-lime.vercel.app.png",
+        "followupScreenshot": null,
+        "initialDom": {
+          "textLength": 565,
+          "canvases": 0,
+          "images": 0,
+          "controls": 14
+        },
+        "framePolicyErrors": []
+      }
+    },
+    {
+      "id": "iframe-url-53",
+      "url": "https://topik-ai.vercel.app",
+      "relatedEntryIds": [
+        "original:topik-admin",
+        "original:verify-loop"
+      ],
+      "relatedEntryNames": [
+        "도토리 토픽 · 관리자단",
+        "TOPIK AI 검증 하네스"
+      ],
+      "relatedRepositories": [
+        "topik-ai"
+      ],
+      "httpStatus": 200,
+      "finalUrl": "https://topik-ai.vercel.app/",
+      "checkedAt": "2026-10-19T13:34:55.7262299+00:00",
+      "headers": {
+        "xFrameOptions": [],
+        "contentSecurityPolicy": [],
+        "frameAncestors": [],
+        "contentSecurityPolicyReportOnly": []
+      },
+      "framePolicyBlockObserved": false,
+      "browserResult": "document-visible",
+      "pageTitle": "TOPIK AI 통합 관리자",
+      "contentReadiness": "authentication-required",
+      "contentReadinessLabel": "로그인 화면 확인",
+      "proposedAutoExperience": false,
+      "notes": [
+        "인증 화면까지 삽입됨을 확인했다. 로그인·저장·실서비스 데이터 변경은 검사하지 않았다."
+      ],
+      "sandboxSampleVerified": false,
+      "evidence": {
+        "initialScreenshot": "output/browser-checks/iframe-audit-20261019/53-topik-ai.vercel.app.png",
+        "followupScreenshot": null,
+        "initialDom": {
+          "textLength": 56,
+          "canvases": 0,
+          "images": 0,
+          "controls": 3
+        },
+        "framePolicyErrors": []
+      }
+    },
+    {
+      "id": "iframe-url-54",
+      "url": "https://tutor-dashboard-topaz.vercel.app",
+      "relatedEntryIds": [
+        "additional:tutor-dashboard"
+      ],
+      "relatedEntryNames": [
+        "강사 대시보드"
+      ],
+      "relatedRepositories": [
+        "tutor-dashboard"
+      ],
+      "httpStatus": 200,
+      "finalUrl": "https://tutor-dashboard-topaz.vercel.app/",
+      "checkedAt": "2026-10-19T13:34:56.1403326+00:00",
+      "headers": {
+        "xFrameOptions": [],
+        "contentSecurityPolicy": [],
+        "frameAncestors": [],
+        "contentSecurityPolicyReportOnly": []
+      },
+      "framePolicyBlockObserved": false,
+      "browserResult": "document-visible",
+      "pageTitle": "강사 대시보드 - Monochrome",
+      "contentReadiness": "public-first-screen",
+      "contentReadinessLabel": "공개 첫 화면 확인",
+      "proposedAutoExperience": true,
+      "notes": [
+        "iframe 내 첫 화면을 확인했다. 전체 업무·외부 API·결제·저장 기능의 동작을 보증하는 결과는 아니다."
+      ],
+      "sandboxSampleVerified": false,
+      "evidence": {
+        "initialScreenshot": "output/browser-checks/iframe-audit-20261019/54-tutor-dashboard-topaz.vercel.app.png",
+        "followupScreenshot": null,
+        "initialDom": {
+          "textLength": 361,
+          "canvases": 0,
+          "images": 0,
+          "controls": 9
+        },
+        "framePolicyErrors": []
+      }
+    },
+    {
+      "id": "iframe-url-55",
+      "url": "https://v12-weld.vercel.app",
+      "relatedEntryIds": [
+        "original:my-skills"
+      ],
+      "relatedEntryNames": [
+        "반복 작업을 SKILL로 만드는 법"
+      ],
+      "relatedRepositories": [
+        "v12",
+        "sample-03"
+      ],
+      "httpStatus": 200,
+      "finalUrl": "https://v12-weld.vercel.app/",
+      "checkedAt": "2026-10-19T13:34:55.7663681+00:00",
+      "headers": {
+        "xFrameOptions": [],
+        "contentSecurityPolicy": [],
+        "frameAncestors": [],
+        "contentSecurityPolicyReportOnly": []
+      },
+      "framePolicyBlockObserved": false,
+      "browserResult": "document-visible",
+      "pageTitle": "TALKPIK AI",
+      "contentReadiness": "public-first-screen",
+      "contentReadinessLabel": "공개 첫 화면 확인",
+      "proposedAutoExperience": true,
+      "notes": [
+        "iframe 내 첫 화면을 확인했다. 전체 업무·외부 API·결제·저장 기능의 동작을 보증하는 결과는 아니다."
+      ],
+      "sandboxSampleVerified": false,
+      "evidence": {
+        "initialScreenshot": "output/browser-checks/iframe-audit-20261019/55-v12-weld.vercel.app.png",
+        "followupScreenshot": null,
+        "initialDom": {
+          "textLength": 781,
+          "canvases": 0,
+          "images": 0,
+          "controls": 17
+        },
+        "framePolicyErrors": []
+      }
+    },
+    {
+      "id": "iframe-url-56",
+      "url": "https://vive-nine.vercel.app",
+      "relatedEntryIds": [
+        "additional:vive"
+      ],
+      "relatedEntryNames": [
+        "VIVE 독서 보조 도구"
+      ],
+      "relatedRepositories": [
+        "vive"
+      ],
+      "httpStatus": 404,
+      "finalUrl": "https://vive-nine.vercel.app/",
+      "checkedAt": "2026-10-19T13:34:55.5692674+00:00",
+      "headers": {
+        "xFrameOptions": [],
+        "contentSecurityPolicy": [],
+        "frameAncestors": [],
+        "contentSecurityPolicyReportOnly": []
+      },
+      "framePolicyBlockObserved": false,
+      "browserResult": "unavailable",
+      "pageTitle": "404: NOT_FOUND",
+      "contentReadiness": "site-unavailable",
+      "contentReadinessLabel": "배포 주소 중단",
+      "proposedAutoExperience": false,
+      "notes": [
+        "서비스 응답 404이므로 현재 체험용 앱으로 사용하지 않는다."
+      ],
+      "sandboxSampleVerified": false,
+      "evidence": {
+        "initialScreenshot": "output/browser-checks/iframe-audit-20261019/56-vive-nine.vercel.app.png",
+        "followupScreenshot": null,
+        "initialDom": {
+          "textLength": 179,
+          "canvases": 0,
+          "images": 0,
+          "controls": 3
+        },
+        "framePolicyErrors": []
+      }
+    },
+    {
+      "id": "iframe-url-57",
+      "url": "https://wisdomcellar.com",
+      "relatedEntryIds": [
+        "original:corp-sites:wisdomceller"
+      ],
+      "relatedEntryNames": [
+        "위즈덤셀러"
+      ],
+      "relatedRepositories": [
+        "wisdomceller"
+      ],
+      "httpStatus": 200,
+      "finalUrl": "https://wisdomcellar.com/",
+      "checkedAt": "2026-10-19T13:34:55.6196812+00:00",
+      "headers": {
+        "xFrameOptions": [],
+        "contentSecurityPolicy": [],
+        "frameAncestors": [],
+        "contentSecurityPolicyReportOnly": []
+      },
+      "framePolicyBlockObserved": false,
+      "browserResult": "document-visible",
+      "pageTitle": "위즈덤셀러",
+      "contentReadiness": "public-first-screen",
+      "contentReadinessLabel": "공개 첫 화면 확인",
+      "proposedAutoExperience": true,
+      "notes": [
+        "iframe 내 첫 화면을 확인했다. 전체 업무·외부 API·결제·저장 기능의 동작을 보증하는 결과는 아니다."
+      ],
+      "sandboxSampleVerified": false,
+      "evidence": {
+        "initialScreenshot": "output/browser-checks/iframe-audit-20261019/57-wisdomcellar.com.png",
+        "followupScreenshot": null,
+        "initialDom": {
+          "textLength": 1603,
+          "canvases": 0,
+          "images": 16,
+          "controls": 26
+        },
+        "framePolicyErrors": []
+      }
+    },
+    {
+      "id": "iframe-url-58",
+      "url": "https://www.kchanchan.com/",
+      "relatedEntryIds": [
+        "additional:my-website-2026"
+      ],
+      "relatedEntryNames": [
+        "이전 포트폴리오 경력 지도"
+      ],
+      "relatedRepositories": [
+        "my-website-2026"
+      ],
+      "httpStatus": 200,
+      "finalUrl": "https://www.kchanchan.com/",
+      "checkedAt": "2026-10-19T13:34:55.7671696+00:00",
+      "headers": {
+        "xFrameOptions": [],
+        "contentSecurityPolicy": [],
+        "frameAncestors": [],
+        "contentSecurityPolicyReportOnly": []
+      },
+      "framePolicyBlockObserved": false,
+      "browserResult": "document-visible",
+      "pageTitle": "김찬기 · 프론트엔드 개발자",
+      "contentReadiness": "public-first-screen",
+      "contentReadinessLabel": "공개 첫 화면 확인",
+      "proposedAutoExperience": true,
+      "notes": [
+        "iframe 내 첫 화면을 확인했다. 전체 업무·외부 API·결제·저장 기능의 동작을 보증하는 결과는 아니다."
+      ],
+      "sandboxSampleVerified": false,
+      "evidence": {
+        "initialScreenshot": "output/browser-checks/iframe-audit-20261019/58-www.kchanchan.com.png",
+        "followupScreenshot": null,
+        "initialDom": {
+          "textLength": 223,
+          "canvases": 3,
+          "images": 1,
+          "controls": 4
+        },
+        "framePolicyErrors": []
+      }
+    },
+    {
+      "id": "iframe-url-59",
+      "url": "https://zenith-ten-lac.vercel.app",
+      "relatedEntryIds": [
+        "original:trading-lab:zenith"
+      ],
+      "relatedEntryNames": [
+        "zenith"
+      ],
+      "relatedRepositories": [
+        "zenith"
+      ],
+      "httpStatus": 200,
+      "finalUrl": "https://zenith-ten-lac.vercel.app/",
+      "checkedAt": "2026-10-19T13:34:55.9018081+00:00",
+      "headers": {
+        "xFrameOptions": [],
+        "contentSecurityPolicy": [],
+        "frameAncestors": [],
+        "contentSecurityPolicyReportOnly": []
+      },
+      "framePolicyBlockObserved": false,
+      "browserResult": "document-visible",
+      "pageTitle": "frontend",
+      "contentReadiness": "authentication-required",
+      "contentReadinessLabel": "로그인 화면 확인",
+      "proposedAutoExperience": false,
+      "notes": [
+        "인증 화면까지 삽입됨을 확인했다. 로그인·저장·실서비스 데이터 변경은 검사하지 않았다."
+      ],
+      "sandboxSampleVerified": false,
+      "evidence": {
+        "initialScreenshot": "output/browser-checks/iframe-audit-20261019/59-zenith-ten-lac.vercel.app.png",
+        "followupScreenshot": null,
+        "initialDom": {
+          "textLength": 103,
+          "canvases": 0,
+          "images": 0,
+          "controls": 1
+        },
+        "framePolicyErrors": []
+      }
+    },
+    {
+      "id": "iframe-url-60",
+      "url": "https://modeal-chan.github.io/react-clone-coding/",
+      "relatedEntryIds": [
+        "original:react-basics:react-modeal.net2"
+      ],
+      "relatedEntryNames": [
+        "react-modeal.net2"
+      ],
+      "relatedRepositories": [
+        "react-modeal.net2"
+      ],
+      "httpStatus": 200,
+      "finalUrl": "https://modeal-chan.github.io/react-clone-coding/",
+      "checkedAt": "2026-10-19T13:47:01.8094697+00:00",
+      "headers": {
+        "xFrameOptions": [],
+        "contentSecurityPolicy": [],
+        "frameAncestors": [],
+        "contentSecurityPolicyReportOnly": []
+      },
+      "framePolicyBlockObserved": false,
+      "browserResult": "document-visible",
+      "pageTitle": "모딜 Ver.2",
+      "contentReadiness": "public-first-screen",
+      "contentReadinessLabel": "공개 첫 화면 확인",
+      "proposedAutoExperience": true,
+      "notes": [
+        "iframe 내 첫 화면을 확인했다. 전체 업무·외부 API·결제·저장 기능의 동작을 보증하는 결과는 아니다.",
+        "react-modeal.net2 레포 README와 package homepage에 명시된 별도 계정 배포 주소다. 전시에는 이 출처 관계와 학습·클론 성격을 표시한다."
+      ],
+      "sandboxSampleVerified": true,
+      "evidence": {
+        "initialScreenshot": null,
+        "followupScreenshot": "output/browser-checks/iframe-audit-20261019/followup-legacy-modeal.png",
+        "initialDom": null,
+        "framePolicyErrors": []
+      }
+    }
+  ],
+  "localExecutionChecks": [
+    {
+      "application": "Planit",
+      "includedInPublicUrlSummary": false,
+      "checkedAt": "2026-10-19T14:05:15.336Z",
+      "url": "http://127.0.0.1:43100",
+      "httpStatus": 200,
+      "xFrameOptions": "DENY",
+      "dataIsolationVerified": true,
+      "sourceDataUnchanged": true,
+      "temporaryServerStopped": true,
+      "captureManifest": "portfolio-assets/planit/capture-manifest.json"
+    }
+  ]
+}

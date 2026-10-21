@@ -1,0 +1,19 @@
+{
+  "id": "A02-04",
+  "room": "02",
+  "slotKind": "wall",
+  "project": "AI 개발 파이프라인",
+  "sourceEntryIds": [
+    "original:multi-agent"
+  ],
+  "connection": "여러 AI 도구와 후속 작업자에게 요구사항·판단 맥락·변경·검증 근거를 저장소 자료로 넘기는 과정을 고고학 작업의 교대에 비유한다. 중앙 흙층은 앞선 결론과 남은 범위를 보존하는 대상이며, 모델이 실제 발굴을 수행한다는 뜻이 아니다.",
+  "medium": "approved",
+  "symbol": "맥락을 잇는 종이",
+  "subject": "",
+  "reference": null,
+  "origin": "user-approved-preview",
+  "initialPath": "D:/workspace/my-world-03/output/portfolio-paintings-2026-10-20/A02-04-r0.png",
+  "finalPath": "D:/workspace/my-world-03/output/portfolio-paintings-2026-10-20/A02-04.png",
+  "reviewPath": "D:/workspace/my-world-03/output/portfolio-paintings-2026-10-20/reviews/A02-04.json",
+  "prompt": null
+}

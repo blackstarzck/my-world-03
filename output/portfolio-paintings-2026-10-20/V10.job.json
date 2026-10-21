@@ -1,0 +1,19 @@
+{
+  "id": "V10",
+  "room": "03",
+  "slotKind": "case",
+  "project": "On the Book · 도서 목록·상세",
+  "sourceEntryIds": [
+    "additional:on-the-book"
+  ],
+  "connection": "목록에서 책을 고르고 상세를 읽고 마지막 읽은 위치를 기억하는 행동을 책 선택·읽기·리본으로 표현한다. 항구와 여행자는 실제 등록 도서 내용이 아니라 읽기 경험의 비유이다.",
+  "medium": "gouache",
+  "symbol": "책을 고른 자리",
+  "subject": "ONE modest closed deep-blue book with ONE short coral-red ribbon bookmark resting visibly across its top, its end just peeking beyond a corner. Matte gouache and light pencil on ivory paper, gentle selective paper texture. No flower, stairs, extra books, person, library or words.",
+  "reference": null,
+  "origin": "new-production",
+  "initialPath": "D:/workspace/my-world-03/output/portfolio-paintings-2026-10-20/V10-r0.png",
+  "finalPath": "D:/workspace/my-world-03/output/portfolio-paintings-2026-10-20/V10.png",
+  "reviewPath": "D:/workspace/my-world-03/output/portfolio-paintings-2026-10-20/reviews/V10.json",
+  "prompt": "Create ONE original fine-art image, horizontal 7:5, high resolution ideally 2800x2000 or greater. Flat front view, artwork fills entire image, no depicted frame, no mat, no artificial edge border. Matte gouache and visible colored pencil on warm ivory paper, broad simple chalky color shapes, dry edges, a few penciled hatch marks. Restricted indigo/sage/coral/ivory palette, warm mature handmade mood. No glossy digital modeling. SUBJECT: ONE modest closed deep-blue book with ONE short coral-red ribbon bookmark resting visibly across its top, its end just peeking beyond a corner. Matte gouache and light pencil on ivory paper, gentle selective paper texture. No flower, stairs, extra books, person, library or words. The supplied image, if any, is ONLY a medium/mood reference; do not preserve its subject, letters or layout. ONE unified symbolic subject or typographic statement; at least half the image should be calm negative space. Main silhouette readable at thumbnail scale, no extra illustrative narrative. No room-based style constraints. Project meaning outside image: 목록에서 책을 고르고 상세를 읽고 마지막 읽은 위치를 기억하는 행동을 책 선택·읽기·리본으로 표현한다. 항구와 여행자는 실제 등록 도서 내용이 아니라 읽기 경험의 비유이다. Do not depict application screens, logos, code, graphs, arrows, fake achievements, decorative labels, signatures, watermarks, wall/easel or gallery mockup. Unless explicitly requested in the poster subject, no text at all. Original hand-made physical medium, not a flat generic UI icon or a glossy 3D render."
+}

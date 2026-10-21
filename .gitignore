@@ -3,6 +3,7 @@ dist/
 *.log
 output/browser-checks/
 output/playwright/
+output/design-previews/
 .agent-browser/
 .playwright-cli/
 .serena/

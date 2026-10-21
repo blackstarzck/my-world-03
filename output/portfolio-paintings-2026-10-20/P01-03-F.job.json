@@ -1,0 +1,20 @@
+{
+  "id": "P01-03-F",
+  "room": "01",
+  "slotKind": "panel",
+  "project": "DADOKe 전자책 · 오디오북",
+  "sourceEntryIds": [
+    "original:dadoke",
+    "additional:nuri"
+  ],
+  "connection": "플랫폼 사례의 핵심인 시장조사·요구사항 정의·외주팀 조율을 '같은 물건의 구성을 함께 결정하는 두 손'에 둔다. 별도 nuri HTML 시안은 네 권의 서로 다른 물성으로 분리하며, 사용자가 플랫폼 코드를 직접 개발했다고 암시하지 않는다.",
+  "medium": "acrylic",
+  "symbol": "책을 감싼 헤드폰",
+  "subject": "ONE small closed ivory book hugged by ONE softly curved pair of headphones, one unified quiet motif of ebooks and audiobooks. Ivory, dusty blush and a tiny muted blue-gray, raised creamy paint like the cat reference. No person, letters, musical notes or devices.",
+  "reference": "C:/Users/buche/AppData/Local/Temp/codex-clipboard-8b25c64b-1fa2-412e-862c-a4fd173090b3.jpg",
+  "origin": "new-production",
+  "initialPath": "D:/workspace/my-world-03/output/portfolio-paintings-2026-10-20/P01-03-F-r0.png",
+  "finalPath": "D:/workspace/my-world-03/output/portfolio-paintings-2026-10-20/P01-03-F.png",
+  "reviewPath": "D:/workspace/my-world-03/output/portfolio-paintings-2026-10-20/reviews/P01-03-F.json",
+  "prompt": "Create ONE original fine-art image, horizontal 7:5, high resolution ideally 2800x2000 or greater. Flat front view, artwork fills entire image, no depicted frame, no mat, no artificial edge border. Thick creamy acrylic impasto on ivory. Closely match STYLE, PALETTE AND MOOD of supplied cat painting: soft cream, ivory, dusty blush pink, tiny coral accents and warm-gray darks; raised short fur/petal-like strokes, palette-knife texture, tender quiet mood. No cat or lettering from reference. SUBJECT: ONE small closed ivory book hugged by ONE softly curved pair of headphones, one unified quiet motif of ebooks and audiobooks. Ivory, dusty blush and a tiny muted blue-gray, raised creamy paint like the cat reference. No person, letters, musical notes or devices. The supplied image, if any, is ONLY a medium/mood reference; do not preserve its subject, letters or layout. ONE unified symbolic subject or typographic statement; at least half the image should be calm negative space. Main silhouette readable at thumbnail scale, no extra illustrative narrative. No room-based style constraints. Project meaning outside image: 플랫폼 사례의 핵심인 시장조사·요구사항 정의·외주팀 조율을 '같은 물건의 구성을 함께 결정하는 두 손'에 둔다. 별도 nuri HTML 시안은 네 권의 서로 다른 물성으로 분리하며, 사용자가 플랫폼 코드를 직접 개발했다고 암시하지 않는다. Do not depict application screens, logos, code, graphs, arrows, fake achievements, decorative labels, signatures, watermarks, wall/easel or gallery mockup. Unless explicitly requested in the poster subject, no text at all. Original hand-made physical medium, not a flat generic UI icon or a glossy 3D render."
+}

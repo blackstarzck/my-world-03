@@ -1,0 +1,19 @@
+{
+  "id": "A02-02",
+  "room": "02",
+  "slotKind": "wall",
+  "project": "NestJS 학습",
+  "sourceEntryIds": [
+    "original:nest-sns"
+  ],
+  "connection": "인증·게시글·실시간 채팅을 모듈별로 구성하면서 하나의 서버 안에서 연결한 학습을 공동 주택의 다른 생활 공간에 비유한다. 실제 서비스의 운영 규모나 복잡한 분산 아키텍처를 주장하는 그림이 아니다.",
+  "medium": "coloredpencil",
+  "symbol": "세 가닥의 매듭",
+  "subject": "ONE simple loose knot made from THREE softly colored cords, warm gray, muted red and sage, with three short ends. A physical hand-drawn object of connected server modules, visible colored-pencil hatch marks, warm paper, no node graph or software logo.",
+  "reference": null,
+  "origin": "new-production",
+  "initialPath": "D:/workspace/my-world-03/output/portfolio-paintings-2026-10-20/A02-02-r0.png",
+  "finalPath": "D:/workspace/my-world-03/output/portfolio-paintings-2026-10-20/A02-02.png",
+  "reviewPath": "D:/workspace/my-world-03/output/portfolio-paintings-2026-10-20/reviews/A02-02.json",
+  "prompt": "Create ONE original fine-art image, horizontal 7:5, high resolution ideally 2800x2000 or greater. Flat front view, artwork fills entire image, no depicted frame, no mat, no artificial edge border. Soft wax/colored-pencil drawing on warm ivory paper; visible strokes and paper tooth, restrained sage, coral and graphite gray, spare contact shadow. No digital vector edges. SUBJECT: ONE simple loose knot made from THREE softly colored cords, warm gray, muted red and sage, with three short ends. A physical hand-drawn object of connected server modules, visible colored-pencil hatch marks, warm paper, no node graph or software logo. The supplied image, if any, is ONLY a medium/mood reference; do not preserve its subject, letters or layout. ONE unified symbolic subject or typographic statement; at least half the image should be calm negative space. Main silhouette readable at thumbnail scale, no extra illustrative narrative. No room-based style constraints. Project meaning outside image: 인증·게시글·실시간 채팅을 모듈별로 구성하면서 하나의 서버 안에서 연결한 학습을 공동 주택의 다른 생활 공간에 비유한다. 실제 서비스의 운영 규모나 복잡한 분산 아키텍처를 주장하는 그림이 아니다. Do not depict application screens, logos, code, graphs, arrows, fake achievements, decorative labels, signatures, watermarks, wall/easel or gallery mockup. Unless explicitly requested in the poster subject, no text at all. Original hand-made physical medium, not a flat generic UI icon or a glossy 3D render."
+}

@@ -1,0 +1,20 @@
+{
+  "id": "V06",
+  "room": "03",
+  "slotKind": "case",
+  "project": "게임 · 인터랙션",
+  "sourceEntryIds": [
+    "original:game-lab:neon-fist",
+    "original:game-lab:game-cabinet"
+  ],
+  "connection": "neon-fist의 Canvas 그리기와 실시간 소리 합성은 붓질 같은 파편·격투 동작·악사의 타격으로, game-cabinet의 3D 공간에서 웹게임을 고르고 실행하는 인터페이스는 놀이 상자와 여러 작은 공연을 고르는 방문객으로 표현한다. 두 게임이 실제로 연동된다는 의미는 아니다.",
+  "medium": "approved",
+  "symbol": "타격 순간의 주먹",
+  "subject": "",
+  "reference": null,
+  "origin": "user-approved-preview",
+  "initialPath": "D:/workspace/my-world-03/output/portfolio-paintings-2026-10-20/V06-r0.png",
+  "finalPath": "D:/workspace/my-world-03/output/portfolio-paintings-2026-10-20/V06.png",
+  "reviewPath": "D:/workspace/my-world-03/output/portfolio-paintings-2026-10-20/reviews/V06.json",
+  "prompt": null
+}

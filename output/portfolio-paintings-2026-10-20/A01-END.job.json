@@ -1,0 +1,20 @@
+{
+  "id": "A01-END",
+  "room": "01",
+  "slotKind": "wall",
+  "project": "부클리 홈페이지",
+  "sourceEntryIds": [
+    "original:corp-sites:bookly",
+    "additional:hibookly-claude-code-design-v1"
+  ],
+  "connection": "부클리의 한국 출판 콘텐츠 수출·판권 소개를 서로 다른 제본으로 전해지는 같은 이야기로 표현한다. 별도 시안의 한국어·영어·베트남어 전환은 세 제본의 물성 차이로만 암시하며 실제 번역본 판매 실적이나 계약을 주장하지 않는다.",
+  "medium": "inkwash",
+  "symbol": "다른 제본의 같은 이야기",
+  "subject": "TWO very slim small books facing with one continuous blank ivory page quietly bridging their bindings, as one compact still life. Deep indigo fine pen, small sage and coral transparent watercolor accents. No words, library or many pages.",
+  "reference": "C:/Users/buche/AppData/Local/Temp/codex-clipboard-c532368a-c9f7-4934-bfbc-b618c9000c93.jpg",
+  "origin": "new-production",
+  "initialPath": "D:/workspace/my-world-03/output/portfolio-paintings-2026-10-20/A01-END-r0.png",
+  "finalPath": "D:/workspace/my-world-03/output/portfolio-paintings-2026-10-20/A01-END.png",
+  "reviewPath": "D:/workspace/my-world-03/output/portfolio-paintings-2026-10-20/reviews/A01-END.json",
+  "prompt": "Create ONE original fine-art image, horizontal 7:5, high resolution ideally 2800x2000 or greater. Flat front view, artwork fills entire image, no depicted frame, no mat, no artificial edge border. Economical architectural/botanical pen-and-watercolor study. Style reference is supplied cafe drawing: irregular black/indigo pen, transparent pale sage and muted coral washes, paper tooth, many untouched paper areas. Replace the architecture with requested object. SUBJECT: TWO very slim small books facing with one continuous blank ivory page quietly bridging their bindings, as one compact still life. Deep indigo fine pen, small sage and coral transparent watercolor accents. No words, library or many pages. The supplied image, if any, is ONLY a medium/mood reference; do not preserve its subject, letters or layout. ONE unified symbolic subject or typographic statement; at least half the image should be calm negative space. Main silhouette readable at thumbnail scale, no extra illustrative narrative. No room-based style constraints. Project meaning outside image: 부클리의 한국 출판 콘텐츠 수출·판권 소개를 서로 다른 제본으로 전해지는 같은 이야기로 표현한다. 별도 시안의 한국어·영어·베트남어 전환은 세 제본의 물성 차이로만 암시하며 실제 번역본 판매 실적이나 계약을 주장하지 않는다. Do not depict application screens, logos, code, graphs, arrows, fake achievements, decorative labels, signatures, watermarks, wall/easel or gallery mockup. Unless explicitly requested in the poster subject, no text at all. Original hand-made physical medium, not a flat generic UI icon or a glossy 3D render."
+}

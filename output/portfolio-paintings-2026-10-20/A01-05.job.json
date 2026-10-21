@@ -1,0 +1,19 @@
+{
+  "id": "A01-05",
+  "room": "01",
+  "slotKind": "wall",
+  "project": "케듀올 홈페이지",
+  "sourceEntryIds": [
+    "original:corp-sites:keduall"
+  ],
+  "connection": "한국과 베트남을 연결하는 교육·유학·출판 기업이라는 사이트 소개를 '서로 다른 기슭의 같은 공부하는 불빛'으로 해석한다. 실제 양국 지형이나 회사의 시설·해운 사업을 묘사한 것이 아니다.",
+  "medium": "watercolor",
+  "symbol": "하나로 이어진 두 잎",
+  "subject": "TWO differently shaped leaves on ONE gently curved shared stem, one cool green leaf and one muted coral leaf, facing each other. A poetic botanical study of educational connection across places. No maps, flags, people or diagram.",
+  "reference": "C:/Users/buche/AppData/Local/Temp/codex-clipboard-026bb574-523a-47ff-9f2e-14344cd9bd49.jpg",
+  "origin": "new-production",
+  "initialPath": "D:/workspace/my-world-03/output/portfolio-paintings-2026-10-20/A01-05-r0.png",
+  "finalPath": "D:/workspace/my-world-03/output/portfolio-paintings-2026-10-20/A01-05.png",
+  "reviewPath": "D:/workspace/my-world-03/output/portfolio-paintings-2026-10-20/reviews/A01-05.json",
+  "prompt": "Create ONE original fine-art image, horizontal 7:5, high resolution ideally 2800x2000 or greater. Flat front view, artwork fills entire image, no depicted frame, no mat, no artificial edge border. Transparent watercolor on warm cold-pressed paper. Closely match STYLE AND MOOD of supplied cherry watercolor: translucent rich greens, faint rose/sage halo only near subject, soft pigment blooms, reserved-paper highlights, restrained tiny splashes. Subject-focus and generous paper, no decorative full background. SUBJECT: TWO differently shaped leaves on ONE gently curved shared stem, one cool green leaf and one muted coral leaf, facing each other. A poetic botanical study of educational connection across places. No maps, flags, people or diagram. The supplied image, if any, is ONLY a medium/mood reference; do not preserve its subject, letters or layout. ONE unified symbolic subject or typographic statement; at least half the image should be calm negative space. Main silhouette readable at thumbnail scale, no extra illustrative narrative. No room-based style constraints. Project meaning outside image: 한국과 베트남을 연결하는 교육·유학·출판 기업이라는 사이트 소개를 '서로 다른 기슭의 같은 공부하는 불빛'으로 해석한다. 실제 양국 지형이나 회사의 시설·해운 사업을 묘사한 것이 아니다. Do not depict application screens, logos, code, graphs, arrows, fake achievements, decorative labels, signatures, watermarks, wall/easel or gallery mockup. Unless explicitly requested in the poster subject, no text at all. Original hand-made physical medium, not a flat generic UI icon or a glossy 3D render."
+}

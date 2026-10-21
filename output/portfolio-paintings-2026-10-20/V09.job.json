@@ -1,0 +1,19 @@
+{
+  "id": "V09",
+  "room": "03",
+  "slotKind": "case",
+  "project": "On the Book · 책 속 3D 장면",
+  "sourceEntryIds": [
+    "additional:on-the-book"
+  ],
+  "connection": "도서에서 3D 장면으로 들어가 직접 이동·관찰하고 마지막 장면을 기억하는 기능을 공간 속 여행으로 번역한다. 항구 정원은 새로 제안하는 상징적 그림이며 서비스에 존재하는 특정 책이나 장면이라고 주장하지 않는다.",
+  "medium": "approved",
+  "symbol": "계단이 되는 책장",
+  "subject": "",
+  "reference": null,
+  "origin": "user-approved-preview",
+  "initialPath": "D:/workspace/my-world-03/output/portfolio-paintings-2026-10-20/V09-r0.png",
+  "finalPath": "D:/workspace/my-world-03/output/portfolio-paintings-2026-10-20/V09.png",
+  "reviewPath": "D:/workspace/my-world-03/output/portfolio-paintings-2026-10-20/reviews/V09.json",
+  "prompt": null
+}

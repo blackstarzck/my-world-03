@@ -1,0 +1,19 @@
+{
+  "id": "V02",
+  "room": "03",
+  "slotKind": "case",
+  "project": "스크롤 연동 3D",
+  "sourceEntryIds": [
+    "original:scroll-3d"
+  ],
+  "connection": "스크롤 입력의 진행량이 3D 장면 진행과 이어지는 관계를 두루마리를 내리는 손과 여행의 깊이가 함께 달라지는 장면으로 치환한다. 스크롤 UI나 진행률 바를 그리지 않는다.",
+  "medium": "gouache",
+  "symbol": "말린 종이의 깊이",
+  "subject": "ONE short partially unrolled ivory paper scroll whose unfurled tip gently forms ONE small teal hill. A single imaginative physical object of scrolling into depth. Matte gouache and pencil, tiny coral edge, no landscape scene, people, map, interface or arrows.",
+  "reference": null,
+  "origin": "new-production",
+  "initialPath": "D:/workspace/my-world-03/output/portfolio-paintings-2026-10-20/V02-r0.png",
+  "finalPath": "D:/workspace/my-world-03/output/portfolio-paintings-2026-10-20/V02.png",
+  "reviewPath": "D:/workspace/my-world-03/output/portfolio-paintings-2026-10-20/reviews/V02.json",
+  "prompt": "Create ONE original fine-art image, horizontal 7:5, high resolution ideally 2800x2000 or greater. Flat front view, artwork fills entire image, no depicted frame, no mat, no artificial edge border. Matte gouache and visible colored pencil on warm ivory paper, broad simple chalky color shapes, dry edges, a few penciled hatch marks. Restricted indigo/sage/coral/ivory palette, warm mature handmade mood. No glossy digital modeling. SUBJECT: ONE short partially unrolled ivory paper scroll whose unfurled tip gently forms ONE small teal hill. A single imaginative physical object of scrolling into depth. Matte gouache and pencil, tiny coral edge, no landscape scene, people, map, interface or arrows. The supplied image, if any, is ONLY a medium/mood reference; do not preserve its subject, letters or layout. ONE unified symbolic subject or typographic statement; at least half the image should be calm negative space. Main silhouette readable at thumbnail scale, no extra illustrative narrative. No room-based style constraints. Project meaning outside image: 스크롤 입력의 진행량이 3D 장면 진행과 이어지는 관계를 두루마리를 내리는 손과 여행의 깊이가 함께 달라지는 장면으로 치환한다. 스크롤 UI나 진행률 바를 그리지 않는다. Do not depict application screens, logos, code, graphs, arrows, fake achievements, decorative labels, signatures, watermarks, wall/easel or gallery mockup. Unless explicitly requested in the poster subject, no text at all. Original hand-made physical medium, not a flat generic UI icon or a glossy 3D render."
+}

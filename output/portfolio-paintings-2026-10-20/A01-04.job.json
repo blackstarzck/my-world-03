@@ -1,0 +1,19 @@
+{
+  "id": "A01-04",
+  "room": "01",
+  "slotKind": "wall",
+  "project": "CONNECT BEE",
+  "sourceEntryIds": [
+    "original:connect-bee"
+  ],
+  "connection": "벌통의 센서 상태 확인과 팬·열선·쿨러 제어를 연결한 하이브리드 앱을 '작은 생물이 머무는 환경을 살피고 돌보는 손'으로 표현한다. 그림 속 작업자가 직접 장치를 만지는 것은 기능을 이해시키는 비유이며 앱의 제어 방식 자체를 묘사하지 않는다.",
+  "medium": "approved",
+  "symbol": "꽃에 내려앉은 벌",
+  "subject": "",
+  "reference": null,
+  "origin": "user-approved-preview",
+  "initialPath": "D:/workspace/my-world-03/output/portfolio-paintings-2026-10-20/A01-04-r0.png",
+  "finalPath": "D:/workspace/my-world-03/output/portfolio-paintings-2026-10-20/A01-04.png",
+  "reviewPath": "D:/workspace/my-world-03/output/portfolio-paintings-2026-10-20/reviews/A01-04.json",
+  "prompt": null
+}

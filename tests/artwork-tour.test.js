@@ -48,6 +48,36 @@ test("artwork views stay on accessible floor and face their actual room for wide
           assert.ok(canStand(view.position[0], view.position[2]), artwork.id);
           assert.equal(currentRoom(view.position[0], view.position[2]), room);
           assert.deepEqual(view.target, artwork.target);
+          assert.equal(view.position[1], artwork.target[1]);
+          const camera = new THREE.PerspectiveCamera(
+            view.fov,
+            aspect,
+            0.075,
+            250,
+          );
+          camera.position.fromArray(view.position);
+          camera.lookAt(...view.target);
+          camera.updateMatrixWorld();
+          const center = new THREE.Vector3(...artwork.target),
+            normal = new THREE.Vector3(...artwork.normal).normalize(),
+            right = new THREE.Vector3(0, 1, 0).cross(normal);
+          const corners = [
+            [-1, 1],
+            [1, 1],
+            [1, -1],
+            [-1, -1],
+          ].map(([x, y]) =>
+            center
+              .clone()
+              .addScaledVector(right, (x * artwork.width) / 2)
+              .add(new THREE.Vector3(0, (y * artwork.height) / 2, 0))
+              .project(camera),
+          );
+          // A frontal arrival must show a rectangle rather than a trapezoid.
+          assert.ok(Math.abs(corners[0].y - corners[1].y) < 1e-8);
+          assert.ok(Math.abs(corners[2].y - corners[3].y) < 1e-8);
+          assert.ok(Math.abs(corners[0].x - corners[3].x) < 1e-8);
+          assert.ok(Math.abs(corners[1].x - corners[2].x) < 1e-8);
           assert.ok(
             Number.isFinite(view.fov) && view.fov >= 45 && view.fov < 145,
           );
@@ -188,7 +218,7 @@ test("stationary camera turns and tiny movements remain finite", () => {
   }
 });
 
-test("closing artwork returns to its own gallery entrance and clears the selected camera", (context) => {
+test("explicit room navigation returns to its entrance and clears the selected camera", (context) => {
   const fakeDocument = new EventTarget(),
     fakeWindow = new EventTarget(),
     canvas = new EventTarget();

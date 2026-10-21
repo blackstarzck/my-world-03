@@ -1,12 +1,22 @@
 # 이미지·재질·3D 모델 출처
 
+## 현재 포트폴리오 작품과 자료
+
+프로젝트별 그림 49점은 사용자 제공 참고 자료의 톤과 미니멀한 상징 표현을 바탕으로 내장 image_gen 도구로 제작했습니다. 원본·생성 프롬프트·그림별 에이전트 검수 기록은 `output/portfolio-paintings-2026-10-20/`에 보존합니다. 전시용 WebP는 `public/portfolio/artworks/`에 있으며 원본과의 SHA-256 대응은 `src/data/painting-assets.json`에 있습니다.
+
+기존 Planit 화면 5장은 로컬 앱의 검수용 합성 예제로 촬영한 과거 자료이며, 현재 앱에서 사용하지 않습니다.
+
+현재 앱에서 사용하지 않는 이전 포트폴리오 소개 자료 47개는 사용자가 제공한 [my-website-2026](https://github.com/blackstarzck/my-website-2026)의 `chanki-react/public/assets`에서 가져왔습니다. 프로젝트 연결은 같은 저장소의 `data/nodes.ts`에 있는 `shot`과 프로젝트 식별자를 따릅니다. 원본 URL과 SHA-256은 `output/retired-screen-materials-2026-10-20/legacy/sources.json`에 기록했습니다.
+
+아래 소장품 이미지와 인물 스캔은 기존 건축 검수 버전의 자산으로 보관하며 현재 전시에서는 사용하지 않습니다.
+
 ## 회화
 
 The Metropolitan Museum of Art의 Open Access 소장품 이미지 10점을 사용했습니다. 각 작품의 API 결과에서 `isPublicDomain`을 확인한 공개 이미지이며, 로컬 파일은 `public/assets/art-*.jpg`입니다.
 
 - 정책: https://www.metmuseum.org/about-the-met/policies-and-documents/open-access
 - 작품명, 작가, 제작 시기, 이미지 URL, 소장처 링크: `public/assets/artworks.json`
-- 앱의 작품 정보 창에서도 각 소장처 페이지에 연결합니다.
+- 기존 소장품 전시 버전의 출처 기록입니다.
 
 ## 표면 재질
 

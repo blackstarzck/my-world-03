@@ -1,0 +1,19 @@
+{
+  "id": "A02-07",
+  "room": "02",
+  "slotKind": "wall",
+  "project": "Figma → React 생성기",
+  "sourceEntryIds": [
+    "original:figma-gen"
+  ],
+  "connection": "공통 디자인 토큰과 컴포넌트 생성 구성을 하나의 원판과 여러 사용처에 대응시킨다. 디자인 기준을 React 라이브러리로 옮기는 스타터라는 범위에 맞추며, 어떤 Figma 화면도 자동으로 완성 코드로 바꾼다는 기능을 암시하지 않는다.",
+  "medium": "woodcut",
+  "symbol": "원판과 한 번의 인쇄",
+  "subject": "ONE small carved wooden block with ONE simple five-petal flower motif, beside its SINGLE matching indigo paper impression. A compact printmaker still life, hand-carved irregular edges and restrained woodcut hatching. Cream, indigo, muted coral accent, no lettering, leaves, workshop or code.",
+  "reference": null,
+  "origin": "new-production",
+  "initialPath": "D:/workspace/my-world-03/output/portfolio-paintings-2026-10-20/A02-07-r0.png",
+  "finalPath": "D:/workspace/my-world-03/output/portfolio-paintings-2026-10-20/A02-07.png",
+  "reviewPath": "D:/workspace/my-world-03/output/portfolio-paintings-2026-10-20/reviews/A02-07.json",
+  "prompt": "Create ONE original fine-art image, horizontal 7:5, high resolution ideally 2800x2000 or greater. Flat front view, artwork fills entire image, no depicted frame, no mat, no artificial edge border. Original restrained woodcut-style printmaker still life, hand-carved hatching and irregular ink edges, warm paper, indigo ink and small muted coral accent. Large simple silhouettes, no scene. SUBJECT: ONE small carved wooden block with ONE simple five-petal flower motif, beside its SINGLE matching indigo paper impression. A compact printmaker still life, hand-carved irregular edges and restrained woodcut hatching. Cream, indigo, muted coral accent, no lettering, leaves, workshop or code. The supplied image, if any, is ONLY a medium/mood reference; do not preserve its subject, letters or layout. ONE unified symbolic subject or typographic statement; at least half the image should be calm negative space. Main silhouette readable at thumbnail scale, no extra illustrative narrative. No room-based style constraints. Project meaning outside image: 공통 디자인 토큰과 컴포넌트 생성 구성을 하나의 원판과 여러 사용처에 대응시킨다. 디자인 기준을 React 라이브러리로 옮기는 스타터라는 범위에 맞추며, 어떤 Figma 화면도 자동으로 완성 코드로 바꾼다는 기능을 암시하지 않는다. Do not depict application screens, logos, code, graphs, arrows, fake achievements, decorative labels, signatures, watermarks, wall/easel or gallery mockup. Unless explicitly requested in the poster subject, no text at all. Original hand-made physical medium, not a flat generic UI icon or a glossy 3D render."
+}

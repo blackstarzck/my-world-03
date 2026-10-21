@@ -11,7 +11,7 @@ export function artworkView(artwork, aspect) {
   const preferred = Math.max(artwork.kind === "조각" ? 1.6 : 1.4, fit);
   const positionAt = (distance) => [
     target[0] + normal[0] * distance,
-    1.7,
+    target[1],
     target[2] + normal[2] * distance,
   ];
   // A freestanding panel can have furniture behind the ideal viewing position.
@@ -47,6 +47,12 @@ export function artworkView(artwork, aspect) {
   if (distance === undefined)
     throw new Error(`작품 감상 위치를 찾지 못했습니다: ${artwork.id}`);
   const position = positionAt(distance);
+  return fitArtworkView(artwork, aspect, position);
+}
+
+export function fitArtworkView(artwork, aspect, position) {
+  const { target, normal, width, height } = artwork;
+  const vertical = Math.tan((45 * Math.PI) / 360);
   const delta = target.map((value, i) => value - position[i]);
   const length = Math.hypot(...delta),
     forward = delta.map((value) => value / length);

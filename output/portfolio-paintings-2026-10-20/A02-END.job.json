@@ -1,0 +1,19 @@
+{
+  "id": "A02-END",
+  "room": "02",
+  "slotKind": "wall",
+  "project": "Planit AI 기획 워크스페이스",
+  "sourceEntryIds": [
+    "additional:project-manager"
+  ],
+  "connection": "나무의 서로 연관된 가지는 PRD·기능·플로·화면 사이의 추적 관계, 아직 붙이지 않은 접수는 승인 전 AI 변경 제안, 보존된 기존 가지는 원본·독립 버전·초안 복구를 뜻한다. 충돌 확인과 부분 승인 때문에 자동으로 덮어쓰지 않는 실제 설계를 중심에 둔다. 그림은 임의 문서를 자동 병합하거나 모든 충돌을 해결한다는 기능 설명이 아니다.",
+  "medium": "approved",
+  "symbol": "맞대기 전의 두 가지",
+  "subject": "",
+  "reference": null,
+  "origin": "user-approved-preview",
+  "initialPath": "D:/workspace/my-world-03/output/portfolio-paintings-2026-10-20/A02-END-r0.png",
+  "finalPath": "D:/workspace/my-world-03/output/portfolio-paintings-2026-10-20/A02-END.png",
+  "reviewPath": "D:/workspace/my-world-03/output/portfolio-paintings-2026-10-20/reviews/A02-END.json",
+  "prompt": null
+}

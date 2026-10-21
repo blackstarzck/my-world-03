@@ -1,0 +1,19 @@
+{
+  "id": "A03-01",
+  "room": "03",
+  "slotKind": "wall",
+  "project": "이전 포트폴리오 경력 지도",
+  "sourceEntryIds": [
+    "additional:my-website-2026"
+  ],
+  "connection": "경력과 프로젝트의 관계를 따라 이동하는 Canvas 포트폴리오를 한 사람의 경험이 여러 장소를 연결하는 풍경으로 번역한다. 참고 구조를 자신의 콘텐츠로 재구성한 사실과 관계 탐색에 집중하며, 특정 고용 이력의 실재 풍경처럼 보이지 않게 한다.",
+  "medium": "inkwash",
+  "symbol": "이어지는 길",
+  "subject": "ONE long narrow blank paper ribbon making two broad gentle bends, with a tiny muted coral fold accent, fading toward the far end. Fine ink and pale blue-gray watercolor, warm paper. A simple continuous path of experience, no nodes, timeline, landmarks, maps, text or many turns.",
+  "reference": "C:/Users/buche/AppData/Local/Temp/codex-clipboard-c532368a-c9f7-4934-bfbc-b618c9000c93.jpg",
+  "origin": "new-production",
+  "initialPath": "D:/workspace/my-world-03/output/portfolio-paintings-2026-10-20/A03-01-r0.png",
+  "finalPath": "D:/workspace/my-world-03/output/portfolio-paintings-2026-10-20/A03-01.png",
+  "reviewPath": "D:/workspace/my-world-03/output/portfolio-paintings-2026-10-20/reviews/A03-01.json",
+  "prompt": "Create ONE original fine-art image, horizontal 7:5, high resolution ideally 2800x2000 or greater. Flat front view, artwork fills entire image, no depicted frame, no mat, no artificial edge border. Economical architectural/botanical pen-and-watercolor study. Style reference is supplied cafe drawing: irregular black/indigo pen, transparent pale sage and muted coral washes, paper tooth, many untouched paper areas. Replace the architecture with requested object. SUBJECT: ONE long narrow blank paper ribbon making two broad gentle bends, with a tiny muted coral fold accent, fading toward the far end. Fine ink and pale blue-gray watercolor, warm paper. A simple continuous path of experience, no nodes, timeline, landmarks, maps, text or many turns. The supplied image, if any, is ONLY a medium/mood reference; do not preserve its subject, letters or layout. ONE unified symbolic subject or typographic statement; at least half the image should be calm negative space. Main silhouette readable at thumbnail scale, no extra illustrative narrative. No room-based style constraints. Project meaning outside image: 경력과 프로젝트의 관계를 따라 이동하는 Canvas 포트폴리오를 한 사람의 경험이 여러 장소를 연결하는 풍경으로 번역한다. 참고 구조를 자신의 콘텐츠로 재구성한 사실과 관계 탐색에 집중하며, 특정 고용 이력의 실재 풍경처럼 보이지 않게 한다. Do not depict application screens, logos, code, graphs, arrows, fake achievements, decorative labels, signatures, watermarks, wall/easel or gallery mockup. Unless explicitly requested in the poster subject, no text at all. Original hand-made physical medium, not a flat generic UI icon or a glossy 3D render."
+}

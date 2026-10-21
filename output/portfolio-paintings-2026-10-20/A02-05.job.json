@@ -1,0 +1,19 @@
+{
+  "id": "A02-05",
+  "room": "02",
+  "slotKind": "wall",
+  "project": "TOPIK AI 검증 하네스",
+  "sourceEntryIds": [
+    "original:verify-loop"
+  ],
+  "connection": "문서 링크·라우트·코드·대표 운영 흐름을 함께 검사하는 하네스를 서로 맞물린 부분의 정합성 검사로 비유한다. 사슬의 틈은 오래된 문서와 바뀐 구현 사이의 불일치를 뜻한다. 자동 검사가 모든 결함을 발견한다거나 서비스 품질을 보증한다는 뜻은 아니다.",
+  "medium": "graphite",
+  "symbol": "엇갈림을 살피는 렌즈",
+  "subject": "ONE small physical magnifying glass lying across the seam of ONE closed unlettered book. Lens magnifies only the binding stitch underneath. Economical pencil contours, selective crosshatching; no text, tick mark, shield, icon or extra books.",
+  "reference": "C:/Users/buche/AppData/Local/Temp/codex-clipboard-c663cabe-42b2-4670-87ba-3a4cca008aa0.jpg",
+  "origin": "new-production",
+  "initialPath": "D:/workspace/my-world-03/output/portfolio-paintings-2026-10-20/A02-05-r0.png",
+  "finalPath": "D:/workspace/my-world-03/output/portfolio-paintings-2026-10-20/A02-05.png",
+  "reviewPath": "D:/workspace/my-world-03/output/portfolio-paintings-2026-10-20/reviews/A02-05.json",
+  "prompt": "Create ONE original fine-art image, horizontal 7:5, high resolution ideally 2800x2000 or greater. Flat front view, artwork fills entire image, no depicted frame, no mat, no artificial edge border. Expressive real graphite drawing on warm paper, like supplied rose reference. Loose searching contours, varied pressure, selective crosshatching and tiny rubbed tonal areas, unfinished edges fading into broad clean paper. No color. SUBJECT: ONE small physical magnifying glass lying across the seam of ONE closed unlettered book. Lens magnifies only the binding stitch underneath. Economical pencil contours, selective crosshatching; no text, tick mark, shield, icon or extra books. The supplied image, if any, is ONLY a medium/mood reference; do not preserve its subject, letters or layout. ONE unified symbolic subject or typographic statement; at least half the image should be calm negative space. Main silhouette readable at thumbnail scale, no extra illustrative narrative. No room-based style constraints. Project meaning outside image: 문서 링크·라우트·코드·대표 운영 흐름을 함께 검사하는 하네스를 서로 맞물린 부분의 정합성 검사로 비유한다. 사슬의 틈은 오래된 문서와 바뀐 구현 사이의 불일치를 뜻한다. 자동 검사가 모든 결함을 발견한다거나 서비스 품질을 보증한다는 뜻은 아니다. Do not depict application screens, logos, code, graphs, arrows, fake achievements, decorative labels, signatures, watermarks, wall/easel or gallery mockup. Unless explicitly requested in the poster subject, no text at all. Original hand-made physical medium, not a flat generic UI icon or a glossy 3D render."
+}

@@ -307,10 +307,10 @@ export function buildArchitecture(scene, m) {
       group,
       `0${Number(id)}`,
       id === "01"
-        ? "THE CLASSIC"
+        ? "PRODUCTS & PEOPLE"
         : id === "02"
-          ? "THE CONTEMPORARY"
-          : "THE OBJECT",
+          ? "SYSTEMS & PROCESS"
+          : "PLAY & EXPERIMENT",
       [0, 5.15, 0.92],
       1.6,
     );

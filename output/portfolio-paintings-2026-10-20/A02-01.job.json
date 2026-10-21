@@ -1,0 +1,19 @@
+{
+  "id": "A02-01",
+  "room": "02",
+  "slotKind": "wall",
+  "project": "문서 통합 관리 서비스",
+  "sourceEntryIds": [
+    "original:doc-merge"
+  ],
+  "connection": "서로 다른 업체의 엑셀 입력을 하나의 관리 시스템으로 통합한 일을 여러 출처의 실을 하나의 직물로 짜는 행위에 대응시킨다. 반복되는 잎 무늬는 정해진 시트명·컬럼과 DB 컬럼의 명시적인 대응을 뜻한다. 임의 양식을 자동 이해하거나 모든 원본을 실시간 동기화한다는 기능은 암시하지 않는다.",
+  "medium": "watercolor",
+  "symbol": "한 폭으로 모인 실",
+  "subject": "THREE loose threads, sage, faded coral and indigo, join into ONE very small woven swatch. One compact textile still life, a few large visible over-under strands. No loom, labels, nodes, arrows, scene or decorative background.",
+  "reference": "C:/Users/buche/AppData/Local/Temp/codex-clipboard-026bb574-523a-47ff-9f2e-14344cd9bd49.jpg",
+  "origin": "new-production",
+  "initialPath": "D:/workspace/my-world-03/output/portfolio-paintings-2026-10-20/A02-01-r0.png",
+  "finalPath": "D:/workspace/my-world-03/output/portfolio-paintings-2026-10-20/A02-01.png",
+  "reviewPath": "D:/workspace/my-world-03/output/portfolio-paintings-2026-10-20/reviews/A02-01.json",
+  "prompt": "Create ONE original fine-art image, horizontal 7:5, high resolution ideally 2800x2000 or greater. Flat front view, artwork fills entire image, no depicted frame, no mat, no artificial edge border. Transparent watercolor on warm cold-pressed paper. Closely match STYLE AND MOOD of supplied cherry watercolor: translucent rich greens, faint rose/sage halo only near subject, soft pigment blooms, reserved-paper highlights, restrained tiny splashes. Subject-focus and generous paper, no decorative full background. SUBJECT: THREE loose threads, sage, faded coral and indigo, join into ONE very small woven swatch. One compact textile still life, a few large visible over-under strands. No loom, labels, nodes, arrows, scene or decorative background. The supplied image, if any, is ONLY a medium/mood reference; do not preserve its subject, letters or layout. ONE unified symbolic subject or typographic statement; at least half the image should be calm negative space. Main silhouette readable at thumbnail scale, no extra illustrative narrative. No room-based style constraints. Project meaning outside image: 서로 다른 업체의 엑셀 입력을 하나의 관리 시스템으로 통합한 일을 여러 출처의 실을 하나의 직물로 짜는 행위에 대응시킨다. 반복되는 잎 무늬는 정해진 시트명·컬럼과 DB 컬럼의 명시적인 대응을 뜻한다. 임의 양식을 자동 이해하거나 모든 원본을 실시간 동기화한다는 기능은 암시하지 않는다. Do not depict application screens, logos, code, graphs, arrows, fake achievements, decorative labels, signatures, watermarks, wall/easel or gallery mockup. Unless explicitly requested in the poster subject, no text at all. Original hand-made physical medium, not a flat generic UI icon or a glossy 3D render."
+}

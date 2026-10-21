@@ -1,0 +1,20 @@
+{
+  "id": "A03-04",
+  "room": "03",
+  "slotKind": "wall",
+  "project": "포켓몬 도감",
+  "sourceEntryIds": [
+    "original:pokemon"
+  ],
+  "connection": "이름·번호·특성·타입으로 찾고 번호순으로 정렬하는 도감의 탐색을 서식처를 살피고 관찰 기록을 넘기는 행동으로 연결한다. 실제 포켓몬 프로젝트이므로 포켓몬임을 알아볼 수 있게 하되 복잡한 캐릭터 집합보다 관찰과 선택에 초점을 둔다.",
+  "medium": "popart",
+  "symbol": "수집을 여는 캡슐",
+  "subject": "ONE small red-and-ivory collectible capsule ball with a simple dark central band and a single circular center button. One physical spherical object, a playful symbol of creature collection and a searchable bestiary. No character, person, letters or surrounding items.",
+  "reference": null,
+  "origin": "new-production",
+  "initialPath": "D:/workspace/my-world-03/output/portfolio-paintings-2026-10-20/A03-04-r0.png",
+  "finalPath": "D:/workspace/my-world-03/output/portfolio-paintings-2026-10-20/A03-04.png",
+  "reviewPath": "D:/workspace/my-world-03/output/portfolio-paintings-2026-10-20/reviews/A03-04.json",
+  "prompt": "Create ONE very simple original POP ART silkscreen still life, horizontal 7:5. ONE small red-and-ivory collectible capsule ball with a simple dark central band and a single circular center button. One physical spherical object, a playful symbol of creature collection and a searchable bestiary. No character, person, letters or surrounding items. Warm ivory uncoated paper fills the whole image. The single ball occupies about 40 percent of the image, with abundant quiet paper, no frame or mat. Red upper shell, ivory lower shell, dark indigo center band, a small clear ivory circular button. A few coarse hand-printed halftone dots in the single shadow; imperfect black ink contours, tangible paper grain, not a vector UI icon or a glossy 3D render. Sparse, playful and elegant. No text, numbers, logo, watermark, signature, diagrams, extra balls, characters, scenery, stickers or borders. The whole object must fit inside the picture with clear margins.",
+  "initialGenerationIssue": "Original creature portrait request failed in built-in image generation; simplified to collection capsule motif before evaluator review."
+}

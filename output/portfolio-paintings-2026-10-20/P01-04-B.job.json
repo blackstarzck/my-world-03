@@ -1,0 +1,19 @@
+{
+  "id": "P01-04-B",
+  "room": "01",
+  "slotKind": "panel",
+  "project": "글로윈 비나 홈페이지",
+  "sourceEntryIds": [
+    "original:corp-sites:glowin-vina"
+  ],
+  "connection": "북카페의 브랜드와 공간을 소개하는 홈페이지 목적을 '머물고 싶은 자리의 감각'으로 표현한다. 실제 매장 인테리어를 재현하거나 사용자가 공간을 설계했다고 암시하지 않는 가상의 독서 자리다.",
+  "medium": "inkwash",
+  "symbol": "책 위의 찻잔",
+  "subject": "ONE small warm coral tea cup resting on ONE little unlettered closed book as its base. Fine irregular ink contours with restrained watercolor. No steam curls, furniture, flowers, room, saucer or extra objects.",
+  "reference": "C:/Users/buche/AppData/Local/Temp/codex-clipboard-c532368a-c9f7-4934-bfbc-b618c9000c93.jpg",
+  "origin": "new-production",
+  "initialPath": "D:/workspace/my-world-03/output/portfolio-paintings-2026-10-20/P01-04-B-r0.png",
+  "finalPath": "D:/workspace/my-world-03/output/portfolio-paintings-2026-10-20/P01-04-B.png",
+  "reviewPath": "D:/workspace/my-world-03/output/portfolio-paintings-2026-10-20/reviews/P01-04-B.json",
+  "prompt": "Create ONE original fine-art image, horizontal 7:5, high resolution ideally 2800x2000 or greater. Flat front view, artwork fills entire image, no depicted frame, no mat, no artificial edge border. Economical architectural/botanical pen-and-watercolor study. Style reference is supplied cafe drawing: irregular black/indigo pen, transparent pale sage and muted coral washes, paper tooth, many untouched paper areas. Replace the architecture with requested object. SUBJECT: ONE small warm coral tea cup resting on ONE little unlettered closed book as its base. Fine irregular ink contours with restrained watercolor. No steam curls, furniture, flowers, room, saucer or extra objects. The supplied image, if any, is ONLY a medium/mood reference; do not preserve its subject, letters or layout. ONE unified symbolic subject or typographic statement; at least half the image should be calm negative space. Main silhouette readable at thumbnail scale, no extra illustrative narrative. No room-based style constraints. Project meaning outside image: 북카페의 브랜드와 공간을 소개하는 홈페이지 목적을 '머물고 싶은 자리의 감각'으로 표현한다. 실제 매장 인테리어를 재현하거나 사용자가 공간을 설계했다고 암시하지 않는 가상의 독서 자리다. Do not depict application screens, logos, code, graphs, arrows, fake achievements, decorative labels, signatures, watermarks, wall/easel or gallery mockup. Unless explicitly requested in the poster subject, no text at all. Original hand-made physical medium, not a flat generic UI icon or a glossy 3D render."
+}

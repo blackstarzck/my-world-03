@@ -1,0 +1,19 @@
+{
+  "id": "V08",
+  "room": "03",
+  "slotKind": "case",
+  "project": "On the Book · 관리 도구",
+  "sourceEntryIds": [
+    "additional:on-the-book"
+  ],
+  "connection": "책·장면·모델 배치를 편집하고 임시 저장과 공개본을 구분하며 공개된 장면의 원본 에셋을 보존하는 구조를 제작실·공개 이젤·보관 원화로 번역한다. 실제 관리 기능을 넘는 공동편집 실시간 동기화나 승인 기능을 주장하지 않는다.",
+  "medium": "poster",
+  "symbol": "초안에서 공개까지",
+  "subject": "EXACT TEXT: large 'DRAFT' above 'TO LIVE'; small 'ON THE BOOK / CMS'. ONE closed ivory book jacket half revealed from a single folded translucent blue vellum sleeve. Warm ivory, indigo, tiny coral accent. Sparse sophisticated editorial print, no UI, web screen, text on book, stacks, approval stamp, diagrams or extra scenery.",
+  "reference": null,
+  "origin": "new-production",
+  "initialPath": "D:/workspace/my-world-03/output/portfolio-paintings-2026-10-20/V08-r0.png",
+  "finalPath": "D:/workspace/my-world-03/output/portfolio-paintings-2026-10-20/V08.png",
+  "reviewPath": "D:/workspace/my-world-03/output/portfolio-paintings-2026-10-20/reviews/V08.json",
+  "prompt": "Create ONE original fine-art image, horizontal 7:5, high resolution ideally 2800x2000 or greater. Flat front view, artwork fills entire image, no depicted frame, no mat, no artificial edge border. Sparse original editorial art poster, oversized beautiful typography, one compact physical/printed motif, limited cream/indigo/coral palette, tactile paper and screenprint grain. Exact requested words only. No charts or app interfaces. SUBJECT: EXACT TEXT: large 'DRAFT' above 'TO LIVE'; small 'ON THE BOOK / CMS'. ONE closed ivory book jacket half revealed from a single folded translucent blue vellum sleeve. Warm ivory, indigo, tiny coral accent. Sparse sophisticated editorial print, no UI, web screen, text on book, stacks, approval stamp, diagrams or extra scenery. The supplied image, if any, is ONLY a medium/mood reference; do not preserve its subject, letters or layout. ONE unified symbolic subject or typographic statement; at least half the image should be calm negative space. Main silhouette readable at thumbnail scale, no extra illustrative narrative. No room-based style constraints. Project meaning outside image: 책·장면·모델 배치를 편집하고 임시 저장과 공개본을 구분하며 공개된 장면의 원본 에셋을 보존하는 구조를 제작실·공개 이젤·보관 원화로 번역한다. 실제 관리 기능을 넘는 공동편집 실시간 동기화나 승인 기능을 주장하지 않는다. Do not depict application screens, logos, code, graphs, arrows, fake achievements, decorative labels, signatures, watermarks, wall/easel or gallery mockup. Unless explicitly requested in the poster subject, no text at all. Original hand-made physical medium, not a flat generic UI icon or a glossy 3D render."
+}

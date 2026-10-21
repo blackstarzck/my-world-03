@@ -1,0 +1,982 @@
+[
+  {
+    "id": "A01-01",
+    "room": "01",
+    "slotKind": "wall",
+    "project": "도토리 토픽 · 사용자단",
+    "sourceEntryIds": [
+      "original:topik-user"
+    ],
+    "connection": "답안 작성·피드백·학습 이력·재연습으로 이어지는 사용자 흐름을 '전날의 흔적을 확인하고 다시 쓰는 행동'으로 비유한다. 공책 장면은 실제 앱 화면이나 학습 성과를 재현한 것이 아니다.",
+    "medium": "watercolor",
+    "symbol": "도토리와 새싹",
+    "subject": "One acorn split just enough for ONE small fresh sprout with two leaves. A small single natural emblem of returning to learning. Muted red-brown acorn, fresh green sprout, faint rose wash. No book, pot, soil landscape or person.",
+    "reference": "C:/Users/buche/AppData/Local/Temp/codex-clipboard-026bb574-523a-47ff-9f2e-14344cd9bd49.jpg",
+    "origin": "new-production",
+    "initialPath": "D:/workspace/my-world-03/output/portfolio-paintings-2026-10-20/A01-01-r0.png",
+    "finalPath": "D:/workspace/my-world-03/output/portfolio-paintings-2026-10-20/A01-01.png",
+    "reviewPath": "D:/workspace/my-world-03/output/portfolio-paintings-2026-10-20/reviews/A01-01.json",
+    "prompt": "Create ONE original fine-art image, horizontal 7:5, high resolution ideally 2800x2000 or greater. Flat front view, artwork fills entire image, no depicted frame, no mat, no artificial edge border. Transparent watercolor on warm cold-pressed paper. Closely match STYLE AND MOOD of supplied cherry watercolor: translucent rich greens, faint rose/sage halo only near subject, soft pigment blooms, reserved-paper highlights, restrained tiny splashes. Subject-focus and generous paper, no decorative full background. SUBJECT: One acorn split just enough for ONE small fresh sprout with two leaves. A small single natural emblem of returning to learning. Muted red-brown acorn, fresh green sprout, faint rose wash. No book, pot, soil landscape or person. The supplied image, if any, is ONLY a medium/mood reference; do not preserve its subject, letters or layout. ONE unified symbolic subject or typographic statement; at least half the image should be calm negative space. Main silhouette readable at thumbnail scale, no extra illustrative narrative. No room-based style constraints. Project meaning outside image: 답안 작성·피드백·학습 이력·재연습으로 이어지는 사용자 흐름을 '전날의 흔적을 확인하고 다시 쓰는 행동'으로 비유한다. 공책 장면은 실제 앱 화면이나 학습 성과를 재현한 것이 아니다. Do not depict application screens, logos, code, graphs, arrows, fake achievements, decorative labels, signatures, watermarks, wall/easel or gallery mockup. Unless explicitly requested in the poster subject, no text at all. Original hand-made physical medium, not a flat generic UI icon or a glossy 3D render."
+  },
+  {
+    "id": "A01-02",
+    "room": "01",
+    "slotKind": "wall",
+    "project": "도토리 토픽 · 관리자단",
+    "sourceEntryIds": [
+      "original:topik-admin"
+    ],
+    "connection": "관리자 조회·변경 권한의 분리, 사용자 데이터와 운영 데이터의 경계, 변경 이력을 다루는 프로젝트를 '필요한 한 칸에만 접근하는 자료실 관리'로 비유한다. 그림 속 보관장은 실제 시스템의 보안 수준을 증명하지 않는다.",
+    "medium": "graphite",
+    "symbol": "도토리 머리의 열쇠",
+    "subject": "One small old metal key whose rounded bow gently resembles an acorn cap. Carefully drawn physical key, not a flat security icon. Soft graphite tonal core, no lock or extra objects.",
+    "reference": "C:/Users/buche/AppData/Local/Temp/codex-clipboard-c663cabe-42b2-4670-87ba-3a4cca008aa0.jpg",
+    "origin": "new-production",
+    "initialPath": "D:/workspace/my-world-03/output/portfolio-paintings-2026-10-20/A01-02-r0.png",
+    "finalPath": "D:/workspace/my-world-03/output/portfolio-paintings-2026-10-20/A01-02.png",
+    "reviewPath": "D:/workspace/my-world-03/output/portfolio-paintings-2026-10-20/reviews/A01-02.json",
+    "prompt": "Create ONE original fine-art image, horizontal 7:5, high resolution ideally 2800x2000 or greater. Flat front view, artwork fills entire image, no depicted frame, no mat, no artificial edge border. Expressive real graphite drawing on warm paper, like supplied rose reference. Loose searching contours, varied pressure, selective crosshatching and tiny rubbed tonal areas, unfinished edges fading into broad clean paper. No color. SUBJECT: One small old metal key whose rounded bow gently resembles an acorn cap. Carefully drawn physical key, not a flat security icon. Soft graphite tonal core, no lock or extra objects. The supplied image, if any, is ONLY a medium/mood reference; do not preserve its subject, letters or layout. ONE unified symbolic subject or typographic statement; at least half the image should be calm negative space. Main silhouette readable at thumbnail scale, no extra illustrative narrative. No room-based style constraints. Project meaning outside image: 관리자 조회·변경 권한의 분리, 사용자 데이터와 운영 데이터의 경계, 변경 이력을 다루는 프로젝트를 '필요한 한 칸에만 접근하는 자료실 관리'로 비유한다. 그림 속 보관장은 실제 시스템의 보안 수준을 증명하지 않는다. Do not depict application screens, logos, code, graphs, arrows, fake achievements, decorative labels, signatures, watermarks, wall/easel or gallery mockup. Unless explicitly requested in the poster subject, no text at all. Original hand-made physical medium, not a flat generic UI icon or a glossy 3D render."
+  },
+  {
+    "id": "P01-01-F",
+    "room": "01",
+    "slotKind": "panel",
+    "project": "도토리 문의 관리자",
+    "sourceEntryIds": [
+      "additional:dotore-admin"
+    ],
+    "connection": "학생·강사·제휴사의 문의를 유형과 처리 상태로 구분하고 상세 답변을 준비하는 흐름을 사람과 편지의 장면으로 번역한다. 상담 창구는 브라우저 저장소 기반 UI 프로토타입의 생활적 비유이며 실제 고객센터 운영을 주장하지 않는다.",
+    "medium": "watercolor",
+    "symbol": "열린 편지",
+    "subject": "One ivory envelope, half open with one pale coral unlettered sheet visible. Unified still-life motif of receiving and answering an inquiry. No stamps, writing, table or extra envelopes.",
+    "reference": "C:/Users/buche/AppData/Local/Temp/codex-clipboard-026bb574-523a-47ff-9f2e-14344cd9bd49.jpg",
+    "origin": "new-production",
+    "initialPath": "D:/workspace/my-world-03/output/portfolio-paintings-2026-10-20/P01-01-F-r0.png",
+    "finalPath": "D:/workspace/my-world-03/output/portfolio-paintings-2026-10-20/P01-01-F.png",
+    "reviewPath": "D:/workspace/my-world-03/output/portfolio-paintings-2026-10-20/reviews/P01-01-F.json",
+    "prompt": "Create ONE original fine-art image, horizontal 7:5, high resolution ideally 2800x2000 or greater. Flat front view, artwork fills entire image, no depicted frame, no mat, no artificial edge border. Transparent watercolor on warm cold-pressed paper. Closely match STYLE AND MOOD of supplied cherry watercolor: translucent rich greens, faint rose/sage halo only near subject, soft pigment blooms, reserved-paper highlights, restrained tiny splashes. Subject-focus and generous paper, no decorative full background. SUBJECT: One ivory envelope, half open with one pale coral unlettered sheet visible. Unified still-life motif of receiving and answering an inquiry. No stamps, writing, table or extra envelopes. The supplied image, if any, is ONLY a medium/mood reference; do not preserve its subject, letters or layout. ONE unified symbolic subject or typographic statement; at least half the image should be calm negative space. Main silhouette readable at thumbnail scale, no extra illustrative narrative. No room-based style constraints. Project meaning outside image: 학생·강사·제휴사의 문의를 유형과 처리 상태로 구분하고 상세 답변을 준비하는 흐름을 사람과 편지의 장면으로 번역한다. 상담 창구는 브라우저 저장소 기반 UI 프로토타입의 생활적 비유이며 실제 고객센터 운영을 주장하지 않는다. Do not depict application screens, logos, code, graphs, arrows, fake achievements, decorative labels, signatures, watermarks, wall/easel or gallery mockup. Unless explicitly requested in the poster subject, no text at all. Original hand-made physical medium, not a flat generic UI icon or a glossy 3D render."
+  },
+  {
+    "id": "P01-01-B",
+    "room": "01",
+    "slotKind": "panel",
+    "project": "교육 서비스 화면 연구",
+    "sourceEntryIds": [
+      "additional:tutor-dashboard",
+      "additional:student-dashboard",
+      "additional:list",
+      "additional:detail",
+      "additional:admin"
+    ],
+    "connection": "강사·학생·강의 탐색·상세 확인·운영이라는 다섯 역할이 동일한 교육 경험을 둘러싼다는 점을 공동 공간의 다른 행동으로 묶는다. 실제 건물이나 강의 플랫폼의 기능을 추가한 것이 아니라 다섯 UI 연구의 관계를 표현한 장면이다.",
+    "medium": "poster",
+    "symbol": "배움의 여러 자리",
+    "subject": "EXACT TEXT: large 'LEARN' above 'TOGETHER'; small 'EDUCATION STUDIES'. One folded-paper fan in only three muted spot colors. Sparse editorial print for UI studies of different educational roles, not a diagram or screen.",
+    "reference": null,
+    "origin": "new-production",
+    "initialPath": "D:/workspace/my-world-03/output/portfolio-paintings-2026-10-20/P01-01-B-r0.png",
+    "finalPath": "D:/workspace/my-world-03/output/portfolio-paintings-2026-10-20/P01-01-B.png",
+    "reviewPath": "D:/workspace/my-world-03/output/portfolio-paintings-2026-10-20/reviews/P01-01-B.json",
+    "prompt": "Create ONE original fine-art image, horizontal 7:5, high resolution ideally 2800x2000 or greater. Flat front view, artwork fills entire image, no depicted frame, no mat, no artificial edge border. Sparse original editorial art poster, oversized beautiful typography, one compact physical/printed motif, limited cream/indigo/coral palette, tactile paper and screenprint grain. Exact requested words only. No charts or app interfaces. SUBJECT: EXACT TEXT: large 'LEARN' above 'TOGETHER'; small 'EDUCATION STUDIES'. One folded-paper fan in only three muted spot colors. Sparse editorial print for UI studies of different educational roles, not a diagram or screen. The supplied image, if any, is ONLY a medium/mood reference; do not preserve its subject, letters or layout. ONE unified symbolic subject or typographic statement; at least half the image should be calm negative space. Main silhouette readable at thumbnail scale, no extra illustrative narrative. No room-based style constraints. Project meaning outside image: 강사·학생·강의 탐색·상세 확인·운영이라는 다섯 역할이 동일한 교육 경험을 둘러싼다는 점을 공동 공간의 다른 행동으로 묶는다. 실제 건물이나 강의 플랫폼의 기능을 추가한 것이 아니라 다섯 UI 연구의 관계를 표현한 장면이다. Do not depict application screens, logos, code, graphs, arrows, fake achievements, decorative labels, signatures, watermarks, wall/easel or gallery mockup. Unless explicitly requested in the poster subject, no text at all. Original hand-made physical medium, not a flat generic UI icon or a glossy 3D render."
+  },
+  {
+    "id": "A01-03",
+    "room": "01",
+    "slotKind": "wall",
+    "project": "센서 3D 시각화 대시보드",
+    "sourceEntryIds": [
+      "original:farm-3d"
+    ],
+    "connection": "센서 값을 온실의 실제 위치에 대응시키고 공간 전체 상태를 읽도록 만든 Angular 화면·NestJS API 사례를 '위치마다 다른 공기의 감각'으로 해석한다. 색층의 따뜻함과 차가움은 실측 센서 데이터가 아닌 회화적 비유다.",
+    "medium": "approved",
+    "symbol": "잎과 이슬 한 방울",
+    "subject": "",
+    "reference": null,
+    "origin": "user-approved-preview",
+    "initialPath": "D:/workspace/my-world-03/output/portfolio-paintings-2026-10-20/A01-03-r0.png",
+    "finalPath": "D:/workspace/my-world-03/output/portfolio-paintings-2026-10-20/A01-03.png",
+    "reviewPath": "D:/workspace/my-world-03/output/portfolio-paintings-2026-10-20/reviews/A01-03.json",
+    "prompt": null
+  },
+  {
+    "id": "A01-04",
+    "room": "01",
+    "slotKind": "wall",
+    "project": "CONNECT BEE",
+    "sourceEntryIds": [
+      "original:connect-bee"
+    ],
+    "connection": "벌통의 센서 상태 확인과 팬·열선·쿨러 제어를 연결한 하이브리드 앱을 '작은 생물이 머무는 환경을 살피고 돌보는 손'으로 표현한다. 그림 속 작업자가 직접 장치를 만지는 것은 기능을 이해시키는 비유이며 앱의 제어 방식 자체를 묘사하지 않는다.",
+    "medium": "approved",
+    "symbol": "꽃에 내려앉은 벌",
+    "subject": "",
+    "reference": null,
+    "origin": "user-approved-preview",
+    "initialPath": "D:/workspace/my-world-03/output/portfolio-paintings-2026-10-20/A01-04-r0.png",
+    "finalPath": "D:/workspace/my-world-03/output/portfolio-paintings-2026-10-20/A01-04.png",
+    "reviewPath": "D:/workspace/my-world-03/output/portfolio-paintings-2026-10-20/reviews/A01-04.json",
+    "prompt": null
+  },
+  {
+    "id": "P01-03-F",
+    "room": "01",
+    "slotKind": "panel",
+    "project": "DADOKe 전자책 · 오디오북",
+    "sourceEntryIds": [
+      "original:dadoke",
+      "additional:nuri"
+    ],
+    "connection": "플랫폼 사례의 핵심인 시장조사·요구사항 정의·외주팀 조율을 '같은 물건의 구성을 함께 결정하는 두 손'에 둔다. 별도 nuri HTML 시안은 네 권의 서로 다른 물성으로 분리하며, 사용자가 플랫폼 코드를 직접 개발했다고 암시하지 않는다.",
+    "medium": "acrylic",
+    "symbol": "책을 감싼 헤드폰",
+    "subject": "ONE small closed ivory book hugged by ONE softly curved pair of headphones, one unified quiet motif of ebooks and audiobooks. Ivory, dusty blush and a tiny muted blue-gray, raised creamy paint like the cat reference. No person, letters, musical notes or devices.",
+    "reference": "C:/Users/buche/AppData/Local/Temp/codex-clipboard-8b25c64b-1fa2-412e-862c-a4fd173090b3.jpg",
+    "origin": "new-production",
+    "initialPath": "D:/workspace/my-world-03/output/portfolio-paintings-2026-10-20/P01-03-F-r0.png",
+    "finalPath": "D:/workspace/my-world-03/output/portfolio-paintings-2026-10-20/P01-03-F.png",
+    "reviewPath": "D:/workspace/my-world-03/output/portfolio-paintings-2026-10-20/reviews/P01-03-F.json",
+    "prompt": "Create ONE original fine-art image, horizontal 7:5, high resolution ideally 2800x2000 or greater. Flat front view, artwork fills entire image, no depicted frame, no mat, no artificial edge border. Thick creamy acrylic impasto on ivory. Closely match STYLE, PALETTE AND MOOD of supplied cat painting: soft cream, ivory, dusty blush pink, tiny coral accents and warm-gray darks; raised short fur/petal-like strokes, palette-knife texture, tender quiet mood. No cat or lettering from reference. SUBJECT: ONE small closed ivory book hugged by ONE softly curved pair of headphones, one unified quiet motif of ebooks and audiobooks. Ivory, dusty blush and a tiny muted blue-gray, raised creamy paint like the cat reference. No person, letters, musical notes or devices. The supplied image, if any, is ONLY a medium/mood reference; do not preserve its subject, letters or layout. ONE unified symbolic subject or typographic statement; at least half the image should be calm negative space. Main silhouette readable at thumbnail scale, no extra illustrative narrative. No room-based style constraints. Project meaning outside image: 플랫폼 사례의 핵심인 시장조사·요구사항 정의·외주팀 조율을 '같은 물건의 구성을 함께 결정하는 두 손'에 둔다. 별도 nuri HTML 시안은 네 권의 서로 다른 물성으로 분리하며, 사용자가 플랫폼 코드를 직접 개발했다고 암시하지 않는다. Do not depict application screens, logos, code, graphs, arrows, fake achievements, decorative labels, signatures, watermarks, wall/easel or gallery mockup. Unless explicitly requested in the poster subject, no text at all. Original hand-made physical medium, not a flat generic UI icon or a glossy 3D render."
+  },
+  {
+    "id": "P01-03-B",
+    "room": "01",
+    "slotKind": "panel",
+    "project": "북차카 홈페이지",
+    "sourceEntryIds": [
+      "original:corp-sites:bookchaka"
+    ],
+    "connection": "북차카의 한국어 교육·유학·도서 유통·출판 소개를 배우러 이동하는 사람의 흔적과 책을 전달하는 거리의 장면으로 묶는다. 홈페이지 제작의 기획·디자인·반응형 구현 기여와 브랜드의 사업 장면은 설명 본문에서 구분한다. 이동서점은 실제 북차카 시설이 아니다.",
+    "medium": "gouache",
+    "symbol": "바퀴 달린 책",
+    "subject": "ONE small closed teal book with TWO tiny coral wheels, a simple poetic bookmobile object. Matte gouache and visible colored-pencil edges, ivory background. No truck body, driver, street or text.",
+    "reference": null,
+    "origin": "new-production",
+    "initialPath": "D:/workspace/my-world-03/output/portfolio-paintings-2026-10-20/P01-03-B-r0.png",
+    "finalPath": "D:/workspace/my-world-03/output/portfolio-paintings-2026-10-20/P01-03-B.png",
+    "reviewPath": "D:/workspace/my-world-03/output/portfolio-paintings-2026-10-20/reviews/P01-03-B.json",
+    "prompt": "Create ONE original fine-art image, horizontal 7:5, high resolution ideally 2800x2000 or greater. Flat front view, artwork fills entire image, no depicted frame, no mat, no artificial edge border. Matte gouache and visible colored pencil on warm ivory paper, broad simple chalky color shapes, dry edges, a few penciled hatch marks. Restricted indigo/sage/coral/ivory palette, warm mature handmade mood. No glossy digital modeling. SUBJECT: ONE small closed teal book with TWO tiny coral wheels, a simple poetic bookmobile object. Matte gouache and visible colored-pencil edges, ivory background. No truck body, driver, street or text. The supplied image, if any, is ONLY a medium/mood reference; do not preserve its subject, letters or layout. ONE unified symbolic subject or typographic statement; at least half the image should be calm negative space. Main silhouette readable at thumbnail scale, no extra illustrative narrative. No room-based style constraints. Project meaning outside image: 북차카의 한국어 교육·유학·도서 유통·출판 소개를 배우러 이동하는 사람의 흔적과 책을 전달하는 거리의 장면으로 묶는다. 홈페이지 제작의 기획·디자인·반응형 구현 기여와 브랜드의 사업 장면은 설명 본문에서 구분한다. 이동서점은 실제 북차카 시설이 아니다. Do not depict application screens, logos, code, graphs, arrows, fake achievements, decorative labels, signatures, watermarks, wall/easel or gallery mockup. Unless explicitly requested in the poster subject, no text at all. Original hand-made physical medium, not a flat generic UI icon or a glossy 3D render."
+  },
+  {
+    "id": "A01-05",
+    "room": "01",
+    "slotKind": "wall",
+    "project": "케듀올 홈페이지",
+    "sourceEntryIds": [
+      "original:corp-sites:keduall"
+    ],
+    "connection": "한국과 베트남을 연결하는 교육·유학·출판 기업이라는 사이트 소개를 '서로 다른 기슭의 같은 공부하는 불빛'으로 해석한다. 실제 양국 지형이나 회사의 시설·해운 사업을 묘사한 것이 아니다.",
+    "medium": "watercolor",
+    "symbol": "하나로 이어진 두 잎",
+    "subject": "TWO differently shaped leaves on ONE gently curved shared stem, one cool green leaf and one muted coral leaf, facing each other. A poetic botanical study of educational connection across places. No maps, flags, people or diagram.",
+    "reference": "C:/Users/buche/AppData/Local/Temp/codex-clipboard-026bb574-523a-47ff-9f2e-14344cd9bd49.jpg",
+    "origin": "new-production",
+    "initialPath": "D:/workspace/my-world-03/output/portfolio-paintings-2026-10-20/A01-05-r0.png",
+    "finalPath": "D:/workspace/my-world-03/output/portfolio-paintings-2026-10-20/A01-05.png",
+    "reviewPath": "D:/workspace/my-world-03/output/portfolio-paintings-2026-10-20/reviews/A01-05.json",
+    "prompt": "Create ONE original fine-art image, horizontal 7:5, high resolution ideally 2800x2000 or greater. Flat front view, artwork fills entire image, no depicted frame, no mat, no artificial edge border. Transparent watercolor on warm cold-pressed paper. Closely match STYLE AND MOOD of supplied cherry watercolor: translucent rich greens, faint rose/sage halo only near subject, soft pigment blooms, reserved-paper highlights, restrained tiny splashes. Subject-focus and generous paper, no decorative full background. SUBJECT: TWO differently shaped leaves on ONE gently curved shared stem, one cool green leaf and one muted coral leaf, facing each other. A poetic botanical study of educational connection across places. No maps, flags, people or diagram. The supplied image, if any, is ONLY a medium/mood reference; do not preserve its subject, letters or layout. ONE unified symbolic subject or typographic statement; at least half the image should be calm negative space. Main silhouette readable at thumbnail scale, no extra illustrative narrative. No room-based style constraints. Project meaning outside image: 한국과 베트남을 연결하는 교육·유학·출판 기업이라는 사이트 소개를 '서로 다른 기슭의 같은 공부하는 불빛'으로 해석한다. 실제 양국 지형이나 회사의 시설·해운 사업을 묘사한 것이 아니다. Do not depict application screens, logos, code, graphs, arrows, fake achievements, decorative labels, signatures, watermarks, wall/easel or gallery mockup. Unless explicitly requested in the poster subject, no text at all. Original hand-made physical medium, not a flat generic UI icon or a glossy 3D render."
+  },
+  {
+    "id": "A01-END",
+    "room": "01",
+    "slotKind": "wall",
+    "project": "부클리 홈페이지",
+    "sourceEntryIds": [
+      "original:corp-sites:bookly",
+      "additional:hibookly-claude-code-design-v1"
+    ],
+    "connection": "부클리의 한국 출판 콘텐츠 수출·판권 소개를 서로 다른 제본으로 전해지는 같은 이야기로 표현한다. 별도 시안의 한국어·영어·베트남어 전환은 세 제본의 물성 차이로만 암시하며 실제 번역본 판매 실적이나 계약을 주장하지 않는다.",
+    "medium": "inkwash",
+    "symbol": "다른 제본의 같은 이야기",
+    "subject": "TWO very slim small books facing with one continuous blank ivory page quietly bridging their bindings, as one compact still life. Deep indigo fine pen, small sage and coral transparent watercolor accents. No words, library or many pages.",
+    "reference": "C:/Users/buche/AppData/Local/Temp/codex-clipboard-c532368a-c9f7-4934-bfbc-b618c9000c93.jpg",
+    "origin": "new-production",
+    "initialPath": "D:/workspace/my-world-03/output/portfolio-paintings-2026-10-20/A01-END-r0.png",
+    "finalPath": "D:/workspace/my-world-03/output/portfolio-paintings-2026-10-20/A01-END.png",
+    "reviewPath": "D:/workspace/my-world-03/output/portfolio-paintings-2026-10-20/reviews/A01-END.json",
+    "prompt": "Create ONE original fine-art image, horizontal 7:5, high resolution ideally 2800x2000 or greater. Flat front view, artwork fills entire image, no depicted frame, no mat, no artificial edge border. Economical architectural/botanical pen-and-watercolor study. Style reference is supplied cafe drawing: irregular black/indigo pen, transparent pale sage and muted coral washes, paper tooth, many untouched paper areas. Replace the architecture with requested object. SUBJECT: TWO very slim small books facing with one continuous blank ivory page quietly bridging their bindings, as one compact still life. Deep indigo fine pen, small sage and coral transparent watercolor accents. No words, library or many pages. The supplied image, if any, is ONLY a medium/mood reference; do not preserve its subject, letters or layout. ONE unified symbolic subject or typographic statement; at least half the image should be calm negative space. Main silhouette readable at thumbnail scale, no extra illustrative narrative. No room-based style constraints. Project meaning outside image: 부클리의 한국 출판 콘텐츠 수출·판권 소개를 서로 다른 제본으로 전해지는 같은 이야기로 표현한다. 별도 시안의 한국어·영어·베트남어 전환은 세 제본의 물성 차이로만 암시하며 실제 번역본 판매 실적이나 계약을 주장하지 않는다. Do not depict application screens, logos, code, graphs, arrows, fake achievements, decorative labels, signatures, watermarks, wall/easel or gallery mockup. Unless explicitly requested in the poster subject, no text at all. Original hand-made physical medium, not a flat generic UI icon or a glossy 3D render."
+  },
+  {
+    "id": "A01-10",
+    "room": "01",
+    "slotKind": "wall",
+    "project": "위즈덤셀러 홈페이지",
+    "sourceEntryIds": [
+      "original:corp-sites:wisdomceller"
+    ],
+    "connection": "언어·유학·커리어 서비스를 소개하는 홈페이지의 목적을 낯선 환경에서 다음 행동을 찾는 한 사람의 순간으로 표현한다. 실제 유학 국가·제휴 학교·취업 성과를 지정하지 않는 상징적 도시다.",
+    "medium": "watercolor",
+    "symbol": "종이배의 첫 출발",
+    "subject": "ONE delicately folded paper boat in pale ivory and muted rose, with a single green folded corner. A simple subject of starting a journey into a new place, isolated on warm paper, only a very pale blue-gray contact wash, no water landscape or people.",
+    "reference": "C:/Users/buche/AppData/Local/Temp/codex-clipboard-026bb574-523a-47ff-9f2e-14344cd9bd49.jpg",
+    "origin": "new-production",
+    "initialPath": "D:/workspace/my-world-03/output/portfolio-paintings-2026-10-20/A01-10-r0.png",
+    "finalPath": "D:/workspace/my-world-03/output/portfolio-paintings-2026-10-20/A01-10.png",
+    "reviewPath": "D:/workspace/my-world-03/output/portfolio-paintings-2026-10-20/reviews/A01-10.json",
+    "prompt": "Create ONE original fine-art image, horizontal 7:5, high resolution ideally 2800x2000 or greater. Flat front view, artwork fills entire image, no depicted frame, no mat, no artificial edge border. Transparent watercolor on warm cold-pressed paper. Closely match STYLE AND MOOD of supplied cherry watercolor: translucent rich greens, faint rose/sage halo only near subject, soft pigment blooms, reserved-paper highlights, restrained tiny splashes. Subject-focus and generous paper, no decorative full background. SUBJECT: ONE delicately folded paper boat in pale ivory and muted rose, with a single green folded corner. A simple subject of starting a journey into a new place, isolated on warm paper, only a very pale blue-gray contact wash, no water landscape or people. The supplied image, if any, is ONLY a medium/mood reference; do not preserve its subject, letters or layout. ONE unified symbolic subject or typographic statement; at least half the image should be calm negative space. Main silhouette readable at thumbnail scale, no extra illustrative narrative. No room-based style constraints. Project meaning outside image: 언어·유학·커리어 서비스를 소개하는 홈페이지의 목적을 낯선 환경에서 다음 행동을 찾는 한 사람의 순간으로 표현한다. 실제 유학 국가·제휴 학교·취업 성과를 지정하지 않는 상징적 도시다. Do not depict application screens, logos, code, graphs, arrows, fake achievements, decorative labels, signatures, watermarks, wall/easel or gallery mockup. Unless explicitly requested in the poster subject, no text at all. Original hand-made physical medium, not a flat generic UI icon or a glossy 3D render."
+  },
+  {
+    "id": "P01-04-B",
+    "room": "01",
+    "slotKind": "panel",
+    "project": "글로윈 비나 홈페이지",
+    "sourceEntryIds": [
+      "original:corp-sites:glowin-vina"
+    ],
+    "connection": "북카페의 브랜드와 공간을 소개하는 홈페이지 목적을 '머물고 싶은 자리의 감각'으로 표현한다. 실제 매장 인테리어를 재현하거나 사용자가 공간을 설계했다고 암시하지 않는 가상의 독서 자리다.",
+    "medium": "inkwash",
+    "symbol": "책 위의 찻잔",
+    "subject": "ONE small warm coral tea cup resting on ONE little unlettered closed book as its base. Fine irregular ink contours with restrained watercolor. No steam curls, furniture, flowers, room, saucer or extra objects.",
+    "reference": "C:/Users/buche/AppData/Local/Temp/codex-clipboard-c532368a-c9f7-4934-bfbc-b618c9000c93.jpg",
+    "origin": "new-production",
+    "initialPath": "D:/workspace/my-world-03/output/portfolio-paintings-2026-10-20/P01-04-B-r0.png",
+    "finalPath": "D:/workspace/my-world-03/output/portfolio-paintings-2026-10-20/P01-04-B.png",
+    "reviewPath": "D:/workspace/my-world-03/output/portfolio-paintings-2026-10-20/reviews/P01-04-B.json",
+    "prompt": "Create ONE original fine-art image, horizontal 7:5, high resolution ideally 2800x2000 or greater. Flat front view, artwork fills entire image, no depicted frame, no mat, no artificial edge border. Economical architectural/botanical pen-and-watercolor study. Style reference is supplied cafe drawing: irregular black/indigo pen, transparent pale sage and muted coral washes, paper tooth, many untouched paper areas. Replace the architecture with requested object. SUBJECT: ONE small warm coral tea cup resting on ONE little unlettered closed book as its base. Fine irregular ink contours with restrained watercolor. No steam curls, furniture, flowers, room, saucer or extra objects. The supplied image, if any, is ONLY a medium/mood reference; do not preserve its subject, letters or layout. ONE unified symbolic subject or typographic statement; at least half the image should be calm negative space. Main silhouette readable at thumbnail scale, no extra illustrative narrative. No room-based style constraints. Project meaning outside image: 북카페의 브랜드와 공간을 소개하는 홈페이지 목적을 '머물고 싶은 자리의 감각'으로 표현한다. 실제 매장 인테리어를 재현하거나 사용자가 공간을 설계했다고 암시하지 않는 가상의 독서 자리다. Do not depict application screens, logos, code, graphs, arrows, fake achievements, decorative labels, signatures, watermarks, wall/easel or gallery mockup. Unless explicitly requested in the poster subject, no text at all. Original hand-made physical medium, not a flat generic UI icon or a glossy 3D render."
+  },
+  {
+    "id": "P01-04-F",
+    "room": "01",
+    "slotKind": "panel",
+    "project": "비블리아 홈페이지",
+    "sourceEntryIds": [
+      "original:corp-sites:biblia"
+    ],
+    "connection": "비블리아 원본 사이트 mainAbout의 공공·교육기관 도서 유통, 도서관 지원 소개를 근거로 책이 독자에게 닿기 전의 준비 장면을 택했다. 근거: https://raw.githubusercontent.com/blackstarzck/biblia/main/src/data/sectionItems.jsx . 홈페이지 개발과 사업 자체의 운영 기여는 구분하며 실제 납품 현장·성과를 묘사하지 않는다.",
+    "medium": "graphite",
+    "symbol": "전달할 책 묶음",
+    "subject": "THREE slim unlettered books tied into ONE small parcel with a single plain string. One cohesive still life of books prepared for readers. Loose pencil edges, selective crosshatching, no delivery truck or tags.",
+    "reference": "C:/Users/buche/AppData/Local/Temp/codex-clipboard-c663cabe-42b2-4670-87ba-3a4cca008aa0.jpg",
+    "origin": "new-production",
+    "initialPath": "D:/workspace/my-world-03/output/portfolio-paintings-2026-10-20/P01-04-F-r0.png",
+    "finalPath": "D:/workspace/my-world-03/output/portfolio-paintings-2026-10-20/P01-04-F.png",
+    "reviewPath": "D:/workspace/my-world-03/output/portfolio-paintings-2026-10-20/reviews/P01-04-F.json",
+    "prompt": "Create ONE original fine-art image, horizontal 7:5, high resolution ideally 2800x2000 or greater. Flat front view, artwork fills entire image, no depicted frame, no mat, no artificial edge border. Expressive real graphite drawing on warm paper, like supplied rose reference. Loose searching contours, varied pressure, selective crosshatching and tiny rubbed tonal areas, unfinished edges fading into broad clean paper. No color. SUBJECT: THREE slim unlettered books tied into ONE small parcel with a single plain string. One cohesive still life of books prepared for readers. Loose pencil edges, selective crosshatching, no delivery truck or tags. The supplied image, if any, is ONLY a medium/mood reference; do not preserve its subject, letters or layout. ONE unified symbolic subject or typographic statement; at least half the image should be calm negative space. Main silhouette readable at thumbnail scale, no extra illustrative narrative. No room-based style constraints. Project meaning outside image: 비블리아 원본 사이트 mainAbout의 공공·교육기관 도서 유통, 도서관 지원 소개를 근거로 책이 독자에게 닿기 전의 준비 장면을 택했다. 근거: https://raw.githubusercontent.com/blackstarzck/biblia/main/src/data/sectionItems.jsx . 홈페이지 개발과 사업 자체의 운영 기여는 구분하며 실제 납품 현장·성과를 묘사하지 않는다. Do not depict application screens, logos, code, graphs, arrows, fake achievements, decorative labels, signatures, watermarks, wall/easel or gallery mockup. Unless explicitly requested in the poster subject, no text at all. Original hand-made physical medium, not a flat generic UI icon or a glossy 3D render."
+  },
+  {
+    "id": "A01-09",
+    "room": "01",
+    "slotKind": "wall",
+    "project": "ShortForm Knowledge",
+    "sourceEntryIds": [
+      "additional:short-form"
+    ],
+    "connection": "짧은 학습 영상을 연속 탐색하고 다음 데이터를 미리 불러오며 재생 상태를 제어하는 프론트엔드를 '작은 영사기·현재 장면·준비된 다음 릴'로 비유한다. 실제 서비스가 기계식 필름을 쓰거나 식물 교육 콘텐츠를 제공한다는 주장이 아니며, AI 요약 기능은 표현하지 않는다.",
+    "medium": "popart",
+    "symbol": "짧은 필름 한 바퀴",
+    "subject": "ONE short curling strip of physical analog film makes a single loose loop, only THREE empty ivory frame windows. Indigo, muted coral and pale yellow flat silkscreen shapes, selective halftone, empty cream ground. No words, screen, play icon or many frames.",
+    "reference": null,
+    "origin": "new-production",
+    "initialPath": "D:/workspace/my-world-03/output/portfolio-paintings-2026-10-20/A01-09-r0.png",
+    "finalPath": "D:/workspace/my-world-03/output/portfolio-paintings-2026-10-20/A01-09.png",
+    "reviewPath": "D:/workspace/my-world-03/output/portfolio-paintings-2026-10-20/reviews/A01-09.json",
+    "prompt": "Create ONE original fine-art image, horizontal 7:5, high resolution ideally 2800x2000 or greater. Flat front view, artwork fills entire image, no depicted frame, no mat, no artificial edge border. Original minimal pop-art hand-pulled screenprint. Bold economical black contours, flat teal/coral/pale-yellow spot colors, selective Ben-Day halftone in one shadow, subtle registration offset, wide quiet cream space. One motif, not a crowded comic collage. SUBJECT: ONE short curling strip of physical analog film makes a single loose loop, only THREE empty ivory frame windows. Indigo, muted coral and pale yellow flat silkscreen shapes, selective halftone, empty cream ground. No words, screen, play icon or many frames. The supplied image, if any, is ONLY a medium/mood reference; do not preserve its subject, letters or layout. ONE unified symbolic subject or typographic statement; at least half the image should be calm negative space. Main silhouette readable at thumbnail scale, no extra illustrative narrative. No room-based style constraints. Project meaning outside image: 짧은 학습 영상을 연속 탐색하고 다음 데이터를 미리 불러오며 재생 상태를 제어하는 프론트엔드를 '작은 영사기·현재 장면·준비된 다음 릴'로 비유한다. 실제 서비스가 기계식 필름을 쓰거나 식물 교육 콘텐츠를 제공한다는 주장이 아니며, AI 요약 기능은 표현하지 않는다. Do not depict application screens, logos, code, graphs, arrows, fake achievements, decorative labels, signatures, watermarks, wall/easel or gallery mockup. Unless explicitly requested in the poster subject, no text at all. Original hand-made physical medium, not a flat generic UI icon or a glossy 3D render."
+  },
+  {
+    "id": "A01-08",
+    "room": "01",
+    "slotKind": "wall",
+    "project": "밀리 관리자 대시보드",
+    "sourceEntryIds": [
+      "original:millie-admin-dashboard"
+    ],
+    "connection": "콘텐츠·회원·구독 등 여러 운영 화면을 공통 탐색 구조와 표·폼 패턴으로 묶은 개인 프로토타입을, 독자에게 보이지 않는 뒤편의 선별 작업으로 표현한다. 밀리의서재 실제 운영 시스템이나 회사의 성과로 읽히지 않도록 브랜드 로고와 실재 사무실을 사용하지 않는다.",
+    "medium": "graphite",
+    "symbol": "책과 도장",
+    "subject": "ONE compact closed unlettered book with ONE small wooden library stamp resting diagonally across it. A unified graphite still life of selection behind content publishing. No actual brand, stamped letters, table or extra tools.",
+    "reference": "C:/Users/buche/AppData/Local/Temp/codex-clipboard-c663cabe-42b2-4670-87ba-3a4cca008aa0.jpg",
+    "origin": "new-production",
+    "initialPath": "D:/workspace/my-world-03/output/portfolio-paintings-2026-10-20/A01-08-r0.png",
+    "finalPath": "D:/workspace/my-world-03/output/portfolio-paintings-2026-10-20/A01-08.png",
+    "reviewPath": "D:/workspace/my-world-03/output/portfolio-paintings-2026-10-20/reviews/A01-08.json",
+    "prompt": "Create ONE original fine-art image, horizontal 7:5, high resolution ideally 2800x2000 or greater. Flat front view, artwork fills entire image, no depicted frame, no mat, no artificial edge border. Expressive real graphite drawing on warm paper, like supplied rose reference. Loose searching contours, varied pressure, selective crosshatching and tiny rubbed tonal areas, unfinished edges fading into broad clean paper. No color. SUBJECT: ONE compact closed unlettered book with ONE small wooden library stamp resting diagonally across it. A unified graphite still life of selection behind content publishing. No actual brand, stamped letters, table or extra tools. The supplied image, if any, is ONLY a medium/mood reference; do not preserve its subject, letters or layout. ONE unified symbolic subject or typographic statement; at least half the image should be calm negative space. Main silhouette readable at thumbnail scale, no extra illustrative narrative. No room-based style constraints. Project meaning outside image: 콘텐츠·회원·구독 등 여러 운영 화면을 공통 탐색 구조와 표·폼 패턴으로 묶은 개인 프로토타입을, 독자에게 보이지 않는 뒤편의 선별 작업으로 표현한다. 밀리의서재 실제 운영 시스템이나 회사의 성과로 읽히지 않도록 브랜드 로고와 실재 사무실을 사용하지 않는다. Do not depict application screens, logos, code, graphs, arrows, fake achievements, decorative labels, signatures, watermarks, wall/easel or gallery mockup. Unless explicitly requested in the poster subject, no text at all. Original hand-made physical medium, not a flat generic UI icon or a glossy 3D render."
+  },
+  {
+    "id": "A01-07",
+    "room": "01",
+    "slotKind": "wall",
+    "project": "모두가딜러 · 웹서비스",
+    "sourceEntryIds": [
+      "original:dealer-web"
+    ],
+    "connection": "차량 정보를 조회·가공하여 반응형 웹·앱의 선택 경험으로 연결한 초기 실무를, 사람이 차량을 살피는 장면으로 표현한다. 실제 딜러 매장이나 거래 성과가 아닌 서비스 도메인의 해석이다.",
+    "medium": "gouache",
+    "symbol": "다음 주인의 열쇠",
+    "subject": "ONE well-used car key with ONE simple round metal key ring, subtly worn, matte coral red grip and cool gray metal on warm ivory. Honest hand-painted gouache study; no car scene, logo, key fob buttons, labels or extra keys.",
+    "reference": null,
+    "origin": "new-production",
+    "initialPath": "D:/workspace/my-world-03/output/portfolio-paintings-2026-10-20/A01-07-r0.png",
+    "finalPath": "D:/workspace/my-world-03/output/portfolio-paintings-2026-10-20/A01-07.png",
+    "reviewPath": "D:/workspace/my-world-03/output/portfolio-paintings-2026-10-20/reviews/A01-07.json",
+    "prompt": "Create ONE original fine-art image, horizontal 7:5, high resolution ideally 2800x2000 or greater. Flat front view, artwork fills entire image, no depicted frame, no mat, no artificial edge border. Matte gouache and visible colored pencil on warm ivory paper, broad simple chalky color shapes, dry edges, a few penciled hatch marks. Restricted indigo/sage/coral/ivory palette, warm mature handmade mood. No glossy digital modeling. SUBJECT: ONE well-used car key with ONE simple round metal key ring, subtly worn, matte coral red grip and cool gray metal on warm ivory. Honest hand-painted gouache study; no car scene, logo, key fob buttons, labels or extra keys. The supplied image, if any, is ONLY a medium/mood reference; do not preserve its subject, letters or layout. ONE unified symbolic subject or typographic statement; at least half the image should be calm negative space. Main silhouette readable at thumbnail scale, no extra illustrative narrative. No room-based style constraints. Project meaning outside image: 차량 정보를 조회·가공하여 반응형 웹·앱의 선택 경험으로 연결한 초기 실무를, 사람이 차량을 살피는 장면으로 표현한다. 실제 딜러 매장이나 거래 성과가 아닌 서비스 도메인의 해석이다. Do not depict application screens, logos, code, graphs, arrows, fake achievements, decorative labels, signatures, watermarks, wall/easel or gallery mockup. Unless explicitly requested in the poster subject, no text at all. Original hand-made physical medium, not a flat generic UI icon or a glossy 3D render."
+  },
+  {
+    "id": "P01-02-B",
+    "room": "01",
+    "slotKind": "panel",
+    "project": "레거시 정리 · 성능 개선",
+    "sourceEntryIds": [
+      "original:legacy-cleanup"
+    ],
+    "connection": "불필요한 Ajax·조회문·공통 자산·추적 스크립트를 정리한 유지보수를 '물건을 바꾸지 않고 누적된 불필요를 걷어 내는 정비'로 비유한다. 자전거는 실제 개발 도메인이 아니며 회전이나 빛으로 측정되지 않은 성능 향상률을 주장하지 않는다.",
+    "medium": "graphite",
+    "symbol": "가벼워진 바퀴",
+    "subject": "ONE bicycle wheel with only a few economically sketched spokes and one loosened redundant wire curling away beside the hub. An isolated pencil object study of removing unnecessary complexity while keeping the working core. No full bicycle, repair shop, hands or diagrams.",
+    "reference": "C:/Users/buche/AppData/Local/Temp/codex-clipboard-c663cabe-42b2-4670-87ba-3a4cca008aa0.jpg",
+    "origin": "new-production",
+    "initialPath": "D:/workspace/my-world-03/output/portfolio-paintings-2026-10-20/P01-02-B-r0.png",
+    "finalPath": "D:/workspace/my-world-03/output/portfolio-paintings-2026-10-20/P01-02-B.png",
+    "reviewPath": "D:/workspace/my-world-03/output/portfolio-paintings-2026-10-20/reviews/P01-02-B.json",
+    "prompt": "Create ONE original fine-art image, horizontal 7:5, high resolution ideally 2800x2000 or greater. Flat front view, artwork fills entire image, no depicted frame, no mat, no artificial edge border. Expressive real graphite drawing on warm paper, like supplied rose reference. Loose searching contours, varied pressure, selective crosshatching and tiny rubbed tonal areas, unfinished edges fading into broad clean paper. No color. SUBJECT: ONE bicycle wheel with only a few economically sketched spokes and one loosened redundant wire curling away beside the hub. An isolated pencil object study of removing unnecessary complexity while keeping the working core. No full bicycle, repair shop, hands or diagrams. The supplied image, if any, is ONLY a medium/mood reference; do not preserve its subject, letters or layout. ONE unified symbolic subject or typographic statement; at least half the image should be calm negative space. Main silhouette readable at thumbnail scale, no extra illustrative narrative. No room-based style constraints. Project meaning outside image: 불필요한 Ajax·조회문·공통 자산·추적 스크립트를 정리한 유지보수를 '물건을 바꾸지 않고 누적된 불필요를 걷어 내는 정비'로 비유한다. 자전거는 실제 개발 도메인이 아니며 회전이나 빛으로 측정되지 않은 성능 향상률을 주장하지 않는다. Do not depict application screens, logos, code, graphs, arrows, fake achievements, decorative labels, signatures, watermarks, wall/easel or gallery mockup. Unless explicitly requested in the poster subject, no text at all. Original hand-made physical medium, not a flat generic UI icon or a glossy 3D render."
+  },
+  {
+    "id": "A01-06",
+    "room": "01",
+    "slotKind": "wall",
+    "project": "모두가딜러 · 관리자",
+    "sourceEntryIds": [
+      "original:dealer-admin"
+    ],
+    "connection": "프로모션별 조건부 입력·반복 값 일괄 적용·게시 전 미리보기로 운영 흐름을 개선한 사례를 '현재 대상만 준비하고 공개 전에 상태를 확인하는 현장'으로 비유한다. 실제 차량 촬영 도구나 출고 관리 시스템을 개발했다는 의미는 아니다.",
+    "medium": "popart",
+    "symbol": "공개 전의 차",
+    "subject": "ONE very simple coral-red car silhouette partly covered by ONE translucent pale blue paper sheet lifted slightly at a corner, as a single editorial still life about reviewing before publishing. Few flat shapes, irregular screenprint texture, no text, road, person or UI.",
+    "reference": null,
+    "origin": "new-production",
+    "initialPath": "D:/workspace/my-world-03/output/portfolio-paintings-2026-10-20/A01-06-r0.png",
+    "finalPath": "D:/workspace/my-world-03/output/portfolio-paintings-2026-10-20/A01-06.png",
+    "reviewPath": "D:/workspace/my-world-03/output/portfolio-paintings-2026-10-20/reviews/A01-06.json",
+    "prompt": "Create ONE original fine-art image, horizontal 7:5, high resolution ideally 2800x2000 or greater. Flat front view, artwork fills entire image, no depicted frame, no mat, no artificial edge border. Original minimal pop-art hand-pulled screenprint. Bold economical black contours, flat teal/coral/pale-yellow spot colors, selective Ben-Day halftone in one shadow, subtle registration offset, wide quiet cream space. One motif, not a crowded comic collage. SUBJECT: ONE very simple coral-red car silhouette partly covered by ONE translucent pale blue paper sheet lifted slightly at a corner, as a single editorial still life about reviewing before publishing. Few flat shapes, irregular screenprint texture, no text, road, person or UI. The supplied image, if any, is ONLY a medium/mood reference; do not preserve its subject, letters or layout. ONE unified symbolic subject or typographic statement; at least half the image should be calm negative space. Main silhouette readable at thumbnail scale, no extra illustrative narrative. No room-based style constraints. Project meaning outside image: 프로모션별 조건부 입력·반복 값 일괄 적용·게시 전 미리보기로 운영 흐름을 개선한 사례를 '현재 대상만 준비하고 공개 전에 상태를 확인하는 현장'으로 비유한다. 실제 차량 촬영 도구나 출고 관리 시스템을 개발했다는 의미는 아니다. Do not depict application screens, logos, code, graphs, arrows, fake achievements, decorative labels, signatures, watermarks, wall/easel or gallery mockup. Unless explicitly requested in the poster subject, no text at all. Original hand-made physical medium, not a flat generic UI icon or a glossy 3D render."
+  },
+  {
+    "id": "P01-02-F",
+    "room": "01",
+    "slotKind": "panel",
+    "project": "문서화 · 비개발 직군 협업",
+    "sourceEntryIds": [
+      "original:docs-comm"
+    ],
+    "connection": "기능·정책·권한 경계를 다른 직군이 함께 이해할 수 있는 문서와 자료로 만드는 역할을, 함께 사용할 그늘의 구조와 장력을 맞추는 사람들로 표현한다. 건축이나 행사 설치를 했다는 주장이 아닌 협업의 비유다.",
+    "medium": "gouache",
+    "symbol": "함께 펴는 한 장",
+    "subject": "ONE folded-paper shelter made of a single sheet with two differently colored faces, ivory and muted sage, a small coral fold accent. An abstract yet physical shared shelter, only three folds. Gouache and pencil, no people, ropes, scene or architectural diagram.",
+    "reference": null,
+    "origin": "new-production",
+    "initialPath": "D:/workspace/my-world-03/output/portfolio-paintings-2026-10-20/P01-02-F-r0.png",
+    "finalPath": "D:/workspace/my-world-03/output/portfolio-paintings-2026-10-20/P01-02-F.png",
+    "reviewPath": "D:/workspace/my-world-03/output/portfolio-paintings-2026-10-20/reviews/P01-02-F.json",
+    "prompt": "Create ONE original fine-art image, horizontal 7:5, high resolution ideally 2800x2000 or greater. Flat front view, artwork fills entire image, no depicted frame, no mat, no artificial edge border. Matte gouache and visible colored pencil on warm ivory paper, broad simple chalky color shapes, dry edges, a few penciled hatch marks. Restricted indigo/sage/coral/ivory palette, warm mature handmade mood. No glossy digital modeling. SUBJECT: ONE folded-paper shelter made of a single sheet with two differently colored faces, ivory and muted sage, a small coral fold accent. An abstract yet physical shared shelter, only three folds. Gouache and pencil, no people, ropes, scene or architectural diagram. The supplied image, if any, is ONLY a medium/mood reference; do not preserve its subject, letters or layout. ONE unified symbolic subject or typographic statement; at least half the image should be calm negative space. Main silhouette readable at thumbnail scale, no extra illustrative narrative. No room-based style constraints. Project meaning outside image: 기능·정책·권한 경계를 다른 직군이 함께 이해할 수 있는 문서와 자료로 만드는 역할을, 함께 사용할 그늘의 구조와 장력을 맞추는 사람들로 표현한다. 건축이나 행사 설치를 했다는 주장이 아닌 협업의 비유다. Do not depict application screens, logos, code, graphs, arrows, fake achievements, decorative labels, signatures, watermarks, wall/easel or gallery mockup. Unless explicitly requested in the poster subject, no text at all. Original hand-made physical medium, not a flat generic UI icon or a glossy 3D render."
+  },
+  {
+    "id": "A02-01",
+    "room": "02",
+    "slotKind": "wall",
+    "project": "문서 통합 관리 서비스",
+    "sourceEntryIds": [
+      "original:doc-merge"
+    ],
+    "connection": "서로 다른 업체의 엑셀 입력을 하나의 관리 시스템으로 통합한 일을 여러 출처의 실을 하나의 직물로 짜는 행위에 대응시킨다. 반복되는 잎 무늬는 정해진 시트명·컬럼과 DB 컬럼의 명시적인 대응을 뜻한다. 임의 양식을 자동 이해하거나 모든 원본을 실시간 동기화한다는 기능은 암시하지 않는다.",
+    "medium": "watercolor",
+    "symbol": "한 폭으로 모인 실",
+    "subject": "THREE loose threads, sage, faded coral and indigo, join into ONE very small woven swatch. One compact textile still life, a few large visible over-under strands. No loom, labels, nodes, arrows, scene or decorative background.",
+    "reference": "C:/Users/buche/AppData/Local/Temp/codex-clipboard-026bb574-523a-47ff-9f2e-14344cd9bd49.jpg",
+    "origin": "new-production",
+    "initialPath": "D:/workspace/my-world-03/output/portfolio-paintings-2026-10-20/A02-01-r0.png",
+    "finalPath": "D:/workspace/my-world-03/output/portfolio-paintings-2026-10-20/A02-01.png",
+    "reviewPath": "D:/workspace/my-world-03/output/portfolio-paintings-2026-10-20/reviews/A02-01.json",
+    "prompt": "Create ONE original fine-art image, horizontal 7:5, high resolution ideally 2800x2000 or greater. Flat front view, artwork fills entire image, no depicted frame, no mat, no artificial edge border. Transparent watercolor on warm cold-pressed paper. Closely match STYLE AND MOOD of supplied cherry watercolor: translucent rich greens, faint rose/sage halo only near subject, soft pigment blooms, reserved-paper highlights, restrained tiny splashes. Subject-focus and generous paper, no decorative full background. SUBJECT: THREE loose threads, sage, faded coral and indigo, join into ONE very small woven swatch. One compact textile still life, a few large visible over-under strands. No loom, labels, nodes, arrows, scene or decorative background. The supplied image, if any, is ONLY a medium/mood reference; do not preserve its subject, letters or layout. ONE unified symbolic subject or typographic statement; at least half the image should be calm negative space. Main silhouette readable at thumbnail scale, no extra illustrative narrative. No room-based style constraints. Project meaning outside image: 서로 다른 업체의 엑셀 입력을 하나의 관리 시스템으로 통합한 일을 여러 출처의 실을 하나의 직물로 짜는 행위에 대응시킨다. 반복되는 잎 무늬는 정해진 시트명·컬럼과 DB 컬럼의 명시적인 대응을 뜻한다. 임의 양식을 자동 이해하거나 모든 원본을 실시간 동기화한다는 기능은 암시하지 않는다. Do not depict application screens, logos, code, graphs, arrows, fake achievements, decorative labels, signatures, watermarks, wall/easel or gallery mockup. Unless explicitly requested in the poster subject, no text at all. Original hand-made physical medium, not a flat generic UI icon or a glossy 3D render."
+  },
+  {
+    "id": "A02-02",
+    "room": "02",
+    "slotKind": "wall",
+    "project": "NestJS 학습",
+    "sourceEntryIds": [
+      "original:nest-sns"
+    ],
+    "connection": "인증·게시글·실시간 채팅을 모듈별로 구성하면서 하나의 서버 안에서 연결한 학습을 공동 주택의 다른 생활 공간에 비유한다. 실제 서비스의 운영 규모나 복잡한 분산 아키텍처를 주장하는 그림이 아니다.",
+    "medium": "coloredpencil",
+    "symbol": "세 가닥의 매듭",
+    "subject": "ONE simple loose knot made from THREE softly colored cords, warm gray, muted red and sage, with three short ends. A physical hand-drawn object of connected server modules, visible colored-pencil hatch marks, warm paper, no node graph or software logo.",
+    "reference": null,
+    "origin": "new-production",
+    "initialPath": "D:/workspace/my-world-03/output/portfolio-paintings-2026-10-20/A02-02-r0.png",
+    "finalPath": "D:/workspace/my-world-03/output/portfolio-paintings-2026-10-20/A02-02.png",
+    "reviewPath": "D:/workspace/my-world-03/output/portfolio-paintings-2026-10-20/reviews/A02-02.json",
+    "prompt": "Create ONE original fine-art image, horizontal 7:5, high resolution ideally 2800x2000 or greater. Flat front view, artwork fills entire image, no depicted frame, no mat, no artificial edge border. Soft wax/colored-pencil drawing on warm ivory paper; visible strokes and paper tooth, restrained sage, coral and graphite gray, spare contact shadow. No digital vector edges. SUBJECT: ONE simple loose knot made from THREE softly colored cords, warm gray, muted red and sage, with three short ends. A physical hand-drawn object of connected server modules, visible colored-pencil hatch marks, warm paper, no node graph or software logo. The supplied image, if any, is ONLY a medium/mood reference; do not preserve its subject, letters or layout. ONE unified symbolic subject or typographic statement; at least half the image should be calm negative space. Main silhouette readable at thumbnail scale, no extra illustrative narrative. No room-based style constraints. Project meaning outside image: 인증·게시글·실시간 채팅을 모듈별로 구성하면서 하나의 서버 안에서 연결한 학습을 공동 주택의 다른 생활 공간에 비유한다. 실제 서비스의 운영 규모나 복잡한 분산 아키텍처를 주장하는 그림이 아니다. Do not depict application screens, logos, code, graphs, arrows, fake achievements, decorative labels, signatures, watermarks, wall/easel or gallery mockup. Unless explicitly requested in the poster subject, no text at all. Original hand-made physical medium, not a flat generic UI icon or a glossy 3D render."
+  },
+  {
+    "id": "P02-01-F",
+    "room": "02",
+    "slotKind": "panel",
+    "project": "반복 작업을 SKILL로 만드는 법",
+    "sourceEntryIds": [
+      "original:my-skills"
+    ],
+    "connection": "발동 조건·작업 범위·참고 자료·검증 방법을 재사용 가능한 지침으로 만든 일을, 상황에 맞는 본을 고르고 완성된 솔기까지 확인하는 재단에 비유한다. SKILL이 생각 없이 반복 실행하는 만능 자동화라는 인상을 주지 않는다.",
+    "medium": "graphite",
+    "symbol": "다시 쓰는 옷깃의 본",
+    "subject": "ONE small paper collar pattern laid across ONE modest fabric swatch, held by a single tiny pin, as one compact motif of reusable instructions. Graphite drawing, spare soft shadows, no sewing machine, measurements, text or extra tools.",
+    "reference": "C:/Users/buche/AppData/Local/Temp/codex-clipboard-c663cabe-42b2-4670-87ba-3a4cca008aa0.jpg",
+    "origin": "new-production",
+    "initialPath": "D:/workspace/my-world-03/output/portfolio-paintings-2026-10-20/P02-01-F-r0.png",
+    "finalPath": "D:/workspace/my-world-03/output/portfolio-paintings-2026-10-20/P02-01-F.png",
+    "reviewPath": "D:/workspace/my-world-03/output/portfolio-paintings-2026-10-20/reviews/P02-01-F.json",
+    "prompt": "Create ONE original fine-art image, horizontal 7:5, high resolution ideally 2800x2000 or greater. Flat front view, artwork fills entire image, no depicted frame, no mat, no artificial edge border. Expressive real graphite drawing on warm paper, like supplied rose reference. Loose searching contours, varied pressure, selective crosshatching and tiny rubbed tonal areas, unfinished edges fading into broad clean paper. No color. SUBJECT: ONE small paper collar pattern laid across ONE modest fabric swatch, held by a single tiny pin, as one compact motif of reusable instructions. Graphite drawing, spare soft shadows, no sewing machine, measurements, text or extra tools. The supplied image, if any, is ONLY a medium/mood reference; do not preserve its subject, letters or layout. ONE unified symbolic subject or typographic statement; at least half the image should be calm negative space. Main silhouette readable at thumbnail scale, no extra illustrative narrative. No room-based style constraints. Project meaning outside image: 발동 조건·작업 범위·참고 자료·검증 방법을 재사용 가능한 지침으로 만든 일을, 상황에 맞는 본을 고르고 완성된 솔기까지 확인하는 재단에 비유한다. SKILL이 생각 없이 반복 실행하는 만능 자동화라는 인상을 주지 않는다. Do not depict application screens, logos, code, graphs, arrows, fake achievements, decorative labels, signatures, watermarks, wall/easel or gallery mockup. Unless explicitly requested in the poster subject, no text at all. Original hand-made physical medium, not a flat generic UI icon or a glossy 3D render."
+  },
+  {
+    "id": "A02-03",
+    "room": "02",
+    "slotKind": "wall",
+    "project": "요구사항 게이트 하네스",
+    "sourceEntryIds": [
+      "original:gate-harness"
+    ],
+    "connection": "필수 문서 확인 전 변경 도구를 막는 tool gateway를 출발 전 점검과 멈춤으로 대응시킨다. 포개진 발자국은 session_id별 이벤트를 보존해 재생·재시도·인수인계하는 맥락을 뜻한다. 어떤 오류도 발생하지 않는다는 보장은 담지 않는다.",
+    "medium": "inkwash",
+    "symbol": "닫힌 카라비너",
+    "subject": "ONE closed climbing carabiner securely surrounding ONE tiny folded blank paper slip. An actual material still life of checking prerequisites before action. Deep indigo pen, sparse muted cobalt watercolor, warm paper; no climber, mountains, arrows, lock icon or text.",
+    "reference": "C:/Users/buche/AppData/Local/Temp/codex-clipboard-c532368a-c9f7-4934-bfbc-b618c9000c93.jpg",
+    "origin": "new-production",
+    "initialPath": "D:/workspace/my-world-03/output/portfolio-paintings-2026-10-20/A02-03-r0.png",
+    "finalPath": "D:/workspace/my-world-03/output/portfolio-paintings-2026-10-20/A02-03.png",
+    "reviewPath": "D:/workspace/my-world-03/output/portfolio-paintings-2026-10-20/reviews/A02-03.json",
+    "prompt": "Create ONE original fine-art image, horizontal 7:5, high resolution ideally 2800x2000 or greater. Flat front view, artwork fills entire image, no depicted frame, no mat, no artificial edge border. Economical architectural/botanical pen-and-watercolor study. Style reference is supplied cafe drawing: irregular black/indigo pen, transparent pale sage and muted coral washes, paper tooth, many untouched paper areas. Replace the architecture with requested object. SUBJECT: ONE closed climbing carabiner securely surrounding ONE tiny folded blank paper slip. An actual material still life of checking prerequisites before action. Deep indigo pen, sparse muted cobalt watercolor, warm paper; no climber, mountains, arrows, lock icon or text. The supplied image, if any, is ONLY a medium/mood reference; do not preserve its subject, letters or layout. ONE unified symbolic subject or typographic statement; at least half the image should be calm negative space. Main silhouette readable at thumbnail scale, no extra illustrative narrative. No room-based style constraints. Project meaning outside image: 필수 문서 확인 전 변경 도구를 막는 tool gateway를 출발 전 점검과 멈춤으로 대응시킨다. 포개진 발자국은 session_id별 이벤트를 보존해 재생·재시도·인수인계하는 맥락을 뜻한다. 어떤 오류도 발생하지 않는다는 보장은 담지 않는다. Do not depict application screens, logos, code, graphs, arrows, fake achievements, decorative labels, signatures, watermarks, wall/easel or gallery mockup. Unless explicitly requested in the poster subject, no text at all. Original hand-made physical medium, not a flat generic UI icon or a glossy 3D render."
+  },
+  {
+    "id": "A02-04",
+    "room": "02",
+    "slotKind": "wall",
+    "project": "AI 개발 파이프라인",
+    "sourceEntryIds": [
+      "original:multi-agent"
+    ],
+    "connection": "여러 AI 도구와 후속 작업자에게 요구사항·판단 맥락·변경·검증 근거를 저장소 자료로 넘기는 과정을 고고학 작업의 교대에 비유한다. 중앙 흙층은 앞선 결론과 남은 범위를 보존하는 대상이며, 모델이 실제 발굴을 수행한다는 뜻이 아니다.",
+    "medium": "approved",
+    "symbol": "맥락을 잇는 종이",
+    "subject": "",
+    "reference": null,
+    "origin": "user-approved-preview",
+    "initialPath": "D:/workspace/my-world-03/output/portfolio-paintings-2026-10-20/A02-04-r0.png",
+    "finalPath": "D:/workspace/my-world-03/output/portfolio-paintings-2026-10-20/A02-04.png",
+    "reviewPath": "D:/workspace/my-world-03/output/portfolio-paintings-2026-10-20/reviews/A02-04.json",
+    "prompt": null
+  },
+  {
+    "id": "P02-03-F",
+    "room": "02",
+    "slotKind": "panel",
+    "project": "비개발자용 에이전트 IDE",
+    "sourceEntryIds": [
+      "original:ai-squads"
+    ],
+    "connection": "비개발자의 자연어 요청을 PM·설계·개발·검증 역할로 나누고 의존성과 판단 맥락을 보이는 IDE를 작은 합주의 조율에 비유한다. 악장이 취합하는 역할은 연관 profitpal 실험에도 연결되지만, IDE 하나가 완성된 제품을 항상 만들어 준다는 성과는 주장하지 않는다.",
+    "medium": "poster",
+    "symbol": "역할을 조율하는 지휘봉",
+    "subject": "EXACT TEXT: large 'MAKE IT' above 'CLEAR'; small 'AGENT WORKSPACE'. ONE slim ivory conductor's baton above THREE very subtle broad ink arcs forming one unified gesture. Quiet indigo and cream editorial typography, ample space. No person, score, robot, brain, circuit or diagram.",
+    "reference": null,
+    "origin": "new-production",
+    "initialPath": "D:/workspace/my-world-03/output/portfolio-paintings-2026-10-20/P02-03-F-r0.png",
+    "finalPath": "D:/workspace/my-world-03/output/portfolio-paintings-2026-10-20/P02-03-F.png",
+    "reviewPath": "D:/workspace/my-world-03/output/portfolio-paintings-2026-10-20/reviews/P02-03-F.json",
+    "prompt": "Create ONE original fine-art image, horizontal 7:5, high resolution ideally 2800x2000 or greater. Flat front view, artwork fills entire image, no depicted frame, no mat, no artificial edge border. Sparse original editorial art poster, oversized beautiful typography, one compact physical/printed motif, limited cream/indigo/coral palette, tactile paper and screenprint grain. Exact requested words only. No charts or app interfaces. SUBJECT: EXACT TEXT: large 'MAKE IT' above 'CLEAR'; small 'AGENT WORKSPACE'. ONE slim ivory conductor's baton above THREE very subtle broad ink arcs forming one unified gesture. Quiet indigo and cream editorial typography, ample space. No person, score, robot, brain, circuit or diagram. The supplied image, if any, is ONLY a medium/mood reference; do not preserve its subject, letters or layout. ONE unified symbolic subject or typographic statement; at least half the image should be calm negative space. Main silhouette readable at thumbnail scale, no extra illustrative narrative. No room-based style constraints. Project meaning outside image: 비개발자의 자연어 요청을 PM·설계·개발·검증 역할로 나누고 의존성과 판단 맥락을 보이는 IDE를 작은 합주의 조율에 비유한다. 악장이 취합하는 역할은 연관 profitpal 실험에도 연결되지만, IDE 하나가 완성된 제품을 항상 만들어 준다는 성과는 주장하지 않는다. Do not depict application screens, logos, code, graphs, arrows, fake achievements, decorative labels, signatures, watermarks, wall/easel or gallery mockup. Unless explicitly requested in the poster subject, no text at all. Original hand-made physical medium, not a flat generic UI icon or a glossy 3D render."
+  },
+  {
+    "id": "A02-05",
+    "room": "02",
+    "slotKind": "wall",
+    "project": "TOPIK AI 검증 하네스",
+    "sourceEntryIds": [
+      "original:verify-loop"
+    ],
+    "connection": "문서 링크·라우트·코드·대표 운영 흐름을 함께 검사하는 하네스를 서로 맞물린 부분의 정합성 검사로 비유한다. 사슬의 틈은 오래된 문서와 바뀐 구현 사이의 불일치를 뜻한다. 자동 검사가 모든 결함을 발견한다거나 서비스 품질을 보증한다는 뜻은 아니다.",
+    "medium": "graphite",
+    "symbol": "엇갈림을 살피는 렌즈",
+    "subject": "ONE small physical magnifying glass lying across the seam of ONE closed unlettered book. Lens magnifies only the binding stitch underneath. Economical pencil contours, selective crosshatching; no text, tick mark, shield, icon or extra books.",
+    "reference": "C:/Users/buche/AppData/Local/Temp/codex-clipboard-c663cabe-42b2-4670-87ba-3a4cca008aa0.jpg",
+    "origin": "new-production",
+    "initialPath": "D:/workspace/my-world-03/output/portfolio-paintings-2026-10-20/A02-05-r0.png",
+    "finalPath": "D:/workspace/my-world-03/output/portfolio-paintings-2026-10-20/A02-05.png",
+    "reviewPath": "D:/workspace/my-world-03/output/portfolio-paintings-2026-10-20/reviews/A02-05.json",
+    "prompt": "Create ONE original fine-art image, horizontal 7:5, high resolution ideally 2800x2000 or greater. Flat front view, artwork fills entire image, no depicted frame, no mat, no artificial edge border. Expressive real graphite drawing on warm paper, like supplied rose reference. Loose searching contours, varied pressure, selective crosshatching and tiny rubbed tonal areas, unfinished edges fading into broad clean paper. No color. SUBJECT: ONE small physical magnifying glass lying across the seam of ONE closed unlettered book. Lens magnifies only the binding stitch underneath. Economical pencil contours, selective crosshatching; no text, tick mark, shield, icon or extra books. The supplied image, if any, is ONLY a medium/mood reference; do not preserve its subject, letters or layout. ONE unified symbolic subject or typographic statement; at least half the image should be calm negative space. Main silhouette readable at thumbnail scale, no extra illustrative narrative. No room-based style constraints. Project meaning outside image: 문서 링크·라우트·코드·대표 운영 흐름을 함께 검사하는 하네스를 서로 맞물린 부분의 정합성 검사로 비유한다. 사슬의 틈은 오래된 문서와 바뀐 구현 사이의 불일치를 뜻한다. 자동 검사가 모든 결함을 발견한다거나 서비스 품질을 보증한다는 뜻은 아니다. Do not depict application screens, logos, code, graphs, arrows, fake achievements, decorative labels, signatures, watermarks, wall/easel or gallery mockup. Unless explicitly requested in the poster subject, no text at all. Original hand-made physical medium, not a flat generic UI icon or a glossy 3D render."
+  },
+  {
+    "id": "A02-END",
+    "room": "02",
+    "slotKind": "wall",
+    "project": "Planit AI 기획 워크스페이스",
+    "sourceEntryIds": [
+      "additional:project-manager"
+    ],
+    "connection": "나무의 서로 연관된 가지는 PRD·기능·플로·화면 사이의 추적 관계, 아직 붙이지 않은 접수는 승인 전 AI 변경 제안, 보존된 기존 가지는 원본·독립 버전·초안 복구를 뜻한다. 충돌 확인과 부분 승인 때문에 자동으로 덮어쓰지 않는 실제 설계를 중심에 둔다. 그림은 임의 문서를 자동 병합하거나 모든 충돌을 해결한다는 기능 설명이 아니다.",
+    "medium": "approved",
+    "symbol": "맞대기 전의 두 가지",
+    "subject": "",
+    "reference": null,
+    "origin": "user-approved-preview",
+    "initialPath": "D:/workspace/my-world-03/output/portfolio-paintings-2026-10-20/A02-END-r0.png",
+    "finalPath": "D:/workspace/my-world-03/output/portfolio-paintings-2026-10-20/A02-END.png",
+    "reviewPath": "D:/workspace/my-world-03/output/portfolio-paintings-2026-10-20/reviews/A02-END.json",
+    "prompt": null
+  },
+  {
+    "id": "A02-10",
+    "room": "02",
+    "slotKind": "wall",
+    "project": "StoryQuest 콘텐츠 CMS",
+    "sourceEntryIds": [
+      "additional:admin-story-quest"
+    ],
+    "connection": "원고와 3D 에셋으로 장면을 만드는 편집 화면과 재사용 자료를 관리하는 에셋 보관함의 분리를 실제 무대와 소품 선반에 대응시킨다. 콘텐츠 관리자 프로토타입을 완성된 상업 제작 파이프라인으로 과장하지 않는다.",
+    "medium": "gouache",
+    "symbol": "막 안의 작은 잎",
+    "subject": "ONE little folded-paper theater opening with a single small green leaf visible inside. Two ivory/pale coral curtain-like paper sides form one simple stage object. Matte gouache, pencil grain, no people, furniture, scripts or extra scenery.",
+    "reference": null,
+    "origin": "new-production",
+    "initialPath": "D:/workspace/my-world-03/output/portfolio-paintings-2026-10-20/A02-10-r0.png",
+    "finalPath": "D:/workspace/my-world-03/output/portfolio-paintings-2026-10-20/A02-10.png",
+    "reviewPath": "D:/workspace/my-world-03/output/portfolio-paintings-2026-10-20/reviews/A02-10.json",
+    "prompt": "Create ONE original fine-art image, horizontal 7:5, high resolution ideally 2800x2000 or greater. Flat front view, artwork fills entire image, no depicted frame, no mat, no artificial edge border. Matte gouache and visible colored pencil on warm ivory paper, broad simple chalky color shapes, dry edges, a few penciled hatch marks. Restricted indigo/sage/coral/ivory palette, warm mature handmade mood. No glossy digital modeling. SUBJECT: ONE little folded-paper theater opening with a single small green leaf visible inside. Two ivory/pale coral curtain-like paper sides form one simple stage object. Matte gouache, pencil grain, no people, furniture, scripts or extra scenery. The supplied image, if any, is ONLY a medium/mood reference; do not preserve its subject, letters or layout. ONE unified symbolic subject or typographic statement; at least half the image should be calm negative space. Main silhouette readable at thumbnail scale, no extra illustrative narrative. No room-based style constraints. Project meaning outside image: 원고와 3D 에셋으로 장면을 만드는 편집 화면과 재사용 자료를 관리하는 에셋 보관함의 분리를 실제 무대와 소품 선반에 대응시킨다. 콘텐츠 관리자 프로토타입을 완성된 상업 제작 파이프라인으로 과장하지 않는다. Do not depict application screens, logos, code, graphs, arrows, fake achievements, decorative labels, signatures, watermarks, wall/easel or gallery mockup. Unless explicitly requested in the poster subject, no text at all. Original hand-made physical medium, not a flat generic UI icon or a glossy 3D render."
+  },
+  {
+    "id": "P02-04-F",
+    "room": "02",
+    "slotKind": "panel",
+    "project": "검사 가능한 AI 영상 제작 루프",
+    "sourceEntryIds": [
+      "original:video-agent"
+    ],
+    "connection": "AI 영상 제작의 지시를 제작 계약으로 정리하고 생성 전에 규칙 이탈을 검사하는 절차를 촬영 전 리허설에 비유한다. 배우의 동일한 옷깃과 그림자는 유지해야 할 조건이며, 실제 영상의 연속성이 자동 보장된다는 주장은 아니다.",
+    "medium": "poster",
+    "symbol": "끊기지 않는 필름",
+    "subject": "EXACT TEXT: large 'KEEP' above 'THE THREAD'; small 'VIDEO QA'. ONE short dark-blue physical film strip folded once so TWO blank frame windows align. Restrained cream, cobalt, coral editorial print, quiet space. No timeline, checklist, video UI, actors or extra clippings.",
+    "reference": null,
+    "origin": "new-production",
+    "initialPath": "D:/workspace/my-world-03/output/portfolio-paintings-2026-10-20/P02-04-F-r0.png",
+    "finalPath": "D:/workspace/my-world-03/output/portfolio-paintings-2026-10-20/P02-04-F.png",
+    "reviewPath": "D:/workspace/my-world-03/output/portfolio-paintings-2026-10-20/reviews/P02-04-F.json",
+    "prompt": "Create ONE original fine-art image, horizontal 7:5, high resolution ideally 2800x2000 or greater. Flat front view, artwork fills entire image, no depicted frame, no mat, no artificial edge border. Sparse original editorial art poster, oversized beautiful typography, one compact physical/printed motif, limited cream/indigo/coral palette, tactile paper and screenprint grain. Exact requested words only. No charts or app interfaces. SUBJECT: EXACT TEXT: large 'KEEP' above 'THE THREAD'; small 'VIDEO QA'. ONE short dark-blue physical film strip folded once so TWO blank frame windows align. Restrained cream, cobalt, coral editorial print, quiet space. No timeline, checklist, video UI, actors or extra clippings. The supplied image, if any, is ONLY a medium/mood reference; do not preserve its subject, letters or layout. ONE unified symbolic subject or typographic statement; at least half the image should be calm negative space. Main silhouette readable at thumbnail scale, no extra illustrative narrative. No room-based style constraints. Project meaning outside image: AI 영상 제작의 지시를 제작 계약으로 정리하고 생성 전에 규칙 이탈을 검사하는 절차를 촬영 전 리허설에 비유한다. 배우의 동일한 옷깃과 그림자는 유지해야 할 조건이며, 실제 영상의 연속성이 자동 보장된다는 주장은 아니다. Do not depict application screens, logos, code, graphs, arrows, fake achievements, decorative labels, signatures, watermarks, wall/easel or gallery mockup. Unless explicitly requested in the poster subject, no text at all. Original hand-made physical medium, not a flat generic UI icon or a glossy 3D render."
+  },
+  {
+    "id": "A02-09",
+    "room": "02",
+    "slotKind": "wall",
+    "project": "VIVE 독서 보조 도구",
+    "sourceEntryIds": [
+      "additional:vive"
+    ],
+    "connection": "하이라이트·메모·요약을 책과 연결해 저장하고 다시 찾는 경험을 읽은 내용이 사람 안에 남는 식물 표본 같은 기억에 비유한다. 식물이 AI 능력이나 독서 성과의 보증을 뜻하지 않으며, 사용자 자료 관리와 서버 측 AI 요청은 상세 설명에서 분리해 기술한다.",
+    "medium": "approved",
+    "symbol": "책에 남긴 꽃",
+    "subject": "",
+    "reference": null,
+    "origin": "user-approved-preview",
+    "initialPath": "D:/workspace/my-world-03/output/portfolio-paintings-2026-10-20/A02-09-r0.png",
+    "finalPath": "D:/workspace/my-world-03/output/portfolio-paintings-2026-10-20/A02-09.png",
+    "reviewPath": "D:/workspace/my-world-03/output/portfolio-paintings-2026-10-20/reviews/A02-09.json",
+    "prompt": null
+  },
+  {
+    "id": "A02-08",
+    "room": "02",
+    "slotKind": "wall",
+    "project": "자동매매 시스템",
+    "sourceEntryIds": [
+      "original:trading-lab:zenith",
+      "original:trading-lab:zenith-v2",
+      "original:trading-lab:zenith-v3",
+      "original:trading-lab:zenith-v4",
+      "original:trading-lab:coin-lab",
+      "original:trading-lab:coin-lab-v2",
+      "original:trading-lab:profitpal",
+      "original:trading-lab:Haley"
+    ],
+    "connection": "자동매매를 수익 성공담이 아닌 불확실한 입력 아래의 관찰·실행 구조·검증·기록으로 해석한다. 각 버전의 구체적인 기술 차이를 아래의 서로 다른 해안 행위에 대응시킨다. 상승 차트, 코인, 금괴, 승리하는 인물, 안전한 항해의 결말을 그리지 않는다. 특히 PAPER와 실제 거래를 구별하고 수익성·안전성·전략 유효성을 주장하지 않는다.",
+    "medium": "poster",
+    "symbol": "관찰과 시험의 기록",
+    "subject": "EXACT TEXT: large 'OBSERVE.' then 'TEST.' then 'RECORD.'; small 'TRADING EXPERIMENTS'. ONE unmarked dark-blue compass needle resting askew on a small torn cream paper circle, not a chart. Quiet screenprinted editorial poster in cream, indigo, muted orange. No profit, growth arrow, coins, money, victory, financial return numbers or safety claims.",
+    "reference": null,
+    "origin": "new-production",
+    "initialPath": "D:/workspace/my-world-03/output/portfolio-paintings-2026-10-20/A02-08-r0.png",
+    "finalPath": "D:/workspace/my-world-03/output/portfolio-paintings-2026-10-20/A02-08.png",
+    "reviewPath": "D:/workspace/my-world-03/output/portfolio-paintings-2026-10-20/reviews/A02-08.json",
+    "prompt": "Create ONE original fine-art image, horizontal 7:5, high resolution ideally 2800x2000 or greater. Flat front view, artwork fills entire image, no depicted frame, no mat, no artificial edge border. Sparse original editorial art poster, oversized beautiful typography, one compact physical/printed motif, limited cream/indigo/coral palette, tactile paper and screenprint grain. Exact requested words only. No charts or app interfaces. SUBJECT: EXACT TEXT: large 'OBSERVE.' then 'TEST.' then 'RECORD.'; small 'TRADING EXPERIMENTS'. ONE unmarked dark-blue compass needle resting askew on a small torn cream paper circle, not a chart. Quiet screenprinted editorial poster in cream, indigo, muted orange. No profit, growth arrow, coins, money, victory, financial return numbers or safety claims. The supplied image, if any, is ONLY a medium/mood reference; do not preserve its subject, letters or layout. ONE unified symbolic subject or typographic statement; at least half the image should be calm negative space. Main silhouette readable at thumbnail scale, no extra illustrative narrative. No room-based style constraints. Project meaning outside image: 자동매매를 수익 성공담이 아닌 불확실한 입력 아래의 관찰·실행 구조·검증·기록으로 해석한다. 각 버전의 구체적인 기술 차이를 아래의 서로 다른 해안 행위에 대응시킨다. 상승 차트, 코인, 금괴, 승리하는 인물, 안전한 항해의 결말을 그리지 않는다. 특히 PAPER와 실제 거래를 구별하고 수익성·안전성·전략 유효성을 주장하지 않는다. Do not depict application screens, logos, code, graphs, arrows, fake achievements, decorative labels, signatures, watermarks, wall/easel or gallery mockup. Unless explicitly requested in the poster subject, no text at all. Original hand-made physical medium, not a flat generic UI icon or a glossy 3D render."
+  },
+  {
+    "id": "A02-07",
+    "room": "02",
+    "slotKind": "wall",
+    "project": "Figma → React 생성기",
+    "sourceEntryIds": [
+      "original:figma-gen"
+    ],
+    "connection": "공통 디자인 토큰과 컴포넌트 생성 구성을 하나의 원판과 여러 사용처에 대응시킨다. 디자인 기준을 React 라이브러리로 옮기는 스타터라는 범위에 맞추며, 어떤 Figma 화면도 자동으로 완성 코드로 바꾼다는 기능을 암시하지 않는다.",
+    "medium": "woodcut",
+    "symbol": "원판과 한 번의 인쇄",
+    "subject": "ONE small carved wooden block with ONE simple five-petal flower motif, beside its SINGLE matching indigo paper impression. A compact printmaker still life, hand-carved irregular edges and restrained woodcut hatching. Cream, indigo, muted coral accent, no lettering, leaves, workshop or code.",
+    "reference": null,
+    "origin": "new-production",
+    "initialPath": "D:/workspace/my-world-03/output/portfolio-paintings-2026-10-20/A02-07-r0.png",
+    "finalPath": "D:/workspace/my-world-03/output/portfolio-paintings-2026-10-20/A02-07.png",
+    "reviewPath": "D:/workspace/my-world-03/output/portfolio-paintings-2026-10-20/reviews/A02-07.json",
+    "prompt": "Create ONE original fine-art image, horizontal 7:5, high resolution ideally 2800x2000 or greater. Flat front view, artwork fills entire image, no depicted frame, no mat, no artificial edge border. Original restrained woodcut-style printmaker still life, hand-carved hatching and irregular ink edges, warm paper, indigo ink and small muted coral accent. Large simple silhouettes, no scene. SUBJECT: ONE small carved wooden block with ONE simple five-petal flower motif, beside its SINGLE matching indigo paper impression. A compact printmaker still life, hand-carved irregular edges and restrained woodcut hatching. Cream, indigo, muted coral accent, no lettering, leaves, workshop or code. The supplied image, if any, is ONLY a medium/mood reference; do not preserve its subject, letters or layout. ONE unified symbolic subject or typographic statement; at least half the image should be calm negative space. Main silhouette readable at thumbnail scale, no extra illustrative narrative. No room-based style constraints. Project meaning outside image: 공통 디자인 토큰과 컴포넌트 생성 구성을 하나의 원판과 여러 사용처에 대응시킨다. 디자인 기준을 React 라이브러리로 옮기는 스타터라는 범위에 맞추며, 어떤 Figma 화면도 자동으로 완성 코드로 바꾼다는 기능을 암시하지 않는다. Do not depict application screens, logos, code, graphs, arrows, fake achievements, decorative labels, signatures, watermarks, wall/easel or gallery mockup. Unless explicitly requested in the poster subject, no text at all. Original hand-made physical medium, not a flat generic UI icon or a glossy 3D render."
+  },
+  {
+    "id": "A02-06",
+    "room": "02",
+    "slotKind": "wall",
+    "project": "디자인 룰북",
+    "sourceEntryIds": [
+      "original:design-rulebook"
+    ],
+    "connection": "예쁘다는 추상적 요구를 구조·정보 우선순위·타이포그래피·간격·색·반응형처럼 다시 확인하고 수정할 수 있는 기준으로 바꾼 일을 정물의 배치와 리뷰에 비유한다. 특정 미적 공식이 모든 UI를 좋게 만든다는 뜻은 아니다.",
+    "medium": "poster",
+    "symbol": "여백의 기준",
+    "subject": "EXACT TEXT: large 'SPACE' above 'MATTERS'; small 'DESIGN RULEBOOK'. ONE deep blue rectangular shape and ONE black circle in deliberate spacious asymmetrical balance. Visible matte screenprint grain, warm cream paper, meaningful empty space. No grids, measurements, guidelines, sample UI, extra shapes or tiny copy.",
+    "reference": null,
+    "origin": "new-production",
+    "initialPath": "D:/workspace/my-world-03/output/portfolio-paintings-2026-10-20/A02-06-r0.png",
+    "finalPath": "D:/workspace/my-world-03/output/portfolio-paintings-2026-10-20/A02-06.png",
+    "reviewPath": "D:/workspace/my-world-03/output/portfolio-paintings-2026-10-20/reviews/A02-06.json",
+    "prompt": "Create ONE original fine-art image, horizontal 7:5, high resolution ideally 2800x2000 or greater. Flat front view, artwork fills entire image, no depicted frame, no mat, no artificial edge border. Sparse original editorial art poster, oversized beautiful typography, one compact physical/printed motif, limited cream/indigo/coral palette, tactile paper and screenprint grain. Exact requested words only. No charts or app interfaces. SUBJECT: EXACT TEXT: large 'SPACE' above 'MATTERS'; small 'DESIGN RULEBOOK'. ONE deep blue rectangular shape and ONE black circle in deliberate spacious asymmetrical balance. Visible matte screenprint grain, warm cream paper, meaningful empty space. No grids, measurements, guidelines, sample UI, extra shapes or tiny copy. The supplied image, if any, is ONLY a medium/mood reference; do not preserve its subject, letters or layout. ONE unified symbolic subject or typographic statement; at least half the image should be calm negative space. Main silhouette readable at thumbnail scale, no extra illustrative narrative. No room-based style constraints. Project meaning outside image: 예쁘다는 추상적 요구를 구조·정보 우선순위·타이포그래피·간격·색·반응형처럼 다시 확인하고 수정할 수 있는 기준으로 바꾼 일을 정물의 배치와 리뷰에 비유한다. 특정 미적 공식이 모든 UI를 좋게 만든다는 뜻은 아니다. Do not depict application screens, logos, code, graphs, arrows, fake achievements, decorative labels, signatures, watermarks, wall/easel or gallery mockup. Unless explicitly requested in the poster subject, no text at all. Original hand-made physical medium, not a flat generic UI icon or a glossy 3D render."
+  },
+  {
+    "id": "A03-01",
+    "room": "03",
+    "slotKind": "wall",
+    "project": "이전 포트폴리오 경력 지도",
+    "sourceEntryIds": [
+      "additional:my-website-2026"
+    ],
+    "connection": "경력과 프로젝트의 관계를 따라 이동하는 Canvas 포트폴리오를 한 사람의 경험이 여러 장소를 연결하는 풍경으로 번역한다. 참고 구조를 자신의 콘텐츠로 재구성한 사실과 관계 탐색에 집중하며, 특정 고용 이력의 실재 풍경처럼 보이지 않게 한다.",
+    "medium": "inkwash",
+    "symbol": "이어지는 길",
+    "subject": "ONE long narrow blank paper ribbon making two broad gentle bends, with a tiny muted coral fold accent, fading toward the far end. Fine ink and pale blue-gray watercolor, warm paper. A simple continuous path of experience, no nodes, timeline, landmarks, maps, text or many turns.",
+    "reference": "C:/Users/buche/AppData/Local/Temp/codex-clipboard-c532368a-c9f7-4934-bfbc-b618c9000c93.jpg",
+    "origin": "new-production",
+    "initialPath": "D:/workspace/my-world-03/output/portfolio-paintings-2026-10-20/A03-01-r0.png",
+    "finalPath": "D:/workspace/my-world-03/output/portfolio-paintings-2026-10-20/A03-01.png",
+    "reviewPath": "D:/workspace/my-world-03/output/portfolio-paintings-2026-10-20/reviews/A03-01.json",
+    "prompt": "Create ONE original fine-art image, horizontal 7:5, high resolution ideally 2800x2000 or greater. Flat front view, artwork fills entire image, no depicted frame, no mat, no artificial edge border. Economical architectural/botanical pen-and-watercolor study. Style reference is supplied cafe drawing: irregular black/indigo pen, transparent pale sage and muted coral washes, paper tooth, many untouched paper areas. Replace the architecture with requested object. SUBJECT: ONE long narrow blank paper ribbon making two broad gentle bends, with a tiny muted coral fold accent, fading toward the far end. Fine ink and pale blue-gray watercolor, warm paper. A simple continuous path of experience, no nodes, timeline, landmarks, maps, text or many turns. The supplied image, if any, is ONLY a medium/mood reference; do not preserve its subject, letters or layout. ONE unified symbolic subject or typographic statement; at least half the image should be calm negative space. Main silhouette readable at thumbnail scale, no extra illustrative narrative. No room-based style constraints. Project meaning outside image: 경력과 프로젝트의 관계를 따라 이동하는 Canvas 포트폴리오를 한 사람의 경험이 여러 장소를 연결하는 풍경으로 번역한다. 참고 구조를 자신의 콘텐츠로 재구성한 사실과 관계 탐색에 집중하며, 특정 고용 이력의 실재 풍경처럼 보이지 않게 한다. Do not depict application screens, logos, code, graphs, arrows, fake achievements, decorative labels, signatures, watermarks, wall/easel or gallery mockup. Unless explicitly requested in the poster subject, no text at all. Original hand-made physical medium, not a flat generic UI icon or a glossy 3D render."
+  },
+  {
+    "id": "V01",
+    "room": "03",
+    "slotKind": "case",
+    "project": "캔버스 여러 개",
+    "sourceEntryIds": [
+      "original:multicanvas-lab"
+    ],
+    "connection": "여러 위치의 3D 영역을 하나의 WebGL 렌더러로 채우는 자원 공유를 하나의 광원이 여러 무대를 만드는 비유로 설명한다. 실제 구현이 광학 투사라는 뜻은 아니다.",
+    "medium": "gouache",
+    "symbol": "한 등불의 여러 빛",
+    "subject": "ONE small simple ivory lantern projects THREE overlapping soft square pools of warm light as a single restrained poetic motif on warm paper. Matte gouache, indigo shadows, small coral handle. No room, actual displays, multiple lanterns, wires, figures or diagrams.",
+    "reference": null,
+    "origin": "new-production",
+    "initialPath": "D:/workspace/my-world-03/output/portfolio-paintings-2026-10-20/V01-r0.png",
+    "finalPath": "D:/workspace/my-world-03/output/portfolio-paintings-2026-10-20/V01.png",
+    "reviewPath": "D:/workspace/my-world-03/output/portfolio-paintings-2026-10-20/reviews/V01.json",
+    "prompt": "Create ONE original fine-art image, horizontal 7:5, high resolution ideally 2800x2000 or greater. Flat front view, artwork fills entire image, no depicted frame, no mat, no artificial edge border. Matte gouache and visible colored pencil on warm ivory paper, broad simple chalky color shapes, dry edges, a few penciled hatch marks. Restricted indigo/sage/coral/ivory palette, warm mature handmade mood. No glossy digital modeling. SUBJECT: ONE small simple ivory lantern projects THREE overlapping soft square pools of warm light as a single restrained poetic motif on warm paper. Matte gouache, indigo shadows, small coral handle. No room, actual displays, multiple lanterns, wires, figures or diagrams. The supplied image, if any, is ONLY a medium/mood reference; do not preserve its subject, letters or layout. ONE unified symbolic subject or typographic statement; at least half the image should be calm negative space. Main silhouette readable at thumbnail scale, no extra illustrative narrative. No room-based style constraints. Project meaning outside image: 여러 위치의 3D 영역을 하나의 WebGL 렌더러로 채우는 자원 공유를 하나의 광원이 여러 무대를 만드는 비유로 설명한다. 실제 구현이 광학 투사라는 뜻은 아니다. Do not depict application screens, logos, code, graphs, arrows, fake achievements, decorative labels, signatures, watermarks, wall/easel or gallery mockup. Unless explicitly requested in the poster subject, no text at all. Original hand-made physical medium, not a flat generic UI icon or a glossy 3D render."
+  },
+  {
+    "id": "A03-02",
+    "room": "03",
+    "slotKind": "wall",
+    "project": "캔버스 · 파티클",
+    "sourceEntryIds": [
+      "original:canvas-lab",
+      "additional:particle"
+    ],
+    "connection": "canvas-lab의 다양한 입자 움직임은 왼쪽의 서로 다른 흐름으로, particle의 형태 변환은 흩어진 조각이 새 형태를 만드는 오른쪽으로 구별한다. 입자 자체를 장식 배경에 그치지 않고 집단 형태가 생기는 주인공으로 삼는다.",
+    "medium": "approved",
+    "symbol": "붓의 흐름과 점",
+    "subject": "",
+    "reference": null,
+    "origin": "user-approved-preview",
+    "initialPath": "D:/workspace/my-world-03/output/portfolio-paintings-2026-10-20/A03-02-r0.png",
+    "finalPath": "D:/workspace/my-world-03/output/portfolio-paintings-2026-10-20/A03-02.png",
+    "reviewPath": "D:/workspace/my-world-03/output/portfolio-paintings-2026-10-20/reviews/A03-02.json",
+    "prompt": null
+  },
+  {
+    "id": "V02",
+    "room": "03",
+    "slotKind": "case",
+    "project": "스크롤 연동 3D",
+    "sourceEntryIds": [
+      "original:scroll-3d"
+    ],
+    "connection": "스크롤 입력의 진행량이 3D 장면 진행과 이어지는 관계를 두루마리를 내리는 손과 여행의 깊이가 함께 달라지는 장면으로 치환한다. 스크롤 UI나 진행률 바를 그리지 않는다.",
+    "medium": "gouache",
+    "symbol": "말린 종이의 깊이",
+    "subject": "ONE short partially unrolled ivory paper scroll whose unfurled tip gently forms ONE small teal hill. A single imaginative physical object of scrolling into depth. Matte gouache and pencil, tiny coral edge, no landscape scene, people, map, interface or arrows.",
+    "reference": null,
+    "origin": "new-production",
+    "initialPath": "D:/workspace/my-world-03/output/portfolio-paintings-2026-10-20/V02-r0.png",
+    "finalPath": "D:/workspace/my-world-03/output/portfolio-paintings-2026-10-20/V02.png",
+    "reviewPath": "D:/workspace/my-world-03/output/portfolio-paintings-2026-10-20/reviews/V02.json",
+    "prompt": "Create ONE original fine-art image, horizontal 7:5, high resolution ideally 2800x2000 or greater. Flat front view, artwork fills entire image, no depicted frame, no mat, no artificial edge border. Matte gouache and visible colored pencil on warm ivory paper, broad simple chalky color shapes, dry edges, a few penciled hatch marks. Restricted indigo/sage/coral/ivory palette, warm mature handmade mood. No glossy digital modeling. SUBJECT: ONE short partially unrolled ivory paper scroll whose unfurled tip gently forms ONE small teal hill. A single imaginative physical object of scrolling into depth. Matte gouache and pencil, tiny coral edge, no landscape scene, people, map, interface or arrows. The supplied image, if any, is ONLY a medium/mood reference; do not preserve its subject, letters or layout. ONE unified symbolic subject or typographic statement; at least half the image should be calm negative space. Main silhouette readable at thumbnail scale, no extra illustrative narrative. No room-based style constraints. Project meaning outside image: 스크롤 입력의 진행량이 3D 장면 진행과 이어지는 관계를 두루마리를 내리는 손과 여행의 깊이가 함께 달라지는 장면으로 치환한다. 스크롤 UI나 진행률 바를 그리지 않는다. Do not depict application screens, logos, code, graphs, arrows, fake achievements, decorative labels, signatures, watermarks, wall/easel or gallery mockup. Unless explicitly requested in the poster subject, no text at all. Original hand-made physical medium, not a flat generic UI icon or a glossy 3D render."
+  },
+  {
+    "id": "A03-03",
+    "room": "03",
+    "slotKind": "wall",
+    "project": "물체 감지",
+    "sourceEntryIds": [
+      "original:detect-lab"
+    ],
+    "connection": "사진의 물체를 감지하는 동작뿐 아니라 잘못된 추정 뒤 사용자가 다시 선택하는 흐름과 결과끼리 겹치지 않게 배치하는 문제를 세 사람의 관찰·확인·정리 행동으로 반영한다. 감지 모델이 항상 맞는다는 인상을 피한다.",
+    "medium": "popart",
+    "symbol": "형태를 알아보는 배",
+    "subject": "ONE simple green pear casts ONE nearly matching dark-blue pear-shaped printed shadow with a slight revealing offset. Strong legible silhouette, minimal cyan/coral accents, selective halftone only inside the shadow, warm cream space. No detection box, labels, words, cameras, eye icon or background scene.",
+    "reference": null,
+    "origin": "new-production",
+    "initialPath": "D:/workspace/my-world-03/output/portfolio-paintings-2026-10-20/A03-03-r0.png",
+    "finalPath": "D:/workspace/my-world-03/output/portfolio-paintings-2026-10-20/A03-03.png",
+    "reviewPath": "D:/workspace/my-world-03/output/portfolio-paintings-2026-10-20/reviews/A03-03.json",
+    "prompt": "Create ONE original fine-art image, horizontal 7:5, high resolution ideally 2800x2000 or greater. Flat front view, artwork fills entire image, no depicted frame, no mat, no artificial edge border. Original minimal pop-art hand-pulled screenprint. Bold economical black contours, flat teal/coral/pale-yellow spot colors, selective Ben-Day halftone in one shadow, subtle registration offset, wide quiet cream space. One motif, not a crowded comic collage. SUBJECT: ONE simple green pear casts ONE nearly matching dark-blue pear-shaped printed shadow with a slight revealing offset. Strong legible silhouette, minimal cyan/coral accents, selective halftone only inside the shadow, warm cream space. No detection box, labels, words, cameras, eye icon or background scene. The supplied image, if any, is ONLY a medium/mood reference; do not preserve its subject, letters or layout. ONE unified symbolic subject or typographic statement; at least half the image should be calm negative space. Main silhouette readable at thumbnail scale, no extra illustrative narrative. No room-based style constraints. Project meaning outside image: 사진의 물체를 감지하는 동작뿐 아니라 잘못된 추정 뒤 사용자가 다시 선택하는 흐름과 결과끼리 겹치지 않게 배치하는 문제를 세 사람의 관찰·확인·정리 행동으로 반영한다. 감지 모델이 항상 맞는다는 인상을 피한다. Do not depict application screens, logos, code, graphs, arrows, fake achievements, decorative labels, signatures, watermarks, wall/easel or gallery mockup. Unless explicitly requested in the poster subject, no text at all. Original hand-made physical medium, not a flat generic UI icon or a glossy 3D render."
+  },
+  {
+    "id": "V03",
+    "room": "03",
+    "slotKind": "case",
+    "project": "3D · 아이소메트릭",
+    "sourceEntryIds": [
+      "original:three-lab:isosmetric-02",
+      "original:three-lab:isosmetric-01",
+      "original:three-lab:custom_model",
+      "original:three-lab:controls-01",
+      "original:three-lab:ilbunidiary"
+    ],
+    "connection": "가구와 조명·모델·카메라·캐릭터 이동을 배운 다섯 실험을 하나의 방을 완성하는 서로 다른 사람의 행동으로 묶는다. 인터페이스 패널이나 조절 손잡이를 직접 그리지 않아도 어떤 측면을 조율하는지 읽힌다.",
+    "medium": "gouache",
+    "symbol": "작은 방의 시점",
+    "subject": "ONE tiny open corner of a room, just two ivory/teal wall planes, a small floor plane and ONE coral chair. Spare hand-painted isometric study with broad matte gouache surfaces and colored-pencil edges, no decorative items, windows, person, grid or 3D render finish.",
+    "reference": null,
+    "origin": "new-production",
+    "initialPath": "D:/workspace/my-world-03/output/portfolio-paintings-2026-10-20/V03-r0.png",
+    "finalPath": "D:/workspace/my-world-03/output/portfolio-paintings-2026-10-20/V03.png",
+    "reviewPath": "D:/workspace/my-world-03/output/portfolio-paintings-2026-10-20/reviews/V03.json",
+    "prompt": "Create ONE original fine-art image, horizontal 7:5, high resolution ideally 2800x2000 or greater. Flat front view, artwork fills entire image, no depicted frame, no mat, no artificial edge border. Matte gouache and visible colored pencil on warm ivory paper, broad simple chalky color shapes, dry edges, a few penciled hatch marks. Restricted indigo/sage/coral/ivory palette, warm mature handmade mood. No glossy digital modeling. SUBJECT: ONE tiny open corner of a room, just two ivory/teal wall planes, a small floor plane and ONE coral chair. Spare hand-painted isometric study with broad matte gouache surfaces and colored-pencil edges, no decorative items, windows, person, grid or 3D render finish. The supplied image, if any, is ONLY a medium/mood reference; do not preserve its subject, letters or layout. ONE unified symbolic subject or typographic statement; at least half the image should be calm negative space. Main silhouette readable at thumbnail scale, no extra illustrative narrative. No room-based style constraints. Project meaning outside image: 가구와 조명·모델·카메라·캐릭터 이동을 배운 다섯 실험을 하나의 방을 완성하는 서로 다른 사람의 행동으로 묶는다. 인터페이스 패널이나 조절 손잡이를 직접 그리지 않아도 어떤 측면을 조율하는지 읽힌다. Do not depict application screens, logos, code, graphs, arrows, fake achievements, decorative labels, signatures, watermarks, wall/easel or gallery mockup. Unless explicitly requested in the poster subject, no text at all. Original hand-made physical medium, not a flat generic UI icon or a glossy 3D render."
+  },
+  {
+    "id": "A03-04",
+    "room": "03",
+    "slotKind": "wall",
+    "project": "포켓몬 도감",
+    "sourceEntryIds": [
+      "original:pokemon"
+    ],
+    "connection": "이름·번호·특성·타입으로 찾고 번호순으로 정렬하는 도감의 탐색을 서식처를 살피고 관찰 기록을 넘기는 행동으로 연결한다. 실제 포켓몬 프로젝트이므로 포켓몬임을 알아볼 수 있게 하되 복잡한 캐릭터 집합보다 관찰과 선택에 초점을 둔다.",
+    "medium": "popart",
+    "symbol": "수집을 여는 캡슐",
+    "subject": "ONE small red-and-ivory collectible capsule ball with a simple dark central band and a single circular center button. One physical spherical object, a playful symbol of creature collection and a searchable bestiary. No character, person, letters or surrounding items.",
+    "reference": null,
+    "origin": "new-production",
+    "initialPath": "D:/workspace/my-world-03/output/portfolio-paintings-2026-10-20/A03-04-r0.png",
+    "finalPath": "D:/workspace/my-world-03/output/portfolio-paintings-2026-10-20/A03-04.png",
+    "reviewPath": "D:/workspace/my-world-03/output/portfolio-paintings-2026-10-20/reviews/A03-04.json",
+    "prompt": "Create ONE very simple original POP ART silkscreen still life, horizontal 7:5. ONE small red-and-ivory collectible capsule ball with a simple dark central band and a single circular center button. One physical spherical object, a playful symbol of creature collection and a searchable bestiary. No character, person, letters or surrounding items. Warm ivory uncoated paper fills the whole image. The single ball occupies about 40 percent of the image, with abundant quiet paper, no frame or mat. Red upper shell, ivory lower shell, dark indigo center band, a small clear ivory circular button. A few coarse hand-printed halftone dots in the single shadow; imperfect black ink contours, tangible paper grain, not a vector UI icon or a glossy 3D render. Sparse, playful and elegant. No text, numbers, logo, watermark, signature, diagrams, extra balls, characters, scenery, stickers or borders. The whole object must fit inside the picture with clear margins.",
+    "initialGenerationIssue": "Original creature portrait request failed in built-in image generation; simplified to collection capsule motif before evaluator review."
+  },
+  {
+    "id": "V04",
+    "room": "03",
+    "slotKind": "case",
+    "project": "3D 공간 만들기",
+    "sourceEntryIds": [
+      "original:space-3d"
+    ],
+    "connection": "개별 건물 모델을 놓는 단계에서 건물·길이 하나의 이동 가능한 공간이 되는 실험을 첫 방문자의 걸음으로 표현한다.",
+    "medium": "inkwash",
+    "symbol": "처음 세운 집",
+    "subject": "ONE small simple cottage, only one door and two windows, with ONE very short curved path fading into warm paper. Loose architectural pen contours and pale sage/blush watercolor, clear silhouette, no town, trees, people, street furniture, typography or photographic detail.",
+    "reference": "C:/Users/buche/AppData/Local/Temp/codex-clipboard-c532368a-c9f7-4934-bfbc-b618c9000c93.jpg",
+    "origin": "new-production",
+    "initialPath": "D:/workspace/my-world-03/output/portfolio-paintings-2026-10-20/V04-r0.png",
+    "finalPath": "D:/workspace/my-world-03/output/portfolio-paintings-2026-10-20/V04.png",
+    "reviewPath": "D:/workspace/my-world-03/output/portfolio-paintings-2026-10-20/reviews/V04.json",
+    "prompt": "Create ONE original fine-art image, horizontal 7:5, high resolution ideally 2800x2000 or greater. Flat front view, artwork fills entire image, no depicted frame, no mat, no artificial edge border. Economical architectural/botanical pen-and-watercolor study. Style reference is supplied cafe drawing: irregular black/indigo pen, transparent pale sage and muted coral washes, paper tooth, many untouched paper areas. Replace the architecture with requested object. SUBJECT: ONE small simple cottage, only one door and two windows, with ONE very short curved path fading into warm paper. Loose architectural pen contours and pale sage/blush watercolor, clear silhouette, no town, trees, people, street furniture, typography or photographic detail. The supplied image, if any, is ONLY a medium/mood reference; do not preserve its subject, letters or layout. ONE unified symbolic subject or typographic statement; at least half the image should be calm negative space. Main silhouette readable at thumbnail scale, no extra illustrative narrative. No room-based style constraints. Project meaning outside image: 개별 건물 모델을 놓는 단계에서 건물·길이 하나의 이동 가능한 공간이 되는 실험을 첫 방문자의 걸음으로 표현한다. Do not depict application screens, logos, code, graphs, arrows, fake achievements, decorative labels, signatures, watermarks, wall/easel or gallery mockup. Unless explicitly requested in the poster subject, no text at all. Original hand-made physical medium, not a flat generic UI icon or a glossy 3D render."
+  },
+  {
+    "id": "A03-05",
+    "room": "03",
+    "slotKind": "wall",
+    "project": "능력치 카드 게임",
+    "sourceEntryIds": [
+      "original:game-cards"
+    ],
+    "connection": "얼굴 사진으로 카드를 만들고 계정에 저장한 뒤 친구와 대결하는 흐름을 닮은 초상·보관된 패·친구와의 교환으로 구체화한다. 정령은 능력치 생성의 판타지 비유이며 실제 감지 결과나 인물 성격을 판정한다는 뜻은 아니다.",
+    "medium": "approved",
+    "symbol": "내 얼굴의 게임 카드",
+    "subject": "",
+    "reference": null,
+    "origin": "user-approved-preview",
+    "initialPath": "D:/workspace/my-world-03/output/portfolio-paintings-2026-10-20/A03-05-r0.png",
+    "finalPath": "D:/workspace/my-world-03/output/portfolio-paintings-2026-10-20/A03-05.png",
+    "reviewPath": "D:/workspace/my-world-03/output/portfolio-paintings-2026-10-20/reviews/A03-05.json",
+    "prompt": null
+  },
+  {
+    "id": "V05",
+    "room": "03",
+    "slotKind": "case",
+    "project": "3D 포트폴리오 구현",
+    "sourceEntryIds": [
+      "additional:my-world-03",
+      "additional:my-world-01",
+      "additional:my-world-02"
+    ],
+    "connection": "my-world-01은 모델·재질·첫 로딩의 준비, my-world-02는 정면 이동 뒤 콘텐츠 전환, my-world-03은 세 공간과 실제 앱·자료의 연결로 각기 다른 제작 문제를 보여 준다. 세 버전의 실제 건물을 그대로 캡처해 겹치지 않는다.",
+    "medium": "poster",
+    "symbol": "걸어 들어갈 공간",
+    "subject": "EXACT TEXT: large 'SPACE' above 'TO EXPLORE'; small '3D PORTFOLIO STUDIES'. ONE spare ivory open doorway whose single dark-blue shadow subtly resembles an unfolding path. Cream, indigo, soft coral spot ink, matte print texture. No actual gallery screenshot, miniature town, many rooms, figures, UI or extra motifs.",
+    "reference": null,
+    "origin": "new-production",
+    "initialPath": "D:/workspace/my-world-03/output/portfolio-paintings-2026-10-20/V05-r0.png",
+    "finalPath": "D:/workspace/my-world-03/output/portfolio-paintings-2026-10-20/V05.png",
+    "reviewPath": "D:/workspace/my-world-03/output/portfolio-paintings-2026-10-20/reviews/V05.json",
+    "prompt": "Create ONE original fine-art image, horizontal 7:5, high resolution ideally 2800x2000 or greater. Flat front view, artwork fills entire image, no depicted frame, no mat, no artificial edge border. Sparse original editorial art poster, oversized beautiful typography, one compact physical/printed motif, limited cream/indigo/coral palette, tactile paper and screenprint grain. Exact requested words only. No charts or app interfaces. SUBJECT: EXACT TEXT: large 'SPACE' above 'TO EXPLORE'; small '3D PORTFOLIO STUDIES'. ONE spare ivory open doorway whose single dark-blue shadow subtly resembles an unfolding path. Cream, indigo, soft coral spot ink, matte print texture. No actual gallery screenshot, miniature town, many rooms, figures, UI or extra motifs. The supplied image, if any, is ONLY a medium/mood reference; do not preserve its subject, letters or layout. ONE unified symbolic subject or typographic statement; at least half the image should be calm negative space. Main silhouette readable at thumbnail scale, no extra illustrative narrative. No room-based style constraints. Project meaning outside image: my-world-01은 모델·재질·첫 로딩의 준비, my-world-02는 정면 이동 뒤 콘텐츠 전환, my-world-03은 세 공간과 실제 앱·자료의 연결로 각기 다른 제작 문제를 보여 준다. 세 버전의 실제 건물을 그대로 캡처해 겹치지 않는다. Do not depict application screens, logos, code, graphs, arrows, fake achievements, decorative labels, signatures, watermarks, wall/easel or gallery mockup. Unless explicitly requested in the poster subject, no text at all. Original hand-made physical medium, not a flat generic UI icon or a glossy 3D render."
+  },
+  {
+    "id": "A03-END",
+    "room": "03",
+    "slotKind": "wall",
+    "project": "React 학습기",
+    "sourceEntryIds": [
+      "original:react-basics:react-todos",
+      "original:react-basics:react-practice6",
+      "original:react-basics:business-card",
+      "original:react-basics:react-modeal.net2",
+      "original:react-basics:react-modeal",
+      "original:react-basics:react-face-detect",
+      "original:react-basics:react-youtube",
+      "original:react-basics:react-swiper",
+      "original:react-basics:react-practice4",
+      "original:react-basics:react-axios-practice",
+      "original:react-basics:react-practice5",
+      "original:react-basics:react-practice3",
+      "original:react-basics:react-practice2",
+      "original:react-basics:react-practice1",
+      "original:react-basics:react-practice7",
+      "original:react-basics:react-router-practice1",
+      "original:react-basics:react-router-practice2",
+      "original:react-basics:react-styled-component",
+      "original:react-basics:react-CRUD",
+      "original:react-basics:memo",
+      "original:react-basics:habit-tracker",
+      "original:react-basics:new-habit-tracker",
+      "original:react-basics:assignment",
+      "original:react-basics:data_structure",
+      "original:react-basics:drag-n-drop",
+      "original:react-basics:canvas-test"
+    ],
+    "connection": "26개를 모두 동일한 React 앱으로 보이게 하지 않고 상태·라우팅·요청·스타일·기초 JavaScript 등의 실제 학습 차이를 각 행동으로 보존한다. assignment·data_structure·drag-n-drop·canvas-test가 React 밖의 기초 학습이라는 점도 수작업 모티프로 구별한다. 그림 속 상징만으로 26개를 식별하도록 강요하지 않으며 프로젝트 상세의 기존 선택 기능은 그대로 유지한다.",
+    "medium": "approved",
+    "symbol": "시도하고 만들고 반복하기",
+    "subject": "",
+    "reference": null,
+    "origin": "user-approved-preview",
+    "initialPath": "D:/workspace/my-world-03/output/portfolio-paintings-2026-10-20/A03-END-r0.png",
+    "finalPath": "D:/workspace/my-world-03/output/portfolio-paintings-2026-10-20/A03-END.png",
+    "reviewPath": "D:/workspace/my-world-03/output/portfolio-paintings-2026-10-20/reviews/A03-END.json",
+    "prompt": null
+  },
+  {
+    "id": "V10",
+    "room": "03",
+    "slotKind": "case",
+    "project": "On the Book · 도서 목록·상세",
+    "sourceEntryIds": [
+      "additional:on-the-book"
+    ],
+    "connection": "목록에서 책을 고르고 상세를 읽고 마지막 읽은 위치를 기억하는 행동을 책 선택·읽기·리본으로 표현한다. 항구와 여행자는 실제 등록 도서 내용이 아니라 읽기 경험의 비유이다.",
+    "medium": "gouache",
+    "symbol": "책을 고른 자리",
+    "subject": "ONE modest closed deep-blue book with ONE short coral-red ribbon bookmark resting visibly across its top, its end just peeking beyond a corner. Matte gouache and light pencil on ivory paper, gentle selective paper texture. No flower, stairs, extra books, person, library or words.",
+    "reference": null,
+    "origin": "new-production",
+    "initialPath": "D:/workspace/my-world-03/output/portfolio-paintings-2026-10-20/V10-r0.png",
+    "finalPath": "D:/workspace/my-world-03/output/portfolio-paintings-2026-10-20/V10.png",
+    "reviewPath": "D:/workspace/my-world-03/output/portfolio-paintings-2026-10-20/reviews/V10.json",
+    "prompt": "Create ONE original fine-art image, horizontal 7:5, high resolution ideally 2800x2000 or greater. Flat front view, artwork fills entire image, no depicted frame, no mat, no artificial edge border. Matte gouache and visible colored pencil on warm ivory paper, broad simple chalky color shapes, dry edges, a few penciled hatch marks. Restricted indigo/sage/coral/ivory palette, warm mature handmade mood. No glossy digital modeling. SUBJECT: ONE modest closed deep-blue book with ONE short coral-red ribbon bookmark resting visibly across its top, its end just peeking beyond a corner. Matte gouache and light pencil on ivory paper, gentle selective paper texture. No flower, stairs, extra books, person, library or words. The supplied image, if any, is ONLY a medium/mood reference; do not preserve its subject, letters or layout. ONE unified symbolic subject or typographic statement; at least half the image should be calm negative space. Main silhouette readable at thumbnail scale, no extra illustrative narrative. No room-based style constraints. Project meaning outside image: 목록에서 책을 고르고 상세를 읽고 마지막 읽은 위치를 기억하는 행동을 책 선택·읽기·리본으로 표현한다. 항구와 여행자는 실제 등록 도서 내용이 아니라 읽기 경험의 비유이다. Do not depict application screens, logos, code, graphs, arrows, fake achievements, decorative labels, signatures, watermarks, wall/easel or gallery mockup. Unless explicitly requested in the poster subject, no text at all. Original hand-made physical medium, not a flat generic UI icon or a glossy 3D render."
+  },
+  {
+    "id": "V09",
+    "room": "03",
+    "slotKind": "case",
+    "project": "On the Book · 책 속 3D 장면",
+    "sourceEntryIds": [
+      "additional:on-the-book"
+    ],
+    "connection": "도서에서 3D 장면으로 들어가 직접 이동·관찰하고 마지막 장면을 기억하는 기능을 공간 속 여행으로 번역한다. 항구 정원은 새로 제안하는 상징적 그림이며 서비스에 존재하는 특정 책이나 장면이라고 주장하지 않는다.",
+    "medium": "approved",
+    "symbol": "계단이 되는 책장",
+    "subject": "",
+    "reference": null,
+    "origin": "user-approved-preview",
+    "initialPath": "D:/workspace/my-world-03/output/portfolio-paintings-2026-10-20/V09-r0.png",
+    "finalPath": "D:/workspace/my-world-03/output/portfolio-paintings-2026-10-20/V09.png",
+    "reviewPath": "D:/workspace/my-world-03/output/portfolio-paintings-2026-10-20/reviews/V09.json",
+    "prompt": null
+  },
+  {
+    "id": "V08",
+    "room": "03",
+    "slotKind": "case",
+    "project": "On the Book · 관리 도구",
+    "sourceEntryIds": [
+      "additional:on-the-book"
+    ],
+    "connection": "책·장면·모델 배치를 편집하고 임시 저장과 공개본을 구분하며 공개된 장면의 원본 에셋을 보존하는 구조를 제작실·공개 이젤·보관 원화로 번역한다. 실제 관리 기능을 넘는 공동편집 실시간 동기화나 승인 기능을 주장하지 않는다.",
+    "medium": "poster",
+    "symbol": "초안에서 공개까지",
+    "subject": "EXACT TEXT: large 'DRAFT' above 'TO LIVE'; small 'ON THE BOOK / CMS'. ONE closed ivory book jacket half revealed from a single folded translucent blue vellum sleeve. Warm ivory, indigo, tiny coral accent. Sparse sophisticated editorial print, no UI, web screen, text on book, stacks, approval stamp, diagrams or extra scenery.",
+    "reference": null,
+    "origin": "new-production",
+    "initialPath": "D:/workspace/my-world-03/output/portfolio-paintings-2026-10-20/V08-r0.png",
+    "finalPath": "D:/workspace/my-world-03/output/portfolio-paintings-2026-10-20/V08.png",
+    "reviewPath": "D:/workspace/my-world-03/output/portfolio-paintings-2026-10-20/reviews/V08.json",
+    "prompt": "Create ONE original fine-art image, horizontal 7:5, high resolution ideally 2800x2000 or greater. Flat front view, artwork fills entire image, no depicted frame, no mat, no artificial edge border. Sparse original editorial art poster, oversized beautiful typography, one compact physical/printed motif, limited cream/indigo/coral palette, tactile paper and screenprint grain. Exact requested words only. No charts or app interfaces. SUBJECT: EXACT TEXT: large 'DRAFT' above 'TO LIVE'; small 'ON THE BOOK / CMS'. ONE closed ivory book jacket half revealed from a single folded translucent blue vellum sleeve. Warm ivory, indigo, tiny coral accent. Sparse sophisticated editorial print, no UI, web screen, text on book, stacks, approval stamp, diagrams or extra scenery. The supplied image, if any, is ONLY a medium/mood reference; do not preserve its subject, letters or layout. ONE unified symbolic subject or typographic statement; at least half the image should be calm negative space. Main silhouette readable at thumbnail scale, no extra illustrative narrative. No room-based style constraints. Project meaning outside image: 책·장면·모델 배치를 편집하고 임시 저장과 공개본을 구분하며 공개된 장면의 원본 에셋을 보존하는 구조를 제작실·공개 이젤·보관 원화로 번역한다. 실제 관리 기능을 넘는 공동편집 실시간 동기화나 승인 기능을 주장하지 않는다. Do not depict application screens, logos, code, graphs, arrows, fake achievements, decorative labels, signatures, watermarks, wall/easel or gallery mockup. Unless explicitly requested in the poster subject, no text at all. Original hand-made physical medium, not a flat generic UI icon or a glossy 3D render."
+  },
+  {
+    "id": "V07",
+    "room": "03",
+    "slotKind": "case",
+    "project": "게임 · 인터랙션",
+    "sourceEntryIds": [
+      "original:game-lab:bridge",
+      "original:game-lab:first-person-perspective",
+      "original:game-lab:lets-fps"
+    ],
+    "connection": "bridge는 선택한 판의 파손과 물리적 낙하, first-person-perspective는 1인칭 이동과 충돌, lets-fps는 여러 참가자와 방 상태라는 차이를 각각 구체적인 행동으로 남긴다. 그림의 같은 유원지 구성은 세 저장소가 하나의 게임이라는 주장이 아니다.",
+    "medium": "graphite",
+    "symbol": "다음 발판의 선택",
+    "subject": "TWO simple translucent glass stepping stones with a small gap, one has a single delicate hairline crack. A spare graphite object study with selective clear edge highlights, almost no ground shadow, warm paper. No person, feet, landscape, bridge structure, explosion, numbers, UI or arrows.",
+    "reference": "C:/Users/buche/AppData/Local/Temp/codex-clipboard-c663cabe-42b2-4670-87ba-3a4cca008aa0.jpg",
+    "origin": "new-production",
+    "initialPath": "D:/workspace/my-world-03/output/portfolio-paintings-2026-10-20/V07-r0.png",
+    "finalPath": "D:/workspace/my-world-03/output/portfolio-paintings-2026-10-20/V07.png",
+    "reviewPath": "D:/workspace/my-world-03/output/portfolio-paintings-2026-10-20/reviews/V07.json",
+    "prompt": "Create ONE original fine-art image, horizontal 7:5, high resolution ideally 2800x2000 or greater. Flat front view, artwork fills entire image, no depicted frame, no mat, no artificial edge border. Expressive real graphite drawing on warm paper, like supplied rose reference. Loose searching contours, varied pressure, selective crosshatching and tiny rubbed tonal areas, unfinished edges fading into broad clean paper. No color. SUBJECT: TWO simple translucent glass stepping stones with a small gap, one has a single delicate hairline crack. A spare graphite object study with selective clear edge highlights, almost no ground shadow, warm paper. No person, feet, landscape, bridge structure, explosion, numbers, UI or arrows. The supplied image, if any, is ONLY a medium/mood reference; do not preserve its subject, letters or layout. ONE unified symbolic subject or typographic statement; at least half the image should be calm negative space. Main silhouette readable at thumbnail scale, no extra illustrative narrative. No room-based style constraints. Project meaning outside image: bridge는 선택한 판의 파손과 물리적 낙하, first-person-perspective는 1인칭 이동과 충돌, lets-fps는 여러 참가자와 방 상태라는 차이를 각각 구체적인 행동으로 남긴다. 그림의 같은 유원지 구성은 세 저장소가 하나의 게임이라는 주장이 아니다. Do not depict application screens, logos, code, graphs, arrows, fake achievements, decorative labels, signatures, watermarks, wall/easel or gallery mockup. Unless explicitly requested in the poster subject, no text at all. Original hand-made physical medium, not a flat generic UI icon or a glossy 3D render."
+  },
+  {
+    "id": "V06",
+    "room": "03",
+    "slotKind": "case",
+    "project": "게임 · 인터랙션",
+    "sourceEntryIds": [
+      "original:game-lab:neon-fist",
+      "original:game-lab:game-cabinet"
+    ],
+    "connection": "neon-fist의 Canvas 그리기와 실시간 소리 합성은 붓질 같은 파편·격투 동작·악사의 타격으로, game-cabinet의 3D 공간에서 웹게임을 고르고 실행하는 인터페이스는 놀이 상자와 여러 작은 공연을 고르는 방문객으로 표현한다. 두 게임이 실제로 연동된다는 의미는 아니다.",
+    "medium": "approved",
+    "symbol": "타격 순간의 주먹",
+    "subject": "",
+    "reference": null,
+    "origin": "user-approved-preview",
+    "initialPath": "D:/workspace/my-world-03/output/portfolio-paintings-2026-10-20/V06-r0.png",
+    "finalPath": "D:/workspace/my-world-03/output/portfolio-paintings-2026-10-20/V06.png",
+    "reviewPath": "D:/workspace/my-world-03/output/portfolio-paintings-2026-10-20/reviews/V06.json",
+    "prompt": null
+  }
+]

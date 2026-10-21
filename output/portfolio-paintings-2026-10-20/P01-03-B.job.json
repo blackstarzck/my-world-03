@@ -1,0 +1,19 @@
+{
+  "id": "P01-03-B",
+  "room": "01",
+  "slotKind": "panel",
+  "project": "북차카 홈페이지",
+  "sourceEntryIds": [
+    "original:corp-sites:bookchaka"
+  ],
+  "connection": "북차카의 한국어 교육·유학·도서 유통·출판 소개를 배우러 이동하는 사람의 흔적과 책을 전달하는 거리의 장면으로 묶는다. 홈페이지 제작의 기획·디자인·반응형 구현 기여와 브랜드의 사업 장면은 설명 본문에서 구분한다. 이동서점은 실제 북차카 시설이 아니다.",
+  "medium": "gouache",
+  "symbol": "바퀴 달린 책",
+  "subject": "ONE small closed teal book with TWO tiny coral wheels, a simple poetic bookmobile object. Matte gouache and visible colored-pencil edges, ivory background. No truck body, driver, street or text.",
+  "reference": null,
+  "origin": "new-production",
+  "initialPath": "D:/workspace/my-world-03/output/portfolio-paintings-2026-10-20/P01-03-B-r0.png",
+  "finalPath": "D:/workspace/my-world-03/output/portfolio-paintings-2026-10-20/P01-03-B.png",
+  "reviewPath": "D:/workspace/my-world-03/output/portfolio-paintings-2026-10-20/reviews/P01-03-B.json",
+  "prompt": "Create ONE original fine-art image, horizontal 7:5, high resolution ideally 2800x2000 or greater. Flat front view, artwork fills entire image, no depicted frame, no mat, no artificial edge border. Matte gouache and visible colored pencil on warm ivory paper, broad simple chalky color shapes, dry edges, a few penciled hatch marks. Restricted indigo/sage/coral/ivory palette, warm mature handmade mood. No glossy digital modeling. SUBJECT: ONE small closed teal book with TWO tiny coral wheels, a simple poetic bookmobile object. Matte gouache and visible colored-pencil edges, ivory background. No truck body, driver, street or text. The supplied image, if any, is ONLY a medium/mood reference; do not preserve its subject, letters or layout. ONE unified symbolic subject or typographic statement; at least half the image should be calm negative space. Main silhouette readable at thumbnail scale, no extra illustrative narrative. No room-based style constraints. Project meaning outside image: 북차카의 한국어 교육·유학·도서 유통·출판 소개를 배우러 이동하는 사람의 흔적과 책을 전달하는 거리의 장면으로 묶는다. 홈페이지 제작의 기획·디자인·반응형 구현 기여와 브랜드의 사업 장면은 설명 본문에서 구분한다. 이동서점은 실제 북차카 시설이 아니다. Do not depict application screens, logos, code, graphs, arrows, fake achievements, decorative labels, signatures, watermarks, wall/easel or gallery mockup. Unless explicitly requested in the poster subject, no text at all. Original hand-made physical medium, not a flat generic UI icon or a glossy 3D render."
+}

@@ -1,0 +1,19 @@
+{
+  "id": "A01-07",
+  "room": "01",
+  "slotKind": "wall",
+  "project": "모두가딜러 · 웹서비스",
+  "sourceEntryIds": [
+    "original:dealer-web"
+  ],
+  "connection": "차량 정보를 조회·가공하여 반응형 웹·앱의 선택 경험으로 연결한 초기 실무를, 사람이 차량을 살피는 장면으로 표현한다. 실제 딜러 매장이나 거래 성과가 아닌 서비스 도메인의 해석이다.",
+  "medium": "gouache",
+  "symbol": "다음 주인의 열쇠",
+  "subject": "ONE well-used car key with ONE simple round metal key ring, subtly worn, matte coral red grip and cool gray metal on warm ivory. Honest hand-painted gouache study; no car scene, logo, key fob buttons, labels or extra keys.",
+  "reference": null,
+  "origin": "new-production",
+  "initialPath": "D:/workspace/my-world-03/output/portfolio-paintings-2026-10-20/A01-07-r0.png",
+  "finalPath": "D:/workspace/my-world-03/output/portfolio-paintings-2026-10-20/A01-07.png",
+  "reviewPath": "D:/workspace/my-world-03/output/portfolio-paintings-2026-10-20/reviews/A01-07.json",
+  "prompt": "Create ONE original fine-art image, horizontal 7:5, high resolution ideally 2800x2000 or greater. Flat front view, artwork fills entire image, no depicted frame, no mat, no artificial edge border. Matte gouache and visible colored pencil on warm ivory paper, broad simple chalky color shapes, dry edges, a few penciled hatch marks. Restricted indigo/sage/coral/ivory palette, warm mature handmade mood. No glossy digital modeling. SUBJECT: ONE well-used car key with ONE simple round metal key ring, subtly worn, matte coral red grip and cool gray metal on warm ivory. Honest hand-painted gouache study; no car scene, logo, key fob buttons, labels or extra keys. The supplied image, if any, is ONLY a medium/mood reference; do not preserve its subject, letters or layout. ONE unified symbolic subject or typographic statement; at least half the image should be calm negative space. Main silhouette readable at thumbnail scale, no extra illustrative narrative. No room-based style constraints. Project meaning outside image: 차량 정보를 조회·가공하여 반응형 웹·앱의 선택 경험으로 연결한 초기 실무를, 사람이 차량을 살피는 장면으로 표현한다. 실제 딜러 매장이나 거래 성과가 아닌 서비스 도메인의 해석이다. Do not depict application screens, logos, code, graphs, arrows, fake achievements, decorative labels, signatures, watermarks, wall/easel or gallery mockup. Unless explicitly requested in the poster subject, no text at all. Original hand-made physical medium, not a flat generic UI icon or a glossy 3D render."
+}

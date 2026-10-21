@@ -1,0 +1,19 @@
+{
+  "id": "A01-02",
+  "room": "01",
+  "slotKind": "wall",
+  "project": "도토리 토픽 · 관리자단",
+  "sourceEntryIds": [
+    "original:topik-admin"
+  ],
+  "connection": "관리자 조회·변경 권한의 분리, 사용자 데이터와 운영 데이터의 경계, 변경 이력을 다루는 프로젝트를 '필요한 한 칸에만 접근하는 자료실 관리'로 비유한다. 그림 속 보관장은 실제 시스템의 보안 수준을 증명하지 않는다.",
+  "medium": "graphite",
+  "symbol": "도토리 머리의 열쇠",
+  "subject": "One small old metal key whose rounded bow gently resembles an acorn cap. Carefully drawn physical key, not a flat security icon. Soft graphite tonal core, no lock or extra objects.",
+  "reference": "C:/Users/buche/AppData/Local/Temp/codex-clipboard-c663cabe-42b2-4670-87ba-3a4cca008aa0.jpg",
+  "origin": "new-production",
+  "initialPath": "D:/workspace/my-world-03/output/portfolio-paintings-2026-10-20/A01-02-r0.png",
+  "finalPath": "D:/workspace/my-world-03/output/portfolio-paintings-2026-10-20/A01-02.png",
+  "reviewPath": "D:/workspace/my-world-03/output/portfolio-paintings-2026-10-20/reviews/A01-02.json",
+  "prompt": "Create ONE original fine-art image, horizontal 7:5, high resolution ideally 2800x2000 or greater. Flat front view, artwork fills entire image, no depicted frame, no mat, no artificial edge border. Expressive real graphite drawing on warm paper, like supplied rose reference. Loose searching contours, varied pressure, selective crosshatching and tiny rubbed tonal areas, unfinished edges fading into broad clean paper. No color. SUBJECT: One small old metal key whose rounded bow gently resembles an acorn cap. Carefully drawn physical key, not a flat security icon. Soft graphite tonal core, no lock or extra objects. The supplied image, if any, is ONLY a medium/mood reference; do not preserve its subject, letters or layout. ONE unified symbolic subject or typographic statement; at least half the image should be calm negative space. Main silhouette readable at thumbnail scale, no extra illustrative narrative. No room-based style constraints. Project meaning outside image: 관리자 조회·변경 권한의 분리, 사용자 데이터와 운영 데이터의 경계, 변경 이력을 다루는 프로젝트를 '필요한 한 칸에만 접근하는 자료실 관리'로 비유한다. 그림 속 보관장은 실제 시스템의 보안 수준을 증명하지 않는다. Do not depict application screens, logos, code, graphs, arrows, fake achievements, decorative labels, signatures, watermarks, wall/easel or gallery mockup. Unless explicitly requested in the poster subject, no text at all. Original hand-made physical medium, not a flat generic UI icon or a glossy 3D render."
+}

@@ -1,0 +1,19 @@
+{
+  "id": "P01-01-F",
+  "room": "01",
+  "slotKind": "panel",
+  "project": "도토리 문의 관리자",
+  "sourceEntryIds": [
+    "additional:dotore-admin"
+  ],
+  "connection": "학생·강사·제휴사의 문의를 유형과 처리 상태로 구분하고 상세 답변을 준비하는 흐름을 사람과 편지의 장면으로 번역한다. 상담 창구는 브라우저 저장소 기반 UI 프로토타입의 생활적 비유이며 실제 고객센터 운영을 주장하지 않는다.",
+  "medium": "watercolor",
+  "symbol": "열린 편지",
+  "subject": "One ivory envelope, half open with one pale coral unlettered sheet visible. Unified still-life motif of receiving and answering an inquiry. No stamps, writing, table or extra envelopes.",
+  "reference": "C:/Users/buche/AppData/Local/Temp/codex-clipboard-026bb574-523a-47ff-9f2e-14344cd9bd49.jpg",
+  "origin": "new-production",
+  "initialPath": "D:/workspace/my-world-03/output/portfolio-paintings-2026-10-20/P01-01-F-r0.png",
+  "finalPath": "D:/workspace/my-world-03/output/portfolio-paintings-2026-10-20/P01-01-F.png",
+  "reviewPath": "D:/workspace/my-world-03/output/portfolio-paintings-2026-10-20/reviews/P01-01-F.json",
+  "prompt": "Create ONE original fine-art image, horizontal 7:5, high resolution ideally 2800x2000 or greater. Flat front view, artwork fills entire image, no depicted frame, no mat, no artificial edge border. Transparent watercolor on warm cold-pressed paper. Closely match STYLE AND MOOD of supplied cherry watercolor: translucent rich greens, faint rose/sage halo only near subject, soft pigment blooms, reserved-paper highlights, restrained tiny splashes. Subject-focus and generous paper, no decorative full background. SUBJECT: One ivory envelope, half open with one pale coral unlettered sheet visible. Unified still-life motif of receiving and answering an inquiry. No stamps, writing, table or extra envelopes. The supplied image, if any, is ONLY a medium/mood reference; do not preserve its subject, letters or layout. ONE unified symbolic subject or typographic statement; at least half the image should be calm negative space. Main silhouette readable at thumbnail scale, no extra illustrative narrative. No room-based style constraints. Project meaning outside image: 학생·강사·제휴사의 문의를 유형과 처리 상태로 구분하고 상세 답변을 준비하는 흐름을 사람과 편지의 장면으로 번역한다. 상담 창구는 브라우저 저장소 기반 UI 프로토타입의 생활적 비유이며 실제 고객센터 운영을 주장하지 않는다. Do not depict application screens, logos, code, graphs, arrows, fake achievements, decorative labels, signatures, watermarks, wall/easel or gallery mockup. Unless explicitly requested in the poster subject, no text at all. Original hand-made physical medium, not a flat generic UI icon or a glossy 3D render."
+}

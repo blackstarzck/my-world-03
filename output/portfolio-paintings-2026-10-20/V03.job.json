@@ -1,0 +1,23 @@
+{
+  "id": "V03",
+  "room": "03",
+  "slotKind": "case",
+  "project": "3D · 아이소메트릭",
+  "sourceEntryIds": [
+    "original:three-lab:isosmetric-02",
+    "original:three-lab:isosmetric-01",
+    "original:three-lab:custom_model",
+    "original:three-lab:controls-01",
+    "original:three-lab:ilbunidiary"
+  ],
+  "connection": "가구와 조명·모델·카메라·캐릭터 이동을 배운 다섯 실험을 하나의 방을 완성하는 서로 다른 사람의 행동으로 묶는다. 인터페이스 패널이나 조절 손잡이를 직접 그리지 않아도 어떤 측면을 조율하는지 읽힌다.",
+  "medium": "gouache",
+  "symbol": "작은 방의 시점",
+  "subject": "ONE tiny open corner of a room, just two ivory/teal wall planes, a small floor plane and ONE coral chair. Spare hand-painted isometric study with broad matte gouache surfaces and colored-pencil edges, no decorative items, windows, person, grid or 3D render finish.",
+  "reference": null,
+  "origin": "new-production",
+  "initialPath": "D:/workspace/my-world-03/output/portfolio-paintings-2026-10-20/V03-r0.png",
+  "finalPath": "D:/workspace/my-world-03/output/portfolio-paintings-2026-10-20/V03.png",
+  "reviewPath": "D:/workspace/my-world-03/output/portfolio-paintings-2026-10-20/reviews/V03.json",
+  "prompt": "Create ONE original fine-art image, horizontal 7:5, high resolution ideally 2800x2000 or greater. Flat front view, artwork fills entire image, no depicted frame, no mat, no artificial edge border. Matte gouache and visible colored pencil on warm ivory paper, broad simple chalky color shapes, dry edges, a few penciled hatch marks. Restricted indigo/sage/coral/ivory palette, warm mature handmade mood. No glossy digital modeling. SUBJECT: ONE tiny open corner of a room, just two ivory/teal wall planes, a small floor plane and ONE coral chair. Spare hand-painted isometric study with broad matte gouache surfaces and colored-pencil edges, no decorative items, windows, person, grid or 3D render finish. The supplied image, if any, is ONLY a medium/mood reference; do not preserve its subject, letters or layout. ONE unified symbolic subject or typographic statement; at least half the image should be calm negative space. Main silhouette readable at thumbnail scale, no extra illustrative narrative. No room-based style constraints. Project meaning outside image: 가구와 조명·모델·카메라·캐릭터 이동을 배운 다섯 실험을 하나의 방을 완성하는 서로 다른 사람의 행동으로 묶는다. 인터페이스 패널이나 조절 손잡이를 직접 그리지 않아도 어떤 측면을 조율하는지 읽힌다. Do not depict application screens, logos, code, graphs, arrows, fake achievements, decorative labels, signatures, watermarks, wall/easel or gallery mockup. Unless explicitly requested in the poster subject, no text at all. Original hand-made physical medium, not a flat generic UI icon or a glossy 3D render."
+}

@@ -1,0 +1,19 @@
+{
+  "id": "A03-05",
+  "room": "03",
+  "slotKind": "wall",
+  "project": "능력치 카드 게임",
+  "sourceEntryIds": [
+    "original:game-cards"
+  ],
+  "connection": "얼굴 사진으로 카드를 만들고 계정에 저장한 뒤 친구와 대결하는 흐름을 닮은 초상·보관된 패·친구와의 교환으로 구체화한다. 정령은 능력치 생성의 판타지 비유이며 실제 감지 결과나 인물 성격을 판정한다는 뜻은 아니다.",
+  "medium": "approved",
+  "symbol": "내 얼굴의 게임 카드",
+  "subject": "",
+  "reference": null,
+  "origin": "user-approved-preview",
+  "initialPath": "D:/workspace/my-world-03/output/portfolio-paintings-2026-10-20/A03-05-r0.png",
+  "finalPath": "D:/workspace/my-world-03/output/portfolio-paintings-2026-10-20/A03-05.png",
+  "reviewPath": "D:/workspace/my-world-03/output/portfolio-paintings-2026-10-20/reviews/A03-05.json",
+  "prompt": null
+}

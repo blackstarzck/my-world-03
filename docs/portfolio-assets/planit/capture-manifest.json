@@ -1,0 +1,79 @@
+{
+  "schemaVersion": 1,
+  "capturedAt": "2026-10-19T14:04:43.078Z",
+  "timezone": "Asia/Seoul",
+  "application": "Planit",
+  "repository": "https://github.com/blackstarzck/project-manager",
+  "execution": "local-only",
+  "captureUrl": "http://127.0.0.1:43100",
+  "sourceProject": {
+    "name": "실제 AI 검수 · 동네 도서관",
+    "kind": "existing-synthetic-QA-example",
+    "counts": {
+      "id": "7026b219-aa24-4ecf-88f5-ce31f978f94c",
+      "name": "실제 AI 검수 · 동네 도서관",
+      "archived": false,
+      "prd": 5,
+      "features": 6,
+      "flowNodes": 4,
+      "wireframes": 2
+    }
+  },
+  "sourceDataUnchanged": true,
+  "isolatedDatabaseSnapshot": true,
+  "sourceCodeChanged": false,
+  "newAiGeneration": false,
+  "temporaryServerStopped": true,
+  "xFrameOptions": "DENY",
+  "viewport": {
+    "width": 1600,
+    "height": 1000
+  },
+  "captures": [
+    {
+      "artifact": "dashboard",
+      "file": "planit-dashboard.png",
+      "width": 1600,
+      "height": 1000
+    },
+    {
+      "artifact": "prd",
+      "file": "planit-prd.png",
+      "width": 1600,
+      "height": 1000
+    },
+    {
+      "artifact": "features",
+      "file": "planit-features.png",
+      "width": 1600,
+      "height": 1000
+    },
+    {
+      "artifact": "flow",
+      "file": "planit-flow.png",
+      "width": 1600,
+      "height": 1000
+    },
+    {
+      "artifact": "wireframes",
+      "file": "planit-wireframes.png",
+      "width": 1600,
+      "height": 1000
+    }
+  ],
+  "proposedFocusExperience": {
+    "mode": "local-capture",
+    "sequence": [
+      "prd",
+      "features",
+      "flow",
+      "wireframes"
+    ],
+    "supportingImage": "dashboard",
+    "controls": [
+      "select-step",
+      "zoom"
+    ],
+    "label": "로컬 앱 실행 화면 · 검수용 샘플 데이터"
+  }
+}

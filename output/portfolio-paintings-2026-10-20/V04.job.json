@@ -1,0 +1,19 @@
+{
+  "id": "V04",
+  "room": "03",
+  "slotKind": "case",
+  "project": "3D 공간 만들기",
+  "sourceEntryIds": [
+    "original:space-3d"
+  ],
+  "connection": "개별 건물 모델을 놓는 단계에서 건물·길이 하나의 이동 가능한 공간이 되는 실험을 첫 방문자의 걸음으로 표현한다.",
+  "medium": "inkwash",
+  "symbol": "처음 세운 집",
+  "subject": "ONE small simple cottage, only one door and two windows, with ONE very short curved path fading into warm paper. Loose architectural pen contours and pale sage/blush watercolor, clear silhouette, no town, trees, people, street furniture, typography or photographic detail.",
+  "reference": "C:/Users/buche/AppData/Local/Temp/codex-clipboard-c532368a-c9f7-4934-bfbc-b618c9000c93.jpg",
+  "origin": "new-production",
+  "initialPath": "D:/workspace/my-world-03/output/portfolio-paintings-2026-10-20/V04-r0.png",
+  "finalPath": "D:/workspace/my-world-03/output/portfolio-paintings-2026-10-20/V04.png",
+  "reviewPath": "D:/workspace/my-world-03/output/portfolio-paintings-2026-10-20/reviews/V04.json",
+  "prompt": "Create ONE original fine-art image, horizontal 7:5, high resolution ideally 2800x2000 or greater. Flat front view, artwork fills entire image, no depicted frame, no mat, no artificial edge border. Economical architectural/botanical pen-and-watercolor study. Style reference is supplied cafe drawing: irregular black/indigo pen, transparent pale sage and muted coral washes, paper tooth, many untouched paper areas. Replace the architecture with requested object. SUBJECT: ONE small simple cottage, only one door and two windows, with ONE very short curved path fading into warm paper. Loose architectural pen contours and pale sage/blush watercolor, clear silhouette, no town, trees, people, street furniture, typography or photographic detail. The supplied image, if any, is ONLY a medium/mood reference; do not preserve its subject, letters or layout. ONE unified symbolic subject or typographic statement; at least half the image should be calm negative space. Main silhouette readable at thumbnail scale, no extra illustrative narrative. No room-based style constraints. Project meaning outside image: 개별 건물 모델을 놓는 단계에서 건물·길이 하나의 이동 가능한 공간이 되는 실험을 첫 방문자의 걸음으로 표현한다. Do not depict application screens, logos, code, graphs, arrows, fake achievements, decorative labels, signatures, watermarks, wall/easel or gallery mockup. Unless explicitly requested in the poster subject, no text at all. Original hand-made physical medium, not a flat generic UI icon or a glossy 3D render."
+}

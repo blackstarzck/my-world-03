@@ -1,0 +1,19 @@
+{
+  "id": "A01-06",
+  "room": "01",
+  "slotKind": "wall",
+  "project": "모두가딜러 · 관리자",
+  "sourceEntryIds": [
+    "original:dealer-admin"
+  ],
+  "connection": "프로모션별 조건부 입력·반복 값 일괄 적용·게시 전 미리보기로 운영 흐름을 개선한 사례를 '현재 대상만 준비하고 공개 전에 상태를 확인하는 현장'으로 비유한다. 실제 차량 촬영 도구나 출고 관리 시스템을 개발했다는 의미는 아니다.",
+  "medium": "popart",
+  "symbol": "공개 전의 차",
+  "subject": "ONE very simple coral-red car silhouette partly covered by ONE translucent pale blue paper sheet lifted slightly at a corner, as a single editorial still life about reviewing before publishing. Few flat shapes, irregular screenprint texture, no text, road, person or UI.",
+  "reference": null,
+  "origin": "new-production",
+  "initialPath": "D:/workspace/my-world-03/output/portfolio-paintings-2026-10-20/A01-06-r0.png",
+  "finalPath": "D:/workspace/my-world-03/output/portfolio-paintings-2026-10-20/A01-06.png",
+  "reviewPath": "D:/workspace/my-world-03/output/portfolio-paintings-2026-10-20/reviews/A01-06.json",
+  "prompt": "Create ONE original fine-art image, horizontal 7:5, high resolution ideally 2800x2000 or greater. Flat front view, artwork fills entire image, no depicted frame, no mat, no artificial edge border. Original minimal pop-art hand-pulled screenprint. Bold economical black contours, flat teal/coral/pale-yellow spot colors, selective Ben-Day halftone in one shadow, subtle registration offset, wide quiet cream space. One motif, not a crowded comic collage. SUBJECT: ONE very simple coral-red car silhouette partly covered by ONE translucent pale blue paper sheet lifted slightly at a corner, as a single editorial still life about reviewing before publishing. Few flat shapes, irregular screenprint texture, no text, road, person or UI. The supplied image, if any, is ONLY a medium/mood reference; do not preserve its subject, letters or layout. ONE unified symbolic subject or typographic statement; at least half the image should be calm negative space. Main silhouette readable at thumbnail scale, no extra illustrative narrative. No room-based style constraints. Project meaning outside image: 프로모션별 조건부 입력·반복 값 일괄 적용·게시 전 미리보기로 운영 흐름을 개선한 사례를 '현재 대상만 준비하고 공개 전에 상태를 확인하는 현장'으로 비유한다. 실제 차량 촬영 도구나 출고 관리 시스템을 개발했다는 의미는 아니다. Do not depict application screens, logos, code, graphs, arrows, fake achievements, decorative labels, signatures, watermarks, wall/easel or gallery mockup. Unless explicitly requested in the poster subject, no text at all. Original hand-made physical medium, not a flat generic UI icon or a glossy 3D render."
+}

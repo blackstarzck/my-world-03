@@ -1,0 +1,21 @@
+{
+  "id": "V07",
+  "room": "03",
+  "slotKind": "case",
+  "project": "게임 · 인터랙션",
+  "sourceEntryIds": [
+    "original:game-lab:bridge",
+    "original:game-lab:first-person-perspective",
+    "original:game-lab:lets-fps"
+  ],
+  "connection": "bridge는 선택한 판의 파손과 물리적 낙하, first-person-perspective는 1인칭 이동과 충돌, lets-fps는 여러 참가자와 방 상태라는 차이를 각각 구체적인 행동으로 남긴다. 그림의 같은 유원지 구성은 세 저장소가 하나의 게임이라는 주장이 아니다.",
+  "medium": "graphite",
+  "symbol": "다음 발판의 선택",
+  "subject": "TWO simple translucent glass stepping stones with a small gap, one has a single delicate hairline crack. A spare graphite object study with selective clear edge highlights, almost no ground shadow, warm paper. No person, feet, landscape, bridge structure, explosion, numbers, UI or arrows.",
+  "reference": "C:/Users/buche/AppData/Local/Temp/codex-clipboard-c663cabe-42b2-4670-87ba-3a4cca008aa0.jpg",
+  "origin": "new-production",
+  "initialPath": "D:/workspace/my-world-03/output/portfolio-paintings-2026-10-20/V07-r0.png",
+  "finalPath": "D:/workspace/my-world-03/output/portfolio-paintings-2026-10-20/V07.png",
+  "reviewPath": "D:/workspace/my-world-03/output/portfolio-paintings-2026-10-20/reviews/V07.json",
+  "prompt": "Create ONE original fine-art image, horizontal 7:5, high resolution ideally 2800x2000 or greater. Flat front view, artwork fills entire image, no depicted frame, no mat, no artificial edge border. Expressive real graphite drawing on warm paper, like supplied rose reference. Loose searching contours, varied pressure, selective crosshatching and tiny rubbed tonal areas, unfinished edges fading into broad clean paper. No color. SUBJECT: TWO simple translucent glass stepping stones with a small gap, one has a single delicate hairline crack. A spare graphite object study with selective clear edge highlights, almost no ground shadow, warm paper. No person, feet, landscape, bridge structure, explosion, numbers, UI or arrows. The supplied image, if any, is ONLY a medium/mood reference; do not preserve its subject, letters or layout. ONE unified symbolic subject or typographic statement; at least half the image should be calm negative space. Main silhouette readable at thumbnail scale, no extra illustrative narrative. No room-based style constraints. Project meaning outside image: bridge는 선택한 판의 파손과 물리적 낙하, first-person-perspective는 1인칭 이동과 충돌, lets-fps는 여러 참가자와 방 상태라는 차이를 각각 구체적인 행동으로 남긴다. 그림의 같은 유원지 구성은 세 저장소가 하나의 게임이라는 주장이 아니다. Do not depict application screens, logos, code, graphs, arrows, fake achievements, decorative labels, signatures, watermarks, wall/easel or gallery mockup. Unless explicitly requested in the poster subject, no text at all. Original hand-made physical medium, not a flat generic UI icon or a glossy 3D render."
+}

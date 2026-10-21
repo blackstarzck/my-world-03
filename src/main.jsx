@@ -4,6 +4,7 @@ import App from "./App.jsx";
 import "./styles.css";
 import "./artwork-tour.css";
 import "./gallery-navigation.css";
+import "./portfolio.css";
 createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <App />

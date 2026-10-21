@@ -1,0 +1,26 @@
+{
+  "id": "A02-08",
+  "room": "02",
+  "slotKind": "wall",
+  "project": "자동매매 시스템",
+  "sourceEntryIds": [
+    "original:trading-lab:zenith",
+    "original:trading-lab:zenith-v2",
+    "original:trading-lab:zenith-v3",
+    "original:trading-lab:zenith-v4",
+    "original:trading-lab:coin-lab",
+    "original:trading-lab:coin-lab-v2",
+    "original:trading-lab:profitpal",
+    "original:trading-lab:Haley"
+  ],
+  "connection": "자동매매를 수익 성공담이 아닌 불확실한 입력 아래의 관찰·실행 구조·검증·기록으로 해석한다. 각 버전의 구체적인 기술 차이를 아래의 서로 다른 해안 행위에 대응시킨다. 상승 차트, 코인, 금괴, 승리하는 인물, 안전한 항해의 결말을 그리지 않는다. 특히 PAPER와 실제 거래를 구별하고 수익성·안전성·전략 유효성을 주장하지 않는다.",
+  "medium": "poster",
+  "symbol": "관찰과 시험의 기록",
+  "subject": "EXACT TEXT: large 'OBSERVE.' then 'TEST.' then 'RECORD.'; small 'TRADING EXPERIMENTS'. ONE unmarked dark-blue compass needle resting askew on a small torn cream paper circle, not a chart. Quiet screenprinted editorial poster in cream, indigo, muted orange. No profit, growth arrow, coins, money, victory, financial return numbers or safety claims.",
+  "reference": null,
+  "origin": "new-production",
+  "initialPath": "D:/workspace/my-world-03/output/portfolio-paintings-2026-10-20/A02-08-r0.png",
+  "finalPath": "D:/workspace/my-world-03/output/portfolio-paintings-2026-10-20/A02-08.png",
+  "reviewPath": "D:/workspace/my-world-03/output/portfolio-paintings-2026-10-20/reviews/A02-08.json",
+  "prompt": "Create ONE original fine-art image, horizontal 7:5, high resolution ideally 2800x2000 or greater. Flat front view, artwork fills entire image, no depicted frame, no mat, no artificial edge border. Sparse original editorial art poster, oversized beautiful typography, one compact physical/printed motif, limited cream/indigo/coral palette, tactile paper and screenprint grain. Exact requested words only. No charts or app interfaces. SUBJECT: EXACT TEXT: large 'OBSERVE.' then 'TEST.' then 'RECORD.'; small 'TRADING EXPERIMENTS'. ONE unmarked dark-blue compass needle resting askew on a small torn cream paper circle, not a chart. Quiet screenprinted editorial poster in cream, indigo, muted orange. No profit, growth arrow, coins, money, victory, financial return numbers or safety claims. The supplied image, if any, is ONLY a medium/mood reference; do not preserve its subject, letters or layout. ONE unified symbolic subject or typographic statement; at least half the image should be calm negative space. Main silhouette readable at thumbnail scale, no extra illustrative narrative. No room-based style constraints. Project meaning outside image: 자동매매를 수익 성공담이 아닌 불확실한 입력 아래의 관찰·실행 구조·검증·기록으로 해석한다. 각 버전의 구체적인 기술 차이를 아래의 서로 다른 해안 행위에 대응시킨다. 상승 차트, 코인, 금괴, 승리하는 인물, 안전한 항해의 결말을 그리지 않는다. 특히 PAPER와 실제 거래를 구별하고 수익성·안전성·전략 유효성을 주장하지 않는다. Do not depict application screens, logos, code, graphs, arrows, fake achievements, decorative labels, signatures, watermarks, wall/easel or gallery mockup. Unless explicitly requested in the poster subject, no text at all. Original hand-made physical medium, not a flat generic UI icon or a glossy 3D render."
+}

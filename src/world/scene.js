@@ -11,6 +11,8 @@ import { buildExhibits } from "./exhibits.js";
 import { navigation } from "./navigation.js";
 import { lightingPresets, renderQuality } from "./render-settings.js";
 import { createExhibitLighting } from "./exhibit-lighting.js";
+import { surfaceProjection } from "./surface-projection.js";
+import { createNearbyArtworkTracker } from "./nearby-artwork.js";
 
 export async function createExhibition(container, callbacks) {
   const manager = new THREE.LoadingManager();
@@ -32,7 +34,7 @@ export async function createExhibition(container, callbacks) {
   renderer.domElement.tabIndex = 0;
   renderer.domElement.setAttribute(
     "aria-label",
-    "3D 전시 공간. 드래그하여 둘러보고 방향키로 이동하세요.",
+    "3D 포트폴리오. 드래그하여 둘러보고 방향키로 이동하세요.",
   );
   container.appendChild(renderer.domElement);
   const scene = new THREE.Scene();
@@ -83,6 +85,9 @@ export async function createExhibition(container, callbacks) {
     overviewMode = false,
     reducedQuality = false,
     lighting = "day",
+    surfaceTracker = null,
+    presentationActive = false,
+    lastPresentationPose = "",
     updateQuality,
     measuredFrames = 0,
     measuredTime = 0;
@@ -172,6 +177,7 @@ export async function createExhibition(container, callbacks) {
       ...callbacks,
       selectable: exhibits.selectable,
     });
+    const nearbyArtwork = createNearbyArtworkTracker(exhibits.collection, scene);
     const exhibitLighting = createExhibitLighting(
       scene,
       exhibits.lightingTargets,
@@ -240,9 +246,40 @@ export async function createExhibition(container, callbacks) {
       nav.update(dt);
       if (now - lastPosition > 120) exhibitLighting.update(camera);
       renderer.info.reset();
-      composer.render();
+      // Keep the stationary gallery from competing with an embedded app or index.
+      const presentationPose = [
+        ...camera.position.toArray(),
+        ...camera.quaternion.toArray(),
+        camera.fov,
+        camera.aspect,
+        quality,
+        lighting,
+        overviewMode,
+        container.clientWidth,
+        container.clientHeight,
+      ].join(":");
+      if (
+        !presentationActive ||
+        nav.state().moving ||
+        presentationPose !== lastPresentationPose
+      ) {
+        composer.render();
+        lastPresentationPose = presentationPose;
+      }
+      if (surfaceTracker)
+        surfaceTracker.callback(
+          surfaceProjection(surfaceTracker.artwork, camera, {
+            width: container.clientWidth,
+            height: container.clientHeight,
+          }),
+        );
       if (now - lastPosition > 120) {
-        callbacks.onPosition?.(nav.state());
+        const state = nav.state();
+        if (state.moving || presentationActive) nearbyArtwork.reset();
+        else callbacks.onNearbyArtwork?.(
+          state.overview ? null : nearbyArtwork.update(camera, state.room),
+        );
+        callbacks.onPosition?.(state);
         lastPosition = now;
       }
     }
@@ -270,26 +307,40 @@ export async function createExhibition(container, callbacks) {
         exhibitLighting.update(camera);
       },
       getArtworks: () => exhibits.collection,
-      focusArtwork(id) {
+      captureView: () => nav.captureView(),
+      restoreView(view) {
+        setOverview(view.overview);
+        resize(false);
+        nav.restoreView(view);
+        exhibitLighting.update(camera);
+      },
+      trackArtworkSurface(id, callback) {
+        const artwork = exhibits.collection.find((item) => item.id === id);
+        if (!artwork) return () => {};
+        const tracker = { artwork, callback };
+        surfaceTracker = tracker;
+        return () => {
+          if (surfaceTracker === tracker) surfaceTracker = null;
+        };
+      },
+      focusArtwork(id, options) {
         const artwork = exhibits.collection.find((a) => a.id === id);
         if (!artwork) return;
         if (nav.state().overview) api.goTo(artwork.room);
         setOverview(false);
-        // React has applied the 70:30 layout; use that viewport before planning.
+        // Keep the full gallery viewport during the approach and frontal hold.
         resize(false);
-        nav.focusArtwork(artwork);
-      },
-      returnToEntrance(room) {
-        setOverview(false);
-        resize(false);
-        nav.goTo(room, { animated: true });
+        nav.focusArtwork(artwork, options);
       },
       startWalk() {
         if (nav.state().overview) api.goTo("lobby");
         return nav.startWalk();
       },
       setMove: (...args) => nav.setMove(...args),
-      setSuspended: (v) => nav.setSuspended(v),
+      setSuspended(v, options) {
+        presentationActive = Boolean(v);
+        nav.setSuspended(v, options);
+      },
       setLighting: applyLighting,
       state: () => ({
         ...nav.state(),

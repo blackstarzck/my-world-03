@@ -1,0 +1,3165 @@
+{
+  "checkedOn": "2026-10-19",
+  "rooms": [
+    {
+      "id": "01",
+      "name": "고전의 깊이",
+      "theme": "사용자와 만나는 제품",
+      "intro": "사용자가 만나는 화면에서 운영·출시·협업까지, 제품을 완성하는 일을 전시합니다.",
+      "flow": "TOPIK·교육 운영 → 센서·벌통 → DADOKe → 브랜드 여섯 액자 → 콘텐츠·관리 도구 → 개선·협업"
+    },
+    {
+      "id": "02",
+      "name": "빛의 여백",
+      "theme": "시스템과 일하는 방식",
+      "intro": "제품 뒤에서 작동하는 서버·규칙·검증과, 일을 이어가는 방식을 전시합니다.",
+      "flow": "문서 통합·서버 → SKILL·게이트 → AI 협업·검증 → Planit → 콘텐츠 도구 → 버전 연구·디자인 규칙"
+    },
+    {
+      "id": "03",
+      "name": "형태의 기억",
+      "theme": "직접 경험하는 실험",
+      "intro": "입력하면 움직이고, 선택하면 달라지는 실험을 직접 경험합니다.",
+      "flow": "왼쪽 벽과 진열장을 짝지어 전진 → 끝 벽 React 연작 → On the Book 책·장면·관리 → 이동 게임 → 격투·아케이드 → 로비"
+    }
+  ],
+  "exhibits": [
+    {
+      "id": "A01-01",
+      "room": "01",
+      "order": 1,
+      "groupId": "topik-user",
+      "title": "다시 쓰는 문장",
+      "shortName": "TOPIK 사용자",
+      "projectName": "도토리 토픽 · 사용자단",
+      "visualConcept": "쓰기가 피드백을 거쳐 정돈되는 문자 회화와 사용자 학습 흐름",
+      "placard": "쓰고, 피드백을 받고, 다시 쓰는 학습의 흐름을 설계했습니다.",
+      "description": "TOPIK 쓰기 학습에서 답안을 작성하고 AI 피드백을 확인하는 사용자 화면을 만들었습니다. 다국어 UI와 반응형 화면을 학습의 흐름에 맞춰 연결했습니다.",
+      "lookFor": "답안 작성 → 피드백 확인 → 다시 쓰기의 화면 흐름",
+      "role": "사용자단 프론트엔드 설계·개발",
+      "scope": "Next.js·React·TypeScript 기반 반응형 웹. 학습 흐름 설계, 다국어 UI, 사용자단·관리자단 공통 데이터 계약 설계에 참여했습니다.",
+      "kind": "회화",
+      "slotKind": "wall",
+      "projects": [
+        {
+          "id": "original:topik-user",
+          "name": "도토리 토픽 · 사용자단",
+          "repositories": [
+            "topik-project-v13"
+          ],
+          "mode": "case-study",
+          "url": null,
+          "optionalDemos": [
+            {
+              "label": "v12 이전 버전 체험",
+              "url": "https://v12-weld.vercel.app",
+              "relationship": "historical-version",
+              "note": "현재 v13 운영 앱으로 표시하지 않고 이전 버전임을 명시한다."
+            }
+          ],
+          "sourceEntryId": "original:topik-user",
+          "sourceName": "도토리 토픽 · 사용자단",
+          "summary": "AI 피드백이 붙은 TOPIK 쓰기 학습 서비스의 사용자 화면을 설계하고 만들었습니다.",
+          "repoUrls": [
+            "https://github.com/blackstarzck/topik-project-v13"
+          ],
+          "deployments": []
+        }
+      ]
+    },
+    {
+      "id": "A01-02",
+      "room": "01",
+      "order": 2,
+      "groupId": "topik-admin",
+      "title": "배움을 지탱하는 질서",
+      "shortName": "TOPIK 관리자",
+      "projectName": "도토리 토픽 · 관리자단",
+      "visualConcept": "문항·사용자·기관·권한을 연결하는 운영 지도와 실제 관리자 화면",
+      "placard": "학습 서비스의 뒤편에는 사람과 문항을 관리하는 질서가 있습니다.",
+      "description": "사용자·기관·문항은행·학습 분석·권한을 한곳에서 다루는 운영 화면입니다. 사용자 화면과 공유하는 데이터 계약, 인증과 접근 범위를 함께 설계했습니다.",
+      "lookFor": "문항·기관·권한이 연결되는 운영 구조",
+      "role": "관리자단 운영 화면·데이터 관리 기능 설계·개발",
+      "scope": "Vite·React·TypeScript·Ant Design 기반. Supabase 인증과 RLS/RPC, DB 마이그레이션 설계에 참여했습니다.",
+      "kind": "회화",
+      "slotKind": "wall",
+      "projects": [
+        {
+          "id": "original:topik-admin",
+          "name": "도토리 토픽 · 관리자단",
+          "repositories": [
+            "topik-ai"
+          ],
+          "mode": "demo-preparation",
+          "url": null,
+          "optionalDemos": [],
+          "sourceEntryId": "original:topik-admin",
+          "sourceName": "도토리 토픽 · 관리자단",
+          "summary": "사용자·기관·문항은행·학습 분석·권한을 한곳에서 관리하는 운영 화면입니다.",
+          "repoUrls": [
+            "https://github.com/blackstarzck/topik-ai"
+          ],
+          "deployments": [
+            {
+              "url": "https://topik-ai.vercel.app",
+              "httpStatus": 200
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "P01-01-F",
+      "room": "01",
+      "order": 3,
+      "groupId": "inquiry-admin",
+      "title": "문의의 흐름",
+      "shortName": "문의 관리자",
+      "projectName": "도토리 문의 관리자",
+      "visualConcept": "접수·처리·분석의 상태와 실제 관리자 화면을 연결",
+      "placard": "하나의 문의가 들어와 처리되는 과정을 화면으로 정리합니다.",
+      "description": "도토리 문의 관리자에서 접수·처리·분석으로 이어지는 운영 화면을 소개합니다. 공개 체험에는 관람용 인증 데모를 연결하고, 그전에는 화면과 상태 흐름을 전시합니다.",
+      "lookFor": "문의 상태와 처리 흐름",
+      "role": null,
+      "scope": null,
+      "kind": "회화",
+      "slotKind": "panel",
+      "projects": [
+        {
+          "id": "additional:dotore-admin",
+          "name": "도토리 문의 관리자",
+          "repositories": [
+            "dotore-admin"
+          ],
+          "mode": "demo-preparation",
+          "url": null,
+          "optionalDemos": [],
+          "sourceEntryId": "additional:dotore-admin",
+          "sourceName": "도토리 문의 관리자",
+          "summary": "접수·처리·분석의 상태와 실제 관리자 화면을 연결",
+          "repoUrls": [
+            "https://github.com/blackstarzck/dotore-admin"
+          ],
+          "deployments": [
+            {
+              "url": "https://dotore-admin.vercel.app",
+              "httpStatus": 200
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "P01-01-B",
+      "room": "01",
+      "order": 4,
+      "groupId": "education-ui",
+      "title": "배움의 다섯 시선",
+      "shortName": "교육 화면",
+      "projectName": "교육 서비스 화면 연구",
+      "visualConcept": "강사·학생·목록·상세·메타데이터 관리 화면을 다섯 부분으로 구성",
+      "placard": "같은 교육 서비스를 다섯 사용 장면에서 바라봅니다.",
+      "description": "강사·학생 대시보드와 공개 강의 목록·상세·메타데이터 관리자 화면을 묶은 연작입니다. 역할에 따라 정보의 우선순위와 화면 구성이 어떻게 달라지는지 비교합니다.",
+      "lookFor": "강사·학생 화면 비교와 강의 화면의 정보 구조",
+      "role": null,
+      "scope": null,
+      "kind": "회화",
+      "slotKind": "panel",
+      "projects": [
+        {
+          "id": "additional:tutor-dashboard",
+          "name": "강사 대시보드",
+          "repositories": [
+            "tutor-dashboard"
+          ],
+          "mode": "iframe",
+          "url": "https://tutor-dashboard-topaz.vercel.app",
+          "optionalDemos": [],
+          "sourceEntryId": "additional:tutor-dashboard",
+          "sourceName": "강사 대시보드",
+          "summary": "강사·학생·목록·상세·메타데이터 관리 화면을 다섯 부분으로 구성",
+          "repoUrls": [
+            "https://github.com/blackstarzck/tutor-dashboard"
+          ],
+          "deployments": [
+            {
+              "url": "https://tutor-dashboard-topaz.vercel.app",
+              "httpStatus": 200
+            }
+          ]
+        },
+        {
+          "id": "additional:student-dashboard",
+          "name": "학생 대시보드",
+          "repositories": [
+            "student-dashboard"
+          ],
+          "mode": "iframe",
+          "url": "https://student-dashboard-omega-lime.vercel.app",
+          "optionalDemos": [],
+          "sourceEntryId": "additional:student-dashboard",
+          "sourceName": "학생 대시보드",
+          "summary": "강사·학생·목록·상세·메타데이터 관리 화면을 다섯 부분으로 구성",
+          "repoUrls": [
+            "https://github.com/blackstarzck/student-dashboard"
+          ],
+          "deployments": [
+            {
+              "url": "https://student-dashboard-omega-lime.vercel.app",
+              "httpStatus": 200
+            }
+          ]
+        },
+        {
+          "id": "additional:list",
+          "name": "한국어 공개 강의 목록",
+          "repositories": [
+            "list"
+          ],
+          "mode": "media-until-restored",
+          "url": null,
+          "optionalDemos": [],
+          "sourceEntryId": "additional:list",
+          "sourceName": "한국어 공개 강의 목록",
+          "summary": "강사·학생·목록·상세·메타데이터 관리 화면을 다섯 부분으로 구성",
+          "repoUrls": [
+            "https://github.com/blackstarzck/list"
+          ],
+          "deployments": [
+            {
+              "url": "https://list-red-alpha.vercel.app",
+              "httpStatus": 404
+            }
+          ]
+        },
+        {
+          "id": "additional:detail",
+          "name": "강의 상세 화면",
+          "repositories": [
+            "detail"
+          ],
+          "mode": "media-until-restored",
+          "url": null,
+          "optionalDemos": [],
+          "sourceEntryId": "additional:detail",
+          "sourceName": "강의 상세 화면",
+          "summary": "강사·학생·목록·상세·메타데이터 관리 화면을 다섯 부분으로 구성",
+          "repoUrls": [
+            "https://github.com/blackstarzck/detail"
+          ],
+          "deployments": [
+            {
+              "url": "https://detail-ruby.vercel.app",
+              "httpStatus": 404
+            }
+          ]
+        },
+        {
+          "id": "additional:admin",
+          "name": "강의 메타데이터 관리자",
+          "repositories": [
+            "admin"
+          ],
+          "mode": "media-until-restored",
+          "url": null,
+          "optionalDemos": [],
+          "sourceEntryId": "additional:admin",
+          "sourceName": "강의 메타데이터 관리자",
+          "summary": "강사·학생·목록·상세·메타데이터 관리 화면을 다섯 부분으로 구성",
+          "repoUrls": [
+            "https://github.com/blackstarzck/admin"
+          ],
+          "deployments": [
+            {
+              "url": "https://admin-coral-phi.vercel.app",
+              "httpStatus": 404
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "A01-03",
+      "room": "01",
+      "order": 5,
+      "groupId": "farm-3d",
+      "title": "보이지 않는 기후",
+      "shortName": "센서 3D",
+      "projectName": "센서 3D 시각화 대시보드",
+      "visualConcept": "온실 형태 위에 센서 위치와 온습도 층을 겹친 입체 데이터 초상",
+      "placard": "보이지 않는 온실의 상태를, 공간 위에 읽을 수 있게 놓았습니다.",
+      "description": "30개가 넘는 센서의 온도와 습도를 온실의 3D 위치에 대응시킨 대시보드입니다. 화면과 API를 개발해 농장주가 상태를 한눈에 파악하도록 구성했습니다.",
+      "lookFor": "온실 모형 위 센서 위치와 데이터 표현",
+      "role": "대시보드 화면·API 개발",
+      "scope": "Angular·NestJS·TypeScript 기반. amCharts, RxJS, MySQL로 데이터 흐름과 시각화를 구현했습니다.",
+      "kind": "회화",
+      "slotKind": "wall",
+      "projects": [
+        {
+          "id": "original:farm-3d",
+          "name": "센서 3D 시각화 대시보드",
+          "repositories": [],
+          "mode": "case-study",
+          "url": null,
+          "optionalDemos": [],
+          "sourceEntryId": "original:farm-3d",
+          "sourceName": "센서 3D 시각화 대시보드",
+          "summary": "30개가 넘는 센서의 온·습도를 3D로 띄워, 농장주가 온실 상태를 한눈에 보게 했습니다.",
+          "repoUrls": [],
+          "deployments": []
+        }
+      ]
+    },
+    {
+      "id": "A01-04",
+      "room": "01",
+      "order": 6,
+      "groupId": "connect-bee",
+      "title": "벌통의 맥박",
+      "shortName": "CONNECT BEE",
+      "projectName": "CONNECT BEE",
+      "visualConcept": "벌통의 센서 값과 팬·열선·쿨러 제어 흐름을 연결하는 빛의 구성",
+      "placard": "벌통의 상태를 읽는 화면에서, 환경을 바꾸는 조작까지 연결했습니다.",
+      "description": "수정벌 벌통의 센서 값을 확인하고 팬·열선·쿨러를 제어하는 하이브리드 앱입니다. 프론트엔드와 앱 패키징·출시, 기획·디자인 및 홍보 에셋 제작에 참여했습니다.",
+      "lookFor": "모니터링 화면 → 장치 제어 흐름 → 출시 자료",
+      "role": "프론트엔드 개발 · 하이브리드 앱 패키징·출시 · 기획 · 디자인 · CES 2025 제출용 홍보 에셋 제작",
+      "scope": "Angular·TypeScript 로 화면을 만들고 하이브리드 앱으로 패키징해 출시했습니다.",
+      "kind": "회화",
+      "slotKind": "wall",
+      "projects": [
+        {
+          "id": "original:connect-bee",
+          "name": "CONNECT BEE",
+          "repositories": [],
+          "mode": "case-study",
+          "url": null,
+          "optionalDemos": [],
+          "sourceEntryId": "original:connect-bee",
+          "sourceName": "CONNECT BEE",
+          "summary": "수정벌 벌통의 센서 값을 보고 팬·열선·쿨러까지 한 화면에서 제어하는 하이브리드 앱입니다.",
+          "repoUrls": [],
+          "deployments": []
+        }
+      ]
+    },
+    {
+      "id": "P01-03-F",
+      "room": "01",
+      "order": 7,
+      "groupId": "dadoke",
+      "title": "한 권이 만들어지기까지",
+      "shortName": "DADOKe",
+      "projectName": "DADOKe 전자책 · 오디오북",
+      "visualConcept": "시장조사·요구사항·외주 협업 자료와 별도 DADOKE 화면 시안을 구분해 전시",
+      "placard": "책 서비스는 코드보다 먼저, 요구사항과 협업에서 형태를 갖춥니다.",
+      "description": "전자책·오디오북 서비스를 위해 시장조사와 기획, 요구사항 정의, 외주 커뮤니케이션을 총괄했습니다. 개발은 외주에서 수행했으며 별도 DADOKE 화면 시안은 하위 자료로 구분합니다.",
+      "lookFor": "벤치마킹 → 요구사항 → 외주 협업 자료",
+      "role": "시장조사·기획·요구사항 정의·외주 커뮤니케이션 총괄",
+      "scope": "밀리의서재·리디북스·아마존 킨들 벤치마킹, 베트남 외주업체와의 요구사항 조율.",
+      "kind": "회화",
+      "slotKind": "panel",
+      "projects": [
+        {
+          "id": "original:dadoke",
+          "name": "DADOKe 전자책 · 오디오북",
+          "repositories": [],
+          "mode": "case-study",
+          "url": null,
+          "optionalDemos": [],
+          "sourceEntryId": "original:dadoke",
+          "sourceName": "DADOKe 전자책 · 오디오북",
+          "summary": "개발은 외주에 맡기고 기획·요구사항 정의·커뮤니케이션을 총괄했습니다.",
+          "repoUrls": [],
+          "deployments": []
+        },
+        {
+          "id": "additional:nuri",
+          "name": "DADOKE 디지털 독서 화면 시안",
+          "repositories": [
+            "nuri"
+          ],
+          "mode": "media-until-restored",
+          "url": null,
+          "optionalDemos": [],
+          "sourceEntryId": "additional:nuri",
+          "sourceName": "DADOKE 디지털 독서 화면 시안",
+          "summary": "시장조사·요구사항·외주 협업 자료와 별도 DADOKE 화면 시안을 구분해 전시",
+          "repoUrls": [
+            "https://github.com/blackstarzck/nuri"
+          ],
+          "deployments": [
+            {
+              "url": "https://nuri-delta.vercel.app",
+              "httpStatus": 404
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "P01-03-B",
+      "room": "01",
+      "order": 8,
+      "groupId": "corp-sites",
+      "title": "브랜드의 여섯 얼굴 · 북차카",
+      "shortName": "북차카",
+      "projectName": "법인별 홈페이지",
+      "visualConcept": "법인별 독립 액자 여섯 개에 브랜드 색·문자·실제 화면을 구성하고 부클리 시안도 연결",
+      "placard": "북차카의 브랜드와 정보를 하나의 웹 경험으로 구성했습니다.",
+      "description": "북차카 홈페이지의 기획·디자인·퍼블리싱·배포를 진행했습니다. 브랜드의 색과 문자, 정보 구조가 실제 화면에 어떻게 반영됐는지 살펴봅니다.",
+      "lookFor": "브랜드별 첫 화면·정보 구조·반응형 구성",
+      "role": "기획·디자인·퍼블리싱·배포 1인 수행",
+      "scope": "Figma 기획·디자인, React 18·Tailwind CSS 4·styled-components·GSAP 퍼블리싱, FTP 배포 운영.",
+      "kind": "회화",
+      "slotKind": "panel",
+      "projects": [
+        {
+          "id": "original:corp-sites:bookchaka",
+          "name": "북차카",
+          "repositories": [
+            "bookchaka"
+          ],
+          "mode": "iframe",
+          "url": "https://bookchaka.com",
+          "optionalDemos": [],
+          "details": "한국어 교육과 글로벌 유학·도서 유통·출판 콘텐츠를 소개하는 홈페이지.",
+          "skills": [
+            "React",
+            "Tailwind CSS",
+            "GSAP"
+          ],
+          "sourceEntryId": "original:corp-sites:bookchaka",
+          "sourceName": "북차카",
+          "summary": "한국어 교육과 글로벌 유학·도서 유통·출판 콘텐츠를 소개하는 홈페이지.",
+          "repoUrls": [
+            "https://github.com/blackstarzck/bookchaka"
+          ],
+          "deployments": [
+            {
+              "url": "https://bookchaka.com",
+              "httpStatus": 200
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "A01-05",
+      "room": "01",
+      "order": 9,
+      "groupId": "corp-sites",
+      "title": "브랜드의 여섯 얼굴 · 케듀올",
+      "shortName": "케듀올",
+      "projectName": "법인별 홈페이지",
+      "visualConcept": "법인별 독립 액자 여섯 개에 브랜드 색·문자·실제 화면을 구성하고 부클리 시안도 연결",
+      "placard": "케듀올의 브랜드와 정보를 하나의 웹 경험으로 구성했습니다.",
+      "description": "케듀올 홈페이지의 기획·디자인·퍼블리싱·배포를 진행했습니다. 브랜드의 색과 문자, 정보 구조가 실제 화면에 어떻게 반영됐는지 살펴봅니다.",
+      "lookFor": "브랜드별 첫 화면·정보 구조·반응형 구성",
+      "role": "기획·디자인·퍼블리싱·배포 1인 수행",
+      "scope": "Figma 기획·디자인, React 18·Tailwind CSS 4·styled-components·GSAP 퍼블리싱, FTP 배포 운영.",
+      "kind": "회화",
+      "slotKind": "wall",
+      "projects": [
+        {
+          "id": "original:corp-sites:keduall",
+          "name": "케듀올",
+          "repositories": [
+            "keduall"
+          ],
+          "mode": "iframe",
+          "url": "https://keduall.com",
+          "optionalDemos": [],
+          "details": "베트남과 한국을 잇는 유학·한국어교육·출판·에듀테크 기업 홈페이지.",
+          "skills": [
+            "React",
+            "Tailwind CSS",
+            "GSAP"
+          ],
+          "sourceEntryId": "original:corp-sites:keduall",
+          "sourceName": "케듀올",
+          "summary": "베트남과 한국을 잇는 유학·한국어교육·출판·에듀테크 기업 홈페이지.",
+          "repoUrls": [
+            "https://github.com/blackstarzck/keduall"
+          ],
+          "deployments": [
+            {
+              "url": "https://keduall.com",
+              "httpStatus": 200
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "A01-END",
+      "room": "01",
+      "order": 10,
+      "groupId": "corp-sites",
+      "title": "브랜드의 여섯 얼굴 · 부클리",
+      "shortName": "부클리",
+      "projectName": "법인별 홈페이지",
+      "visualConcept": "법인별 독립 액자 여섯 개에 브랜드 색·문자·실제 화면을 구성하고 부클리 시안도 연결",
+      "placard": "부클리의 브랜드와 정보를 하나의 웹 경험으로 구성했습니다.",
+      "description": "부클리 홈페이지의 기획·디자인·퍼블리싱·배포를 진행했습니다. 브랜드의 색과 문자, 정보 구조가 실제 화면에 어떻게 반영됐는지 살펴봅니다. 별도의 해외 저작권 에이전시 시안도 하위 작품으로 연결합니다.",
+      "lookFor": "브랜드별 첫 화면·정보 구조·반응형 구성",
+      "role": "기획·디자인·퍼블리싱·배포 1인 수행",
+      "scope": "Figma 기획·디자인, React 18·Tailwind CSS 4·styled-components·GSAP 퍼블리싱, FTP 배포 운영.",
+      "kind": "회화",
+      "slotKind": "wall",
+      "projects": [
+        {
+          "id": "original:corp-sites:bookly",
+          "name": "부클리",
+          "repositories": [
+            "bookly"
+          ],
+          "mode": "iframe",
+          "url": "https://hibookly.com",
+          "optionalDemos": [],
+          "details": "한국 출판 콘텐츠의 해외 수출과 판권 정보를 소개하는 글로벌 콘텐츠 홈페이지.",
+          "skills": [
+            "React",
+            "Tailwind CSS",
+            "GSAP"
+          ],
+          "sourceEntryId": "original:corp-sites:bookly",
+          "sourceName": "부클리",
+          "summary": "한국 출판 콘텐츠의 해외 수출과 판권 정보를 소개하는 글로벌 콘텐츠 홈페이지.",
+          "repoUrls": [
+            "https://github.com/blackstarzck/bookly"
+          ],
+          "deployments": [
+            {
+              "url": "https://hibookly.com",
+              "httpStatus": 200
+            }
+          ]
+        },
+        {
+          "id": "additional:hibookly-claude-code-design-v1",
+          "name": "부클리 해외 저작권 에이전시 시안",
+          "repositories": [
+            "hibookly-claude-code-design-v1"
+          ],
+          "mode": "media-until-restored",
+          "url": null,
+          "optionalDemos": [],
+          "sourceEntryId": "additional:hibookly-claude-code-design-v1",
+          "sourceName": "부클리 해외 저작권 에이전시 시안",
+          "summary": "법인별 독립 액자 여섯 개에 브랜드 색·문자·실제 화면을 구성하고 부클리 시안도 연결",
+          "repoUrls": [
+            "https://github.com/blackstarzck/hibookly-claude-code-design-v1"
+          ],
+          "deployments": [
+            {
+              "url": "https://hibookly-claude-code-design-v1.vercel.app",
+              "httpStatus": 404
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "A01-10",
+      "room": "01",
+      "order": 11,
+      "groupId": "corp-sites",
+      "title": "브랜드의 여섯 얼굴 · 위즈덤셀러",
+      "shortName": "위즈덤셀러",
+      "projectName": "법인별 홈페이지",
+      "visualConcept": "법인별 독립 액자 여섯 개에 브랜드 색·문자·실제 화면을 구성하고 부클리 시안도 연결",
+      "placard": "위즈덤셀러의 브랜드와 정보를 하나의 웹 경험으로 구성했습니다.",
+      "description": "위즈덤셀러 홈페이지의 기획·디자인·퍼블리싱·배포를 진행했습니다. 브랜드의 색과 문자, 정보 구조가 실제 화면에 어떻게 반영됐는지 살펴봅니다.",
+      "lookFor": "브랜드별 첫 화면·정보 구조·반응형 구성",
+      "role": "기획·디자인·퍼블리싱·배포 1인 수행",
+      "scope": "Figma 기획·디자인, React 18·Tailwind CSS 4·styled-components·GSAP 퍼블리싱, FTP 배포 운영.",
+      "kind": "회화",
+      "slotKind": "wall",
+      "projects": [
+        {
+          "id": "original:corp-sites:wisdomceller",
+          "name": "위즈덤셀러",
+          "repositories": [
+            "wisdomceller"
+          ],
+          "mode": "iframe",
+          "url": "https://wisdomcellar.com",
+          "optionalDemos": [],
+          "details": "언어와 커리어를 연결해 글로벌 교육·유학 서비스를 소개하는 홈페이지.",
+          "skills": [
+            "React",
+            "Tailwind CSS",
+            "GSAP"
+          ],
+          "sourceEntryId": "original:corp-sites:wisdomceller",
+          "sourceName": "위즈덤셀러",
+          "summary": "언어와 커리어를 연결해 글로벌 교육·유학 서비스를 소개하는 홈페이지.",
+          "repoUrls": [
+            "https://github.com/blackstarzck/wisdomceller"
+          ],
+          "deployments": [
+            {
+              "url": "https://wisdomcellar.com",
+              "httpStatus": 200
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "P01-04-B",
+      "room": "01",
+      "order": 12,
+      "groupId": "corp-sites",
+      "title": "브랜드의 여섯 얼굴 · 글로윈 비나",
+      "shortName": "글로윈 비나",
+      "projectName": "법인별 홈페이지",
+      "visualConcept": "법인별 독립 액자 여섯 개에 브랜드 색·문자·실제 화면을 구성하고 부클리 시안도 연결",
+      "placard": "글로윈 비나의 브랜드와 정보를 하나의 웹 경험으로 구성했습니다.",
+      "description": "글로윈 비나 홈페이지의 기획·디자인·퍼블리싱·배포를 진행했습니다. 브랜드의 색과 문자, 정보 구조가 실제 화면에 어떻게 반영됐는지 살펴봅니다.",
+      "lookFor": "브랜드별 첫 화면·정보 구조·반응형 구성",
+      "role": "기획·디자인·퍼블리싱·배포 1인 수행",
+      "scope": "Figma 기획·디자인, React 18·Tailwind CSS 4·styled-components·GSAP 퍼블리싱, FTP 배포 운영.",
+      "kind": "회화",
+      "slotKind": "panel",
+      "projects": [
+        {
+          "id": "original:corp-sites:glowin-vina",
+          "name": "글로윈 비나 (북카페)",
+          "repositories": [
+            "glowin-vina"
+          ],
+          "mode": "media-until-restored",
+          "url": null,
+          "optionalDemos": [],
+          "details": "글로윈 비나 북카페의 브랜드와 공간을 소개하는 홈페이지.",
+          "skills": [
+            "React",
+            "Tailwind CSS",
+            "GSAP"
+          ],
+          "sourceEntryId": "original:corp-sites:glowin-vina",
+          "sourceName": "글로윈 비나 (북카페)",
+          "summary": "글로윈 비나 북카페의 브랜드와 공간을 소개하는 홈페이지.",
+          "repoUrls": [
+            "https://github.com/blackstarzck/glowin-vina"
+          ],
+          "deployments": [
+            {
+              "url": "https://glowinvina.com",
+              "httpStatus": 503
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "P01-04-F",
+      "room": "01",
+      "order": 13,
+      "groupId": "corp-sites",
+      "title": "브랜드의 여섯 얼굴 · 비블리아",
+      "shortName": "비블리아",
+      "projectName": "법인별 홈페이지",
+      "visualConcept": "법인별 독립 액자 여섯 개에 브랜드 색·문자·실제 화면을 구성하고 부클리 시안도 연결",
+      "placard": "비블리아의 브랜드와 정보를 하나의 웹 경험으로 구성했습니다.",
+      "description": "비블리아 홈페이지의 기획·디자인·퍼블리싱·배포를 진행했습니다. 브랜드의 색과 문자, 정보 구조가 실제 화면에 어떻게 반영됐는지 살펴봅니다.",
+      "lookFor": "브랜드별 첫 화면·정보 구조·반응형 구성",
+      "role": "기획·디자인·퍼블리싱·배포 1인 수행",
+      "scope": "Figma 기획·디자인, React 18·Tailwind CSS 4·styled-components·GSAP 퍼블리싱, FTP 배포 운영.",
+      "kind": "회화",
+      "slotKind": "panel",
+      "projects": [
+        {
+          "id": "original:corp-sites:biblia",
+          "name": "비블리아",
+          "repositories": [
+            "biblia"
+          ],
+          "mode": "media-until-restored",
+          "url": null,
+          "optionalDemos": [],
+          "details": "비블리아의 브랜드와 서비스를 소개하는 홈페이지.",
+          "skills": [
+            "React",
+            "Tailwind CSS",
+            "GSAP"
+          ],
+          "sourceEntryId": "original:corp-sites:biblia",
+          "sourceName": "비블리아",
+          "summary": "비블리아의 브랜드와 서비스를 소개하는 홈페이지.",
+          "repoUrls": [
+            "https://github.com/blackstarzck/biblia"
+          ],
+          "deployments": [
+            {
+              "url": "https://hibiblia.com",
+              "httpStatus": 503
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "A01-09",
+      "room": "01",
+      "order": 14,
+      "groupId": "short-form-work",
+      "title": "짧게 남는 지식",
+      "shortName": "ShortForm",
+      "projectName": "ShortForm Knowledge",
+      "visualConcept": "실제 콘텐츠 화면의 카드·타이포그래피·탐색 리듬을 구성",
+      "placard": "짧은 콘텐츠를 읽고 다음 지식으로 이동하는 화면을 보여줍니다.",
+      "description": "ShortForm Knowledge의 카드와 타이포그래피, 콘텐츠 탐색 화면을 전시합니다. 실제 배포본에서 읽기와 이동의 리듬을 살펴볼 수 있습니다.",
+      "lookFor": "카드 구성·읽기 순서·콘텐츠 탐색",
+      "role": null,
+      "scope": null,
+      "kind": "회화",
+      "slotKind": "wall",
+      "projects": [
+        {
+          "id": "additional:short-form",
+          "name": "ShortForm Knowledge",
+          "repositories": [
+            "short-form"
+          ],
+          "mode": "iframe",
+          "url": "https://short-form-phi.vercel.app",
+          "optionalDemos": [],
+          "sourceEntryId": "additional:short-form",
+          "sourceName": "ShortForm Knowledge",
+          "summary": "실제 콘텐츠 화면의 카드·타이포그래피·탐색 리듬을 구성",
+          "repoUrls": [
+            "https://github.com/blackstarzck/short-form"
+          ],
+          "deployments": [
+            {
+              "url": "https://short-form-phi.vercel.app",
+              "httpStatus": 200
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "A01-08",
+      "room": "01",
+      "order": 15,
+      "groupId": "millie-admin-dashboard",
+      "title": "서가 뒤의 관제실",
+      "shortName": "밀리 관리자",
+      "projectName": "밀리 관리자 대시보드",
+      "visualConcept": "콘텐츠·회원·운영 메뉴가 한 구조로 정리되는 회화와 개인 프로젝트 화면",
+      "placard": "흩어진 운영 업무를 하나의 화면 체계로 정리했습니다.",
+      "description": "콘텐츠 플랫폼의 운영 메뉴를 하나의 관리자 정보 구조로 풀어낸 개인 프론트엔드 프로젝트입니다. 표·차트·편집기·드래그 앤 드롭·권한 설정 화면을 구현했습니다.",
+      "lookFor": "메뉴 구조와 운영 화면의 일관성",
+      "role": "관리자 정보 구조·UI 설계 및 프론트엔드 구현",
+      "scope": "React 18·React Router·Ant Design 기반 프론트엔드 프로토타입. 표·차트·편집기·드래그 앤 드롭·권한 설정 화면을 구현했습니다.",
+      "kind": "회화",
+      "slotKind": "wall",
+      "projects": [
+        {
+          "id": "original:millie-admin-dashboard",
+          "name": "밀리 관리자 대시보드",
+          "repositories": [
+            "millie-admin-dashboard"
+          ],
+          "mode": "iframe",
+          "url": "https://millie-admin-dashboard.vercel.app/#/dashboard",
+          "optionalDemos": [],
+          "sourceEntryId": "original:millie-admin-dashboard",
+          "sourceName": "밀리 관리자 대시보드",
+          "summary": "복잡한 콘텐츠 플랫폼의 운영 업무를 하나의 관리자 정보 구조와 화면 체계로 풀어낸 개인 프로젝트입니다.",
+          "repoUrls": [
+            "https://github.com/blackstarzck/millie-admin-dashboard"
+          ],
+          "deployments": [
+            {
+              "url": "https://millie-admin-dashboard.vercel.app/#/dashboard",
+              "httpStatus": 200
+            },
+            {
+              "url": "https://millie-admin-dashboard.vercel.app",
+              "httpStatus": 200
+            },
+            {
+              "url": "https://blackstarzck.github.io/millie-admin-dashboard/",
+              "httpStatus": 200
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "A01-07",
+      "room": "01",
+      "order": 16,
+      "groupId": "dealer-web",
+      "title": "선택의 표면",
+      "shortName": "모두가딜러 웹",
+      "projectName": "모두가딜러 · 웹서비스",
+      "visualConcept": "차량 탐색과 반응형 화면이 달라지는 사용자 흐름을 연속 화면으로 표현",
+      "placard": "퍼블리싱에서 프론트엔드로, 사용자 흐름을 따라 작업 범위를 넓혔습니다.",
+      "description": "중고차 서비스의 반응형 웹 UI와 신규 콘텐츠를 구현한 실무 사례입니다. 화면 구성과 데이터 조회, 여러 브라우저 상호작용을 연결한 과정을 소개합니다.",
+      "lookFor": "차량 탐색 흐름·반응형 화면·담당 구현 범위",
+      "role": "반응형 웹 UI 구현 및 신규 콘텐츠 개발",
+      "scope": "HTML·CSS·JavaScript·jQuery·Ajax, MySQL·PHP 데이터 조회, Swiper.js·GSAP·SmartEditor 도입.",
+      "kind": "회화",
+      "slotKind": "wall",
+      "projects": [
+        {
+          "id": "original:dealer-web",
+          "name": "모두가딜러 · 웹서비스",
+          "repositories": [],
+          "mode": "case-study",
+          "url": null,
+          "optionalDemos": [],
+          "sourceEntryId": "original:dealer-web",
+          "sourceName": "모두가딜러 · 웹서비스",
+          "summary": "중고차 서비스의 반응형 웹과 신규 콘텐츠를 만들며 퍼블리싱에서 프론트엔드로 넘어왔습니다.",
+          "repoUrls": [],
+          "deployments": []
+        }
+      ]
+    },
+    {
+      "id": "P01-02-B",
+      "room": "01",
+      "order": 17,
+      "groupId": "legacy-cleanup",
+      "title": "덜어낸 무게",
+      "shortName": "성능 개선",
+      "projectName": "레거시 정리 · 성능 개선",
+      "visualConcept": "불필요한 호출과 자산을 덜어내기 전후의 구조를 대비",
+      "placard": "불필요한 호출과 쓰지 않는 자산을 덜어낸 기록입니다.",
+      "description": "서비스의 불필요한 호출과 사용하지 않는 자산을 정리한 실무 사례입니다. 변경 전후의 코드·자산 구조와 확인 가능한 개선 근거를 함께 보여줍니다.",
+      "lookFor": "정리 대상·변경 내용·검증 근거",
+      "role": "성능 개선 및 레거시 코드 정리",
+      "scope": null,
+      "kind": "회화",
+      "slotKind": "panel",
+      "projects": [
+        {
+          "id": "original:legacy-cleanup",
+          "name": "레거시 정리 · 성능 개선",
+          "repositories": [],
+          "mode": "case-study",
+          "url": null,
+          "optionalDemos": [],
+          "sourceEntryId": "original:legacy-cleanup",
+          "sourceName": "레거시 정리 · 성능 개선",
+          "summary": "불필요한 호출과 쓰지 않는 자산을 걷어내 유지보수 비용을 줄였습니다.",
+          "repoUrls": [],
+          "deployments": []
+        }
+      ]
+    },
+    {
+      "id": "A01-06",
+      "room": "01",
+      "order": 18,
+      "groupId": "dealer-admin",
+      "title": "반복을 덜어내는 손",
+      "shortName": "모두가딜러 관리",
+      "projectName": "모두가딜러 · 관리자",
+      "visualConcept": "조건별 입력·일괄 적용·미리보기의 전후를 대비하는 작업 기록",
+      "placard": "반복 입력을 줄이기 위해 운영 화면의 동작을 바꿨습니다.",
+      "description": "중고차 서비스 관리자에 일괄 적용과 미리보기를 넣어 반복 작업을 줄인 사례입니다. 개선 전후의 조작 흐름과 실제 담당한 UI 변경을 비교합니다.",
+      "lookFor": "반복 입력 → 일괄 적용 → 미리보기의 변화",
+      "role": "관리자 페이지 UI 개선 및 운영 효율화",
+      "scope": null,
+      "kind": "회화",
+      "slotKind": "wall",
+      "projects": [
+        {
+          "id": "original:dealer-admin",
+          "name": "모두가딜러 · 관리자",
+          "repositories": [],
+          "mode": "case-study",
+          "url": null,
+          "optionalDemos": [],
+          "sourceEntryId": "original:dealer-admin",
+          "sourceName": "모두가딜러 · 관리자",
+          "summary": "반복 입력이 많던 관리자 화면에 일괄 적용과 미리보기를 넣어 운영 시간을 줄였습니다.",
+          "repoUrls": [],
+          "deployments": []
+        }
+      ]
+    },
+    {
+      "id": "P01-02-F",
+      "room": "01",
+      "order": 19,
+      "groupId": "docs-comm",
+      "title": "같은 그림을 보는 법",
+      "shortName": "문서·협업",
+      "projectName": "문서화 · 비개발 직군 협업",
+      "visualConcept": "기획·디자인·개발이 같은 흐름을 이해하도록 만든 문서와 도식",
+      "placard": "다른 직군도 같은 흐름을 이해할 수 있도록 문서로 연결했습니다.",
+      "description": "기능과 정책을 기록하고 비개발 직군이 읽을 수 있는 도식과 협업 자료를 만들었습니다. 화면과 정책이 어떻게 이어지는지 실제 산출물로 소개합니다.",
+      "lookFor": "정책 문서·흐름도·협업 자료",
+      "role": "기능·정책 문서화 및 협업 자료 제작",
+      "scope": null,
+      "kind": "회화",
+      "slotKind": "panel",
+      "projects": [
+        {
+          "id": "original:docs-comm",
+          "name": "문서화 · 비개발 직군 협업",
+          "repositories": [],
+          "mode": "case-study",
+          "url": null,
+          "optionalDemos": [],
+          "sourceEntryId": "original:docs-comm",
+          "sourceName": "문서화 · 비개발 직군 협업",
+          "summary": "기능과 정책을 문서로 남기고, 비개발 직군이 읽을 수 있는 자료를 따로 만들었습니다.",
+          "repoUrls": [],
+          "deployments": []
+        }
+      ]
+    },
+    {
+      "id": "A02-01",
+      "room": "02",
+      "order": 1,
+      "groupId": "doc-merge",
+      "title": "흩어짐의 끝",
+      "shortName": "문서 통합",
+      "projectName": "문서 통합 관리 서비스",
+      "visualConcept": "여러 문서와 표가 하나의 데이터 격자로 합쳐지는 회화",
+      "placard": "여러 엑셀에 반복하던 입력을 한 시스템으로 합쳤습니다.",
+      "description": "같은 내용을 여러 문서에 입력하던 업무를 통합한 서비스입니다. 기획부터 프론트엔드·서버·데이터베이스까지 전 과정을 직접 개발했습니다.",
+      "lookFor": "통합 화면 → 데이터 구조 → 서버 설계",
+      "role": "기획부터 프론트엔드·백엔드까지 전 과정 1인 개발",
+      "scope": "React 18·Vite 6·TypeScript 프론트엔드, Redux Toolkit·SWR 상태 관리, NestJS·TypeORM·PostgreSQL API·DB 설계.",
+      "kind": "회화",
+      "slotKind": "wall",
+      "projects": [
+        {
+          "id": "original:doc-merge",
+          "name": "문서 통합 관리 서비스",
+          "repositories": [
+            "doc-merge",
+            "doc-merge-server"
+          ],
+          "mode": "iframe",
+          "url": "https://blackstarzck.github.io/doc-merge/",
+          "optionalDemos": [],
+          "sourceEntryId": "original:doc-merge",
+          "sourceName": "문서 통합 관리 서비스",
+          "summary": "같은 내용을 여러 엑셀에 반복 입력하던 업무를, 기획부터 서버까지 혼자 만들어 한 시스템으로 합쳤습니다.",
+          "repoUrls": [
+            "https://github.com/blackstarzck/doc-merge",
+            "https://github.com/blackstarzck/doc-merge-server"
+          ],
+          "deployments": [
+            {
+              "url": "https://blackstarzck.github.io/doc-merge/",
+              "httpStatus": 200
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "A02-02",
+      "room": "02",
+      "order": 2,
+      "groupId": "nest-sns",
+      "title": "관계의 골격",
+      "shortName": "NestJS",
+      "projectName": "NestJS 학습",
+      "visualConcept": "인증·게시글·채팅 모듈과 관계를 층위가 있는 설계도로 표현",
+      "placard": "인증에서 실시간 채팅까지, 서버의 골격을 직접 쌓았습니다.",
+      "description": "NestJS로 인증·게시글·채팅을 연결하며 서버 구성을 학습한 기록입니다. 모듈과 데이터 관계, 요청이 처리되는 과정을 설계도와 코드로 보여줍니다.",
+      "lookFor": "인증·게시글·채팅 모듈의 연결",
+      "role": "학습",
+      "scope": null,
+      "kind": "회화",
+      "slotKind": "wall",
+      "projects": [
+        {
+          "id": "original:nest-sns",
+          "name": "NestJS 학습",
+          "repositories": [
+            "cf_sns"
+          ],
+          "mode": "case-study",
+          "url": null,
+          "optionalDemos": [],
+          "sourceEntryId": "original:nest-sns",
+          "sourceName": "NestJS 학습",
+          "summary": "인증부터 실시간 채팅까지, 서버 한 벌을 빈 폴더에서 얹어 본 기록입니다.",
+          "repoUrls": [
+            "https://github.com/blackstarzck/cf_sns"
+          ],
+          "deployments": []
+        }
+      ]
+    },
+    {
+      "id": "P02-01-F",
+      "room": "02",
+      "order": 3,
+      "groupId": "my-skills",
+      "title": "반복의 문법",
+      "shortName": "SKILL",
+      "projectName": "반복 작업을 SKILL로 만드는 법",
+      "visualConcept": "반복되는 판단을 절차와 검사 기준으로 정리한 지침 표본",
+      "placard": "반복되는 판단을, 다시 사용할 수 있는 작업 절차로 만들었습니다.",
+      "description": "발동 조건·작업 범위·읽을 자료·검증 방법을 갖춘 SKILL을 설계한 사례입니다. 관련 프로젝트에서 어떤 판단을 절차로 고정했는지 보여줍니다.",
+      "lookFor": "반복 작업 → 절차 → 검사 기준",
+      "role": "반복 작업 절차 설계·적용",
+      "scope": null,
+      "kind": "회화",
+      "slotKind": "panel",
+      "projects": [
+        {
+          "id": "original:my-skills",
+          "name": "반복 작업을 SKILL로 만드는 법",
+          "repositories": [
+            "v12",
+            "sample-03"
+          ],
+          "mode": "case-study",
+          "url": null,
+          "optionalDemos": [],
+          "sourceEntryId": "original:my-skills",
+          "sourceName": "반복 작업을 SKILL로 만드는 법",
+          "summary": "자주 반복되는 판단을 발동 조건·작업 범위·읽을 자료·검증 방법이 있는 절차로 바꿉니다.",
+          "repoUrls": [
+            "https://github.com/blackstarzck/v12",
+            "https://github.com/blackstarzck/sample-03"
+          ],
+          "deployments": [
+            {
+              "url": "https://v12-weld.vercel.app",
+              "httpStatus": 200
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "A02-03",
+      "room": "02",
+      "order": 4,
+      "groupId": "gate-harness",
+      "title": "기억하는 문",
+      "shortName": "게이트 하네스",
+      "projectName": "요구사항 게이트 하네스",
+      "visualConcept": "기록의 선이 관문을 지나고 중단 지점에서 다시 이어지는 구조",
+      "placard": "문서를 확인해야 변경할 수 있고, 실패한 작업은 기록에서 이어집니다.",
+      "description": "요구사항을 확인하는 관문과 실행 기록을 결합한 AI 작업 환경입니다. 실행 조건과 실패 시 복구 흐름을 사례로 살펴봅니다.",
+      "lookFor": "요구사항 확인 → 실행 → 중단 기록 → 재개",
+      "role": "게이트 하네스 설계·적용",
+      "scope": null,
+      "kind": "회화",
+      "slotKind": "wall",
+      "projects": [
+        {
+          "id": "original:gate-harness",
+          "name": "요구사항 게이트 하네스",
+          "repositories": [
+            "requirement-gated-python-harness"
+          ],
+          "mode": "case-study",
+          "url": null,
+          "optionalDemos": [],
+          "sourceEntryId": "original:gate-harness",
+          "sourceName": "요구사항 게이트 하네스",
+          "summary": "문서를 확인하지 않으면 변경할 수 없고, 실패해도 같은 작업 기록에서 다시 이어갈 수 있는 AI 실행 환경입니다.",
+          "repoUrls": [
+            "https://github.com/blackstarzck/requirement-gated-python-harness"
+          ],
+          "deployments": []
+        }
+      ]
+    },
+    {
+      "id": "A02-04",
+      "room": "02",
+      "order": 5,
+      "groupId": "multi-agent",
+      "title": "이어받는 생각",
+      "shortName": "AI 파이프라인",
+      "projectName": "AI 개발 파이프라인",
+      "visualConcept": "서로 다른 작업자가 같은 맥락과 검증 근거를 이어받는 전달 구조",
+      "placard": "작업자가 바뀌어도 맥락과 검증 근거가 이어지도록 설계했습니다.",
+      "description": "Codex와 Claude가 같은 작업 공간·맥락·검증 근거를 이어받는 개발 흐름입니다. 작업의 시작과 인수인계, 검증까지 이어지는 수명주기를 소개합니다.",
+      "lookFor": "작업 기록·인수인계 문서·검증 결과",
+      "role": "AI 작업 수명주기·인수인계·검증 흐름 설계",
+      "scope": null,
+      "kind": "회화",
+      "slotKind": "wall",
+      "projects": [
+        {
+          "id": "original:multi-agent",
+          "name": "AI 개발 파이프라인",
+          "repositories": [
+            "topik-project-v13"
+          ],
+          "mode": "case-study",
+          "url": null,
+          "optionalDemos": [],
+          "sourceEntryId": "original:multi-agent",
+          "sourceName": "AI 개발 파이프라인",
+          "summary": "Codex와 Claude가 바뀌어도 같은 작업 공간·맥락·검증 근거를 이어받는 개발 흐름입니다.",
+          "repoUrls": [
+            "https://github.com/blackstarzck/topik-project-v13"
+          ],
+          "deployments": []
+        }
+      ]
+    },
+    {
+      "id": "P02-03-F",
+      "room": "02",
+      "order": 6,
+      "groupId": "ai-squads",
+      "title": "생각의 합의",
+      "shortName": "에이전트 IDE",
+      "projectName": "비개발자용 에이전트 IDE",
+      "visualConcept": "PM·설계·개발·QA 및 위원회 역할의 의견과 이견을 연결하는 지도",
+      "placard": "역할을 나누고, 서로 다른 의견이 사라지지 않도록 기록합니다.",
+      "description": "PM·설계·개발·QA의 작업 흐름을 보여주는 비주얼 IDE와 AI 위원회 실험입니다. 화면과 역할별 작업, 이견을 보존하는 구조를 소개합니다.",
+      "lookFor": "역할별 작업 흐름과 의견 기록",
+      "role": "개인 프로젝트 · 설계 및 구현",
+      "scope": null,
+      "kind": "회화",
+      "slotKind": "panel",
+      "projects": [
+        {
+          "id": "original:ai-squads",
+          "name": "비개발자용 에이전트 IDE",
+          "repositories": [
+            "ai-squads",
+            "profitpal"
+          ],
+          "mode": "case-study",
+          "url": null,
+          "optionalDemos": [],
+          "sourceEntryId": "original:ai-squads",
+          "sourceName": "비개발자용 에이전트 IDE",
+          "summary": "PM·설계·개발·QA의 작업 흐름을 보여주는 비주얼 IDE와, 이견을 보존하는 AI 위원회 실험입니다.",
+          "repoUrls": [
+            "https://github.com/blackstarzck/ai-squads",
+            "https://github.com/blackstarzck/profitpal"
+          ],
+          "deployments": []
+        }
+      ]
+    },
+    {
+      "id": "A02-05",
+      "room": "02",
+      "order": 7,
+      "groupId": "verify-loop",
+      "title": "되묻는 기계",
+      "shortName": "TOPIK 검증",
+      "projectName": "TOPIK AI 검증 하네스",
+      "visualConcept": "문서·화면·데이터·테스트 사이를 반복하는 검증의 궤도",
+      "placard": "코드 변경을 문서·화면·데이터 경계와 함께 되짚습니다.",
+      "description": "TOPIK 프로젝트에서 문서·구조·코드·화면을 함께 확인하는 검증 하네스입니다. 변경에 따라 어떤 검사가 실행되고 근거가 남는지 보여줍니다.",
+      "lookFor": "변경 내용과 검증 항목의 대응",
+      "role": "문서·구조·코드·화면 검증 하네스 설계",
+      "scope": null,
+      "kind": "회화",
+      "slotKind": "wall",
+      "projects": [
+        {
+          "id": "original:verify-loop",
+          "name": "TOPIK AI 검증 하네스",
+          "repositories": [
+            "topik-ai"
+          ],
+          "mode": "case-study",
+          "url": null,
+          "optionalDemos": [],
+          "sourceEntryId": "original:verify-loop",
+          "sourceName": "TOPIK AI 검증 하네스",
+          "summary": "문서·화면 경로·데이터 경계·테스트가 함께 움직이는지를 변경마다 반복 검사합니다.",
+          "repoUrls": [
+            "https://github.com/blackstarzck/topik-ai"
+          ],
+          "deployments": [
+            {
+              "url": "https://topik-ai.vercel.app",
+              "httpStatus": 200
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "A02-END",
+      "room": "02",
+      "order": 8,
+      "groupId": "planit",
+      "title": "생각의 설계도",
+      "shortName": "Planit",
+      "projectName": "Planit AI 기획 워크스페이스",
+      "visualConcept": "PRD·기능명세·유저플로우·와이어프레임을 네 겹의 문서로 구성",
+      "placard": "아이디어가 PRD·기능명세·플로우·화면으로 이어지는 과정을 보여줍니다.",
+      "description": "Planit은 로컬에서 실행하는 AI 기획 워크스페이스입니다. 기존 검수용 도서관 예제로 촬영한 대시보드와 네 문서 화면을 선택·확대하며 기획 산출물의 연결을 살펴봅니다.",
+      "lookFor": "PRD → 기능명세 → 유저플로우 → 와이어프레임",
+      "role": null,
+      "scope": null,
+      "kind": "회화",
+      "slotKind": "wall",
+      "projects": [
+        {
+          "id": "additional:project-manager",
+          "name": "Planit AI 기획 워크스페이스",
+          "repositories": [
+            "project-manager"
+          ],
+          "mode": "local-capture",
+          "url": null,
+          "optionalDemos": [],
+          "sourceEntryId": "additional:project-manager",
+          "sourceName": "Planit AI 기획 워크스페이스",
+          "summary": "PRD·기능명세·유저플로우·와이어프레임을 네 겹의 문서로 구성",
+          "repoUrls": [
+            "https://github.com/blackstarzck/project-manager"
+          ],
+          "deployments": [
+            {
+              "url": "https://project-manager-eight-tau.vercel.app",
+              "httpStatus": 200
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "A02-10",
+      "room": "02",
+      "order": 9,
+      "groupId": "storyquest-editor",
+      "title": "장면을 짓는 도구",
+      "shortName": "StoryQuest CMS",
+      "projectName": "StoryQuest Admin",
+      "visualConcept": "원고와 3D 에셋을 장면에 연결하는 CMS의 구조를 전시",
+      "placard": "원고와 3D 에셋을, 하나의 장면으로 연결하는 편집 화면입니다.",
+      "description": "StoryQuest 콘텐츠 CMS에서 원고와 에셋을 장면에 연결하는 구조를 소개합니다. 배포된 화면과 콘텐츠 구성 자료를 함께 전시합니다.",
+      "lookFor": "콘텐츠 편집 화면과 장면 구성 구조",
+      "role": null,
+      "scope": null,
+      "kind": "회화",
+      "slotKind": "wall",
+      "projects": [
+        {
+          "id": "additional:admin-story-quest",
+          "name": "StoryQuest 콘텐츠 CMS",
+          "repositories": [
+            "admin-story-quest"
+          ],
+          "mode": "iframe",
+          "url": "https://admin-story-quest.vercel.app",
+          "optionalDemos": [],
+          "sourceEntryId": "additional:admin-story-quest",
+          "sourceName": "StoryQuest 콘텐츠 CMS",
+          "summary": "원고와 3D 에셋을 장면에 연결하는 CMS의 구조를 전시",
+          "repoUrls": [
+            "https://github.com/blackstarzck/admin-story-quest"
+          ],
+          "deployments": [
+            {
+              "url": "https://admin-story-quest.vercel.app",
+              "httpStatus": 200
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "P02-04-F",
+      "room": "02",
+      "order": 10,
+      "groupId": "video-agent",
+      "title": "검사되는 상상",
+      "shortName": "AI 영상 루프",
+      "projectName": "검사 가능한 AI 영상 제작 루프",
+      "visualConcept": "프롬프트·검사·생성 결과의 차이를 비교하는 제작 과정 전시",
+      "placard": "생성하기 전에 규칙을 확인하는 영상 제작 흐름을 만들었습니다.",
+      "description": "36개 실행 프롬프트를 감사해 규칙 이탈을 찾고 생성 전 검사기로 연결한 사례입니다. 프롬프트·검사 기록·결과 영상을 함께 비교합니다.",
+      "lookFor": "제작 규칙 → 검사 기록 → 생성 결과",
+      "role": "AI 영상 제작 계약·검증 루프 설계",
+      "scope": null,
+      "kind": "회화",
+      "slotKind": "panel",
+      "projects": [
+        {
+          "id": "original:video-agent",
+          "name": "검사 가능한 AI 영상 제작 루프",
+          "repositories": [
+            "sample-03"
+          ],
+          "mode": "case-study",
+          "url": null,
+          "optionalDemos": [],
+          "sourceEntryId": "original:video-agent",
+          "sourceName": "검사 가능한 AI 영상 제작 루프",
+          "summary": "36개 실행 프롬프트를 감사해 규칙 이탈을 찾고, 생성 전에 검사기가 막는 제작 루프로 바꿨습니다.",
+          "repoUrls": [
+            "https://github.com/blackstarzck/sample-03"
+          ],
+          "deployments": []
+        }
+      ]
+    },
+    {
+      "id": "A02-09",
+      "room": "02",
+      "order": 11,
+      "groupId": "vive-reader",
+      "title": "읽은 뒤에 남는 것",
+      "shortName": "VIVE",
+      "projectName": "VIVE 독서 보조 도구",
+      "visualConcept": "책의 하이라이트·메모·요약을 지식 자산으로 잇는 독서 보조 도구",
+      "placard": "읽은 문장과 메모가 독서 이후에도 남도록 연결합니다.",
+      "description": "하이라이트·메모·요약을 지식 자산으로 이어가는 독서 보조 도구입니다. 화면과 저장소 자료를 통해 정보가 연결되는 구성을 소개합니다.",
+      "lookFor": "하이라이트·메모·요약의 연결",
+      "role": null,
+      "scope": null,
+      "kind": "회화",
+      "slotKind": "wall",
+      "projects": [
+        {
+          "id": "additional:vive",
+          "name": "VIVE 독서 보조 도구",
+          "repositories": [
+            "vive"
+          ],
+          "mode": "media-until-restored",
+          "url": null,
+          "optionalDemos": [],
+          "sourceEntryId": "additional:vive",
+          "sourceName": "VIVE 독서 보조 도구",
+          "summary": "책의 하이라이트·메모·요약을 지식 자산으로 잇는 독서 보조 도구",
+          "repoUrls": [
+            "https://github.com/blackstarzck/vive"
+          ],
+          "deployments": [
+            {
+              "url": "https://vive-nine.vercel.app",
+              "httpStatus": 404
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "A02-08",
+      "room": "02",
+      "order": 12,
+      "groupId": "trading-lab",
+      "title": "불확실성을 다루는 여덟 설계",
+      "shortName": "자동매매 8종",
+      "projectName": "자동매매 시스템",
+      "visualConcept": "여덟 저장소의 구조·데이터·연결 방식 변화를 시간축으로 표현",
+      "placard": "같은 문제를 여덟 번 설계하며, 구조가 달라진 이유를 남겼습니다.",
+      "description": "업비트 자동매매를 여덟 저장소에 걸쳐 만들고 다시 구성한 기록입니다. 버전별 데이터와 연결 구조를 비교하며 체험 화면에서는 구조와 UI를 살펴봅니다.",
+      "lookFor": "버전별 구조 비교·데이터 연결·대시보드 화면",
+      "role": "개인 프로젝트 · 설계 및 구현",
+      "scope": null,
+      "kind": "회화",
+      "slotKind": "wall",
+      "projects": [
+        {
+          "id": "original:trading-lab:zenith",
+          "name": "zenith",
+          "repositories": [
+            "zenith"
+          ],
+          "mode": "demo-preparation",
+          "url": null,
+          "optionalDemos": [],
+          "details": "업비트 자동매매 본체. Python 봇과 React UI가 REST 없이 Supabase를 공유 채널로 쓴다. 손실 리포트와 원인 분석 문서가 함께 있다.",
+          "skills": [
+            "Python",
+            "Supabase",
+            "React"
+          ],
+          "sourceEntryId": "original:trading-lab:zenith",
+          "sourceName": "zenith",
+          "summary": "업비트 자동매매 본체. Python 봇과 React UI가 REST 없이 Supabase를 공유 채널로 쓴다. 손실 리포트와 원인 분석 문서가 함께 있다.",
+          "repoUrls": [
+            "https://github.com/blackstarzck/zenith"
+          ],
+          "deployments": [
+            {
+              "url": "https://zenith-ten-lac.vercel.app",
+              "httpStatus": 200
+            }
+          ]
+        },
+        {
+          "id": "original:trading-lab:zenith-v2",
+          "name": "zenith-v2",
+          "repositories": [
+            "zenith-v2"
+          ],
+          "mode": "case-study",
+          "url": null,
+          "optionalDemos": [],
+          "details": "봇을 zenith_bot 패키지로 다시 묶고 pytest를 붙였다.",
+          "skills": [
+            "Python",
+            "pytest"
+          ],
+          "sourceEntryId": "original:trading-lab:zenith-v2",
+          "sourceName": "zenith-v2",
+          "summary": "봇을 zenith_bot 패키지로 다시 묶고 pytest를 붙였다.",
+          "repoUrls": [
+            "https://github.com/blackstarzck/zenith-v2"
+          ],
+          "deployments": []
+        },
+        {
+          "id": "original:trading-lab:zenith-v3",
+          "name": "zenith-v3",
+          "repositories": [
+            "zenith-v3"
+          ],
+          "mode": "case-study",
+          "url": null,
+          "optionalDemos": [],
+          "details": "docs/prd.md에 적은 매매 명세를 그대로 구현하는 전략 엔진으로 다시 짰다. trader와 web을 나눴다.",
+          "skills": [
+            "Python",
+            "명세 기반 구현"
+          ],
+          "sourceEntryId": "original:trading-lab:zenith-v3",
+          "sourceName": "zenith-v3",
+          "summary": "docs/prd.md에 적은 매매 명세를 그대로 구현하는 전략 엔진으로 다시 짰다. trader와 web을 나눴다.",
+          "repoUrls": [
+            "https://github.com/blackstarzck/zenith-v3"
+          ],
+          "deployments": []
+        },
+        {
+          "id": "original:trading-lab:zenith-v4",
+          "name": "zenith-v4",
+          "repositories": [
+            "zenith-v4"
+          ],
+          "mode": "case-study",
+          "url": null,
+          "optionalDemos": [],
+          "details": "모노레포로 재작성. 연결 상태를 상태머신으로 정리하고 타임아웃·지터 백오프 재시도, runId와 seq로 중복·순서역전을 막았다.",
+          "skills": [
+            "TypeScript",
+            "WebSocket",
+            "재시도 · 순서 보증"
+          ],
+          "sourceEntryId": "original:trading-lab:zenith-v4",
+          "sourceName": "zenith-v4",
+          "summary": "모노레포로 재작성. 연결 상태를 상태머신으로 정리하고 타임아웃·지터 백오프 재시도, runId와 seq로 중복·순서역전을 막았다.",
+          "repoUrls": [
+            "https://github.com/blackstarzck/zenith-v4"
+          ],
+          "deployments": []
+        },
+        {
+          "id": "original:trading-lab:coin-lab",
+          "name": "coin-lab",
+          "repositories": [
+            "coin-lab"
+          ],
+          "mode": "case-study",
+          "url": null,
+          "optionalDemos": [],
+          "details": "backend·frontend·workers·infra로 나눠 다시 세운 판. PostgreSQL 함수까지 직접 썼다.",
+          "skills": [
+            "Python",
+            "PostgreSQL",
+            "워커"
+          ],
+          "sourceEntryId": "original:trading-lab:coin-lab",
+          "sourceName": "coin-lab",
+          "summary": "backend·frontend·workers·infra로 나눠 다시 세운 판. PostgreSQL 함수까지 직접 썼다.",
+          "repoUrls": [
+            "https://github.com/blackstarzck/coin-lab"
+          ],
+          "deployments": []
+        },
+        {
+          "id": "original:trading-lab:coin-lab-v2",
+          "name": "coin-lab-v2",
+          "repositories": [
+            "coin-lab-v2"
+          ],
+          "mode": "iframe",
+          "url": "https://frontend-eta-six-54.vercel.app",
+          "optionalDemos": [],
+          "details": "전략 실험 대시보드. 디자인 시스템을 문서로 먼저 정하고 화면을 맞췄다.",
+          "skills": [
+            "디자인 시스템",
+            "Python",
+            "React"
+          ],
+          "sourceEntryId": "original:trading-lab:coin-lab-v2",
+          "sourceName": "coin-lab-v2",
+          "summary": "전략 실험 대시보드. 디자인 시스템을 문서로 먼저 정하고 화면을 맞췄다.",
+          "repoUrls": [
+            "https://github.com/blackstarzck/coin-lab-v2"
+          ],
+          "deployments": [
+            {
+              "url": "https://frontend-eta-six-54.vercel.app",
+              "httpStatus": 200
+            }
+          ]
+        },
+        {
+          "id": "original:trading-lab:profitpal",
+          "name": "profitpal",
+          "repositories": [
+            "profitpal"
+          ],
+          "mode": "case-study",
+          "url": null,
+          "optionalDemos": [],
+          "details": "차트·뉴스·고래 지갑을 각각 보는 에이전트의 판단을 의장이 취합하는 위원회 구조.",
+          "skills": [
+            "멀티 에이전트",
+            "Python"
+          ],
+          "sourceEntryId": "original:trading-lab:profitpal",
+          "sourceName": "profitpal",
+          "summary": "차트·뉴스·고래 지갑을 각각 보는 에이전트의 판단을 의장이 취합하는 위원회 구조.",
+          "repoUrls": [
+            "https://github.com/blackstarzck/profitpal"
+          ],
+          "deployments": []
+        },
+        {
+          "id": "original:trading-lab:Haley",
+          "name": "Haley",
+          "repositories": [
+            "Haley"
+          ],
+          "mode": "case-study",
+          "url": null,
+          "optionalDemos": [],
+          "details": "매매 전략을 코드보다 먼저 문서로 정리한 것. 단계별 다이어그램으로 흐름을 굳혔다.",
+          "skills": [
+            "전략 명세"
+          ],
+          "sourceEntryId": "original:trading-lab:Haley",
+          "sourceName": "Haley",
+          "summary": "매매 전략을 코드보다 먼저 문서로 정리한 것. 단계별 다이어그램으로 흐름을 굳혔다.",
+          "repoUrls": [
+            "https://github.com/blackstarzck/Haley"
+          ],
+          "deployments": []
+        }
+      ]
+    },
+    {
+      "id": "A02-07",
+      "room": "02",
+      "order": 13,
+      "groupId": "figma-gen",
+      "title": "하나의 규칙 여러 얼굴",
+      "shortName": "Figma → React",
+      "projectName": "Figma → React 생성기",
+      "visualConcept": "토큰과 테마 변화가 여러 컴포넌트에 함께 반영되는 연속 화면",
+      "placard": "하나의 토큰과 테마가 여러 컴포넌트의 모습을 바꿉니다.",
+      "description": "디자인 토큰을 동기화하고 컴포넌트를 구성하는 UI 라이브러리 스타터입니다. 배포된 라이브러리 화면과 설계 자료를 연결해 규칙의 일관성을 보여줍니다.",
+      "lookFor": "토큰·테마·컴포넌트의 연결",
+      "role": "개인 프로젝트 · 설계 및 구현",
+      "scope": null,
+      "kind": "회화",
+      "slotKind": "wall",
+      "projects": [
+        {
+          "id": "original:figma-gen",
+          "name": "Figma → React 생성기",
+          "repositories": [
+            "chanchan2"
+          ],
+          "mode": "iframe",
+          "url": "https://chanchan2.vercel.app",
+          "optionalDemos": [],
+          "sourceEntryId": "original:figma-gen",
+          "sourceName": "Figma → React 생성기",
+          "summary": "디자인 토큰을 동기화하고 컴포넌트를 만들어내는 UI 라이브러리 스타터입니다.",
+          "repoUrls": [
+            "https://github.com/blackstarzck/chanchan2"
+          ],
+          "deployments": [
+            {
+              "url": "https://chanchan2.vercel.app",
+              "httpStatus": 200
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "A02-06",
+      "room": "02",
+      "order": 14,
+      "groupId": "design-rulebook",
+      "title": "아름다움의 조건",
+      "shortName": "디자인 룰북",
+      "projectName": "디자인 룰북",
+      "visualConcept": "추상적인 디자인 요청이 확인 가능한 규칙으로 구체화되는 문장 회화",
+      "placard": "추상적인 디자인 요청을, 확인 가능한 문장으로 바꿉니다.",
+      "description": "AI가 실행하고 사람이 결과를 확인할 수 있도록 디자인 제약을 정리하는 진행 중 실험입니다. 규칙 문장과 적용 사례를 나란히 보여줍니다.",
+      "lookFor": "요청 문장과 실행 가능한 규칙의 차이",
+      "role": "개인 프로젝트",
+      "scope": null,
+      "kind": "회화",
+      "slotKind": "wall",
+      "projects": [
+        {
+          "id": "original:design-rulebook",
+          "name": "디자인 룰북",
+          "repositories": [
+            "madia-design-rule"
+          ],
+          "mode": "case-study",
+          "url": null,
+          "optionalDemos": [],
+          "sourceEntryId": "original:design-rulebook",
+          "sourceName": "디자인 룰북",
+          "summary": "추상적인 디자인 요청을 AI가 실행하고 사람이 확인할 수 있는 제약 문장으로 바꾸는 진행 중 실험입니다.",
+          "repoUrls": [
+            "https://github.com/blackstarzck/madia-design-rule"
+          ],
+          "deployments": []
+        }
+      ]
+    },
+    {
+      "id": "A03-01",
+      "room": "03",
+      "order": 1,
+      "groupId": "career-map",
+      "title": "경력의 별자리",
+      "shortName": "이전 포트폴리오",
+      "projectName": "이전 포트폴리오 경력 지도",
+      "visualConcept": "이전 포트폴리오의 경력 지도를 회화로 재구성하고 실제 사이트 연결",
+      "placard": "흩어진 프로젝트와 경험을 하나의 경력 지도로 연결했습니다.",
+      "description": "이전 포트폴리오의 경력 지도와 프로젝트 그룹을 실제 사이트에서 살펴봅니다. 이 전시관에서 다루는 프로젝트들의 관계를 확인하는 출발점입니다.",
+      "lookFor": "경력 지도 → 분야별 프로젝트 → 세부 카드",
+      "role": null,
+      "scope": null,
+      "kind": "회화",
+      "slotKind": "wall",
+      "projects": [
+        {
+          "id": "additional:my-website-2026",
+          "name": "이전 포트폴리오 경력 지도",
+          "repositories": [
+            "my-website-2026"
+          ],
+          "mode": "iframe",
+          "url": "https://www.kchanchan.com/",
+          "optionalDemos": [],
+          "sourceEntryId": "additional:my-website-2026",
+          "sourceName": "이전 포트폴리오 경력 지도",
+          "summary": "이전 포트폴리오의 경력 지도를 회화로 재구성하고 실제 사이트 연결",
+          "repoUrls": [
+            "https://github.com/blackstarzck/my-website-2026"
+          ],
+          "deployments": [
+            {
+              "url": "https://chanki-react.vercel.app",
+              "httpStatus": 200
+            },
+            {
+              "url": "https://www.kchanchan.com/",
+              "httpStatus": 200
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "V01",
+      "room": "03",
+      "order": 2,
+      "groupId": "multicanvas-lab",
+      "title": "여러 창 하나의 시선",
+      "shortName": "멀티 캔버스",
+      "projectName": "캔버스 여러 개",
+      "visualConcept": "하나의 렌더러가 여러 창을 채우는 구성의 축소 모형",
+      "placard": "하나의 렌더러가 여러 화면의 자리를 채웁니다.",
+      "description": "한 WebGL 렌더러로 페이지 곳곳의 캔버스 영역을 채우는 실험입니다. 화면 영역과 렌더링 구성이 어떻게 대응하는지 확인합니다.",
+      "lookFor": "여러 화면 영역과 렌더러의 관계",
+      "role": "개인 실험",
+      "scope": null,
+      "kind": "입체 작품",
+      "slotKind": "case",
+      "projects": [
+        {
+          "id": "original:multicanvas-lab",
+          "name": "캔버스 여러 개",
+          "repositories": [
+            "multicanvas"
+          ],
+          "mode": "iframe",
+          "url": "https://blackstarzck.github.io/multicanvas/",
+          "optionalDemos": [],
+          "sourceEntryId": "original:multicanvas-lab",
+          "sourceName": "캔버스 여러 개",
+          "summary": "WebGL 렌더러 하나로 페이지 곳곳의 캔버스 자리를 채웁니다.",
+          "repoUrls": [
+            "https://github.com/blackstarzck/multicanvas"
+          ],
+          "deployments": [
+            {
+              "url": "https://blackstarzck.github.io/multicanvas/",
+              "httpStatus": 200
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "A03-02",
+      "room": "03",
+      "order": 3,
+      "groupId": "canvas-lab",
+      "title": "빛의 문법",
+      "shortName": "파티클",
+      "projectName": "캔버스 · 파티클",
+      "visualConcept": "원본 파티클 예제와 particle 저장소의 움직임을 함께 보여주는 빛의 연작",
+      "placard": "입자의 색과 움직임을 바꾸며, 화면의 형태를 실험했습니다.",
+      "description": "파티클 예제와 형태 변환 프로젝트를 함께 전시한 빛의 연작입니다. 두 배포본을 선택해 서로 다른 입자 표현을 살펴봅니다.",
+      "lookFor": "예제 전환과 입자 표현의 차이",
+      "role": "개인 실험",
+      "scope": null,
+      "kind": "회화",
+      "slotKind": "wall",
+      "projects": [
+        {
+          "id": "original:canvas-lab",
+          "name": "캔버스 · 파티클",
+          "repositories": [
+            "particle-colorful-stars"
+          ],
+          "mode": "iframe",
+          "url": "https://blackstarzck.github.io/particle-colorful-stars/",
+          "optionalDemos": [],
+          "sourceEntryId": "original:canvas-lab",
+          "sourceName": "캔버스 · 파티클",
+          "summary": "한 저장소에 예제를 여섯 개 넣어두고 입자를 다루는 방법을 하나씩 바꿔가며 실험했습니다.",
+          "repoUrls": [
+            "https://github.com/blackstarzck/particle-colorful-stars"
+          ],
+          "deployments": [
+            {
+              "url": "https://blackstarzck.github.io/particle-colorful-stars/",
+              "httpStatus": 200
+            }
+          ]
+        },
+        {
+          "id": "additional:particle",
+          "name": "파티클 형태 변환 실험",
+          "repositories": [
+            "particle"
+          ],
+          "mode": "iframe",
+          "url": "https://blackstarzck.github.io/particle/",
+          "optionalDemos": [],
+          "sourceEntryId": "additional:particle",
+          "sourceName": "파티클 형태 변환 실험",
+          "summary": "원본 파티클 예제와 particle 저장소의 움직임을 함께 보여주는 빛의 연작",
+          "repoUrls": [
+            "https://github.com/blackstarzck/particle"
+          ],
+          "deployments": [
+            {
+              "url": "https://blackstarzck.github.io/particle/",
+              "httpStatus": 200
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "V02",
+      "room": "03",
+      "order": 4,
+      "groupId": "scroll-3d",
+      "title": "스크롤의 지형",
+      "shortName": "스크롤 3D",
+      "projectName": "스크롤 연동 3D",
+      "visualConcept": "스크롤 진행과 카메라·3D 장면의 관계를 길과 높이로 표현",
+      "placard": "페이지를 내리는 움직임이 3D 장면의 이동이 됩니다.",
+      "description": "스크롤 위치와 3D 카메라·장면을 연결한 실험입니다. 작품 안에서 스크롤하며 페이지의 진행과 공간의 변화를 함께 살펴봅니다.",
+      "lookFor": "스크롤 진행과 카메라·장면 변화",
+      "role": "개인 실험",
+      "scope": null,
+      "kind": "입체 작품",
+      "slotKind": "case",
+      "projects": [
+        {
+          "id": "original:scroll-3d",
+          "name": "스크롤 연동 3D",
+          "repositories": [
+            "scroll-page"
+          ],
+          "mode": "iframe",
+          "url": "https://blackstarzck.github.io/scroll-page/",
+          "optionalDemos": [],
+          "sourceEntryId": "original:scroll-3d",
+          "sourceName": "스크롤 연동 3D",
+          "summary": "스크롤 위치에 3D 장면을 묶어, 페이지를 내리면 장면 안으로 들어갑니다.",
+          "repoUrls": [
+            "https://github.com/blackstarzck/scroll-page"
+          ],
+          "deployments": [
+            {
+              "url": "https://blackstarzck.github.io/scroll-page/",
+              "httpStatus": 200
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "A03-03",
+      "room": "03",
+      "order": 5,
+      "groupId": "detect-lab",
+      "title": "사진 속 이름을 찾다",
+      "shortName": "물체 감지",
+      "projectName": "물체 감지",
+      "visualConcept": "사진·감지 좌표·결과 카드가 연결되는 시각적 구성",
+      "placard": "사진 속 물건의 위치와 이름을, 결과 카드로 연결했습니다.",
+      "description": "브라우저에서 사진 속 물건을 감지해 카드로 보여주는 이전 포트폴리오입니다. 이미지 입력과 감지 결과가 화면에 놓이는 방식을 소개합니다.",
+      "lookFor": "사진·감지 영역·결과 카드의 대응",
+      "role": "개인 프로젝트 · 기획 · 디자인 · 구현",
+      "scope": null,
+      "kind": "회화",
+      "slotKind": "wall",
+      "projects": [
+        {
+          "id": "original:detect-lab",
+          "name": "물체 감지",
+          "repositories": [
+            "chanki-portfolio"
+          ],
+          "mode": "iframe",
+          "url": "https://blackstarzck.github.io/chanki-portfolio/",
+          "optionalDemos": [],
+          "sourceEntryId": "original:detect-lab",
+          "sourceName": "물체 감지",
+          "summary": "사진 속 물건을 브라우저에서 잡아 카드로 띄운, 이 사이트 이전의 포트폴리오입니다.",
+          "repoUrls": [
+            "https://github.com/blackstarzck/chanki-portfolio"
+          ],
+          "deployments": [
+            {
+              "url": "https://blackstarzck.github.io/chanki-portfolio/",
+              "httpStatus": 200
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "V03",
+      "room": "03",
+      "order": 6,
+      "groupId": "three-lab",
+      "title": "방을 짓는 연습",
+      "shortName": "3D 모형 5종",
+      "projectName": "3D · 아이소메트릭",
+      "visualConcept": "다섯 3D 모델·카메라 실험을 나란히 비교하는 모형 연작",
+      "placard": "다섯 모형을 통해 시점과 카메라를 다루는 방법을 실험했습니다.",
+      "description": "아이소메트릭 뷰·3D 모델·카메라 컨트롤을 다룬 다섯 저장소의 연작입니다. 각 프로젝트를 선택해 시점과 조작 방식의 차이를 비교합니다.",
+      "lookFor": "모형 선택·시점·카메라 조작",
+      "role": "개인 실험",
+      "scope": null,
+      "kind": "입체 작품",
+      "slotKind": "case",
+      "projects": [
+        {
+          "id": "original:three-lab:isosmetric-02",
+          "name": "isosmetric-02",
+          "repositories": [
+            "isosmetric-02"
+          ],
+          "mode": "iframe",
+          "url": "https://blackstarzck.github.io/isosmetric-02/",
+          "optionalDemos": [],
+          "details": "GLTF로 만든 아이소메트릭 방. 침대·책상·조명까지 배치하고 모델에 붙은 애니메이션을 재생한다.",
+          "skills": [
+            "three.js",
+            "GLTF",
+            "AnimationMixer"
+          ],
+          "sourceEntryId": "original:three-lab:isosmetric-02",
+          "sourceName": "isosmetric-02",
+          "summary": "GLTF로 만든 아이소메트릭 방. 침대·책상·조명까지 배치하고 모델에 붙은 애니메이션을 재생한다.",
+          "repoUrls": [
+            "https://github.com/blackstarzck/isosmetric-02"
+          ],
+          "deployments": [
+            {
+              "url": "https://blackstarzck.github.io/isosmetric-02/",
+              "httpStatus": 200
+            }
+          ]
+        },
+        {
+          "id": "original:three-lab:isosmetric-01",
+          "name": "isosmetric-01",
+          "repositories": [
+            "isosmetric-01"
+          ],
+          "mode": "iframe",
+          "url": "https://blackstarzck.github.io/isosmetric-01/",
+          "optionalDemos": [],
+          "details": "같은 구조로 지은 첫 번째 방. lil-gui를 붙여 값을 실시간으로 만져 가며 감을 잡았다.",
+          "skills": [
+            "three.js",
+            "GLTF",
+            "lil-gui"
+          ],
+          "sourceEntryId": "original:three-lab:isosmetric-01",
+          "sourceName": "isosmetric-01",
+          "summary": "같은 구조로 지은 첫 번째 방. lil-gui를 붙여 값을 실시간으로 만져 가며 감을 잡았다.",
+          "repoUrls": [
+            "https://github.com/blackstarzck/isosmetric-01"
+          ],
+          "deployments": [
+            {
+              "url": "https://blackstarzck.github.io/isosmetric-01/",
+              "httpStatus": 200
+            }
+          ]
+        },
+        {
+          "id": "original:three-lab:custom_model",
+          "name": "custom_model",
+          "repositories": [
+            "custom_model"
+          ],
+          "mode": "iframe",
+          "url": "https://blackstarzck.github.io/custom_model/",
+          "optionalDemos": [],
+          "details": "Blender로 만든 모델을 웹에 올리고 조명 둘을 붙여 밝기와 위치를 조절해 봤다.",
+          "skills": [
+            "Blender",
+            "three.js",
+            "조명"
+          ],
+          "sourceEntryId": "original:three-lab:custom_model",
+          "sourceName": "custom_model",
+          "summary": "Blender로 만든 모델을 웹에 올리고 조명 둘을 붙여 밝기와 위치를 조절해 봤다.",
+          "repoUrls": [
+            "https://github.com/blackstarzck/custom_model"
+          ],
+          "deployments": [
+            {
+              "url": "https://blackstarzck.github.io/custom_model/",
+              "httpStatus": 200
+            }
+          ]
+        },
+        {
+          "id": "original:three-lab:controls-01",
+          "name": "controls-01",
+          "repositories": [
+            "controls-01"
+          ],
+          "mode": "iframe",
+          "url": "https://blackstarzck.github.io/controls-01/",
+          "optionalDemos": [],
+          "details": "카메라의 위치와 각도를 컨트롤 패널로 직접 움직여 보며 3D 좌표계에 익숙해진 것.",
+          "skills": [
+            "OrbitControls",
+            "카메라"
+          ],
+          "sourceEntryId": "original:three-lab:controls-01",
+          "sourceName": "controls-01",
+          "summary": "카메라의 위치와 각도를 컨트롤 패널로 직접 움직여 보며 3D 좌표계에 익숙해진 것.",
+          "repoUrls": [
+            "https://github.com/blackstarzck/controls-01"
+          ],
+          "deployments": [
+            {
+              "url": "https://blackstarzck.github.io/controls-01/",
+              "httpStatus": 200
+            }
+          ]
+        },
+        {
+          "id": "original:three-lab:ilbunidiary",
+          "name": "ilbunidiary",
+          "repositories": [
+            "ilbunidiary"
+          ],
+          "mode": "iframe",
+          "url": "https://blackstarzck.github.io/ilbunidiary/",
+          "optionalDemos": [],
+          "details": "위에서 내려다보는 시점의 방. Raycaster로 바닥을 찍으면 캐릭터가 그 지점까지 걸어간다.",
+          "skills": [
+            "Raycaster",
+            "GLTF",
+            "GSAP"
+          ],
+          "sourceEntryId": "original:three-lab:ilbunidiary",
+          "sourceName": "ilbunidiary",
+          "summary": "위에서 내려다보는 시점의 방. Raycaster로 바닥을 찍으면 캐릭터가 그 지점까지 걸어간다.",
+          "repoUrls": [
+            "https://github.com/blackstarzck/ilbunidiary"
+          ],
+          "deployments": [
+            {
+              "url": "https://blackstarzck.github.io/ilbunidiary/",
+              "httpStatus": 200
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "A03-04",
+      "room": "03",
+      "order": 7,
+      "groupId": "pokemon",
+      "title": "분류의 정원",
+      "shortName": "포켓몬 도감",
+      "projectName": "포켓몬 도감",
+      "visualConcept": "검색·타입·정렬 규칙을 도감의 색과 반복으로 표현",
+      "placard": "이름과 타입으로 찾고, 번호로 정렬하는 작은 도감입니다.",
+      "description": "포켓몬을 이름·번호·특성·타입으로 찾고 번호순으로 정렬하는 프로젝트입니다. 도감 화면의 검색과 분류 규칙을 살펴봅니다.",
+      "lookFor": "검색 입력·타입·번호 정렬의 화면 구성",
+      "role": "개인 프로젝트 · 기획 · 디자인 · 구현",
+      "scope": "React·TypeScript 기반. PokeAPI 데이터, Redux Toolkit 전역 상태와 GSAP 화면 전환을 사용했습니다.",
+      "kind": "회화",
+      "slotKind": "wall",
+      "projects": [
+        {
+          "id": "original:pokemon",
+          "name": "포켓몬 도감",
+          "repositories": [
+            "pokemon"
+          ],
+          "mode": "iframe",
+          "url": "https://chanki-pokedx.netlify.app/",
+          "optionalDemos": [],
+          "sourceEntryId": "original:pokemon",
+          "sourceName": "포켓몬 도감",
+          "summary": "이름·번호·특성·타입으로 포켓몬을 찾고 번호순으로 정렬하는 도감입니다.",
+          "repoUrls": [
+            "https://github.com/blackstarzck/pokemon"
+          ],
+          "deployments": [
+            {
+              "url": "https://chanki-pokedx.netlify.app/",
+              "httpStatus": 200
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "V04",
+      "room": "03",
+      "order": 8,
+      "groupId": "space-3d",
+      "title": "걸을 수 있는 기억",
+      "shortName": "my-space",
+      "projectName": "3D 공간 만들기",
+      "visualConcept": "my-space 마을 장면을 축소한 모형과 실제 탐색 화면",
+      "placard": "하나의 마을을 만들고, 그 안을 걸어 다닐 수 있게 했습니다.",
+      "description": "my-space의 마을 장면을 축소 모형과 실제 배포본으로 연결합니다. 공간 구성과 탐색 경험을 작품 안에서 살펴봅니다.",
+      "lookFor": "마을의 배치와 공간 탐색",
+      "role": "개인 실험",
+      "scope": null,
+      "kind": "입체 작품",
+      "slotKind": "case",
+      "projects": [
+        {
+          "id": "original:space-3d",
+          "name": "3D 공간 만들기",
+          "repositories": [
+            "my-space"
+          ],
+          "mode": "iframe",
+          "url": "https://blackstarzck.github.io/my-space/",
+          "optionalDemos": [],
+          "sourceEntryId": "original:space-3d",
+          "sourceName": "3D 공간 만들기",
+          "summary": "마을 하나를 통째로 세워 걸어 다닐 수 있게 만든 3D 씬입니다.",
+          "repoUrls": [
+            "https://github.com/blackstarzck/my-space"
+          ],
+          "deployments": [
+            {
+              "url": "https://blackstarzck.github.io/my-space/",
+              "httpStatus": 200
+            },
+            {
+              "url": "https://my-space-orcin-eight.vercel.app",
+              "httpStatus": 404
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "A03-05",
+      "room": "03",
+      "order": 9,
+      "groupId": "game-cards",
+      "title": "얼굴이 카드가 되는 순간",
+      "shortName": "능력치 카드",
+      "projectName": "능력치 카드 게임",
+      "visualConcept": "사진 입력·능력치 카드·대결 흐름을 겹친 카드 연작",
+      "placard": "얼굴 사진이 능력치 카드와 대결의 출발점이 됩니다.",
+      "description": "사진으로 능력치 카드를 만들고 보관해 친구와 대결하는 웹게임입니다. 카드 생성 화면과 얼굴 감지·인증·저장 구조를 함께 소개합니다.",
+      "lookFor": "사진 입력 → 카드 생성 → 보관·대결의 흐름",
+      "role": "개인 프로젝트 · 기획 · 디자인 · 구현",
+      "scope": "React 기반 웹게임. Firebase 인증·데이터 저장과 face-api.js 얼굴 감지를 연결했습니다.",
+      "kind": "회화",
+      "slotKind": "wall",
+      "projects": [
+        {
+          "id": "original:game-cards",
+          "name": "능력치 카드 게임",
+          "repositories": [
+            "game-cards"
+          ],
+          "mode": "iframe",
+          "url": "https://simple-gatcha.netlify.app/",
+          "optionalDemos": [],
+          "sourceEntryId": "original:game-cards",
+          "sourceName": "능력치 카드 게임",
+          "summary": "얼굴 사진으로 능력치 카드를 만들고 보관해 친구와 대결하는 웹게임입니다.",
+          "repoUrls": [
+            "https://github.com/blackstarzck/game-cards"
+          ],
+          "deployments": [
+            {
+              "url": "https://simple-gatcha.netlify.app/",
+              "httpStatus": 200
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "V05",
+      "room": "03",
+      "order": 10,
+      "groupId": "gallery-studies",
+      "title": "공간의 세 문법",
+      "shortName": "전시관 3종",
+      "projectName": "3D 전시관 제작 연구",
+      "visualConcept": "my-world-01·02·03 전시관을 비교하는 축소 모형과 제작 기록",
+      "placard": "세 전시관의 차이를 통해 공간과 관람 방식을 비교합니다.",
+      "description": "my-world-01·02·03의 배치와 재료, 관람 경험을 비교하는 제작 연구입니다. 01·02는 배포본을 체험하고 현재 전시관 03은 제작 과정으로 소개합니다.",
+      "lookFor": "세 버전의 공간 구성과 관람 방식",
+      "role": null,
+      "scope": null,
+      "kind": "입체 작품",
+      "slotKind": "case",
+      "projects": [
+        {
+          "id": "additional:my-world-03",
+          "name": "my-world-03 TRIAD 전시관",
+          "repositories": [
+            "my-world-03"
+          ],
+          "mode": "demo-preparation",
+          "url": null,
+          "optionalDemos": [],
+          "sourceEntryId": "additional:my-world-03",
+          "sourceName": "my-world-03 TRIAD 전시관",
+          "summary": "my-world-01·02·03 전시관을 비교하는 축소 모형과 제작 기록",
+          "repoUrls": [
+            "https://github.com/blackstarzck/my-world-03"
+          ],
+          "deployments": [
+            {
+              "url": "https://my-world-03.vercel.app",
+              "httpStatus": 200
+            }
+          ]
+        },
+        {
+          "id": "additional:my-world-01",
+          "name": "my-world-01 전시관",
+          "repositories": [
+            "my-world-01"
+          ],
+          "mode": "iframe",
+          "url": "https://my-world-01-six.vercel.app",
+          "optionalDemos": [],
+          "sourceEntryId": "additional:my-world-01",
+          "sourceName": "my-world-01 전시관",
+          "summary": "my-world-01·02·03 전시관을 비교하는 축소 모형과 제작 기록",
+          "repoUrls": [
+            "https://github.com/blackstarzck/my-world-01"
+          ],
+          "deployments": [
+            {
+              "url": "https://my-world-01-six.vercel.app",
+              "httpStatus": 200
+            }
+          ]
+        },
+        {
+          "id": "additional:my-world-02",
+          "name": "my-world-02 전시관",
+          "repositories": [
+            "my-world-02"
+          ],
+          "mode": "iframe",
+          "url": "https://my-world-02.vercel.app",
+          "optionalDemos": [],
+          "sourceEntryId": "additional:my-world-02",
+          "sourceName": "my-world-02 전시관",
+          "summary": "my-world-01·02·03 전시관을 비교하는 축소 모형과 제작 기록",
+          "repoUrls": [
+            "https://github.com/blackstarzck/my-world-02"
+          ],
+          "deployments": [
+            {
+              "url": "https://my-world-02.vercel.app",
+              "httpStatus": 200
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "A03-END",
+      "room": "03",
+      "order": 11,
+      "groupId": "react-basics",
+      "title": "스물여섯 개의 첫 문장",
+      "shortName": "React 학습 26종",
+      "projectName": "React 학습기",
+      "visualConcept": "26개 학습 프로젝트를 각각 선택할 수 있는 작은 화면의 연작",
+      "placard": "작은 프로젝트 스물여섯 개를 통해 React를 익힌 기록입니다.",
+      "description": "학습·클론·유틸리티 프로젝트 26개를 각각 선택할 수 있는 연작입니다. 프로젝트별 화면과 코드, 확인된 배포본을 통해 학습의 범위를 보여줍니다.",
+      "lookFor": "프로젝트 선택 → 화면·코드·배포 이력",
+      "role": "학습",
+      "scope": null,
+      "kind": "회화",
+      "slotKind": "wall",
+      "projects": [
+        {
+          "id": "original:react-basics:react-todos",
+          "name": "react-todos",
+          "repositories": [
+            "react-todos"
+          ],
+          "mode": "media-until-restored",
+          "url": null,
+          "optionalDemos": [],
+          "details": "투두 앱. 영상을 보며 클론 코딩한 것으로, 목록 추가·완료·삭제를 처음 끝까지 만들어 봤다.",
+          "skills": [
+            "React",
+            "클론 코딩"
+          ],
+          "sourceEntryId": "original:react-basics:react-todos",
+          "sourceName": "react-todos",
+          "summary": "투두 앱. 영상을 보며 클론 코딩한 것으로, 목록 추가·완료·삭제를 처음 끝까지 만들어 봤다.",
+          "repoUrls": [
+            "https://github.com/blackstarzck/react-todos"
+          ],
+          "deployments": [
+            {
+              "url": "https://blackstarzck.github.io/react-todos/",
+              "httpStatus": 200
+            }
+          ]
+        },
+        {
+          "id": "original:react-basics:react-practice6",
+          "name": "react-practice6",
+          "repositories": [
+            "react-practice6"
+          ],
+          "mode": "media-until-restored",
+          "url": null,
+          "optionalDemos": [],
+          "details": "드롭다운이 있는 반응형 네비게이션 바.",
+          "skills": [
+            "React"
+          ],
+          "sourceEntryId": "original:react-basics:react-practice6",
+          "sourceName": "react-practice6",
+          "summary": "드롭다운이 있는 반응형 네비게이션 바.",
+          "repoUrls": [
+            "https://github.com/blackstarzck/react-practice6"
+          ],
+          "deployments": [
+            {
+              "url": "https://blackstarzck.github.io/react-practice6/",
+              "httpStatus": 200
+            }
+          ]
+        },
+        {
+          "id": "original:react-basics:business-card",
+          "name": "business-card",
+          "repositories": [
+            "business-card"
+          ],
+          "mode": "demo-preparation",
+          "url": null,
+          "optionalDemos": [],
+          "details": "명함을 만들어 저장하는 앱. Firebase로 로그인과 저장을, Cloudinary로 이미지 업로드를 붙였다.",
+          "skills": [
+            "Firebase",
+            "Cloudinary"
+          ],
+          "sourceEntryId": "original:react-basics:business-card",
+          "sourceName": "business-card",
+          "summary": "명함을 만들어 저장하는 앱. Firebase로 로그인과 저장을, Cloudinary로 이미지 업로드를 붙였다.",
+          "repoUrls": [
+            "https://github.com/blackstarzck/business-card"
+          ],
+          "deployments": [
+            {
+              "url": "https://blackstarzck.github.io/business-card/",
+              "httpStatus": 200
+            }
+          ]
+        },
+        {
+          "id": "original:react-basics:react-modeal.net2",
+          "name": "react-modeal.net2",
+          "repositories": [
+            "react-modeal.net2"
+          ],
+          "mode": "iframe",
+          "url": "https://modeal-chan.github.io/react-clone-coding/",
+          "optionalDemos": [],
+          "details": "화면 하나를 통째로 따라 만들어 본 클론 코딩. swiper로 캐러셀을 붙였다.",
+          "skills": [
+            "React Router",
+            "swiper"
+          ],
+          "sourceEntryId": "original:react-basics:react-modeal.net2",
+          "sourceName": "react-modeal.net2",
+          "summary": "화면 하나를 통째로 따라 만들어 본 클론 코딩. swiper로 캐러셀을 붙였다.",
+          "repoUrls": [
+            "https://github.com/blackstarzck/react-modeal.net2"
+          ],
+          "deployments": [
+            {
+              "url": "https://blackstarzck.github.io/react-modeal.net2/",
+              "httpStatus": 200
+            },
+            {
+              "url": "https://modeal-chan.github.io/react-clone-coding/",
+              "httpStatus": 200
+            }
+          ]
+        },
+        {
+          "id": "original:react-basics:react-modeal",
+          "name": "react-modeal",
+          "repositories": [
+            "react-modeal"
+          ],
+          "mode": "media-until-restored",
+          "url": null,
+          "optionalDemos": [],
+          "details": "같은 클론의 앞 버전. styled-components와 라우터를 처음 같이 써 봤다.",
+          "skills": [
+            "styled-components",
+            "React Router"
+          ],
+          "sourceEntryId": "original:react-basics:react-modeal",
+          "sourceName": "react-modeal",
+          "summary": "같은 클론의 앞 버전. styled-components와 라우터를 처음 같이 써 봤다.",
+          "repoUrls": [
+            "https://github.com/blackstarzck/react-modeal"
+          ],
+          "deployments": [
+            {
+              "url": "https://blackstarzck.github.io/react-modeal/",
+              "httpStatus": 404
+            }
+          ]
+        },
+        {
+          "id": "original:react-basics:react-face-detect",
+          "name": "react-face-detect",
+          "repositories": [
+            "react-face-detect"
+          ],
+          "mode": "case-study",
+          "url": null,
+          "optionalDemos": [],
+          "details": "face-api.js를 붙여 사진 속 얼굴을 잡아 봤다. 모델 파일을 직접 넣어 브라우저에서 돌린다.",
+          "skills": [
+            "face-api.js",
+            "React"
+          ],
+          "sourceEntryId": "original:react-basics:react-face-detect",
+          "sourceName": "react-face-detect",
+          "summary": "face-api.js를 붙여 사진 속 얼굴을 잡아 봤다. 모델 파일을 직접 넣어 브라우저에서 돌린다.",
+          "repoUrls": [
+            "https://github.com/blackstarzck/react-face-detect"
+          ],
+          "deployments": []
+        },
+        {
+          "id": "original:react-basics:react-youtube",
+          "name": "react-youtube",
+          "repositories": [
+            "react-youtube"
+          ],
+          "mode": "case-study",
+          "url": null,
+          "optionalDemos": [],
+          "details": "유튜브 API를 붙여 영상 목록과 상세를 보여주는 앱. API 호출부를 service로 떼어 냈다.",
+          "skills": [
+            "axios",
+            "API 분리"
+          ],
+          "sourceEntryId": "original:react-basics:react-youtube",
+          "sourceName": "react-youtube",
+          "summary": "유튜브 API를 붙여 영상 목록과 상세를 보여주는 앱. API 호출부를 service로 떼어 냈다.",
+          "repoUrls": [
+            "https://github.com/blackstarzck/react-youtube"
+          ],
+          "deployments": []
+        },
+        {
+          "id": "original:react-basics:react-swiper",
+          "name": "react-swiper",
+          "repositories": [
+            "react-swiper"
+          ],
+          "mode": "media-until-restored",
+          "url": null,
+          "optionalDemos": [],
+          "details": "영화 목록과 상세를 라우팅으로 나눈 앱. 강의를 따라가며 만들었다.",
+          "skills": [
+            "React Router",
+            "axios"
+          ],
+          "sourceEntryId": "original:react-basics:react-swiper",
+          "sourceName": "react-swiper",
+          "summary": "영화 목록과 상세를 라우팅으로 나눈 앱. 강의를 따라가며 만들었다.",
+          "repoUrls": [
+            "https://github.com/blackstarzck/react-swiper"
+          ],
+          "deployments": [
+            {
+              "url": "https://blackstarzck.github.io/react-swiper/",
+              "httpStatus": 200
+            }
+          ]
+        },
+        {
+          "id": "original:react-basics:react-practice4",
+          "name": "react-practice4",
+          "repositories": [
+            "react-practice4"
+          ],
+          "mode": "case-study",
+          "url": null,
+          "optionalDemos": [],
+          "details": "코인 시세 목록. axios로 외부 API를 처음 붙여 본 연습이다.",
+          "skills": [
+            "axios"
+          ],
+          "sourceEntryId": "original:react-basics:react-practice4",
+          "sourceName": "react-practice4",
+          "summary": "코인 시세 목록. axios로 외부 API를 처음 붙여 본 연습이다.",
+          "repoUrls": [
+            "https://github.com/blackstarzck/react-practice4"
+          ],
+          "deployments": []
+        },
+        {
+          "id": "original:react-basics:react-axios-practice",
+          "name": "react-axios-practice",
+          "repositories": [
+            "react-axios-practice"
+          ],
+          "mode": "case-study",
+          "url": null,
+          "optionalDemos": [],
+          "details": "axios 호출 패턴만 떼어 여러 방식으로 써 본 것.",
+          "skills": [
+            "axios"
+          ],
+          "sourceEntryId": "original:react-basics:react-axios-practice",
+          "sourceName": "react-axios-practice",
+          "summary": "axios 호출 패턴만 떼어 여러 방식으로 써 본 것.",
+          "repoUrls": [
+            "https://github.com/blackstarzck/react-axios-practice"
+          ],
+          "deployments": []
+        },
+        {
+          "id": "original:react-basics:react-practice5",
+          "name": "react-practice5",
+          "repositories": [
+            "react-practice5"
+          ],
+          "mode": "case-study",
+          "url": null,
+          "optionalDemos": [],
+          "details": "투두 목록·입력·항목을 컴포넌트로 쪼개 본 연습.",
+          "skills": [
+            "컴포넌트 분리",
+            "react-icons"
+          ],
+          "sourceEntryId": "original:react-basics:react-practice5",
+          "sourceName": "react-practice5",
+          "summary": "투두 목록·입력·항목을 컴포넌트로 쪼개 본 연습.",
+          "repoUrls": [
+            "https://github.com/blackstarzck/react-practice5"
+          ],
+          "deployments": []
+        },
+        {
+          "id": "original:react-basics:react-practice3",
+          "name": "react-practice3",
+          "repositories": [
+            "react-practice3"
+          ],
+          "mode": "case-study",
+          "url": null,
+          "optionalDemos": [],
+          "details": "페이지를 나누고 라우터로 이동시키는 연습. 아이콘을 붙여 봤다.",
+          "skills": [
+            "React Router",
+            "react-icons"
+          ],
+          "sourceEntryId": "original:react-basics:react-practice3",
+          "sourceName": "react-practice3",
+          "summary": "페이지를 나누고 라우터로 이동시키는 연습. 아이콘을 붙여 봤다.",
+          "repoUrls": [
+            "https://github.com/blackstarzck/react-practice3"
+          ],
+          "deployments": []
+        },
+        {
+          "id": "original:react-basics:react-practice2",
+          "name": "react-practice2",
+          "repositories": [
+            "react-practice2"
+          ],
+          "mode": "case-study",
+          "url": null,
+          "optionalDemos": [],
+          "details": "드롭다운 메뉴가 있는 네비게이션 바를 컴포넌트로 만들어 본 것.",
+          "skills": [
+            "컴포넌트 분리"
+          ],
+          "sourceEntryId": "original:react-basics:react-practice2",
+          "sourceName": "react-practice2",
+          "summary": "드롭다운 메뉴가 있는 네비게이션 바를 컴포넌트로 만들어 본 것.",
+          "repoUrls": [
+            "https://github.com/blackstarzck/react-practice2"
+          ],
+          "deployments": []
+        },
+        {
+          "id": "original:react-basics:react-practice1",
+          "name": "react-practice1",
+          "repositories": [
+            "react-practice1"
+          ],
+          "mode": "case-study",
+          "url": null,
+          "optionalDemos": [],
+          "details": "라우터를 처음 붙여 본 연습.",
+          "skills": [
+            "React Router"
+          ],
+          "sourceEntryId": "original:react-basics:react-practice1",
+          "sourceName": "react-practice1",
+          "summary": "라우터를 처음 붙여 본 연습.",
+          "repoUrls": [
+            "https://github.com/blackstarzck/react-practice1"
+          ],
+          "deployments": []
+        },
+        {
+          "id": "original:react-basics:react-practice7",
+          "name": "react-practice7",
+          "repositories": [
+            "react-practice7"
+          ],
+          "mode": "case-study",
+          "url": null,
+          "optionalDemos": [],
+          "details": "가장 작은 형태로 남긴 연습 프로젝트.",
+          "skills": [
+            "React"
+          ],
+          "sourceEntryId": "original:react-basics:react-practice7",
+          "sourceName": "react-practice7",
+          "summary": "가장 작은 형태로 남긴 연습 프로젝트.",
+          "repoUrls": [
+            "https://github.com/blackstarzck/react-practice7"
+          ],
+          "deployments": []
+        },
+        {
+          "id": "original:react-basics:react-router-practice1",
+          "name": "react-router-practice1",
+          "repositories": [
+            "react-router-practice1"
+          ],
+          "mode": "case-study",
+          "url": null,
+          "optionalDemos": [],
+          "details": "history를 직접 다뤄 가며 라우팅 동작을 확인해 본 것.",
+          "skills": [
+            "React Router",
+            "history"
+          ],
+          "sourceEntryId": "original:react-basics:react-router-practice1",
+          "sourceName": "react-router-practice1",
+          "summary": "history를 직접 다뤄 가며 라우팅 동작을 확인해 본 것.",
+          "repoUrls": [
+            "https://github.com/blackstarzck/react-router-practice1"
+          ],
+          "deployments": []
+        },
+        {
+          "id": "original:react-basics:react-router-practice2",
+          "name": "react-router-practice2",
+          "repositories": [
+            "react-router-practice2"
+          ],
+          "mode": "case-study",
+          "url": null,
+          "optionalDemos": [],
+          "details": "라우팅 구조를 한 번 더 반복해 본 연습.",
+          "skills": [
+            "React Router"
+          ],
+          "sourceEntryId": "original:react-basics:react-router-practice2",
+          "sourceName": "react-router-practice2",
+          "summary": "라우팅 구조를 한 번 더 반복해 본 연습.",
+          "repoUrls": [
+            "https://github.com/blackstarzck/react-router-practice2"
+          ],
+          "deployments": []
+        },
+        {
+          "id": "original:react-basics:react-styled-component",
+          "name": "react-styled-component",
+          "repositories": [
+            "react-styled-component"
+          ],
+          "mode": "case-study",
+          "url": null,
+          "optionalDemos": [],
+          "details": "styled-components로 스타일을 컴포넌트 안으로 넣어 본 연습.",
+          "skills": [
+            "styled-components"
+          ],
+          "sourceEntryId": "original:react-basics:react-styled-component",
+          "sourceName": "react-styled-component",
+          "summary": "styled-components로 스타일을 컴포넌트 안으로 넣어 본 연습.",
+          "repoUrls": [
+            "https://github.com/blackstarzck/react-styled-component"
+          ],
+          "deployments": []
+        },
+        {
+          "id": "original:react-basics:react-CRUD",
+          "name": "react-CRUD",
+          "repositories": [
+            "react-CRUD"
+          ],
+          "mode": "case-study",
+          "url": null,
+          "optionalDemos": [],
+          "details": "가장 기본적인 추가·조회·수정·삭제만 남긴 연습.",
+          "skills": [
+            "React"
+          ],
+          "sourceEntryId": "original:react-basics:react-CRUD",
+          "sourceName": "react-CRUD",
+          "summary": "가장 기본적인 추가·조회·수정·삭제만 남긴 연습.",
+          "repoUrls": [
+            "https://github.com/blackstarzck/react-CRUD"
+          ],
+          "deployments": []
+        },
+        {
+          "id": "original:react-basics:memo",
+          "name": "memo",
+          "repositories": [
+            "memo"
+          ],
+          "mode": "case-study",
+          "url": null,
+          "optionalDemos": [],
+          "details": "메모 앱. lodash.debounce로 입력이 멈춘 뒤에만 저장되게 했다.",
+          "skills": [
+            "debounce",
+            "React"
+          ],
+          "sourceEntryId": "original:react-basics:memo",
+          "sourceName": "memo",
+          "summary": "메모 앱. lodash.debounce로 입력이 멈춘 뒤에만 저장되게 했다.",
+          "repoUrls": [
+            "https://github.com/blackstarzck/memo"
+          ],
+          "deployments": []
+        },
+        {
+          "id": "original:react-basics:habit-tracker",
+          "name": "habit-tracker",
+          "repositories": [
+            "habit-tracker"
+          ],
+          "mode": "case-study",
+          "url": null,
+          "optionalDemos": [],
+          "details": "습관 기록 앱. 클래스형 컴포넌트로 만들었다.",
+          "skills": [
+            "클래스 컴포넌트"
+          ],
+          "sourceEntryId": "original:react-basics:habit-tracker",
+          "sourceName": "habit-tracker",
+          "summary": "습관 기록 앱. 클래스형 컴포넌트로 만들었다.",
+          "repoUrls": [
+            "https://github.com/blackstarzck/habit-tracker"
+          ],
+          "deployments": []
+        },
+        {
+          "id": "original:react-basics:new-habit-tracker",
+          "name": "new-habit-tracker",
+          "repositories": [
+            "new-habit-tracker"
+          ],
+          "mode": "case-study",
+          "url": null,
+          "optionalDemos": [],
+          "details": "위 앱을 함수형 컴포넌트로 다시 쓴 것. 같은 화면을 두 방식으로 만들어 비교했다.",
+          "skills": [
+            "함수형 컴포넌트"
+          ],
+          "sourceEntryId": "original:react-basics:new-habit-tracker",
+          "sourceName": "new-habit-tracker",
+          "summary": "위 앱을 함수형 컴포넌트로 다시 쓴 것. 같은 화면을 두 방식으로 만들어 비교했다.",
+          "repoUrls": [
+            "https://github.com/blackstarzck/new-habit-tracker"
+          ],
+          "deployments": []
+        },
+        {
+          "id": "original:react-basics:assignment",
+          "name": "assignment",
+          "repositories": [
+            "assignment"
+          ],
+          "mode": "case-study",
+          "url": null,
+          "optionalDemos": [],
+          "details": "PokeAPI로 포켓몬을 검색하는 과제. TypeScript로 썼고 React 없이 만들었다.",
+          "skills": [
+            "TypeScript",
+            "PokeAPI"
+          ],
+          "sourceEntryId": "original:react-basics:assignment",
+          "sourceName": "assignment",
+          "summary": "PokeAPI로 포켓몬을 검색하는 과제. TypeScript로 썼고 React 없이 만들었다.",
+          "repoUrls": [
+            "https://github.com/blackstarzck/assignment"
+          ],
+          "deployments": []
+        },
+        {
+          "id": "original:react-basics:data_structure",
+          "name": "data_structure",
+          "repositories": [
+            "data_structure"
+          ],
+          "mode": "case-study",
+          "url": null,
+          "optionalDemos": [],
+          "details": "연결 리스트를 자바스크립트로 직접 구현하고 화면에 그려 확인했다.",
+          "skills": [
+            "자료구조",
+            "바닐라 JS"
+          ],
+          "sourceEntryId": "original:react-basics:data_structure",
+          "sourceName": "data_structure",
+          "summary": "연결 리스트를 자바스크립트로 직접 구현하고 화면에 그려 확인했다.",
+          "repoUrls": [
+            "https://github.com/blackstarzck/data_structure"
+          ],
+          "deployments": []
+        },
+        {
+          "id": "original:react-basics:drag-n-drop",
+          "name": "drag-n-drop",
+          "repositories": [
+            "drag-n-drop"
+          ],
+          "mode": "case-study",
+          "url": null,
+          "optionalDemos": [],
+          "details": "라이브러리 없이 드래그 앤 드롭을 브라우저 API만으로 구현했다.",
+          "skills": [
+            "바닐라 JS",
+            "DnD"
+          ],
+          "sourceEntryId": "original:react-basics:drag-n-drop",
+          "sourceName": "drag-n-drop",
+          "summary": "라이브러리 없이 드래그 앤 드롭을 브라우저 API만으로 구현했다.",
+          "repoUrls": [
+            "https://github.com/blackstarzck/drag-n-drop"
+          ],
+          "deployments": []
+        },
+        {
+          "id": "original:react-basics:canvas-test",
+          "name": "canvas-test",
+          "repositories": [
+            "canvas-test"
+          ],
+          "mode": "case-study",
+          "url": null,
+          "optionalDemos": [],
+          "details": "캔버스에 삼각형과 다각형을 그려 본 첫 습작.",
+          "skills": [
+            "Canvas 2D"
+          ],
+          "sourceEntryId": "original:react-basics:canvas-test",
+          "sourceName": "canvas-test",
+          "summary": "캔버스에 삼각형과 다각형을 그려 본 첫 습작.",
+          "repoUrls": [
+            "https://github.com/blackstarzck/canvas-test"
+          ],
+          "deployments": []
+        }
+      ]
+    },
+    {
+      "id": "V10",
+      "room": "03",
+      "order": 12,
+      "groupId": "on-the-book",
+      "title": "펼쳐진 세계 · 도서 목록·상세",
+      "shortName": "On the Book · 책",
+      "projectName": "On the Book",
+      "visualConcept": "책·책 속 3D 장면·관리 도구를 세 진열장으로 연결",
+      "placard": "책을 고르는 화면에서 이야기 속 장면으로 이어집니다.",
+      "description": "On the Book의 도서 목록과 상세 화면입니다. 배포본에서 도서 4권 표시와 앨리스 상세 이동을 확인했으며, 관람자는 작품 안에서 책을 선택해 살펴볼 수 있습니다.",
+      "lookFor": "도서 목록 → 앨리스 상세 → 장면 선택",
+      "role": null,
+      "scope": null,
+      "kind": "입체 작품",
+      "slotKind": "case",
+      "projects": [
+        {
+          "id": "additional:on-the-book:books",
+          "name": "On the Book · 도서 목록·상세",
+          "repositories": [
+            "on-the-book"
+          ],
+          "mode": "iframe",
+          "url": "https://on-the-book-client.vercel.app/",
+          "optionalDemos": [],
+          "sourceEntryId": "additional:on-the-book",
+          "sourceName": "On the Book 사용자 서비스와 관리자",
+          "summary": "책·책 속 3D 장면·관리 도구를 세 진열장으로 연결",
+          "repoUrls": [
+            "https://github.com/blackstarzck/on-the-book"
+          ],
+          "deployments": [
+            {
+              "url": "https://on-the-book-client.vercel.app/",
+              "httpStatus": 200
+            },
+            {
+              "url": "https://on-the-book-admin.vercel.app/",
+              "httpStatus": 200
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "V09",
+      "room": "03",
+      "order": 13,
+      "groupId": "on-the-book",
+      "title": "펼쳐진 세계 · 책 속 3D 장면",
+      "shortName": "On the Book · 3D",
+      "projectName": "On the Book",
+      "visualConcept": "책·책 속 3D 장면·관리 도구를 세 진열장으로 연결",
+      "placard": "책의 한 장면을 걸을 수 있는 3D 공간으로 펼쳤습니다.",
+      "description": "On the Book의 앨리스 첫 장면을 실제 배포본으로 엽니다. 도서 상세에서 장면으로 이동하고 WebGL 화면이 표시되는 흐름을 확인했습니다.",
+      "lookFor": "앨리스 첫 장면과 이야기·공간의 연결",
+      "role": null,
+      "scope": null,
+      "kind": "입체 작품",
+      "slotKind": "case",
+      "projects": [
+        {
+          "id": "additional:on-the-book:scene",
+          "name": "On the Book · 책 속 3D 장면",
+          "repositories": [
+            "on-the-book"
+          ],
+          "mode": "iframe",
+          "url": "https://on-the-book-client.vercel.app/?book=alice&chapter=alice-1",
+          "optionalDemos": [],
+          "sourceEntryId": "additional:on-the-book",
+          "sourceName": "On the Book 사용자 서비스와 관리자",
+          "summary": "책·책 속 3D 장면·관리 도구를 세 진열장으로 연결",
+          "repoUrls": [
+            "https://github.com/blackstarzck/on-the-book"
+          ],
+          "deployments": [
+            {
+              "url": "https://on-the-book-client.vercel.app/",
+              "httpStatus": 200
+            },
+            {
+              "url": "https://on-the-book-admin.vercel.app/",
+              "httpStatus": 200
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "V08",
+      "room": "03",
+      "order": 14,
+      "groupId": "on-the-book",
+      "title": "펼쳐진 세계 · 관리 도구",
+      "shortName": "On the Book · CMS",
+      "projectName": "On the Book",
+      "visualConcept": "책·책 속 3D 장면·관리 도구를 세 진열장으로 연결",
+      "placard": "이야기의 뒤편에서 콘텐츠와 장면을 준비하는 관리 도구입니다.",
+      "description": "On the Book의 관리자 화면을 사용자 서비스·3D 장면과 연결해 소개합니다. 현재 확인 범위는 로그인 화면이며, 관람용 인증 데모가 준비되기 전에는 화면과 구조 자료로 전시합니다.",
+      "lookFor": "사용자 서비스와 관리 도구의 연결 구조",
+      "role": null,
+      "scope": null,
+      "kind": "입체 작품",
+      "slotKind": "case",
+      "projects": [
+        {
+          "id": "additional:on-the-book:admin",
+          "name": "On the Book · 관리 도구",
+          "repositories": [
+            "on-the-book"
+          ],
+          "mode": "demo-preparation",
+          "url": null,
+          "optionalDemos": [],
+          "sourceEntryId": "additional:on-the-book",
+          "sourceName": "On the Book 사용자 서비스와 관리자",
+          "summary": "책·책 속 3D 장면·관리 도구를 세 진열장으로 연결",
+          "repoUrls": [
+            "https://github.com/blackstarzck/on-the-book"
+          ],
+          "deployments": [
+            {
+              "url": "https://on-the-book-client.vercel.app/",
+              "httpStatus": 200
+            },
+            {
+              "url": "https://on-the-book-admin.vercel.app/",
+              "httpStatus": 200
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "V07",
+      "room": "03",
+      "order": 15,
+      "groupId": "game-lab",
+      "title": "규칙에 몸을 싣다 · 이동·공간",
+      "shortName": "이동·공간 게임",
+      "projectName": "게임 · 인터랙션",
+      "visualConcept": "격투·아케이드·다리·1인칭·FPS의 입력과 판정 규칙을 연결하는 두 진열장",
+      "placard": "입력과 판정이 만나는 순간, 화면은 놀이가 됩니다.",
+      "description": "bridge·first-person-perspective·lets-fps를 선택하는 이동·공간 진열장입니다. 앞의 두 프로젝트는 배포 화면을 체험하고 lets-fps는 관람용 인증 데모가 준비될 때까지 자료로 전시합니다.",
+      "lookFor": "격투·아케이드 또는 이동·공간 실험 선택",
+      "role": "개인 실험",
+      "scope": null,
+      "kind": "입체 작품",
+      "slotKind": "case",
+      "projects": [
+        {
+          "id": "original:game-lab:bridge",
+          "name": "bridge",
+          "repositories": [
+            "bridge"
+          ],
+          "mode": "iframe",
+          "url": "https://blackstarzck.github.io/bridge/",
+          "optionalDemos": [],
+          "details": "유리다리를 건너는 게임. 밟은 판이 깨져 떨어지는 것을 눈속임이 아니라 물리 엔진으로 처리했다.",
+          "skills": [
+            "cannon",
+            "Raycaster",
+            "GSAP"
+          ],
+          "sourceEntryId": "original:game-lab:bridge",
+          "sourceName": "bridge",
+          "summary": "유리다리를 건너는 게임. 밟은 판이 깨져 떨어지는 것을 눈속임이 아니라 물리 엔진으로 처리했다.",
+          "repoUrls": [
+            "https://github.com/blackstarzck/bridge"
+          ],
+          "deployments": [
+            {
+              "url": "https://blackstarzck.github.io/bridge/",
+              "httpStatus": 200
+            }
+          ]
+        },
+        {
+          "id": "original:game-lab:first-person-perspective",
+          "name": "first-person-perspective",
+          "repositories": [
+            "first-person-perspective"
+          ],
+          "mode": "iframe",
+          "url": "https://blackstarzck.github.io/first-person-perspective/",
+          "optionalDemos": [],
+          "details": "1인칭으로 공간을 걸어 다닌다. 충돌은 cannon-es로 처리하고 키보드와 터치 조작을 따로 나눠 뒀다.",
+          "skills": [
+            "three.js",
+            "cannon-es",
+            "입력 처리"
+          ],
+          "sourceEntryId": "original:game-lab:first-person-perspective",
+          "sourceName": "first-person-perspective",
+          "summary": "1인칭으로 공간을 걸어 다닌다. 충돌은 cannon-es로 처리하고 키보드와 터치 조작을 따로 나눠 뒀다.",
+          "repoUrls": [
+            "https://github.com/blackstarzck/first-person-perspective"
+          ],
+          "deployments": [
+            {
+              "url": "https://blackstarzck.github.io/first-person-perspective/",
+              "httpStatus": 200
+            }
+          ]
+        },
+        {
+          "id": "original:game-lab:lets-fps",
+          "name": "lets-fps",
+          "repositories": [
+            "lets-fps"
+          ],
+          "mode": "demo-preparation",
+          "url": null,
+          "optionalDemos": [],
+          "details": "여럿이 같이 하는 FPS. 충돌용 월드를 GLTF로 불러오고 로그인과 방 상태는 Supabase에 뒀다.",
+          "skills": [
+            "three.js",
+            "Supabase",
+            "Vite"
+          ],
+          "sourceEntryId": "original:game-lab:lets-fps",
+          "sourceName": "lets-fps",
+          "summary": "여럿이 같이 하는 FPS. 충돌용 월드를 GLTF로 불러오고 로그인과 방 상태는 Supabase에 뒀다.",
+          "repoUrls": [
+            "https://github.com/blackstarzck/lets-fps"
+          ],
+          "deployments": [
+            {
+              "url": "https://lets-fps.vercel.app",
+              "httpStatus": 200
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "V06",
+      "room": "03",
+      "order": 16,
+      "groupId": "game-lab",
+      "title": "규칙에 몸을 싣다 · 격투·아케이드",
+      "shortName": "격투·아케이드",
+      "projectName": "게임 · 인터랙션",
+      "visualConcept": "격투·아케이드·다리·1인칭·FPS의 입력과 판정 규칙을 연결하는 두 진열장",
+      "placard": "입력과 판정이 만나는 순간, 화면은 놀이가 됩니다.",
+      "description": "NEON FIST와 GAME CABINET을 선택하는 격투·아케이드 진열장입니다. NEON FIST는 iframe에서 시작과 키보드 입력을 확인했으며, GAME CABINET 내부 외부 게임의 동작은 개별 확인 대상으로 둡니다.",
+      "lookFor": "격투·아케이드 또는 이동·공간 실험 선택",
+      "role": "개인 실험",
+      "scope": null,
+      "kind": "입체 작품",
+      "slotKind": "case",
+      "projects": [
+        {
+          "id": "original:game-lab:neon-fist",
+          "name": "neon-fist",
+          "repositories": [
+            "neon-fist"
+          ],
+          "mode": "iframe",
+          "url": "https://neon-fist.vercel.app",
+          "optionalDemos": [],
+          "details": "백엔드도 외부 에셋도 없이 만든 1:1 격투 게임. UI·파티클·게이지를 코드로 그리고 타격음부터 배경 음악까지 실시간 합성한다.",
+          "skills": [
+            "Canvas 2D",
+            "Web Audio API",
+            "Vite"
+          ],
+          "sourceEntryId": "original:game-lab:neon-fist",
+          "sourceName": "neon-fist",
+          "summary": "백엔드도 외부 에셋도 없이 만든 1:1 격투 게임. UI·파티클·게이지를 코드로 그리고 타격음부터 배경 음악까지 실시간 합성한다.",
+          "repoUrls": [
+            "https://github.com/blackstarzck/neon-fist"
+          ],
+          "deployments": [
+            {
+              "url": "https://neon-fist.vercel.app",
+              "httpStatus": 200
+            }
+          ]
+        },
+        {
+          "id": "original:game-lab:game-cabinet",
+          "name": "game-cabinet",
+          "repositories": [
+            "game-cabinet"
+          ],
+          "mode": "iframe",
+          "url": "https://game-cabinet.vercel.app",
+          "optionalDemos": [],
+          "details": "3D 아케이드 캐비닛을 세우고 그 안에서 웹게임을 실행한다. 큐레이션한 게임을 캐비닛 화면에 띄운다.",
+          "skills": [
+            "React Three Fiber",
+            "Next.js"
+          ],
+          "sourceEntryId": "original:game-lab:game-cabinet",
+          "sourceName": "game-cabinet",
+          "summary": "3D 아케이드 캐비닛을 세우고 그 안에서 웹게임을 실행한다. 큐레이션한 게임을 캐비닛 화면에 띄운다.",
+          "repoUrls": [
+            "https://github.com/blackstarzck/game-cabinet"
+          ],
+          "deployments": [
+            {
+              "url": "https://game-cabinet.vercel.app",
+              "httpStatus": 200
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

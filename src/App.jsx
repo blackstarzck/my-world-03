@@ -9,13 +9,16 @@ import {
   LoaderCircle,
 } from "lucide-react";
 import { ArtworkPanel } from "./ArtworkTour.jsx";
+import { ProjectExperience } from "./ProjectExperience.jsx";
+import { portfolioRooms } from "./portfolio.js";
 import { ArtworkIndex, GalleryNavigation } from "./GalleryNavigation.jsx";
 
 const rooms = [
   { id: "lobby", name: "중앙 로비", shortName: "로비" },
-  { id: "01", name: "고전의 깊이", shortName: "고전" },
-  { id: "02", name: "빛의 여백", shortName: "빛" },
-  { id: "03", name: "형태의 기억", shortName: "형태" },
+  ...portfolioRooms.map((room) => ({
+    ...room,
+    shortName: { "01": "제품", "02": "시스템", "03": "실험" }[room.id],
+  })),
 ];
 
 function WalkIcon() {
@@ -49,7 +52,7 @@ function Logo() {
         />
       </svg>
       <span>
-        TRIAD<small>AN EXHIBITION IN THREE PARTS</small>
+        TRIAD<small>CHANKI KIM / DEVELOPER PORTFOLIO</small>
       </span>
     </a>
   );
@@ -107,7 +110,7 @@ function Map({ active, onNavigate, markerRef }) {
         className="map-model"
         ref={host}
         role="group"
-        aria-label="입체 전시 공간 안내 지도"
+        aria-label="프로젝트 공간 안내 지도"
       >
         {rooms.map((r) => (
           <button
@@ -115,7 +118,7 @@ function Map({ active, onNavigate, markerRef }) {
             type="button"
             data-room={r.id}
             className={`map-room-label ${active === r.id ? "selected" : ""}`}
-            aria-label={`${r.name}${r.id === "lobby" ? "" : " 전시실"}로 이동`}
+            aria-label={`${r.name}${r.id === "lobby" ? "로" : " 공간으로"} 이동`}
             aria-pressed={active === r.id}
             title={r.name}
             onClick={() => onNavigate(r.id)}
@@ -210,23 +213,29 @@ export default function App() {
     engine = useRef(null),
     marker = useRef(null),
     pagination = useRef(null),
-    returnRoom = useRef(null),
-    lastArtwork = useRef(null),
+    inspectionOrigin = useRef(null),
+    selectedArtwork = useRef(null),
+    returnFocus = useRef(null),
+    openArtworkRef = useRef(null),
     modalTrigger = useRef(null),
-    pendingInspection = useRef(null);
+    focusTarget = useRef(null),
+    detailVisibleRef = useRef(false);
   const [ready, setReady] = useState(false),
     [progress, setProgress] = useState(0),
     [error, setError] = useState(""),
     [active, setActive] = useState("lobby"),
     [featured, setFeatured] = useState(null),
     [cursorId, setCursorId] = useState(null),
-    [inspectionRequest, setInspectionRequest] = useState(null),
     [locked, setLocked] = useState(false),
     [lighting, setLighting] = useState("day"),
     [panel, setPanel] = useState(null),
     [selected, setSelected] = useState(null),
     [collection, setCollection] = useState([]),
-    [traveling, setTraveling] = useState(false);
+    [traveling, setTraveling] = useState(false),
+    [readyArtworkId, setReadyArtworkId] = useState(null),
+    [activeProjectId, setActiveProjectId] = useState(null),
+    [detailVisible, setDetailVisible] = useState(false);
+  detailVisibleRef.current = detailVisible;
   useEffect(() => {
     let cancelled = false;
     let instance;
@@ -247,26 +256,19 @@ export default function App() {
                 if (!cancelled) setLocked(v);
               },
               onSelect: (a) => {
-                if (!cancelled) {
-                  setSelected(a);
-                }
+                if (!cancelled) openArtworkRef.current(a);
+              },
+              onNearbyArtwork: (artwork) => {
+                if (cancelled || selectedArtwork.current) return;
+                setFeatured((current) => current?.id === artwork?.id ? current : artwork);
+                setCursorId(artwork?.id ?? null);
               },
               onTravel: (value) => {
                 if (!cancelled) {
                   setTraveling(value);
-                  const pending = pendingInspection.current;
-                  if (pending && value) pending.started = true;
-                  if (
-                    pending &&
-                    !value &&
-                    (pending.started ||
-                      window.matchMedia("(prefers-reduced-motion: reduce)")
-                        .matches)
-                  ) {
-                    pendingInspection.current = null;
-                    setFeatured(null);
-                    setSelected(pending.artwork);
-                  }
+                  if (value && !detailVisibleRef.current)
+                    setReadyArtworkId(null);
+                  if (!value) setReadyArtworkId(focusTarget.current);
                 }
               },
               onTravelProgress: (value) => {
@@ -311,97 +313,158 @@ export default function App() {
     };
   }, []);
   useEffect(() => {
-    engine.current?.setSuspended(Boolean(panel || selected));
+    engine.current?.setSuspended(Boolean(panel || selected), { pauseMotion: Boolean(panel) });
   }, [panel, selected, ready]);
   useEffect(() => {
-    if (
-      ready &&
-      inspectionRequest &&
-      pendingInspection.current?.artwork === inspectionRequest.artwork
-    ) {
-      // 목록을 닫은 전체 너비 화면에서 이동한 뒤 설명 패널을 엽니다.
-      engine.current.focusArtwork(inspectionRequest.artwork.id);
+    if (!selected) {
+      setDetailVisible(false);
+      return;
     }
-  }, [inspectionRequest, ready]);
+    if (panel || detailVisibleRef.current || readyArtworkId !== selected.id) return;
+    // Show a rendered frontal view before fading in the flat project page.
+    const timer = setTimeout(
+      () => setDetailVisible(true),
+      window.matchMedia("(prefers-reduced-motion: reduce)").matches ? 0 : 240,
+    );
+    return () => clearTimeout(timer);
+  }, [selected, readyArtworkId, panel]);
+  useEffect(() => {
+    if (!selected || detailVisible || panel) return;
+    const cancel = (event) => {
+      if (event.key === "Escape") {
+        event.preventDefault();
+        closeArtwork();
+      }
+    };
+    document.addEventListener("keydown", cancel);
+    return () => document.removeEventListener("keydown", cancel);
+  }, [selected, detailVisible, panel]);
   useEffect(() => {
     if (!ready) return;
     if (selected) {
+      // Browsing inside the mounted detail page changes content only. The
+      // camera is placed at the last selection when the page is dismissed.
+      if (detailVisibleRef.current) return;
+      focusTarget.current = selected.id;
+      setReadyArtworkId(null);
       setCursorId(selected.id);
-      lastArtwork.current = selected.id;
-      engine.current.focusArtwork(selected.id);
-    } else if (returnRoom.current) {
-      const room = returnRoom.current;
-      returnRoom.current = null;
-      engine.current.returnToEntrance(room);
-      document
-        .getElementById(`artwork-dot-${lastArtwork.current}`)
-        ?.focus({ preventScroll: true });
+      engine.current.focusArtwork(selected.id, { origin: inspectionOrigin.current?.view });
+    } else if (returnFocus.current) {
+      const origin = returnFocus.current;
+      returnFocus.current = null;
+      const fallback = origin.featured
+        ? document.querySelector(".featured-caption button")
+        : document.querySelector(".view-actions button[aria-haspopup]");
+      const target = origin.trigger?.isConnected ? origin.trigger
+        : document.getElementById(`artwork-dot-${origin.cursorId}`) || fallback || host.current.querySelector("canvas");
+      target?.focus({ preventScroll: true });
     }
   }, [selected, ready]);
   function navigate(id) {
     if (!engine.current) return;
-    pendingInspection.current = null;
+    focusTarget.current = null;
+    setReadyArtworkId(null);
     setPanel(null);
+    selectedArtwork.current = null;
     setSelected(null);
+    detailVisibleRef.current = false;
+    setDetailVisible(false);
     setFeatured(null);
     setCursorId(null);
-    returnRoom.current = null;
+    inspectionOrigin.current = null;
+    returnFocus.current = null;
     engine.current.goTo(id);
   }
-  function openArtwork(artwork) {
+  function openArtwork(artwork, projectId) {
+    if (!engine.current) return;
+    const showingDetail = detailVisibleRef.current;
+    if (!inspectionOrigin.current) {
+      inspectionOrigin.current = {
+        view: engine.current.captureView(), featured, cursorId,
+        trigger: panel === "collection" ? modalTrigger.current : document.activeElement,
+      };
+    }
+    returnFocus.current = null;
     setPanel(null);
-    returnRoom.current = null;
-    pendingInspection.current = { artwork, started: false };
+    focusTarget.current = null;
+    setReadyArtworkId(null);
+    setActiveProjectId(projectId || artwork.projects[0].id);
+    setDetailVisible(showingDetail);
     setFeatured(artwork);
     setCursorId(artwork.id);
-    setSelected(null);
-    setInspectionRequest({ artwork });
+    selectedArtwork.current = { ...artwork };
+    setSelected(selectedArtwork.current);
   }
+  openArtworkRef.current = openArtwork;
   function previewArtwork(artwork) {
     if (!artwork || !engine.current) return;
-    pendingInspection.current = null;
-    returnRoom.current = null;
+    focusTarget.current = null;
     setFeatured(artwork);
     setCursorId(artwork.id);
     engine.current.focusArtwork(artwork.id);
   }
   function openIndex() {
-    pendingInspection.current = null;
     modalTrigger.current = document.activeElement;
     setPanel("collection");
   }
   function closeArtwork() {
-    if (!selected) return;
-    pendingInspection.current = null;
-    setFeatured(null);
-    returnRoom.current = selected.room;
+    const last = selectedArtwork.current;
+    if (!last || !engine.current) return;
+    selectedArtwork.current = null;
+    focusTarget.current = null;
+    setReadyArtworkId(null);
+    const origin = inspectionOrigin.current;
+    inspectionOrigin.current = null;
+    if (detailVisibleRef.current) {
+      // Snap under the opaque page so closing reveals the last artwork with
+      // no flight, return animation or intermediate camera position.
+      engine.current.focusArtwork(last.id, { animated: false, origin: origin?.view });
+      setFeatured(last);
+      setCursorId(last.id);
+      returnFocus.current = { featured: last, cursorId: last.id };
+    } else if (origin) {
+      // Cancelling the initial approach still retraces its travelled portion.
+      returnFocus.current = origin;
+      setFeatured(origin.featured);
+      setCursorId(origin.cursorId);
+      engine.current.restoreView(origin.view);
+    }
+    detailVisibleRef.current = false;
     setSelected(null);
+    setDetailVisible(false);
   }
   function stepArtwork(delta) {
-    setSelected((current) => {
-      const index = collection.findIndex(
-        (artwork) => artwork.id === current?.id,
-      );
-      return collection[
-        (index + delta + collection.length) % collection.length
-      ];
-    });
+    if (!selectedArtwork.current || !detailVisibleRef.current) return;
+    const index = collection.findIndex(
+      (artwork) => artwork.id === selectedArtwork.current.id,
+    );
+    const next =
+      collection[(index + delta + collection.length) % collection.length];
+    openArtwork(next);
   }
   function changeLighting() {
     const next = lighting === "day" ? "evening" : "day";
     setLighting(next);
     engine.current?.setLighting(next);
   }
+  const selectedProject =
+    selected?.projects.find((project) => project.id === activeProjectId) ||
+    selected?.projects[0];
   return (
     <main
-      className={`app ${lighting} ${locked ? "walking" : ""} ${selected ? "viewing-artwork" : "has-collection"}`}
+      className={`app ${lighting} ${locked ? "walking" : ""} ${selected ? "project-pending" : "has-collection"}`}
     >
-      <div className="exhibition-stage" inert={panel ? true : undefined}>
+      <div
+        className="exhibition-stage"
+        inert={panel || selected ? true : undefined}
+      >
         <div
           className="world"
           ref={host}
           aria-label={
-            selected ? `${selected.title} 작품 감상 영역` : "3D 전시 공간"
+            selected
+              ? `${selectedProject.name}로 이동하는 3D 공간`
+              : "3D 포트폴리오 공간"
           }
         />
         <div className="edge-shade" />
@@ -418,10 +481,10 @@ export default function App() {
             <div className="utility-actions">
               <button
                 className={`icon-button desktop-walk ${locked ? "on" : ""}`}
-                aria-label={locked ? "자유 관람 종료" : "자유 관람 시작"}
+                aria-label={locked ? "직접 이동 종료" : "직접 이동 시작"}
                 aria-pressed={locked}
                 title={
-                  locked ? "자유 관람 종료 (Esc)" : "자유 관람 시작 (WASD 이동)"
+                  locked ? "직접 이동 종료 (Esc)" : "직접 이동 시작 (WASD 이동)"
                 }
                 onClick={() =>
                   locked
@@ -438,8 +501,8 @@ export default function App() {
                   modalTrigger.current = document.activeElement;
                   setPanel("about");
                 }}
-                aria-label="전시 소개"
-                title="전시 소개"
+                aria-label="포트폴리오 소개"
+                title="포트폴리오 소개"
               >
                 <ArrowUpRight size={18} />
               </button>
@@ -459,7 +522,7 @@ export default function App() {
             <div
               className="view-actions glass-surface"
               role="group"
-              aria-label="공간과 작품 보기"
+              aria-label="공간과 프로젝트 보기"
             >
               <button
                 className="overview-button"
@@ -484,7 +547,7 @@ export default function App() {
                 disabled={!ready}
               >
                 <Images size={17} />
-                <span>전체 작품</span>
+                <span>전체 프로젝트</span>
               </button>
             </div>
           </div>
@@ -506,23 +569,40 @@ export default function App() {
             onInspect={openArtwork}
           />
         )}
-        {selected && (
-          <ArtworkPanel
-            artwork={selected}
-            room={rooms.find((room) => room.id === selected.room)}
-            traveling={traveling}
-            onClose={closeArtwork}
-            onStep={stepArtwork}
-            onOpenIndex={openIndex}
-          />
-        )}
       </div>
+      {selected && detailVisible && !panel && (
+        <ArtworkPanel
+          artwork={selected}
+          project={selectedProject}
+          onProjectChange={setActiveProjectId}
+          room={rooms.find((room) => room.id === selected.room)}
+          onClose={closeArtwork}
+          onStep={stepArtwork}
+          onOpenIndex={openIndex}
+        >
+          <ProjectExperience
+            key={selectedProject.id}
+            project={selectedProject}
+          />
+        </ArtworkPanel>
+      )}
+      {selected && !detailVisible && !panel && traveling && (
+        <div className="project-approach">
+          <div>
+            <LoaderCircle className="spin" size={14} />
+            <span>{selectedProject.name} · 정면으로 이동 중</span>
+            <button onClick={closeArtwork} aria-label="프로젝트 이동 취소">
+              <X size={17} />
+            </button>
+          </div>
+        </div>
+      )}
       {!ready && (
         <div className="loading-screen">
           <Logo />
           <div className="loading-copy">
-            <span>빛과 재료가 만나는 공간</span>
-            <h2>잠시 후, 전시가 시작됩니다.</h2>
+            <span>CHANKI KIM · DEVELOPER PORTFOLIO</span>
+            <h2>프로젝트를 불러오고 있습니다.</h2>
             <div className="progress-line">
               <i style={{ width: `${progress}%` }} />
             </div>
@@ -543,67 +623,53 @@ export default function App() {
       )}
       {panel === "about" && (
         <Dialog
-          title="전시 소개"
+          title="포트폴리오 소개"
           returnFocus={modalTrigger.current}
           onClose={() => setPanel(null)}
           className="about-dialog"
         >
           <span className="eyebrow">ABOUT TRIAD</span>
           <h2>
-            세 개의 시선,
-            <br />
-            하나의 공간.
+            김찬기의 개발 프로젝트,
+            <br />세 개의 공간.
           </h2>
           <p>
-            고전 회화의 깊이, 콘크리트에 스며드는 빛, 그리고 조각에 남은 재료의
-            기억. 서로 다른 세 공간이 하나의 중앙 로비에서 만납니다.
+            사용자에게 닿는 제품, 시스템과 일하는 방식, 직접 경험하는 실험. 41개
+            프로젝트 그룹에 포함된 95개 프로젝트·개발 사례를 살펴볼 수 있습니다.
           </p>
           <div className="about-rooms">
             {rooms.slice(1).map((r) => (
               <button key={r.id} onClick={() => navigate(r.id)}>
-                <b>{r.name}</b>
+                <b>
+                  {r.name}
+                  <small className="about-room-theme">{r.theme}</small>
+                </b>
                 <ArrowUpRight size={16} />
               </button>
             ))}
           </div>
           <p className="credits">
-            회화 이미지:{" "}
-            <a
-              href="https://www.metmuseum.org/about-the-met/policies-and-documents/open-access"
-              target="_blank"
-              rel="noreferrer"
-            >
-              The Metropolitan Museum of Art · Open Access
-            </a>
+            프로젝트별 시각 구성
             <br />
             재질:{" "}
             <a href="https://polyhaven.com" target="_blank" rel="noreferrer">
               Poly Haven · CC0
             </a>
             <br />
-            인물 조형:{" "}
+            프로젝트:{" "}
             <a
-              href="https://www.triplegangers.com"
+              href="https://github.com/blackstarzck"
               target="_blank"
               rel="noreferrer"
             >
-              Lee Perry-Smith · Infinite 3D Head Scan
-            </a>{" "}
-            ·{" "}
-            <a
-              href="https://creativecommons.org/licenses/by/3.0/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              CC BY 3.0
-            </a>{" "}
-            (크기·재질 변경)
+              blackstarzck · GitHub
+            </a>
           </p>
         </Dialog>
       )}
       {panel === "collection" && (
         <Dialog
-          title="전체 작품"
+          title="전체 프로젝트"
           returnFocus={modalTrigger.current}
           className="artwork-index"
           onClose={() => setPanel(null)}

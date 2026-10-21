@@ -1,0 +1,19 @@
+{
+  "id": "A01-01",
+  "room": "01",
+  "slotKind": "wall",
+  "project": "도토리 토픽 · 사용자단",
+  "sourceEntryIds": [
+    "original:topik-user"
+  ],
+  "connection": "답안 작성·피드백·학습 이력·재연습으로 이어지는 사용자 흐름을 '전날의 흔적을 확인하고 다시 쓰는 행동'으로 비유한다. 공책 장면은 실제 앱 화면이나 학습 성과를 재현한 것이 아니다.",
+  "medium": "watercolor",
+  "symbol": "도토리와 새싹",
+  "subject": "One acorn split just enough for ONE small fresh sprout with two leaves. A small single natural emblem of returning to learning. Muted red-brown acorn, fresh green sprout, faint rose wash. No book, pot, soil landscape or person.",
+  "reference": "C:/Users/buche/AppData/Local/Temp/codex-clipboard-026bb574-523a-47ff-9f2e-14344cd9bd49.jpg",
+  "origin": "new-production",
+  "initialPath": "D:/workspace/my-world-03/output/portfolio-paintings-2026-10-20/A01-01-r0.png",
+  "finalPath": "D:/workspace/my-world-03/output/portfolio-paintings-2026-10-20/A01-01.png",
+  "reviewPath": "D:/workspace/my-world-03/output/portfolio-paintings-2026-10-20/reviews/A01-01.json",
+  "prompt": "Create ONE original fine-art image, horizontal 7:5, high resolution ideally 2800x2000 or greater. Flat front view, artwork fills entire image, no depicted frame, no mat, no artificial edge border. Transparent watercolor on warm cold-pressed paper. Closely match STYLE AND MOOD of supplied cherry watercolor: translucent rich greens, faint rose/sage halo only near subject, soft pigment blooms, reserved-paper highlights, restrained tiny splashes. Subject-focus and generous paper, no decorative full background. SUBJECT: One acorn split just enough for ONE small fresh sprout with two leaves. A small single natural emblem of returning to learning. Muted red-brown acorn, fresh green sprout, faint rose wash. No book, pot, soil landscape or person. The supplied image, if any, is ONLY a medium/mood reference; do not preserve its subject, letters or layout. ONE unified symbolic subject or typographic statement; at least half the image should be calm negative space. Main silhouette readable at thumbnail scale, no extra illustrative narrative. No room-based style constraints. Project meaning outside image: 답안 작성·피드백·학습 이력·재연습으로 이어지는 사용자 흐름을 '전날의 흔적을 확인하고 다시 쓰는 행동'으로 비유한다. 공책 장면은 실제 앱 화면이나 학습 성과를 재현한 것이 아니다. Do not depict application screens, logos, code, graphs, arrows, fake achievements, decorative labels, signatures, watermarks, wall/easel or gallery mockup. Unless explicitly requested in the poster subject, no text at all. Original hand-made physical medium, not a flat generic UI icon or a glossy 3D render."
+}

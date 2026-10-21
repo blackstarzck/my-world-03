@@ -43,7 +43,11 @@ test("actual 49 frameless canvases fit five viewport shapes and retain safe fron
   for (const id of ["01", "02", "03"]) { groups[id] = makeRoom(id); scene.add(groups[id]); }
   const material = new THREE.MeshStandardMaterial();
   const materials = new Proxy({}, { get: () => material });
-  const { collection } = await buildExhibits(groups, materials, material, new THREE.LoadingManager());
+  const central = new THREE.Group();
+  const { collection, blackHole } = await buildExhibits(groups, materials, material,
+    new THREE.LoadingManager(), { loadCentral: async () => central });
+  assert.equal(blackHole, central, "the central exhibit survives portfolio loading");
+  assert.equal(blackHole.parent, groups.lobby, "the black hole remains in the lobby");
   assert.equal(collection.length, 49);
   for (const artwork of collection) {
     assert.equal(artwork.kind, "캔버스");

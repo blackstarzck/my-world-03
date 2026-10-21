@@ -84,6 +84,7 @@ button svg {
   position: absolute;
   inset: 0;
   pointer-events: none;
+  opacity: calc(1 - var(--black-hole-immersion, 0));
   background:
     linear-gradient(0deg, rgba(241, 237, 226, 0.75), transparent 34%),
     linear-gradient(180deg, rgba(234, 231, 220, 0.2), transparent 20%);
@@ -635,6 +636,10 @@ button svg {
   background: linear-gradient(0deg, #080c1466, transparent 28%);
 }
 .evening .topbar {
+  color: #f3eee2;
+  text-shadow: 0 1px 8px #0008;
+}
+.black-hole-immersed .topbar {
   color: #f3eee2;
   text-shadow: 0 1px 8px #0008;
 }

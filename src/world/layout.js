@@ -150,7 +150,7 @@ export function canStand(x, z, radius = 0.26) {
   return true;
 }
 export const destinations = {
-  lobby: { position: [6.35, 1.75, 7.15], target: [-0.5, 1.55, -3.8] },
+  lobby: { position: [3, 1.75, 8], target: [0, 1.75, 0] },
   "01": {
     position: roomPoint("01", 0.4, 2.5, 1.7),
     target: roomPoint("01", -1.5, 18, 1.9),

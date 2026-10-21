@@ -218,7 +218,7 @@ test("stationary camera turns and tiny movements remain finite", () => {
   }
 });
 
-test("explicit room navigation returns to its entrance and clears the selected camera", (context) => {
+test("explicit room navigation clears selection; lobby walking preserves a level eye line", (context) => {
   const fakeDocument = new EventTarget(),
     fakeWindow = new EventTarget(),
     canvas = new EventTarget();
@@ -257,6 +257,20 @@ test("explicit room navigation returns to its entrance and clears the selected c
     assert.equal(controls.state().selectedArtwork, null);
     assert.equal(controls.state().moving, false);
     assert.equal(camera.fov, 59);
+  }
+  for (const aspect of [1.44, 0.47]) {
+    camera.aspect = aspect;
+    camera.updateProjectionMatrix();
+    controls.goTo("lobby");
+    controls.setMove("forward", true);
+    for (let frame = 0; frame < 90; frame++) {
+      controls.update(1 / 60);
+      assert.equal(camera.position.y, destinations.lobby.target[1],
+        "walking must not lower the camera below the black-hole center");
+      assert.ok(Math.abs(camera.getWorldDirection(new THREE.Vector3()).y) < 1e-12,
+        "wide and mobile lobby cameras keep a horizontal sightline");
+    }
+    controls.setMove("forward", false);
   }
 });
 

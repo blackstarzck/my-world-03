@@ -211,9 +211,7 @@ export function navigation(
     onTravel?.(false);
     orbit.enabled = overview;
     camera.position.fromArray(preset.position);
-    camera.lookAt(
-      ...(id === "lobby" && camera.aspect < 0.8 ? [0, 1.7, 0] : preset.target),
-    );
+    camera.lookAt(...preset.target);
     orbit.target.fromArray(preset.target);
     if (overview && camera.aspect < 1)
       camera.position
@@ -418,7 +416,7 @@ export function navigation(
             (-Math.sin(yaw) * forward + Math.cos(yaw) * right) * speed,
             (-Math.cos(yaw) * forward - Math.sin(yaw) * right) * speed,
           );
-          camera.position.y = 1.7;
+          camera.position.y = destinations.lobby.position[1];
         }
       }
       const next = currentRoom(camera.position.x, camera.position.z);

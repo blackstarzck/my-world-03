@@ -1,4 +1,5 @@
 import * as THREE from "three";
+import { loadCentralExhibit } from "./central-exhibit.js";
 import { mergeGeometries } from "three/addons/utils/BufferGeometryUtils.js";
 import { design, radians } from "./layout.js";
 import { box, mesh } from "./architecture.js";
@@ -21,17 +22,19 @@ function caseFrame() {
   parts.forEach((p) => p.dispose());
   return result;
 }
-export async function buildExhibits(groups, m, contactMat, manager) {
+export async function buildExhibits(groups, m, contactMat, manager,
+  { loadCentral = loadCentralExhibit } = {}) {
   const loader = new THREE.TextureLoader(manager);
-  const pictures = await Promise.all(
-    portfolioExhibits.map(async (data) => {
-      const src = posterUrl(data),
-        map = await loader.loadAsync(src);
+  const [pictures, blackHole] = await Promise.all([
+    Promise.all(portfolioExhibits.map(async (data) => {
+      const src = posterUrl(data), map = await loader.loadAsync(src);
       map.colorSpace = THREE.SRGBColorSpace;
       map.anisotropy = 8;
       return { ...data, src, map };
-    }),
-  );
+    })),
+    loadCentral(manager),
+  ]);
+  groups.lobby.add(blackHole);
   const picturesById = new Map(pictures.map((p) => [p.id, p]));
   const selectable = [],
     collection = [],
@@ -186,5 +189,5 @@ export async function buildExhibits(groups, m, contactMat, manager) {
     shadow.rotation.x = -Math.PI / 2;
   }
   collection.sort((a, b) => a.room.localeCompare(b.room) || a.order - b.order);
-  return { selectable, pictures, lightingTargets, collection };
+  return { selectable, pictures, lightingTargets, collection, blackHole };
 }

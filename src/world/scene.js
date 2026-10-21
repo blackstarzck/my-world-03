@@ -1,16 +1,20 @@
 import * as THREE from "three";
 import { RoomEnvironment } from "three/addons/environments/RoomEnvironment.js";
 import { EffectComposer } from "three/addons/postprocessing/EffectComposer.js";
-import { RenderPass } from "three/addons/postprocessing/RenderPass.js";
-import { GTAOPass } from "three/addons/postprocessing/GTAOPass.js";
+import { GalleryRenderPass } from "./gallery-render.js";
+import { GalleryAOPass } from "./gallery-ao.js";
 import { OutputPass } from "three/addons/postprocessing/OutputPass.js";
 import { SMAAPass } from "three/addons/postprocessing/SMAAPass.js";
 import { createMaterials } from "./materials.js";
 import { buildArchitecture } from "./architecture.js";
 import { buildExhibits } from "./exhibits.js";
 import { navigation } from "./navigation.js";
-import { lightingPresets, renderQuality } from "./render-settings.js";
+import { renderQuality } from "./render-settings.js";
 import { createExhibitLighting } from "./exhibit-lighting.js";
+import { createGalleryLighting } from "./gallery-lighting.js";
+import { createBlackHoleMotion } from "./black-hole-motion.js";
+import { createBlackHoleBloom } from "./black-hole-bloom.js";
+import { createRenderDiagnostics } from "./render-diagnostics.js";
 
 export async function createExhibition(container, callbacks) {
   const manager = new THREE.LoadingManager();
@@ -35,6 +39,7 @@ export async function createExhibition(container, callbacks) {
     "3D 전시 공간. 드래그하여 둘러보고 방향키로 이동하세요.",
   );
   container.appendChild(renderer.domElement);
+  const diagnostics = createRenderDiagnostics(container);
   const scene = new THREE.Scene();
   scene.background = new THREE.Color("#dddeda");
   const interiorFog = new THREE.Fog("#dddeda", 65, 180);
@@ -74,7 +79,10 @@ export async function createExhibition(container, callbacks) {
     exhibits,
     nav,
     composer,
+    beauty,
     ao,
+    blackHoleMotion,
+    blackHoleBloom,
     disposed = false,
     frame = 0,
     previous = performance.now(),
@@ -86,6 +94,10 @@ export async function createExhibition(container, callbacks) {
     updateQuality,
     measuredFrames = 0,
     measuredTime = 0;
+  const motionPreference = window.matchMedia("(prefers-reduced-motion: reduce)");
+  const resizeBloom = () => blackHoleBloom?.resize(
+    container.clientWidth, container.clientHeight, renderer.getPixelRatio(), quality,
+  );
   const resize = (reframe = true) => {
     const w = container.clientWidth,
       h = container.clientHeight;
@@ -96,6 +108,7 @@ export async function createExhibition(container, callbacks) {
     updateQuality?.();
     renderer.setSize(w, h);
     composer?.setSize(w, h);
+    resizeBloom();
     if (aspectChanged && reframe) nav?.reframeArtwork();
   };
   const observer = new ResizeObserver(resize);
@@ -126,10 +139,14 @@ export async function createExhibition(container, callbacks) {
     geometries.forEach((g) => g.dispose());
     materials.forEach((m) => m.dispose());
     textures.forEach((t) => t.dispose());
+    exhibits?.blackHole.userData.spaceEnvironment?.dispose();
     environment.dispose();
     sun.shadow.dispose();
     renderer.dispose();
     renderer.domElement.remove();
+    diagnostics.dispose();
+    container.parentElement?.style.removeProperty("--black-hole-immersion");
+    container.parentElement?.classList.remove("black-hole-immersed");
     if (import.meta.env.DEV) delete window.__TRIAD__;
   }
   try {
@@ -141,13 +158,17 @@ export async function createExhibition(container, callbacks) {
       architecture.contactMat,
       manager,
     );
+    blackHoleMotion = createBlackHoleMotion(exhibits.blackHole);
+    blackHoleBloom = createBlackHoleBloom(exhibits.blackHole, camera);
     composer = new EffectComposer(renderer);
-    composer.addPass(new RenderPass(scene, camera));
-    ao = new GTAOPass(
+    beauty = new GalleryRenderPass(scene, camera);
+    composer.addPass(beauty);
+    ao = new GalleryAOPass(
       scene,
       camera,
       container.clientWidth,
       container.clientHeight,
+      [exhibits.blackHole],
     );
     ao.blendIntensity = 0.68;
     ao.updateGtaoMaterial({
@@ -166,7 +187,10 @@ export async function createExhibition(container, callbacks) {
       samples: 8,
     });
     composer.addPass(ao);
-    composer.addPass(new OutputPass());
+    composer.addPass(blackHoleBloom.pass);
+    const output = new OutputPass();
+    blackHoleBloom.attachOutput(output);
+    composer.addPass(output);
     composer.addPass(new SMAAPass());
     nav = navigation(camera, renderer.domElement, {
       ...callbacks,
@@ -184,6 +208,7 @@ export async function createExhibition(container, callbacks) {
         reducedQuality,
       );
       ao.enabled = quality === "high";
+      beauty.setSamples(quality === "high" ? Math.min(2, renderer.capabilities.maxSamples) : 0);
       const pixelRatio = Math.min(
         devicePixelRatio,
         quality === "high" ? 1.5 : 1,
@@ -192,33 +217,26 @@ export async function createExhibition(container, callbacks) {
         renderer.setPixelRatio(pixelRatio);
         composer.setPixelRatio(pixelRatio);
       }
+      resizeBloom();
     };
     updateQuality();
+    const galleryLighting = createGalleryLighting({
+      scene, renderer, sun, hemisphere, materials, architecture, exhibitLighting,
+    });
     const applyLighting = (mode) => {
       lighting = mode;
-      const preset = lightingPresets[mode];
-      sun.intensity = preset.sun;
-      sun.color.set(preset.sunColor);
-      hemisphere.intensity = preset.hemisphere;
-      scene.environmentIntensity = preset.environment;
-      renderer.toneMappingExposure = preset.exposure;
-      scene.background.set(preset.background);
-      interiorFog.color.copy(scene.background);
-      materials.skylight.emissiveIntensity = preset.skylightGlow;
-      exhibitLighting.setIntensity(preset.spot);
-      architecture.lights.forEach((light) => {
-        light.intensity = light.userData.dayIntensity * preset.daylight;
-      });
-      // Only light intensity/color changes: the static shadow depth is reusable.
+      galleryLighting.update(lighting, blackHoleMotion.expansion);
     };
     applyLighting("day");
     // Compile every room with the SAME fog/light configuration before entry.
     // Removing fog on the first overview used to compile a second set mid-frame.
     callbacks.onProgress(96);
-    renderer.setRenderTarget(composer.readBuffer);
+    renderer.setRenderTarget(beauty.target);
     await renderer.compileAsync(scene, camera);
     renderer.setRenderTarget(null);
     renderer.shadowMap.needsUpdate = true;
+    blackHoleBloom.setDepthTexture(beauty.target.depthTexture);
+    blackHoleBloom.update(blackHoleMotion.activation, overviewMode);
     composer.render();
     previous = performance.now();
     function animate(now) {
@@ -232,15 +250,30 @@ export async function createExhibition(container, callbacks) {
       if (!reducedQuality && !overviewMode && elapsed < 250) {
         measuredTime += elapsed;
         if (++measuredFrames === 90) {
-          reducedQuality = measuredTime / measuredFrames > 30;
+          reducedQuality = measuredTime / measuredFrames > 20;
           measuredFrames = measuredTime = 0;
           if (reducedQuality) updateQuality();
         }
       }
       nav.update(dt);
+      blackHoleMotion.update(dt, camera.position, {
+        overview: overviewMode,
+        reducedMotion: motionPreference.matches,
+      });
+      galleryLighting.update(lighting, blackHoleMotion.expansion);
+      blackHoleBloom.update(blackHoleMotion.activation, overviewMode);
+      container.parentElement?.style.setProperty("--black-hole-immersion", blackHoleBloom.immersion);
+      container.parentElement?.classList.toggle("black-hole-immersed", blackHoleBloom.immersion > .65);
       if (now - lastPosition > 120) exhibitLighting.update(camera);
       renderer.info.reset();
+      const renderStart = performance.now();
       composer.render();
+      diagnostics.record(elapsed, performance.now() - renderStart, renderer, {
+        quality, dpr: renderer.getPixelRatio(), bloom: blackHoleBloom.pass.enabled,
+        distance: +camera.position.distanceTo(exhibits.blackHole.position).toFixed(2),
+        activation: +blackHoleMotion.activation.toFixed(2),
+        ...blackHoleBloom.diagnostics(),
+      });
       if (now - lastPosition > 120) {
         callbacks.onPosition?.(nav.state());
         lastPosition = now;
@@ -303,6 +336,10 @@ export async function createExhibition(container, callbacks) {
         objects: scene.children.length,
         artworks: exhibits.pictures.length,
         artworkCount: exhibits.collection.length,
+        blackHole: {
+          ...blackHoleMotion.state(),
+          bloomEnabled: blackHoleBloom.pass.enabled,
+        },
       }),
       dispose,
     };

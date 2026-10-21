@@ -11,6 +11,7 @@ import {
   atriumDetails,
 } from "./layout.js";
 import { archBand, extrude } from "./atrium.js";
+import { centralExhibit } from "./central-exhibit.js";
 
 // Use the exhibition's world coordinates; only wall heights are cut away.
 export function buildMiniature() {
@@ -112,13 +113,26 @@ export function buildMiniature() {
     stone,
     [0, 0.225, 0],
   );
-  const ring = mesh(
-    model,
-    new THREE.TorusGeometry(1.12, 0.12, 8, 32),
-    brass,
-    [0, 1.65, 0],
+  // A small proxy keeps the map light while matching the new central exhibit.
+  const blackHole = new THREE.Group();
+  blackHole.name = "Black Hole miniature";
+  blackHole.position.y = centralExhibit.height;
+  blackHole.rotation.z = 0.375;
+  blackHole.rotation.y = centralExhibit.yaw;
+  model.add(blackHole);
+  const disk = mesh(
+    blackHole,
+    new THREE.RingGeometry(0.23, centralExhibit.diameter / 2, 48),
+    new THREE.MeshBasicMaterial({ color: "#e5a35c", side: THREE.DoubleSide }),
+    [0, 0, 0],
   );
-  ring.rotation.y = Math.PI / 2;
+  disk.rotation.x = -Math.PI / 2;
+  mesh(
+    blackHole,
+    new THREE.SphereGeometry(0.23, 16, 12),
+    new THREE.MeshBasicMaterial({ color: "#000000" }),
+    [0, 0, 0],
+  );
 
   for (const id of roomIds) {
     const group = new THREE.Group();

@@ -1,0 +1,1088 @@
+{
+  "source": "https://sketchfab.com/3d-models/black-hole-e410da98b1e5445eae2acafaaa53587d",
+  "sourceUpdatedAt": "2024-09-20T11:25:00.390900",
+  "camera": {
+    "up": 1.555089,
+    "fov": 6,
+    "down": -1.555089,
+    "left": -3.141593,
+    "right": 3.141593,
+    "target": [
+      -437.32243743845515,
+      -274.94608632670923,
+      -153.97308062741962
+    ],
+    "zoomIn": 0,
+    "zoomOut": 150677.7150529463,
+    "position": [
+      -4914.951742160274,
+      4402.722072967086,
+      -246.54965169072563
+    ],
+    "nearFarRatio": 0.005,
+    "usePanConstraints": true,
+    "useYawConstraints": false,
+    "useZoomConstraints": false,
+    "usePitchConstraints": false,
+    "useCameraConstraints": false
+  },
+  "postProcess": {
+    "dof": {
+      "enable": true,
+      "blurFar": 0.24444444444444444,
+      "blurNear": 0.2111111111111111,
+      "focusPoint": [
+        -265.98948748750445,
+        -443.59812503372723,
+        -106.17777708004814
+      ]
+    },
+    "ssr": {
+      "enable": false,
+      "factor": 1
+    },
+    "taa": {
+      "enable": true,
+      "transparent": true
+    },
+    "ssao": {
+      "bias": 4.686393407463339,
+      "enable": true,
+      "radius": 50.378729130230894,
+      "intensity": 0.22777777777777777
+    },
+    "bloom": {
+      "enable": true,
+      "factor": 1.6111111111111112,
+      "radius": 0.7111111111111111,
+      "threshold": 0
+    },
+    "grain": {
+      "enable": false,
+      "factor": 0.35833333333333334,
+      "animated": false
+    },
+    "enable": true,
+    "sharpen": {
+      "enable": false,
+      "factor": 5
+    },
+    "vignette": {
+      "amount": 0.475,
+      "enable": true,
+      "hardness": 0.725
+    },
+    "toneMapping": {
+      "enable": false,
+      "method": "default",
+      "contrast": 0,
+      "exposure": 1,
+      "brightness": 0,
+      "saturation": 1
+    },
+    "colorBalance": {
+      "low": [
+        0.7,
+        0.35,
+        0
+      ],
+      "mid": [
+        0.4,
+        0.2,
+        0
+      ],
+      "high": [
+        0,
+        0,
+        0
+      ],
+      "enable": true
+    },
+    "chromaticAberration": {
+      "enable": true,
+      "factor": 0.015
+    }
+  },
+  "materials": {
+    "ring2": {
+      "DiffusePBR": {
+        "enable": true,
+        "factor": 0.5,
+        "texture": {
+          "index": 9,
+          "channel": 0,
+          "component": "rgb"
+        },
+        "transform": {
+          "scale": [
+            1,
+            1
+          ],
+          "offset": [
+            0,
+            0
+          ],
+          "rotation": 0
+        }
+      },
+      "SpecularPBR": {
+        "enable": true,
+        "factor": 0.5958113396155111,
+        "texture": {
+          "index": 9,
+          "channel": 0,
+          "component": "rgb"
+        },
+        "transform": {
+          "scale": [
+            1,
+            1
+          ],
+          "offset": [
+            0,
+            0
+          ],
+          "rotation": 0
+        }
+      },
+      "GlossinessPBR": {
+        "enable": true,
+        "factor": 1,
+        "texture": {
+          "index": 10,
+          "channel": 1,
+          "component": "a"
+        },
+        "transform": {
+          "scale": [
+            1,
+            1
+          ],
+          "offset": [
+            0,
+            0
+          ],
+          "rotation": 0
+        }
+      },
+      "EmitColor": {
+        "enable": false,
+        "factor": 0,
+        "color": [
+          1,
+          1,
+          1
+        ],
+        "type": "additive"
+      },
+      "Opacity": {
+        "enable": true,
+        "factor": 0.2,
+        "ior": 1.05,
+        "type": "alphaBlend",
+        "refractionColor": [
+          1,
+          1,
+          1
+        ],
+        "roughnessFactor": 0,
+        "invert": false
+      },
+      "AlphaMask": {
+        "enable": false,
+        "factor": 1,
+        "invert": false
+      },
+      "BumpMap": {
+        "enable": true,
+        "factor": 10,
+        "texture": {
+          "index": 10,
+          "channel": 1,
+          "component": "a"
+        },
+        "transform": {
+          "scale": [
+            1,
+            1
+          ],
+          "offset": [
+            0,
+            0
+          ],
+          "rotation": 0
+        }
+      }
+    },
+    "black_hole_light1": {
+      "DiffusePBR": {
+        "enable": true,
+        "factor": 1,
+        "texture": {
+          "index": 7,
+          "channel": 0,
+          "component": "rgb"
+        },
+        "transform": {
+          "scale": [
+            1,
+            1
+          ],
+          "offset": [
+            0,
+            0
+          ],
+          "rotation": 0
+        }
+      },
+      "SpecularPBR": {
+        "enable": true,
+        "factor": 0,
+        "color": [
+          1,
+          1,
+          1
+        ]
+      },
+      "GlossinessPBR": {
+        "enable": true,
+        "factor": 0
+      },
+      "EmitColor": {
+        "enable": true,
+        "factor": 2,
+        "type": "additive",
+        "texture": {
+          "index": 7,
+          "channel": 0,
+          "component": "rgb"
+        },
+        "transform": {
+          "scale": [
+            1,
+            1
+          ],
+          "offset": [
+            0,
+            0
+          ],
+          "rotation": 0
+        }
+      },
+      "Opacity": {
+        "enable": false,
+        "factor": 1,
+        "ior": 1.021764690753536,
+        "type": "alphaBlend",
+        "refractionColor": [
+          1,
+          1,
+          1
+        ],
+        "roughnessFactor": 0,
+        "invert": false,
+        "texture": {
+          "index": 6,
+          "channel": 0,
+          "component": "a"
+        },
+        "transform": {
+          "scale": [
+            1,
+            1
+          ],
+          "offset": [
+            0,
+            0
+          ],
+          "rotation": 0
+        }
+      },
+      "AlphaMask": {
+        "enable": true,
+        "factor": 0.6201923663005449,
+        "invert": false,
+        "texture": {
+          "index": 6,
+          "channel": 0,
+          "component": "a"
+        },
+        "transform": {
+          "scale": [
+            1,
+            1
+          ],
+          "offset": [
+            0,
+            0
+          ],
+          "rotation": 0
+        }
+      },
+      "BumpMap": {
+        "enable": false,
+        "factor": 0
+      }
+    },
+    "black_hole_center": {
+      "DiffusePBR": {
+        "enable": true,
+        "factor": 0,
+        "color": [
+          0,
+          0,
+          0
+        ]
+      },
+      "SpecularPBR": {
+        "enable": true,
+        "factor": 0,
+        "color": [
+          1,
+          1,
+          1
+        ]
+      },
+      "GlossinessPBR": {
+        "enable": true,
+        "factor": 0
+      },
+      "EmitColor": {
+        "enable": false,
+        "factor": 0,
+        "color": [
+          1,
+          1,
+          1
+        ],
+        "type": "additive"
+      },
+      "Opacity": {
+        "enable": true,
+        "factor": 0.888,
+        "ior": 1.2090246114570982,
+        "type": "refraction",
+        "refractionColor": [
+          0.032172269348390445,
+          0.032105944471178725,
+          0.04011232605020126
+        ],
+        "roughnessFactor": 0.5432098765432098,
+        "invert": false
+      },
+      "AlphaMask": {
+        "enable": false,
+        "factor": 1,
+        "invert": false
+      },
+      "BumpMap": {
+        "enable": false,
+        "factor": 0
+      }
+    },
+    "black_hole_light3": {
+      "DiffusePBR": {
+        "enable": true,
+        "factor": 1,
+        "texture": {
+          "index": 3,
+          "channel": 0,
+          "component": "rgb"
+        },
+        "transform": {
+          "scale": [
+            1,
+            1
+          ],
+          "offset": [
+            0,
+            0
+          ],
+          "rotation": 0
+        }
+      },
+      "SpecularPBR": {
+        "enable": true,
+        "factor": 0.041142982530994375,
+        "color": [
+          1,
+          1,
+          1
+        ]
+      },
+      "GlossinessPBR": {
+        "enable": true,
+        "factor": 0.16914337262742132
+      },
+      "EmitColor": {
+        "enable": true,
+        "factor": 0.2,
+        "type": "additive",
+        "texture": {
+          "index": 3,
+          "channel": 0,
+          "component": "rgb"
+        },
+        "transform": {
+          "scale": [
+            1,
+            1
+          ],
+          "offset": [
+            0,
+            0
+          ],
+          "rotation": 0
+        }
+      },
+      "Opacity": {
+        "enable": false,
+        "factor": 1,
+        "ior": 1.05,
+        "type": "alphaBlend",
+        "refractionColor": [
+          1,
+          1,
+          1
+        ],
+        "roughnessFactor": 0,
+        "invert": false
+      },
+      "AlphaMask": {
+        "enable": true,
+        "factor": 0.7969548097670393,
+        "invert": false,
+        "texture": {
+          "index": 2,
+          "channel": 0,
+          "component": "a"
+        },
+        "transform": {
+          "scale": [
+            1,
+            1
+          ],
+          "offset": [
+            0,
+            0
+          ],
+          "rotation": 0
+        }
+      },
+      "BumpMap": {
+        "enable": true,
+        "factor": 4,
+        "texture": {
+          "index": 9,
+          "channel": 0,
+          "component": "rgb"
+        },
+        "transform": {
+          "scale": [
+            2.0000000000000027,
+            5
+          ],
+          "offset": [
+            0,
+            0
+          ],
+          "rotation": 0
+        }
+      }
+    },
+    "black_hole_distortion": {
+      "DiffusePBR": {
+        "enable": true,
+        "factor": 0,
+        "color": [
+          0.8,
+          0.8,
+          0.8
+        ]
+      },
+      "SpecularPBR": {
+        "enable": true,
+        "factor": 0,
+        "color": [
+          1,
+          1,
+          1
+        ]
+      },
+      "GlossinessPBR": {
+        "enable": true,
+        "factor": 0
+      },
+      "EmitColor": {
+        "enable": false,
+        "factor": 0,
+        "color": [
+          1,
+          1,
+          1
+        ],
+        "type": "additive"
+      },
+      "Opacity": {
+        "enable": true,
+        "factor": 0,
+        "ior": 1.0093831255201786,
+        "type": "refraction",
+        "refractionColor": [
+          1,
+          1,
+          1
+        ],
+        "roughnessFactor": 0.37530864197530867,
+        "invert": false
+      },
+      "AlphaMask": {
+        "enable": false,
+        "factor": 1,
+        "invert": false
+      },
+      "BumpMap": {
+        "enable": false,
+        "factor": 0
+      }
+    },
+    "ring": {
+      "DiffusePBR": {
+        "enable": true,
+        "factor": 0.5,
+        "texture": {
+          "index": 9,
+          "channel": 0,
+          "component": "rgb"
+        },
+        "transform": {
+          "scale": [
+            1,
+            1
+          ],
+          "offset": [
+            0,
+            0
+          ],
+          "rotation": 0
+        }
+      },
+      "SpecularPBR": {
+        "enable": true,
+        "factor": 0.5,
+        "texture": {
+          "index": 9,
+          "channel": 0,
+          "component": "rgb"
+        },
+        "transform": {
+          "scale": [
+            2.0000000000000027,
+            1
+          ],
+          "offset": [
+            0,
+            0
+          ],
+          "rotation": 0
+        }
+      },
+      "GlossinessPBR": {
+        "enable": true,
+        "factor": 0.2
+      },
+      "EmitColor": {
+        "enable": false,
+        "factor": 0,
+        "color": [
+          1,
+          1,
+          1
+        ],
+        "type": "additive"
+      },
+      "Opacity": {
+        "enable": true,
+        "factor": 1,
+        "ior": 1.05,
+        "type": "alphaBlend",
+        "refractionColor": [
+          1,
+          1,
+          1
+        ],
+        "roughnessFactor": 0,
+        "invert": false,
+        "texture": {
+          "index": 8,
+          "channel": 0,
+          "component": "a"
+        },
+        "transform": {
+          "scale": [
+            1,
+            1
+          ],
+          "offset": [
+            0,
+            0
+          ],
+          "rotation": 0
+        }
+      },
+      "AlphaMask": {
+        "enable": false,
+        "factor": 1,
+        "invert": false
+      },
+      "BumpMap": {
+        "enable": true,
+        "factor": 8,
+        "texture": {
+          "index": 9,
+          "channel": 0,
+          "component": "rgb"
+        },
+        "transform": {
+          "scale": [
+            4.000000000000001,
+            1
+          ],
+          "offset": [
+            0,
+            0
+          ],
+          "rotation": 0
+        }
+      }
+    },
+    "black_hole_light2": {
+      "DiffusePBR": {
+        "enable": true,
+        "factor": 1,
+        "texture": {
+          "index": 5,
+          "channel": 0,
+          "component": "rgb"
+        },
+        "transform": {
+          "scale": [
+            1,
+            1
+          ],
+          "offset": [
+            0,
+            0
+          ],
+          "rotation": 0
+        }
+      },
+      "SpecularPBR": {
+        "enable": true,
+        "factor": 0.05,
+        "color": [
+          1,
+          1,
+          1
+        ]
+      },
+      "GlossinessPBR": {
+        "enable": true,
+        "factor": 0.3276200460801404
+      },
+      "EmitColor": {
+        "enable": true,
+        "factor": 0.6,
+        "type": "additive",
+        "texture": {
+          "index": 5,
+          "channel": 0,
+          "component": "rgb"
+        },
+        "transform": {
+          "scale": [
+            1,
+            1
+          ],
+          "offset": [
+            0,
+            0
+          ],
+          "rotation": 0
+        }
+      },
+      "Opacity": {
+        "enable": false,
+        "factor": 1,
+        "ior": 1.05,
+        "type": "alphaBlend",
+        "refractionColor": [
+          1,
+          1,
+          1
+        ],
+        "roughnessFactor": 0,
+        "invert": false
+      },
+      "AlphaMask": {
+        "enable": true,
+        "factor": 0.7299069863831965,
+        "invert": false,
+        "texture": {
+          "index": 4,
+          "channel": 0,
+          "component": "a"
+        },
+        "transform": {
+          "scale": [
+            1,
+            1
+          ],
+          "offset": [
+            0,
+            0
+          ],
+          "rotation": 0
+        }
+      },
+      "BumpMap": {
+        "enable": false,
+        "factor": 0
+      }
+    },
+    "black_hole_blackoutside": {
+      "DiffusePBR": {
+        "enable": true,
+        "factor": 0,
+        "color": [
+          0,
+          0,
+          0
+        ]
+      },
+      "SpecularPBR": {
+        "enable": true,
+        "factor": 0.2,
+        "texture": {
+          "index": 5,
+          "channel": 0,
+          "component": "rgb"
+        },
+        "transform": {
+          "scale": [
+            2.0000000000000027,
+            3.000000000000003
+          ],
+          "offset": [
+            0,
+            0
+          ],
+          "rotation": 0
+        }
+      },
+      "GlossinessPBR": {
+        "enable": true,
+        "factor": 0.08990503590106179,
+        "texture": {
+          "index": 3,
+          "channel": 0,
+          "component": "rgb"
+        },
+        "transform": {
+          "scale": [
+            0.5,
+            10.000000000000007
+          ],
+          "offset": [
+            0,
+            0.5
+          ],
+          "rotation": 0
+        }
+      },
+      "EmitColor": {
+        "enable": false,
+        "factor": 0,
+        "color": [
+          1,
+          1,
+          1
+        ],
+        "type": "additive"
+      },
+      "Opacity": {
+        "enable": true,
+        "factor": 0.9005741731784325,
+        "ior": 1.0020204346747805,
+        "type": "refraction",
+        "refractionColor": [
+          1,
+          0.331082736515817,
+          0
+        ],
+        "roughnessFactor": 0.09876543209876543,
+        "invert": false,
+        "texture": {
+          "index": 4,
+          "channel": 0,
+          "component": "a"
+        },
+        "transform": {
+          "scale": [
+            2.0000000000000027,
+            20.000000000000004
+          ],
+          "offset": [
+            0,
+            0.7238832721503443
+          ],
+          "rotation": 0
+        }
+      },
+      "AlphaMask": {
+        "enable": true,
+        "factor": 0.7908595530957808,
+        "invert": false,
+        "texture": {
+          "index": 4,
+          "channel": 0,
+          "component": "a"
+        },
+        "transform": {
+          "scale": [
+            2.0000000000000027,
+            6.9999999999999964
+          ],
+          "offset": [
+            0,
+            0
+          ],
+          "rotation": 0
+        }
+      },
+      "BumpMap": {
+        "enable": true,
+        "factor": 3,
+        "texture": {
+          "index": 7,
+          "channel": 0,
+          "component": "rgb"
+        },
+        "transform": {
+          "scale": [
+            3.000000000000003,
+            5
+          ],
+          "offset": [
+            0,
+            0
+          ],
+          "rotation": 0
+        }
+      }
+    }
+  },
+  "orientation": {
+    "matrix": [
+      0.9305678537592051,
+      0,
+      0.36611947442055925,
+      0,
+      0,
+      1,
+      0,
+      0,
+      -0.36611947442055925,
+      0,
+      0.9305678537592051,
+      0,
+      0.10725727446646882,
+      0.1707230175238692,
+      -1.155935213587623,
+      1
+    ]
+  },
+  "lighting": {
+    "enable": true,
+    "lights": [
+      {
+        "type": "POINT",
+        "angle": 45,
+        "color": [
+          1,
+          1,
+          1
+        ],
+        "enable": true,
+        "ground": [
+          0.3,
+          0.2,
+          0.2
+        ],
+        "matrix": [
+          -0.9815804500275482,
+          0.1909922167095499,
+          -0.004668327333101102,
+          0,
+          0.13548347102422797,
+          0.7131126062169096,
+          0.6878332937084056,
+          0,
+          0.13469984856318096,
+          0.6745312327912614,
+          -0.7258536813891331,
+          0,
+          6.100186066646167,
+          5.9052865889505615,
+          3.765836032556961,
+          1
+        ],
+        "falloff": 2.5786239664888375e-8,
+        "hardness": 0.5,
+        "intensity": 2.500000000000001,
+        "shadowBias": 0,
+        "castShadows": false,
+        "intensityGround": 1,
+        "attachedToCamera": false
+      },
+      {
+        "type": "DIRECTION",
+        "angle": 45,
+        "color": [
+          1,
+          0.8783319450229073,
+          0.7091836734693877
+        ],
+        "enable": false,
+        "ground": [
+          0.3,
+          0.2,
+          0.2
+        ],
+        "matrix": [
+          0.7755211495104662,
+          -0.0666602860002539,
+          0.6277924441503967,
+          0,
+          0.2690483737361956,
+          0.9344846523281437,
+          -0.233133882464682,
+          0,
+          -0.5711216326246741,
+          0.3497067926613838,
+          0.7426474533145686,
+          0,
+          -509.9571657608668,
+          312.254020513517,
+          663.113127376037,
+          1
+        ],
+        "falloff": 0.0000031356637051052598,
+        "hardness": 0.5,
+        "intensity": 1,
+        "shadowBias": 0.005,
+        "castShadows": false,
+        "intensityGround": 1,
+        "attachedToCamera": false
+      },
+      {
+        "type": "DIRECTION",
+        "angle": 45,
+        "color": [
+          0.423469387755102,
+          0.7352665556018328,
+          1
+        ],
+        "enable": false,
+        "ground": [
+          0.9642857142857143,
+          0.6484128636877489,
+          0.2607507288629738
+        ],
+        "matrix": [
+          0.6903299131022926,
+          -0.7076363669144057,
+          -0.15064986988498263,
+          0,
+          -0.011089698239978026,
+          0.19785137301620165,
+          -0.9801692980238416,
+          0,
+          0.7234097246160907,
+          0.6783108479272498,
+          0.12873524736872857,
+          0,
+          645.9363274150016,
+          605.6662172814742,
+          114.94786257584163,
+          1
+        ],
+        "falloff": 0.0000031356637051052598,
+        "hardness": 0.5,
+        "intensity": 0.12,
+        "shadowBias": 0.005,
+        "castShadows": false,
+        "intensityGround": 0.06,
+        "attachedToCamera": false
+      }
+    ]
+  },
+  "environment": {
+    "uid": "0bc5ce71f9404ef984d65e335367bbb8",
+    "blur": 0,
+    "enable": true,
+    "exposure": 2.0000000000000004,
+    "rotation": 5.8332782111099375,
+    "shadowBias": 0.005,
+    "shadowEnable": false,
+    "lightIntensity": 3,
+    "backgroundExposure": 0.1,
+    "diffuseSPH": [
+      0.00219133,
+      0.00207928,
+      0.00472788,
+      -0.0000251127,
+      -0.0000276322,
+      -0.0000476901,
+      -0.00110872,
+      -0.00118379,
+      -0.00223574,
+      0.0000302418,
+      0.0000484522,
+      0.0000216228,
+      -0.0000319875,
+      -0.0000370711,
+      -0.000114234,
+      -0.0000136395,
+      -0.00000727777,
+      -0.0000494232,
+      0.000574499,
+      0.00058542,
+      0.00108405,
+      0.0000154755,
+      0.0000182573,
+      0.0000591925,
+      0.000250548,
+      0.000227687,
+      0.000643222
+    ]
+  },
+  "shading": {
+    "type": "lit",
+    "renderer": "pbr",
+    "pointSize": 2,
+    "vertexColor": {
+      "enable": false,
+      "useAlpha": false,
+      "colorSpace": "srgb"
+    }
+  },
+  "presentation": {
+    "azimuth": -132,
+    "elevation": -4.3,
+    "roll": -4.5,
+    "fov": 6,
+    "comparisonDistance": 9.2,
+    "derivedFrom": "Uploaded reference image: outer blue rim ellipse approximately 527 by 104 pixels, 10.04 degree screen angle at 1353 by 757."
+  }
+}

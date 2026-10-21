@@ -212,26 +212,6 @@ export function buildArchitecture(scene, m) {
     m.marble,
     [0, 0.225, 0],
   );
-  const sculptureShape = new THREE.Shape();
-  sculptureShape.absarc(0, 0, 1.2, 0, Math.PI * 2, false);
-  const ringHole = new THREE.Path();
-  ringHole.absarc(0, 0, 1.05, 0, Math.PI * 2, true);
-  sculptureShape.holes.push(ringHole);
-  const sculpture = mesh(
-    lobby,
-    new THREE.ExtrudeGeometry(sculptureShape, {
-      depth: 0.15,
-      bevelEnabled: true,
-      bevelSize: 0.012,
-      bevelThickness: 0.008,
-      bevelSegments: 3,
-      curveSegments: 128,
-    }),
-    m.bronze,
-    [0, 1.65, 0],
-  );
-  sculpture.rotation.y = Math.PI / 2;
-  sculpture.position.x = -0.075;
   for (const b of design.lobby.benches) {
     const shape = archShape([0, 0], 5.3, b.angle - 20, b.angle + 20, 0.6);
     slab(lobby, shape, m.oak, 0.35, 0.1);

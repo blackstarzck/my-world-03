@@ -1,5 +1,4 @@
 import * as THREE from "three";
-import { RoomEnvironment } from "three/addons/environments/RoomEnvironment.js";
 import { EffectComposer } from "three/addons/postprocessing/EffectComposer.js";
 import { GalleryRenderPass } from "./gallery-render.js";
 import { GalleryAOPass } from "./gallery-ao.js";
@@ -7,7 +6,7 @@ import { OutputPass } from "three/addons/postprocessing/OutputPass.js";
 import { SMAAPass } from "three/addons/postprocessing/SMAAPass.js";
 import { createMaterials } from "./materials.js";
 import { buildArchitecture } from "./architecture.js";
-import { buildExhibits } from "./exhibits.js";
+import { buildExhibits, loadExhibitAssets } from "./exhibits.js";
 import { navigation } from "./navigation.js";
 import { renderQuality } from "./render-settings.js";
 import { createExhibitLighting } from "./exhibit-lighting.js";
@@ -17,11 +16,19 @@ import { createGalleryLighting } from "./gallery-lighting.js";
 import { createBlackHoleMotion } from "./black-hole-motion.js";
 import { createBlackHoleBloom } from "./black-hole-bloom.js";
 import { createRenderDiagnostics } from "./render-diagnostics.js";
+import { warmFirstFrame } from "./shader-warmup.js";
+import { configureGalleryLightLoops } from "./gallery-light-loops.js";
+import { loadGalleryEnvironment } from "./gallery-environment.js";
 
 export async function createExhibition(container, callbacks) {
   const manager = new THREE.LoadingManager();
-  manager.onProgress = (_, loaded, total) =>
-    callbacks.onProgress(Math.min(95, Math.round((loaded / total) * 90)));
+  const timings = {};
+  const started = performance.now();
+  const stage = (id, label) => {
+    timings[id] = Math.round(performance.now() - started);
+    callbacks.onLoadStage?.(label);
+  };
+  stage("start", "전시 공간을 준비하고 있어요");
   const renderer = new THREE.WebGLRenderer({
     antialias: true,
     powerPreference: "high-performance",
@@ -52,13 +59,7 @@ export async function createExhibition(container, callbacks) {
     0.075,
     250,
   );
-  const envScene = new RoomEnvironment(),
-    pmrem = new THREE.PMREMGenerator(renderer),
-    environment = pmrem.fromScene(envScene, 0.035);
-  scene.environment = environment.texture;
   scene.environmentIntensity = 0.38;
-  envScene.dispose();
-  pmrem.dispose();
   const hemisphere = new THREE.HemisphereLight("#e9f2fa", "#aca18e", 0.48);
   scene.add(hemisphere);
   const sun = new THREE.DirectionalLight("#fff1d7", 3.8);
@@ -77,7 +78,8 @@ export async function createExhibition(container, callbacks) {
   sun.shadow.mapSize.set(4096, 4096);
   sun.shadow.bias = -0.00015;
   sun.shadow.normalBias = 0.018;
-  let architecture,
+  let environment,
+    architecture,
     exhibits,
     nav,
     composer,
@@ -145,7 +147,7 @@ export async function createExhibition(container, callbacks) {
     materials.forEach((m) => m.dispose());
     textures.forEach((t) => t.dispose());
     exhibits?.blackHole.userData.spaceEnvironment?.dispose();
-    environment.dispose();
+    environment?.dispose();
     sun.shadow.dispose();
     renderer.dispose();
     renderer.domElement.remove();
@@ -155,13 +157,21 @@ export async function createExhibition(container, callbacks) {
     if (import.meta.env.DEV) delete window.__TRIAD__;
   }
   try {
-    const materials = await createMaterials(manager);
+    stage("assets", "그림과 공간 재질을 불러오고 있어요");
+    const [materials, exhibitAssets, environmentMap] = await Promise.all([
+      createMaterials(manager), loadExhibitAssets(manager), loadGalleryEnvironment(manager),
+    ]);
+    environment = environmentMap;
+    scene.environment = environment;
+    stage("architecture", "전시 공간을 구성하고 있어요");
     architecture = buildArchitecture(scene, materials);
+    stage("exhibits", "작품과 블랙홀을 배치하고 있어요");
     exhibits = await buildExhibits(
       architecture.groups,
       materials,
       architecture.contactMat,
       manager,
+      { assets: exhibitAssets },
     );
     blackHoleMotion = createBlackHoleMotion(exhibits.blackHole);
     blackHoleBloom = createBlackHoleBloom(exhibits.blackHole, camera);
@@ -200,6 +210,11 @@ export async function createExhibition(container, callbacks) {
     nav = navigation(camera, renderer.domElement, {
       ...callbacks,
       selectable: exhibits.selectable,
+      externalExhibit: {
+        hitTest: (point) => blackHoleBloom.hitTest(point),
+        url: "https://www.kchanchan.com/",
+        onHover: callbacks.onBlackHoleHover,
+      },
     });
     const nearbyArtwork = createNearbyArtworkTracker(exhibits.collection, scene);
     const exhibitLighting = createExhibitLighting(
@@ -234,15 +249,21 @@ export async function createExhibition(container, callbacks) {
       galleryLighting.update(lighting, blackHoleMotion.expansion);
     };
     applyLighting("day");
-    // Compile every room with the SAME fog/light configuration before entry.
-    // Removing fog on the first overview used to compile a second set mid-frame.
-    callbacks.onProgress(96);
-    renderer.setRenderTarget(beauty.target);
-    await renderer.compileAsync(scene, camera);
-    renderer.setRenderTarget(null);
-    renderer.shadowMap.needsUpdate = true;
+    configureGalleryLightLoops(scene);
+    stage("shaders", "빛과 그림자를 준비하고 있어요");
     blackHoleBloom.setDepthTexture(beauty.target.depthTexture);
     blackHoleBloom.update(blackHoleMotion.activation, overviewMode);
+    const buffers = [composer.readBuffer, composer.writeBuffer];
+    const temporal = blackHoleBloom.pass.antialias;
+    const history = { frame: temporal.frame, index: temporal.index, valid: temporal.valid };
+    try {
+      await warmFirstFrame(renderer, () => composer.render());
+    } finally {
+      [composer.readBuffer, composer.writeBuffer] = buffers;
+      Object.assign(temporal, history);
+    }
+    stage("firstFrame", "첫 화면을 완성하고 있어요");
+    renderer.shadowMap.needsUpdate = true;
     composer.render();
     previous = performance.now();
     function animate(now) {
@@ -317,7 +338,7 @@ export async function createExhibition(container, callbacks) {
       }
     }
     frame = requestAnimationFrame(animate);
-    callbacks.onProgress(100);
+    stage("ready", "준비가 끝났어요");
     function setOverview(overview) {
       const roofChanged = overview !== overviewMode;
       overviewMode = overview;
@@ -387,6 +408,7 @@ export async function createExhibition(container, callbacks) {
         objects: scene.children.length,
         artworks: exhibits.pictures.length,
         artworkCount: exhibits.collection.length,
+        loadingTimings: { ...timings },
         blackHole: {
           ...blackHoleMotion.state(),
           bloomEnabled: blackHoleBloom.pass.enabled,

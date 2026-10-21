@@ -108,10 +108,12 @@ export async function createMaterials(manager) {
       ["wood", "stone", "cast", "smooth"].map(async (name) => {
         const result = await Promise.all(
           ["color", "normal", "roughness"].map((type) =>
-            loader.loadAsync(`/assets/${name}-${type}.jpg`),
+            (name === "wood" && type !== "color") || (name === "stone" && type === "normal")
+              ? null : loader.loadAsync(`/assets/${name}-${type}.jpg`),
           ),
         );
         result.forEach((t, i) => {
+          if (!t) return;
           t.wrapS = t.wrapT = THREE.RepeatWrapping;
           t.anisotropy = 8;
           if (i === 0) t.colorSpace = THREE.SRGBColorSpace;

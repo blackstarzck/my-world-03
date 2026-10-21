@@ -1,5 +1,6 @@
 import * as THREE from "three";
 import { BlackHoleNativeRenderer } from "./black-hole-native-renderer.js";
+import { blackHoleInteraction } from "./black-hole-motion.js";
 
 // Keep the authored narrow-lens perspective while visitors use a normal
 // walking camera. An off-axis lens preserves the exhibit's screen position.
@@ -25,6 +26,9 @@ export function updateBlackHoleCamera(camera, viewer, center, magnification = 1,
 export function createBlackHoleBloom(exhibit, viewer) {
   const camera = new THREE.PerspectiveCamera();
   const pass = new BlackHoleNativeRenderer(exhibit, camera);
+  const selectionRay = new THREE.Raycaster();
+  const selectable = pass.sources.map(({ source }) => source).filter(source =>
+    !source.material.userData.blackHoleOptics || source.material.name === "black_hole_center");
   const center = new THREE.Vector3(), viewCenter = new THREE.Vector3();
   const forward = new THREE.Vector3(), toModel = new THREE.Vector3();
   const fallback = [];
@@ -64,6 +68,15 @@ export function createBlackHoleBloom(exhibit, viewer) {
   };
   return {
     pass,
+    hitTest(point) {
+      if (!pass.enabled) return false;
+      exhibit.getWorldPosition(center);
+      if (Math.hypot(viewer.position.x - center.x, viewer.position.z - center.z)
+          > blackHoleInteraction.clickDistance) return false;
+      // Pick with the same lens that displays the enlarged black hole.
+      selectionRay.setFromCamera(point, camera);
+      return selectionRay.intersectObjects(selectable, false).length > 0;
+    },
     get immersion() { return pass.enabled ? uniforms.immersion.value : 0; },
     diagnostics: () => ({ immersion: +uniforms.immersion.value.toFixed(3), nativeWidth: pass.finished.width }),
     attachOutput(output) {

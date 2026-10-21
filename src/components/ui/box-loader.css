@@ -1,0 +1,81 @@
+.box-loader {
+  --box-size: 28px;
+  --box-speed: 800ms;
+  --box-front: #748768;
+  --box-right: #41553a;
+  --box-top: #9eaf90;
+  --box-shadow: #d5dacd;
+  width: 104px;
+  height: 100px;
+  display: grid;
+  place-items: center;
+}
+.box-loader .boxes {
+  width: calc(var(--box-size) * 3);
+  height: calc(var(--box-size) * 2);
+  position: relative;
+  transform-style: preserve-3d;
+  transform-origin: 50% 50%;
+  transform: rotateX(60deg) rotateZ(45deg);
+}
+.box-loader .box {
+  width: var(--box-size);
+  height: var(--box-size);
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform-style: preserve-3d;
+}
+.box-loader .face {
+  position: absolute;
+  inset: 0;
+  backface-visibility: hidden;
+}
+.box-loader .face-front {
+  background: var(--box-top);
+  transform: translateZ(var(--box-size));
+}
+.box-loader .face-right {
+  background: var(--box-right);
+  transform-origin: right center;
+  transform: rotateY(90deg);
+}
+.box-loader .face-top {
+  background: var(--box-front);
+  transform-origin: center bottom;
+  transform: rotateX(-90deg);
+}
+.box-loader .face-back {
+  background: var(--box-shadow);
+  transform: translateZ(-35px);
+}
+.box-loader .box-1 { animation: box1 var(--box-speed) linear infinite; }
+.box-loader .box-2 { animation: box2 var(--box-speed) linear infinite; }
+.box-loader .box-3 { animation: box3 var(--box-speed) linear infinite; }
+.box-loader .box-4 { animation: box4 var(--box-speed) linear infinite; }
+
+@keyframes box1 {
+  0%, 50% { transform: translate(100%, 0); }
+  100% { transform: translate(200%, 0); }
+}
+@keyframes box2 {
+  0% { transform: translate(0, 100%); }
+  50% { transform: translate(0, 0); }
+  100% { transform: translate(100%, 0); }
+}
+@keyframes box3 {
+  0%, 50% { transform: translate(100%, 100%); }
+  100% { transform: translate(0, 100%); }
+}
+@keyframes box4 {
+  0% { transform: translate(200%, 0); }
+  50% { transform: translate(200%, 100%); }
+  100% { transform: translate(100%, 100%); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .box-loader .box { animation: none; }
+  .box-loader .box-1 { transform: translate(100%, 0); }
+  .box-loader .box-2 { transform: translate(0, 100%); }
+  .box-loader .box-3 { transform: translate(100%, 100%); }
+  .box-loader .box-4 { transform: translate(200%, 0); }
+}

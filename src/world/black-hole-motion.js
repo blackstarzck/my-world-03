@@ -3,6 +3,7 @@ import * as THREE from "three";
 export const blackHoleInteraction = {
   wakeDistance: 7.5,
   fullDistance: 2.8,
+  clickDistance: 4,
   maxScale: 1.85,
 };
 

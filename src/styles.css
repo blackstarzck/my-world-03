@@ -1,4 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;500&display=swap");
+@layer theme, base, components, utilities;
+@import "tailwindcss/theme.css" layer(theme);
+@import "tailwindcss/utilities.css" layer(utilities);
+@import "tw-animate-css";
+@import "./components/ui/box-loader.css";
+
+@theme inline {
+  --color-destructive-foreground: var(--destructive-foreground);
+}
 
 :root {
   font-family:
@@ -14,6 +23,20 @@
   --cream: #f4f1e9;
   --green: #3e5545;
   --ease: cubic-bezier(0.2, 0.8, 0.2, 1);
+  --destructive-foreground: oklch(0.577 0.245 27.325);
+  --radius: 0.625rem;
+}
+.dark {
+  --card: oklch(0.145 0 0);
+  --popover: oklch(0.145 0 0);
+  --primary: oklch(0.985 0 0);
+  --destructive: oklch(0.396 0.141 25.723);
+  --destructive-foreground: oklch(0.637 0.237 25.331);
+  --border: oklch(0.269 0 0);
+  --input: oklch(0.269 0 0);
+  --ring: oklch(0.439 0 0);
+  --sidebar-border: oklch(0.269 0 0);
+  --sidebar-ring: oklch(0.439 0 0);
 }
 * {
   box-sizing: border-box;
@@ -95,7 +118,7 @@ button svg {
   left: 30px;
   right: 30px;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: center;
   gap: 20px;
   padding: 16px 19px 16px 23px;
@@ -105,26 +128,6 @@ button svg {
 }
 .topbar > * {
   pointer-events: auto;
-}
-.brand {
-  display: flex;
-  align-items: center;
-  gap: 13px;
-}
-.brand > span {
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: 27px;
-  letter-spacing: 5.2px;
-  line-height: 1;
-}
-.brand small {
-  display: block;
-  font-family:
-    "Pretendard Variable", "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
-  font-size: 6.3px;
-  letter-spacing: 1.5px;
-  margin-top: 8px;
-  white-space: nowrap;
 }
 .top-actions {
   display: flex;
@@ -311,6 +314,29 @@ button svg {
 .walking .crosshair {
   opacity: 1;
 }
+.black-hole-link-hint {
+  position: absolute;
+  left: 50%;
+  top: calc(50% + 42px);
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 11px 16px;
+  border: 1px solid #ffffff30;
+  border-radius: 999px;
+  background: #161a18d9;
+  color: #fffaf0;
+  box-shadow: 0 4px 20px #0003;
+  backdrop-filter: blur(12px);
+  font-size: 13px;
+  white-space: nowrap;
+  pointer-events: none;
+}
+.black-hole-link-hint span {
+  color: #fffaf099;
+  font-size: 11px;
+}
 .walking .topbar {
   opacity: 0.35;
   transition: opacity 0.3s;
@@ -329,59 +355,22 @@ button svg {
   justify-content: center;
   flex-direction: column;
 }
-.loading-screen > .brand {
-  position: absolute;
-  top: 45px;
-  left: 50px;
-}
 .loading-copy {
-  width: 340px;
-  max-width: 85vw;
-}
-.loading-copy > span {
-  font-size: 10px;
-  letter-spacing: 2px;
-  color: #87917e;
-}
-.loading-copy h2 {
-  font-family: "Noto Serif KR", serif;
-  font-weight: 400;
-  font-size: 23px;
-  margin: 20px 0 35px;
-}
-.progress-line {
-  height: 2px;
-  background: #d6dacb;
-}
-.progress-line i {
-  display: block;
-  height: 100%;
-  background: #5e7451;
-  transition: width 0.4s;
+  max-width: calc(100vw - 48px);
+  text-align: center;
+  margin-top: 46px;
 }
 .loading-copy p {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  font-size: 10px;
-  color: #89917f;
-  margin: 14px 0;
-}
-.loading-copy b {
-  margin-left: auto;
-  font-weight: 400;
+  font-size: 13px;
+  line-height: 1.6;
+  color: #667260;
+  margin: 0;
+  word-break: keep-all;
 }
 .loading-copy button {
   padding: 10px 18px;
   background: #3e5545;
   color: white;
-}
-.loading-footer {
-  position: absolute;
-  bottom: 40px;
-  font-size: 8px;
-  letter-spacing: 3px;
-  color: #a0a592;
 }
 .spin {
   animation: spin 1.4s linear infinite;
@@ -517,17 +506,6 @@ button svg {
     gap: 10px;
     padding: 14px;
   }
-  .brand {
-    gap: 8px;
-  }
-  .brand > span {
-    font-size: 24px;
-    letter-spacing: 4px;
-  }
-  .brand small {
-    font-size: 5px;
-    letter-spacing: 1.2px;
-  }
   .top-actions {
     gap: 2px;
   }
@@ -555,16 +533,6 @@ button svg {
     right: 14px;
     padding: 13px 14px;
     gap: 12px;
-  }
-  .brand > span {
-    font-size: 24px;
-  }
-  .brand small {
-    font-size: 5px;
-  }
-  .brand svg {
-    width: 24px;
-    height: 28px;
   }
   .top-actions {
     gap: 5px;
@@ -608,13 +576,6 @@ button svg {
   .dialog-backdrop {
     padding: 17px;
   }
-  .loading-screen > .brand {
-    left: 28px;
-    top: 31px;
-  }
-  .loading-copy h2 {
-    font-size: 20px;
-  }
 }
 @media (max-width: 410px) {
   .minimap {
@@ -622,9 +583,6 @@ button svg {
   }
   .map-model {
     height: 130px;
-  }
-  .brand > span {
-    font-size: 22px;
   }
   .top-actions {
     gap: 1px;

@@ -22,7 +22,7 @@ function caseFrame() {
   parts.forEach((p) => p.dispose());
   return result;
 }
-export async function buildExhibits(groups, m, contactMat, manager,
+export async function loadExhibitAssets(manager,
   { loadCentral = loadCentralExhibit } = {}) {
   const loader = new THREE.TextureLoader(manager);
   const [pictures, blackHole] = await Promise.all([
@@ -34,6 +34,11 @@ export async function buildExhibits(groups, m, contactMat, manager,
     })),
     loadCentral(manager),
   ]);
+  return { pictures, blackHole };
+}
+export async function buildExhibits(groups, m, contactMat, manager,
+  { loadCentral = loadCentralExhibit, assets } = {}) {
+  const { pictures, blackHole } = assets ?? await loadExhibitAssets(manager, { loadCentral });
   groups.lobby.add(blackHole);
   const picturesById = new Map(pictures.map((p) => [p.id, p]));
   const selectable = [],

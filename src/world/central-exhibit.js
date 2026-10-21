@@ -1,8 +1,8 @@
 import * as THREE from "three";
 import { GLTFLoader } from "three/addons/loaders/GLTFLoader.js";
 import { blackHoleOrientation, blackHoleReference, restoreBlackHoleMaterials } from "./black-hole-materials.js";
-import { optimizeBlackHoleGeometry } from "./black-hole-geometry.js";
 import { loadBlackHoleEnvironment } from "./black-hole-environment.js";
+import { loadCompressedAsset } from "./compressed-asset.js";
 
 export const centralExhibit = {
   diameter: 3.2,
@@ -12,7 +12,9 @@ export const centralExhibit = {
 
 export async function loadCentralExhibit(manager, { restoreMaterials = restoreBlackHoleMaterials } = {}) {
   const [{ scene, parser }, spaceEnvironment] = await Promise.all([
-    new GLTFLoader(manager).loadAsync("/assets/black_hole.glb"), loadBlackHoleEnvironment(manager),
+    loadCompressedAsset("/assets/black_hole.optimized.glb.gz", manager)
+      .then(bytes => new GLTFLoader(manager).parseAsync(bytes, "/assets/")),
+    loadBlackHoleEnvironment(manager),
   ]);
   const exhibit = new THREE.Group();
   exhibit.name = "Black Hole";
@@ -30,7 +32,6 @@ export async function loadCentralExhibit(manager, { restoreMaterials = restoreBl
   scene.position.sub(center.multiplyScalar(scale));
   exhibit.position.y = centralExhibit.height;
   await restoreMaterials(scene, parser);
-  await optimizeBlackHoleGeometry(scene);
   const point = blackHoleReference.lighting.lights.find((light) => light.enable && light.type === "POINT");
   const nativeLight = new THREE.Vector3().setFromMatrixPosition(new THREE.Matrix4().fromArray(point.matrix))
     .applyMatrix4(new THREE.Matrix4().fromArray(blackHoleReference.orientation.matrix));

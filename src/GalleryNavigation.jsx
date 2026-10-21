@@ -11,9 +11,7 @@ export function GalleryNavigation({
   featured,
   traveling,
   progressRef,
-  rooms,
   onPreview,
-  onInspect,
 }) {
   const index = artworks.findIndex((artwork) => artwork.id === currentId);
   const initial = Math.max(
@@ -21,7 +19,6 @@ export function GalleryNavigation({
     artworks.findIndex((artwork) => artwork.room === activeRoom),
   );
   const center = index < 0 ? initial : index;
-  const room = rooms.find((item) => item.id === activeRoom);
   const dots = useRef(null);
   const focusedDot = useRef(false);
 
@@ -55,32 +52,6 @@ export function GalleryNavigation({
 
   return (
     <footer className="gallery-navigation" aria-label="프로젝트 탐색">
-      {!featured && activeRoom !== "overview" && (
-        <div className="featured-caption room-introduction">
-          <p>
-            {activeRoom === "lobby"
-              ? "CHANKI KIM · PORTFOLIO"
-              : `${activeRoom} · ${room.name}`}
-          </p>
-          <h1>
-            {activeRoom === "lobby"
-              ? "아이디어에서 제품과 경험으로."
-              : room.theme}
-          </h1>
-          <button onClick={() => preview(artworks[initial])}>
-            프로젝트 둘러보기 <ArrowUpRight size={15} />
-          </button>
-        </div>
-      )}
-      {featured && (
-        <div className="featured-caption">
-          <p>{rooms.find((room) => room.id === featured.room)?.name}</p>
-          <h1>{featured.projectName}</h1>
-          <button onClick={() => onInspect(featured)}>
-            프로젝트 열기 <ArrowUpRight size={15} />
-          </button>
-        </div>
-      )}
       <nav
         className="gallery-pagination glass-surface"
         ref={progressRef}
@@ -171,7 +142,7 @@ export function GalleryNavigation({
           {featured.title}.{" "}
           {traveling
             ? "프로젝트로 이동 중입니다."
-            : "도착했습니다. 프로젝트 열기 버튼으로 설명을 볼 수 있습니다."}
+            : "도착했습니다. 작품을 클릭하면 설명을 볼 수 있습니다."}
         </span>
       )}
     </footer>

@@ -12,6 +12,7 @@ import { ArtworkPanel } from "./ArtworkTour.jsx";
 import { ProjectExperience } from "./ProjectExperience.jsx";
 import { portfolioRooms } from "./portfolio.js";
 import { ArtworkIndex, GalleryNavigation } from "./GalleryNavigation.jsx";
+import BoxLoader from "@/components/ui/box-loader";
 
 const rooms = [
   { id: "lobby", name: "중앙 로비", shortName: "로비" },
@@ -36,27 +37,6 @@ function WalkIcon() {
   );
 }
 
-function Logo() {
-  return (
-    <a className="brand" href="#" aria-label="TRIAD 로비로 이동">
-      <svg width="28" height="34" viewBox="0 0 32 36" fill="none">
-        <path
-          d="M16 2v17M16 19 2 28M16 19l14 9"
-          stroke="currentColor"
-          strokeWidth="2"
-        />
-        <path
-          d="M10 5v11L1 22M22 5v11l9 6M7 32l9-6 9 6"
-          stroke="currentColor"
-          strokeWidth="1.2"
-        />
-      </svg>
-      <span>
-        TRIAD<small>CHANKI KIM / DEVELOPER PORTFOLIO</small>
-      </span>
-    </a>
-  );
-}
 function Map({ active, onNavigate, markerRef }) {
   const host = useRef(null),
     api = useRef(null),
@@ -221,12 +201,13 @@ export default function App() {
     focusTarget = useRef(null),
     detailVisibleRef = useRef(false);
   const [ready, setReady] = useState(false),
-    [progress, setProgress] = useState(0),
+    [loadingStage, setLoadingStage] = useState("전시 공간을 준비하고 있어요"),
     [error, setError] = useState(""),
     [active, setActive] = useState("lobby"),
     [featured, setFeatured] = useState(null),
     [cursorId, setCursorId] = useState(null),
     [locked, setLocked] = useState(false),
+    [blackHoleHovered, setBlackHoleHovered] = useState(false),
     [lighting, setLighting] = useState("day"),
     [panel, setPanel] = useState(null),
     [selected, setSelected] = useState(null),
@@ -244,8 +225,8 @@ export default function App() {
         cancelled
           ? null
           : createExhibition(host.current, {
-              onProgress: (p) => {
-                if (!cancelled) setProgress(p);
+              onLoadStage: (label) => {
+                if (!cancelled) setLoadingStage(label);
               },
               onRoom: (r) => {
                 if (!cancelled) {
@@ -257,6 +238,9 @@ export default function App() {
               },
               onSelect: (a) => {
                 if (!cancelled) openArtworkRef.current(a);
+              },
+              onBlackHoleHover: (value) => {
+                if (!cancelled) setBlackHoleHovered(value);
               },
               onNearbyArtwork: (artwork) => {
                 if (cancelled || selectedArtwork.current) return;
@@ -352,9 +336,7 @@ export default function App() {
     } else if (returnFocus.current) {
       const origin = returnFocus.current;
       returnFocus.current = null;
-      const fallback = origin.featured
-        ? document.querySelector(".featured-caption button")
-        : document.querySelector(".view-actions button[aria-haspopup]");
+      const fallback = document.querySelector(".view-actions button[aria-haspopup]");
       const target = origin.trigger?.isConnected ? origin.trigger
         : document.getElementById(`artwork-dot-${origin.cursorId}`) || fallback || host.current.querySelector("canvas");
       target?.focus({ preventScroll: true });
@@ -469,14 +451,6 @@ export default function App() {
         />
         <div className="edge-shade" />
         <header className="topbar">
-          <div
-            onClick={(e) => {
-              e.preventDefault();
-              navigate("lobby");
-            }}
-          >
-            <Logo />
-          </div>
           <div className="top-actions">
             <div className="utility-actions">
               <button
@@ -553,20 +527,27 @@ export default function App() {
           </div>
         </header>
         <div className="crosshair" aria-hidden="true" />
-        <aside className="map-wrap">
-          <Map active={active} onNavigate={navigate} markerRef={marker} />
-        </aside>
+        {ready && blackHoleHovered && !selected && !panel && !traveling && (
+          <div className="black-hole-link-hint" role="tooltip">
+            클릭하여 웹사이트 열기
+            <ArrowUpRight size={16} aria-hidden="true" />
+            <span>새 창</span>
+          </div>
+        )}
+        {ready && (
+          <aside className="map-wrap">
+            <Map active={active} onNavigate={navigate} markerRef={marker} />
+          </aside>
+        )}
         {ready && !selected && (
           <GalleryNavigation
             artworks={collection}
-            rooms={rooms}
             currentId={cursorId}
             activeRoom={active}
             featured={featured}
             traveling={traveling}
             progressRef={pagination}
             onPreview={previewArtwork}
-            onInspect={openArtwork}
           />
         )}
       </div>
@@ -598,27 +579,18 @@ export default function App() {
         </div>
       )}
       {!ready && (
-        <div className="loading-screen">
-          <Logo />
-          <div className="loading-copy">
-            <span>CHANKI KIM · DEVELOPER PORTFOLIO</span>
-            <h2>프로젝트를 불러오고 있습니다.</h2>
-            <div className="progress-line">
-              <i style={{ width: `${progress}%` }} />
-            </div>
+        <div className="loading-screen" aria-busy={!error}>
+          {!error && <BoxLoader />}
+          <div className="loading-copy" role="status" aria-live="polite">
             {error ? (
               <>
                 <p role="alert">{error}</p>
                 <button onClick={() => location.reload()}>다시 불러오기</button>
               </>
             ) : (
-              <p>
-                <LoaderCircle className="spin" size={14} /> 공간을 준비하고
-                있어요 <b>{progress}%</b>
-              </p>
+              <p>{loadingStage}</p>
             )}
           </div>
-          <span className="loading-footer">THREE PERSPECTIVES. ONE SPACE.</span>
         </div>
       )}
       {panel === "about" && (

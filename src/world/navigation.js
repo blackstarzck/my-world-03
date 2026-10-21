@@ -9,7 +9,7 @@ import { createCameraMotion, createFramingMotion, reverseFramingMotion, sampleCa
 export function navigation(
   camera,
   canvas,
-  { onRoom, onLock, onSelect, onTravel, onTravelProgress, selectable },
+  { onRoom, onLock, onSelect, onTravel, onTravelProgress, selectable, externalExhibit },
 ) {
   const orbit = new OrbitControls(camera, canvas);
   orbit.enabled = false;
@@ -31,7 +31,10 @@ export function navigation(
     motion = null,
     focusedArtwork = null,
     pausedAt = null,
-    pointerId = null;
+    pointerId = null,
+    hoverPosition = null,
+    exhibitHovered = false,
+    hoverElapsed = 0;
   const keys = new Set(),
     inspections = new WeakMap(),
     euler = new THREE.Euler(0, 0, 0, "YXZ"),
@@ -41,6 +44,34 @@ export function navigation(
     target.addEventListener(type, fn, opts);
     listeners.push(() => target.removeEventListener(type, fn, opts));
   };
+  function setExhibitHovered(value) {
+    if (value === exhibitHovered) return;
+    exhibitHovered = value;
+    canvas.style.cursor = value ? "pointer" : "";
+    externalExhibit?.onHover?.(value);
+  }
+  function pointerPoint(clientX, clientY) {
+    if (locked) return new THREE.Vector2(0, 0);
+    const rect = canvas.getBoundingClientRect();
+    return new THREE.Vector2(
+      ((clientX - rect.left) / rect.width) * 2 - 1,
+      (-(clientY - rect.top) / rect.height) * 2 + 1,
+    );
+  }
+  function updateExhibitHover(dt) {
+    if (!externalExhibit) return;
+    if (overview || suspended || motion || drag || (!locked && !hoverPosition)) {
+      setExhibitHovered(false);
+      return;
+    }
+    // Recheck while walking even when the mouse stays still, without
+    // raycasting the detailed model on every animation frame.
+    hoverElapsed += dt;
+    if (hoverElapsed < .12) return;
+    hoverElapsed = 0;
+    setExhibitHovered(externalExhibit.hitTest(pointerPoint(
+      hoverPosition?.x ?? 0, hoverPosition?.y ?? 0)));
+  }
   function syncAngles() {
     euler.setFromQuaternion(camera.quaternion, "YXZ");
     yaw = euler.y;
@@ -84,6 +115,7 @@ export function navigation(
     };
   }
   function play(path, returning = false, complete = null, entry = null) {
+    setExhibitHovered(false);
     keys.clear();
     drag = false;
     if (pointerId !== null && canvas.hasPointerCapture?.(pointerId)) canvas.releasePointerCapture(pointerId);
@@ -194,6 +226,7 @@ export function navigation(
     }
   }
   function goTo(id, { animated = false } = {}) {
+    setExhibitHovered(false);
     keys.clear();
     drag = false;
     if (pointerId !== null && canvas.hasPointerCapture?.(pointerId)) canvas.releasePointerCapture(pointerId);
@@ -225,13 +258,7 @@ export function navigation(
   }
   function select(event) {
     if (overview || moved > 6 || suspended || motion) return;
-    const rect = canvas.getBoundingClientRect();
-    const point = locked
-      ? new THREE.Vector2(0, 0)
-      : new THREE.Vector2(
-          ((event.clientX - rect.left) / rect.width) * 2 - 1,
-          (-(event.clientY - rect.top) / rect.height) * 2 + 1,
-        );
+    const point = pointerPoint(event.clientX, event.clientY);
     ray.setFromCamera(point, camera);
     const hit = ray
       .intersectObjects(selectable, false)
@@ -239,10 +266,15 @@ export function navigation(
     if (hit?.object.userData.artwork) {
       if (locked) document.exitPointerLock();
       onSelect(hit.object.userData.artwork);
+    } else if (externalExhibit?.hitTest(point)) {
+      setExhibitHovered(false);
+      if (locked) document.exitPointerLock();
+      window.open(externalExhibit.url, "_blank", "noopener,noreferrer");
     }
   }
   listen(canvas, "pointerdown", (e) => {
     if (overview || suspended || motion) return;
+    setExhibitHovered(false);
     drag = true;
     moved = 0;
     lastX = e.clientX;
@@ -252,6 +284,7 @@ export function navigation(
     pointerId = e.pointerId;
   });
   listen(canvas, "pointermove", (e) => {
+    hoverPosition = e.pointerType === "touch" ? null : { x: e.clientX, y: e.clientY };
     if (overview || suspended || motion) return;
     if (locked) {
       rotate(e.movementX, e.movementY);
@@ -265,6 +298,10 @@ export function navigation(
     lastX = e.clientX;
     lastY = e.clientY;
   });
+  listen(canvas, "pointerleave", () => {
+    hoverPosition = null;
+    setExhibitHovered(false);
+  });
   listen(canvas, "pointerup", (e) => {
     if (drag) select(e);
     drag = false;
@@ -273,6 +310,8 @@ export function navigation(
     pointerId = null;
   });
   listen(canvas, "pointercancel", () => {
+    hoverPosition = null;
+    setExhibitHovered(false);
     drag = false;
     pointerId = null;
     keys.clear();
@@ -314,6 +353,8 @@ export function navigation(
   });
   listen(window, "keyup", (e) => keys.delete(e.code));
   listen(window, "blur", () => {
+    hoverPosition = null;
+    setExhibitHovered(false);
     keys.clear();
     drag = false;
   });
@@ -356,6 +397,7 @@ export function navigation(
       }
     },
     setSuspended(value, { pauseMotion = false } = {}) {
+      if (value) setExhibitHovered(false);
       suspended = value;
       keys.clear();
       drag = false;
@@ -380,6 +422,7 @@ export function navigation(
       else keys.delete(codes[direction]);
     },
     update(dt) {
+      updateExhibitHover(dt);
       if (pausedAt !== null) return;
       if (overview) {
         orbit.update();
@@ -441,6 +484,7 @@ export function navigation(
       fov: camera.fov,
     }),
     dispose() {
+      setExhibitHovered(false);
       listeners.forEach((f) => f());
       orbit.dispose();
       if (locked) document.exitPointerLock();
